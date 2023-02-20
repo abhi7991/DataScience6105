@@ -1,0 +1,650 @@
+Okay, let's start.
+Um. So I we're gonna finish our our our graph
+Um. And then we're also. We're. We're gonna look at Time series today, because your final project will be to analyze a uh text, and we're going to analyze it, using both graph theory and Time series data.
+And uh on on Monday i'll show you the basics, and then it's going to be up to you to take a notebook and make it turn it into a file project, add more stuff. The final project is is graded half by you and half by the Tas and I.
+So the class greens you. So they. They rank the project in terms of the one they like the most,
+and and we don't
+worry about the complex of the project. All we worry about is how original it is, and whether it works. So if your project is print, Hello, World on a Jupiter notebook.
+Well, that's not the original. But if you say uh a print. Pretty elephant, then that's pretty original, right? Nobody says print pretty elephant, and it works so we'll give you an a
+but chances are the class Won't be very happy because they won't. Find you projects very interesting.
+And so it's fifty percent of both grades. Okay,
+Okay, So um. And then i'll show you on on on Monday. I'll show you uh kind of the basics of how um I would approach, I know, and analyzing a text, and then you can take that and expand it and make it your own.
+So i'm going to borrow some elements.
+I'm going to borrow some elements from the machine learning class and some elements from my natural language processing class. And so you'll have a little bit of an idea of some of the things we do in natural language, and some of these that we're going to do in machine learning for today. We're going to Loo.
+We're gonna do a little bit of machine learning, So you can see um how we create Uh, we create artificial neuron graphs and how we use them to create a model without any kind of, you know, analytical support, without any understanding of the histogram of the data, or anything like that.
+Once again, understanding that your your data, and looking at the histograms, and all that is a much better approach, because it leads to much lower, dimensional model
+and lower Dimensional models are much more practical, easier to remember. Easier to stories. You, to work with. High, dimensional models are much more complicated. They require a lot of memory. They're not easy to learn. And so, um!
+You are in direct result of how simple the models are that you have in your in your mind. Because if you have very complicated models. You only have a few if you have simple models, and you have many, and these models work with each other, and the end result is intelligence, or what we like to call intelligence.
+So uh, let's let's do a quick review of what we did with graph theory. So we'll open the notebook that we had last time, and
+I'm going to do a quick review, and you'll stop me with any questions, because once again, what we cover here are the foundations of statistical, of the the foundations of computational statistics.
+Right? That's what we're doing. First part of the class. We looked at the classical statistics, and Then we moved to Bayesian statistics, also also known as computational statistics, where we actually use simulations.
+And we, we, we, we learn how to build the simulations and the thinking behind the simulations. And so that's that's the basics that I want you to get out of this class, because everything else you know you can read, and but once you have the foundations and you can. It's like, you know, learning how to fly. Once you have the foundations of what it feels like to glide through the air.
+Then you can really learn any plane because you have the foundations.
+Okay? And then remember, Tony Stark said. I mean values are very important. So if Tony Stark says it, firing man says it
+has to be very important. So we have eigenvectors. We have eigenvalues. We have. Markov chain is a state machine. That stochastic has a probabilistic matrix, right? And um the The State next time only depends on the previous state which makes it, linear which means we can use matrix multiplication to to do all the transformations.
+Oops.
+Okay,
+Um. So uh Markov chain steady state. Remember the fixed point. Theorem uh also associated with the dominant eigenvector, the dominant. I didn't like to tell you the state the points. It's a vector right. So it's a point in and dimensional space where the fixed point lies for that transformation
+which means that if you move through that state space using transformations, and then you eventually land there. Then you you will stay there, and that's the long term behavior of the system. And, in fact, my mathematicians have proved. The linear systems have one and only one fixed point.
+Now, in in systems that are nonlinear, you could have multiple fixed points so you can think of, you know. Let's say you have a satellite moving between
+earth and the moon right once you get caught by the gravity of the moon, then you rotate around the moon. But If you come closer to the earth you get caught by the gravity of the earth so you can move from State space so you can move in state space and a nonlinear transformation, and be caught in one fixed point.
+Or if you move a little bit away from that fixed point and go to another fixed point. Right? These are the gravity wells of nonlinear transformations. But in linear transformations there's only one, and that one is given by the dominant eigenvector.
+And so if you think of the world white web as following hyperlinks at the speed of light, That's a linear transformation, because it's given by immediately what a matrix multiplication.
+And so, um! You can think of a silver surfer trying to surf the web really, really fast to get to the fixed point of your query. So it disregards the web page that are not related to your query, and it only goes to those pages that are related to your query, and it finds the one that it
+tends to visit the most, which is the fixed point of the transformation. So that's that's that's what we did. Yes,
+user avatar
+Unknown Speaker
+00:25:14
+What's that?
+user avatar
+Dino Konstantopoulos
+00:25:15
+Yeah. So um, the the uh uh a graph is given by a an adjacency matrix right? The adjacency matrix will will describe the geometry of the graph, so we'll have a bunch of zeros and ones with zeros where there's no edge and a one. One is an edge right? So so an edge is immediately described by a matrix. Now a graph
+is used as a transformation. So that's why that's where we get the transfer matrix from, and that's how we build neural networks. We build neural networks by building a graph
+and by forcing potential through the graph.
+And then we make each layer in the graph nonlinear by adding some kind of a little bit of a non-linearity between the layers of the graph but where the graph where the matrix of the graph comes into play is what we think of a graph as a transformation.
+So what we think is following a graph as doing a transformation
+where we think of all the nodes of a graph as a potential state,
+right? So you can think of if you graph the graph that we studies the ecology graph right? And we thought about it as the this, the the yummy yummy matrix, right like who it's whom? And so you can think of um. The state of the graph as uh all, all the nodes together. And then, if you, if you assume that you are okay, it's a little bit crazy, because it's it's a little bit of a quantum thinking. But as soon
+superposition of all animals in in the in the in, the in the in the ecology, right. So you are a little bit of a grasshopper, a little bit more of a fox, a little bit less of a of an algae, a little bit more of a fish, right? And so you're in a combination of states.
+And so your transformation next time step
+because some other animals are going to eat part of you is going to be another, a a new state vector where you're going to be a little bit less of a of a grasshopper, because the bunny ate most of you. Right? So that's where the graph comes into play. The graph is a transformation.
+And then what we did in this in this notebook is: try to define the transfer matrix that defines a transformation,
+and so that transformation is up to you how to define it. But the point is that when you use graphs it's very easy to define transformations. It's very straightforward it, because we have the tools of how to do that, because it's all linear algebra.
+And so, when we want to describe uh it at the end of the game, what what is data? Science, data? Science is having a a in one dimension, having a function that says, If you have your independent column on the x-axis, and you dependent column on the y-axis, your function will tell you. Given an X what your Y is going to be
+right. So we agree that a function is what statistical learning is all about right. We need a function to tell us the relationship between one column and excel spreadsheet and another column in the excel spreadsheet, right. The independent, variable, correlated with the dependent variable. That's how we learn.
+Remember the lab that we did with the um weather in New York, in in Central Park, in New York City, where we used one column to predict the temperature lim to predict the temperature next day. Right?
+So that's what statistical learning it's. It's a graph. It's a function. And and what we do is we build that function right? We We built that function using using computation statistics, using basic statistics. When we did simulation,
+a Gaussian. Let's find the parameters of the Gaussian, which is the mean in a standard deviation using the method of moments.
+Yeah.
+So you can do math. You can do computations, but the end, the end of the the end of the the the end of the line is, give me a graph that gives me the relationship between two columns in a spreadsheet, so I can predict one from the other.
+Now, in many dimensions, when you're predicting many columns for many columns. Your graph is a complicated surface in high dimensional space. Do you? Do you get that right? If we have one dimension, we have a function. If we have many, many dimensions. We have this complicated geometry in high dimensional space.
+How do you describe the geometry?
+It's very complicated to describe a geometry, a function in high dimensional space. It's a lot easier to define it as a transformation of a graph.
+That is why our brains are a graph,
+because our brain is a transformation. It helps us think
+about future events.
+We're hungry. What we should do we should eat, but we we want to make a lot of money, so we can have a nice life. So we need a good job. So we're going to study that good university to get a good job. All this is transformation. Your Your brain is a graph, and you think about these things,
+and and that's that's what that's what
+living means on on planet. Earth means for animals and humans means to to think. And you think through a graph you build models of reality. And then you
+predict what you should do to be happy, to get food, to get money, to get a boyfriend or a girlfriend, to get anything a good job, right?
+So that's where the graph comes into play
+because it's a transformation, because it's a good way to define a transformation.
+And because we know that anything in the world is either a variable is either data or a transformation. Right in in python everything is either a piece of data or a function.
+And so same thing in life. In life. Everything is either just an object or it's a transformation where we're actually doing. A process of reading something or
+and and graphs is what what helps us define the transformation in in the way that we That is the best way we found so far.
+That's what we call. We have a class called introduction to neural networks, because we're going to study how to really do that, how to build these graphs and the whole theory behind it, One
+And uh, okay.
+So the transformation, if it's, linear is defined by transfer matrix. And now we're after the transfer matrix. So we're looking at the dominant eigenvector of that transfer matrix. So um, if we have a transformation, is defined by a A, The dominant eigenvectors are Xi.
+And the dominant identity associated with the dominant eigenvector is Lambda I. And when we do that, then we know that
+the transformation, after any number of time steps, is just given by
+by a pdp, might p to the power, and t minus one.
+So if, since D is the Dom is the diagonal matrix, it has the eigenvalues on the main diagonal, The only one that doesn't cancel out is the dawning eigenvalue, because it has a like. The dominant eigenvalue goes to one. All the other ones go away. So that's the long term behavior of that transformation.
+If it's. Linear
+If the transformation is nonlinear, then that's not the case right
+with neural networks, we know we have non-linearities. In fact, we add the non-linearities,
+because we know that if we had only linearities, then transformation, through every layer is like a multiplication of a bunch of matrices, which is one matrix, one big matrix multiplication.
+There's not enough intelligence there to express all possible movements in state space. So in the nineteen, sixty S. A. Bunch of scientists at Mit studied these things because they were studying graphs, and they said, No, you can't get intelligence through a single breath,
+and from the sixties to the nineteen eighties were the dark ages of of artificial intelligence or machine learning, because nobody studied graphs until a couple of scientists from American scientists moved to Canada because they couldn't get funding in the Us. And they got funding in Canada
+from the Canadian Science found the National science foundation. And they studied graphs, and they understood that. Yes, you can't get intelligence. The secret is adding non-linearities, and adding many layers,
+and from many layers was born the science of deep learning.
+That's what we call it deep learning, because we have many layers.
+Okay,
+so um
+sparse matrices are are very, very useful, because when we study transformations on a system that has many states, hundreds of states, maybe in thousands of states, you can't use real matrices because they take up too much space.
+And so you use sparse matrices. And there's two kinds of important sparse matrices, the the cool matrix and the Csr matrix.
+Okay, So uh, yeah, graphs
+the adjacency matrix, the transition matrix that represents a transformation.
+Right? So so this is the This is a the the moody matrix. It tells you how each country moves from Aaa economies to double the economies, and what the what? The um, the stochastic matrix of the scratch. But you could also think of a country as a quantum system.
+That is a superposition of all these States, and the transformation of the combined economies of this quantum system. Right you. You. You express that as a vector you multiply by this matrix, and you get the next year's state
+for that quantum system.
+So a matrix is a transformation. We We we saw that in in our notebook, right? If we have a function and a function is, linear we can describe it as A. As a as a matrix multiplication.
+So what we did in in the um, in understanding the the page right? Algorithm we said, Okay, we're not going to do it for the world Wide Web, because it's too big. But we'll do it for an ecology, the the yummy matrix.
+And so we said, Um, let's find the dominant eigenvector right?
+So we said, Uh, first we do. We drew the the graph, and then we sorry what our labels were, and then we built the adjacency matrix just a single call to build that adjacency matrix.
+Jason and matrices are very important for any kind of company that works with graphs, whether it's Facebook or or Twitter, or or Tiktok, or they It's all graphs right.
+So if you interview for the company available, you have a question about graphs. So you need to know your adjacency matrices and your transformations right? So we have loads and edges. The edges are the connections between the nodes,
+and then
+so if we have, if you think of a state vector that represents the
+uh, either one species, so if it if it represents only one species that vector is called a one hot vector one hot because it only has a one at
+I, one At one column of that vector I, one row of that, vector. Because it's a it's a shark, or it's a it's a it's a grasshopper right? So we have fifty
+rows in that, vector and each one represents one species. So if you want to represent grasshoppers, that's represented by a vector that has a one
+at the at the thirty-three or thirty-eight node is our grasshoppers right. But if you can think of a quantum system that represents a little bit of all animals, and you want to see how that chimera. By the way, chimera is um, it is is, I mean it's confirmation. Greek mythology is a combination of animals right? So it's a it's a lion that has a human torso,
+or it's a a snake that has uh the head of a fish right? It's called a chimera.
+So you can think of a chimeric system, or it's a combination of animals, and we want to see how it gets eaten
+right. And so what we do is we accelerate the process being eaten, because, of course, you don't get always eaten after every time step. But we want to see what happens, what W. What's the most important species. The most important species is the one that that that that that gets eaten the most. That's the most important
+page in your Google results right? And you can search query, and and we get that by finding the dominant eigenvector that will. That will describe that. Um the most important species.
+And so we want to build that transfer matrix from the adjacency matrix. So we said, Okay, how do we build the get getting even by matrix? Well, we know who it's whom? Because we have the adjacency matrix, What's the probability of being eaten next time? Just divide the one by the number species eating you,
+and that will describe the probability of either being eaten by a fox, or being eaten by a gall, or being eaten by another animal.
+Right? So we assume that you you're going to get eaten at the next time. Step just. We want to know which species each each you the most
+right. So we build the transfer matrix and the way we did that is, we We did a little bit of linear algebra. We uh we got the degrees of the node and and the degrees of the node is a number of um of edges. Leaving that node
+right. Of course we have in degrees and out degrees, but in this right? So um here we're talking about. Uh, we're talking about um.
+Our degrees are in degrees a bit confused. It's the it's the we each species has links that tell it who we who it right, so you can think of it as out degrees or in degrees, but it's it's essentially degrees. It's a number of edges, leaving a node,
+and so we divided by that, and we build our transfer matrix. I think we stopped right there. We stop where we build our transfer matrix.
+And so
+we used sparse matrix representation. So we're getting a little bit familiar about how to multiply with sparse matrices. If you want to peak at the matrix. If you want to see what it looks like, you have to turn into a dense matrix.
+Your matrix is huge. A thousand by thousand don't turn it into a dense matrix, because it's too big. But you can get
+a peak at the matrix by just plotting the non-zero elements which already gives you a lot of information, tells you how sparse it is, gives you a little bit and information about the structure. This is why I gave you some code to actually plot
+the sparse matrices as well as plots, plot zeros and ones for adjacency matrices. And this is how we build our transfer matrix
+right? So if we multiply the adjacency matrix by a diagonal matrix
+that has in the main diagonal the inverse of the number degrees of that node of each node. Then that will give me a stochastic matrix. That is the transfer matrix of the
+of the State machine described the an even by.
+And and the first role that matrix looks like this. Remember the first roll. That matrix had three ones. So by dividing by three we got three, three, three, three, three, three, three, three, three.
+And now we're ready to search for the dominant eigenvector, because the dominant eigenvector will tell us the most important species.
+The most important search result for your query,
+the most important species in the ecology. If that species go away, it goes away. The ecology will collapse the
+So um! This is the dominant eigenvector.
+Now uh, this is the the that Google studied. And Google said, Well, this is not exactly how how humans surf the web they don't just go from hyperlink to hyperlink. There's also also this thing called the the Search, or the title bar, where you type a Url,
+and they said that you know arbitrarily they said eighty five of the time we follow Hyperlinks fifteen of the time we put in. We can go to any new Url. And so the search for the Domain eigenvector needs to be modified to this equation
+that says that the D is eighty, five percent. So eighty, five percent. We do follow hyperlinks, but fifteen percent. Which is this:
+we can get any species. So the probability of of being eaten by is, is over, and for any spaces we could we could get in many species we could go to any other web page.
+So so this is the real transformation that we're after. The real transformation is is this: And so thankfully, because we only have
+a forty, eight by forty, eight matrix we can actually solve
+for our
+exactly,
+and the way we saw for our exactly is here.
+Ah, sorry. So this equation here
+we rewrite it here.
+I
+minus Dds damping times
+the transition matrix
+um, And and this term here
+is given by this,
+where Beta is one minus damping. So beta is one minus d,
+and we divide by n
+right. And and we use a sparse, a sparse solver from sci-fi sparse linear algebra.
+And we can actually solve this exactly because we have a pretty small matrix.
+I actually will. Google. You will be able to do that for the World Wide Web.
+But for a small enough matrix we can do that.
+So, um! Let's go ahead and and solve this and get when we solve it.
+We actually get
+the dominant eigenvector. So the dominant eigenvector is A. A. Vector, So it's a list, right? And so it tells us
+mit ctl, and it tells us the it gives a percentage for each species Right? It gives you. It's percent. This this. And we're looking for the species that has the highest component, one hundred and fifty.
+Okay. So if we if we run this, you can see it's it's pretty fast, because it's only it's only a fifty by fifty, matrix, forty, eight by forty, eight,
+and we can solve this exactly
+sparse on. I
+I think I introduced by somewhere else. And uh,
+where did I? Where did I import Sparse
+sorry um
+I didn't run all the sales. So I think I have to. I have to probably run from from the beginning uh
+where I read the um.
+So let me
+let me start from here.
+Okay, I'll. I'll start again from here. Okay, boom, boom, boom,
+And then do I already have this?
+Yeah, I already have this. And so uh, these are the species length of this piece, I think I'm just. I was just missing this.
+So let me just copy, and so that
+okay,
+now it can go all the way down here.
+Okay,
+All right.
+Okay. So we Yes.
+Oh, that's the identity matrix, because the equation involves it in the matrix. One is the identity matrix. So
+yeah, that's the that's called the Google equation, right? So Google came up with this equation
+and and one one with uh, I could have called it I but one, you know. Bold face usually means identity for for matrices,
+so as far as the I, we said, is the identity matrix
+compressed, sparse columns. It's a um uh sparse matrix representation.
+Okay? So now we look at uh, we look at the page rank, right? So what we do is we zip up the species and the the in degrees of the what we what we call the degrees of the species and the page rank, and we look at the most important. The highest page rank which will give us gives us the most important species,
+right? Because what we say the page rank is, if this is the dominant eigenvector, which is a a combination of all the species. But what's the most important contribution in there? Right? That's what? Also, when when you um
+W. When you put in a search query on the Google Web Page, Google returns um
+a page rank for the entire world what web? So it has a percent, this page, that that page, that page percent, that thing, but all all you want is the page that has the highest number here, and so it ranks in in the decreasing order, and it gives you the top few pages. Right?
+user avatar
+Unknown Speaker
+00:48:32
+So. Um! If we, if we run this. You tell me what the the most important species that what's the species with the highest page rank.
+user avatar
+Dino Konstantopoulos
+00:48:49
+So microphone is pretty big point zero, one
+point zero, two even higher.
+What's the highest one?
+Oh, point zero two is also pretty high.
+Oh, look at that point Zero three, I think that's the highest one.
+What's the deputies
+garbage? What's the most important um
+food in that space? Garbage decomposing garbage?
+Right? That's the most important. But But after after garbage we have phytoplankton.
+So now we know what the most important uh species are in the ecosystem, because without this species um the the other, they they get eaten the most
+right, and so we can identify in in in um
+decreasing order the most important species in an ecosystem, just like when you put in a query on on your on your web page. Google will rank all the web pages and will give you the most important web page for your query in decreasing order. Right?
+Okay,
+Um. And so we can. Um, We can do a plot.
+And so when we I I put in a list of important species, and I plot them uh crap.
+I didn't even put in a public
+user avatar
+Unknown Speaker
+00:51:07
+library again.
+user avatar
+Dino Konstantopoulos
+00:51:25
+So so if you plot them, and if you plot the the page rank as a function of the number of predators or the in degree. You you will see that. Um
+the biggest number of predators. Uh it is for the gardeners in gardens also, Hasn't been. But you also see that there's some species that are very important, and also species that are very important. I have this predators.
+But eventually the more predators you have, the more important you become, as the spaces, the more important the spaces you become, the more important of the species you become, Uh, because you are the primary food source for other species.
+So um,
+we solve this exactly right. We solve this system exactly because we could afford to, because we only had forty-eight nodes, and we use sparse matrices. But that's not how we will We will solve the um the world what we ranked the world wide web, because it can do this for a trillion by trillion matrix.
+user avatar
+Unknown Speaker
+00:52:32
+And so they use the Monte Carlo method
+user avatar
+Dino Konstantopoulos
+00:52:34
+and the Monte Carlo method is, they said, Okay? Well, we know that the page, the dominant eigenvector, is the only state that doesn't die out when we multiply by the transfer matrix a gazillion times.
+So let's take a random point in state space. Let's multiply by the transfer matrix a gazillion times.
+Let's see which component.
+Let's see if we if we get to the fixed point, and we get to the fixed point. Once you multiply, keep multiplying where you stop, moving
+where the transformation becomes fixed, and you never, You never move away from that. Vector
+So let's do this a million times using a Monte Carlo algorith and see what the what, the what, the the dominant eigenvector is. So this is called the the power matrix. So what we do is we give it a maximum number of iterations,
+and for every iteration we we we compute the next vector by solving the Google equation.
+user avatar
+Unknown Speaker
+00:53:29
+Okay.
+user avatar
+Dino Konstantopoulos
+00:53:34
+And then we say eventually, if we get very Np. The All close is a very nice Api, because it tells it tells you if it it compares to vectors, and it says, if the uh, if the two vectors are close enough,
+and then you can also give it. There's a default value thing it's ten to the minus fifteen. I'm not sure. Um, then um! You never get. You never completely, never change, because you always have decimal error at the end. Right? So you you want to see how close you can get to being fixed.
+And so if we find the fixed, vector we break out of the loop and we return.
+So this is essentially what Google did this? All this is the solve this equation. They They they this function, of course, they didn't run it on a single computer, because you can't run this when you have um when you have a matrix that's really the space when you use different techniques to.
+But that's essentially what they what they solved.
+And so if we,
+if we we want to run this, the first thing that we realized we, we have a little problem, because when we look at our transition matrix.
+When we look at our transition matrix, we have some non-stochastic rows. Not stochastic rows means that if we sum
+the entries, they don't sum up to one so probabilistically, We have a leaky system,
+right? When you have a stochastic matrix and that matrix the transformation it means it's probabilities. It means all the probabilities need to sum up to one.
+If they don't sum up to one, then we have a problem, and you can immediately see where the problem is, because species that don't eat any other species will have a bunch of zeros on that row and know once,
+and if you have no once you can't add up to one.
+So
+we already knew. I already told you that species that Don't get that that don't have any predators are a problem.
+And so we need. We need to solve this problem, because if we have a non-stochastic matrix we we won't be able to iterate because the transformation will will get us to a point. But that's not a fixed point.
+It's it's a point where we can't advance anymore, because there's there's no arrows leaning out of that node
+right?
+So they're They're points that that are like you know one-way streets we get to that one-way street, and then we can't get out of that street,
+and so we can never get to our destination, which is that which is the the dominant eigenvector.
+So what we need to do is what we What we're gonna do is when we have. When we find a role that's not stochastic like that, we're going to arbitrarily add um
+a percentage of being eaten by anyone.
+But oh, sorry! A percentage of eating anything. So if you are garbage, there's a certain probability low probability that you will either. Shark,
+because that's we need to add our degrees from that species. So the way we do that is, we just add out degrees um
+um for any other and potential meeting any. So there's a probability of meeting a shark whatever it is, This is the same thing. What we're doing here is the same thing as solving a A as as doing what what what Google did, which is to say that
+there's a probability that you can add any url, and you can get, you can add a new address to the Url Bar. You can go to any other web page.
+So um. So this is how we resolve this problem.
+So if you want to use the Monte Carlo method uh, this is a problem. This is a problem. And so the way we resolve this, and, by the way, we can find the problem if we sum all the rows
+we you can see that some rows sum up to zero. Those are the ones that don't have predators.
+Sorry, Those are the ones that don't need anything.
+Huh?
+The wet.
+Uh yeah, they're not. They're not outliers. Necessarily. Yeah, they're outliers. Yeah, I'm: Sure, they're outliers. Um.
+But um, there outlined is usually our our data points that you can throw away and still continue with your analysis, and these are not outliers in that sense, because they're critical components of our ecosystem. If we remove them, we're removing important components. They just have a weird behavior to them.
+Um! So they are a lot of outliers in the sense that they don't they don't have. They don't need any other species.
+They don't predict any other species, but they're not outliers to, in the sense that we can throw them away and continue with our analysis, because they're important notes.
+So what we do is we uh we modify that power. Um,
+um
+uh the power uh function with a a little bit more of a complicated equation that really represents the the probability that you can get eaten by any other species. If you have a species that doesn't have that
+um
+uh that, that doesn't need any other species. But in the end, when I when I ran this when I ran this function, it didn't really make much of a difference,
+because what I did is I ran.
+So this is where I ran the power function, and this is where I run the modified power function,
+and I see that they're essentially uh they're essentially the same. In other words, they're completely correlated.
+So here is where we actually run. Oops power. Two is not defined.
+Okay. And so if you double check and you look at page rank
+that we found originally with a full method, page rank power, which is the Monte Carlo method Number one in page, one
+power, to which is the Monte Carlo method that fixes
+um.
+So this is page, rank and page rank power. You see that they're the same.
+Uh, wait uh, this is I. This is page rank. This is page, rank, power. This is Pedro power to right. So these two
+Oh, wait! So. Um! This is. This is the two page ranks, and this is page rank, power to, and you can see that the the they're correlated. So this, divided by this is always equal to the same factor.
+So, in other words, this page rank in this part page rank is equivalent, because the the ratio stays always the same. It's zero point three, six for every node.
+So it doesn't really make a difference. So if you don't understand this. Uh, this is a little detail. Um, it's not. It's not really that important. It turn out to be not important. Um! But you have to be careful,
+because, you know, if you're looking for the fixed point, and you're running a Monte Carlo algorithm
+and you end up the silver surfer ends up on a species that doesn't go anywhere else. Then it's he's stuck there.
+But but you know the Monte Carlo, algorithm the original one, the simple one still works. Okay,
+so you can. If it is a complicated forget all about this because it still works. So. Um, you can see that the analytic, the re, the the complete, the exact solution, and the Monte Carlo solution are exactly the same
+for all nodes.
+And so we end up with the same page right. And so the way the reason I wanted to do this method rather than this method, because this method we solved exactly with linear with linear algebra. And this method is the method that Google used.
+And so uh, at the end we get our page rank, and then we find that this, the first highest P page rank. Most important one is garbage, and the second one is phytoplankton or benefit algae.
+Okay. So you can see how graphs are super important. Right. A lot of data comes in the in the shape of graphs. This is what graphs are important. Studying graphs is important. That's what Google did. Um, and it's Still, it's still very important, because we have a lot of data in the form of graphs. And in fact, we'll see next semester that we use graphs to build our machines to do our computational
+computational learning that we call machine learning today that we call neural machine learning.
+Okay, any more questions about about graphs.
+Maybe i'll maybe i'll give you some some graph questions in your in your final project when we look at when you look at text, because I think it's. You can also apply a lot of graph methods
+in in understanding text, for example, sentence
+text, Um, what's the word uh summarization,
+right? When you want to summarize
+text, how do you summarize it?
+Well, one way of summarizing it is finding the page rank of each sentence
+Right? What's the most important sentence
+in uh in a in a piece of text, and you can think of sentences uh sentence importance. You can think of a graph uh you can think of a piece of text as a graph.
+We're we're sentences um point to other sentences. How do they point to other sentences? So sentences point to other sentences, if
+I have to think about this. But but i'll, I'll tell you on Monday how we can think of a of a of a corpus, a a corpus of text as a graph. And then how we can use a graph techniques to summarize. Yes,
+yeah, you can take. You can take words. Um: as well. Yeah. Um. But then that would give you page rank in terms of words, not in terms of sentences, right? But yeah. So what what you could do is you could think of um
+all the words in a sentence as the nodes, and then you could say a word is next to another word. So a word has an edge, shares an edge with another with another word. If they're next to each other,
+or if there are two, three words apart. You you define it that distance.
+Um, and then that gives you the most important words. But that still doesn't give you the most important sentence, right? That gives you the most important words.
+Yeah. Yeah. So so so W. What your what? Your your your colleague mentioned. Um is uh, how we transform
+how we go from from words to numbers, right? Because whenever we process words we want to, or we do any kind of machine learning with words. We first convert them into numbers. So there's different techniques for converting words into numbers.
+So there's a bag of words. There's term frequency and stuff documents, frequency. There's um um What's also convert for bidirectionally encoder presentation for transformers. There's different techniques for doing that. Encoding. These also called embeddings. Right We embed words into vectors,
+and then, once you you, you've embedded the words into vectors. It all becomes linear algebra,
+right?
+Okay.
+So let's look at the uh the notebook that. Uh I plotted for today.
+Um,
+this is this is a study of Time series.
+Um, and a little bit of an introduction to to machine learning methods. Um. And the reason why it's important to um
+to study time. I just realized this is a picture I took somewhere that's me taking the picture back. Okay. The The reason why it's important to study Time series is because um,
+if you,
+if you read the web about machine learning, you will, you will be convinced by the articles that you read that, Hey, we can apply computational statistics to to machine learning, and it's so sorry we can apply computational statistics to financial data. And then we can just move to New York City and play
+the stock market and become millionaires because we can predict anything. So we can predict stocks, stock prices
+right and make it and make it killing. And so if if you, if you guaranteed, I can, I can. Google Articles now and for articles, and I can show you how people are applying machine learning methods to predict
+a stock price from the stock price.
+Right? So what we did remember what we did in the in our um
+Central Park meteorological data.
+What we did is, we predicted the the the temperature from other columns.
+But what people do with financial data is they attempt to predict the stock price from the stock price from past values of the stock price. So they're attempting to predict the future value of the stock price. The problem is that
+most financial data is not autocorrelated,
+which means there's no relationship between the past and the future in the stock price.
+There's relationships between the stock price and other quantities. So other variables in in in in Wall Street,
+but not the stock price itself. So there's making this huge mistake. And so I I want to prove to you that it's a mistake right? Because if if I don't, then you, you you you! You might believe that it's possible. So that's the purpose of this notebook to prove to you that No,
+there are limits in computational statistics. You can't. It's not like magic. We can suddenly predict the future future behavior of things. So I want you to see this,
+and also I want you to see how we studied Time Series,
+because I think
+your final project will also study text as a as a time series.
+So once we transform text into numbers. Then we'll be able to study those numbers,
+So something that people often do with text is they turn. They turn, they look at, analyze words, and they find which sentences convey a lot of emotion by seeing what words they use. Right? So you can analyze
+the amount of surprise in a sentence, or the amount of fear in a sentence, or the amount of happiness in a sentence, or the amount of joy or the amount of of anger in a sentence just by looking at the words that they're using one hundred and fifty,
+and then you can study that that emotion as a time series
+through the novel.
+And so you can see how the not the global behavior of the novel. It starts with happiness. Then there's a lot of fear. There is an unknown, and then there's There's ends with happiness where it ends with sadness or something.
+Okay, so let's Let's go through that. Um. We don't have a lot of time, so I won't. Cover everything in detail. But we'll we'll go the faster. So let's import, so everybody can stop Pan. This data, reader
+that allows you to import financial data.
+And so, after you have data, reader, i'm going to read the apple. So the apple stock, the apple ticker
+on Wall Street is a atl apple, and I'll. I'll read this from the Yahoo from Yahoo from two thousand and nineteen for a three year period two thousand and nineteen to actually. That's two years, two thousand and nineteen to two thousand and twenty one
+January first of January last, uh thirtieth of January. So if you run this
+Um, that will give you uh the high, the load you open, the closed. I mean, this is time series data, right? This is financial data.
+And so um, you can plot it, bless. So we can look at the at the high column that's that's agreed to. Just look at one of these callers, because it looks like they're all very close to each other.
+And so when we plot this using map live, this is what a time series looks like.
+So immediately you'll see that this is this: this um Time series is not stationary, right? It doesn't it doesn't have a period between this and this the need is not the same thing as the in between. This is this period or the need here. Right? So um! The first thing I want to do is make sure this is stationary.
+So if you,
+if you if you convert, if you do the diff,
+if you use numpy dot, this that takes the value the day after, subtracted from the day before. This gives you
+a series that is stationary, because the mean is always zero.
+Remember, whenever we look at the statistics of things we want, uh, uh, the moments to be stationary to what the mean, the standard deviation, the higher order, moments like screaming for to to be stationary if they move through time, we we.
+So that's what we compute the difference to make sure that the for example, here in the mean and and the standard deviation are constant.
+So you always ask yourself, Is this to be stationary right? And the the the best way to do that is to apply that to you full of test and thank you for the test will tell you that. And so this is something I think you've already seen.
+And so this is what you would might want to do if you're not um.
+If you don't have this knowledge, you'll say, okay, let me see if I can predict uh the stock price uh the future stock price from the past. So what we're gonna do is we're going to just drop all the columns, and how just just stick with a high column.
+user avatar
+Unknown Speaker
+01:12:01
+These are the dates, and this is the high value,
+user avatar
+Dino Konstantopoulos
+01:12:05
+and we're gonna do the same thing we did with your with our media, with data. Remember our central part of data. We're just going to shift in thirty days,
+and this is the stock price shifted thirty days.
+And then because we have Nans here, let's just remove the last thirty rows.
+Okay, So now that's what That's the data set that we're playing with.
+So let's call
+we're attempting to predict
+the series from the series itself. So x is the high column and y is the predict color.
+Yeah. And we're trying to predict why.
+So this is X, and this is Y, and you can see that It's a Panda series.
+So the way to turn it into a numpy arrays to get the values. So this is X values
+um. And then what we what we want to do, because a lot of machine learning algorithms expect
+um the
+X to be two-dimensional,
+because it's not just a single column that is an independence, and they have more than two. And so
+here, what we do is reshape it so that we make it two dimensional. The only reason we do that is so we can use some algorithms that expect a two dimensional uh data set.
+Okay, So we just use the reshape. By the way, reshape is very important. Reshape and squeeze are very important in Pi Api's,
+because
+taking a data set and turning it into a different number of dimensions is, is is is just very important. Machine learning will do a lot of that.
+So these are important Apis to know.
+Okay, So we reshaped it to be two-dimensional.
+And now we're going to import our favorite machine learning method. So whenever you have one to apply machine learning, the first thing you try is a random forest. It's one of the best methods. Why is it one of the best? Because it's it's not parametric. It doesn't have any parameters to tune?
+And so, if it works, it works, if it doesn't work. It doesn't work. So it's minimum effort. So you should always try it first.
+My favorite, I don't know The other people say they have a different arguing. That's their favorite. Maybe people say boosting algorithms are my favorite, but I just I just lever and they're random for that. I I actually very much like rental for that are based on decision trees. And the decision tree algorithm is kind of how I think right.
+You know, I think. Is it going to rain tomorrow? Well, they do rain today. It didn't rain today, so it's a high chance to get a rate tomorrow. You you think about these different different different facts, and you you subdivide your predictions into small steps, and you make rule prediction. That's how decision trees work, and random forces in an ensemble algorithm over decision trees. So
+okay, So we're going to import that algorithm we're going to import the train test, split Api. So we can split our data set into training sets and test sets.
+And so this is called train test split. So now we have four sets right because we have the independent, variable, the dependent variable. And for each we have train and test.
+We'll. We'll set test apart, and we'll use, test to verify to see if our training algorithm worked.
+We're going to create a random forest, and we're going to fit it to the data
+That's how we do prediction. Right? We just we just call the thick Api, and then we use the train data set. So so the train data set is obviously going to be very good. If we look at the F one score
+because we trained over that. But now the ultimate test is looking at the test data set to see if we get a good score. And look, we get up. We get a pretty good score ninety-three percent
+right. But what are we actually doing? So? A lot of web pages will say, Hey, there you go! You can predict you can predict stock prices thirty days in advance. But what's actually going on? What we do Train test split.
+What we're actually doing is removing random values and putting them from moving them into the testing data set. And then we're adding these values back right. So what are we doing? These values are all very close values to other values, but before and behind it, right?
+And so this value is almost exactly this value.
+So there's really no no intelligence in that. Algorithm that's not doing anything intelligent. You would have done the same thing if I give you a graph, and then I remove some, a a random number of points, and I tell you we cannot predict what you're just gonna just add a line between the points,
+so no intelligence. There, there's there's nothing magical. So what we really should do is instead of removing random points, we should cut off a big part of the future.
+Right? Say
+this, remove this, and then try to predict this,
+because then we have completely different behavior.
+Right? So that's that's what we really want to do so. This is a much more difficult model.
+So let's let's pick X from zero to three hundred. We have about five hundred data points. Let's pick zero from three hundred as our training data, and then three hundred to five hundred will be a test data.
+So now let's see if we can do a prediction.
+So i'm going to create my training and my test data instead of using a new Pi train test split Api That does random random splitting. I'm going to do this splitting.
+Okay. So now I have something completely different. This is much more serious, but this is the shape of my uh of my data sets right. So once again I have the independent variable which I call X.
+user avatar
+Unknown Speaker
+01:18:38
+Hmm.
+user avatar
+Dino Konstantopoulos
+01:18:39
+And I give it a capital because I want it to be two dimensional, even though we have one column, we always use all all machine learning algorithms expect many independent columns as your independent. Variables.
+So So this is my uh. This is my independent. This is my training data set, my training data set for the dependent column that i'm trying to predict and my test.
+Okay,
+Okay, Okay, Okay.
+So Um. We have Panda series for white train.
+I don't know what I was doing here. I was looking at something. And this is the length of the training and a test data sent, and I plot them in different colors. So you can see what we're what our training data set is and what our test data set is.
+Okay. So now we we really have something serious from zero to three hundred is the past behavior, and from three hundred to five hundred is the future behavior that we want to predict.
+If we, if you want to plot all four data sets, you know. Plot the um x-rane x tense the white training white test, using different colors.
+So let's create a random force, regressor. Let's do the fit, and let's score the model.
+So now that you do that, you will see that
+that's horrible,
+user avatar
+Unknown Speaker
+01:20:14
+that's not even between zero and one hundred
+user avatar
+Dino Konstantopoulos
+01:20:18
+that tells you that there's no random force. Doesn't work in this kind of prediction. In other words, you cannot predict. You cannot predict the orange from the blue.
+A random force can do.
+In fact, I want to see what we predict. I want to see what the um, what the random forest actually does as the prediction. And so i'm going to plot the prediction on top of the um of the um
+of what i'm trying to predict, and you'll see what we're trying to predict, and you'll see what we're trying to predict, and you'll see what we're trying to predict, and you'll see what we're trying to predict. And you'll see what we're trying to predict, and you'll see where we're trying to predict something, and eventually we will. I will give up the random, the the and the force gives up It just can't do it
+all right, so I hope i'll convince you that you can't do it. You cannot predict the past from the future unless you
+the futures come is completely correlated, autocorrelated with the past. So some kind of relationship there Isn't:
+Okay. But then you think Okay, maybe we should decompose into four sections
+and um,
+user avatar
+Unknown Speaker
+01:21:34
+What we're going to do is we're going to train the model
+user avatar
+Dino Konstantopoulos
+01:21:37
+to predict the orange from the blue, and then see if, when we do the test, can we actually use the green to predict the red right? This is this is a different different thing before we just used. We just use uh,
+we just decompose into two. But now i'm saying, Oh, okay, maybe I didn't do my machine learning out really well. What I really should do is instead of dividing into four, and I train it to predict this from this, and then I see if I can use this model to predict this from this,
+since something that's closer to the future.
+It's just a different one. See if I can do that,
+and i'll actually i'll. I'll skip this. I'll let you run it to it. Doesn't work. There's no way to do that.
+So uh then I say, okay, uh, graph uh broken dream. I actually can do that. Um!
+What am I doing here?
+Oh, okay,
+So um, What I also do here is I uh i'm, i'm doing a baseline. So a baseline tells me um
+the error that I do
+um if I predict
+um,
+the last observed sales from the training data, right. So this is. This is kind of tells me that if I if I predict what if I if I predict the next day from the day before. What's the error that i'm making? So this is kind of this: Call the baseline that lets me see what my baseline is. So what i'm trying to do is i'm trying to do better than the baseline.
+So if I do a naive model that tries to predict the future using the baseline, it will predict the green line, because it predicts the future from the last value of the past.
+So you see, if you want to predict the future for the last value of the ask that also doesn't work
+that that's the baseline
+right? That's what what you would do if you had no idea. So you want to do better than the baseline.
+So whenever you have a machine learning ongoing, you always want to have a baseline, because the baseline tells you
+what a really dumb
+human might do to do the prediction for the future. What's the last value of the past?
+So that's what you want to improve on?
+So now that we have a baseline, we can try other methods. Statistical methods like Arima
+I i'll let you run this. Um: So okay, okay, actually, it's just running so. Um,
+they've installed. P Pmd: that's a pretty good um. It's a pretty good auto regressive integrated moving average library.
+Um, And so if you install it,
+and you run this.
+You will get a prediction that's a little better than the baseline
+right? Because what it does is, it looks at the past behavior, and it can see that you have. When you have this graph, then it will create just looking at the past, that this way, because the last few days. We're actually
+so, you know, with very simple statistical methods. And just look at past behaviors. You can. You can do better on the baseline,
+but it's still not very good.
+It's It's better than random forests.
+Um, but it's uh you know. Auto regressive um integrated moving average. Are we actually really good methods. A lot of people use them because they're the the last indicator of the past. So if you were on the good road, you're probably going to continue going on a good road. So that's why we predicted growth.
+But it could be. That's that. You have a strange event that happens, and the stock goes south and it doesn't grow.
+Your Arima method will actually lead you into making mistaken predictions.
+Now, I I heard of this library uh you, Google on the web. And you hear about Facebook profit. You know Facebook profit, You know Facebook. They must be really good means Facebook hopefully. They can surely predict the future, because Facebook is, you know, amazing. Actually, they're not doing that great right now, right They just They've got ten thousand people
+ten thousand. The employees.
+So. Uh let's see if we can use a Facebook profit. So a pip install Facebook profit, and then we look at our data set again. Oh, chuck!
+Why do I say train?
+Oh, yeah, I use it here. Okay, I define train and test here. Okay. So i'm going to use this.
+And
+now I have training to find, so i'll go down and try to use Facebook profit
+of them for Facebook profits. I'm gonna create a a model, and i'm gonna say, um
+growth assume growth is linear, do some, some, some defaults, and then i'm going to say, um, go ahead and train. So i'm going to say model that fit.
+So i'm Importing profit takes a little bit of time to do that. I think profit is based on a
+he. I think profit is based on a new model. I'm: not sure, though.
+Okay. So let's go ahead and fit
+done. Let's make some predictions.
+Let's plot the predictions from the training set
+and let's see what we predict.
+Okay. So you see what we predict. Here
+is the blue line.
+So once again we're doing essentially what the auto auto regressive, integrated, moving average is doing right. It's predicting growth.
+But the good thing about profit is, it also gives us. It also gives us some some um error boundaries right? So it tells us it, it could diverge into an error.
+So that's Facebook profit. So I don't think it does a lot better than auto or regressive integrated moving average.
+We can try other other algorithms. So this is kind of we're going to cover them in the beginning of our machine learning class What? What's a support vector machine? Um, um!
+So this is a support back to the aggressor. This is why we have our so. Instead of doing classification. We're doing a regression because we're trying to predict the Time series. So if we try to do a support vector machine and we're trying to do the same prediction.
+user avatar
+Unknown Speaker
+01:29:13
+Yeah.
+user avatar
+Dino Konstantopoulos
+01:29:16
+Okay, Then all the However, this thing for further normal networks, I'm: i'm sure we can do it with neural networks. Really, really, really, I think you should try to own that works, because maybe maybe those are better. It's all okay. Okay, let me install tensorflow. I'm going to try, and the real networks right? So this is something we'll do in our machine learning class, and for tensorflow.
+And uh oh,
+can't run it. I I I just reinstall all libraries, and I actually don't even have tens of for installed. So i'm just i'm not gonna run it. But i'll. I'll let you run this if you're interested in Port tensorflow. And this is the Keros model intensively. It's actually interesting. So, um! I'll just give you the results. And then um. You can actually install tensorflow. If you install this, you you will get um tensorflow to two Point X Right? That's the latest versions, not tens of for one point X: So, um! There's a few things that change with with the tens of
+low two Point X. So you might have to replace Keros
+care us the optimizers.
+If you run the two Point X version with tensorflow that cares that optimizers
+right for the two Point X version.
+So okay, let's start with one hidden layer with one neuron, like the simplest possible neuron. And let's let's fit our training data right, and let's see what we get. So if you run this you will see that you will get um.
+You will get um an f one score that's really horrible, and if you look at the prediction on the data, you will see that completely flatlined
+right? So one new one with one layer won't work.
+Oh, oh, Professor, no, no, no! You're making a mistake. Deep learning that's important. You just use one layer. One layer is not enough. Yeah, you're right, one. There is not enough. So maybe we need to add more layers. So let's create a new one
+that has two layers
+instead of one. Right.
+So let's train it. Let's go ahead and run it i'll! I'll let you do that at home. It's actually fun to do that, Um! And then see our prediction. Oh, look! That's a lot better than before. Right. Look at this prediction. I'm completely tracking the data set.
+So
+um First of all, when you look at the F one score you'll see only fifty, and then eventually you'll realize that what the neural network is doing. Neural networks actually pretty smart, especially when you get what what they what they do. And you think that is doing prediction. But it's not. All it's saying is, Look, I have. I have this data set
+to the right
+right. So what is what is doing is just shifting is just shifting the data set that it already has to the right by thirty days.
+So that's that's what the algorithm. Is doing. And so you you're not really You're not Once again You're not really learning anything.
+So this is this is our attempt with the first model right? And now we're going to. We're going to attempt a second. The second model,
+the the second model where we actually where we actually are, make it. Do something a little bit more difficult, for we say, learn to predict this from this, and then predict this from this
+right.
+So when then, when we try to run that model,
+then we see that
+it doesn't it doesn't work anymore,
+because
+you learn to predict this from this,
+and then with this, with this learning method, are you? You should be able to predict this from this, But you can.
+And the reason why i'm running this note. Okay. And this is because I want you to run it, and to convince yourself that there is nothing magical about statistical learning. You can't. You can't learn something that is unlearnable if there is no correlation.
+Um.
+In a series where the future is correlated with the past. For example, see Time series that are seasonal, or anything like that, or or there, there's a pattern there.
+Then, then, in the human eye, by the way, is very good at looking at patterns because you have a one-dimensional time series. So if a machine can see a pattern, the human humans can actually see the pattern too, if there is no pattern. If there is no order correlation. You can do. The prediction,
+and auto-correlation is easy to compute right you can run a dickey full of test. It will tell you
+um whether there's auto correlation or not. If there's auto correlation, then you have a chance of doing prediction,
+because there's this correlation in the series. But if there isn't and most time series of financial data is not autocorrelated. So you can do a prediction. I don't care how many layers you add, whatever algorithm you want Facebook profit neural models. No crazy, intelligent um machine learning algorithms. It just won't work.
+user avatar
+Unknown Speaker
+01:34:55
+So in time series prediction
+user avatar
+Dino Konstantopoulos
+01:34:58
+attempting to predict
+column with the column itself is the wrong way to do it.
+It's possible to do prediction. But you're not going to predict that column from the column itself. You're going to predict that column from other columns. So that's what that's what quants do right? The A. A financial analysts that the reason they make a million dollar salaries is because they know how to do these kinds of predictions,
+but they don't predict the column from itself. They predict a column from other values, from other columns. For example,
+really simple technique is to find two to
+to stock prices that are historically linked
+where you see that there's one stock price that moves
+in in, in in concert with another stock price. So people know that
+you know the traditional industries sometimes follow the price of gold,
+and so, or or or the price of gold follows traditional industries. I'm not too sure. Uh with a certain time lag. And so once you know that, and you know that something happens in the other stock. Then you can predict
+the linked stock. So that's predicting one one column from another column, not the column from the column itself.
+And so this is what this is, what financial analysis is all about. And this is how people do their prediction in Wall Street.
+Here's something that I really like. Um, This is Google attempted to teach uh an Ai how to run
+by telling it. You know the basic behavior of running. And so when they trained the Ai to learn how to run, this is where it came up with,
+Yeah. So walking is, you know, going fast and also stability. How do we remain stable?
+And so they?
+You can see that the Ai taught itself how to remain stable by doing crazy movements with the arms,
+which is, of course, unrealistic.
+But this is what happens when you teach neural networks are actually,
+you know, smart, and and and they'll they'll figure smart things out, but it's not realistic.
+But this is a little bit like the trick of you know. How How do you? What's the best
+way to predict um Time series. Just take take the past and shift it a little bit, and if you do the shifting, it will look like you're doing prediction. But you're not really doing prediction
+right? If you do. If you run any time series
+Um, take any time series
+user avatar
+Unknown Speaker
+01:38:35
+and
+user avatar
+Dino Konstantopoulos
+01:38:40
+prediction into the future,
+you can say, Okay, I'm going to predict the Blue Time Series. Let me select the Blue Time Series.
+Let me the transparent
+and then the prediction is just, you know. Just
+so. I'm doing pretty good prediction. But you're not. You're just taking the past results and shifting it by by a few days, and then say, Oh, That's my time series. Look, The difference between the two is not very much. Yeah, but sure. But that's just the baseline that just doesn't doesn't mean you're making actually a good guess.
+So. Uh, and there's a lot of pages out there. We go to the page, and they'll they'll actually say, Oh, look! I I predicted the future. But you're not. You're not predicting the future. You can't do it. There is no way. A Time series is correlated. Uh, it's correlated with the future unless unless there's actual correlation in the data.
+So uh, I just spent a little bit of time seeing what? Um what um
+with financial. So, first of all, first of all, very important thing. We we. We didn't even make sure that our data was stationary, right? We attended a prediction, a predictions with neural networks or any other uh techniques. We didn't make our data stationary, and you see that when you make the data stationary by removing the mean.
+user avatar
+Unknown Speaker
+01:39:59
+Um.
+user avatar
+Dino Konstantopoulos
+01:40:02
+So I just wanted to modify the data set. I make the data stationary right. So now it has a mean of zero, and when I try to do a prediction with the stationary data, whatever technique you use, even if you, if you use the learn by by removing by a few days, you will get horrible results.
+Yeah. So here I use my two-layer new neural network that I that I use before
+and you'll see that the if you plot the prediction on top of the original data. Um! It has nothing to do with the original data. It's horrible. In fact, the if one scores horrible, So you can see, especially when you when you make the data stationary. But there is no way to make this prediction. This financial data is not all correlated
+limits of of statistical learning. You can't predict the future through magic. You predict the future because there's a There's a scientific reason why the future produces itself right. So Don't say, Oh, I learned machine learning now can apply this out way to anything, and it'll help me predict the future. No, it will only help you predict what it can predict. Statistics,
+if you know the past and the and there's the past is the the future can be found in the past, because this there's seasonality in the data. And yeah, you can do some predictions. But if there's no seasonality, there's no auto correlation. You can't do any predictions,
+so you can read a little bit about what I I wrote a little bit about. What um
+what quants doing Wall Street, if you're interested. So they they. They have different indicators to do things, and they they they. They predict some columns from other columns
+with with things like on balance volumes and accumulation distribution indicators and and all that.
+And then I also found some libraries um on on the web and on Github, actually that that they use these other columns to do predictions, and they I I to use them. But um, it didn't really work pro because i'm not a financial analyst, because, you know if I were a financial analyst
+i'd be working on Wall Street making a lot more money that I make teaching at Northeastern, So
+I tried it, but it didn't work.
+Um. But I read about a very good investment strategy which involves just um plotting um moving averages. So if you plot moving averages around two different days. So fifty days and two hundred days. People said that when the um,
+when the when the
+so so what you look at is, you have a time series you look at where the Time series crosses the green and crosses the red and um just by using rolling means on on on different windows. So fifty days and two hundred days, Then um! This is this is a good When I read this, this is a good buying and selling strategy.
+And a lot of people actually do this. They they plot moving averages over different time series. And then they say, Okay, when the Red Cross is going up, or the
+you cross the green going down, or something like that. That's when it's a good indicator to by yourself, because what you do is, you're looking at global behaviors, right? You're looking at behaviors over time.
+So if what you what you're trying to catch is you're trying to essentially remove the noise.
+When you when you study uh moving averages, you're you're You're trying to remove the noise because you're in removing high frequency components. And so um the um.
+The idea here is that Green removes high frequencies, but kept, keeps the middle frequencies, and red removes the
+the high frequencies and the low frequencies, and and only keeps the sorry removes the high frequencies, and it keeps low frequencies, and so you can use the middle frequencies as a signal to buy, and the low frequencies in a single to sell.
+But you can't do magic, right? It's It's a time series as a is is. You can apply a lot of libraries to it. But you need. You need to know that statistical learning is not magic is just statistics, and if you know your your statistics and the logic and the science behind it. You You can't really make a mistake, but if you believe everything you can read on the web you'll be making lots of mistakes
+because people try to convince you that they can. Uh, they can predict the future that you can't.
+Okay,
+So this was just a quick, eh? Introduction? And well, maybe not quick. But I went quickly. But you, if you run this test, takes a little more time uh into Time series, and how they're studied and different techniques and starting Time series and make sure you don't make uh mistakes and say, Yeah, I can predict it, Professor said. If I use profit, then, or if I use a machine or a deep network, I can predict anything, you know. You can't.
+Okay, you can only do it if it's scientifically, if it makes sense. If the past is correlated with the future, otherwise not.
+Okay.
+So. Um. No homework for next week. Just get ready for your final project. Make your team study the text that you want to study, and then on Monday I'll I'll show you some of the techniques that we're going to use to to study text.
+Um, I I still don't know what technique we to use, but it's probably going to be a combination of some kind of graph, some kind of um um modeling simulations. Um,
+and and maybe we're we're gonna use a new uh distribution called the Negative Binomial distribution which is a little bit more powerful in a personal distribution. We're studying Time Series where the Um. Where the average what we're, the mean and the standard deviation are not the same right? Because we know that for account. So
+when we study text, it's a lot of account models. We study number of times something happens in the text, so it's it's all it's almost always whistle. A person has a has a has a weakness, because V. One has a single parameter, which implies
+which implies that the mean and the variance have have to be the same. So in a we'll talk about that on Monday.
+Okay, So that's it.
+Thank you. Have a good weekend, see you on Monday.
+So so run this run this. Try to run this notebook at home, because it's it's interesting. You are using learning how to use tensorflow because it's. You know, the most important machine learning framework that we use today, and so installing it and using is actually kind of fun. But we also do this in our machine learning class.

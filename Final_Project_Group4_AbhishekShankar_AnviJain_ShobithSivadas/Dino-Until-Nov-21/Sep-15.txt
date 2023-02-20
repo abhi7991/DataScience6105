@@ -1,0 +1,763 @@
+user avatar
+Yutong Gao
+00:23:23
+Professor, you forgot to open the zoom meeting.
+You're welcome.
+user avatar
+Dino Konstantopoulos
+00:24:48
+Hello, online. Sorry I forgot to start the meeting. We were talking, going through the slides, the python slides that we looked at last time a little bit more in detail, and then we shift me on a condo notebook.
+So Zipper's beautiful we'll, we'll, we'll look at Zippers um and on our notebooks, and then I show you some give you some links. If you're a little bit scared of Python. You can visit these. Okay, Any questions.
+Yes,
+yes,
+this you go first, and then we're here.
+user avatar
+Unknown Speaker
+00:25:20
+He's a to be able to be in the
+user avatar
+Dino Konstantopoulos
+00:25:24
+Yes, I will.
+user avatar
+Unknown Speaker
+00:25:31
+What we're going to see.
+user avatar
+Dino Konstantopoulos
+00:25:32
+Yeah, Okay. So let's go yield in return. That's that's actually important. A return
+is the end of a function,
+right. When you return the function is gone, you return something, and the function disappears.
+You return. So you exit the function. But but the the the computer remembers the function it remembers where you left the
+and when you call it again, instead of starting at the top, you start right after the yield again
+right. And so every time you call the function
+you leave the function, and then you come back,
+leave the function and come back. It's a little bit like trying to think of a good example.
+I can't think of an example. But is it clear? It's It's it's just this weird thing that says, Okay. The functional won't disappear. And when you call me again, guess what? I'm not going to start the beginning of the function, but because you call me the second time. I'm going to resume right after the yield.
+user avatar
+Unknown Speaker
+00:26:40
+Is it like dynamic frozen?
+user avatar
+Dino Konstantopoulos
+00:26:45
+No dynamic programming is something else. Then I programming something else. Generators exist in all languages. It's it's part of regular programming. Now. It's just It's part of you could call it part of functional programming
+right? Because it's more abstract because what you're creating, what you're writing is a function that doesn't actually do any work unless it absolutely has to
+a generator. If you look at the compiled version of a generator is a set of instructions for how to do something, but it actually doesn't return any numbers. It only returns numbers when you actually call it, and you say, return those numbers now and then. It gives you the numbers.
+So it's a it's a plan for doing things. So
+that's what it's called function, or in the program, because it's a function. That is, that is a blueprint for something, and it's actually not the regular function that's you know part of the
+object why they program that you used to. When you call a function, you return some data. He actually doesn't return data. It returns a plan. The
+okay
+user avatar
+Unknown Speaker
+00:27:50
+that it's followed.
+user avatar
+Dino Konstantopoulos
+00:28:00
+And you're doing a lot of computations then using generators is useful because you actually don't execute things unless you absolutely have to, and when you absolutely have to. The compiler, who is a lot more clever with numbers than you are, can look for simplifications.
+So things happen a lot faster. So if you have your program with the big data, generators are awesome,
+you don't really care, and the function can happen very fast. Then then you work with you, work with with regular functions.
+Um! There's intensive flows from machine learning tensorflow this big machine learning framework, tensorflow, tweet doesn't work the same way. But the old version of Tensorflow had two modes, eager mode, and lazy mode.
+So eager mode computed everything that you asked it to compute lazy mode didn't, because it looked for simplification in the execution graph. Because when you tell a computer you can tell it. Okay, Go here, then go there. And the computer's like,
+I'll go straight there. Why should I go there right? And the computer can look for shortcuts. So generators allow the computer to find these shortcuts. It iterators won't. You'll do exactly what you tell it to do, even if it's not very practical.
+Zippers. Um! A zipper is is not the same thing as a tuple or an index, because you can zip things up in very, very many different ways. You can create tuples. You can here triple
+doubles with the triples you can. You can do tons of things with zippers. What Zipper does is exactly what it. What does a zipper do if you take a zipper. I was going to do it with my pants, but if you take a zipper you it goes right.
+It takes two things and puts them together
+right? So it matches things. So it goes through two structures, and it concatenates not one structure after the other, but each element to each other,
+and by concatenating each element to each other you can create bigger elements, whereas when you could take one structure like one list and another list, and you put them together. You get another list, just a longer one.
+But when you concatenate the elements now, instead of a list of numbers, you get a list of Tuples completely different.
+It's:
+Yeah.
+Okay.
+Okay. So that was the quick introduction. And now what I want to do is we want to practice all that with code where you're actually coding at the same time, and not just looking at me looking at me. You're coding right. Let's do all that. So everybody open up their notebooks.
+If you have problems with your notebook, raise your hand, call the tas, and and open that the first notebook. So we have three notebooks to go through. Python. We'll probably won't finish today, but we have to go through the basics before we look at the libraries, and I also want you to get
+familiar with working with notebooks.
+Okay. So in the notebook, Typically, all our classes are going to be notebooks now, and I give you lots of links.
+The links are there for you to go visit. They're not there because I feel like adding a link. I feel like adding a link because it's used for you to visit. So sometimes in class I won't go through the link. When you review the notebooks. Please visit the links because useful information
+I I could in the midterm give you a question that was in the link and not in the notebook.
+So um
+little bit of introductions about Python. So these are some of the characteristics of Python.
+There's a python runtime that also includes a lot of capabilities. The python runtime has built in capabilities like the ability to create the objects we mentioned,
+and I and I showed you last time how it's a fully compiled language. So when you write a python program. It also depends on what compiler you pick where you can pick the C. Python compiler. You can pick different compilers and do different things. But the idea is, it has an intermediate byte code. So it has an intermediate runtime.
+That's why it's often called an interpreter, and so people say it's, interpreted. Yeah, it's interpreted, but not in a sense of It's not compiled. It's, interpreted, and compiled.
+Then, when it executes, it gets compiled from intermediate to machine code,
+and it's a little bit slower.
+It's a little bit slower because it has a lot of built-in things like dynamic typing where it deduces the type you don't have to specify the type. It figures out the type from the right-hand side. If I say a equals three or three is an integer, I don't have to say, int a equals three, or should I say int equals three when three is in a digital,
+A is obviously an integer?
+Yeah. So so these are. This is what Python does. Is it increases your speed of doing things because it doesn't do things. It doesn't have to
+doesn't. Sorry. Let me rephrase this. It doesn't force you to say things you don't have to say, because it's obvious that that's the case. So,
+and then, of course, you can do a equals three, and then a equals food,
+which you cannot do in another language, because that changed the type dynamically at runtime. I can change the type of an object. The
+right other languages are statically typed, which means, if I say it a equals one, I can't say a equals Foo, because it has to remain a string. It's static languages like Jarra, like C. Sharp like not python,
+are like statically static databases like sequel. They have a static schema. You can't change it,
+whereas dynamic languages, like like Python, are like no sql databases or document-based document-based databases like Mongol where you can add new types change the structure of the document
+useful, very useful.
+You can also very easily shoot yourself in the foot if you're not careful,
+because very easy changing. The type of an object is usually a bug unless you're very careful about what you're doing. So you have to be careful.
+Okay. So this is why it's it's a powerful language, and then a Jupiter notebook, which is this environment here that has the run that has a new cell that has to delete the cell, go up and down. Select whether your cell is a markdown or code.
+Um is is an amazing environment. It's something that this guy who's heard of Doc Boof. Dunkuth is a very famous American computer scientist. He wrote this book literate programming
+fifty years half a century ago,
+and he said in literate programming, it's it's important to not just code, but it's important to code in a literate way, which means, add English. Explain what you're doing,
+which is how I want you to do your homeworks.
+It's it's the really it's the it's the implementation of his vision, the
+this environment that allows you to compute from one cell to the other that remembers the variables from one cell to the other. It's a beautiful thing. So look, this is code, right. One plus two, and I can click here and run it
+now. So if you look at this, it's a code cell. The previous cell was a mark down. So
+okay, philosophy of Python. If you run this cell.
+This is the zen of Python. This is how you should be coding.
+Essentially What it says is that code can be ugly and tel code can be beautiful, and you should code the
+in a beautiful way,
+for many reasons. It's better for other people to read you. It's better to catch bugs. It makes things easier on the computer. Your computer loves you more
+if you code that way. I call it dual Lipa programming.
+Um,
+Essentially, what it says is try to make the code as terse as possible
+as smaller. The smaller the code, the better
+people that someone that reads your code needs to understand what you're trying to do. Don't hide what you're trying to do. There's nothing good about hiding,
+so yes, make it terse, but
+make it understandable.
+If you go to a job into your job interview and somebody asks you to Code, they're going to be looking at that. They want to make sure you code beautifully, but understandably
+because they know that you're going to be working a company, and they know that you should be able to work with other people so they can understand your code,
+he said.
+Operators. So I told you that what programming is is working with lots of numbers and using intermediate variables to store intermediate results. A. B Cd.
+So this is an example of that. A equals five. Then give me the value of it. We did that in R. It's exactly the same thing, except instead of using evil sign, we use the reverse arrow, right? So if you you should plot this, it will say, Well, that's Number Five. Right
+here. We don't do any assignments. We just compute something.
+But remember, we we set a to something. This cell remembers what A is so. The scope of your variables is the entire notebook.
+It remembers the intermediate variables right? So what the notebook is is, it takes all the code, and it divides it into pieces, so that when somebody reads you you can understand every step of what you're doing,
+so you can think of the texting between us comments.
+So it also encourages you to always add comments to your code.
+This is plus equals two, which is a shortcut for a equals a plus two, so that gives you seven. This is the decrement operator.
+Then this is exponentiation, which you can also do this way,
+Pau, or A, or X squared.
+Sometimes I won't execute sales because i'm i'm lazy to go up there and click on the run, button or to clip, click on shift. Enter, And then
+here's an example of where I use the library.
+So I use the new Pi library because I want to use the square root capability of room pi,
+so I use new pi dot square root of the number V is four, so the square root is two, and you can see how B was an integer, and it got converted to a float automatically,
+Right? So type, conversion, and all that kind of stuff happens automatically in python. So you have to be careful.
+So okay, before we go to container types, let's look at singular types. These are these are the single objects. This is just so, since we're working with single objects. We're not really programming. We're using. We're we're using a calculator. We're calculating. We'll calculate right, because we're not using
+many numbers at the same time. But we can. You need to see all the all the different types that you can work with. So floats one type. It's a kind of a number
+like as a digit two.
+If I assign that, and then I look for the type you can always say type of an object, and it will tell you the type. So it's a float.
+You have to learn multitask.
+This class isn't easy. It's hard. You have to compute and look at me and do a lot of things.
+So try to do these things. You don't have to do these things, but then
+you won't, get into the practice of doing, and then you'll go home and you have a cell that doesn't work. Here you have me. You have the tas in class. If something doesn't work. You can raise your hand when you go home. You won't have that. You'll have to wait an email.
+Okay, um.
+You can also create a float by asking it to take the integer two and turn it into a float.
+By the way. A fast way to compute, To compute this is to click on shift, enter.
+And so, if you, if you don't want to click, you can just go here and shift and to shift that to shoot sensitive, and I will compute everything
+right. So you can just look at me and then just keep keep killing ship censorship in theition center until there's an error. You go.
+Okay. So we saw the float. There's Integers
+right Shift Tensorship Center, right?
+Um. And then we have long integers. So long integers you probably use to in in Java to the your use of the double data structure, which is a data structure that allows you to store bigger numbers.
+There's no such thing in python.
+So Python actually has no limit into the size of the number. You can store the Googleplex in Python,
+because all it does it will just use more memory to assign more space to your number. So there's no limit to how many to the size of the numbers you can store, which for data. Science is great. One of the reasons why people love python.
+So. Um,
+we don't say any more. One l to specify that that one is a long integer,
+so we can um compute with very big numbers.
+It's still an integer, even though this is something that in Java would overflow
+your integer data structure.
+Yeah, that is kind. It
+the number of atoms in the universe.
+Python has a problem with that.
+It's one with eighty zeros.
+Try that in Java.
+Um oops. I forgot to give you a picture. That's okay. Sometimes I forget to give you some pictures because I forgot to put them in the folder. It's not a very important picture, but have a favorite number right? Remember our last slide on on big numbers. Learn your big numbers. It' be useful. Get an idea of how many zeros they have,
+what power of two they are. These are interview questions. They want to see how fast you'll come with a comp with an answer. But
+okay different data structure. A Boolean boolean is true or false. So it's a categorical data structure. It has two categories, true or false.
+So I sign up to true. I look for the type. It's a bull.
+This is another way to create a Boolean
+a value
+I'm. Asking a question is, X equals zero, because it's a double equal sign, The same thing as equal with a question mark.
+Okay, computing with Booleans is very, very important, and sometimes it's tricky, because you'll have a numerical expression, except there's a double equal sign and that turns the type of the whole expression into a Boolean.
+user avatar
+Unknown Speaker
+00:43:33
+He's
+user avatar
+Dino Konstantopoulos
+00:43:34
+we've been there.
+Um,
+look at this. This is pretty complicated, right
+y equals whether x equals to zero,
+and then I I do a semi column, and I ask for why so? But everything is in the same line. Semi column is like the same thing as going to a new line, and so y is is x equals zero. So if I sign it to one up here right
+uh right assigned to one, and so um,
+and so this is false because it's not zero,
+and I can also do container types. So we didn't see container types here. So i'm kind of jumping the gun. But this is a sequence of Booleans.
+And look, I can also sum them. Because,
+wow, how can you? Some Booleans? Because what python does Is it automatically
+translates the falses to zero and the truths to one
+right. So so you can do. You can actually do arithmetic operations with booleans.
+Okay, more complicated operators.
+I won't. Go through all of them,
+but i'll go through one of them. That's the modular operation that's the remainder of an integer division,
+right? It's the percent sign.
+I'm doing two things at the same time. I'm. Computing whether one is less than two, and when the two is less than three
+can't do that. Many of the language
+shows you some of the power, the expressiveness of Python.
+Right? So this is true,
+right?
+Okay, strings. So a string is a is a pretty special denotype because we use it. We use it a lot.
+String is here.
+It's an example of a stream,
+so the great thing about Python is you can use double quotes or single quotes
+the advantage of that is, if you have a single code or a double code inside the string, you can pick the other version, so you can include the single quote or the double code,
+All right. So if there's a can't see an apostrophe T, and use double quotes, so that won't. Confuse the single quote the
+you will all confuse a single cord as the end of the string
+Triple quotes are a way of breaking a lot. Ah, a sentence, a string into multiple lines. So there's you, don't have a problem with the carriage return. So triple courts are very useful. You see a lot of triple codes in the in the definition of a function.
+When you define a function and somebody has a comment, and it says, This function achieves world piece
+right? And if there's multiple lines, and this is how it does it, and it's much text use Triple quotes, because then you can bring the string into multiple lines.
+Um,
+Of course you can't take the length of a single type, because it's not a container structure. So, computing the length of an object is very useful, because it tells you whether you have a container type or not.
+So what you want to do is put that in a try accept block because what try except block does is it? Try something? And if there's an error, you automatically jump to the accept statement.
+So when you're not sure if something's going to work, then put that in a try block and add an accept clause that will do what happens when it doesn't work now.
+And so this is useful because it needs your information about A. If you don't know what the type of a is, you will tell. Taking the length of a will tell you where it's a single type or a container type.
+A sentence is automatically a container type, because it's a sequence. It's a list of characters,
+so you'll always get a result of the number of characters, and if you ask for the first element you'll get the first letter
+you can. You can convert um um flowing points to strings by by by boxing them into the string data structure. So you can say, eat of a string if you can. If a string is a number, or you can say string of a number which will turn it into a string,
+so once it's in a string. Then if you add those two numbers, if there's strings you won't, do an arithmetic addition, you will do a concatenation.
+Yeah. So these are. These are some ways that you have to be careful. You can make mistakes if you're not careful about the types of your objects in Python
+allows you to not have to specify the type. So it's very easy to make a mistake which you you forgot
+what you assigned the number to the So what you assigned the variable to
+okay, adding, adding strings concatenates them.
+But you can also just do it this way. It's kind of funky, right? No operation
+what
+you can also multiply strings by creating a suite of three strings. So a lot of capabilities are,
+What are the capabilities
+up a string? Is iterable, so you can automatically iterate all the string.
+So you can do this, for example.
+So take the elements from zero to nine, or take the elements from zero to nine, but give me only every other element.
+So if you have the column, what the third element of the column will do is it will iterate over the string. But every that many steps
+give me this: the characters from character, zero to character nine, but only every other character. So every two every two characters.
+These are these are called slices, slices of a container type.
+Now we already some of you already know what the minus one means. One means
+um, go to the end right. And so when you specify you go every one, you will automatically get the string in reverse
+right. So if you ever go to an interview, and somebody tells you. Reverse a string, Please don't write a for loop to start reversing a string
+right? Do something like this,
+and once again, if if if I have so you you, you can only do this. If you specify two columns right, because you specify here the beginning and the end there has to be. This is what specifies the number of steps. If you forget to add this column, and you add this, this will just go automatically from the first to minus one, and since Python excludes the last element, it will include the last one. So this automatically gives you the entire string without the last character,
+user avatar
+Unknown Speaker
+00:50:48
+which is the question mark. So that's why you don't have a question about there.
+user avatar
+Dino Konstantopoulos
+00:50:56
+Okay, Okay. So someone I know. I know that some of you know know this. But trust me, it's a good thing to review this, because you'll go to an interview, and then you're going to reverse a string, and you write a for loop
+user avatar
+Unknown Speaker
+00:51:09
+that you've you.
+user avatar
+Dino Konstantopoulos
+00:51:11
+He was going to say. Well, I can do that in one line. You did that in five lines.
+Okay,
+you can't reassign
+a string. So that that means that this the The string is a container type, and if it it's immutable. It means It's what kind. What kind of container type
+is there a list?
+Is it a set
+to pull? Yeah, It's a tuple right? It means the string is actually a tuple.
+You can see that because I can't. I can't reassign any element of the string.
+Okay, Um, I I don't even know what i'm doing? There's some built-in functions. You can take a string, convert it to uppercase. You can ask if a string ends with something with the ends with, or if it starts with a letter, it starts with,
+It's actually very useful. There's a lot of things you can do with ends with and starts with
+split is very useful, because it automatically takes a string. That's a list of characters, and it creates a list
+rather than a string like a real list. So if I sometimes we call it a real-list an array,
+because when I split automatically split by the space character, right, so it'll go through the sentence, and look for spaces,
+and give you every element that's separated by a space. But you can also go to split and specify something else. Say separate with another character, or separate with the space character, and will also work and give you the same results, because that's the default behavior,
+user avatar
+Unknown Speaker
+00:53:17
+and then join is the opposite.
+user avatar
+Dino Konstantopoulos
+00:53:20
+Very Api call, because the join will take
+a join will take the contents of an array, and we'll create automatically. Create a string, and we'll automatically create a string separated by whatever you specify here.
+Right? So here I specify the space character, so we'll take every element of my array and reconstruct the sentence. The
+Look at this. This is pretty amazing. This is
+what's the type of this object,
+this string, so its join is a built-in function of the string object
+takes an array, he joins every single element of the of the array. Now that means that the elements of the array needs to need to be strings, because if they are numbers you'll have a problem. So you have to convert them
+strings by saying string of the element before you can actually join them.
+Okay, So are we good with single types? Should we move to container types?
+Yeah, I told you that programming is working with lots of single types of container types that are important. You
+Okay, So let's look at lists. This is how you define a list.
+So it's separated by commas. So Here's a list from one to six. And if I ask for it, this from one to six, if I ask for the type, it's not integer anymore. It's a list.
+Yeah,
+here's a list of strings.
+Type is also a list. It's not a string.
+It's a list, and it's our list of strings. It's. A list.
+We can look at the type
+an element of the list, but the type of the list is a list.
+In other words, the type of any container type is a container,
+but this can contain anything I can. I can put integers, I can. This is actually a a complex number. This is a string. This is a triple corted string, right? This is a mixed list.
+It has different types.
+And then for every element of the mixed string I can create a loop, and I can say, give me the type. So here you can see that it's a mixed container type, because it has many different types included inside.
+Um,
+this is how you access elements from the list. So this is very similar to what we did in our So you should be used to this.
+This is how you can reverse the order by doing the minus one trick. This is called taking slices of a list. We actually did the same thing with our, so that shouldn't be very surprising. And of course I told you that this can be nested.
+Every sub dimension actually creates another dimension in the structure of the element.
+Right? So if a list of lists is a matrix,
+I want to create a tensor that's a three-dimensional spreadsheet, how do I do that
+user avatar
+Unknown Speaker
+00:56:38
+we don't know.
+user avatar
+Dino Konstantopoulos
+00:56:39
+Yeah, it's a list of lists of lists.
+Okay. So if I create a matrix look, this is a matrix in in Python, and I ask for the value. It will return it to me that way. This is actually the same way I give it. So you give me the first row comma the second row.
+Yeah, And if I want the first row it's the first element,
+and this is the second row, and if I want the first element of the first element of the second row. Why is it the second row? Because the first row starts at zero?
+Ah, that's gonna create a lot of bugs, but that's python.
+Okay. So this one is the second element. So if X of one is a row, then if I want the first element of the second row. I say X of one of zero.
+The
+append is how you add new elements to a list.
+So in list. Append the word Hello! The string. Hello! So now our our list becomes one, two, three, four, five, six. Hello! This
+and this are completely mutable. You can change
+every item of the list.
+You can access. Api's like reverse you
+that that we see Reverse the order of the list, and you can access the count
+count of two.
+user avatar
+Unknown Speaker
+00:58:19
+It's counter, too.
+user avatar
+Dino Konstantopoulos
+00:58:24
+So int list is Hello, six, four, five, three, two, two,
+I actually don't even know what count of two does I know what count does it?
+I haven't used count in a long time, count of zero. Oh, it counts how many elements of that exists, So it tells you how many times it finds the element zero. It tells you how many times it finds the element six.
+Once it tells you how many times he finds the element two
+twice.
+It tells you how many times he finds the element. Hello,
+Okay. So these are these.
+Oh, it's. Hello!
+It's
+one right?
+Okay, so useful.
+Okay, this is this is the list, the first container type, the most basic one. Everything is essentially a list unless you specify other. Actually, that's not true. It's not the default container type. What's the default? Container type in python
+user avatar
+Unknown Speaker
+00:59:32
+twice.
+user avatar
+Dino Konstantopoulos
+00:59:33
+So if you, if you if you specify a container type without giving it brackets or parentheses or squiggles which you do with sets is automatically parenthes, so it's automatically a tuple.
+The default type so in python you can return two things which you can do in Java, in Java. If you want to return something, it has to be only one thing, So you have to create an object that contains two things, you know, to return two things. But in Python you can say, return a comma. Be
+that returns two things, and a comma b is. If you don't specify parentheses, it will be tuple.
+So the return value of that function. The type is a tuple,
+not the type of what you're returning because it's a container type.
+Okay. So tuples. Can. You can do anything that you did with the list except you can't change any element of the tuple. It's immutable, we say,
+and immutable is something else that is very prevalent in functional in the programming. So in functional programming, which is kind of the distinction with objects programming in functionality programming. You want immutable things. You don't want to change things
+because you want to reduce the side effects of functions.
+So you want to make them make make your types immutable.
+So you see, because the tuple is the basic container type. You can remove the parentheses. You can say one column, two comma three without specifying parenthes.
+Okay, that was that was list that when we did the tuples. Now we'll go to sets. So sets are the same thing as a list except no duplicate elements. So you create a set with the set keyword,
+and then, if I create a set with one, two, two, three, four, and then I add five, and then I look for the value. You see, it will remove the duplicate, too, because two is a duplicate. So we'll remove it.
+Okay, some operations. This is intersection. So sets is how you do algebra. How you do mathematical algebra,
+and
+there's a lot about mathematical algebra and logic. So sets are very useful for logical operations, because you can compete unions and intersections
+like If you compute the intersection of two logical structures. It tells you whether there's something that is true in common with both structures.
+So intersection looks for consistency, consistency, and Union doesn't necessarily so. These are some operations that you can do with a set. Please run these and understand these.
+So here
+this is kind of funky, because i'm taking two sets, and i'm asking if one set is bigger than the other,
+what is bigger or lesser mean? It means the size of the set right. So this is equivalent to saying length of one is less than length of two now.
+But you see, I don't have to say length, because the
+a less than operator automatically does that.
+Here's our our first example of a zipper. I have one list,
+and here I create another list. But I do that with
+with with.
+So this is actually an iterator, because it's a list. If I had used the
+parentheses it would turn into a generator
+right? So I told you. A difference between the iterator and generator generator is the function that has yield. You can also build the generator by specifying tuples instead of square brackets.
+So here i'll prove this to you. Suppose I take this, and I turn this into a generator. In this case it gives me the numbers right.
+Look at this little trick. Insert cell above. Let me turn this into a generator, and let me remove by doing this with just square brackets, And let me look at the value of this.
+No data is a generator object.
+The computer is not going to build this object for you. It has a plan for how to build it, and if you want to make it,
+see what it is, you have to turn it into an iterator. And the way to turn this into an iterator is casting it to a list,
+and if you cast it to a list, then we'll give you the results.
+Given the plan of how to drive the generator is just the plan of how to drive.
+Okay,
+Okay, So um, i'm building two lists. My list in my list two right that I built those. And now what I'm gonna do is or here I just print my list. And here here's actually where I build the the the generator, and then I turn it into an iterator by calling it list. So we already did this.
+I can also do range, because when I do range range is automatically iterator,
+right? So range if it takes one parameter, it's the end parameter. If it takes two parameters, it's the first and the last. If you take straight parameters, then it's the first to last, and the steps of how many,
+how many characters, how many elements to take, so so range has. This is polymorphic. It has. It has different ways of calling it. But this is a different way of constructing the same element, using the range. Api:
+Um.
+Sorry. Actually, range is is not an iterator. It range ranges a generator right? So it doesn't it doesn't it doesn't. Tell you what my list is unless you convert it into a list. So if I specify this,
+it won't, give me numbers. It will say you won't, give me numbers. You will say, that's a that's just the range from zero to six. That's the plan for how to build it, and then to actually convert it. I need to convert it.
+What if I do this? What am I actually doing?
+You can say, Okay, let me. Let me just add some parentheses. What will this do.
+What What do you think this this element this animal is going to be? Is it going to be a list?
+What is it going to be?
+Huh!
+It's going to be a generator. Yes,
+user avatar
+Unknown Speaker
+01:06:26
+yes,
+user avatar
+Dino Konstantopoulos
+01:06:29
+no, actually sorry. It's not going to be a generator. My mistake. I told you that that my mistake Let me explain myself correctly that the parentheses create a generator, but they only create a generator. If you have
+an iteration happening here
+right so adding parenthes to an object will create a generator as long as there there is a for loop inside the
+All right. So so you have to loop over something, you know, to create a generator. If you don't loop over something you won't create a generator. So what this will do is it will create a tuple
+actually won't even create a You know why we'll create a tuple, because the the the list of my list is a single object.
+So, since this is a single object, I thought. But by doing this trick I will. I will. So So let's look at this.
+Yeah, This worked. So here I created a list that contains a single object.
+So this is a list. If I do this,
+and I look for the type of this,
+the type of
+this
+user avatar
+Unknown Speaker
+01:07:49
+let's see this. Let's look at this and type of this.
+user avatar
+Dino Konstantopoulos
+01:07:53
+Sorry. What mistake did I make, Tip or I need any three
+isn't That is that fucky?
+You think that by creating a tuple that will create a tuple, but it actually doesn't create a tuple, because python is is clever and says, well, it's a single element. I'm not going to create a tool. I'm just going to leave this to be a list. Right? So this is a trick question, because otherwise, whenever you have parentheses you'll create a tuple. But just unless there's a single element. So look, if I take this
+now, and I add another element like this, and I add a comma.
+Now it's a tuple
+right, because now I have two elements inside
+That's a I could be a trick question and interview right. They're asking you, I add parentheses. Is that a tuple?
+Only there's more. If there's more than one inland, otherwise Python will create. We'll remove it so see Python does a lot of things behind the scenes
+that you have to be careful with. Otherwise you'll get bugs. Oh, you'll say, Oh, you'll quit a tuple. Just add parentheses all the time. You have to make sure that the element is more than one.
+That's a That's a pretty neat thing. I'm actually going to leave this here because I like this example. Insert so above. And here we'll use the example where there's only one of them.
+Okay.
+Um. So so. Um! This is a generator. We know that this will convert it to an iterator, so iterate over all the numbers, and this will print all the numbers. But then, what what do I like about print? I think the the like that I like about print is, if I do this without the print,
+let me add a cell above,
+insert cell about and do this without the print. Then it will create this ugly thing where I have to scroll all the way down, and it just takes up a lot of space that's kind of ugly.
+So the dual Lipa style is to use a print statement which makes it a little bit nicer to look at.
+Okay, this is an example of something really neat, because here I use the
+This is a list structure, so it's an iterator, not a generator. And then i'm taking this, and i'm joining a comma. So i'm actually doing the same thing. I did here
+all right. I'm. Joined the comma to every number, and I'm doing this.
+Yeah,
+Okay. Other examples. So range print i'm going to skip over these, because this is other examples of something we already studied.
+How do you feel? You feel tired?
+This is where animal is this:
+user avatar
+Unknown Speaker
+01:10:42
+it's
+user avatar
+Dino Konstantopoulos
+01:10:44
+sloth. I love sloth, you know why? Because they're so slow they just take forever. They go from one tree, they take like ten minutes to go from one tree to the other, and the trees are next to each other,
+and they're enjoying life. I want to be reborn as a sloth.
+They sleep like twenty hours of out of twenty, four hours in a day. That's awesome.
+Okay, Um,
+What's this? Well, this is an example of a I love this infrastructure. So anytime I have a zipper. I always do this. So look, this is A. So A is numbers from zero through four. Oh, and i'm doing something funny here, and B is numbers up to
+six, but not including six right, because it's python. So including five. So that's zero. One, two, three, four, five, So now i'm not going to zip the two numbers. I expect
+if you try this in R, you'll generate an error, it will say, can't zip those up because they don't have the same size. But look, Python allows you to do that, and it'll automatically remove this element so it can also only zip the same sizes. So zero, zero, one, one, two, two, three, three, four, four
+right? So this is some of the advantages of the language. It It does things for you. It's very terse, and you have to be careful because because of all these things you can have a bug in your code, and you'll have to catch it with
+a lot of effort.
+Okay, So that's that's kind of the quick introduction of the simple part of python.
+Let's move to the more complicated part.
+So he will or are we? Are we doing good? Are we understanding so far?
+Okay, let's move to um
+Part Two:
+Okay. So here we go into the notebook a little bit more complex. The first one was chronicle, the quick introduction. And now we're doing more complicated things. So
+a tuple something we know we can't do right. So I select a tuple. That's one, two, and if I try to do that I can't do that.
+Um,
+user avatar
+Unknown Speaker
+01:13:04
+it's
+user avatar
+Dino Konstantopoulos
+01:13:08
+right, and look at that. Um. X was one right. You see how x was one. Now, if I change the value of X, and then I ask for the value of my tuple, because my tuple is immutable. It won't change it,
+or even though I started by signing my tuple X and Y right. So my tuple is not created by reference it's created by assignment. The moment I create a tuple it becomes immutable. I can't change it.
+But what i'm doing here when I say X equals two. I'm reassigning. I'm creating a new tuple.
+I'm saying what the value of tuple is. So this is different, because now this, my this, my tuple, is not the same thing as this, my tuple
+right. They happen to be the same name. But I reassign that variable to a new
+data element.
+Right? That's why this changed now?
+Is that clear? With everyone?
+Right you can. You can reassign something, but you can't reassign the same thing. If that thing is a tuple you.
+It's
+um, then a little bit about list comprehensions. So this is a a list of strings, and now i'm doing a list comprehension. Why is it list comprehension because it has square brackets. If it had tuples it'd be called what
+it's.
+Yes,
+okay. This is called the list comprehension. The reason why it's called the comprehension is because comprehension it means to understand right. And so it's called a list comprehension, because you're understanding what this list is. And so this list is is a funky thing, because it has an iterator, and so we'll create a lot of elements. So and then, since i'm specifying a square brackets. You know that it's an iterator, and on a generator. So this is this: Call this comprehension. If I had used parentheses instead of square brackets, it' be called What
+say it? Loud?
+We call the tuple comprehension,
+right? And a tuple comprehension.
+St. List is not defined.
+We'll automatically create a generator object. Right? So if you want the list comprehension, then you have to use this with square brackets.
+Um, Now i'm using the enumerate beautiful Api that I told you about to enumerate over the list, and instead of returning, instead of this returning every element of the list, it returns. What? What's this type?
+What's the type of what this returns.
+What is this?
+Yeah, It's a tuple right. It's a tuple. Because I told you, if you don't specify the parentheses, it's the same thing as specifying parentheses, because that's the default behavior. So I can do this, but I can also remove the parentheses.
+user avatar
+Unknown Speaker
+01:16:32
+It's
+user avatar
+Dino Konstantopoulos
+01:16:33
+same thing. This will This will this is the same thing, or I can just remove this.
+Okay. Now look look at. Compare. Compare this. Do a lip up piece of code with this non do a lip, a piece of code that does the same thing.
+You tell me which piece of code you think is nicer.
+One, two, three, four, five. I have this extra thing that says I, equals one. I equals zero. This makes my code difficult to understand, not just for a reader, also for the computer.
+So this is what i'm encouraging you to start coding in a different way. And, in fact, once we start coding logical constructs to to solve problems in in data science. You'll see that coding this way just makes it a lot easier to come up with a result.
+This is also called functional style of coding. This is called object-oriented style of coding,
+because you emphasize the objects that you're creating,
+whereas here what you're emphasizing is the way of creating a structure
+functional part of the structure. Right? You're focusing on the function rather than the data. Here you focusing on the data
+we Still, in all universities tend to emphasize object-oriented programming as the as the as the way to teach computer science, which I think is a mistake. You have to specify on how to do things rather than the data, the data secondary, because you should be able to replace the data with something else. But how you do things is unique
+to your algorithm
+Okay? Um: clear,
+Pretty
+ugly.
+Yeah, You understand what I mean by pretty and ugly. Now, you kind of kind of get an idea.
+This is how I take a list comprehension, and I just uppercase every element in the list,
+so I can take every element of the list and do an operation on the element,
+and this tells me what what twitter it I could be iterating over complicated parts of the list. Not not necessarily. Every single element of the list. I can do complicated operations here. Where I say, take this element, add the other element. Do the self element. Give me the return, and then do something with it and all that in one line of code.
+user avatar
+Unknown Speaker
+01:19:02
+The
+user avatar
+Unknown Speaker
+01:19:03
+Okay.
+user avatar
+Dino Konstantopoulos
+01:19:05
+Here I take Abc. And I'm: i'm creating a list, and i'm zipping up
+three
+lists, not two,
+a a, a three-dimensional zipper. We don't have that in close close only do two dimensions, but this is a zipper, that does three, and so, instead of having pairs, I have triples
+here, I'm. Taking every element,
+so i'm taking the zipper and i'm it a reading over every element of the zipper. What do you think this element is?
+So i'm as a tuple. It's a tuple that actually contains three elements. So if I want to iterate. I have to say four xyz in zipper do x plus one plus z.
+If I said, if I had said from X y in zipper, that's not going to work, because each zipper is not a double. It's a triple the
+so I have to specify three arguments in order to be able to make this make sense
+user avatar
+Unknown Speaker
+01:20:09
+a family
+user avatar
+Dino Konstantopoulos
+01:20:11
+right now in other languages you have to add so much detail In order to do this kind of thing in python you don't have to. This is why it's the language of choice in data science. Because you can do a lot of things with just a small
+with a small number of with a very terse piece of code.
+But of course it means you have to get used to doing this,
+but this is also the reason why you should always pick Python as the language to
+answer interview questions, because it's just a lot faster. It's more expressive, and it takes less space on a, on a whiteboard.
+Okay, a equals. This is doing something with an if L structure it's this: if L structure here,
+it's called a ternary expression, because it has three. It's an operator with three closets. Right you have the if clause the
+so you. This is the first clause. This: if this is true, otherwise this
+so it has three clauses: first clause, second clause, third clause, right. It's called a ternary expression, it's. An if then else, in one line of code used a lot in Python,
+but if else in one line, and then this is for x and A. So, what i'm doing is i'm iterating over the a structure, and I'm taking the X and i'm doing something conditional on the X:
+user avatar
+Unknown Speaker
+01:21:46
+Okay,
+user avatar
+Dino Konstantopoulos
+01:21:47
+we're getting into more complicated things. We're trying to learn Python with examples. I think that's the best way to learn language.
+Okay, good.
+And this is the non-dual lipa way of doing the same thing.
+Look at how ugly this is! I mean, really, when you, when you do this, your your laptop is actually laughing, you can't hear it. But if you put your ear, close your laptop. It's laughing,
+and not only that, but that doesn't even begin to do it the same way. I have to do even more to put it in the same format. I have to do all of that
+with our pens. And look at how ugly this is. This is! This is what this is coding where you actually lose sight of what you're trying to do.
+The point is not to create the structures. The point is to get an answer to a problem. And this is the answer in in a, in a completely transparent fashion. This is like, Ah, you know, there's some corporations that are transparent, and corporations that are that are hide by and do do things, and they hide things, and they don't say the truth about everything.
+This is seeing the truth completely transparent of what you're doing. And here you just you just doing things, and it's just complicated way of solving a problem. And if you if you, if you go to a job interview and you write this code, people are going to be the man.
+Okay, dictionaries. So dictionaries is this.
+So? Um,
+What's the type of a dictionary?
+Yeah. So a dictionary contains key value pairs. But what's the type of a dictionary?
+I heard it right?
+Say, love,
+what you only have it's it's a it's a container structure. So you only have three possibilities. So guess
+user avatar
+Unknown Speaker
+01:23:52
+it's the best.
+user avatar
+Dino Konstantopoulos
+01:23:53
+It's up
+list of lists. No, it's not a list, you know. What? If it were a list,
+then I would have this wouldn't I?
+Is this what I wrote?
+It's a sense. Now, why do I want to set? Can someone tell me why I want to sit?
+Can somebody guess why i'm using a set instead of a list. By the way, I'm.
+Yes, you don't want duplicate keys, because the keys is how you specify the in it. The meanings of the the value of each key. Suppose you have a dictionary that has the word at twice two definitions.
+You only want one.
+user avatar
+Unknown Speaker
+01:24:43
+Now, i'm curious to see what happens. If I do this.
+user avatar
+Dino Konstantopoulos
+01:24:48
+Yeah, he'll say no. He can't do that. He won't. Let you
+right. It automatically forces you to make sure that the keys are unique.
+In fact. Let double check that this is the case by trying to add a duplicate key. Let's add both the keys a twice. Let's see if this works.
+It won't even work. It has to be unique, because that's one of the that that oops. What does that mean with that? That is a miss This problem Here
+it uh I I uh,
+user avatar
+Unknown Speaker
+01:25:25
+Oh, yeah,
+user avatar
+Dino Konstantopoulos
+01:25:27
+Thank you,
+right? So
+user avatar
+Unknown Speaker
+01:25:37
+it's. See you?
+user avatar
+Dino Konstantopoulos
+01:25:38
+Oh, yeah, three hyphens. Yeah. Because I use a triple coded string right? Because I
+Yeah. So this is. This is the correct. And now let's try to turn this into a list.
+Are you adding two brackets?
+Okay,
+and it will see invalid syntax.
+Okay. So we should be clear that this is the only way to specify dictionaries because we want unique keys. Oh, something else very important about dictionaries. There's three Api's you need to know about a dictionary. You can call the items of a dictionary, and the items automatically return both the key and the value
+you can call the keys which only returns the keys, or we can call the values which only returns the values.
+Okay, So when you iterate over a dictionary, and you say item items, you
+you get back a tuple that contains two elements which in the value,
+when you say values. Or when you say
+the keys, you get back a list
+because you get all the keys or all the values.
+Okay,
+Okay, this is how you you. You can see if K. Is in my dictionary, but in my dictionary that is the same thing as in my dictionary dot keys. So this is the default behavior,
+but because it's python. You can take away the keys and just say in my dictionary,
+because when you look for something in a dictionary, python automatically, Just looks for the keys.
+user avatar
+Unknown Speaker
+01:27:15
+Okay,
+user avatar
+Dino Konstantopoulos
+01:27:20
+So make sure when you run these that you understand what i'm doing right. Make sure you understand the code.
+user avatar
+Unknown Speaker
+01:27:26
+It's.
+user avatar
+Dino Konstantopoulos
+01:27:27
+You think that it's simple, but it's going to get complicated very fast. So Don't neglect the simple.
+This is my dictionary item. So when I say items. It will return both the key and the value.
+Here it just returns the keys. Here it just returns the values, and when you, the way you access. A dictionary is not through index, not through numbers anymore. You can't say first item of a dictionary.
+This this actually won't work first. I am a dictionary zero. I don't think this will work. Yeah, you can't access a dictionary that way. You have to access a dictionary using the keys.
+Okay, you can also use get you can use. Get with the default value. The the advantage of get, if is, if it can't find the key, it will return minus one. So you can use this as an error condition. This is how you iterate over the items and say, four key value in my dictionary.
+Okay,
+Um,
+this is
+all the time you do this all the time you do this all the time these these kinds of operations happen all the time. So it's, you know it's. You may think it's simple, but it's a good thing to see them, because you'll be using them all the time
+operators. I'll let you look at logical operators. This is greater than less than I'll let you run. This is is not so.
+The difference between ease and is an equal. Sometimes you need to use is sometimes you need to use equals. So when you when you work on non-number values, you use equal or where that when you work on types and use is
+all the time. Sometimes you can use equal, but you have to be a little bit careful about these are equal
+logical conjunction or disjunction is end and or
+right in python. But something that's very useful is all or any, because all in any works on container types that contain Boolean values.
+So all means that every single element of the list needs to be true, and any means only one of the conditions in the list needs to be true,
+but get familiar with this because once we start using it in problems, you'll be like, Oh, I've never done this before.
+user avatar
+Unknown Speaker
+01:30:10
+Control flow structures.
+user avatar
+Dino Konstantopoulos
+01:30:12
+So indentation is how everything happens in Python, if you say if and by the way, the else. If is L. If in Python, then you use you have to use the same indentation if you don't use the same indentation, and I use just that it's not going to work, because it's not the same.
+Uh, but if I had three look, it's not going to work.
+We worked.
+That's your network. But it did. Okay, Um, typically, actually, at the anaconda notebook is is kind of you, because if you use the tab key, it works, and if you, instead of using the tab, you use space, space, space, it works
+space. And very often, when you, when you find when you Google for Google code that Google people write, they only use two spaces instead of four. I don't know why, but it's just the signature of Google.
+Seriously, whenever you see code like this, it comes from Google
+strange signal.
+Um, I prefer this is just to me. It's clear to my up
+What's the advantage of just using two characters. Sometimes, when you have a lot of indentations,
+then you want to take less space. So you just use two characters instead of four. But the basic thing is in the anaconda notebook. You can use either space characters or the tab key. Not in other ids. If you do the initial studio code, it's going to be a mistake. You have to use either the tab character or the space character.
+A tab is not for spaces unless you're in an a Conda notebook.
+Yeah. So you can do this, too.
+Okay, if else else. If okay, so get used to this. This is the for loop. Sometimes you have to use a for loop. I'm not saying, Never use it for loop. Sometimes it makes sense to use a loop rather than a list comprehension.
+But when you can use a list, comprehension, use that instead of instead of the
+instead of the ugly way
+and the try. Accept code
+structure. I told you when you want to try something that may actually have a have a type, a runtime mistake. Use it, try, except, and then you have the except clause in here
+maintenance recycling code in Python. So if I if I Look, this is the magical python command. When I do this it
+um uh
+ten percent file, and I say some module pi, and I actually add a value. I add a function. Look here, I define a function, and I give it a comment. It's a nice way of defining a function and define another function with a comment, and then I run this with this command Here, then this will automatically create a file with this code. Now, if you go into, if you see users username folder, which is here,
+and then you look for the latest file.
+Look, there it is. I just wrote. I just wrote this file, And if you look for the values this file contains the code
+that I just created
+in Myaconda notebook. And now I can actually take this and import somebody else's code, so i'll say, import some module, and then automatically import these functions, and I can start using them so I can say some module dot f some module dot g.
+Right? So that's how you port packages in Python you just import, and that brings in all the functions that are defined in the function
+in the import,
+the percent whose tells you all the variables
+in in a notebook.
+And so you see, my module is a module. You can look for the directory of some module, and this will tell you the functions that are defined in there, including the variable, and then the
+and then our cosine also because our cosine um Why our cosine? Oh, because I imported it here
+right so it's a it's. I imported the R cosine functions from the pi, so that it automatically becomes part of the my module. But look, it has some. There's some built in functions here, right? Anything with underscore underscore.
+This is the resemblance in functions,
+so you can add, call help on any library, so you can say important and python that will give you. It's the same thing as the the command that we used in in R with command. Was it? Does anybody remember the name of that command
+to import the help of a library. What was it You remember it? We did it once.
+Oh,
+the yes, yes, Thank you. Yeah, that was exactly the right same command. So you can. The The python equivalent is help. So I say some module dot pi. Now that I've imported I can call pi, or I call the function F. So that's a function.
+So it won't run it unless I apply to a number. So in order to actually run the function, I have to say F. Of seven. So you see, in function or any programming, you can either have data or a function in order to get the result
+a function you need to give it some data.
+And so the way you give it data is is with the parentheses
+as a tuple essential.
+Well, if you have multiple arguments in the otherwise it's not. So. You go from function to data by applying it by applying the function to some to some data.
+You can also import part of the module this way.
+Um. This is a little bit more on functions. You can have different types of arguments in the function. These are called positional arguments, and these are called named arguments
+so named. Arguments means you can specify them anywhere in what you call the function. They don't have to be first, second, or third, because they have a keyword.
+You specify position, argument, then the order matters.
+The advantage of keyword arguments is, you can give them default values.
+So if you don't specify, C and D. These, these are the values they will get. Now.
+Ok, So these are some examples of this:
+another way to create functions in in Python is to specify them. As Lambda.
+It's like one hundred and twenty-five. Already.
+Okay, so we'll finish here, and then we'll continue. We'll continue next time. So you're lucky. You get no homework in python. So just just our for next week. So
+So an anonymous function is also called the Lambda.
+So a lambda is. So this is ah, so first of all, it's something something else important that I skipped. You can within the function. You can define another function, and then, instead of when you return this when you return adder, it actually returns a function.
+Right? So create adder is actually something complicated because it's a function and create adder of ten, you think. Oh, that should return data so!
+But no, Because what is this? Return? This returns another function,
+right?
+So that's the thing with functional in the programming you have to be very careful What's a function? In other words, a blueprint for doing something. And what is data,
+or where you're at the level, we can actually return data. Here. I apply a number, but this number doesn't actually return me a number, because this actually returns a function. So this is a function of a function that shouldn't scare you. Because, after all, if I can create lists of lists. Why can't I create functions of functions?
+So the same way? I have lists of lists of lists. I can create a function of a function of a function.
+So
+what are we doing here? Instead of just working with numbers? We're we're learning that we can also work with you
+ways of doing things and treat that as data.
+So a data doesn't have to necessarily be a sequence of numbers or strings or anything. A data can be a sequence of methods,
+right?
+A piece of data or data can be can be, and it can be a method. And we'll reuse that a lot in class. So in order to actually get the data, I have to specify the numbers twice in order to actually get a result.
+Finally, anonymous functions, or what I call Lambdas are ways to define a function in an anonymous way, because a lambda is a function with no name.
+And here I specify a function. I say, you define me the function Lambda. So in in C sharp and in Java you specify Lambdas with the arrow sign,
+but in python it's another one of the Ug. Uses of Python. You specify it with a keyword, lambda. So you say Lambda takes the argument X and returns the Boolean x bigger than two,
+And so this is a function. If I apply that to three. That's the same thing as taking the F function that I defined above. Where did I define it here. X. Bigger than two. So this function, which is named why is it name? Because it's called F
+is the same thing as this Lambda that is unnamed, because I specify the entire function in the same line. This is the way of using the function. F. If I never need to use the function as before.
+So some advanced events studio. Here we're doing right. How do we know that it's a function? Because we can call the callable Api? The callable tells you whether this object is a function or not.
+So, because Lambda is a function, it will return true, because fifteen is a number, it will return false
+enough for today.
+Okay. So we'll get into more and more complicated things when we come back next week. On Monday
+we'll do the more complicated things in python, and then we'll shift to looking at the main data science libraries in python and learning how to use them. But for next week please concentrate on your homework in our
+just do the simple part, or do the more advanced things. All of the I've given you all of the code, except maybe for the expert part of the expert assignment. But work in pairs. Get to meet somebody else. That teams will help You
+have a good week and see you next week.
+Thank you. Online. I'm signing off. Now,
+do you have any questions? No,
+all clear,
+easy, difficult. What do you think of the language
+we'll see. We'll see right.

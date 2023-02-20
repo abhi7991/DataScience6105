@@ -1,0 +1,937 @@
+user avatar
+Unknown Speaker
+00:23:45
+A little bit lower.
+user avatar
+Dino Konstantopoulos
+00:23:56
+Okay, let me share my screen.
+Me pin this.
+Okay,
+Is everyone following? Can you hear me? Uh: Okay,
+Yeah. Well, I I'm probably speaking okay. But if I ever walk away
+you can. Probably you should. Probably the recording should still recording, because i'm going through the microphone. Okay.
+So today we're going to look a little bit closer at Bayes Theorem:
+Um. And we're going to get into the two basic methods in statistics. When you want to. You have a data set,
+and what you're trying to do is you're trying to find a model for the data. There's two methods. There's the method of months and the maximum likelihood estimation.
+And these are the two methods that are classical. They're not Bayesian, and then we're going to shift to Bayesian, but we're still going to do an introduction to an introduction to Bayes.
+So uh, if you open your slides, there's a
+the in the material for base there should be a slide called just base.
+So look at that.
+No, I'm not gonna open the Pdf:
+Um,
+i'm going to go here and open the slides.
+Okay,
+So we're going to look at base formula, and we're going to prove it.
+Can everybody see my screen on your screen?
+So
+in probability. There's two kind of interview questions a company can ask you, and it's either the one minus trick or the base trick, so it's important to know base formula.
+So um base was a was a minister in the in the eighteen hundreds in in the Uk.
+And he approved this formula.
+So we're gonna look at this formula and try to understand it. Suppose you're at the movies,
+and you see,
+and you see this person,
+and you don't know if you're looking at this person from the back, if it's a
+man or a woman.
+And so you're not sure they they just drop something, and you want to run after them to give it to them, and you don't know what you want to say. Excuse me, sir. Excuse me, ma'am, you're not too sure.
+So you have to think
+so. Um! Out of one hundred. I keep looking at the screen, but we don't have the screen out of a hundred women at the at the movies
+we won't have short hair or long hair, but most men have short hair,
+so we can say that out of one hundred men at the movies, let's say ninety-six have short hair and four have long hair. This is kind of the statistic and it's half half for women.
+The problem, though, is you're in front of the bathroom line, and we know that men drink more beer at the movies, and so they tend to go more to the bathroom,
+and so um
+at the bathroom line. There's only two women in line, so the statistic is that one has short hair and one has long hair,
+whereas out of ninety-eight. Let's suppose one hundred men are in line.
+Ninety-four have short hair if we follow the statistic of before, and four have long hair,
+because we have ninety-eight men in line, so ninety, four and four. So you see that we don't have all men in line there's still two men that didn't drink beer that are still in the movie.
+But we have. We have more men that have long hair than women,
+right? And so you have to be very careful, because now you really don't know, because you're in the back. You're in the bathroom line,
+and the statistics are confusing.
+So Um! You have to be. You have to be very careful about what about what your your conclusion is going to be. So let's talk about conditional and marginal probabilities which we looked at before. So conditional probability is when you say the probability of something of something given, that you know something else.
+So what's the probability that
+someone a person has long hair. Given that that person is a woman,
+so the probability that person that a person has long hair given that the person is a woman is the number of women with long hair divided by the number of women. So it's zero point five. That's a statistic that we talked about before.
+So that's a conditional probability. And this is how we did no conditional probabilities. P. Of something given that we have evidence of something else.
+Now let's do the same thing with men. So the same thing with men will give you,
+uh two out of fifty or four out of one hundred,
+which is point four so much smaller probability for men to have long hair,
+so that those were those were conditional probabilities. Now let's talk about joint probabilities, so joint probabilities. We already talked about joint probabilities. Remember, we talked about what's the probability that somebody in class has the same birth as you. So we're joining two conditions, you birthday
+uh other person birthday on the same date.
+So we say, P. Of a plus b, or P. Of a intersect. B.
+So P. Of a plus b is P. Of a times P. Of B.
+Right? It's also the probability if you throw a coin that it will land heads, and you throw a coin again, and it will run it. Will. It will land on heads again. And so you have to multiply it. Two probabilities. So that's
+twenty-five percent
+probability of having a doughnut and having a milk is a probability of milk and donut is probably a donut times the probability of milk.
+Okay, So that's I think it's pretty easy.
+So let's look at the
+joint probability
+that we have a woman with short hair.
+So the joint probability is a product right? So it's probability that
+um
+given that we know that the person is a woman,
+that the person has short hair
+so and so we want both of these women and short hair. So we we want to compare the the product. And so we have the probability of women, and that's zero point twenty, five,
+just like throwing a coin,
+and then the same thing with probability of women with long hair. So that's a that's a joint probability,
+and then we can do the same thing with men.
+So so I I it's the that the person is both a man, and has short hair
+right? So that's different than what we looked at before
+at the bathroom line, though
+things are a little bit different.
+So at the bathroom line, if we look at the probability of man at the bathroom with long hair
+that is, probability of man at the bathroom, and the same as before.
+So this is the result
+probability of women at the bathroom.
+Women with long hair. Then it's this
+times this,
+so that's point one
+so you can see that the probability of man at the bathroom with long hair is actually higher, and the probability of the women at the bathroom with long hair.
+Then we have marginal probabilities which you also talked about. So these are these are words you need to know. Marginal probability is the union, not the intersection anymore.
+So um p of a plus B of A is also called P. Of A or B is P. Of a plus b of B, minus the intersection.
+Why do we need to remove the intersection, because if we Count P. Of A and we count Pov and those happen to intersect the
+then we need to subtract the intersection, because if we don't subtract it. We're counting in twice. We're counting it with a we're counting it. We'll be
+so. That's very important, and we'll look at this again with birthdays.
+So let's look at the marginal probability whether we have a man or a woman with long hair,
+so we call that probability of long hair is probability of women with long hair, plus the probability of men with long hair. Do we worry about an intersection here? No; because and women
+user avatar
+Unknown Speaker
+00:32:28
+there can be a man at the same time,
+user avatar
+Dino Konstantopoulos
+00:32:31
+and a man can be a woman at the same time. So this is what we have for the marginal, so we have probability of long hair, which is only two cases, either women or men. And so we add both,
+and then we have a short hair. Probability of short hair can either have short hair and be a woman or short hair and Bm: And so we add these two.
+Okay. So So now we've done a lot of operations.
+But what we really care about what we really want to know is given that we see long hair. We want to see what's the probability? This person is a man, because this is what's going to tell us whether we say, Excuse me, sir, or excuse me, ma'am, so we see long hair. That's the evidence.
+Now we want to know what's the probability that this person is a man or a woman.
+We want to know that so we can. We know how to address that person.
+So so does everybody need to understand this. We see long hair, that's evidence. And now we want to see what the probability that this person is meant. So it's a conditional probability.
+Okay,
+So that's what we want to know. Now, here is where Thomas bay comes in, and he, he, he! He! He proves base formula.
+So based on what we talked about. Probability of a man with long hair is this: we already. We already computed that it's probability of long hair times the probability that the person is a man given that that person has long hair,
+but We can also say probability of long hair and men, because you know long and commutes It's a commutative operation,
+so we can say that this is probability of long hair. Given that the person is a man times the probability of men.
+So because these two things are equal, then we have this equation
+right? So this this this comes down naturally from saying that that probability of a man and long hair is a probability is the same thing as probability of long hair, and the person's amount.
+Okay, so. And this is a direct definition of um of um,
+uh what we what we talked about before here.
+Um of joint probabilities.
+So that's the probability of something and something, and the end commutes. So we can say this. So now, since we know this, let's take this entire equation here the last line, and and write it here and and write it here again,
+and so we can. Now that we have this equation, we can say the probability that the person is a man. Given that we see long here is the probability of a man times the probability of long hair. Given that the person is a man divided by the probability of long hair. So you see what we do here is we invert
+this probability,
+and this is base formula.
+This is the base formula we used in the M. And M. Trick.
+This is the base formula that you use for any kind of probability problem when you're in an oral interview, and you can't actually write
+python functions
+to help you with your to help you with your um with your equations,
+and so you can resume
+you, can you? You can cliff, note this by man and long hair by calling them A and B. And so you have base formula P. Of a given B. The probability of B.
+So if you see this, it's really simple. You You invert this, and you say, Okay, this is B
+over A: So you have to multiply by A and then divide by D,
+because here you have A over B.
+So this is a just a trick to remember this,
+and that's based theorem.
+So in base theorem, the the the All the cotions have names, and you need to know the names because we'll cover them when we look at when we look at Bayesian probabilities.
+Oh, so first we have to, we can actually. So let's actually solve the the the equation probability of men given that the person is not long hair. So we replace this with base formula, and we've computed all these things before. So all we need to do is plug in. And so we get the result. Zero point zero seven,
+which is kind of strange because we started with really simple numbers. You see that this probability seven. How strange is that? Yeah, it's seven. That's what based tells you
+so.
+Um,
+This is at the movie theater, though, right. This is in the movie theater. But now we have to compute the same thing at the bathroom line. We computed all of these before, so you can go back and look at the formulas. So at the bathroom line. If you compute the same probability, you will find that it's
+eighty percent.
+And so now that you've computed this,
+yeah, the projector doesn't seem to be working
+uh no, actually, because we're in the middle of a class, so you could look at it afterwards. That would be great. We tried it with two different laptops, and it wasn't working, so i'm pretty sure it's on my laptop.
+Uh, we finish at one thirty.
+Yeah. But I think there's another class that comes in. So I press the Pc. When I press Pc. It works. But when I press Laptop Hdmi, it's not working.
+Okay, Thank you very much.
+Okay. So this is this is base. So so you you know that the person is a is a man, because you know you're in the bathroom line, and you can say, Excuse me, sir, so this is base theorem.
+This is called the prior.
+This is called the likelihood.
+This is called the posterior,
+and the marginal likelihood is below.
+And so what Bayes theorem does you start with a prior, which is prior knowledge of the W.
+Then you modify your probability of W. Because you've seen an evidence you've seen the evidence of them.
+So this is. This is the essence of Bayesian statistics. You always look for new evidence, and you modify your probability when you see new evidence coming in. So you see with formula one,
+you're working with frequency statistics because you're taking your your probabilities always depend on the the the points that you have at the end of the season. So you don't change that.
+But if you had, if you were using Bayesian statistics for every race, the points change. So you have new evidence, and you modify your probabilities after every race.
+Right? So now you have an example of classical statistics which assumes fixed probabilities.
+They don't change and you solve your problems that way versus Bayesian statistics, where every time you see new evidence,
+you modify your probability. It's like you never believe in anything unless you see evidence.
+I Won't believe that my girlfriend Isn't cheating on me unless I, you know, go and call her every night to make sure she's not seeing somebody else right. And then every night I mark it down. And I say, okay, high probability that she's faithful to me all she's out with somebody else Probability That she's not faithful,
+they always doubt, for many reasons. One of the reasons is that they always doubt themselves, because they know they make mistakes
+when I come up with a formula I always doubt the formula. So I was verify because I say, oh, I maybe maybe there's a bug in my code,
+so I never trust anything unless I see real concrete evidence that something is working. It's called a scientific attitude. It's the opposite of what a religious attitude
+right? The religious attitude will say, No, no. I believe Jesus Christ loves all people, and he's going to be very kind to everyone. And even if you see evidence that Jesus Christ can be mean sometimes, you say No, no, no, no, no, i'm not going to look at this. No, no, don't don't don't don't look,
+but you don't believe it because you always trust in something.
+So the Bayesian formula is the essence of science
+so very important formula in the epistemology of of of science and engineering, science and technology. It's it's key, and it's also an attitude in life. It's tricky sometimes, because sometimes you need to trust some things. You can't doubt your boyfriend, your girlfriend, your husband, your wife, every single day,
+unless you look at their cell phone to look for evidence that they're not chatting with somebody else. Right?
+So it's a little bit tricky. But the scientific attitude is, You always look for evidence to modify what you think is going on.
+Okay,
+So I wanted to, you know, give you an example, so you can actually see that It's a little bit tricky. It's not as simple as you think, but you can actually prove it
+if you follow the argumentation in this slide. And, in fact, this example is a famous example in probability theory
+long hair
+at the bathroom line. It's well known, so I wanted to present it to you in a way that's entertaining, so that you, You know it so that you can talk about things like
+the prior,
+the posterior, and how a prior probability is what you believe, something before seeing an event, and then you modify the probability for W. After you see some evidence.
+Okay,
+Good. Now, we're going to shel this a little bit, and we're going to go back to classical statistics because we have a few things we need to cover.
+So I want to go back to our birthdays. So let me open up an iconda,
+so let me open up. Uh I keep looking here, but it's not working.
+Yes, everybody has a teammate, right?
+The homework is not as simple as it may look, actually involves a lot of coding.
+I want you to actually code using the P function that that that we talked to that we that we mentioned in class. Because this is this is where you exercise your program. It's specifically your writing functions
+right. You already exercise writing data structures. And now you have to exercise writing functions.
+And then this coming weekend. I have another little fun Work the
+homework for you.
+Remind me later.
+Let me open up a new window.
+Okay. So let's open up
+our notebook. I want to quickly go back at our birthdays notebook, but the one with the math.
+Remember, remember the the one with the math birthday. I want to quickly. Look at that. You see first, if you have any questions,
+and also to show you something else.
+Okay. So I want to open this,
+and I want to open the
+birthdays math.
+Okay.
+So let's look.
+Let's look at this.
+So you remember we talked about the probability that someone in in this classroom shares your birthday,
+and we said, Okay, that's What's the probability that another person shares my birthday. Well, the probability that they have a birthday on the same date as me is one over three sixty-five is it three, sixty, five days in a year,
+and so I multiply for one person. I multiply three hundred and sixty-five. There's two people in class,
+then it's uh one um uh over three hundred and sixty-five to it's two over three hundred and sixty-five, because I add because it's two possible cases,
+um, And then we also talked about
+the probability that two students in the classroom any two students share the same birthday, and we we, we We mentioned how different this is right, because here we solve this problem with the one minus trick,
+because we said, Okay, a day is taken so we can't take this day. So this three hundred and sixty-four, or sixty-five, and three hundred and sixty-two, up to the number of people the number of students in the classroom. You remember that.
+So now let me ask you this question.
+Suppose there's three hundred and sixty-five people in class,
+and I ask you what's the probability that somebody shares
+your birthday,
+and there's three hundred and sixty-five people in class
+based on
+the formulas that we set up. What's the answer?
+So we said, If two one person two people in class,
+user avatar
+Unknown Speaker
+00:46:01
+one over three hundred and sixty-five,
+user avatar
+Dino Konstantopoulos
+00:46:03
+three people in class, two or three, sixty, five right, four people. So i'm asked you now there's three hundred and sixty-six people in class.
+What's the probability that somebody shares your birthday?
+What do you think it is based on our formula?
+Huh!
+Which is
+No, we said it's one minus right. So two people in class, together with you, is one over three hundred and sixty-five,
+three people in classes, two or three sixty-five, four people in class
+it's three over three, sixty, five, five people in class is four or three, sixty, five, right?
+So what if there's three hundred and sixty-six people in class
+it's one.
+So all I have to do is bring three hundred and sixty-six people in class and you know for certain
+that somebody has the same birthday as you.
+Do you think that's correct?
+So So then we made a mistake. Right?
+Do we make a mistake?
+We, we said that didn't we say that the probability that somebody shares your birthday is one minus the number of people in class, divided by three hundred and sixty-five didn't. We say that
+so did we make a mistake.
+Let's let's examine this. What What we need to do to verify these things. I told you that probabilities about counting right.
+So let's count together.
+Let's count. So let's let's do it this way.
+Let's open. Up, paint
+in fact, you know what Let's let's try. Let's everybody I want everyone to compute with me. Add a cell here,
+and we are going to write the function. Now,
+what's the simplest way to write a function? If you don't know what's happening, and then you have to just just explore. So we're going to say death
+probability.
+Someone
+shares my birthday,
+and we'll say n is the number of people in class, right?
+So we're writing a function together.
+We're exercising our function, writing skills.
+So we're going to say,
+How how do we solve this. So first we start with small with examples. When you don't know the exact solution for an exact end. You start with examples. Right?
+That's a scientific approach.
+So you'll say we'll start with if announces
+right. If n equals one,
+what's the probability? Somebody shares my birthday.
+There's one person in class What's the Probably there's another person in class that shares my birthday
+zero. This returns zero.
+Everybody follow.
+Okay,
+if
+N is two,
+what's the probability that person shares my birthday.
+Yeah, we're pretty sure about that. Right. There's this. There's three hundred and sixty-five. Days.
+The only possibility is one over three hundred and sixty-five right. Does anybody have any doubts?
+Anybody have any doubts? So you're pretty convinced of that
+solid?
+Okay,
+if n
+equals three,
+What's the probability that somebody shares?
+Shares um shares my birthday.
+That was two hundred and sixty-five right.
+But is that really true?
+Remember this
+uh
+sorry
+where is it?
+Remember this formula:
+If we count. If we add, we're adding probabilities, right probability of one or the other, we have to make sure we remove the intersection
+right?
+So what's the intersection in this case,
+What's the possibility? I have two people in class,
+and i'm counting there's two cases. This person shares my birth. Sorry. There's three people in class me and two other people right,
+and we're counting this person shares my birthday one hundred and sixty-five This person shares my birthday one over three hundred and sixty-five.
+What if these two people also have the same birthday?
+We need to remove that intersection right?
+What what's that? What's that probability?
+So what we need to do is, if if n equals three,
+we need to return two over three hundred and sixty-five minus
+what's, the probability that this person
+and this person
+and me
+have the same birthday.
+One, two, three. What is it?
+Isn't it?
+One person has my birthday, one over three hundred and sixty-five,
+and then this person also has my birthday.
+I throw heads.
+I have point five probability. I throw heads again.
+Five point twenty, five probability.
+So this person shares my birthday, one over three hundred and sixty-five, and this person to shares my birthday. What's the probability for all for both of these?
+Yes,
+so this is the
+complete formula:
+Does everybody see this?
+We have to remove that intersection?
+Let's do n equals four.
+So what's the classical case for n equals four? We said, It's
+three over three hundred and sixty-five right
+for for for people in class. Yeah.
+user avatar
+Unknown Speaker
+00:52:32
+So it's three over six three hundred and sixty-five.
+user avatar
+Dino Konstantopoulos
+00:52:35
+Now, what are the possible intersections
+that we need to remove.
+So we need to remove the the cases where we have four people in class,
+three of them, let's say all have the same birthday as me.
+So what's the probability of that? Let's start with that one.
+So we have to remove one over three hundred and sixty, five cubed.
+But is that enough?
+With what?
+Yes, yes, because look what's that case? That case is
+somebody. I have three people in front of me, right, because N. Equals four.
+This person shares my birthday,
+and one of the other people also shares my birthday.
+That's one case, and then the other person also shares my birthday, but I have two options, either this person or that person. I already know that this person shares my birthday. That's given, because that's What! The one over three hundred and sixty-five that accounted i'm trying to remove the intersections. Now
+so I have this person and this person I need to remove them. There's two possibilities, so I have to say, minus two over three hundred and Sixty-five
+squared
+it's getting complicated isn't it,
+and we thought we thought That was the simplest possibility.
+But we see that the exact solution is a little bit more complicated
+because we have to. We have to remove the the intersections.
+Let's do n equals five.
+You know what n equals five is too complicated. I'm going to use what happens when something's too complicated. We We start drawing things.
+Let's go here
+and let's draw a calendar.
+Can everybody see my paint on on your screen? Yeah, I I apologize. It would have been so much better if we could see it here. But
+it's not working, so let's let's draw a calendar, so everybody
+you can. You know i'll share the painting, so you don't have to paint with me. I'll. I'll share the painting with everyone.
+But just follow follow on. Zoom. So let's uh let's select a little bit of a
+one. I'm just going to draw a calendar to now. I'm not going to do a three hundred and sixty-five slots, but i'm going to draw a calendar as a small count.
+Then
+okay, let's assume that's a calendar. Let's assume this is the row n equals one and equals two, and this is the row, the tenth row. So this is for eleven, twelve, thirteen, right? And we just divide all, possibly all the days in a calendar, and these are all the days in the year like you open your calendar and your cell phone and has it has slots
+and let's assume there's there's five people in class, including me. So i'm going to paint me in blue.
+Then a paint mean blue,
+and i'm going to paint paint the other people in in black.
+So this is one student, and then this is
+another student,
+and then this is another student,
+and this is another student, right? So we have four people in class Sorry. Five people in class,
+four people in me.
+And let's assume, let's assume that my birthday
+is here
+right here
+we're going to say, Okay, this is the general case. People don't have the same birthday as me. People have different birthdays. They don't have the same birthday as me.
+Okay, this is the general case.
+But now I want to look at the possibility that one person has the same birthday as me. So what I need to do is, we're going to take this, and we're going to assume that this is the person, and we're going to say same birthday as me.
+Let's look at the intersections. So let me save this. Ha! Actually, hold on. Let me save this.
+So so we can study it later.
+So i'm gonna control, C control. V. And I'm. Going to take this down here. Okay, we remove this. Now we have this person. This is one of the cases
+where I actually this this student shares the same birthday as me, so his day is here.
+But look, look! We have to take this, and we have to remove the intersections. So the intersections is what the the biggest, the the rarest intersection is. This person also shares the same birthday.
+This person also
+share the same birthday.
+This person
+also
+share the same birthday. Now, how many things did they move?
+This is one over three hundred and sixty-five right? But then I moved
+this this and this
+powerful right.
+The probability that this case happens is one over three hundred and sixty, five to the power four.
+So what we need to do let's go back to our formula, and we'll return. So this is uh four, over three hundred and sixty-five,
+but we need to subtract one over three, sixty-five to the power, four, everybody following I mean it's pretty clear that I moved. I moved
+one, two, three, four
+circles
+that's, one over three hundred and sixty-five to the power. Four. Every time I move a circle I have to add a ratio of one over three hundred and sixty-five to multiply with a ratio of one over three hundred and sixty-five, right,
+because there's only one box, and I have three hundred and sixty-five different boxes. So if I move it to one location that represents a probability of one over three hundred and sixty-five, and I moved four boxes
+So this one over three hundred and sixty-five to the power four right if I if I throw a coin, and I tell you what's the probability? I get four heads. We'll say,
+point five times, point five times twenty, five times forty, five. Yes.
+Okay. So that's one of the intersections. I need to remove
+What's another intersection I need to remove.
+So this is one other favorable case.
+We could also have
+this guy
+here
+and this guy here,
+and that's it. Leave this guy out there.
+So how many, how many squares did I move. I moved three squares right so that's one over three hundred and sixty-five squares, one over three hundred and sixty-five to the cube. Sorry But how many different ways can I do this?
+I can move
+this guy and this guy. I can move this guy and this guy, or I can move this guy and this guy.
+So what's the total?
+Three three different cases, right?
+So I need to subtract if I want to subtract the intersection minus three times so three over
+three hundred and sixty-five. What's the power
+cubed?
+Okay, So that's that's the other intersection. And there's there's so So let me move one of them. So this is I move this guy right? So I move this guy,
+and we have, So we have only one of these possible
+one possible.
+But here we have one. Let's say one used case,
+all they just say possible. But here we have three possible three different ones, three possibilities right? I can either move uh this square or this square or this square. That's why I have to subtract the intersections, which is three. Yeah,
+okay. So that's that takes care of the queue. Now let's have Let's see. Let's examine this again for the other use case of the square. Let's take this and copy it
+show C. Control. V. Let's take this here.
+What can also happen?
+Well,
+um!
+I can move
+um.
+Sorry um
+Sorry I only moved one guy. I have to move two guys Right?
+Sorry I have to move two of them, and there's three possible, because I can either move this person in this person or this person, or this person, or this person, or this person.
+So this is the three possible.
+Now,
+what's the other case? The other case it will I only use. I only move one person.
+If I only move one person, it means two people stay put.
+So how many combinations do I have of two people staying put.
+I have. Look, look, I have three I have, I have.
+I can have this in this
+this and this
+or this, and this
+right
+minus
+in this case it's also
+three. Are we? Sure it's three? I'm a little bit. I'm a little bit um confused by the
+uh cubed,
+I think
+I think?
+No, no, no, no, because because I have two possible ways of moving this guy to look. Look it's more complicated. Look, it's not. It's not three, because I I can also move.
+I can also
+sorry I should. I should start with this this confusing, because I started with this. Let me start with this.
+Of all the possibilities I can have, I can move this guy here,
+or I can move this guy here, or this guy here, or this guy here.
+So
+Um: Okay. So I need to move two of them. So i'll move one at one here.
+So this is the possibility. So how many possibilities Do I have
+six? It is six possibilities. Yeah, it's correct. That's six possibilities. Six possible.
+What is six, isn't, six,
+six is
+also.
+Um.
+I see, I moved to It's to choose four
+all possible ways of leaving to
+out of four possible different
+circles all the possible ways of choosing two circles and leaving these two circles out of four total circles,
+and to choose four is six.
+So we're starting to understand the formula Here, right, that's you. You start with examples. So if you if
+yes, what?
+Yes, and so what we're going to write is we're going to write instead of three. We're going to write to choose
+to choose four.
+And now we're going to.
+We're going to say else, and we're going to do the general case.
+So now what we're going to return, for the general case of N. Is N. Minus one
+divided by three hundred and sixty-five. Right
+Now help me complete the complete the rest. Minus.
+Yes, tell me
+someone tell me
+I'm depending on you to write the result you generalizing to the to the general case.
+What is it?
+Yes, one over three sixty-five
+to the power Wet?
+Yes, and minus one
+good.
+What's the next one?
+How about one? Choose for
+divided by three hundred and sixty, five to the power we,
+or is it, or is it one choose for? I'm. Not sure.
+No, it's probably not. But any case I know that the power has to be n minus two right?
+But i'm not sure that it's one. Choose four,
+because we don't. We don't have four. It has to be choose n minus one
+right.
+And is that one?
+Huh!
+It's one
+because we're only leaving one out
+right here, we leaving none out.
+But here we are, leaving one person out
+What's the next One
+minus
+two.
+Choose
+n minus one
+divided by
+three hundred and sixty, five to the power wet
+and
+minus three.
+Um,
+I think,
+is because we're leaving two out of N minus one
+minus
+et cetera,
+all the way down to what?
+So we we can go. We can't do it for every end, but we can do the dot dot.
+So at the end we keep increasing this. But
+what's What's the last going to be
+So the the What's the power going to be? Let's write the power Three hundred and sixty-five
+squared right?
+Yes,
+and squared is essentially um
+and
+minus
+n minus two,
+right?
+So that's the formula. And what's the factor? What's the factor here
+has to be has to be very big, right? So it has to be choose n minus one.
+But what's the number here?
+What is it?
+Let me tell you. The formula I came up with
+came up with this, let's verify.
+Oh, and yeah, by the way,
+Um: So this is n minus one. I have
+e. One is the same thing as n minus one. Choose n minus one,
+and then
+um.
+So for n minus two actually have n minus two. Choose n minus one
+all the way down to n minus and minus two,
+because n minus n minus two
+choose n minus one
+is is um to choose n minus one.
+So the last one is to choose n minus one.
+But um,
+I have. I don't.
+So this is the same thing as this.
+But here I don't have to choose n minus one. I have n minus two choose n minus one.
+I don't. I don't know which one is correct now. Now i'm doubting myself, because now I believe this as we work together. But the formula that I came up with is this:
+so? So now that we have all this, let's write the formula together,
+it's just now that we have, We have a potential solution,
+and and your homework will be to verify. Is it this one or this one?
+Okay. So let's. Let's write this for me. How can we write this? First of all? Where did we see the choose and minus one? Did we work with? Choose the X choose, c. We worked on this right, remember, which slides we use to work on. This.
+Was it um
+probability one?
+I think it was probability one.
+Let's go and find our our our choose, our choose function,
+because we need to cut and paste it.
+Where is my choose function?
+Uh, there it is. Look, there it is.
+So let's copy this.
+Let's bring this here. It's at a cell above insert cell above.
+Let's put our our choose function, And now we can rewrite this.
+Okay, let's rewrite this together. Return
+n over three uh three, sixty, five
+minus.
+So this is um choose. So the bigger number goes in front, so we'll have choose n minus one
+comma n minus one,
+because that's one
+different possibilities of choosing. One in one is one right,
+and we're going to divide by
+three hundred and sixty-five
+to the power
+and minus one.
+And then we're going to say the other one is
+choose
+n minus one comma n minus two.
+I hope everyone is writing
+with me,
+divided by three hundred and sixty-five,
+to the power n minus two
+right
+minus
+all the way down.
+Two.
+Choose
+sorry I put the parentheses here should we choose
+um and minus one
+to N. Minus N. Minus two, which is two
+and as divided by three hundred and sixty-five
+to the power
+n minus
+n minus two.
+Let's let's look at. So So before we actually run this run. This function. Let's actually look
+at these formula, it's. Look, let's look at this. Let's let's create a list. Comprehension that consists of many of these terms. So everybody insert a sell below and let's create
+and let's create a list comprehension. How do we build a list? Comprehension from this? So for we're going to say, for I in range.
+So that's going to range from um
+n minus one
+all the way down to two every one. Yeah,
+that's a list comprehension. And then how? What's the formula that I want to return. So the formula is,
+I want to examine all these terms is choose.
+So the first one remains fixed at N minus one right,
+and then we're going to set some value.
+We're going to set some value for N. We're going to say n equals ten.
+Okay,
+so investigate choose n minus one,
+and then the other one is I
+right?
+And then this term is divided by
+three hundred and sixty, five to the power of what?
+Yes.
+So you see, before actually
+run this function and share my result. I want to see what all these numbers look like.
+So i'm gonna i'm gonna run these these numbers.
+But is it? Is it two?
+Because, remember, when I say range, I exclude the last number,
+So do I need a two there,
+or do I
+put a one?
+I have to put a one because I want the two in there Right?
+Yes,
+so let's look at these numbers for n equals ten. I'm curious to see what these numbers look like, and i'm going to compare these numbers. If n equals ten, I want to print my probability.
+My My My initial
+answer was,
+and then i'm going to print um n minus one
+n minus one,
+divided by three hundred and sixty-five. That was my probability that somebody shares my birthday with n people in class, including me.
+But now I also want to print, investigate, to see what the corrections are, because I need to subtract these numbers.
+So let's look at these numbers.
+Oops
+Choose is not defined. Oh, I forgot to run this.
+Let's run the sales, and now chooses to find. Let's look at these numbers.
+My initial guess was zero point zero two.
+But I have to subtract
+ten to the minus twenty, four, ten to the minus twenty, ten to the minus. Oh, my God! These numbers are incredibly small,
+right?
+Only this one is a little bit
+big, but it's still one, two, three, four decimal points where here I have two percent.
+So you see, for ten people in class, this is not going to make a big difference, is it if I subtract these numbers.
+In fact, the only number I really care about is this last number, because that's always the bit. The the bigger number, because it only divides this square. So if I want a formula, all I really need to worry about, since all these other numbers are so slow, so small. I really only care about this number.
+So i'm going to take this number. So in my formula. Look, i'm going to simplify.
+I'm going to take this entire formula. I'm going to comment it out,
+and i'm going to return everything minus just this number,
+and I don't need to build a list comprehension, because I'm returning just one number, because that's the the biggest number of all right.
+So this is my real answer.
+So now we can. We can use this and see what the answer is. It probably shares my birthday for N. Equals one hundred people in class.
+Right? So let's look at Oops.
+Let's look at the answer for this for a hundred people in class. So let's add two sales. It's at one cell here, and say, mark down and say, if one hundred people,
+if a hundred students are in class,
+the probability
+that someone
+shares my
+birthday is.
+And now we can run this function
+shares my birthday. A hundred
+oops.
+I didn't run this function again.
+Run!
+Run
+uh
+Sorry I forgot. What did I forget?
+Oh, it's n minus one sorry
+N. Minus one.
+Okay, So that's the function. And now, if I run this function,
+it's zero point two, three, four, What was the original answer? Let's Compare that to N. Minus one
+over three hundred and sixty-five. That was what that was our original answer. Right
+from point zero two three to zero, point zero, two, three,
+four point zero, two, four, six to zero. Point zero, two, three, four. It's still pretty small.
+Four hundred people in class Yes,
+but let's look at one hundred three hundred and sixty-six people now, And now we get the answer for three hundred and sixty-six class let's do that
+so?
+Oh, sorry! So it's a hundred minus one is ninety, nine, right?
+So this is what we need to compare.
+Oh, no, it's more significant right? It's point two, three, four versus zero point two seven.
+Now it starts being significant. So I made a mistake. I forgot to modify the end. Yeah,
+Shall we look at three hundred and sixty-six people in class. Now, because that's the answer that that give rise to the entire problem. Let's look at
+three hundred and sixty-six people in class
+versus
+three, sixty, six uh, yeah, three, sixty uh, three, three, sixty, six minus. One is three, sixty, five, right?
+But now I see it's only fifty percent.
+Wow! Why is it only fifty percent? Because for large ends the small numbers become significant.
+In fact,
+I have a doubt. Now,
+is it really fifty percent
+in my formula. We only looked at the last term.
+Could it be that the term before the last also plays a difference? Oh, my God! Now we have to add another term. Let's go in this function and add the next term too.
+Well, let's Let's copy this.
+Let's go here and have the next term, too, so we can verify It's a scientific approach. I'm doubting myself. Oh, my God! Maybe I made a mistake.
+I need to go back and check.
+How do I check? I make sure I add the second term before, and I see if it makes a difference.
+In fact, you know what i'm going to do.
+I'm not going to do this. I'm going to write this as one function, and i'm going to write the other one as another function,
+and i'm going to call this probability shares my birthday version two
+underscore V. Two,
+and in my Underscore v. Two. I'm going to add the other term. I'm not looking at all the terms, and i'm going to add just the previous term.
+Help you modify the previous term. What's the previous term? Is, choose N. Minus one and minus
+and minus three right
+divided by N. To the power and N. Minus three,
+because that that that's the cube term. Yes,
+that's the the contribution of the cube term. So here I have my squared term,
+and here I have my cube term,
+and here I have my original answer,
+because now I want to see whether this
+cube term also makes a difference.
+So let me
+copy paste this.
+Let me run this
+and let me get
+uh the other answer that i'm going to put here. I'm going to put in front actually
+this V. Two of three hundred and sixty-six.
+And now let's see whether for three hundred and sixty-six people, I actually have two significant terms. That will make a difference. So if I run this
+Oh, my God! It's only thirty three percent.
+If I have three hundred and sixty-six people in class, What's the probability? Somebody shares my birthday
+one-third.
+How strange is that? And we thought it was just,
+you see. So you see,
+for n equals small, our solution was right in the beginning, but when n starts getting big,
+our initial solution, where we thought that three hundred and sixty, six, seven hundred and sixty-six, over three hundred and sixty, two and sixty-five is The right? Answer. It is not anymore.
+And we have to look at removing all the intersections, because now the big numbers make a big difference.
+So that's the influence of big numbers. You have to be very, very careful.
+So you see, this was the scientific approach.
+I questioned my initial result.
+How did that question my initial result? I looked at edge cases, I said, Well, let's look. I have this formula.
+How do I verify? The formula is correct.
+Plug very small numbers and plug in very big numbers and see if you get the results that make sense. What's a very big number? I pick small numbers, and it was makes sense right. The small numbers made sense. In fact, we verified that for n equals ten there's almost no difference between my original answer and the correct answer.
+But for big numbers. It didn't make any sense anymore. If I bring three hundred and sixty-six people in class that does not guarantee that I have somebody sharing my birthday, does it?
+Because they could all be Yes,
+no, it's the probability that someone shares my birthday.
+Yeah, Yeah, you're right. At least one person shares my birthday. That's the correct
+we're computing the probability that someone shares my birth. I don't care if many people share my birthday. I just want to find one person that shares my birthday, so we can sing happy birthday together.
+If other people also happen to have the same birthday. I don't care. I just want somebody. I just want one one company,
+right? That's the probability that someone shares my birthday where it could be that also other people share my birthday. I didn't see the probably that exactly one shares my birthday,
+the the requirement for what?
+Yes, no, not only just one person shares my birthday. It could be two could be three.
+Well, no, no, sorry. Yes, only one, only one, because if it's two yes, only one shares my birthday. Correct? Yes, only one, because if it's two, you have to add in my another term. Yes, yes, only one. Yes, correct. Thank you. Sorry for the confusion. Only one yes,
+yes, only one.
+So so what we did is we saw that for um, for um big numbers. Our formula didn't make sense anymore, because if I bring three hundred and sixty-six people in class that doesn't mean that it is guaranteed that someone is going to share my birthday.
+And Now I have to look at the formula very carefully, but the formula don't lie
+probability of a
+plus probability of B. You need to remove the probability intersection, because if you don't remove the intersection you,
+then you're counting the intersection twice.
+So probability of red
+probability of of blue is a probability of red, plus verability of blue, minus the probability of the yellow,
+because otherwise you're counting more than you should. And then you you get
+things that don't make sense. Okay.
+So you see, probabilities are very tricky, but they're also like It's so useful because they they help us write functions, and we we get good at writing our python functions, and at the same time we understand data science.
+Okay,
+Okay, Good. Oh, and and please uh, also. Uh, I I I went a little bit fast here, but I don't know if it's
+uh if it's, choose n minus one and minus two, or choose,
+or or choose n one, choose and minus one to choose, and I have to just sit down and count the cases.
+So um
+just just verify it with this formula or hope you you wrote, You wrote all the code right, and you can also re look at the the the video again. But but um,
+it's important because you you that's how you the the approach You solve you solve problems. You first look at the simple case. You start with examples. That's how you approach a problem. You never expected to solve the problem immediately. So when somebody climbs a mountain
+they're not expected to go to the top of Mount Everest the first time they ever climb a mountain, you start with a small problem. You start with small cases. If there's something you don't understand. That's how you solve all problems in science,
+and then you try to guess the formula for general in, and then you verify with results to see what makes sense.
+And you always doubt yourself. Is this true? Let me verify. Let me verify. And after certain why, you say, Yeah, I'm pretty sure this is what the result should be.
+The same thing with everything. If you learn a sport, you know something like tennis. You don't expect to have never touched a racket, and you go to a racket and you'll win a game right.
+You'll start with
+just hitting the ball once, hitting the bowl twice, even both three times that. That's the way you solve everything. So
+that's that's That's the data science approach
+user avatar
+Unknown Speaker
+01:29:42
+It's not difficult. It's a matter of time.
+user avatar
+Dino Konstantopoulos
+01:29:45
+Problems are not difficult. It's a matter of
+starting small and understanding where to start small. So it's like being being clever. When you look at the top of the mountains. Saying which, which which path am I going to take, which is the easiest path,
+and then slowly you saw more and more complicated problems, and then you become really good at it.
+So, Don't get discouraged if you have a problem like formula one, and it's like too complicated. Just start with small examples.
+Start with two formula: one drivers in a race, three formula and drive. Look, Look at specific examples, draw things
+using paint, convince yourself,
+and then move on to the general case where you have twenty-three drivers. Okay,
+Okay. Good. I wanted to cover this with you because
+um, it's important, but it's something that people generally don't cover when they when they look at birthdays they they look at you know somebody shares my birthday, and then they go to probability of two students share this same birthday. But they never look at this example,
+because it really only becomes relevant when you have huge classes of three to one hundred or two hundred or three hundred people.
+Okay,
+good
+questions.
+Let's open our um
+method of moments
+notebook.
+So the method of moments is the easiest approach
+to solve a data problem.
+And this is, let me let me tell you, the approach, because it's really easy, and it's it's It's even if, like somebody asks you what is data science? You can tell them it's the method of moments, and you describe how it works, they'll say, Wow!
+You know a lot of things. It's really simple.
+The point of what? What's the point of? And I think we already talked about that. What's the point of of machine learning?
+The point of machine learning is to do this right to remember. I told you. Let me Google for it. Um, Um, child's
+drawing,
+joining
+points,
+and then let me go to um.
+Let me go to um.
+Yes, okay.
+I don't. Yeah. Here.
+Do you ever you ever play this game when you were a child, where they asked you to join the points, and when you draw something it becomes a shape.
+Right? That's what That's the machine learning.
+What we're doing is we have a cloud of points
+we join,
+and that formula allows us to predictions, because it has an exact solution on the Y for every X.
+Every X. I can figure out the Y by going up intersecting my graph and going to the Y.
+Okay, it looks simple in in in two dimensions. But of course this generalizes to twenty dimensions, thirty, one hundred dimensions, and we generalize it to our we we saw an example of machine learning, using, just,
+you know, a little, a little, a little slice, a little slice from psych it learn, and most of what we already knew from Pandas right. Remember that in class,
+when we looked at whether in you in New York City we just imported the algorithm and it found the curve.
+Because
+um, the uh decision trees and and random force are just that good.
+And all they did is this is this little joining points joining occur through a cloud of points. Is this really artificial intelligence? I don't think so. It's machine learning,
+artificial intelligence is much more than that. It can be just drawing a curve through a cloud of points. And yet people out there call that Ai
+for me. It's just statistics,
+I mean, I don't want to put it. I don't, I think, doing this. Curves and end dimensions. Thirty, one hundred dimensions is super complicated.
+I mean, we can't even draw things in in fourd. Imagine the computer that's trying to do this on a hundred hundred d right. It's it's complicated, but but there's no there. There's no real intelligence involved. It's just a matter of of joining points.
+Surely there's much more to intelligence than that Right?
+What do you think is there,
+I mean, maybe who knows? Maybe my our brain all it does is it joins points. This is this person, my friend, this person, my friend, this person, my friend, this person, my friend, this person is my friend. Let me build a theory of friendship. Oh, it's just joining my friends, that's what friendship means.
+Maybe maybe that's what it is. I don't know
+maybe intelligence emergence, because we have so many different models that we can suddenly predict things that seem complicated to us. But every little model that we learn is pretty simple,
+and the fact that we're intelligence just means that we learn ten thousand models, one hundred thousand models. It's like speaking a language right?
+How many words do you need to know? To be considered fluent in one language It is to learn one word.
+You need to know at least three thousand words to be fluent in a language right?
+But each new word that you learn is not that difficult? It's just another word.
+Wow! How cool is that?
+But the rule is just like another word. It's just another piece of data
+You can have any opinion you want. You can think that Ai is just a bunch of little simple things, and you put everything together, and so only you have. Wow! Or you could think. Maybe there's a little bit more into it up to you to decide what you want. But why? I want to make it clear to you that what machine learning does is only that
+every new model is just that.
+So what is the method of moments that we're going to learn today?
+Very simple. Listen to this: In ten seconds i'll tell you what most people
+you tell them that it'll be like, Wow! It's amazing.
+We take a cloud of points,
+and you compute the histogram
+of that cloud of points. What's the histogram? The histogram is this amazing graph that will tell you how the points are distributed. If you're lucky. The histogram is a Gaussian,
+and you're like, Wow! This is beautiful data,
+one formula for the beautiful data. It's the Gaussian exponential squared right.
+If you're not lucky. Maybe it's more complicated. It's a poisson, or it's a gam, or it's a better. But you know what all histograms on planet earth
+have a certain shape,
+and that's the most amazing thing. If you can. You can take any cloud of points when you compute the histogram. If this cloud of points came from a process. It's not just random things that don't make sense. But if you came from a process,
+an engine uh an aircraft engine, a a a Tesla car um waterfalls uh the the T that comes and leaves
+the histogram will have a definite shape.
+So what you do is you compute the histogram
+for that piece for that, for that, for that cloud of points.
+And then you say, okay
+in class with Professor Dino, we learned ten different
+distributions. I'm gonna take this histogram, and i'm gonna say which distribution does it look like? Does it look like a Gaussian? No. Does it look like a beta? No? Does it look like a gamma? Hmm. Maybe. Does it look like a poisson, maybe,
+And then you're going to take the function that looks most
+like the history of your cloud of points. It is okay. How many variables does this function have? How many variables does the how many parameters does the Gaussian have not variables parameters?
+What are the parameters in the Gaussian formula for the Gaussian?
+The Gaussian is what
+e
+to the x
+minus mu
+squared, divided by the standard deviation by Sigma. Right? That's the formula for the Gaussian. You should know the Gaussian by heart.
+The most important function in the world if you're a data statistician.
+But what are the two parameters in the Gaussian,
+the mean and the standard deviation? Right?
+Okay. So look at this. You have a cloud of points. You've computed a histogram, Let's say it looks like a Gaussian, you say. Oh, amazing! It looks like a Gaussian. I only need to find two parameters
+to match the histogram of my cloud of points with a histogram, and my Gaussian. All I need to do is match two parameters
+you're trying to match your Gaussian with the histogram of your color points.
+What are the two parameters? You can modify the meaning of the standard deviation. So Look, what do you do?
+You take the mean?
+The standard deviation of a Gaussian? Is Sigma right? And then you take the mean
+and the standard deviation of your data.
+You have a formula,
+Don't. You have a formula,
+and you say the histogram looks like a Gaussian.
+You have a formula for your histogram,
+and then you have a histogram for your data.
+If
+if
+you look at your cloud of points and doesn't look like a Gaussian, and it looks, Let's say, like a student T. There's a There's a distribution we'll learn in class called the Student T Distribution, which has a very formula, his story, because it came from beer.
+So we'll study the formula, the history of beer.
+Um that that um histogram, that that that that that that that shape has three parameters,
+not two, three.
+And so if you're saying, oh, my cloud of points look like a student T.
+What are you going to do? You're going to compute the three parameters for your cloud of points, and you're going to use these three parameters to equate it to the histogram of a student team, because you know the three parameters,
+and
+you did your machine learning. You found the shape that gives you data. You can throw in your data, and you can just keep the shape
+and just using the histogram produce new random variables that match that shape.
+And you're essentially artificially reproducing
+new data that match
+the the cloud of points that you started with.
+That's the method of moments.
+So i'm telling you this because we only have five more minutes, and we won't. Have time to cover the entire slide. But that's what this this slide does.
+It introduces the method of moments,
+this data set that you're going to need to load. So let me upload this data.
+Let me go. Find it
+right.
+This this, this, this file, this file, is not there.
+Okay, let me check.
+So week five lecture one.
+You have this, this, this file. It's the same one.
+Do you have that?
+Well,
+but do you have a file called? Oh, you have just mle. Oh, I I copied the wrong one. Sorry. You know what i'm, do I'm just going to delete it and replace it. So yeah, I'm: sorry.
+Yeah, this is. This is ma maximum likelihood estimation. It's a little bit more difficult, more complex, I should say, than than mom. We'll. We'll look at that um next week, or or maybe we'll have time to do it on on Thursday. So yeah, So let me delete this. Sorry I gave you the wrong slide and let me put the just moment there.
+Uh, I went too fast.
+Let me look at just a minutely compute me.
+Yeah, I I meant to. I meant to call this just mom, compute me.
+So this is really just mount.
+Okay. Now let me download it.
+So even checkpoint file download as notebook.
+Let me go. Get that notebook and give it to you.
+Oops. Not ready yet.
+Good.
+Uh: okay.
+This is no good.
+This one paste.
+Okay, now, is just more uh copy. Let me put that in week. Five lecture two. Let me also give you the data.
+Okay, and um, the data is here
+uh
+this guy National precipitation. Okay.
+So let me go Find the data set.
+I'll give you a bunch of data that we'll. We'll look at later. So i'll give you this
+happy,
+and then i'll put that um.
+Okay. So now we also have the data, and then i'll i'll. I'll go to canvas and i'll um.
+I'll fix my mistake,
+and then we'll. We'll look at this slide next time.
+So i'll i'll erase this, and i'll i'll replace that.
+Okay, And i'm gonna add the new one.
+Okay,
+Okay. So uh next Thursday, when we come back we'll look at the method of moments, and you'll see how simple it is when you know probability distributions to do
+machine learning
+because it's just matching curves
+and the curve. The formula for your histogram is the most the easiest way to actually do predictions because you you're exactly You're matching the histogram of your cloud of points with a histogram of a well known analytic function whose properties are really well known
+who has definite parameters and your whole job. Your entire job is just to find the right parameters.
+Okay,
+alright, So um, thank you. Uh thank you for your attention. I'm sorry for the projector. It would have been better if we could see things together, but hopefully, with Zoom. We saw enough. Uh I'll see you all on Thursday. Your homework is due on Thursday. Have fun with it,
+Thank you.
+Not fun.
+Homework is supposed to be fun.
+It's just, you know. It's essentially the same approach that we we took today. We weren't sure of something. We looked at examples. We it's not nothing is complicated. It's just a matter of time and patience.
+You will, you will start, think, think positive is is the first step, don't think. Oh, I'm never going to be able to do that. You'll never be able to climb a mountain if you think you you can't make it.
+You just have to say, Okay, I need just enough time and enough patience. And eventually I'm going to get to the top.
+user avatar
+Unknown Speaker
+01:47:16
+Thank you. Everyone.
+user avatar
+Dino Konstantopoulos
+01:47:25
+The class last Thursday. What did we do last Thursday.
+So that's that. That was the the statistics, too. Right?
+Um. Okay,
+statistics to let me let me remember what we did.
+Probability two, I mean?
+Oh, okay, probability two is. When we looked we looked at um. We looked at base formula and we looked at Okay, So that class is actually um. The tas did it again, and it's up on canvas so you can maybe look at it again.
+Yes, of course. Yes,
+yes,
+you don't have this. So this uh,
+oh, this one, this one. Yeah, that's okay. We we just this is this: Uh: sorry.
+This is what we did. We did together. It's the same thing we did together today.
+It's the same thing,
+the same birthday solution. Yeah, this is this is what we what we covered together in class.
+It's It's just has this, the same, the just these graphs.
+Okay,
+Thank you. Everyone. Hopefully, I gave you um a conviction that you can solve any problem if you have enough patience to see you Thursday.
+Thank you. Online.

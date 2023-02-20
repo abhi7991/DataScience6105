@@ -1,0 +1,623 @@
+Okay,
+so let's do a recap of what we've seen so far. So we've um, I think, by now, you So how does this feel now that you've been coding so much Python. Um, I don't know. Maybe you have classes in other languages, too. What What is your feeling? Do you um.
+Do you like Python? Do you like another language better? What? What? What? What? How do you feel about the language
+is if you like it? Yeah,
+I mean I I I used to program in different languages to tell you my experience. I used to program a lot in C sharp because I was an industry which is kind of similar to Java, and in the past ten years I started doing a lot of python, and I just. I just stick to Python. It's it's it's faster. It's shorter There's tons of libraries,
+and uh, you know, it's kind of like it.
+Um, Okay, So what we did in class so far is I I to teach you um to have you work a lot on the language because you'll have a big advantage if you know how to manipulate the language. If you know how to create dictionaries and lists, and and and compute efficiently Um, I try to show you how you can take logic and and and translate that into functions with some of our homeworks. So um! At this point you have a good introduction to probabilities, which is the foundation,
+because probabilities all about counting right. You can do things with math, but you can also do do it by enumerating all the entire sample space and then say, Okay, this is the condition I want to laptop computer. Help me count.
+And once you're done that and you have the the the foundation in the language. Then you can move on to doing um more advanced statistics, and you know what from now on things are going to get easier,
+and you think that you know It's a while. We're getting more and more complicated, and it was complicated for a little while, because it was, you know you were trying to um to think about complex problems. But now things are going to get easier because we're going to start leveraging libraries and do a lot of work for us.
+And so, um! Today we're going to shift to Bayesian statistics, and the main difference between Bayesian statistics and frequent is that your your probabilities
+will change depending on new information. So you always update your beliefs based on your information
+in classical statistics.
+Um. Data is considered random. In other words, the data that comes in can be anything. But when we build our model, the parameters in our model are are fixed. The probabilities are fixed. We don't change them. Those work with that. In basic statistics
+we consider the data that is fixed. In other words, when we, when we look at new data coming in.
+There's nothing random about it. It was produced by specific processes that follow specific rules, and these rules make the data appear random to us because we Don't really understand the variability of the data, but the data is fixed is just the um, the the parameters in our model that change
+those those are random.
+And so the difference with when we shift to Bayesian statistics is that those parameters that we computed
+what we did, the method of moments when we did maximum like to hit estimation. Those parameters, The methods that we use were fixed. Right? You said, Okay, this is the model. This is the data that we have. Let's match it to a model. Let's use some kind of mathematical method to compute the parameters,
+even though we have some help from from from um programming libraries to do that when the math gets really complicated. But then this parameter is fixed, we don't change it.
+That's that's That's the the outline, the beta or the These are the parameters that remain fixed in basic statistics, those parameters?
+They're not fixed anymore. They vary.
+How do we work with parameters that vary?
+What What can we do to the parameter, instead of considering it a fixed value? What are we going to do with it?
+What's the best approach to work with parameters that vary,
+we assign them to a probability distribution right. And we say that this parameter is,
+has a certain probability of being of a certain value, but it changes, and it has a range.
+So now, when we shift to Bayesian methods, the parameters in our model are probabilistic.
+So we work with variables, with parameters
+that are probabilistic. In other words, there's a mean There's a standard deviation. We know that the models in our parameter has to be within are probably within a standard deviation left and one on the right. But they're not necessarily fixed. Do you know of another science,
+a science that deals with quantities that are probabilistic
+quantum physics right in quantum physics we have parameters that are probabilistic. We never know the true velocity or the true location with the true spin of any quantum particle. We just think that it's probably this. And so we work with probability density, functions
+that
+that core all the value of a variable. And so in basic statistics we do the same thing.
+We have a model. That model
+is meant to um simulate the probability distribution of the data that we observe. So we already have a distribution. But then the model is not parameter, are also going to be probability density functions,
+right. So we have two two kinds of Pdfs, the Pdf: That is the data. That's the data likelihood. And then we have the Pdf. That is a parameter of our model. So this is a big difference when we look at when we, when we work with Bayesian statistics that we now have parameters, that is not a single value,
+right? The method of moment give us. This gave us a single value for the parameter in our model.
+With basic statistics. We're going to have a probability distribution.
+The only estimator that we're going to use is the is base formula. The
+so what we're going to say is that the parameter, the probability
+for the for the parameter in our model. Given some data, we observe,
+given some evidence,
+is going to be the probability of the data
+given the parameter That, I think is right. Times. The probability of a parameter divided
+by this complicated function. That is the value, the probability of the data for any parameter.
+That's that's base formula, right?
+And that's what we're going to use as our estimator. And we're going to. We're going to solve this with simulation.
+So everything is solved with computer libraries.
+So now, with basic statistics, we shift
+from a mathematical models to simulation models.
+And that's why maybe it gets a little bit easier for programmers because we deal less in math and more in computer science, more in programming, more in simulation.
+So what it is, I prepared two slides, so you can actually see the contrast between frequencies
+and Bayesian.
+So the first slide we're going to look at
+two populations, and we're going to say, What's the probability that these two populations
+have the same statistics?
+That's a very important problem in data science, probably one of the most important ones, because you have let's say you have a population of sick patients.
+Then you invent a medicine, You, you engineer a new medicine,
+and you want to see if I give this medicine to a bunch of people who this change the statistics of my population. Less people get sick when more people get cured, will it? Will the statistics look different.
+And so, if they do look different, it means that my medicine is working.
+So this is. This is probably the most important statistical test
+you have, because it lets you. It tells you whether two distributions are probably statistically the same or not.
+And so we're going to do this
+first using
+classical statistics, which is what we've been doing so far, and we're also going to look at this using Bayesian statistics, which is this new kind of way of looking at statistics that is more simulation-based,
+and the simulation is is a very important algorithm because it was invented in the in the Nineteenth during World War, like during World War Ii.
+When when when for Neumann started inventing computers right for Norman is a famous computer scientist that invented the architecture of of the of the the the programming architecture, the the working, the the working memory, hard disks and memory and ram that was thought back then.
+And so they they wrote a program, and that program was called
+a Monte Carlo Simulation Monte Carlo, because there's a very famous casino in Monte Carlo and Europe, where they play a lot of games of chance
+and um. That was a simulation algorithm. And and and the simulation that they were. They were simulating atomic reactions because they were building the atomic bomb.
+So back in those days in Los Alamos and New Mexico they were experimenting with a number of very, very famous physicists from all over the world, not just Americans, Italians,
+um Greeks uh uh Polish! Uh! And they all got together, and they were experimenting with this next big thing called, you know, that brought the atomic age, which you know there's good in that, obviously about it. Um! But
+they they were running simulations because they wanted to see. They wanted to see probabilities. They were working, probably, was the probability of for radioactivity, because they were also building working with quantum physics.
+And so that's when that's when these methods were born, which is
+only about
+less than a century ago,
+which is, you know, two hundred, maybe three hundred years ago.
+So we're going to look at these two notebooks, and we're going to see the difference What happens when we use classical statistics, And what happens when we use um when we use a Bayesian statistics. So um there's a very famous th that that in classical statistics
+it's called the the the
+you. You start with a hypothesis whenever you want to compare to samples to to populations, and that's called the null hypothesis right? So the null hypothesis is something that's very famous in statistics, and everyone should know about the null hypothesis. The null hypothesis says that to um
+mit ctl and two different populations have the same statistics. In other words, you can't. That's what it's called. No, there is no difference between the two statistics, and you want to come up with tests that tell you whether the null hypothesis is in effect one hundred and fifty.
+In other words, medicine doesn't work,
+or whether
+it isn't
+the the the way the test is devised. What tells you whether it is or isn't is called the p-value
+for probability value.
+So you get a probability when you run that test that the null hypothesis is in effect, or is not in effect.
+And so that's the test that we're going to run. It's a very simple test. You just call the library. It tells you the value, and it tells you, using using um classical statistics, whether your your population has the same statistics or not. In with Bayesian statistics we could simulate the whole thing
+and say, Okay, this is the parameter for our population one. These are parameters for a population two. What's the probability that these parameters are the same or not?
+Just like the probabilities that that that that Max for stop and wins the race. Right? Let me. Just. We're just going to simulate it.
+Okay. So So let's open our first notebook
+and we're going to do this test is called the t-test. The reason why it's called the t-test.
+Now there's a lot of Math behind the t-test.
+Now a student T.
+A. Student T. Has three parameters,
+not not one, not two, three. So that's our first distribution with three parameters.
+So everyone is looking at the at the slide. Strange, Do you not have the slides. Oh, this is this is not um
+sorry. Uh, this is. This is the one that i'm looking at.
+Yeah,
+a little bit different.
+This is, this is something that i'm preparing for next week. Okay. So so this is a package that does the the those different things. So so this is what we're gonna look at.
+Okay, So let's go ahead and run the first cell, so we can import all our libraries.
+And here I tell you the basic difference between classical statistics and daisy statistics. So in the frequencies worldview,
+the data that we observe is considered random. Now we know that data is not really random, because the whole point of data science,
+we can compute the histogram of the data set, and we see that it's really not at random.
+And So the point of data science is kind of an anti-science. We don't care about the process that give rise to the data. What we want to do is be able to reproduce
+with some kind of algorithm that we write data that looks the same.
+Because if the data looks the same, then we can simulate the process that gave us to the data, which means we can throw away the data, and we can just keep the simulator.
+And the simulator is a lot easier to run, especially if it has only a few parameters
+like the once we were working so far,
+because we know that if we use the method of moments or maximum likelihood estimation. All we need to do is match. The histograms say, Okay, this looks like a gamma function, or this looks like a Gaussian, or this looks like a Poisson right? What are the parameters? We find the parameters, and we're done,
+and it's small. The smaller the number of parameters
+the better our simulation, because it's really simpler,
+right. If we could run, or the weather all over the world
+with just a few parameters, we we could predict whether really, really easily, because there's only a few parameters.
+Now, our weather models are much more complicated, which means when we run simulations, it gets complicated, and sometimes we don't. We can't predict very well, but the smaller the number of parameters the better the simulation the better the the better predictions. Um are
+so in a frequencies. Well, we view what we've been doing. So far the data is considered random,
+even though it isn't really random, right? But it looks random. That's what we say,
+But the model parameters are fixed right. When you use the method of moments you find a specific value for Alpha and beta
+right you don't say, Oh, it's this. This is No, there's a specific value there's a result.
+So,
+as a result, Max, for step, and will have a fixed probability of waiting each race. That's the parameter for Max for step, and I know that the that the the the best model for for formula. One is um is what distribution?
+What's the distribution for? Uh for? Um, the binomial right? The binomial right? And so the binomial has a parameter, and that's the probability for for for for Max or stop, and that's the p parameter that we we plug into the binomial, and and we can find it with mle your moment, and it's fixed
+doesn't that
+there's There's another religion that I like here, you know. Uh, uh! Jesus Christ has has a certain amount of compassion that is fixed, that the model that we have with Jesus Christ. So for the Christian sandwiches crisis it doesn't he's not mean sometimes, and kind sometimes is, always does the right thing. Right? That's
+that's kind of what religious people think right with with with faith as their as their foundation
+in the Bayesian worldview. It's kind of the opposite
+data is not considered random. There's a specific reason why the wind
+It blows a certain way, and the leaves
+ruffle in the wind. A certain way the mechanics are predetermined. There's nothing random,
+but the model parameters themselves may be random,
+because we're never sure about how whether Max is going to win always with that probability, because Max has some good days and has some bad days, and he has some good season. He has some bad seasons,
+and so we always re-examine the value of P. After every race, which is what you always what you wanted to do in your homework. How many of you came to me and say, uh, should we modify the the the parameters after one race,
+because we know somebody won or lost? And I told you. Yeah, right now, Don't don't think about that. But in a Bayesian worldview, Yeah, you. After every piece of evidence you modify your model parameters. In other words, your model parameters are never fixed.
+Something that's never fixed means that it follows a probability distribution. It has a probability of being something, but we're never too sure.
+So that's the difference between frequentist and Bayesian. Is it clear the the the conceptual difference between the two? Somebody asks you what's the basic difference between classical statistics or basis. This, if you can explain this,
+and then you can say, what are the main methods in classical statistics, like mom or mle. What are the main methods in Bayesian? Which is what we're going to look at now?
+Okay. So since we know that the parameters in our model vary. Let's use base formula to estimate these parameters
+as a function of the data that we observe.
+So what we're gonna say is the probability um of. So this is base formula.
+This is, uh, the probability of, uh, of the intersection of my model parameter, theta and the data that we observe. So when I talk about theta I don't mean one parameter. I assume that theta is actually a vector
+so you can have one, two, three, four, five, as many parameters. It's a list right? And y is a vector to some data that I observe. In fact, it doesn't necessarily have to be univariate. It could be by variant. So it's it's an excel spreadsheet, or we could be trivial. It's a data cube also known as a tensor.
+We say that we have a certain probability that
+we have a certain probability
+come on.
+We have certain probability for our parameter theta to be something. I don't know what it is, but it has a certain probability distribution, and I want to find that probability distribution. I don't know what it is, and then I observe new data. So that's that's called my prior.
+Then I observe new data. Why, and I want to see how it modifies
+my belief about. Theta
+So i'm going to say the new value of theta which is called the posterior,
+which is the probability of saying a given that I saw new data. Why,
+i'm going to use base formula to evaluate this. So i'm going to say It's the probability of me seeing the data with me reproducing the data with a model that has a parameter. Theta
+Does everybody see this?
+This is called the Data Likelihood
+Times, my prior,
+divided by the probability of Y. But that's the probability of the data for any possible parameter. Theta
+If I have a discreet
+set of points, then i'm going to do this sum over all possible values of theta if I have a continuous probability distribution,
+then I'm going to do an integral over all values of fail.
+This is a base formula. So this is base formula for the case of discrete keys.
+And this is based formula where my P. Function is when my P. Is a function and on a dictionary,
+and we already did an example of this. Remember our Mms. When we computed these probabilities with the base formula
+we did, we did. We solved the problem with computation, and then we with our P. Function. And then we solved the problem mathematically, too, when we use base formula,
+and to compute this, we computed this as the sum of two probabilities that the the M. And N. Came from one back, and the M. And M. Came from the ninety-six back, twenty-four by one hundred and six by. Okay. So this is the estimator. This is how we're going to modify the value of theta given some new evidence. For example, a new race.
+How does Maxwell's going for a probability parameter of winning is in the binomial distribution change? If I have new results coming in for a new race.
+So um! This is Bayesian. So now we're not. We're going to do Bayesian in our other notebook. Let's just stay with the classical t test
+and the classical t test. There's there's some math. So i'm going to skip the math because it's a little bit complicated, and you know we don't. I don't want to be too much math in the class, because, after all, you know, you're You're most of your programmers, and so we want to privilege a programming approach.
+But um, thankfully that the test is captured in a library. So we're gonna call that library. So the the textbooks in statistics. One of the famous textbooks is is written by a guy called Khrushki.
+He was written about ten years ago,
+and he has a data set.
+Um.
+In fact, he uses uh for the T testing. So I just
+uses use use these data sets.
+And so this data set is in an experiment right. It's an experiment. So an experiment is what we do in probabilities. We have an experiment. It has an outcome. All possible outcomes is the sample space.
+A subset of all the outcomes is called an event, right? And so we have some numbers, and what these numbers are is the Iq. Of a certain population
+of penguins. I don't know I just made that up
+could be humans at all.
+And and these are our Iqs.
+And so we have. We actually have two two populations. We have um.
+And so we want to experiment with a drug,
+right? We want to see if that drug increases. The Iq. Makes people or penguins more intelligent
+where we uh divide the population into two groups, and and in the first group we give them a a sugar pill. So we don't, give them the drug and the second group. We actually give them the medicine one,
+and and it's called a blind test, because the person that the penguin that gets a test is not told whether he's getting the true medicine, or whether he's getting the placebo
+then and then, after the experiment, we measure the Iq. Of the penguins,
+and then we see which which we want to see if the penguins are smart or not. So we want to measure the right queue after the after the trial, and so these are the numbers that we get. So this is the Iq. For the drug group after the experiment, and this is the Iq. To the Placebo group after the experiment.
+And so we have some numbers. We know that these numbers will follow a certain probability distribution, because we know that all numbers
+that come from A, from a human process or or a natural process, follow a specific kind of probability distribution, and then we want to compare the two Pdfs and see if they're equal or not.
+Say, use our medicine and work with it. Not work.
+So this is what we're going to do. So we create two dictionaries, and then we're going to concatenate them.
+Um. And then we're going to look at their histogram
+to see what they look like. Okay. So if we do this
+Oh, did I? Oh, you can not. The The data is right there. Okay. So I I I was worried that I didn't give you the data. But the data is is right there. Okay? And this is what we observe.
+What does this look like?
+What what kind of histogram. Does this look like, huh?
+Say, normal? Yeah, it kind of looks like a normal. It looks like a normal. But but the the values that we're working with are integers, and we know that when we observe integers,
+it's a poisson right whenever you observe um um integers values from a a process uh that is a natural or a human process. It was on the.
+And so, yeah, and and the pixel does look like a like a Gaussian, except one of the sides of the person is a little longer than the other. Right? Let's see
+floating point, and the other one is integer.
+Okay.
+Now we look at these, and they kind of look similar. Don't They They have a mean around one hundred
+um. They both seem to have a standard distribution with a distance of around
+twenty Iq points between the mean and the
+the uh, the extrema
+of of our distribution.
+Um, It does look like the placebo group, maybe,
+is a little bit dumber,
+but not by much
+right? So we need some kind of formal way of saying, Okay, Is there a difference between the two statistics.
+So in statistical hypothesis testing you do what I told you. You assume that no hypothesis you run a test,
+and then the test will will yield the p-value
+and the p-value will tell you what's the probability that the no hypothesis is in effect or isn't not in it. In effect,
+Now, there's not just one test
+the T test works for.
+So if you have very different looking histograms, you probably have to run different tests.
+But
+even for histograms that don't look very much like a like a like a like a Gaussian or a student T, or a poisson, or a gamma. People still do the t test, because it's a very robust test. Works works
+many
+for like a big range of experiments. So it's like you you go to test.
+So we're going to run the t-test using using a library.
+The t test will give us a p-value, and a p-value will tell us no hypotheses. Yay, or now have or no hypotheses may.
+user avatar
+Unknown Speaker
+00:52:19
+Okay.
+user avatar
+Dino Konstantopoulos
+00:52:22
+So let's go ahead, and the the t-test is also gives you two values. And we'll look at that. So Psi pi dot stats the t test independent.
+That's what we're going to run. So we're going to call site Pi dot stats. We're going to call it stats.
+We're going to have our Iq.
+And we're going to run the the T test with the two populations. That's the drug that I queue, and that's the placebo Iq.
+The Ts also has a a parameter that says work. Whether we're working with with populations that have the same variance,
+the closer the the variance is the the the more the better it is to run the T test. So you you a little bit in dangerous grounds when you have populations that don't have the same variance. But people still run the T test, even though the populations don't exactly have the same variance.
+So let's go ahead, and um
+actually also let's compute the variances.
+So let's add,
+bar.
+Okay, and let's run the t-test.
+Okay, so what do we see?
+So this is the um the length
+of the of the um. So we we have about the same same data amount of data. This is the mean. So we see that the mean of the is a little bit higher, but we can't get conclude with the mean. It's just not enough information,
+and you can see that the variance is is pretty different, right.
+But we run the test and we get a result.
+Sorry Uh:
+sorry. Sorry. Uh,
+and the P. Value gives you eleven percent
+doesn't. Tell you the probability that the two groups are different. It just tells you what's the probability that would actually see sample data that's different, even though
+the two populations are statistically the same.
+Now,
+how how do you work with eleven? You work with eleven percent by first picking a significance level.
+So you say, Um, you pick a significance level. And you say, Okay, what significance level do I want to work with? In this experiment
+most people pick a significance level of five percent.
+And um In another lecture i'll give you a notebook that explains the theory behind this test. So there's actually a lot of math foundation behind this test,
+and i'm skipping it right now, because I want to focus on the difference between Bayesian statistics, and i'll get you lost in the map.
+Um. But if we have time i'll give you another notebook for you. I I explain the how how significance, level, and p value, and how that uh all comes together.
+Um, so um!
+This works with the with the other statistic. So so. Um! So i'll. I'll also explain the other statistic. But when we pick it when you pick a significance level of five,
+it's the same thing as saying, you have a confidence level of ninety-five because the confidence level is is one minus the significance. Level.
+So what what? You what you're saying is that
+if the percentage, if the p-value
+is bigger than five percent,
+then you can't say that the null hypothesis is not in effect,
+because that's the significance. Level. Significance level is five. So five percent becomes your threshold, and any p value above above. That above that means you don't have the confidence to say No, for sure the no test is not in effect,
+and so uh since people usually pick with the t-test. The significance level ninety five, and your p value is bigger than five. Then you have to say No,
+i'm not convinced that my drug works,
+and there's a little bit of voodoo science here, because you can think it was. What if I picked a significance level of twelve,
+and if you pick a significance level, twelve percent. That means your drug does work.
+So there's the potential of cheating here because the hospital can say, Okay, this is the significance level I picked and guess what my drug works, and the other hospital will pick another significance level and say, Well, my drug doesn't work
+right? So it's a little bit tricky, but that's That's the t test, and that's classical statistics and um. This tells you that your your your your your experiment doesn't work. There's also another statistic that that's given to you. That's called the Z. The Z Statistic. Explain it. I think a little bit here above
+um
+z critical values called as the critical value. And um, you get the statistic as as the first parameter, and you uh also can compute the probability.
+Um,
+this is this is called. This is the inverse of the of the of the Pdf, and you can see if
+if the inverse, if if um if we the quantile that you check, which is the significance level and the degrees of freedom is the number of data points that you have in your data set, and it gives you a value, and if this value is bigger than the first statistic, then you also. It says that you can't throw away the non hypotheses,
+which means that I cannot conclude whether these two populations are actually have the same statistics or not, which means that I have to officially say, with the significance level of five, which is what most people you know. People that are that really are are are rigorous.
+They say we only we're. We're only going to look at a difference of five percent statistically.
+Um are going to say that the test doesn't work. And so you run this test and you say, Yeah, it doesn't work. And um, I I I classical hypothesis testing will tell me that my Q drug does not work.
+Classical hypothesis. Testing is not as rigorous, in my opinion, as Bayesian statistics, which is what we're going to look at next. And there's also a lot of other people that talk about this. So here's a I give you an article the p-value Fallacy,
+um, and also of internal medicine because obviously this is the kind of test that pharmaceutical companies and hospitals and all that run so you can read about it.
+Um, so um clear how to run a t test. You take the two populations,
+you assume a certain significance level. If you're if you're sincere, and if you want to be very rigorous, you you pick a significance level of five. You. You find your p-value and your p-value will tell you What's the probability
+that if the significance if if the not hypothesis in effect, you'd still see see different numbers, statistically different numbers.
+Of course, under the hood
+you assume a student d distribution. You compute some statistics, and then you, you, you! You! You make the test available, assuming a student team. But we need to. We need to look at what the student T distribution looks like, and we also need to see how basic statistics works with this, with this experiment in a more rigorous fashion.
+So now let's shift to our second notebook.
+So the second notebook is
+not this? Is this:
+So now that we're working with um with Bayesian statistics, you have to be ready for parameters in our model that are not single valued anymore.
+The parameters in our model are now going to follow probability distributions.
+This is the probability distribution for the parameter in our model. This is not the probability distribution for the data.
+Right? So Don't confuse these two Pdfs. They're different.
+So let's go ahead and run some libraries.
+I'm. Adding a random seed. So we all get random numbers that are the same.
+This section explains
+Um,
+right? So the model.
+The reason why Mod is important is because the model learns about the underlying process that yield the data right? This is what we compute models. This is why we call the machine learning, because we're learning a model for for for the data.
+We don't care about doing the science. What's the process that gave us the data let's find Let's work with the nagy-stokes equation, so that the equations that give us the fluid dynamic behavior of fluids, one hundred
+mit ctl and and we solve that. No, Does this Look at the data. Let's look at the how the data behaves statistically and let's reproduce similar looking data and do predictions with that simulator one.
+So we're learning um from the data. The same way a child uh learns from experience. Oh, if I if I step on top of this table, then it's dangerous, because I fall a lot of times. Let me not step on this table.
+Another way of learning is to listen to your parents. Tell your parents that you Don't step on this table because it's dangerous. So there's two ways of learning you can learn from other people, from from essentially from science. Or you can learn from experiments, from doing things and figuring out what happens.
+Okay, So we have the frequencies worldview. We have the Bayesian worldview. We talked about all that
+we know about base formula. So we know how to modify the our, our our belief about a certain parameter. Given that we observe some data
+that will change the probability that the probability density function of a parameter
+every time we observe your data.
+Um. And And remember, this is what we had for base formula, This is this is what we work with with when we, when we work with our M. And Ms. So we said that the uh probability
+of a given e is the probability of be given eight times the probability of a divided by the probability. So you probably going to have some kind of uh question in your midterm involved in this formula: Right? Because this is also something that conference often in interviews
+and um the evidence. So the evidence is is this thing, this uh,
+this thing here
+in this case we have M. And M. So we have a discrete model. So we have a some overall probabilities of overall possible uh parameters for our model, and we compute it here. The pro. This is the probability of the evidence. So you see, we we we do. Plus these are the two possibilities, and then we come up with a result, and then we see that the probability that the M. And N. Came from the ninety-four bag is uh is this which is much higher,
+and and that makes sense, because the ninety-four bag Oh, I I didn't put the I didn't put the numbers here has actually more uh, I think green or yellow. And I don't remember.
+Okay, So this is an example of a base formula. But now we're going to use base formula as our estimator.
+And so we are going to use that to refine
+what we believe the right parameter is.
+So let's go ahead and um, and and see how we approach this in A with a Bayesian worldview. So let's take the same data. So I just copy paste it from the previous notebook and um, and look at their histograms again. So once again, same thing,
+same data, but now different approach.
+So Now let's look at the student t distribution. Our student t distribution is another probability density function that you need to learn.
+Um, and it has a kind of a famous history, because it was a first published. Okay. So so why? Why was it published? What What people saw is that the Gaussian um, even though theoretically it is, is
+erez agmoni is the is the distribution that happens most of the time. If we have, if I'm. Lucky and have a sufficiently large number of statistically independent tests. People, people one hundred and fifty
+um realize that in real life, in real life strange things happen more often than usual.
+What's a strange thing? A strange thing is an outlier right? A strange thing is something you don't expect
+right? So when you do something, and you don't expect to something to go wrong. You cross the street sometimes with with a red light,
+but sometimes you get hit by a car, or sometimes a policeman will, will stop you and say you're not supposed to cross the street on a red light. I'll give you a ticket,
+Um! And and you say, Well,
+this is a very rare event. Why did it happen to me twice this week? Right? And what people, what people have seen is that in real life rare events tend to happen more often one hundred and fifty.
+Then
+what the Gaussian distribution predicts
+Cuz the the extremer for the Gaussian. We, we, we said that most of the time we expect things to happen with a Gaussian distribution as as the histogram, and but the Gaussian distribution has wings that are very, very low, very low values. The Gaussian distribution tells us that rare events, outliers don't happen very often one hundred and fifty.
+But, strangely enough, strange things happen more often than usual. We live in the world where strange things happen more often than usual. I don't know why, but I've experienced that
+accidents and things strange events that choose to happen more often than than they should. And so the the gentleman uh William Cly gossip said, We need a new function. We need a function that looks like a Gaussian where that has higher probability for rare events.
+So he invented a function called a student T.
+So the student. T is a function that looks like a Gaussian, but it has bigger wings, and to account for the bigger wings he subtracted mass from the from the middle and put the mass in the bigger wings. So he came up a formula for this function.
+He came up with a formula for that. And this is the formula.
+Wow! That's a complicated looking math formula, right? It has two gamma functions. It has a power. It has a square root it has, and it has three parameters. You have mu Lambda and new.
+Now the Mu and the Lambda
+actually are the Gaussian parameters, and the new is the parameter that controls how much strange data you actually want to see. So the new parameter controls the amount of outliers in your data set.
+The reason why it's called student. T is a funny story. Um! This guy worked at the Guinness Brewery.
+He's very lucky. He could drink beer for free
+um,
+but he also was a scientist. So he wanted to publish papers. But the Guinness brewery, you know the is is a closely held secret. How you create beer that looks like this that is black, and his phone me, and the phone goes to the top and all that. I don't like getting it very much. It's very bitter for me. But some people love the bitterness in the beer,
+and so
+they wouldn't let him publish with his name, because they wouldn't. They don't the the the his company didn't want people to know about.
+I was just talking about rare events and the noise habit I just like this tables falling um, and so they allowed him to publish under a pseudonym. So he published under the name Student,
+and then Um.
+Twenty Thirty years later another famous statistician introduced a new statistics that we call T. That look like the student distribution. And so now we call, we call the student T. We call this distribution the student t distribution. So it has it. It references both both both. Uh
+so. Um! What we're gonna do now is actually what people also do for the classical test. But this is, you know, it has some math involved. We're going to assume we're going to model this data.
+Iq data as student T. Distributions.
+It makes sense to model as to and t distributions, because,
+you know, we're talking about our Iq right? And so there's a high chance of
+rare events of people that are very, very become very, very clever with a drug where people that are very, very non, very clever. Um. And so, since there's a higher chance for rare events. Instead of modeling with a Gaussian, we model with a student team, they say, Professor, why are we doing this to indeed isn't this integer data Shouldn't: We do a personal distribution.
+Yeah, we should do a personal distribution if you do it correctly. But still people model things with a student T. Because a very robust distribution. In other words, we can take the student T. And because it has three parameters, we can shape it
+to look like many, many different histograms.
+And so, even though we probably should be using a Gaussian
+Sorry a person. Um, we're still going to model this data as a as a student t distribution.
+So we're going to model the the drug data
+as random variants
+coming from uh a probability density function that is a student T. And we're going to model the placebo data as random variants from a probabilities distribution. Uh, that is also a student team. But these they have different parameters
+because it's different data.
+And so we're going to try to find the parameters mu and Sigma the mu, one the single one for the drug. And then you two in the Sigma, two for the placebo data, and then we're going to see what's the probability for those two parameters being the same.
+And if if if those parameters are probably the same, that means that the data is probably the same right. So what are we doing instead of working with the data. We're working with a model of the data, and it's a lot easier to work with the model because we have an analytic solution for our model. So it's a lot easier to work with the model,
+right? So what we're doing here is we're specifically not working with the model in order to do prediction. We're working with the model. So we have a more refined instrument for doing comparison
+more difficult to do comparison. And when you have one hundred data points. It's much easier to compare two things if you have a function with parameters and with probabilities for each parameter.
+So that's why we're going to try to find the values for new Mu and Sigma for each one of the two distributions, a drug and a placebo group. Well, however, we're going to do one thing. We're going to assume that the new parameter, which is the parameter that controls the the outliers, we're going to say they're probably the same,
+because, after all, it's, It's Iq. In both cases same probability of them having outliers. So we're going to assume that two parameters are the same. You don't have to. You can say new one and new to,
+and then continue your analysis and come up with uh estimations of a new one, and you too. But, uh, there's not going to be much difference, because we we we just knowing from experience, when you work with two experiments that have the same probability of outlier. So you can assume that the uh, the new parameters the same,
+but the different the that we're going to take now is we're not going to use math to find the value of these parameters. We're going to use simulation.
+What kind of simulation where we're going to run a library? That will say, Okay, let's simulate the student t
+let me run the simulation to the end and see what it gives me,
+and let me compare what it gives me with the data,
+and if it doesn't look the right approach, let me go back in time and run another simulation with different values, and i'm going to run the simulation for many possible values of Mu and Sigma.
+And then we're going to compare the result and see which
+which choice of the parameters yields the data. That is more like the data that I actually observe.
+Right? So it's an inverse problem. Instead of coming up with a solution from the data. We start with a hypothesis, and we see, we see which which hypotheses that gives me the data by trying multiple values of new. And Sigma.
+See how this is very different from the method of moments or mle right? Instead of finding the value with science, with with some math,
+simulate different possible values, and I see which one gives me the right result.
+We do the same thing in machine learning, too, right when you come up with model parameters for your artificial neural network.
+You, you don't, really know what those model parameters are. So you simulate many possibilities, and then the tensor flows, and the torches tell you which ones are the most probable, because they yield the data that you actually observe.
+So it's simulation. It's not as much math. It's just having your laptop work very, very hard to do the simulation at ten thousand times to see which one gives you the right parameters. So what we're learning now is how to use, how to use these libraries to help us
+run a lot of simulations.
+Simulation is just super important, because um,
+you know it's It's the basis of anything that we do in machine learning is everything is through simulation.
+You may have heard of this thing called hyper parameters when you try to find a machine learning model, and how you find the right hyper parameters for your model. It's always through simulation.
+You don't know what those are. There's no real theory that tells you what they should be. You just try different ones, and you try to hold in on the value that gives you the best match between the between your model in your, in your, in your data.
+So
+the library that we're going to use to help us do this. Simulation is called time, c. Three
+y prime, c. Three, because it's in python.
+It's a Monte Carlo simulation, because he works a lot with random numbers, and it's a third
+a version of this library, so it used to be time, c. There was a time, c. Two, and this is time, c. Three, so it's a modern version. This is also a library that was written mostly by um um students doing the co-op at Google
+right? So if you ever uh do a co-op at the company like Google. There's actually a good chance. You will be working on implementing methods, um statistical methods, in time, c. Three.
+So like with that I really like, because there's a lot of examples. Um, But all the all the algorithms from time, c. Three also exist in Psyched learn
+right? So anything that we run with time, c. Three. You can also run with Sc: Learn,
+uh ski learns a little bit more closed. Api: Um,
+Yeah. The The the source code, I mean still open source. You can still look at the source code. But but time is it more open source because there's some tons of examples. You can go to Github and find a lot of examples of these libraries. In fact, I I take a lot of my examples from Google's examples up on Github
+so hopefully. That's one of the reasons why I told you to install time, c. Three in one of the previous lectures. Um, Because the installation can be forty Sometimes there's some versioning issues, And so by now you've resolved it, and now everybody should have time, c. Three on their laptops.
+So. Um well, let's let's do the modeling. Let's let's learn how to use Prime C three to do this data modeling.
+So what's the first thing we're going to do. Let's import. Let's import the Pdf. For for for student T.
+The normal distribution from time, c. Three.
+Let's. Let's. Let's compare the student T. With a normal distribution.
+Let's see how um how different they look.
+Let's do that with a ten thousand points,
+four thousand points you can pick whichever you want. And um let's look at their distribution. Let's plot them one after the other, to see what the difference is,
+and and and because the mass gets more accumulated in the wings. Uh has a smaller uh
+smaller maximum than the Gaussian
+right, but they they both of them have the same area under the curve
+More outliers.
+Okay, everybody. Okay, with producing that curve. So everybody has time, C: Three. And okay, Good.
+Um, there's a a little bit of history on time, c. Three. It used to. It used to depend on Seattle, which is a library that was used by one of the uh, you know, big forefathers of of of machine learning. Uh, his name is usual Benji from the University of Montreal. Um, but now it's based on tensorflow.
+So when you actually install uh um time, c. Three. It also installs tensorflow.
+Um. When it was based on piano. It was even a more complicated installation, because you actually had to go in and modify some
+some settings on your Cpu, and actually specify different things, whether you want it to run the Cpu or the Gpu, you
+uh. But now you don't have to do that anymore.
+Okay, Now, I told you right. I told you that the parameters in our model What are the parameters in our model. If I if I tell you this, that we're going to model each um each population with these parameters, these are the parameters in our model.
+What did I tell you about the parameters? They're not a point function anymore. The parameters are going to be probability density functions
+right? And so we we need to
+give them a Pdf shape
+so that the library can actually simulate them
+right? So we can't say start with a value of point one. No, the library tells me you are doing Monte Carlo simulation with these parameters. You need to give these parameters a probability distribution function, so I can work with them, so I can modify them and find the right value. You can't tell me they can be any value.
+You have some work to do first,
+so you have to decide what the Pdf. For these parameters are.
+Do we know what the Pdf is? We don't know that?
+But if we don't know what the pdf of these parameters are. What's the first thing we do? We assign them to a Gaussian Pdf: So that's the first instinct. When we don't know something we say, Okay, it probably is. Has a Gaussian probability density function.
+So what we're going to do is we're going to assign these parameters to a Gaussian Pdf: So let's do that.
+So we're going to um um import
+the model like uh um object and the uniform object. That's the uniform for uniform. Pdf: Right:
+What's an example of a uniform? Pdf:
+A process that yields data that has a uniform probability distribution.
+Same probability for each key?
+Nice? Exactly. Yes,
+Okay.
+So let's go ahead and and put this down here. So we're going to create a new model
+that we're going to call drug model. And in this model we're going to simulate the Mu zero parameter as a normal distribution.
+The Mu one parameter that's for the plus one is for the placebo and ones for the for the drug as a normal distribution.
+user avatar
+Unknown Speaker
+01:23:04
+Now, a normal distribution also has
+user avatar
+Dino Konstantopoulos
+01:23:07
+two parameters right, the the the mean and the standard deviation. So when I say something looks like a normal. I also have to give two numbers.
+So how do I pick the numbers? Well, i'm going to go to the data,
+and i'm going to. I'm going to look at the data.
+And i'm going to say, Okay, the means are both around one hundred
+kind of, and a standard deviation, which is, you know, kind of like the square root of twenty,
+is my guess for the standard deviation. And so i'm going to create
+parameters with a standard deviation of ten.
+I'm. Guessing that they probably around one hundred,
+but they could not be. They could be not around one hundred. This is just
+because if the mu, if the mean for the data is around one hundred, I probably have something around one hundred, so i'm giving I'm. Helping the library get converge faster.
+The library will still find the same result. It will just need more time to do the simulation.
+Okay,
+so um
+do they run this?
+I I don't think I ran this. So let's run it.
+Okay. And the first thing you the first time you run it, it will bring in time, c. Three, so we'll take a little bit of time before it does that.
+Um. And so you just have to be patient,
+and Sometimes they will change the Api, and things won't work, and you have to Google and and see and see what they fix is. Yes,
+I find that time C three has an Api. That's a little bit easier to understand.
+Psych, it learn is a little bit more. It's kind of more serious, right? It's the uh, you know, psychic learn is the the kit that helps you experiment with various things in psychiatry is just the serious Api where you actually have to really know what you're doing when you make a call. So it's a little bit, I think easier to learn with time, c. Three,
+the the the sigma parameter for both student tease distribution of here. I have no idea what the signal parameter is,
+and so what i'm going to do is, i'm going to say it has. It could be anything. It could be anything.
+But it's probably something between zero and twenty right? Because if you look at the data, you can see that the data is between one hundred and twenty and one hundred plus twenty,
+right?
+So it's probably plus or minus twenty. But I have no idea what it is. It can be anything between zero and twenty, and so i'm going to sign it. A uniform distribution between zero and twenty make sense.
+If you don't know,
+you will say a uniform,
+because uniform means same probability for anything occurring.
+So this is how we're going to simulate this signal parameter.
+So let's go ahead and do that.
+Let's take our Sigma parameters,
+and with the same drug model simulate them.
+Okay. The The third parameter is the new, the new controls, How much outliers I'm going to have in my model! How how many outliers,
+how many of us? Um! And I I actually want to you. You can pick. You also can pick a um a uniform distribution, but with typically, when you, when you,
+when you want to go very, very fast on one parameter you, you you assume um a a pdf that varies very, very fast, which makes the convergence a little bit faster. And so one of the fastest varying distributions that we know of is the exponential distribution.
+And so we're going to model.
+This parameter has an exponential distribution.
+Um, let's see what the exponential distribution looks like here. So if I plot the exponential distribution, this is what it looks like,
+i'm using cgram to plot it.
+And so the parameter that I pick. It looks kind of it can go from zero to one hundred. So it's like within the range of the data that I have, and so it looks like I should pick that. And so i'm going to pick the exponential distribution with the parameter of one over twenty-nine.
+So you see what i'm doing is. Um! There's a little bit of guesswork involved. So in any in in any kind of simulation model that does any kind of learning for a model that is based on algorithmics. There's always some kind of guessing involved in the beginning.
+These are the hyper parameters in machine learning. Here it's the parameters of the Pdfs for the for the parameters that we're trying to simulate
+um, and
+before you that that's also it's also the case with any kind of data science that you do. So You remember you had one one homework which was to find a data set whose histogram has a single hump, and then to find the parameters using the method of moments.
+Now many of you found an interesting data set, but you never thought of making the data look prettier.
+So many of you came up with data set with a histogram that looks very ugly, like very, very short support. But I told you before. Whenever you do that, make your day look pretty. First do a coxbox transform or a square root. Transform and then analyze that data
+when you use it Now, whatever I apply the method, then you can. You came up with results that weren't as as as precise as you could have had if you would have first transformed your data, using one of the transforms that I told you. You have to be very careful,
+Don't. Apply. Ever apply methods without thinking first. It's not like the pilot is going to get into the aircraft. It's going to press a button, it says, take off,
+and then another button that says land
+right now. The pilot has to do things to get prepared for a takeoff in the landing,
+and the care moves the the careful where you are the more careful you are, the more secure your flight is going to be, and it's the same thing here. Make sure you make good guesses in the beginning, because the better your guesses the faster you're going to converge. Now I told you that oftentimes
+well, actually, sometimes you may. You may diverge sometimes. You will, Your library will blow up, and you'll say what happened,
+and you have to start again with better guesses many times. You will still converge if you're lucky, even though you pick the the wrong, the wrong parameters.
+But you see, I was very careful when I, when it went for the mean for the new parameter.
+I I looked at my data and I said, Okay, the mean of my data is around one hundred. So when I pick,
+i'm going to pick a Gaussian distribution, but it's going to have a mean of around one hundred, and it's going to have the same standard deviation that I see in the data.
+So i'm helping the simulation get to the result faster.
+Does everybody see this? Understand this?
+Okay,
+All right. So I I I i'm done
+with my
+with my parameters.
+Now, I'm going to have to mall the data. Yes, because the exponential for the new allows me to converge a little bit faster on the right value in you.
+Um,
+From experience I know that there's there's no there's no way of knowing that. So if you don't know these things you would start with either a uniform for a white support or a Gaussian around what the value should be. You run your experiment, you see, if you get good results. If you don't, you come back. You modify that, you Google a little bit, you say. Oh, look! A lot of people pick the exponential for the new. Let me also pick the exponential, familiar
+right,
+And it's the same thing with machine learning. When you start in machine learning, you have no idea how many layers or how many new runs per layer or right. You have no idea. So you try different things, and then eventually you get some experience. And you know, given this problem, these are the values that work the best. And if you don't know, then you Google, and you see what people do, and then you copy them.
+There's no real science that tells you what it should be.
+So the next step is to model the data.
+So What we're gonna do is we know we're gonna say that our data looks like a student team, right?
+And the student t has the parameters that we picked
+to simulate.
+And this is the data that i'm going to model with the drug like. And this is the data that i'm going to model with my placebo like, and I want models for each one of these populations.
+Okay. So you're essentially doing simulations of controlled simulations where your parameters are very carefully modeled to be probability density functions. And you're going to give the library the power to simulate with many possible values to get to the right value. You see what that the differences between simulation and math in math. You have a formula to get the right value. With simulations you help the computer find the best possible values.
+So let's go ahead and put this down here
+and let's run this too.
+And now we're ready to simulate.
+Now you probably could have done the same simulation with a Gaussian, because you don't know about the student team,
+and you would have gotten some results. But your results probably not as nice as mine, because I know that when I model this kind of data there's there's more outliers. Now, you could have guessed this by looking at the amount of outliers, and comparing the amount of outliers. So look at the standard deviation, and you see that it's much wider than the standard deviation of a Gaussian with the same mean
+um stock market data.
+Very many, many strange things happen with stock market. Sometimes it crashes, and we have no idea Why, sometimes it's it's a bull marketing. We have no idea why more outliers than than expected. Perfect for student team.
+Okay,
+Um, Now, what's the thing that we're after? We want to see the difference between you, one and you, Zero and Sigma one and Sigma Zero, because that will tell us whether the two two populations match or not, whether whether we can compute them with the same model parameters.
+And so I want to compute the difference between me, one and you, Zero. But I don't want the library to simulate with this with this difference, because I want the exact solution for this. So i'm going to make sure I assign it to a deterministic variable, because all variables by default in time, c. Three are quantum variables.
+Your Pdfs. When we work with time, c. Three, every variable is a probability density function.
+It's like a quantum particle with unknown velocities. But probabilities of following a certain profile, and so i'm going to compute the difference of the means which will tell me something about the two populations and what's also called the effect size, So the effect size is a statistical um
+parameter. That's pretty famous, and it tells us this, the the it tells us, whether or whether the the
+the size of the effect it has to do with the standard deviation. But specifically you want the the difference of the means divided by the square root of the standard of this, of the sum of the squares of the standard deviations. So the square of the standard deviation, of course, is the variance. And then you take the square root of that.
+Okay? So. Um! That's what we want to compute, because that's what that's what that's what is going to tell us whether the two populations have the same statistics or not.
+The difference between the means she's gonna say It's actually what i'm after the most it's. The most important thing is the difference between the means, because that's the mean Iq of each population,
+and if my medicine worked I must have increased the mean Iq right. If I didn't increase the mean Iq, the
+My medicine probably didn't work, because I want to make sure the medicine works on all people. I don't. I don't want to engineer a medicine that makes very smart people be much smarter.
+I want to engineer medicine that makes everyone much smarter, so I want to make sure that the mean
+is is higher.
+So I want to look at the difference between the drug group and the Placebo group and see if there's a large difference which is a measurable difference. So let's go ahead and assign these variables to a deterministic variable. So the time, c. Three knows not to change, not just to assign them as a as a
+um, as a, as a deterministic, as a probabilistic variable. Okay,
+Um, I I forgot to. I don't know what this image is. Uh, I I probably forgot to copy my images from one folder to the other. I think this was an image of Mat Matthew Iconic reactor, but this he likes to see. All right, all right, all right. But i'm saying, All right, all right, all right, because i'm done
+preparing my model for simulation.
+And now it can simulate. So to simulate. I'm just going to say fit. That's kind of the universal Api for running simulations, and i'm going to say, go ahead and give me a thousand possible simulations and give me the values of the parameters. So simulate with all possible parameters.
+So let's put this down here,
+and let's run this,
+so have to be a little bit patient, because it's preparing and running a simulation. So it's preparing for the simulation that it's running simulation. It will take a little bit of time. Once we have a little bit more experience with the library, we're going to see that this actually this runs the metropolis algorithm will explain how the metropolis algorithm works, because it's a very famous algorithm as famous as something like K-means or something in data science.
+And then we're going to use even more advanced algorithms called variational inference.
+But let's let's let's let's just call fit with just a random seed. So we get similar results, because, after all, this is a probabilistic library. So it won't give you the same results every time you run it
+it will run and come up with different results, but statistically they they should look similar. But if they give it a random seed, you should always get the same result.
+Um! That's kind of strange things with with random numbers. If you see them you you'll get the same sequence of random numbers. They're random with respect to each other, but It's the same sequence for everyone.
+Okay, So let's go ahead and run this.
+So it's simulating. Now
+it's done,
+but actually not entirely done.
+It says finished. Still not entirely done.
+Okay. Now it's done. Okay. So now let's go ahead and call a function that's called plot, posterior and plug posterior is going to tell us the the the the profiles for each one of these variables.
+Now your plot, posterior, if you have a newer version of time, c. Three may actually not be available in time, c. Three, in which case you may, you may use this Api to import it.
+But for me I have a little bit of an older version. And so i'm going to run this.
+So this is going to give me the profiles for the Muse and the sigmas and the new parameter,
+and this will tell me for my simulation if I run my simulation. This is the probable profile for each one of my parameters.
+So we see that um
+the probable profile for Mu Zero has a meeting which is the Placebo group, has a mean of one hundred and one,
+the trial parameter profile, four, five from my M. One has a me of one hundred and two,
+and so there's a difference of one Iq. Point
+for the meal. Um for my drug group,
+which tells me that my drug is actually working, because actually increase the Iq by one
+for all
+people taking the drug
+for my parameter.
+And now, if I plot, if I plot the differences,
+the difference mean the difference of means in the effect size. In my next cell,
+you will see that
+first of all, you will see that it's not. It's not perfectly. It's not It's not a perfect student, right? It's not perfect Gaussian, But That's okay. I mean. Sometimes you start with a profile, and the simulation will give you an entirely different looking profile.
+But that's okay, because this profile is exactly all the computations done by simulation, and it tells you that the difference between the means is probably around one.
+It could be zero point two, and it could be all the way up to one point seven.
+But you can see from these numbers,
+because this is a simulation that the probability that i'm increasing the Iq of the population is positive.
+There's no probability here that's negative or zero, and the need is around one.
+So without doing any complicated math um, or any complicated assumptions, I can immediately conclude from my simulation
+is that the drug worked,
+even though, as you saw in the preview in my in our previous notebook. The classical T test tell us, tells us it doesn't work, because the No hypotheses in effect.
+So this is a really good example of how Bayesian simulations are more precise
+and classical statistics,
+because the leverage your laptop to actually do computations that would have taken forever if you want to do them with map.
+Yes,
+Isn't, that exciting. You can now use a library to do all these, all these complicated results using just simulation.
+Now you have to be careful. You have to.
+No. Your profiles. Find the right function that looks like your data, whose whose histogram looks like your data, find the right pick the right
+default values for the parameters, because sometimes sometimes this library will crash, and actually, if it crashes when you run the simulation, it will tell you a lot of divergences. So when you run this it will take, it will say zero, ten, twenty, fifty divergences;
+and and if it has as many divergences or close to close to as many divergences as as as the number of points simulated.
+Then you you'll say, Okay, my simulation didn't work,
+because if you pick the wrong values. Simulation may just diverge it just doesn't work. But if you're if you're careful and you pick the right value, you simulation will converge. It will give you the results. You will give you the right to model for your the right parameters for your model. Now, the Mall. You picked the model right that you picked the model. The simulation didn't give you the model you still have to do this
+this part. You did this.
+That was your your choice when you started. I'm going to assume this profile I'm going to assume, because I computed the histogram in my histogram. In fact,
+I know it's A. It's an integer account. It looks like with some, but it has many outliers. Hmm. How do I work with the data set that has large amount of outliers, I mean you can see the outliers here, the outline. These are big. Look, boom, boom! This is like much bigger than what you expected. If if you had just a Gaussian,
+you say, Okay, I'm gonna pick a student team. Let me go find the student tea formula. Oh, complicated. Let me not do math with this. It looks too complicated. Let me call a library and import it from time c. Three, and then let me simulate.
+Yeah.
+But of course, when you simulate and you pick this, you pick this profile for for your, for your data for you. Where,
+yeah, when you decide on this, you have to
+use probabilistic values for these parameters. You can't assign them a fixed value because you want You're saying you telling a library, hey? Library, Go ahead and play with these parameters, and tell you what the most likely value is. But, hey, you know what i'm going to help you, because i'm going to give you a shape.
+I'm going to give you a shape for these parameters, and i'm going to also tell you what the what, what the starting values for the simulation should be,
+and then you go ahead and play, and then give me at the end. Give me the right results,
+And you know this kind of thing. This is still pretty modern. There's a lot of companies that don't do these kinds of tests, because they don't know about Gaussian statistics, and This is why they need you, the modern data scientists to join the company and tell them how to run their statistics.
+Say, you go and say, Okay, let me. Uh, I can do the the classical test for you, but I can also do a more advanced test that uses basic statistics. You can call this and run this with time, c. Three. You can run it with psyched learn. But this is the essence of how to do Bayesian statistical simulation. Um!
+And now that we know how it works. Um, your homework, your homework, your homework for next week is going to be also find a single home data set.
+Now, now that you know about making things look pretty, you know how to make it pretty. Use, Mle to find the best values for the parameters, and then use basis, simulation with time, c. Three,
+and tell me which one
+you think gave you the best values.
+Okay,
+so let's do this in groups of two.
+No? Oh, you you can Google for it. Uh, It's It's It's better if you find an original one. Yeah. But if you Google for it, you can also Google.
+Yeah, I I I mean, if you have an interesting data set, Rather. So you can get a boring data set. You can go and say, time, c. Three. Show me an example of a pine, c. Three simulation What's the data set they use? I'll use the same data set. I call that a boring data set If you go and you find a data set that is original. You know um that that hasn't been simulated yet.
+That's that's, you know, more original data, and then you simulate it, and then you make the deal. So you do all the work right, and it's more original, and then you get a bonus.
+Yeah, um. So should we let them use the same data set. I think we should make them use a different one. Yeah, yeah, Different data set. Not the same one you use last time.
+But of course, when you compute the histogram, make sure that it has a single hump right? Because we're we're simulating it with like a student team. You know, that has a single hump. We'll. We'll study what we need to do when we have two or three humps, or something like that. It's a comp. This is essentially a decomposition of many single hunt, a superposition of any single hem uh,
+Um. Pdfs. But for now we'll just stick with a single hum histogram
+clear.
+Okay, Good.
+Uh: Okay, That's it for this week. Um. This is due next week. Thursday. Um!
+So we're going to the Tas, and I are going to work on your on your storybooks, and we'll tell you We'll tell you next week about those
+um, and then your Oh, um.
+And then yeah, I know that you're always thinking about the midterm, and I think you already told me that you prefer the midterm to be on a Thursday,
+right? Because you have some crazy amount of homework from another class, right?
+Maybe I should give you a crazy amount of homework, too.
+I guess I already gave you crazy. I'm up with the with the storybook. So uh I guess we're we're even there. So instead of having it on the thirty first, we'll have it on the third. Okay,
+Better right?
+Okay. Good. All right.
+See you next week. Have a good weekend.

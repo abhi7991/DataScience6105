@@ -1,0 +1,735 @@
+user avatar
+Dino Konstantopoulos
+00:00:03
+Unique sheer-screen
+Share my scream.
+user avatar
+Unknown Speaker
+00:00:07
+Okay,
+user avatar
+Dino Konstantopoulos
+00:00:08
+Hello! If anybody's online, welcome to the class. Sorry I started the video A little bit late But connectivity issues.
+Okay, So what we're doing is we're going back and talking about this thing called the histogram. We're going to be playing with histograms, a lot in class. Um. And if you're lucky and your your numbers are beautiful and the shed like the bell curve.
+This is the most beautiful one.
+Okay. So the histogram super important. We'll talk about how to compute it. Everything. The normal distribution has this formula. It's an exponential to minus X squared.
+There's actually a reason why. Um, if if you're into math, there's a table, a thing called Taylor Series, and the exponential turns out to be the limit of a team or series of powers. So there's a reason why that is that that's part of the proof of the central limit here. But that's okay. That's a little bit of math. It's not important that that's the the um the formula for the
+If you know the mean and the standard deviation of your data, you can plot this formula Exactly.
+So. These are different shapes with different means and different standard standard deviations.
+So once again i'm telling you some important things. This is the central limit, theorem we talked about that correlation tells you where the two data sets are related. If they grow and shrink at the same time, and there's a lot of correlation. Correlation does not mean causation, right? Just because two things happen to be correlated doesn't mean that a causes V or B causes a
+okay, and then um. We talked about some of uh, we actually didn't talk right? So I mentioned there's there's a lot of correlation coefficients that tell you how correlated, how related to data sets are the most simple, the simplest ones. We'll look at other ones in class. But that's that. The this, this this correlation coefficient uh uh, that Volges linear relationships. So if the data sets are linearly related,
+this will be high.
+We know one or minus one um it. Two data sets also can have a nonlinear relationship like y equals X squared. That's a relationship, but it's not linear so. This is not this won't work. You need other correlation coefficients to pick up nonlinear relationships. In fact, it's one of the great things about artificial neural networks when we used
+so I told you about causation, statistical analysis.
+There's a very, very interesting moment that happened twenty years ago when people realized. Oh, we know we're artificial neural networks. Now we know how to program artificial beings, and then, when we figure it out Essentially, it's not like. We know how to program artificial beings is like we discovered how we work internal because our brain works kind of the same way we do the machine learning today. It's just a giant geometry engine.
+It takes, in fact, that you learn your lifetime and learns to interpolate you.
+So you have a friend, A. When you hear a certain way, and a friend B. They behave a certain way in a friend, c. That you know the behavior of a way, and you meet another person, and then you predict how they'll behave because they're a little bit like your friends,
+and it finds interesting things. And in fact, there's this thing called functional magnetic resonance, imaging where you have the Url. If If we run experiments, it puts you in a machine, and they ask you to think about words, and they can actually predict the world what you're thinking about.
+And so and that's something fascinating that we discover anything that we with the field of natural language process, because we actually have embeddings that that take all the languages and and project that in mathematical space that is similar across all languages.
+So that's I think that's fascinating. And some other important things are a dependent, variable and independent variable. So when you have a data set and you have a lot of data sets that we'll talk about. It's important to distinguish column in the excel spreadsheet
+dependent on the other columns. So which card do you want to predict from the other columns
+the column you want to predict is called dependent, because it depends on the independence. So you have dependent variables and independent variables. And when you have a problem in data science. It's important to understand which variables are the dependent ones and which variables are the independence.
+And you do that with correlations. So that's what correlations are important, because if you find that two columns are correlated, you know that one is probably a relationship, a function of the other, and you can figure out which is dependent on which one is independent.
+Okay, we talked about classification. A regression, an example of regression is a logistic regression which is a nonlinear regression.
+We love logistic regressions and data science because it takes
+from minus infinity to plus infinity, and it projects it between zero and one and zero, and one is their relevant probabilities.
+A zero probability, one happens for sure, probably the easier for sure doesn't happen. Probability zero point. Five happens fifty percent of the time. So we love the logistic regression.
+Okay, So that's a little bit of a the only introduction that I that I didn't have time to finish from last time. So have everything clear. We're starting to work about numbers. There's some important things called the histogram correlation relationships depend, variables, and the parent variables is that kind of clear?
+It's. It's the basis, the foundation of what we're going to do.
+So I hope it's clear. If it's not clear, Ask your tas. The tas are there, by the way, so you can raise your hand if something isn't working right? Well, we'll work on the problem. They'll come and help you.
+Okay.
+So these are some of the things that we didn't cover last time. So
+okay, good. So um.
+I told you about programming. So now we're starting with our. So our is this. So let me. I can actually start our
+I'm going to go. I have. I have two versions of our. I have the ones that shift within a conduct. I can start with icon that I also have one that standalone that I usually keep, and my tools forward. So I go to our studio. Please. Everybody. Start your your our agent, ladies and gentlemen, start your engines,
+so we're going to be in. We're gonna
+go to our studio
+and we're going to have four quadrants right? The quadrant where we're going to load our data and our programs, the Quadrant. We're going to compute the bottom over there. That's going to tell us about all our variables and the quadrant, all our graphs and the help files, and all that in the lower right.
+So there's our studio.
+Okay, let's go back to the slides. So we know that our comes from the the
+The pedigree of R comes from a language that's called s for statistics. It's a statistical language. You you installed data, apply, or in Gg. Two. You can either do that by running install packages on the command line,
+so the command line would be here
+right here. Ah remind later, so you can run this here, or you can also go to tools and say install packages, and and it's going to look for the packages you want to install. You can see the prior here, and you will find it, and then you can install it from there.
+Okay,
+Um.
+So um. Let's go ahead and open the first file for our labs. So we have three or four folders. Let's start with the first folder. So in your material I gave you your labs for today.
+So if you go to your material, which is here, you'll find a file that's called our lab.
+You'll have You'll take this and you'll extract them, and you put them in a folder
+uh open
+open fire.
+Now let's do something else. Let's do let's do
+profile one tools, no,
+or a session,
+and you're gonna say, set working director.
+That's easier.
+And then you're going to say to Source File to choose directors
+and you're gonna click on that.
+Then you're going to go and and select the place where you put these files. So you're going to go to. I put them in the
+I'll select all right. I'll click on open
+so I can also, instead of working with a Ui, just work on the command show, and then click on set working directory.
+In fact, if I do get working Directory. It should tell me the directory i'm in.
+And now that I have a working directory now, it's easy to go to file, open, file, and you'll get your the files that you that you set up. So we're going to go to programs, and we're going to open up zero
+zero up intro that R.
+Everybody have that?
+I can't. I can't open it.
+Okay. So we already did. We're going to work on some commands. This is the getting familiar with programming session. Many of you, Don't, necessarily have that much experience. Programming worked in lots of numbers.
+So this is, this is what's gonna help us.
+So Um,
+vectors is the first container type. I told you that we're going to be programming with lots of numbers. So here was where we start with it, working with a lot of numbers. It's not just a calculator that works with one number at a time, but we're working with a lot of numbers. So we're going to work with a lot of numbers. One, two, three, one, three, two, five, and we're also going to assign them to variables. And I told you we're not going to be. We're working at working with equal signs with our harness as it's. We can actually replace that with an equal sign.
+But But the the the the tradition is to to stay with the universe out. So we're going to take this. We're going to copy it, and we're going to paste it down here.
+So what did we do here? What does C stand for?
+So you can stand for column because it's a calling of numbers.
+I like to think of it as a cell, because it's a it's a location for that. You can store a number, except that you have many numbers. So this is called a vector
+a column of numbers is a vector because if you have a four-dimensional vector space, the numbers one three two, five, let you point a vector from the origin zero, zero, zero, zero to one, three, two, five, and then you have a vector that points. It has a certain ninety, two,
+and now I can. I can ask for X, and it will tell me. Okay, X has one column, and that column has four numbers.
+Okay. And then let me do the same thing with Why so? Let me copy this and let me paste it down here, and that assigns why, by the way, the moment I do that you see how your environment increases, and now has the numbers X and Y that are part of your global environment.
+And so Now we have X and y. Now guess what? Now we're going to work with a lot of numbers. We're going to work with X and Y, and we're going to do what I call vector operations. So i'm going to take X and i'm going to add that to Y. Wow, you can't do this with a calculator.
+Right? You need a more advanced Ib. To be able to do this kind of program. But look what happened. I took these two numbers, and these two numbers, and I added them. So one to four gave me five, three hundred and one, maybe four, two, and one gave me three, five and two gave me seven. I worked with a lot of numbers at the same time.
+I'm a programmer
+cool.
+Once you start working with a few numbers. Now you're ready to work with a billion numbers in a billion in a million dimensions. Right? It's not much more. It's not not different.
+But you see, it's not. It's not super complicated. You can add
+which is what what we did, what just did we can. You can subtract,
+you can multiply,
+and you can look at the length, and these are built in functions.
+So if I say length of X, I will get four, because I have four numbers that tells me that this
+this element is four-dimensional has four dimensions.
+We can work at any number of dimensions
+in the in the world. So so look at this we're going to assign a new variable to X. And this variable is not
+a bunch of numbers, but it's a function. Now
+i'm telling you it's a function. I want it to be fifty dimensional.
+So if I paste this, and I hope you're all doing the same thing, i'm doing, and then I ask for X. Bless you! You will see that X. Now actually has
+It's the Gaussian that we just talked about,
+but it's a Gaussian with I don't know which mean their standard deviation. But
+so if I actually want to specify the near standard deviation, what i'm going to do is i'm going to do the same thing. I'm going to assign that to y
+notice of doing something funky, because i'm adding a distribution to another distribution. Wow, i'm working with functions now, not even vectors anymore. I'm starting to work with functions. And I'm saying, I want you to add the distribution X to a new distribution. That is also a normal distribution.
+But we are specified that I want the mean to be fifty, and a standard deviation to be ten point sorry zero point one.
+And so if I do this, and then I ask for y, that's going to give me another. And you see that the numbers are much bigger, because I specified a much bigger mean.
+Now you notice that I said that y is x plus something. So now the question, the question that I ask you is this:
+You think X and Y are correlate?
+Who thinks they are correlated,
+who thinks they are not correlated,
+who's too shy to raise their hand
+for reasoning correlates are not correlated.
+What did I tell you about correlation? Correlation gives you a linear relationship?
+Yeah. So it tells you whether two series of numbers grow and shrink together.
+Do you think x and y grow well? First of all does x and y grow and shrink? It's a normal distribution. It grows, and then it shrinks right.
+Do you think X and Y grow and shrink together? But do you think they grow and shrink independently
+together? Okay, let's see. Let's see, let's compute the correlation. That's the Pearson correlation coefficient. It will tell us whether they grow and shrink
+together or not.
+Point Ninety nine. Yes, they grow and shrink together.
+If it were zero, they wouldn't. If it's minus one, they grow and shrink in the opposite order of each other. The
+so they are correlated, but here they are even positively correlated. They completely grow and tree. It makes sense, because y is x plus another distribution that has the same shape as X,
+so X and Y are correlated.
+He can he just in the paper that they move to later on?
+They're not using the information function.
+If you just look at the data without using the correlation function, you can't tell whether they're correlated or not unless you're Doctor Strange, and you can understand numbers, but I can't tell that there's too many numbers,
+fifty numbers. I can't think. Maybe you gave me three numbers, I can tell you. Fifty numbers, I can tell you. There's tons of things I can't do. That's why I need my laptop, and that's why I need this, and that's why I need an Id to tell me these things, otherwise I don't know.
+So this again the line line you can see that uh,
+and the numbers does not. Uh they. They do not distract from three, and they around would be
+Yeah, they're around fifty because they mean It's fifty right
+user avatar
+Unknown Speaker
+00:19:27
+he had, so
+user avatar
+Dino Konstantopoulos
+00:19:28
+they would not
+Bye bye,
+i'm sorry to see that again.
+And
+well, that's um.
+This is a little bit strange, because it's why. But if you look at the standard distribution of the standard Gaussian. Here you can see that it starts at minus one hundred and ninety seven finishes at point two.
+In fact, we'll plot it. We'll plot it in in the next section. One point something you plot this, and then you'll see that it's not. We'll use the Gg. To to plot this.
+I'm
+it's.
+Let's also look at the mean and the standard deviation. So the mean of X is the mean of the first Gaussian that we have up here.
+And so you see that the mean is is a little bit random. We didn't specify a mean so that the the system chose a random, mean, and a random standard deviation.
+But the standard deviation of this guy is not random, because I specified it, and since
+y is a very small number plus this. I expect the mean to be close to fifty in the standard deviation to be close to one if I look at the standard deviation of Y. So if I look at mean of y expect it to be close to fifty, and if I look at the standard deviation of y, I expect it to be close to one one.
+Well, actually it isn't it's
+closer to one.
+But that's because I added X. So the the addition of x changes in the invasion a lot of Y, but not that much to me.
+Okay, one.
+It's a fifty dimensional, vector because I have fifty. I have fifty numbers, but it's still a vector A. Vector is is a column of numbers right, but now I can work with two columns. I can work with three columns, four columns. I can work with fifty columns,
+and each column can have fifty numbers.
+That's called the matrix
+instead of a vector
+matrix, is a set of numbers that has two dimensions, and each one of these dimensions, then can have many other dimensions. So
+so how do we work with matrices? Instead of saying um cell of numbers. I work with matrix. So ah! What I like to do is since I'm. Working in two dimensions, I will assign it to a variable that has two letters instead of X and Y. So you see, that's a trick to remind me that what i'm computing with I know what it looks like
+the type
+of um. A variable is an important discriminator when you're computing, and even though you don't specify the type because Python is dynamically tight, you still want to be able to just be looking at it. Remember what kind of what kind of animal it is.
+That's why I sign it to rather than M. I assign it to a variable called Mm. You see, I'm starting to use tricks now to help me in my computation, so let's go ahead and copy this and paste it down here
+and look at mm. Oh, look at that now. It's just it has not just one, but it has two dimensions.
+So it has columns, and it has lines, and you see the lines start with one comma, and the columns are a comma one.
+What's the biggest difference between our and Python
+just by looking at this. And can somebody that knows a little bit of python tell me what the biggest difference is?
+It starts for one A. And I mean python zero, right? So you'll see that when we work with python we won't start at one. We'll start at zero. So the first number is zero, whereas R, the first number is one,
+right? That's something to keep in mind.
+Okay, Okay, good. So now, if I look for the dimension of Mm. The dimensions isn't going to be a single number anymore, but it's going to be what? A vector
+right because it has two numbers,
+two-dimensional vector
+burrows and columns.
+user avatar
+Unknown Speaker
+00:24:33
+Now, what happens if I want to take a partial So now,
+user avatar
+Dino Konstantopoulos
+00:24:37
+now, that we're working with lots of numbers. I want to be able to project these numbers to to different planes. What if I want to take part of this and part of this? How do I subset or sub-index the numbers,
+because once I work with a big set of numbers, I want to be able to select part of them so This is called subsetting or indexing.
+So this is. This is what happens when we do things like. Let's take Mm: So, mm, is a matrix, so it has. It has two dimensions separated by comma. By the way, if I do this that tells me I want all of you. If I specify nothing, it gives me all the numbers.
+What do you think it gives me? It gives me the second line, right? Because the first number is the line.
+Yeah, what if I specify a second, two as a second number, not as the first one. Then it will give me the five, six, seven, eight column, but it will give it to me then as a line right?
+What if I specify m two of two?
+What do you think you will give me? Well, it would just give me
+the intersection of the second line a second call,
+Right? Okay. So now we know how to subset
+index things. What do you think this is gonna do. Can somebody guess what this will do? So don't do it, and then tell me, just guess,
+guess what this is going to do.
+You've got to.
+user avatar
+Unknown Speaker
+00:26:01
+It's not
+user avatar
+Dino Konstantopoulos
+00:26:02
+in the last two.
+But why is he thinking that because he knows Python right? So he knows that the minus one index is a trick that you can use a python to get to the last one, because python indexing is actually circular,
+we should specify zero. It's the first element, and then all the way back, and then we were minus one. It's the last element, but we'll see It's not the same thing in our look, what minus one gives me. What did I just do
+look carefully.
+So it removed the first row
+right?
+So minus one removed the first row.
+user avatar
+Unknown Speaker
+00:26:48
+Okay, what happens if I do this?
+user avatar
+Dino Konstantopoulos
+00:26:53
+Suppose I want to remove or see many rows.
+What did this do?
+It gave. It gave me rows, one and two, because now I specified this as I want a column, vector that's one and two, which means I want rows, one and two
+right
+little tricky right? A little bit different behavior. What if I do?
+C. One and three? What do you think this is going to do? What do you think is going to do? Which is it's going to do what
+good?
+Exactly. It removed the first and third column, and you can see that because this is the second column,
+and and this is the the last call, right? Okay. So now that you know how to do these kinds of things, this is your first exercise, please. That part of your homework for next time. Select it. Give me a command that gives me the two by two subsection from the bottom left of a matrix.
+Don't: Tell me now party homework.
+Okay, amazing. We can work with columns, and we can work with matrices
+so we can work with many dimensions in a column, and we can work with many dimensions of many dimensions.
+So we we, and then we also assign them to variables.
+So we did the basic things we said, We're going to do in programming, working with lots of numbers and assign them into variables.
+Okay?
+Questions
+a little bit different than R. Right,
+but still understandable. So Let's move on.
+Let's move on to data.
+By the way, if sometimes, when you open it or open the file, it appears empty,
+so if that happens, then do file, reopen with encoding, and pick and pick you. Tf: Eight.
+Right? So you're going to file.
+If this is this file appears, open it's a little file reopen with encoding, and P. You. Tf. Eight,
+All right. So so let's go back here. So we already did. We work with them all in number. So now we're like advanced programmers. That's pretty cool. And now we're going to start working with real data sets.
+Okay, So let's go and open data. Our. It's already over here.
+Let's go ahead and read
+a comma separated. Csv. Means an excel spreadsheet
+that lives in the data folder. So if we look at my data folder. You can see that this excel spreadsheet isn't there. So
+right in fact, we can look at this as a excel spread. You see what it looks like. So it's just a a spreadsheet of the
+different colleges, and you have the name of the college, whether it's private or public. The number of applications, the acceptance, the enrollment of the top ten percent students when the student is facing the ratio, et cetera, et cetera and graduation right? So It's a bunch of numbers,
+and we're not scared about numbers anymore, because we know how to work with vectors. We know how to work with matrices. We can load all of that in variables, and we can compute with them.
+He's.
+So let's go ahead
+and load that all that excel spreadsheet in a variable called college.
+So i'm going to
+copy this.
+I'm gonna paste it here.
+user avatar
+Unknown Speaker
+00:30:46
+He's
+user avatar
+Dino Konstantopoulos
+00:30:48
+paste.
+Whoa!
+No such file of directory. How come?
+It remains to be a series of time Barrier.
+Oh, okay, What does that mean? That means that we want to go. What is Dot means? We want to go out for a folder, right? But if we go out our working directory, there is no data folder, because our working director contains a data form, right? If you look at my working directory.
+Its labs are
+in labs. Are.
+It contains a data for.
+So what I need to do
+is
+roof.
+Yes, Ah, okay, that's called a bug. You're gonna have lots of bugs, you know your homeworks.
+So
+gonna be a little bit. Sherlock Holmes right to figure out what's what's going on and debug things. It's part of the part of the job of a programmer.
+So now that we have college as
+as you can see that it's loaded here, it tells me that college has seven hundred and seventy seven observations of nineteen variables.
+Okay. So let's Let's look at. Let's look at the head of the college who give me of the college variable.
+So it gives me the first seven lines, and gives me all the columns
+I can look at the dimension of college, so I will tell you the number of lines and columns.
+So I had a seven hundred and seventy-seven rows and nineteen columns
+user avatar
+Unknown Speaker
+00:33:05
+it's.
+user avatar
+Dino Konstantopoulos
+00:33:06
+I can even get a summary.
+This is called the Statistical Summary, and here is where we start seeing some statistical variables. Look at the statistics. See that that gives me. Each column is a distribution,
+and you can see the important statistical variables in the distribution, the minimum, the first portal, the median, the mean, the third quarter the maximum
+right. This is a synopsis of the histogram of that column.
+The histogram of that column will give you much more information, but these numbers are the important parts it won't. Give me all the information of a histogram, but it still gives me five
+important numbers.
+Okay, okay,
+let's subset
+the same thing we did with matrix. Mm: Let's now project a subset of college into a new
+matrix. Usually we use the word data frame. We use the word data frame a lot in Python, and we only want lines two hundred and seventy, two lines, two hundred and ninety, nine.
+So that's thirty lines, right?
+So we want the line, so we want them before the comma, and we want all, all the all, the all the columns.
+I can ask for a statistical summary of Df. That will give me the same numbers here. But now these numbers are going to be different,
+because the columns are a lot shorter,
+so that will change
+the average, the mean, the median right. The need is the arithmetic average. The medium is the geometric averages different kinds of averages.
+Okay, So we're starting to work with with. We're starting to work statistically right, because we're we loaded a bunch of numbers, and we're examining their behavior the the way they're distributed their distribution.
+The first column has some private institutions and some public institutions. The one that has yes, in the column private means. It's a private institution the one that has no means. It's a public institution,
+right? So what I can do is I can say, Okay, just give me
+the private institutions. By doing this, select the F. And from the data set Df: give me the private column and
+select only the lines where the private is equal to. Yes,
+or you can also do this with a subset
+command where you say, subset, Df: and just give me the ones. The lines where the private column has a value of Yes. This, by the way, is called Ah, is a Boolean right? It's a is a condition list. It's also called a predicate. A predicate tells you,
+specifies a certain characteristic,
+some elements of that data set. And it tells you. Just give me
+elements of that data. Set that satisfy this predicate private equal. Yes. Now you notice that I use two equal signs, right, because whenever you build a Boolean expression, whether it's an or in python, you use two equal signs.
+Equal signs is like a question mark. Instead of saying, Assign yes to the variable private you're saying is private,
+equal to the value. Yes,
+it's.
+I can also select only two columns. Now that we learn how to do this, I can select,
+assign this to a new data frame and say, take the data frame Df, and only from the entire data set. Df: So I specify all the lines. Only select the columns X, which is the first column that indicates the institution and the cons, whether the private or not.
+I can also order the data because the data has rows and the rows can be either alphabetically or numerically sorted,
+so I can say, order them by private, which means just give me the private institution
+private institutions last. Why last? Because yes,
+later in the alphabet than no, because the letter end comes first,
+and so they will take all the public institutions with the first and all the private institutions and put them in the last row that's called sorting Sorting is done with order.
+Now that we were, we're we're used to some basic manipulation. Let's load the library. So we've installed the library. But we need to bring the library into the namespace, so we can use it
+right. So So we?
+Yes,
+yeah, you can do that with any column. Right? You can say order of any column, and I will order them by numbers. So if I say,
+order by apps.
+Then, since apps are numbers that go from eighty, one to forty, eight, ninety, four, it will take all the rows and start with the rows that have a small number of apps and slowly increase to the Max number of applications.
+Yeah. So it works either alphabetically or numerically.
+Okay. So Let's take library data plier and bring it into
+context.
+I isn't copying
+cuddly
+haste
+my copy paste, doesn't work.
+I use control, C controlled me.
+Okay, So this loaded data player, and by loading data applier I'm. Actually
+losing some Api's because it tells me that i'm overwriting some Api's that I had before which is okay as long as I know that and
+do it.
+Data player is the health, the help system. So the help system. Actually, I don't think this will work
+because there is no introduction in the vignette. And so I can just remove this.
+I think, if I remove this like that, that should work.
+And so I Yeah. You see here in in this quadrant. Now I have all the my introduction to the library, and it tells me how to use it.
+Now you can do more things you can do glimpse which is another way to summarize.
+We can do summary. These are part. These are part of the dataaplier library that we'll see that our languages have these libraries that help you do these kinds of things. And in python we'll use. We'll use um Pandas to help us do the same thing.
+Okay. The subsetting with data applyer is done with a filter word because we're filtering the data set Df: and selecting only those rows
+where the column private has the value of Yes, which means private institutions.
+I can also use the end. Character,
+which in Python is just end or or and specify two conditions private, equal. Yes, in graduation rates superior to seven percent
+right? So this is filter, so i'll. I'll let you play with that,
+and then when you so you can use, select as well, and and then those of you that have some experience in databases will recognize me when they select the word that says that said that says, Select the data set Df, and only the columns X private student to faculty racial graduation rate at top ten percent. So I've subseted my this to my data set. I need a friend.
+You can also arrange
+and arrange with ascending or descending values of the column. Right? So i'll let you play with all that, and I want to give you another part of your homework for next time. I want you to obtain this view from data frame. Df: I want X. I want the graduation rate, and I want the graduation rate.
+So ah,
+how you do that you? You put it here. That's that's your code goes not not very, very complicated, right? But you still have to. I want to make sure you understand how to subset using the data? Pl: like,
+Okay, Ah,
+Select gives me here. Gives me one column distinct. What is distinct. Allow me to Do you think distinct of select those of you that have a little bit of sql experience, a little bit of data that's experienced what is distinct to
+user avatar
+Unknown Speaker
+00:42:49
+That's
+user avatar
+Dino Konstantopoulos
+00:42:50
+not.
+Yeah, It removes all the duplicates Right?
+That's what it does.
+Then. Dim of this stick allows me to, tells me how many non duplicate, how many unique values. I have, right? So it's very useful.
+Um! What does mutate do?
+Mutate allows me to add a new column, so it takes the data set. Df. And it mutates it by adding a new column called Cost. That's the sum of the column called Personal, and the books column.
+So you see what i'm doing here is I'm working with variables. I told you programming is working with lots of numbers and working with variables i'm working with, variables i'm saying personal. Take the column personal. Take the column books, add it, create a new column and add it to a data frame. Df:
+Clear how i'm you, i'm working with variables. I introduced a new variable here because I wanted to work with a different distribution. That's the sum of two other distributions, because I want to know what my personal expenses, and also the expenses for the books. So I know how to plan for how much money I need to spend.
+Okay, so then I can select, I can mutate, and then I can assign it to a variable, because when, if I just say, mutate it
+here where it is mutate. If I just say mutate is going to give me the the the view, but it's not going to assign it to a variable. So if I want to then play with that variable. I actually have to assign it
+if I want to. If I want to play with this data set, I have to assign it to another data set. So that's why you also need to do this.
+Okay,
+Okay,
+what is a group I do
+So group by is, is actually a pretty complicated verb, because what it does is it groups columns according to their values. So if I say group by,
+let's just do this: This is interesting. What is Df: Do I have the f summary
+somebody like I remember I forgot which commands I ran, in which I did the summary of Df:
+Yeah. Okay. So I have a data set called Df:
+So now,
+where was I
+user avatar
+Unknown Speaker
+00:45:27
+wanted to do this?
+user avatar
+Dino Konstantopoulos
+00:45:29
+Let's do this
+paste.
+Yeah, thanks.
+Okay. And now, suppose
+want to to summarize Dfx. Where mean dot books is the mean of the books column.
+Copy this down here,
+and then I want to look at what the effects is.
+Wow!
+user avatar
+Unknown Speaker
+00:46:05
+What did it just do?
+user avatar
+Dino Konstantopoulos
+00:46:08
+It took it, took the entire Df data, set it, grouped it by private, and then the grouping has to happen, so that I want the mean of all the books, the expenses for the books, and tells me the
+the the private equals. No. The public institutions pay five hundred and forty two dollars for their books; that private institutions for one hundred and thirty four dollars for the books. So it did. It did, an averaging over the entire data set.
+Those were how I had seven hundred and No. Dfx. I think Df had only thirty lines, right? So it averaged over thirty lines with a group by command.
+So the group I you need to specify the grouping operation. Do you want to take the mean. You want to take the sum,
+and also some all expenses right, instead of taking the mean, I can say some, I mean, let me let me try that.
+There is no some
+sorry that's not correct,
+user avatar
+Unknown Speaker
+00:47:36
+and it's
+user avatar
+Dino Konstantopoulos
+00:47:37
+like that.
+Ah, book's not found
+books, is the column, so why couldn't it find. Oh, it's because I already summarized. So let me try this. Let me try this from scratch, so let me start with the effects like that.
+See,
+be like that.
+Then summarize,
+then compute
+Dfx.
+So what What's the difference here? You see the difference here is that the grouping operation, instead of computing the mean just summed everything up. And so I went through all the public institutions, and I summed all the expenses, and I went through all the private institutions, and I sold all the expenses.
+So that's a different statistical average, right?
+So
+group by is a very powerful command.
+So what I want you to do as an exercise now is find the maximum and the minimum tuition.
+Okay,
+kind of similar, similar as what I did here with the with the average and the sum.
+Okay,
+so
+um,
+what did we do here? We I told you we're going to do some programming, right? So I work with a lot of numbers,
+and I started working with variables
+user avatar
+Unknown Speaker
+00:49:47
+that's programming
+user avatar
+Dino Konstantopoulos
+00:49:50
+advanced programming because you're not just programming a calculator. You're working with a lot of numbers at the same time, and you're harnessing the power, your laptop to do things that would take you a lot more time to do with a calculator
+calculator. You would have to that to the ad to spend a lot of time doing that. And now you can do that with simple commands. And this is the basis of programming, how to do a lot of operations
+with just a simple command or a simple sequence of commands.
+Okay,
+cool. So we went through data.
+There are.
+We talked about data pliers, a library that we used. We used some of these commands.
+We use grouped operations with with a group by
+Ah, you can you, we you. So these are some of the examples of the commands we did filter, summarize, select, right. You can do a lot of these operations now, because this class is not a it's not an advanced class, and in in our because we're going to shift the python. But I still want you to know a little bit of our, because it's going to be useful in your interviews, and it's also, I think, the best language
+to learn how to program with, because it shows you the basic concepts of what it means to work with a lot of numbers and to work with intermediate variables.
+Okay,
+let's shift to Graphics Bar. So let's go back to our studio and go to file, open
+and let's open graphics, Dot:
+Okay. And now we can do. We can do the plotting that I promise. I promise you we're going to be able to do so.
+Now that we have. Remember, we have our college data set and our college data set has a column called Student to Faculty Ratio, and our our call it Data set also has a column called Graduation Rate. Let's plot, one column versus the other,
+and see if there's a correlation between the two distributions.
+Okay, so let's copy that it paste it down here.
+Look at that column. Let's Let's let's zoom in.
+Let's expand this. Okay, look.
+I have points versus other points.
+Now, looking at that.
+What do you think? Is there a correlation or not.
+What does your intuition tell you?
+It's difficult to see right, because you see a lot of points everywhere. But actually I see a correlation, because if I look at a nonlinear averaging of the points, what I see is, I see this. Let me tell you what I see we do a prince cream.
+Let me go here.
+Let me paste it,
+and this is what I see.
+If I were to take the average of all of these points.
+That's what I see in my data set.
+How do you see that? Wow! That's a relationship. It's not. Linear I try setting a line, but a line to me does look that good.
+No, it doesn't look like It's a linear relationship. It looks like the data once wants me to go down. It looks like It's a relationship that tells you that
+the graduation rate goes down.
+So it looks like there is. There is a causation relationship
+between graduation, rate and student faculty. Nature,
+student to faculty ratio causes the graduation rate to go up.
+Yeah, that makes sense to me. So the correlation is is actually hiding a causation relationship. It doesn't happen all the time. Sometimes it's just correlation, but in this case it happens, and I think that the relationship appears to be. If I interpolate, appears to be a nonlinear
+uh quadratic kind of relationship.
+So this is the beauty of a graph.
+If I were to compute, if I were to compute the the correlation coefficient, the
+between the two
+very close,
+which is the linear correlation coefficient,
+I would get something
+point three
+close to zero right. Not not a big linear correlation if you look at the graph there. Isn't a big linear correlation, but my trained I kind of correlation coefficient to pick it up.
+But there is. There is a relationship, and it makes sense. Right. If you go to university with this walk, Professor. For a million students a graduation. It's going to be horrible.
+You go to a university with a thousand professor for a thousand students resolutionary. It's going to go up right. So it makes sense.
+Okay, good. So we we know how to plot now. So now that we know how to plot, let's plot the histogram, I told you a histogram is almost beautiful about plots that you can do in statistics, so let's plot it. Let's plot the histogram of the graduation rate.
+Does it look like a bell curve.
+It does doesn't it? It looks like beautiful data. Doesn't it?
+What does that mean? It means if you look at the graduation rate
+for all colleges.
+It's around seventy percent. That's the average. But most colleges have a graduation rate around seventy percent. It's not just the average. It's more than the average. It says this that most colleges are grouped around here.
+A few have graduation rate close to one hundred percent. I probably go there, but it's super expensive, probably the
+because they have tons of faculty.
+I hate to tell you all these things.
+No, it's one-dimensional.
+This is what counts
+this information. Okay, this information is important. But this tells me this tells me how many numbers how many colleges,
+so it's really a one-dimensional plot in a two-dimensional plot gives me a relationship between one column and another column. There's only one column here. It's not two dimensional. It just tells me how the data in one column is distributed,
+and it tells me that most
+graduation rates for colleges in the Us. All around. There.
+It locks two dimension but it's, really one-dimensional.
+I can do the same thing with the student to faculty ratio and see the
+But the
+distribution is,
+Does this look like a docker?
+It's called it, and there's a reason why it's a personal. We'll scale that in class. But you see, we're starting to work with statistical variables that are super blessed. You that are super important.
+Okay, Good. Good um
+pairs. So let's take the college data set.
+But ah!
+A column and two numbers means all the numbers between sixteen and nineteen, the
+in R.
+Both the first number and the last number are included one thousand six hundred and seventeen, one thousand eight hundred and eighty in Python. What's the difference in python when we specify
+uh
+the first ones include, and last one is excluded right right? So we'll see about these things. But let's take columns sixteen through nineteen, and let's put them assign into the data frames. S one,
+and then let's let's. Let's create all possible graphs between all four columns. That's amazing. That's an amazing capability. Because you have a data set has four columns, and I can take. I can look all four columns with respect to each other,
+and I can say, Now I can ask you,
+are some columns correlated. I don't care whether it's linear and nonlinear.
+Give me an example of two columns that are correlated. So the names of the columns are here to faculty ratio percentage of an online expenditure graduation rate.
+Give me an example of two columns that you know for sure, based on the plots they're correlated.
+It's
+graduation rate and
+in the right time.
+It's a separation, right graduation rate acceleration. We just talked about that right. But also this. This looks pretty correlated right
+also. This. This looks pretty correlated, Right?
+What? Doesn't look very correlated. Maybe this. This is kind of very diffused right. It points everywhere less correlated. Right?
+Right? So so you can see you can find that correlation just by looking at through one plot the plot of one column versus the other,
+because there is no
+that goes through this data set. But there's a hyperbola of those who this data set right.
+So you see, plotting is super important. It gives you information that you wouldn't get otherwise,
+and pairs is amazing, because it plots all four columns against each other, and you can immediately see which columns are related to each other.
+You don't need to do anything complicated for this. You need to compute things. You don't need to compute relationships.
+user avatar
+Unknown Speaker
+01:02:04
+Just plot
+user avatar
+Dino Konstantopoulos
+01:02:09
+It's pretty clear to me.
+So that's That's why plotting is super important. That's why we have things like
+plot pairs, and that's why we also have Gg: two and Gg. Plot two is another tool that does even more
+more plots. So I won't. Run all the examples. I want you to run these examples at home. But take the library, Gg: Plot, two, and bring it into the namespace,
+and Then uh, let's re-read
+this data set to the college in the college,
+but
+variable. Let's fix this
+Ok, and Let's do some basic plots.
+So let's use queue plot from Gg. To to do the same plot for for us as f ratio versus the graduation rate.
+Copy
+haste.
+That's a little bit nicer, right. It's a little bit. It's a little bit of a nicer plot. I can also do things like
+color equals private, so this gives me even more information because it plots the two columns, and it also colors the points depending on whether the college is private or public. Look at this beautiful plot. Look at how much information i'm conveying here,
+containing the same relationship between two columns. But i'm also adding a third column in there. By adding color
+you can convey tons of information with beautiful plots. So when you can make the plot beautiful, because you can
+show a lot of information just with color and and plots it. There's different kinds of plots there. There's bar plots and media plots, and i'm not going to go through all of them. You can discover them by Googling. But there's there's a beautiful waste plot that conveys more information,
+and you can also add layers, because what you can do is then you can add a title. So you can say, do this plot that we just did, and also add a title.
+So if you do this,
+that's like adding a plot. So you see you're adding features with a plus sign. This is why Q. Plot is nice,
+and then you can take this and go to export and save that as a Pdf. Or an image, and then add it in your article
+right? Because the point of data science is to prove something.
+So you always want to write a report at the end, and you say you did your research, and I think this is happening. And this is my proof, and This is my plot, and this is my computation, right. And when we move to Jupiter notebooks, you'll be able not only to add your plots and your text, but also your code.
+That's why it's an amazing animal, because you you add everything, and people that read you. They can see the proof that what you're saying is correct, because they can see your code. They can see your reasoning. They can read your English. They can look at your plots
+very powerful.
+Ah
+graduation rate histogram.
+That will give us the histogram of the graduation rate.
+That is a uh
+bell curve. Right?
+You can also add aesthetics. That's a Yes, so i'll let you play with that. So look, This is kind of neat, because here you say, Gigi plot, but don't don't show me the plot. I sign it to a very little peak.
+Then add the geometric points, add aesthetics, add color, green,
+a pallet, and then show it right. Whenever you do something that
+has a color scale. It will show. So that's kind of neat, because you can add plots and then add features,
+some other really neat things. I'm skipping over this the Jitter plot. The tutor plot is really is really nice. So here i'm going to plot the ah private and the graduation rate for the college data set. I'm going to pick a Jeter plot.
+So look at what happens when I do this
+box. Plots are really also good.
+So i'll let you explore some of these some of all these different things you can do. I'll let you explore, and you're actually lucky. I didn't assign any homework. I forgot to add homework here. But
+Christian
+No, Okay. So Um.
+Okay. So this was just to to tell you how important part is, because it sure it gives you a lot of information. The other sessions that the other files i'm going to skip over them. I'll let you look at them at home so
+stats, introduces you to some basic statistical concepts. I want you to look at that. This is the simple version
+Uh olp is some object-oriented programming that you can do with our, which is kind of useless, because you don't use our to do all of our our new statistics. And then, if you want to do. Some machine learning in Laura also show you some examples. So i'm going to skip over that. You already have some of your homework.
+The for the first two files and believe it or not. This is the only time we're gonna. This is all the time we have to assign to our,
+because we want to move to Python really fast. But the point of this is to do three things. Well, two things
+give you a little bit of an idea of R. So you can talk about it during your data in your job interviews and let you understand what programming is all about. Programming is working with tons of numbers at the same time, and using intermediate variables,
+putting things in in pretty formats like plot. So you can understand what the relationships are really fast. So
+it's really
+accelerating the way you do business with code
+in understanding the nature of a data set.
+Okay,
+do you have any questions?
+user avatar
+Unknown Speaker
+01:09:39
+The
+user avatar
+Dino Konstantopoulos
+01:09:40
+are. It's not that complicated, right? It's just a matter of getting used to it, doing some copy paste, looking some examples.
+Okay. So uh
+the rest of the file just showed you some examples to some of the things that we just did
+examples of linear regression class methods.
+Okay, before I move on to Python, because I want to give you a quick introduction to Python for next time. I want to give you your homework for next week Monday.
+So, depending on your level, because in this class no prerequisites. You can also have beginner programmers. Everybody needs to do this. Fill in the missing code in the R. Files right?
+I told you about how plots are very important. Right? So a plot that's especially important in an Lp. Is what's called a word cloud.
+It shows you the most frequently occurring words in a body of text in a chorus we said,
+it's useful because it tells you just with an image you can see what it's about.
+Right?
+So I want you to. I give you a lab Where in r You're going to do some word clouds.
+We're going to follow it and go. Not very complicated, but
+user avatar
+Unknown Speaker
+01:11:26
+it's
+user avatar
+Dino Konstantopoulos
+01:11:28
+more advanced programmers. So this is to be advanced. We're going to do that with some news data sets.
+So you're gonna do not work clouds, But you're gonna do some plots of words with respect to each other, and that's the
+in the class of the he
+turn in your chains.
+You have to learn to begin to work with people You don't know
+right? So you're gonna have a randomly assigned a team they're gonna randomly assign you, and you're gonna work together, you
+and you're going to pick which which level you want to be at. And just deliver that if you're a beginner, just in the beginner part, if you can program before then, i'm pretty happy if you just do the first exercises that we work together.
+If, however, you have experience and you've one in Python, you know that what the minus one means, and all that stuff over there right, you can go down and do more complicated things.
+Okay,
+all right. So now that we know a little bit about our, we know a bit about programming, let's also do an introduction to Python, so it can actually begin to work in python.
+Oh, this is the uh! This is the word cloud. So it tells you uh this slide will tell you how to work with uh this day, and it also gives you a little bit about a little introduction about uh in an Lt. Since we're working with clouds. This is part of my uh natural language processing class. So I add a little bit of information about syntax, semantics, morphology, phonology, phonetics, Uh, this is called parts of speech, right? So it it tells you about all that. So uh, if you want to work with this, Please work with the tas on this.
+This is kind of the more advanced part. I don't have a lot of time to work this in class. But it's it's interesting.
+And Lps is an important subject in data science.
+What I wanted to do is is finish with a ten-minute introduction to Python so.
+So. Ah, let's do this.
+Remember the program that we did last time. No, actually, I don't remember if I finish this program with you. But this is the program that I have.
+Well, actually let's just this this work with a small program. But we will start with a program within your program. So Let's go Create a new class, a new folder,
+I call it Class three.
+There's four.
+Let's Let's write a program together again.
+So let's open this to your code visual, so you'll call it. Was that part of your downloads that you installs.
+No, okay. It's part. Now install it. Okay,
+it's good. It's a good idea. So let's create a new, a new file. Let's call it a very simple
+trip, I
+and uh let's do a simple computation
+that uses variables in python like, How about a equals one? B equals two,
+C equals a plus B
+Prince C.
+Okay, Is that simple enough?
+Okay. Let's Let's save that.
+Let's run the program. So let's open up a terminal
+and say, Python,
+Very simple that I three.
+Okay.
+Okay. Okay. Now
+remember some of you in class told me that. Ah, yeah, Python, it's a it's a dynamic language. It's not not compiled, and all that. Let me show you how it's entirely a compiled language. Ah, do run this command. So if you're on the Mac, you can run Python three. If you're on windows, you just run python
+of Python three just with the compile. All command, and look at what happens? I get this pi cache folder.
+What is this pie cash form?
+user avatar
+Unknown Speaker
+01:16:43
+What's this file? What's this Pyc file.
+user avatar
+Dino Konstantopoulos
+01:16:46
+It's python Bytecode,
+just like Java Byte, cut just like C sharp.
+It's compiled.
+Okay. You can also say it's, interpreted, but not interpreted in a sense where you do, you run each command up. Yet it's interpreted in the sense that it has an interpreter. It has a a common language runtime right?
+It has an interpreter the same way. Java has a virtual machine same way. C. Sharp has a Clr. Python has an interpreting runtime that takes the byte, code, and when it runs it compiles it down to machine code in order to get to produce the result.
+So there's a there's a level of interpretation. But that's because it's a managed language just like Java and C. Sharp Python is a managed. Language has an environment that manages it that could be called an interpreter,
+but it's a compiled language.
+You can also completely see all the commands by by running this. So here let's try this
+copied. Let's put this in the function. So let's go back here. Let's put this in the function
+by calling his this death
+my funk
+putting this in a function, so I need space, and then I'm going to take this, and
+and then I'm going to import the Disassembly Library, and i'm going to print the disassembly of my function,
+so I can only disassemble something that is compiled. So if I run this, I
+ah
+yeah, So let me save that file, save, and then let me run this.
+Ah,
+actually, I just want to run this. So i'll say, Python. Very simple.
+Look, these are all the commands.
+This is the This is the Python byte code,
+right
+the Python language. So this is just to convince you. The python is at the same level as all the other languages, you know
+as Java as C. Sharp. It's a completely compiled language that has the same power of other management that a compiled and managed language, since it has this dynamic type runtime type discovery.
+And, by the way, everybody please use python three. Don't use python, two.
+Okay. So some of the basics. I'll let you we won't be able to finish all of this together. But the the most important part, the equivalent of what we do today is the container types, because I told you a programming is working with a lot of variables and the basic container types of python or list tuples, sets of dictionaries right?
+Who are going to be working with all of that in class.
+So uh,
+why I I tell you this so you can actually start discovering these things on your own. So if you've never done python before you,
+I've added at the end some ah resources for ah courseras on Python. But since we're going to be doing data science. We don't have time to do a complete introduction to Python, but we will spend next lecture, and next week learning the basics of Python and the basics of new Pi Sci-pi
+like it. Learner Python. Right so. But i'm still giving you some resources, because some of you may not have that much experience, so you may want to spend a little bit more time on your python. But Python is a beautiful language, because it's very terse. It's. You don't type a lot of stuff.
+So it's very good for data science, because you want to be able to go and code very, very fast. So, um, we look at these we'll do labs with lists and tuples, and sets and dictionaries together. So you get familiar with these not mechanical terms. I'm still going to teach you the basics,
+but these are these are. This is a quick introduction to some of the basics. So this is how we we add lists. Remember how we did. I did container types in R. We did, c. Of numbers in in Python. We use brackets.
+Okay, These are some examples of how you sort examples of dictionaries,
+the fault dictionaries,
+counters,
+since
+so it will work when we work with Python, We're working it on a cond the notebook. So This is just a quick introduction to container types,
+slices, or list comprehensions.
+It's a very important construct. I told you the difference. Remember, in the first class that will learn not only how to program, but how to program to a Lipa style.
+user avatar
+Unknown Speaker
+01:22:01
+What are you doing?
+user avatar
+Dino Konstantopoulos
+01:22:03
+This is not the way to do something.
+Ah, a program A compiler can do a much better job with list comprehensions than it does with loops. Luke is just telling the computer how to do the computation. But this comprehension gives the computer the chance to do the computation
+as as efficiently as it can.
+So we'll, We'll look at this in class. Ah! And then more complex things, like generators and and and and yield functions in the iteration. We'll look at all that.
+How to do File I O how to use classes in Python, which we're going to do because of the constructor, because of the advantage of having a method that initializes your new class,
+and then we'll talk about things like Args and kag zippers. That's the most beautiful part of the language a zipper allows you to
+allows you to to connect data and and spread it out multiple dimensions. So it's a it's a beautiful construct, and we'll look on tippers
+together, And and this is some some resources or
+massive online classes.
+What is the second? I was to expect
+massive
+online. There's another. Oh, I don't know it's called the mooc, but there's tons of loops on, on Python and on Youtube. So if you, if you want more practice what we're going to learn python together, it's. But in fact, we're going to spend at least two two or three lectures working on our python. But if you need more practice
+I wanted to. I wanted you to be able to find some resources.
+So we uh,
+what do we do? We learn our in one lecture.
+We also talked a little bit about the things that we're going to look at in Python in like ten minutes, and I gave you all your homework.
+So now you're happy because you have something you have work to do for next week, and you're going to be working. You're going to be meeting people. The Tas are going to create all the lists,
+and then we meet again on Thursday
+questions.
+Thank you for coming to class you all in a few days.

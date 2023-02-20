@@ -1,0 +1,698 @@
+user avatar
+Unknown Speaker
+00:08:32
+What's up? Said Yahoo.
+user avatar
+Unknown Speaker
+00:08:40
+It's a new city and also a Germany.
+user avatar
+Unknown Speaker
+00:09:04
+It's
+user avatar
+Dino Konstantopoulos
+00:09:27
+okay. So
+we're going to shift to Python now. So our was a good experience. It helped us do some basic stuff. But now we're going to shift to a language that's a little bit more expressive, a little bit more complicated,
+but I think you're ready for it. Are you ready?
+Okay? So let's do a quick review of our first slide. I just want to see if there's any questions. So i'm gonna go actually resubmit it
+part one didn't change. But I changed a little bit part two and part three of the introduction to Python, the you notebooks that I put out there to overwrite the old ones like reopen.
+So let's let's go ahead and open
+the introduction to Python. I just want to quickly go through all the sections to remind you what we covered, because last week we did this kind of as a preview because you were still had our in your minds.
+But now no more preview. Now we're shifting to python right so very popular language.
+Someone predicted this fifty years ago that this is the way we should actually think we should actually compute.
+And then we look at we looked at. I told you a little bit about the philosophy. The point is to make Python look as terse as possible, not to do things, but not to micromanage. Your compiler don't start doing moves and doing things like that. But compiler can do things a lot faster than you,
+so you should tell it in one line what you want to do and let the computer let the compiler figure it out.
+Don't go through. Okay, you do this, then you do that. But it's like you. You want your mom there when you were like putting order in your bedroom. Okay, take this sock, put it in this drawer,
+then take these pants and put it back and take this jacket. Put in your car. You like mom enough. I can do things better
+right. The The compiler is telling the same things to you. So you don't want to have this whole micromanagement about how you're going to do things you want. Just one line that tells the that tells the compiler everything that you want to do. That's That's the dual Lipa programming that we're going to get good at in this class.
+And so then we went through the basic operators who went through the singular types. You know, String and I total double rights. And then we went through the container types because those are the most important types.
+We went through strings. We talked a little bit about her strings, our collection of characters that the characters can't change. Then we have to actually create a new string.
+And then we went through the container types. Remember the container types, the
+how do you specify a list? What kind of
+container structure. Do you use Itza? Is it a parentheses
+scrib brackets? Okay, How do you do a tuple
+our emphasis? Yeah, How do you do a set of curly braces. Yeah, What's the difference between a set and a list?
+Unique elements. What's the difference between a tuple and a list?
+Immutable? Good. Okay, great. So you know the basics. And then so that's what we covered. So I think we're good there, right? Any questions on that.
+Yeah, it's It's just a matter of practice, right? And if you don't have a lot of programming experience, it's okay. Just do a lot of it. Just go and rewrite this, and and look at this, and rerun the cell, and run this notebook once, and then run it again and three times and four times and five times. That's how you learn.
+Don't expect to know everything from the first time. The first time you read something you go.
+I can't do this. No, you can't just do it ten times, and then ask yourself the same question after ten times. If you can do it
+right. If you learn a sport, you don't expect to learn how to play tennis after one outing on the tennis score, Do you so? Why do you expect to learn how to compute after reading this once you
+read this one hundred times, and then you're going to learn. So Don't be scared or afraid if we're doing something complicated, just practice.
+Okay, all right. So let's go to the second one. Second one is a little bit more complicated.
+And also i'll give you some some exercises in class. Okay, So we verify. This is actually interesting because a lot of people think. Well, if I assign my tu to a variable, and then I change the variable. Yay, that's a pretty clever way of changing the two.
+That's that's kind of what I show you here.
+So I I seven to X and y, and then I change the one of the one of the so I can't do that. But then I change the X. It still won't change the two of all, because the tuple is frozen.
+Okay? And then we went into this thing called this comprehension. So this comprehensive is actually what what I mean when you
+tell the compiler what you want to do in one line,
+because there's no there's no there's no for loops. There's no okay. Let me begin a loop. Let me start a counter. Let me tell you what you're gonna do in the loop. You do everything in one command, and you just here you figure out how to do that.
+It's like your mom telling you. Okay? I'm not going to micromanage you about how, what you should do. You You know how to do it. Just go do it.
+And so the idea here is to create one line where you have an iter end, and
+that actually, if you want to, you know, be pythonic. Then you add an enumerate that also gives you an index, which means you don't have to say in. I equals something, because the eye is already defined, and somebody asks me in a
+um. Well, ah, Professor, if you when you do this, we we know that this is a tuple right, because the the parentheses are implied.
+Somebody asked me. Well, aren't you changing this every time, and isn't that a tuple didn't you say that you can't change a tuple.
+So every time you extract something from here, aren't you changing the values of I and X.
+Yeah, of course. But every time I enumerate on the tuple I get new values of I. And X. So what i'm doing is, i'm reassigning. I i'm not changing. I Nx.
+The inx from the first
+in the list is gone when I get the second element it's a new I and X i'm just relying. I'm just reusing the same variable.
+But i'm not changing the previous variable. Is that clear?
+It's pretty tricky sometimes, because you're like, Well, aren't you changing. I and X every time didn't you say that you can't change tuples? No, every time you extract an element from the list using the four operator, you get a new, a new Ion X.
+So you rewrite Ionx every time.
+Then what we do is once we have I and X, and we do some kind of transformation with it.
+So you see, this is that this is the basis of what we did at the beginning of the of the class. With with with R. We're extracting some elements from a structure that could be multi-dimensional, and we're transforming them.
+And we're doing all that in one line,
+and by signing it as a tuple we make it an eager structure, which means the compiler would immediately will immediately evaluate it. If we assign it as a tuple, we may get a lazy structure, which means the compiler will create a plan for doing it. But it's actually not going to carry out the computation.
+It's only going to carry out the computation, if it has to. If you assign it to a box it to an operator like list, which turns it into an eager structure, or give me the next element, or give me the next tenant elements of this structure, then it will actually do the computation
+right? It could be something very complex that involves a lot of data. So this is what how you start being clever about doing things.
+You don't want to actually run a function that enumerates all integers from one to infinity, do you? It's going to take forever. You're going to blow up your your ram,
+user avatar
+Unknown Speaker
+00:17:34
+you said
+user avatar
+Dino Konstantopoulos
+00:17:35
+integers go to infinity, but you can actually write a generator using the yield that actually evaluates all the integers. And then just say, Okay, I have the structure about how to compute into integers. Not just give me the next one hundred.
+That's called clever computation, because you're not doing things you don't have to do. You're just doing you
+exactly the right amount. Okay, So that's that's called a list comprehension. It could be a tuple comprehension if it's if it's a lazy structure. Okay, And this is micromanaging your compiler
+not efficient.
+Sometimes you have to create lists, because sometimes you're doing complicated things. But when you're not doing all the complicated things, or Sometimes you and complicated things just try to do everything this way. In fact, your homework for next week is going to be a lot of that.
+Okay? So that was the the section on list comprehension. So I think we covered that. And then we go into dictionaries. Now, dictionaries is really the main structure. It's how we manipulate data. We put everything because it's a relational structure, because we associate a key with a value,
+and then the value can then be associated with a new dictionary that has other keys and values. So you can do. You can create very complicated structures this way.
+In fact, databases are implemented this way. When you create a database, it's all tuples. It's all dictionaries or list of tuples, because it a tuple as a pair is,
+it can be thought of as a key value pair. So you have the key, and then the value, and then you have a collection of these, and then the dictionary is a set. And we said, Why is it a set? Because we want to make sure that the keys are unique?
+Because if you have a dictionary with two keys that are the same. That doesn't make any sense, because you can't have two different values associated to the same key.
+Then you actually don't have a it's not even a function.
+Okay. So this is how we create a dictionary. It's a little bit strange, right? Because we have the key. And then as a column, and then the value
+we're used to commas. But this is actually color.
+If you don't if you program in many languages and and you do other languages, and then you come back to Python. Sometimes you forget the structure you you want to put a comma, but it's actually not a common. It's a column, and then you use the squiggy brackets, because you know it's a set,
+and then just just beware that you can have keys that have different types and values that have different types. It's not a problem. Python can handle that.
+Okay? And then there's three things I told you. There's three Apis on diction, on on dictionaries, the keys, the values and the items the keys gives You give you a list of all the keys the values will give you a list of all the values, even if it's a very complicated structure. Just one one instance, second instance of that structure,
+and then items gives you both the keys and the values. So when you iterate on the keys and the values you have to assign it to a tuple K and V or key in value.
+Yeah. So keys just one item
+items, just one item to enumerate over them, even if that item can be very complex, and then
+items
+key and value, two items of a tubo,
+and then, of course, if you put the enumerate in front of it, then you get this extra item. That's an index. Into which item is returned first. But beware because dictionaries are not sorted,
+and it doesn't even order it the way you enter the dictionary. You'll order which everybody wants to. So don't expect the dictionary to be sorted. If you want a sorted structure, then you have to sort it yourself.
+You have to go in and actually sort things.
+Okay, Um, When you say if key in my dictionary, what you really mean is key in my dictionary dot keys, but the default of a dictionary, if you don't specify either keys or values or items are the keys. So this is where you say, if something is a dictionary, and if it is, then you can go get it by saying Dictionary off that key,
+not Dictionary of Zero Dictionary of one dictionary of two, because dictionaries are not sorted. There's no not There's no, there's no monotonic order in a dictionary in just by key.
+Okay, So this is what we what we explained here. This is what we covered, and then any questions about dictionaries.
+This is going to be working on dictionaries. It's going to be a Chinese dictionary in a handy dictionary, and you put those together and you separate them, and you'll see.
+I prepared something for you.
+It's an individual homework, because I want. I want to. I want you to work on your own for this, because, understanding how to manipulate Dictionary is how you
+you practise your pipeline,
+we're also going to have some other fun practice homework. But this is the first thing that I want you to spend time on the
+because it's how you manipulate data, you know, studying data science. So we need to learn how to manipulate data sets that are complicated.
+Okay, logical operators. Okay, We covered the operators control flow. Okay, this is the if and else, or while these are the structures that are pretty basic in program. If you never seen anything else, then you should probably
+take one of the Youtube classes that I mentioned. Because this is kind of the basis of programming is is how how you put many instructions and have them be done at the same time. I told you programming is doing computing on many, many numbers at the same time.
+You you say, if this number is this, then do that otherwise do that. That's how That's how That's how you you become efficient, and you compute very fast. So
+Okay, So we covered that.
+Try. Accept that sleeping with something doesn't work. Here. You expect something to blow up, and except we'll catch that. And so you can do things. And then recycling code is how you import libraries or how you create libraries. That's important. We're going to be importing tons of libraries in class, because
+you know, something's already been implemented There's no reason for you to rec program it.
+Just download it and use it
+just Google to see what's out there and then use a library
+if it's if it's there. Okay, So that's what we covered here.
+Then we talked about functions. We We defined a function. We talked about, named our
+user avatar
+Unknown Speaker
+00:24:28
+um
+user avatar
+Dino Konstantopoulos
+00:24:31
+positional arguments and then named arguments.
+Yeah. The difference between positional arguments and in arguments. When you have named arguments, you can put them in different orders. When you call a function. When you have positional they have to be one after the other,
+and then if you have, if that's something else, you should know the star and the star-star operator right? If you, if you come from a c background, you think the star is is the indirection. It gives you the pointer to something, but it isn't in python.
+What happens when you take a list and you star it. You turn it from a list into a collection of commas and numbers,
+so that you can call a function that has the same number of arguments that are contained in the list, so you'll see that a lot you'll see functions being called with a star on a list, because i'll take the list, and it'll turn it into a collection of parameters,
+because a list could take an argument as a list, but typically a function could take an argument as a list, but it could also take arguments. A, B, C, D. E. Fg. Now, if you already have a list that consists of the same, Abc. The efg. Just a star of the list, and we'll just order the
+right. So So you see, Python has all these. It's like a Ferrari kind of language, because you can do a lot of things very fast.
+Okay? And then we talked about anonymous function. Oh, we also talked about a function that returns a function right? And python, since it's a functional language. Functions are just as important as data. In fact, it isn't different, because a function is a piece of data. It's a piece of data describes a transformation on data.
+So, just like you have lists of lists, you can think of a function that's a transformation on data.
+And In fact, if you have a transformation on data, you can think of a function that's a transformation which itself is a transformation. So you have to have functions of functions the same way. You have lists of lists of lists because we're in the functional world.
+So it's not just. We're working with data structures like you learned in your object line in classes. Now, we're working with more advanced stuff. So we're working with data that are that represent functions. And in order to go from functions to data. You have to apply, give the function some data,
+and then the function knows how to take that data and transform it into another piece of data is an interesting, By the way, in English language is data singular or plural. What do you think?
+Is it a data or many data.
+user avatar
+Unknown Speaker
+00:27:14
+It's.
+user avatar
+Dino Konstantopoulos
+00:27:15
+What is it who thinks it's singular? Raise your hand.
+Who thinks it's plural? Raise your hand,
+it's. Actually it's been it's been actually in discussion the last the last year, because some people were very adamant. No, it's plural, and actually isn't. You can actually refer to data as a singular.
+So
+both are allowed. Okay. So we talked about functions and functions that apply functions and how you call a function. And, by the way, be careful, because Sometimes, when you call a function with a number that may actually not return a number, it may return another function. If the function has a function inside of it. That's the final right that it's returned.
+So complicated stuff, right? Sometimes you have to apply number twice in order to get a number, and then we have anonymous functions. These are the Lambdas. So you can take a Lambda is a function that doesn't have a name.
+It's a little bit like a little bit like um
+your list comprehensions. You can specify something really really fast in one line. You don't have to death,
+and then go to the next line and say how you run the function, if you can run in one line. Compilers love that you
+because they can, Your, your, your microprocessor, and you it's very complex. That's very complicated things. You can predict what you're entering, based on what you entered before. So you want to give it as much as possible, so it can actually do its magic.
+So So lambdas are a way that we're going to use to define functions, and sometimes, instead of x, I use an underscore to specify this as a whole, which means that if you put something here, that thing reappears there,
+and then how do you know if Something's a function called the cllable on it
+Now, because I will tell you if it's callable. It means you can call it. It means it's a transformation.
+How do you know that something is a container data structure? You You take its length to see if it's
+to see if it's, if it has a length. If it doesn't have a length, or if the length is zero, then it's it's not a container.
+If a length is zero, it could be a container that's empty.
+Okay? Ah, so this is. This is where the Lambdas and we also played with a zip, because the zipper is a structure that allows you to to tack on. You know the same way You zip something up to create more, more, more, more ah dimensions from your data. So it's very, very useful.
+And then we finally came to generators.
+And I told you, Okay, Now we're getting into some neat stuff, because now we're we're we're defining a function. But the function isn't going to be an eager function the way you used to is You're going to replace the the return with a yield, and That means that when the function
+evaluates itself, when you call it once you,
+it sees a yield, it will exit, and then, when you call it again, you won't rerun from the beginning, it will resume where you left off with with the yield, and so that allows you to. It's a function that you can exit, and and it's a function that you can pause essentially,
+because when you run the phone you say, Okay, pause here, Return, then resume When I called you again.
+So it's very useful. It's like your your, your, your Tv. You're streaming your Tv and hit the pause button.
+So here we're looking a little bit out of the beauty of
+of lazy structures. Here we're actually building a list of numbers, and we're saying, Okay, build up to N, and then print the first end. So we count from zero to ninety, nine. Now
+and then we sum all the all the elements in the list, and then we gives us the sum of all these numbers; but if we do, if we replace the return with a yield, so we're in a while loop, and then we're yielding. When we say I can print the first one hundred numbers. The compiler will say, Okay, want to print
+the
+that tells it to actually do the computation. So sum is an example. But i'm not that that an operator, because it's okay. Now you have to sum all the numbers which means, Ok. Now I have to do the work. So if you say sum, it will actually compute all the numbers, and you'll get the same result
+right. But but this function. If you, If you give it an argument, it's not. It's a transformation because it's a lazy structure.
+Okay, Um. Same thing with list comprehensions, right? A list. Comprehensions is a league eager structure, whereas a a tuple comprehension is a lazy structure.
+Okay, So that's the the same thing as the difference between a function that has that returns, or a function that yields
+everybody. Anybody have any question about this. It's kind of funny right, because it looks so similar. And yet it's so different.
+And um
+okay, what do we do here? Here We do the squares,
+and then then, as soon as I iterate, for I in squares, then it actually has to return the value that's that's in the in a generator.
+Another operator that forces you to return. Every value is to call next on a generator. When you call next on a generator, it forces you to give you the first number,
+and then when you call next again you get the second number, and next next next next keeps allows you to iterate over every element of the generator.
+Okay, So this is the same thing as a as an iterator or an eager structure.
+These are some examples of structures that operate on generators take. While so, what does this function do?
+This function counts integers right? It says, Okay, add one exit, add one exit, so it just keeps adding one to the previous number. Now,
+so if I say, take while it's part of a library called iteration tools and iteration tools, is actually a library that's very useful because it has a lot of tools for iterating over structures. And so one of the Apis is Take while
+so what this says is, take the next number while this lambda is true,
+so as long as X is less than a hundred. Go ahead and give me the next element.
+And the beauty of this is that when you do this, this will also bound its squares, becomes a lazy structure, and then, when you iterate over the lazy structure, then it turns it into a computation, and it returns the results.
+You can see here that what I do is the next element after a hundred is one hundred and twenty one. So
+so keep taking every element from this collection, which is specified, of course, as a as a generator, while it's less than one hundred,
+and then at the end I just add one, so I I
+The weight was at two hundred and eighty-five.
+Oh, because I keep adding, because I keep adding the numbers right. So I just add all these. If you add all these numbers, you end up with twenty five, but you only go up to the number one hundred right? And so, even though the the generator can specify all integers from zero from zero to infinity.
+You only go up to this number if you do. If you do this, if you take this, you
+user avatar
+Unknown Speaker
+00:35:43
+ah
+user avatar
+Dino Konstantopoulos
+00:35:44
+transformer on a generator,
+and you can do the same thing with next.
+So if I have this, and I ask to to to evaluate it that the computer will say, Okay, that's a generator, and if I print it, then of course, I print
+Sorry if I print the list of that. Then the list forces it to become to evaluate the
+and then, if I say next,
+and then I specify this generator here,
+then, I say, return. I squared as long as I squared is less than a hundred, the
+right. So this is all the squares less than one hundred, so it's easy to turn this into a bigger structure. But if I say next, then what next we'll do is it will take the first up to one hundred, and we'll give you the next element.
+So this is a little bit like learning a language Right? You're learning new words, so you're learning a new language, and you're learning how to say things, how to express this or how to operate.
+So generators only compute up to the requested amount. And so they're very useful because they don't do more than what they have to. So if you have tons of data that you want to operate on a subset of that data.
+You don't have to load all the data in ram as you would with an either structure.
+So it's kind of a a clever way to iterate over a lot of data.
+Okay, let's do it. Let's do some work here because I want you to it's, you know. Sometimes you you listen to something, but it's not as clear as if you actually do something. You work on something. So I want. I want you to do a little bit of work. I want you to.
+What you're gonna do is turn to your left to turn to your right, and you're all going to work with the person that that that's on your right. So everybody turn to your right and say hello to your That's not gonna work right
+because you turn to your right. Another person. That like person at the end is just like No, no, really, just just the first. Just you you all work with each other. The person that's next to you. Just just work with them and and and let's let's do a little bit of work so we can see the difference between a function that's eager. The difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between a function that is iterative, the difference between
+because somebody asked me always the same, a generator, the same thing as a recursive function, but it's not so. I want to do a little bit of work on this. So who's heard of Fibonacci? Numbers
+We're not. Your numbers are are your neat numbers. In fact, I had them in the first slide. Right? It's a you say one and one, and then you add the two numbers that gives you two, and then the previous two numbers are one and two, so you add in the d, two, three in the previous two numbers are three and two, so you add them. It gives you five, so you just keep adding the previous two numbers.
+So let's do this. I'm. Going to give you a little bit of a hint here. This is a neat way to switch variables. So you see, I take the A. B tuple.
+Sorry I take the Ba. Tuple, and I turn it into the A B tuple. So what I do is I switch to numbers in one line, which is something you can do in another language,
+because in another language you have to say A, a temporary variable, C equals A, and then switch A and B in, and then assign a sign that we see. So in any case. So this is a new thing that a lot of people use in python. But let's do this.
+Write an iterative function that that implements Sibonacci numbers up to a certain up to a certain number. The
+then write a recursive function, and then write a generator. So the first first thing here, right, and it write an iterative structure. It doesn't even have to be function. Just write an iterative structure that gives you these numbers. These are the Fibonacci numbers up to one hundred.
+See this number? This number wouldn't. I mean this is a bigger number than you can fit an integer in any other language, but because in python,
+if you use a single integers, and so just go ahead and give me a for loop that writes these numbers. Do it with your partner,
+do it together.
+So, since you're alone, you work off. The three of you work together. So you work, all three of you, and then you join right now.
+So this is to practice what we learn, because this is important, and if you miss the practice. Then you say, Okay, I learned something, but I don't remember. I don't remember how to do it. So two and two and two and two, and you two, and you three are working together
+the the last three of you in that in that row. Okay,
+So so you mean It's closer and closer to the closer. And when you work together you have to be next to each other. You have to say, Okay, Do you like cats or dogs, or or what's your name? And you have to talk. Be social,
+Hey, Youtube, Youtube and the Tas are here to help you, so you can raise your hand and say, Why is this? Is this working?
+So? Yes, No,
+yeah. Get the similar output.
+user avatar
+Unknown Speaker
+00:41:27
+It's the only one that's the only one that's the only one that's in the
+user avatar
+Dino Konstantopoulos
+00:42:00
+and you here and see everything.
+Um, Pagni engine, can you? Can you just make sure you You look at the chat window on zoom to see if people are asking questions, because sometimes I if like something Isn't working and I can't.
+Okay, good. So online, you guys work on that to online people online students,
+please work on the lab.
+Okay? Then the first person that has a solution. Please send it in the chat in the chat window on Zoom. Well, actually, you have to log in. You may not want to log in That's okay. If you're not that, not one day. That's okay. I'll just I'll just show you the solution.
+Uh: yeah, yes, uh
+um, yes,
+uh, how? How do we do? Um, Can you Can you create can you? Um, Prague, your jin? Can you create chat uh team rooms on zoom? Do you know how to do that? Assign the students that are on on zoom different teams so they can work with each other,
+they
+uh they What?
+No, not the ones in class. Just the ones on. Zoom.
+Oh,
+well, because some students in class are actually on the zoom session.
+Okay,
+user avatar
+Unknown Speaker
+00:43:47
+from the
+user avatar
+Dino Konstantopoulos
+00:44:21
+Yeah, that's right.
+Yeah, Put them in rooms. And if they're in class they'll just That's okay. They'll just ignore the the students online. But at least there's There's at least three of them that are in the same room
+user avatar
+Unknown Speaker
+00:44:52
+to the
+user avatar
+Dino Konstantopoulos
+00:45:27
+so give you. I'll give you two more minutes for that for the implementation, because that's that a little bit simpler. The the recursive and the generator will be a little bit more complicated, and so let's see if anyone has solution in two minutes. Raise your hand. If you have a solution.
+Okay, I'll give you five five minutes, five minutes.
+user avatar
+Unknown Speaker
+00:46:20
+It's a
+user avatar
+Unknown Speaker
+00:46:54
+he's
+user avatar
+Unknown Speaker
+00:47:18
+it's
+user avatar
+Unknown Speaker
+00:47:23
+in the middle of the meeting session. It's time for the
+user avatar
+Unknown Speaker
+00:47:38
+his son. He had an appointment to the
+user avatar
+Unknown Speaker
+00:47:46
+it's,
+user avatar
+Unknown Speaker
+00:48:04
+and I'm going to
+user avatar
+Unknown Speaker
+00:48:13
+you.
+user avatar
+Unknown Speaker
+00:48:19
+He's
+user avatar
+Unknown Speaker
+00:48:25
+it's
+user avatar
+Unknown Speaker
+00:48:29
+you.
+user avatar
+Unknown Speaker
+00:48:36
+It's
+user avatar
+Unknown Speaker
+00:48:49
+he's
+user avatar
+Unknown Speaker
+00:49:00
+of the
+user avatar
+Dino Konstantopoulos
+00:49:35
+Give me one more minute.
+user avatar
+Unknown Speaker
+00:50:10
+It's
+user avatar
+Dino Konstantopoulos
+00:50:18
+okay. Pragmat, close close the breakout rooms so they can actually see the screen.
+Premier. Close the breakout rooms.
+user avatar
+Unknown Speaker
+00:50:54
+It's a
+user avatar
+Unknown Speaker
+00:50:59
+She is in combat with a
+user avatar
+Unknown Speaker
+00:51:02
+it's probably.
+user avatar
+Dino Konstantopoulos
+00:51:21
+Okay. So let's Ah, let me let me show you the the structure that I have. So this will actually allow me to do things in the most do a lip away. So what I do is a range and say, let's say, go to the number one hundred, and then print A,
+and then what I do is I switch
+B A becomes B
+and A becomes a plus b.
+So you see one in one line, I can actually do most of the ah, most of the the computation, if I want to turn this into a function that that says up to what range do I want to compute? You can say, def feeble, iterative,
+and then specify the number n
+then you say with that, then then you put that back in like that, and then you can print a, and then this becomes n,
+and then um
+um! When you're done here you can just say return, because that already prints all the numbers. And then, if you want to call this function, then you can say fib iterative up to one hundred.
+So what you do here is in the in the first death you define the function you
+then used, and then you call it, and you say, go up to a hundred.
+Okay. So if I if I if I run this,
+it gives me all the all these numbers up to the one hundred Fibonacci number.
+Yeah.
+So everybody write this. Everybody write this function. So you have that.
+Yeah, Okay. So the next exercise is, Do this with a recursive function. So you know what a recursive function is. A recursive function is a function that calls itself
+right? So that's a function that that calls itself. So I want you to implement the same function. But instead of having an iterative solution, I want you to have a function that calls itself
+inside the function,
+and we defined functions and defined functions. So it's definitely no problem for a function to call itself the
+every time you call the function you get essentially new space on the stack with new variables and a new implementation of the function. So you can have that function called itself as many times. It's just different implementations of the same function.
+Okay, so go ahead and do this with an iterative sorry, with a recursive implementation in this cell
+and in it.
+Look at this, and see how can I turn this into a recursive implementation? In other words, how can I have a function? Call that like this? Where, instead of doing something here, I actually call the same function with maybe a different argument, something like that right?
+Something like that.
+So of course, that function will be something like Don't.
+If this is negative, then we return so so it doesn't go up to negative infinity. But this is what I'm asking you to do. Just implement this code.
+By the way, this is something you can expect at interviews. Um job interviews at Google, or Facebook or Amazon. But these are these are the things that they will ask you to solve. Let me give you an iterative function. Make it recursive.
+And if you interview for a you know, a very big company like Google or something, I'll say, Okay, Now give me a generator that does the same thing.
+Okay. So so let's just let's just do the recursive function for now
+somebody give me an implementation of recursive function. Pragmat create the breakout rooms again for the online people.
+user avatar
+Unknown Speaker
+00:56:46
+She
+user avatar
+Dino Konstantopoulos
+00:57:42
+does anybody have a solution yet?
+user avatar
+Unknown Speaker
+00:58:09
+It's.
+user avatar
+Dino Konstantopoulos
+00:59:37
+They closed the pregnant, closed the rooms.
+Okay, let me give you the recursive solution. So the recursive solution is,
+it's super complicated. It looks like this.
+Look at this. Let's go through this together.
+So if N is less or equals to one, then we want to not do any more computation. So when you implement a recursive solution, you always start with the boundary condition, the the thing that's special, and then otherwise just return that function
+minus one plus that function n minus two, because, after all, Tibon edge numbers is the sum of the two previous numbers,
+right? And so we define that function that actually calls itself, which should be really really strange when you look at it. But it's actually not that strange, because what we do, what this function does is as soon as it reaches a number one, it just returns the same number, which is one essentially right.
+And then what we're going to do here is we're going to run it. Let's let's start from from one to from from from zero to nine, right? And so we're going to compute recursive Fibonacci of zero of one of two, or three or four right all the way up.
+And so if we run this, you're going to have zero. One, two, three, five, eight, thirteen, twenty, one hundred and thirty, four right. These are the people that you numbers.
+Yes.
+But look what happens if I go up to a hundred
+and I run this
+Well, look at this. It's stopped there. But look, It's still computing
+Why? Because these numbers are actually this function calls itself. And so, if you run this many, many times, this function, these numbers keep keep increasing. But you can see very slowly,
+right, much more slowly than the iterative version. And so i'm gonna have to stop this because this takes just too long.
+And so I did an interrupt here. So you can see the implementations are important, because a function that calls itself has to reserve so much space in the stack, because it keeps calling itself
+that it becomes really really slow. And so it's very important how you implement a function. Both of these solutions are correct, but for high numbers, this the recursive solution is actually not that great.
+But does everybody see this? It's a little bit strange, right? This is a function that calls itself twice.
+But why not? Because the definition of a Fibonacci number is the sum of the previous two. So if this function implements Fibonacci number for N and N minus one and n minus two is exactly the formula for Fibonacci numbers right.
+So now that you've seen this, let's do the generator.
+Now go ahead here and write the generator solution for the Fibonacci numbers. So that's a function just like we have here
+right? But instead of returning it yields.
+Go ahead, do it,
+and and Pragmat restart the breakout rooms for the online people.
+We do this here.
+Make sure you write down. You write down this solution, though. First right, Make sure you write down the solution. I want you to have this. So write this down.
+You see. Once you start writing functions. It's going to be. It's easy because you you write this. You write. You can call it a different name, too, and you write the column, and then you hit the return. It will automatically put the space. You put the condition you return, and then you call this function one hundred times to see all the numbers,
+user avatar
+Unknown Speaker
+01:05:05
+or if I want to give you a dataset,
+user avatar
+Unknown Speaker
+01:06:18
+he's in the middle of the meeting.
+user avatar
+Unknown Speaker
+01:06:44
+Hmm.
+user avatar
+Dino Konstantopoulos
+01:07:24
+You're okay, pregnant. Close the rooms.
+Don't. They get a minutes before the rooms close where you can close them without giving them a minute.
+Typically, when you close them, it says they have a minute to leave, or something before the rooms close.
+Okay,
+all right. So this is the generator. Look, the
+So what we do is we start with. You can start with zero one or one one. It's actually three minus two numbers. We can also do that, and then for
+something in range of N. So up to n I yield.
+Then the next time I call a function again, I do that same exchange A. B equals B. That's the same exchange I did up here,
+but the difference that instead of instead of having a return at the end, I have a return here
+that gets transformed into a yield.
+That's essentially what I do,
+right. And so when I have the generator, I
+this is the the generator.
+So if I want to call the Fibonacci numbers up to one hundred. I can just say print
+fib up to one hundred,
+and then, if I run this uh-oh!
+Why don't I get the numbers.
+Ah, I need to convert it to a list right? Because this is a generator, so it actually will take the number, and it will. But it won't. Return anything unless you convert it into a negro structure. So I need to write a list
+and then call that, and that will print all the numbers. These are the same numbers all the way up to one hundred, one hundred but notch numbers, and you see how fast it did it
+right a lot faster than than than the
+well, just as fast as the diversion, really, but a lot faster than the recursive version. But you see, this is this is really neat, because this is essentially the formula for Fibonacci numbers. This is equivalent to the mathematical definition of the Fibonacci numbers. And then here I call them.
+I I make sure I convert them up to one hundred, and then I and I print the result.
+Ok. So now you see the difference between functions that are iterative functions that are recursive, and functions that are generators
+and generator functions are usually what you want in data science, because it's a formula for carrying out a computation, and it only does the work that it needs to do, which becomes very important when you have a lot of work to do.
+In fact, so much work and so much data that of other ways of doing it, like the recursive way won't work. So
+so it's not enough to just have a solution for something. You also have to put it in the right structure, so that it computes efficiently,
+and that's part of what I mean, doing it, and in a dual Lipa function. So now that you've seen this, let me tell you about the homework that I prepare for you. So this is what you're going to be. You're going to be tearing your hair off the entire weekend for solving this problem. Look at this.
+So, by the way, I added, I forgot to add some data. So please go back to canvas and download data to. So data two contains two files which are Chinese and Hindi, not dictionary, but expressions translated into English.
+I got those from my Nlp class.
+So what we want to do is we want to pretend we're learning Chinese or an Hindi, and every day we're learning a different sentence.
+Yeah, And all these sentences are in those files. And so what we want to do is. We want to take all these sentences and put them in a dictionary
+and write a function that returns snippets of the dictionary every day, because we can't learn one thousand lines a day. We learn maybe ten lines a day, right? Ten expressions a day, maybe even just two. But what we want to do is every day we want to call a function that returns the next the next
+ten sentences.
+So if I call it once, it'll return the ten, and then I have a way to specify. Since I'm using a dictionary structure. I'm going to add the timestamp inside the key,
+and they'll say, Okay, this is my time time stamp for the previous day. Now call it on the next day i'll give a timestamp for the previous day, and we'll return the next ten. So every day you can return the next ten sentences from
+from that data set. Does everybody get it? That's That's what you have to do for your homework.
+So so let me tell you, let me let me show you kind of how we're going to do so First We're going to import
+object, Lady Object. Id allows us to create what are called guid's.
+So go it's
+globally unique, identifier, globally unique, identifier. So this is the capability.
+Here we're importing a library that allows to specify the date and the time.
+Here we're importing the random number and not random number generator, capability. Okay. So these are the libraries, the only libraries we're going to use for this.
+Now, here we're going to define a function that creates a key. It creates a key from from three things from a prefix and from
+I got this function from somewhere. I wrote this some time ago, so it's a little bit more complicated than that it needs to be, but we'll see that we'll see the kind of key that it creates. Then we're going to create another function. This is called second since midnight.
+So what we're going to do is we're going to get the time Now we're going to get the time past midnight, so we replace now with zero R. Zero means zero seconds, zero microseconds. So that's midnight.
+That's right,
+and then we return. The difference between the the the seconds, the seconds difference between the two times, and we add a random number. Why do I do this in order to simulate the fact that we're? We're not calling this? Because if I if I open the file immediately, all the seconds are going to be the same, because the computer's really fast. But in reality, when I go to Google translate, and I use a new sentence.
+I do it throughout the day. I don't know how you guys can use Google translate, but I use it every day, and then I do one sentence. I translate it, and then I write it down.
+So this is in order to simulate the fact that I write it in different times of the day,
+and then i'll create my dictionary. That has all my words, so i'll initialize it as a dictionary, and then i'll say, enter words. So i'll enter the English translation, and i'll enter the the English translation into the Chinese sentence, and i'll enter the Hindi center,
+and and the default of these two is none. So if I don't enter a Chinese sentence or a Hindis sentence, then that argument is going to be none. What is none, none is the equivalent of null in other languages. So we don't have knowledge of python, the python. We use none instead.
+So does anybody have any questions about these three sentences, these three functions? This creates the key to the combination of keys of sub keys. This counts the seconds
+since midnight, and that's a random number to simulate the fact that we're entering at a different time. And this enters the words into the dictionary defined here as a global variable.
+So how do we enter the dictionary? Well, first we create the unique Id,
+and then it'll have
+It'll have a hyphen,
+and then it'll. It'll count the second since midnight, and they will add a good.
+So it's a long key. We usually use long keys when we manipulate our data, because that makes the keys unique, and we also want to assign identifiers to the keys. So we know extra information. We put extra information in the key, and then the value is going to be the the translation. So the the
+here what? What? I what I use a ternary structure. Does everybody see that i'm using a ternary structure. This is an if then else i'm saying, If it's a Chinese word, then do this by entering the Chinese word,
+not the Hindi word.
+If it's none. If zh is none, then it's a Hindi word, so enter, using the Hindi word,
+it's also not a Hindi word, then just enter the Id with No, no words. But see, this creates a dictionary that
+within a dictionary. Oh, my God, I have a dictionary inside of a dictionary.
+That's okay.
+You can do that when you have databases, right? And so what i'm doing is, i'm entering. This is, an if and else does anybody know Why, why i'm adding a parentheses. Is this Because I want to turn this into a tuple?
+No, I don't want to turn this into a but what I want to do is be able to write this in different lines,
+right? Because if I wrote it in a single line I could write it in a single line I could. I could write this like this. I could write. This is A. If Z. H. Not equals to none, or B.
+If hi or so, so the simple Why would we be else? Something else right? This is this is the structure that i'm using.
+Now, if if my line is really long, and I want to break it into multiple lines. There's a trick in Python, because if this expression is very long and it takes up a lot of space. I actually don't want to go over this line, And so what i'm going to do is i'm going to enter a parentheses,
+and then I can, I can. I can go. I can go down a line and then close the parentheses. Why? Because when you have container structures, then you can actually go to the next slide.
+So i'm using the parents as a trick, so I can add things to the next line. So if A and B are long like they're here. It'll take up too much space, so I can actually go to the next line. So this is the expression that i'm using here,
+but I have to add the line here.
+I have to add the parentheses here.
+Okay.
+So this is how I enter my words, and and this function allows me to first of all enter the English, the English
+right? So this is my enter words Api.
+So here's an example. So i'm going to run this so I can run the function. This is what my key will look like. So this is an example of Ah! Of the English sentence, and This is the translation in in Chinese
+right? And so the key is going to be this structure.
+So if I run this, the key will be the first part of the key will tell us that the enter the the the The data that we have in our dictionary is is is is a Chinese sentence. The second part is going to give us the second since midnight, since I when I entered this this the center. So it gives me a time step of when I entered the data,
+then the last is just a random boo it that is a unique identifier. So this is the key.
+This entry in the dictionary. So this is the key for the center in the dictionary.
+So look what i'm going to do Here is I'm going to open
+my
+my Chinese and my Hindi text right? I gave you these two files, so make sure you put them in the right folder, and i'm going to read them in utf eight unicode encoding,
+and then they're separated by tab by a tab character. If you open the files, you will see It's a tab character that separates the English translation from the Chinese or from the Hindi, and then i'm going to use the split Api to create an array called t two.
+So now t two is d. Two of zero is the English, and T. Two of one is either the Chinese or the Hindi, and then i'm going to remove
+the period at the end by using the go all the way to minus one all the way to minus one, since minus one is excluded. That's the last character. The last character is a period. Let me just remove the period. I don't want the period,
+and so and then i'm going to enter the words, i'm going to call this Api enter words that calls this function,
+and then, of course, depending on whether I say, enter words with zh equals or into words. With H. I equals then i'm going to either enter it as Z. H. I. And that will change the uid, and it will also change the value. So we'll change the key, and it will change the value.
+Yeah.
+Okay. So now we're getting into more complicated programming. Because now you're slowly, This week is dedicated to learning Python.
+So I want you to practice on this. I know this is a little bit complicated, but
+but if I give you something simple, Then you wouldn't be practicing.
+So let's go ahead and read this file and enter the words in our in our dictionary. So let me run this.
+Let's read the Hindi file and enter the words in the dictionary as well,
+so let's go ahead and look at some of the words. Now, dictionaries have no built-in ordering. So if I call and numerate on the words items, why am I calling words the items? Because I have a dictionary
+right, so I can either call keys, values or items. So if I want both the keys and the values, i'm going to call items,
+however, I can say, enumerate, and where a numerate will do, it will just randomly give me numbers from one to ten, that randomly extract ten translations from my data set,
+and then print
+both the key and the value. So if I run this, this is what i'm going to get.
+So the first
+translation is going to have this key. So if I want to extract the translation, I can call it with this key. Now
+the translation is a translation of the English High, which is Nita and Chinese. This is actually
+I don't even know what this is.
+This is the cow.
+I have no idea what this is.
+This is high.
+It's just high. Okay, Okay,
+Okay. And And look at this. I also included the key inside the value.
+That's a trick that people do sometimes because sometimes they they can't access the key from inside, and so what they do is they take the key, and they also add it as another element inside the value. So you see here, what I have is: this is an entry
+that has a key, and the value is a dictionary.
+Does everybody see how the value is a dictionary.
+The whole thing is a dictionary. So very often, when you create data you add lots of things in the value, but a unique key.
+Okay.
+So so i'm sure there's some Hindi there. But since I entered the Chinese first and the Hindi later, the first ten elements, which are random are probably from the Chinese data set right.
+Does everybody understand this?
+Yes,
+user avatar
+Unknown Speaker
+01:24:06
+he made a trance of the output.
+user avatar
+Dino Konstantopoulos
+01:24:13
+Yes, So the data here, since i'm printing it as a list. Comprehension will be list. But here i'm printing a tuple,
+but the tuple that i'm printing here is a result of my transformation.
+This is still a dictionary. But now here i'm printing a tuple,
+because i'm extracting I. U. V. Which is I is the enumerate, and then the Uv. Which is the key in the value from the words of I am. Look at something here. This is. You have to be very careful. If I remove the parentheses here.
+It's not going to work, because if I run this now, this will say, No, no, no, not enough values to unpack, because how many values Did I expect I expected two values. I expected the index, and then I expected the key value pair as one thing
+right.
+So when you use, enumerate. You have to say, Okay, I can either say this or
+call that the Kv as Kiki value pair.
+And then here say, instead of uv say, Okay, key value pair is is K. Of zero,
+and this is K. Of one
+right
+could do it this way. This works, This will work. This will give me the same thing I got before. Oops K. Is not defined. Sorry it's K. V. Of zero, and can you be a one
+right? But I don't. I don't like this as much as I prefer to use key and value, and so i'm i'm still going to use key in value. But then I have to group K in value into one thing,
+so that the compiler can say Yes, this is correct, and now I can say key, and I can say value.
+You see these transformations. This is the reason why you can do data science with Python, because you have these capabilities to do things very very fast and very expressive, but of course it makes it a little bit more complicated to learn the language. Doesn't it,
+because you, when you see this first, and I ask you to code this. Maybe you You forget to add the parentheses, and then you run it, and you go.
+It's not worth a game,
+right? But then you have to see careful, because in new words of items means I have two things. I have the index, and I have a key and a value. But that's one grouping, even though it's two things. So you have to specify it as one grouping,
+and then it works.
+Okay,
+So That is a list
+tuples that I created from my dictionary, just to see what's in the dictionary
+piece of my dictionary expressed as a list of tuples
+and everything that we do in data scientists is these kinds of transformations. So you have to get used to working with lists of tuples and dictionaries.
+That's why you give this hallmark.
+Okay.
+So now I have one dictionary that has both Chinese and Hindi. I don't like that very much. I want to have two separate dictionaries. I'm. Going to separate them. Look at how i'm going to separate them. I'm going to create a new dictionary,
+and i'm going to create two keys in a dictionary, one key that is Chinese, and one key that is Hindi.
+I'm going to get assigned to the Chinese key all the
+he's in the values that are in words of items. As long as the key starts with John
+and I'm. Going to in the Hindi Dictionary, I sign a new dictionary, right? Because this is a set of key value. Pairs! That's a dictionary, and i'm going to sign all the words of items as long as the key starts with Hindi with hint. Sorry. And now I have a new dictionary
+that now has that two um languages separated. So if I do the same little snippet to see what's in there, and I run this you will see. Here I have. This is the hintpin key, because this has Hindi,
+and actually. Now I only look at the Hindi structures or I can. I can look at the Chinese structure. So you see now, this is a little bit easier to extract either the Chinese or the Hindi.
+So what I did here is I. I had a dictionary that had both of those combined, and I created a dictionary that separated them. And I did that all through transformations. So you have to get really good at these kinds of comprehensions, because this is how you create these transformations.
+So your question now
+given how many sentences I want to see. So let's call that a variable N. Let's say every day. I want to see ten sentences. Give me ten English sentences of their translation, both Chinese and India,
+and a certain number time of the day specified as number seconds past midnight, right? So the key contains that information.
+So last day I studied ten sentences from that from that timestamp.
+Now I remember that timestamp I want to give it to a function. So it gives you the next ten sentences.
+Yeah,
+it's just a way to extract the data. So every time I call it. You give me the next ten, the next N. And N. Is a variable.
+So write code. Write python code. That gives me
+the return data as a dictionary with two keys, Chinese and Hindi. So the first key Chinese is going to contain values that are the next ten sentences or the next n sentences,
+and the Hindi key will contain a value that the next ten hindiest thing is starting with a timestamp right after the one that I enter into the function.
+So this is a function. This question one is: I want you to write me a death function in python with as many loops. Anything you want is just is just a function right? That gives me
+view. If I give you the time of day, it gives you the next end sentences after that time of day.
+Do you get it?
+user avatar
+Unknown Speaker
+01:30:33
+Who will be?
+user avatar
+Dino Konstantopoulos
+01:30:34
+Yes. So this question one. I want you to give me a function death that returns a dictionary that contains two keys, Chinese and Hindi.
+This function is going to take two arguments N. And time of day
+give it as an integer, because in giving it given a second since midnight, the
+the end will tell me how many extra sentences to return, and the time of day will say,
+just return me those sentences that are right after that time of day,
+not the sentence at that time of date, but right after.
+So with the key that follows the
+the previous one that had that second since midnight.
+You want me to repeat it.
+So So what i'm doing is this: Look, I have. I have a data. Let me let me show it to you in in in paint. I have. I have. I've already separated them for you. So it's simpler. But what I want is this is the data set
+right. So I have all the Cheney sentences, and then all the Hindi sentences,
+with their with their English translation, and every day every day I want to give you a certain, and they're ordered by Key right, and the key has the second since midnight.
+So here, right here, I have a certain second since since midnight. Right? This is. This is a certain key that has a certain Ssm value,
+and before that I have that that many I have. I have a whole
+before before that I have all these keys in value, and after that I have other keys and values right. So i'm asking you if I give you if this is n right, this is N.
+I the This is the This is the green you. This is. This is what I got the day before. Sorry
+right, but now I want this orange thing, so I want. I want you to return as a dictionary, the end sentences in Hindi and the end sentences in Chinese right after that second since midnight,
+because um
+notice it's a dictionary, so it's not ordered. So you you're gonna have to use an ordered api call to order the keys,
+but ordering the keys is going to be more complex, because each key is associated to a value.
+So question one is, do that Just write a function. However, loops you want to add loops, you can do. It generates whatever you want. But question
+two is, I want you to rewrite your python code and do a Lipa style, so you can run it ideally in a minimum number of lines of code. Ideally, one line,
+maybe one line is impossible, but two or three or five, because this will probably take you. I don't know ten or twenty to write this
+right. But here I want you to learn what you implement what we learn today
+with generator structures and actually return the the right code that does it in a in a beautiful way, and also in a very efficient way. So when you, when you write the lines of code, add a
+for ten percent time
+on the top, and that will give you how long it takes to actually run your code, because I want your code to run fast
+like tens of milliseconds,
+not hundreds of milliseconds, but
+not seconds. I want this to run really fast.
+It's
+so. That's your homework for next week, Monday, and I want you to do it on your own,
+because it's important to you for you to learn how to manipulate dictionaries in Python.
+Now you can. Google as much as you want. Start with simple examples of dictionary. Just start with a simple example. Create your own dictionary that says this has a simple key and simple value. Try to do it for the simple one, and then make it more and more complicated when you encounter a complicated problem,
+solve the simple problem and then move on to the complicated problem. Okay,
+any questions about about I can re-explain it. So just ask. Yes,
+yeah, and we'll really do not. Please send me to send us one of them.
+Yep. Start with an example of N. So start with N equals ten and start with Ssm. Equals forty, seven, five to zero.
+So given that as an example, give me the next key. Now the keys
+ah
+strings, so we can order them. You can call ordered of dictionary keys right? So you can order them right. I can. I can show you this. Look if I, if I create a new cell,
+and I call um,
+I take this. So this is a
+let me just return not the key in the value, But let me just return the key, which is you,
+Yeah. And then this is this is: if I do this, it will return just the keys, and then I can take this and sort it
+sorted.
+This will create the same keys, but now they're sorted so four, seven,
+And now what i'm asking you to do is just give me all the keys and the values after the key four, seven, five, or zero. So you'll just go to the next one and return all of these right?
+Okay. So that's what you have to do for question One question, one in any number of lines of code and question. Two.
+Okay,
+Okay. So we didn't go into the object oriented part, and we didn't have time to introduce Newton pie. So we'll do that on Thursday. But on Thursday.
+Look at this homework and ask me questions about this homework. So if it's something, you don't understand what you always ask the Tas, cause the teeth can solve this in ten seconds. But um you can. You can. Well, maybe not ten seconds. But you can ask questions on Thursday about the home. In fact, i'll ask you to see if you have any questions, because start with simple examples, because this is how you're going to get good at manipulating data data sets
+right before we move on to noon pie and all that you have to get good at this.
+This is just a matter of exercising your knowledge of lists, tuples, sets, and dictionaries. That's all This homework does
+So it's complicated, but it's based on simple api's.
+So
+don't start this homework Sunday night. Right,
+please. You Won't. Have time to solve this. Start. Start tonight with simple examples. See what you don't understand, and then ask questions in Class on Thursday.
+Okay again. If you get good at this,
+you're starting to become a really good programmer.
+So if you saw this homework you can pat yourself on the back. It's a good job.
+I'm becoming. I'm becoming good good. Not only the Python programmer, but a programmer for data science.
+Okay. And next next Ah, Thursday. We're going to do the object-oriented part, and we're going to look at new pi as well and if we have time, we'll also start our our pandas. Ah notebook, or we actually learn to manipulate T. This Pandas is the equivalent of of of data Pl. Or in R. It's how we're going to manipulate data.
+But before we start using libraries to manipulate data, you have to learn how to use this tuple sets of dictionary.
+Okay, class. Thank you. See, you. Thursday.
+Yeah. The The final results should be A structure like this
+should be a a a dictionary that has a Chinese key that contains the keys and the values that that represent this, the orange data set.
+Okay,
+this is, it essentially looks, Looks looks the same as as the as what I created here.
+So this is this is this is a list, so it's not a dictionary, but but it has these elements right? So it has a a section called Chinese. That just contains the Chinese ones. And a section called Hindi. That just contains the Hindu ones.
+Yeah,
+Okay, more questions.
+Okay. You can ask more questions on Thursday. All right. Okay. See you Thursday. Thank you.
+Thank you, Jean. Thank you. Pregnant.
+Okay, online or a logging off.

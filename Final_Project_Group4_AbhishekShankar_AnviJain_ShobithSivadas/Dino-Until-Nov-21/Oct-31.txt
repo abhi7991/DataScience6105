@@ -1,0 +1,846 @@
+Oh,
+user avatar
+Dino Konstantopoulos
+00:24:17
+why did that not work?
+user avatar
+Dino Konstantopoulos
+00:26:12
+Why, you I muted. Okay, Let's go ahead and start. So. Um
+today we're going to award the Oscars
+for the best um
+for the best storybooks in the categories of adapted screenplay. Original screenplay. Best picture best acting best cinematography.
+Um, Those of you that Aren't. Here you missed um. There's photographers here. They're champagne There's people waiting outside to film everyone uh to hire them for Hollywood movies. So if you're not here. Too bad you miss your opportunity.
+Um! But I also want to. Since we have a midterm coming up i'll give you a a notebook that's a preparation a little bit in the format that you'll. You'll have your questions in the midterm on Thursday,
+and then I also have some labs Bayesian labs for you to to close the chapter on Basis simulation. And then when we, when we meet again next week after the midterm, we'll start reviewing linear algebra, and it will combine the linear algebra and what we've done so far to start building models with um with machine algorithms instead of with analytical algorithms.
+So uh, let me first go through the notebooks and tell you what we're going to do, and then do it
+so. Um.
+user avatar
+Unknown Speaker
+00:27:34
+Ah, the projector
+user avatar
+Unknown Speaker
+00:27:52
+uh
+user avatar
+Dino Konstantopoulos
+00:27:55
+okay. So this is the um. You can't see it yet.
+Okay,
+Okay. So one of your notebooks is uh an example of what the midterm is going to look like. So the midterm will have three sections. It will have first section with general questions like, what is data, science?
+Um, and the answer is below. But don't don't don't double click this cell, because I want you to answer this cell here so that there should be. I don't know why this cell should be marked down. So
+this is where you answer. You put your answer, and then, after you put your answer, you double click the cell to to see what the answer is, But then but don't see that cell, because you want to put the answer before you see i'll put your answer before you see the correct answer. So it's a little bit of a training helps you. You know this is what the midterm is going to look like.
+So first question, What is data signed? Second question: What's the difference between invariant by? There is a multivariate analysis. Put your answer here. The answer is here in the heavy cell.
+You know, uh, how many people share the same birthday in class? Right? So what's the probability that two people share the same birthday in class? So this is
+this is probabilistic thinking. So? Question. What is the significance of the P. Value? Statistical hypothesis testing? So put your answer here, and then look at the answer in the hidden cell.
+How can Time series data be declared a stationary? And what do you do if it's not stationary? What do you need to do
+so. Put your answer here and look at the answer Here,
+in a time interval of fifteen minutes. The probability that you see a shooting star is twenty.
+So you look at this guy and you count fifteen minutes. You count the shooting stars, and you see that you have twenty percent probability of seeing a shooting start question is, what is the probability of seeing at least one shooting start if you keep watching for an hour.
+Okay. So these are the kinds of in questions you can expect, and interviews job interviews because they force you to apply. You need to think critically. So this is critical thinking.
+This is knowledge. Thinking
+up here is knowledge thinking, and this is critical thinking. I should have, you know, calling critical thinking questions.
+This is a better word,
+create a call
+questions, And this is general knowledge? Questions.
+This is knowledge. Questions:
+Okay? And then um, The third section,
+Okay, and then the other one. Let's say, the probability of dangerous fires, the probability
+that fires are dangerous.
+He's rare
+the probability. No,
+no, I think the probability of dangerous fires is rare. The probability of dangerous fires.
+Oops, Don't. Look at the solution
+is rare, so it's only probability. One One percent smoke is, however, fairly common, because everybody wants to barbecue, et cetera, and ninety percent of dangerous fires produce smoke
+Question. What is the probability of dangerous fires when there is smoke?
+Okay,
+write the solution Here you can find the answer here,
+and then we have a section that will be um code programming.
+So write a program that checks If a given sequence is a palindrome,
+which means radar is a palindrome. Because if you read radar in reverse, it's also a radar
+palindromes. Google loves palindrome questions.
+It's a sequence.
+Yeah, My question is, uh, when I see the sequence, I generally think about the numbers, not the word,
+but the interviewer could say I won't give you any more information. Just answer my question,
+right? So I I I want to put you in the same situation. I'm not always going to answer your question. I'm telling you it's a sequence. Figure it out.
+Okay,
+Um. Write the program to determine whether a number is binary.
+I'm giving you a number.
+user avatar
+Unknown Speaker
+00:33:21
+Write a program that takes this number. It figures out whether the number is a binary number or not.
+user avatar
+Dino Konstantopoulos
+00:33:27
+Finally, you have a binary threed tensor.
+What's the d tensor? It's A.
+It's a matrix. It has three dimensions in rows,
+columns, and and uh, coming out of the screen right? So I want you to to binaries. It's made out of entry zero, and one for the entire entries
+find the longest chain of ones where chains can be formed only cardinal directions, so find the longest snake
+in the array.
+Right? So these are the kinds of questions you can expect. So, to answer your question. I I was a little bit mean. I didn't answer her question right? But but that's because that's how it happens in Job Interview. So the answer is, it's a sequence So it could be numbers, or it could be strings. It could be anything right.
+Um,
+Um. Okay. So So this is an example of the midterm, so we can do the midterm. So that's choice one, or we can do some Bayesian simulations.
+Now, the it seems I I gave you uh um the basic simulations as a lab instead of as a as a
+as a lecture um in the So the first notebook is a lecture, and then we'll go into the lab; the second, The second notebook is is a lab, and it's a lab related to World Series, because right now
+in in America we're playing the Baseball World Series, and It's this: the Houston Astros versus versus the Philadelphia Phillies. So I thought it would. It would be a good I um opportunity to talk about baseball
+right? So what we're gonna try to do is we're going to look at batting averages in baseball, not averages averages. Please fix my typos.
+So
+you know that I told you that when a batter goes to hit they're usually measured by percentages right. But now that we're working with bating statistics, we're not working with just numbers anymore. We're working with probability distributions.
+So every player is represented, not just by a number, but by the entire function that shows you the the average of that function is usually a single peak function.
+The peak will give you the mean right, the the kind of the batting average. And then the standard deviation will tell you how sure you are. That person's writing average, because you could be observing a batter for the entire season,
+and you have a really good idea of what their average is, or you could have. A batter that just came back was called from the minor Leagues, and only played one game,
+and he has, you know, he hit every single bat that he that that that the every single ball that was thrown at him, so his batting average is one hundred percent.
+But you don't have the same knowledge about that batter as you do for someone that has hit for the entire season, so his standard deviation will be a lot larger.
+Right?
+Yes,
+you agree. Do you have questions? Are you not sure this is not part of the midterm? So you can ask questions here.
+Um. And so um. What we're gonna do is this: we're going to analyze. Batters
+can be derived right when you when you create an object you can derive from that object, or an object can inherit from another object. Now we don't do a lot of objects, or any programming here in in in the class, because we're doing data science. So it's really scientific problems. And we The only reason we use classes is to leverage the constructor, so the constructed can do some prep work.
+But in a class like Java you do derived objects. So just like objects can have derivations. The right object. Models can also have derived models
+Mit, c.
+So when you analyze each player that also plays in different positions, you analyze player by player, that's a very specialized model.
+But suppose you want to produce a more abstract model that measures not each player, but each position
+in the field.
+So I want to see um Specifically, I want. I want to see the statistics of batters, or I want to see this, the the the the statistic of pictures, all pictures. Not just one picture. I want to see the statistic of the statistics of right fielders,
+right?
+So what you need to do in this case is obtain a more, a less derived model, a more abstract model, not about players, but
+but about the categories that players are in
+these categories are also called hierarchies. So in data science we call these hierarchies.
+And in order to obtain these hierarchies, what you do is you play with the model derivation. So what you do is you know how we said we talked about the data likelihood. The data likelihood is where we try to match the data to a model,
+and then we match the parameters of the data likelihood. If we see the data, likely as a poisson has one parameter retriever model parameter.
+Well, that parameter can itself be modeled by another parameter.
+So you have something very derived, and that's how you can actually produce hierarchies. So we're going to use this thinking
+in this lab
+to obtain hierarchies about a specific position in baseball.
+So to do something fun we're going to look at, because in in World Series we
+pictures get to back to.
+So people that throw a ball also have to hit the ball once every inning.
+So since these players are pictures, they're usually not very good batters,
+and so we want to produce a model for all pictures; that that
+to see whether they they they suck or not to compare them with the other batters.
+And so we're going to produce a more abstract model to analyze this from A from a data science perspective.
+So we'll do this as a lab.
+But before we do this as a lab i'll show you the technique in this notebook,
+so we'll do this technique together, and then i'll let you do this lab, and i'll also do the midterm prep,
+and then um you. When you do the midterm the T's and I will go around and we'll answer your question. So we won't be meaning this midterm, because this is a practice midterm, so you don't know if you don't know
+if you don't know if if something
+it works or not, i'll help you. And also you have the answers here, so it's it's not an issue. But this is just to to give you an idea of what you you can expect during the midterm, and it's also an idea of what you can expect during a job interview.
+So doing a job interview your first interview, probably by phone.
+They're going to ask you some general questions like, Did you take data? Science?
+Was the professor any good? Did you learn anything? What is data science? And then i'll ask you the probability of dangerous F is one.
+Some smoke some dangerous F. What's the probability right? They ask you the question that I ask you, and you have to think critically to be able to answer that question. If you answer all the questions that probably invite you over to the company for a real interview, where you spend a whole day in the company
+all day in the company. I'll ask you more complicated programming questions.
+If you pass that they'll probably fly you to California to headquarters,
+give you even more complicated questions. If you pass that if you pass a third interview they'll probably hire you. But
+right if they are you at Google, you'll make a million dollars salary. Well, maybe not a million dollars. But I I know graduates from Northeastern that are making half a million dollars
+salary because they work at Google in San Francisco in a machine learning position.
+Right? This is
+I never made that much money. This is like what
+Nba players make right.
+So this is what you could make if you actually
+studying data science, really? Well, you know the answer to questions.
+Okay, So what what you? Oh, and the other thing is, we'll also award the Oscars, as you see we, we, the the judges from the Academy of Motion pictures, have already met this past weekend. We awarded the best categories. We we uh uh, ordered the Oscars. They're all solid gold,
+solid gold, Oscars. We're we're we're We're putting the labels now, and we're going to award all the the Oscars um at the end of the class.
+So what you want to start with do you want to start with The I think what we should do is let's start with the lecture notes, and then we can. I'll give you a choice. People may want to do the basic amount. Other people may want to prep for the inter. Okay,
+is that is, that is like a good plan.
+Yeah, Okay. So let's start with with this notebook to to to your hierarchy work, and then we'll we'll branch off, and then you can pick what you want to work on.
+Um. I I suggest you work on both. If you can't finish today, then you finish at home. There's no no homework for next week since you're starting for the midterm. Um, but it's A. It's it's a fun. It's a fun model, and it shows you how you can produce derived and abstract models.
+Um! And it's It's a very interesting to think it's called hierarchical Um um hierarchical Bayesian Analysis.
+Okay? And I made a mistake. This is lecture nine day. One. So please please correct the eight. It should be in line,
+so we'll correct it here now. We should correct it there, too.
+Well, here I got the right one.
+Oh, I know why I said eight, because I was planning on showing that uh last week. Okay,
+all right. So let's let's look at let's look at this together.
+So let's import some libraries, so i'm importing time, c. Three, and I'm. Also importing our this because our list is the um is the visualization library that allows us to plot a lot of a lot of models. So we'll run these, and we're going to create some data here. So instead of using data here, we're going to create random data.
+Right? That's That's a technique that we do,
+because we have random number generators. We can create random beta.
+And you can it. The fact that we set a random uh a seat allows us to. Every time we run this you produce the same data.
+So the data is random.
+It, it produces a random sequence. In other words, the number, after the previous number is is random. However, when you rerun this, the number repeat themselves the way they were before. So if you have the same results, allows you to reproduce the result. If you comment this out, then you'll you'll You'll get pure ram the numbers every time.
+Do you understand? This is an important concept, right? Somebody could ask in an interview question,
+Why do I? Why do I set the random number seat. If numbers are completely random, what does that do?
+You should be able to answer that. Yeah. Somebody asks you. Why do we analyze random numbers, since they're completely random.
+What's the answer to that question?
+Yeah, It's never random, right? All a a specific process. All the data depends on this process, And so the process will produce data that is specific to the process, and your model attempts to capture how the process works.
+So what you do. You study the histogram of the data, the data may look random, but when you look at the histogram you will see that it's regular.
+If it's completely random. It's also regular, because it's a hat. If it's a completely random, it means all values are possible. Specifically, it means all values are equally probable which means all values need to have the same frequency,
+which means you need to have a flat histogram, which is a very regular histogram. So the the the more. The most random numbers the most random numbers can get will still produce a very regular histogram.
+If your histogram isn't regular you,
+it means something is going on right. You analyze the histogram, even histograms that are on regular. We can also model them. We haven't. We haven't done that. It's called a a Gaussian process. We model them as super positions of different Gaussians.
+Right? So there's nothing random. So um.
+So in this case we're going to produce random numbers from a normal distribution
+with a certain need,
+and i'm going to produce eight of them right? So the size parameter is very useful because it automatically produces an array here.
+So we produce eight different slopes.
+Why producing slop? Because we're going to generate lines, it's going to be a regression problem. So we're going to have lines, and we're going to have to figure out the lines. And so we're going to group them. We're going to also produce groups,
+and five times uh in each group,
+and then we're going to use
+some noise.
+Yeah.
+Ready? Okay.
+Okay. So let's look at this. What the slopes look like for each line, so each line will have these different slopes. These are different angles.
+Yeah. So we have. We have. We have eight slopes, and then we're producing
+many wise
+that are the slopes across many groups.
+Yeah, And each each one of these, each one of these groups will be will be random. So if you look at the groups. These are these are all the people.
+The first one belongs in Group zero,
+then group zero again, and then group zero again, and then the last few belong in Group seven. You see, Group Seven has a lot, many fewer occurrences of group seven, then group the other groups. This is on purpose.
+So the statistics of group seven are less
+known. Have let you have less information about group seven than the other groups,
+because you have a lot more information about the other groups and a lot less information about Group seven.
+Yeah.
+So this is this is the groups. This is this is the X's and the Y's. So you have x's and y's that belong to these different groups.
+Yeah, what's the What's the size? We have eight groups and we have
+length of x and length of y should be similar
+three hundred and fifty-five.
+So if if I want just the ones from groups to from group two, I will say groups equal equal to A. This will tell you which one of the data is part of group two,
+just the ones that are true.
+So this is a Boolean array
+size three hundred and fifty-five,
+the X and Y of group two. Then you have these values. Right? So you see how you have different hierarchies. You have individuals,
+but you also have groups that these individuals belong to.
+The groups are a more abstract model. The individuals are a more specialized model or a more derived model
+user avatar
+Unknown Speaker
+00:49:41
+at the same time.
+user avatar
+Dino Konstantopoulos
+00:49:43
+So we can do this with basic simulation,
+and then we can. We can uh make uh results about um uh, about groups, not just about people, but about groups.
+Okay. So this is everyone that belongs in Group Two has this slope.
+That's the characteristic of group two. All people from group two are part of a line with a specific slope.
+However, the intercepts, If you look at the intercept,
+the intercept is random.
+Yeah.
+So
+the slope will determine the group that the person belongs to.
+But each person in the group also has elements of randomness that is different from other people in the same group.
+Right? So this is a very general result in statistics
+just like you have objects that are derived or objects that have more abstract. You have people, individuals or things computers. I don't care Computers laptops are are specialized, but laptops are either Pcs. Or Max,
+or you the tacker. These are the groups that the laptops belong to right. So you may want to build models about the more specialized
+elements, But you also want to build a model about the more abstract, the more general elements which is the makes with each laptop.
+user avatar
+Unknown Speaker
+00:51:22
+Okay,
+user avatar
+Dino Konstantopoulos
+00:51:26
+is it clear? So far it's an important concept. Hierarchies
+not more variable because a variable represents different individuals. The X represents
+the X is a variable, and the X represents many individuals. So the correct words is to say,
+a bigger sample space for more specialized and a smaller sample space for more abstract.
+But the what?
+Yeah. So the the equation is y equals, mx plus, c. Is for the individuals.
+The uh, the the more abstract is there's a single M. So this eight different values of them, but each individual can have both an M. And an intercept.
+So it's
+right. So the more general is just the M, because there's only eight possible. Ms:
+right?
+So the lines are going to be parallel, because the slope is the same, but they're going to be up or down.
+That's for for group. Two group three will be lines with a different angle, but they're also going to be lots of people because they're parallel to each other. Yeah.
+And what we're also going to do is we're going to add some outliers to group seven. So how do we add outliers
+with a huge intercept?
+So You see, all the other intercepts are pretty pretty small, because we added a pretty small intercept. I think zero point one
+times a number from zero to one.
+Yeah.
+So these are small numbers, but what's an outlier? It's It's something that is much much bigger, much, much, very far away than the other elements. So we're going to add an outlier
+that has a a huge intercept
+to group seven.
+And you're going to see that if you look at the y's, these are the last individuals. They're much bigger than everybody else. The Y's for Group seven are huge,
+so that's why that's that's for the definition of an outlier
+something. The statistic is very different from the rest of the data.
+If you look at the histogram you will have a blip somewhere that represents this group seven, and typically you
+mit Ctl. And very often there's a good case can be made that when you look at histograms you first want to remove the outliers, because very often outliers is just noise, experimental noise, or a mistake in an experiment or something that is wrong. So you remove that sometimes you don't want to remove the outliers. They're there for a reason two.
+But depending on what you're studying
+a good interview. Question is, what do you do with outliers.
+The answer is, well, depends on the experiment. In some experience I may want to remove them in other experiments that we may want to keep them. We,
+You know what to do. If you keep outliers, then you want to
+make sure you model them with a distribution that allows for big outliers like a student t distribution
+where you can actually say, Okay, I'm going to have outliers. Let me increase the chance of seeing outliers, because I can see i'm seeing many outliers in my data set.
+Okay,
+So we're going to study three different models. So first is a pooled model. A pool model is. Everybody belongs to the same category.
+There's no different slopes. There's no different anything. They all I just want to look at the mean behavior of all the individuals. So What am I going to say? I'm going to say that my observation
+follows a normal distribution. I know it follows a normal distribution, because the the derivations that I I derived all all the noises and everything from from as well as the slope
+from a normal distribution. Right? So if I look at the histogram. I know they're going to follow normal distribution. Okay. But even if you didn't know, you plot the histogram and you see a normal distribution as my model. You could be even clever and say, Well, there's some out out outliers. Let me use a student team,
+so i'm going to use a normal distribution with a mu
+being represented by the the the Slope Times X, where slope is a parameter,
+and the noise being uh another parameter. That's that's the That's the two, the two variables of your normal distribution, the mean and the standard deviation right? And so i'm going to represent my observations. My, my observed, is the why my model is Y. As a function of X right?
+I have x's, and I want to figure out the Y's.
+user avatar
+Unknown Speaker
+00:56:25
+I want to be able to model the wise
+user avatar
+Dino Konstantopoulos
+00:56:28
+and then throw away the data and keep the model. So i'm going to say, Okay, I have two parameters
+for my observation, and i'm going to model these two parameters so specifically here. I'm not going to model this entire parameter. I'm going to model the Slope Times. The X.
+This is called a regression model,
+because we're essentially modeling a line, and because we know the equation of a line is Slope Times X. And so the parameter we're going to model this slope.
+And so, since we're doing businesses, this statistics, we're going to equate these parameters to a Pdf to a function to a real distribution.
+My first choice for that probability distribution is going to be a normal
+for for the slope and the normal between. Let's make it very wide. I look at the different values, and I pick something from zero to twenty. Sorry I pick a normal distribution off from zero to twenty. A normal distribution with a mean of zero and a standard deviation of twenty.
+These are the the initial values for my Pdf: I could be very wrong, But that's okay. The simulation will find the right. The right shape eventually, by simulating
+noise, is usually done with
+um we is, is is done with uh it's usually done with what's called a cushy distribution specifically a half cushion distribution, because you want the noise to be positive, but we Haven't studied the pushy distribution so that This is the exponential distribution, because the exponential distribution is always positive. There's no there's no
+it's not a mirror distribution. There's no mean of zero and negative values and positive values always positive.
+So this is this is the the the This is the two parameters that i'm going to mod this Pdf: These two parameters of my normal. Let me let me sample
+right, and when you run this, this will create a model for everyone.
+I don't care about hierarchies. I Don't care about all belong to the same category, and I'm. Modeling everyone as a common individual with these common statistics.
+Right? So this is how you would model a team of players that all have these kinds of these kinds of measurements. And um, that's the the statistics of the Celtics right?
+This is their uh three, three, three pointers per cent. This is the the two pointers percentage. This is just the statistics of the entire team.
+If you assume the team has three hundred and fifty five players.
+So um!
+Once you finish the simulation, you plot your posteriors. These are the priors. This is what you think the parameters are before you start the simulation, and after you end the simulation you can plot the posteriors, which are the uh parameters. Specifically, the Pdfs of the parameters having observed the data.
+So the average slope is three, and the average standard deviation is between two point nine. So sorry This i'm just picturing the slope here. So this is the average standard deviation. The The amount of unknowns in the slope slope can vary between two point nine and three point, one,
+ninety Four percent of the data is captured has a slope between two point nine and three point one.
+So that's the statistics of of the the pool model. Of course, that's not doesn't give us a lot of information.
+He just tells us. Um, he just tells us about everyone.
+Now,
+the next thing the next model we can do is we can. We can model one slope per group.
+We say, we know there's eight groups.
+How do we know those eight groups. Uh by looking at the data. Um,
+actually, you don't know that we we don't know there's eight groups, but let's assume that I tell you there's a groups. So i'm asking you all view groups. Okay. So what am I going to do? I'm going to use the same model for the data. But Now i'm going to say I have eight different slopes.
+I have eight different slopes,
+and the noise, The The noise i'm going to say is is the same for everyone,
+because it's random. I'm simplifying
+so. Uh. But but the the important thing is this: Now i'm saying, No, it's not just one single slope. I know there's a groups because Professor Dina told me to say groups, so i'm going to model eight different slopes,
+and i'm going to say, Hey, you try to find eight different slopes that captured best the statistics of everyone assuming everyone belongs in a different groups,
+right? And when you run this
+um you will find a different slopes that will represent your eight different groups. Right? So this is the best this will actually run. This will actually take a little bit of time. You see, It's a little bit slower, actually, not a lot slower
+than the previous simulation, because it finds it tries to fit the data into eight different groups that have similar means,
+and so you will see that the each group has different names,
+and you can see why this group seven have a have a mean of nineteen,
+because we introduce huge outliers right
+with a value of a hundred.
+But you see how the simulation uncovered the characteristics of your eight groups we get eight different slopes,
+and we can find Um, the the the the of each group, and you can see that the mean group. The mean of Group seven is much, much further to the right, but you can also see that the standard deviation is much larger as a lot,
+because you have less values.
+So so this the physics give you. Give you all this information.
+Okay.
+So now, what we're going to do is we're going to do hierarchy. So this is our third model.
+So what we're going to do in our third model is something really funky we're instead of defining priors, We're also going to define what are called hyper priors to find a better, mean and standard deviation for the slow priors. So, instead of saying, Slope is a group of eight,
+and what we do instead of slope is a group of eight,
+with default values of zero and twenty. Look at what we're going to do is crazy. It's absolutely crazy. We do. Slope is a normal,
+but instead of being zero or twenty, it's different variables.
+Look at this: The variable
+that we're Modeling is a function of different variables,
+and we're going to model these variables as well.
+So what we're going to say, Look at this. The model is much more complicated. We're going to say this the the the same normal deviation. This doesn't change has two parameters.
+But now i'm going to say, I want to model
+the slope of everyone as a different parameter
+right? This is much more advanced than the simulation I had before. Here. I'm saying that Okay, Now, I want to really subdivide everyone in groups,
+and I'm going to model slope and noise, as also noise is going to be, not in a groups. But slope is going to be in eight groups. Shapes equals eight. But now i'm going to say that each one of these may possibly have different statistics for the two shapes.
+New Slope and Sigma Slope are called hyper priors.
+These are called the priors right. These are priors because they're the um. They they go into the the
+data likelihood, the parameters of the data likelihood. But the priors also have parameters. Now
+these parameters are called hyper priors.
+So this is a much more complex simulation.
+When you run the simulation, this should take a little bit more time.
+Yeah, you have. So So this exactly what's going on you have. Um. You have your data likelihood, which is two parameters. Those two parameters are Pdfs, and they depend on parameters that are also Pdfs.
+You can see how the simulation now is running. Is. Is you giving you the simulation a lot more work than before
+it's. The model is much more complex,
+but you can see it doesn't diverge. The model actually is working pretty well. It's actually saying, Yeah, okay, I I think the statistics of the data do capture the fact that I'm. Actually I They were actually created from a different groups, with different of this looks each.
+And so, when the simulation will be done.
+I'm going to plot the results.
+Um,
+one, two, three. So you have new slope,
+and then you have slope, zero slope, one
+slope, two slope, three, so four, so five, so six, six, seven will be a Sigma slope and noise. So now you have not only the slopes, but you have the parameters. So Muse Slope is the hyper Prior. So we have two hyper priors. Right? You slope and Sigma slope. So now you have also the parameter mute slope
+here, and the parameter Sigma slope here,
+and the noise, which is part of the prior and the in the eight means that are part of the priors.
+And now, if you look at if you look at the posteriors, you can see that. Now
+you get a different graph. Okay,
+Um, Now you can see that slope seven is much more realistic
+and slope Seven actually compares directly to the other um to the other groups, and you can see that the best group is is that is it all three that has the the highest slope
+and slope? Seven Um. Is that effective by the outline? This is correctly modeled. Um the predict the predicted value of slope seven is much closer to the true value,
+and this phenomenon is called a shrinkage.
+So when you do hire you a model correctly. You your your um, your
+Your mom is a lot less sensitive to outliers and capture the statistics of the data. A lot better.
+This is called shrinkage.
+Um.
+Something really interesting that you can do is do use the model to grab this Api
+When you do that. It actually gives you an idea of what your um, what your models are. So this is the first model we studied. So the first model we study we have our two hundred and fifty-five population modeled as a normal distribution with two parameters.
+Right? Very simple model
+the unpooled model
+But this model is not as correct statistically as this model.
+Um: where
+the hyper Prior.
+user avatar
+Unknown Speaker
+01:09:34
+Yeah,
+user avatar
+Dino Konstantopoulos
+01:09:36
+that also has.
+Uh, no, there There's a point after which it does it doesn't make sense. Your statistics will be different here. What you're saying is, I have eight different parameters, and they're all generated actually from the same cap, from the same, from the same.
+In other words, all all of these eight have something in common.
+If if there's a dependence. If if the Mall is derived
+from a more abstract model, that every everybody belongs and have the same characteristic. Then you should model it with hyperfires. Right? What you're saying is that I have. I have all these individuals that belong in different groups. But these different groups have a lot of things in common,
+because they're all they're all baseball players, so they're all tennis players, and they all have a certain expectation. And um that you can. All this with the hyper brighter,
+and that's the correct way for modeling. Let less derive models.
+Um! It's It's more robust with respect to outliers it's more correct, and it gives you better results,
+and then you can use that. So now that you know the technique, we the lab that that that I designed, which is the the the Mld baseball lab does this in order to study baseball players.
+Now, baseball players all come from a certain category, so the baseball players like to pitch baseball players like to back baseball players or catchers. Baseball players play first base. They play second base. They play third base, and all of these bases groups players into a specific statistical behavior.
+We know that for a fact
+that
+pictures that throw the ball when they bat. They're not that good
+right, because they spend most of the time practicing to pitch,
+so their body statistics won't be as good as first basement, second basement their basement
+right? Same thing in other sports, i'm sure.
+And so we can use this basic hierarchy model to look at the statistics of all players,
+and from that figure out the less derived model from just the batters. Just the pictures, just the first basement just the second base, right?
+By the way, Mexico Grand Prix was past weekend. Do you know who won the Mexico Grand prix?
+Do you want to guess.
+Yeah, Max, for stop it.
+This happened yesterday.
+You were completely right. You're working on a good good job. Good job. But it's okay to watch formula one, because that's part of our class.
+So um amazing race you can. You can even watch the highlights.
+So Florida Let's do that out from salary exactly when our accounting didn't want it. But it's not. It's it's coming back. It's over once again.
+Well, in any case, you you know how to study the statistics of all of these drivers. In fact. Now you can pull these drivers into groups. For example, you can put them into. I don't know the really good drivers and bad drivers, or the
+I don't know, put put them into different groups. In any case, the the the the lab that I designed is not is for for Major League baseball. So so any questions about hierarchies.
+Yes,
+user avatar
+Unknown Speaker
+01:14:36
+how are you?
+user avatar
+Unknown Speaker
+01:14:38
+So you don't want to.
+user avatar
+Dino Konstantopoulos
+01:14:41
+So let's go back and look at our model
+here. Yeah,
+Yeah. Yeah. Um. So Um:
+okay. So um. Everything else is is is pretty pretty standard here uh the noise. Um, I took a um a support of ten in here for the standard deviation product to the support of thirteen. So um
+I I know that I have about eight eight slopes. And I if I look at the data, and I look at the kind of the shape of the data, I just uh I adjust the numbers according to what I think the they should look like
+these. These numbers are not as important as you think. Even if you pick a different number, the simulation will still converge. In fact, let's experiment. Let's let's double these numbers. So so let's um let's. Let's do this. Let's take this
+copy it, and create another run where we double these numbers, and we see how different the results are.
+The numbers.
+The number values are not as important,
+and as you may think
+they are an initial guess
+for the simulation to start at some values. However, the simulation, just like climbing a mountain,
+you can start from different trail heads
+and still get to the top.
+This, however,
+you start
+from a really bad trail head,
+you may fall into Irvine and die.
+That's okay, though.
+Just restart
+this animation
+different values.
+That's the advantage of video games. Right? You can dine in video game. Yes,
+how do I know
+I Won't get a result. Right? So let's rerun with different values.
+Initial values.
+Um. But the same shapes,
+by the way,
+shaped initial shapes
+are also not that important?
+The simulation will eventually converge to the red ship.
+The only thing it doesn't apply for is the data likelihood right? The data likelihood needs to match the histogram of the data,
+if it doesn't simulation probably won't run. So let's be running with different values. I'll just double them
+so zero to two,
+twenty-six
+and uh
+twenty
+and uh twenty, and i'll call this hierarchical model to
+Okay, let's run this,
+and then i'm going to find. See what the uh
+we trace about posteriors. Look at all the posterior, and see if they are different or the same.
+So, in other words, what a hierarchical model does,
+is it it? It? It pulls the it, it pulls the groups together, and say that the groups are derived from from from the same statistics; whereas if you don't do that,
+then your results are very sensitive to noise,
+very sensitive to all lighters. The
+so because i'm pooling the groups together. Even if I have outliers in group seven, They're not going to make the group budge very much, because Group seven is still related to the other groups. They're saying, Okay, i'm not going to pull group, seven towards the outliers, because Group seven still is, is is
+derived from the model. That is the group Zero Group, one group, two group, three group, four group, Five group six belongs to the
+and so it's going to be brought back into the realm of the other groups, which makes it less sensitive to experimental noise in the results. It's a more correct simulation.
+Let's look at. Let's look what we get for slope eight slope, six. So slope six is a mean of two point nine. Right? Let's look at Slope six.
+So just like like in in object way in the programming, when you derive an object from another object. The other object inherits the behavior of of the of the parent object right? And so statistically it's the same derived objects inherit the behavior of of of of their parents.
+And so when you say that all the groups are generated from the same statistic, from the same Piper prior, then all the groups need to follow a similar statistics. They're not completely different. Which means, if you have a a lot of outliers in one group, it's not going to pull the group all the way, one hundred and one
+away from the statistics of the previous groups.
+He's gonna say, Well, no, no. The outliers to understand their outliers. So Group seven still belongs to the same statistical behavior as group zero. One, two, three, four, five, six, yes,
+yeah, even better. Even better. That would that would that would make us even more immune to these outliers, because because all of the groups will be modeled from a common, from a common,
+less derived model, so that the the this is where shrinkage comes in Shrinkage is an antidote to outliers. In each group
+you will, you will capture the you will say all the statistics are common. So if I have outliers here and outliers there in the other group, i'm going to try to find that i'm going to try to group them into a common statistical behavior, because all of these, all of my slopes
+are actually generated from the same hyper priors, so that makes them more immune to noise and outliers in the in the more derived form
+user avatar
+Unknown Speaker
+01:23:41
+on the on board.
+user avatar
+Dino Konstantopoulos
+01:23:47
+Yeah,
+user avatar
+Unknown Speaker
+01:23:51
+exactly.
+user avatar
+Dino Konstantopoulos
+01:23:53
+So. Okay. So the simulation is done. Let's look what we get for Group Six.
+Oh, I didn't call that hierarchical model of how it goes. Well, Oh, shit! I called it the same name, but it's okay. Sorry. I called it the same name, so I I ruined my previous name. I should have called it a different name. Uh okay.
+Group six,
+two point nine same. See? I didn't change
+same me.
+So the the the numbers are not that important. They're just a starting point for the simulation, and the simulation will then run, and we'll find we'll find the uh, the The will converge to the right results. If it doesn't converge, you'll know it'll stop, or it'll say something. It can't run anymore.
+Okay,
+so um the Oscars already. Um.
+user avatar
+Unknown Speaker
+01:24:45
+You want to bring them here,
+user avatar
+Dino Konstantopoulos
+01:24:50
+and we'll start with. We'll start assigning the awards.
+Um! So for those that are remote. Um, you can, you can. What we? What i'll ask you to do is, i'll ask you to present your story for those that are here. Um! You can. You can present your story, live right? So i'll bring up. I'll bring up your story book book, and then you can talk about it.
+Okay. So what do you have?
+user avatar
+Unknown Speaker
+01:25:15
+So we have
+user avatar
+Unknown Speaker
+01:25:48
+this this picture
+user avatar
+Unknown Speaker
+01:25:57
+basically.
+user avatar
+Dino Konstantopoulos
+01:26:02
+Good. So um. Let's start with. Let's start with The The order is Um.
+Let's start with uh an adaptive screenplay. Okay. So the winner uh
+the
+uh, the excel spreadsheet.
+So
+since the excel spreadsheet where the excel spreadsheet. Uh,
+user avatar
+Unknown Speaker
+01:26:41
+That's good.
+user avatar
+Dino Konstantopoulos
+01:26:44
+So I have a Section Seven.
+Okay. So we're going to start with um adapted screenplay. So adapted screenplay. We have um sneehil Arian and an Alan sakrishman, Hari kumar you here? Who's here?
+Who's here?
+No One's Here is It is anybody online. Uh is Nihil or Anna.
+Nobody on the chat window. Wow! They, Mr. Gold Oscars. Okay, let's move to best
+user avatar
+Unknown Speaker
+01:27:51
+It's It's what you want to do. You want to enable anything you want to edit.
+user avatar
+Dino Konstantopoulos
+01:27:55
+Let me let me. Uh. You have to enable anything
+user avatar
+Unknown Speaker
+01:28:12
+I check on.
+user avatar
+Unknown Speaker
+01:28:13
+Okay, Thank you.
+user avatar
+Dino Konstantopoulos
+01:28:25
+Okay, All right. So um
+um
+start sharing
+user avatar
+Unknown Speaker
+01:28:41
+share screen.
+user avatar
+Dino Konstantopoulos
+01:28:44
+Okay, All right. Um. Let's see. Best original screenplay. Do we have an Abbey sheikh? Or
+come on down
+So Um, that's um.
+So hand them
+Okay, um it over there. So so they can see you online in front of the screen. Give a speech. No, no. In front of this screen you have to. They can't see you. The camera camera in front, right in front of the screen, right in front, in front. Yeah. In front, right there written You come closer, closer, closer. Okay. Give speech now.
+Oh, you know what you should present. Let me Um, That's the best original screenplay. Then you bring it up?
+Um, I have it somewhere.
+That's the original screenplay.
+Um.
+user avatar
+Unknown Speaker
+01:30:10
+Okay,
+user avatar
+Dino Konstantopoulos
+01:30:11
+What group number was that? Um program
+Group Three:
+No.
+Is this three?
+Okay, Well, let's Let's go for this. Go look for it in the in the file.
+Um.
+So that's a section seven. It's a group, three. Right?
+That's you right? Okay,
+So present present. So i'm going to show everyone to see. I'll make it bigger.
+So um
+exactly that we plan on Boston for the first time, and we go exploring
+Boston and North Eastern, and we are originally in the for four people. But um! We lose one of our friends uh,
+and we do some sharing stuff, and then it keeps coming back to us. So that is where we lost our friend. Or
+okay, i'm gonna publish all the winners up on canvas. So you'll be able to look at all the winners. Um: And so you Yeah. So this is what happens.
+Okay,
+user avatar
+Unknown Speaker
+01:32:04
+Thank you.
+user avatar
+Dino Konstantopoulos
+01:32:06
+Okay, Next, next category. Next category is um cinematography. So trip to Ani Root and Suraj. Are you here?
+Not here? Okay, Are you online?
+No, not online, either. Okay, uh, okay, uh best director we have Atipati, Mish Nishan and Vikash. Are you here?
+Okay, Come on, Then come on down. You're representing the entire group. So you take you. Take the Oscars for everyone
+in front of the screen. Yeah, Yeah. Okay.
+So give him. Give him. Give him all Oscars and he's going to give him to his team members. So let me let me bring up the uh best director is Group four. Let me bring up the uh,
+so you can talk a little bit about your story book yet.
+So yeah, so uh, our uh title of this movie is talk it? So we named it uh soccer head like we we find some uh on the following uh my room, I mean in the story. So we guys are traveling from India to Boston as if we are coming to this conference. And uh, and we we we meet there the college, and we we uh,
+Yeah. So uh, So we roam around Boston, and we explore the food in Boston and uh, um! So so we reach out to one of our friend who is already there, and he he says that he is not available at the end.
+Uh yes, has to come in the evening to meet them, so we we don't know what I mean. We we still see there. Some uh uh a girl is following uh uh us behind, and so we were one of our roommates. So sorry. He's very speech about that. Uh: So why is she following with that? And uh, Uh:
+So
+yeah, and uh, yeah. So we go back to our house and find that the door is unlocked, and we find talking to features and happen, and uh, I mean into the bathroom, and you see some uh, and I come and call my uh, I mean I call uh my roommates, and and they uh and and we find there is no network. I I think the the the uh world uses uh the
+user avatar
+Unknown Speaker
+01:34:32
+we,
+user avatar
+Dino Konstantopoulos
+01:34:46
+and then uh, so we come back to present where we open the door now. And uh, uh, my, my, I mean one of my roommate finds that this girl is hiding in the closet, and she it's a it's him in. Well, you also this.
+Yeah. So if she try is hiding here, and another roommate finds and calls me so he and then uh, so he tried to call the police by tying her in the chat, and then it she puts them away. Next, I mean I escaped the location went to, and they say the rules that's behind. Uh? And then uh,
+yeah. So yeah, yeah, So we can.
+So uh. So she falls in the uh. She slips into the lake, and it's all drowning. So it's because it's done. It's all over. So I we, and the port is comes in. Find I mean tries to find her, but she she wouldn't be found anywhere. And then uh then the same night, once we go and see if i'm voicing my roommate again.
+Good job. Thank you. Um. Congratulations from online, too. Okay, Great? Great? Okay. Uh, next category is um
+best best. That was best director. Yeah, that was uh. Next category is best acting. So our pizza just want in Ravant or Ravant. Are you here?
+Are you online?
+user avatar
+Unknown Speaker
+01:36:11
+Okay,
+user avatar
+Dino Konstantopoulos
+01:36:12
+No, not online either. Okay,
+Okay, let's move to group seven. So Group seven is Beck's best picture. We have Sanjay and Vicin
+Sanjay or weekend, Are you here?
+Are you online?
+user avatar
+Unknown Speaker
+01:36:26
+Oh,
+user avatar
+Dino Konstantopoulos
+01:36:30
+okay, hello, Vicki! Uh! I'll let you. I'll let you present your picture. I'll let you. Why don't you share your screen, and you tell us about your story. First of all, let me show you your Oscar. Your Oscar is the best picture, so probably me showing his Oscar from here like so you can see.
+Take that on the Okay. So let me. Just go there and show him the camera. Is there? Okay? So you want to present present your work. We'll keep your Oscar here for you. You can um You'll probably you'll be able to get them from your tas. Uh do you want? I'll stop sharing so you can share your screen and and tell us about your your storybook in person.
+user avatar
+Vicken Matiossian
+01:37:10
+Oh, Sanjay, do you want to present? I don't have the storyboard on me?
+user avatar
+Sanjay Bhaskar Kashyap
+01:37:19
+Oh, all right. Let me just share my screen, and you can continue this sure.
+Um.
+Oh,
+user avatar
+Unknown Speaker
+01:37:34
+but um
+user avatar
+Unknown Speaker
+01:37:37
+uh,
+user avatar
+Sanjay Bhaskar Kashyap
+01:38:02
+no,
+user avatar
+Vicken Matiossian
+01:38:11
+we can. You can go. Okay. So so scroll down a little. Basically the comic starts off with Sanjay and I having a normal day on campus we go to. We meet up, and then we go to our data science class.
+Um, and then after that uh scroll down, we're we're having some trouble with histograms. So we're frustrated. So we go to the library to study a little more
+um
+keep going down
+um. And then, after we study we go get food at the student center.
+Um, and then, after food I get a call saying that um dual. Lipa is having a concert on campus that same night. Um,
+um! And then what Sanjay and I decide to do is use data science to find out um what hotel she's staying at, and what route she's going to take to get to the concert so that we can get an autograph.
+Um. So we end up finding out that uh keeps going down. Um! She's staying at a certain hotel, and then that night she's going through a dark, dirty alley to Northeastern, near Ruggles, and she sees a bad guy who, who, you know, wants to rob her.
+But since we use data science to find out her route. We were already there, so we beat up the bad guy
+Um Sanjay and I,
+user avatar
+Unknown Speaker
+01:39:34
+and then always celebrated
+user avatar
+Vicken Matiossian
+01:39:37
+um by having tasty Burger.
+Good job, Sanjay.
+user avatar
+Dino Konstantopoulos
+01:39:49
+Okay, Um. So we have Uh, the categories remaining. Are we gonna uh?
+So that that was uh. So that was the best picture. So why you want to keep them so i'll. I'll quickly show you the cinematography, and that it's just that it's screenplay.
+Um. See? Adapted screen, Please group. Eleven. So let's quickly go through Group eleven.
+Some of these files are really big. So this is Group eleven.
+So it was a clear fall morning in Boston, two men were stranded in a cabin just outside the city. Um!
+What are you doing doing? Halloween?
+user avatar
+Unknown Speaker
+01:41:01
+Um,
+user avatar
+Dino Konstantopoulos
+01:41:04
+I think there's drinking and and just uh chatting,
+and
+uh, i'll quickly go through the story, but I i'll upload it so you can uh uh look at it a little bit. They're talking about Christmas plans.
+Um, They're talking about what they were doing. They were helping
+uh and uh an interesting conversation. Um,
+And so It's essentially they're discovering each other. They're saying, Okay, you're You're a good person. Um! And it gets dark outside.
+Uh, and then
+uh
+they um.
+It's a story about uh uh somebody will run something with a porsche and then um
+Oh, and then
+they slowly discover
+that uh,
+it was actually all a simulation.
+Okay, so it's um. It's an interesting screenplay, so you you can. You can um read it up posted on canvas, and then after that we have um
+cinematography. So that's Group eight. So the cinematography are like kind of like really nice pictures. So
+um, I look very much like a calling book. I think. Um so in this picture. It's a story of somebody who grows up loving baseball and um,
+essentially following the story of this person who was injured, and he gets in shape, and then he starts playing for a baseball team, and
+and then after that, we have uh
+actually wasn't here in best acting is uh was uh group two.
+So um
+group two.
+So this was interesting because it was black and white.
+So, um!
+They recount the story of an early morning. So uh, it has. Breakfast goes to the garbage. Can somebody attack him, struggles
+um uh Brooks takes into the car kidnap and essentially finds his phone, puts him in the car, ties him out, calls his room, and says, Uh, if you want your roommate back, then have to pay. I would be like, hey you! I think it's good just to keep him. But maybe it's i'm just told,
+and so um
+um, but the other. But his roommate doesn't have the phone, and eventually he finds the phone right. It's a little bit later, and you see the message, and then he calls, and then I don't know what the kidnapper does. He brings it. He brings the room back, and he's in there and right. But I I thought the um
+so that that that was best acting. If you look at the expression on on the people's face. I thought the acting we thought the acting was really good. So this is why it won the acting award.
+Okay. So what i'm going to do is I'm going to put the all the story books up on canvas so you can see them. The Tas uh you. You'll keep the um. Keep the Oscars and the students can come and pick them up from you.
+Um, and that's it. So. Um! We only have five minutes left. So uh, we don't have time for any of the notebooks uh to finish them today. But what you should do when you go home is you should do the uh, the midterm prep. Kind of to get an idea for what you can expect on Thursday.
+There's also gonna be a take home problem at the end, but that you have a week to do the take home. Um! And uh, if you want to look at an application of how you can apply hierarchies to analyze baseball players specifically conclude that um
+batters uh pitchers uh are not very good at hitting them, hitting the ball when they when they have to, they have to back. And this is kind of using using how hard you go models to figure it out. So it's in the form of a lab. So you uh uh, you just copy paste into the uh
+uh, into the sales,
+and that will give you the simulation.
+Okay,
+questions.
+Okay, that's it. So that's it for today. Um.
+So yes,
+yes, it is so. So here's an example. The
+the um,
+Yeah, right. I actually I don't think I gave you who here say how you figure it out? Uh um. But yeah uh you, you Yeah, It's so. So something like, you know, i'll say, for I range
+a A, and you put the number. There was the right thing here, and then right so it doesn't have to be correct, because you won't. It's not going to be a notebook. Um! But that the algorithm should be correct,
+of course. Why would you want to program in, child?
+No, it's It's a single window. So log down browser so you can. Google, you can. The moment you leave the window your midterm is over.
+Yeah, you can bring up to ten pages of either type, written or handwritten text
+anything you want,
+so you you can take all the lecture notes and make them really really small, and bring everything with you.
+The questions will be anything we covered in the last eight weeks The questions will be anything we covered in the last. You know everything we covered in. The
+Hmm.
+No, no, no. Our program No. Just python.
+Okay. See you Thursday?
+Yes, just not like normal. Yes, we're going to do them in the mid-term in class with a lockdown browser.
+So you just show up in class. Everybody. Everybody. Please show up in class. If if you can't, it's it's, and you need to be. You need to be away. There has to be a specific reason where you can't come to class.
+Pardon.
+You don't know how to type.
+Oh, in latex and markdown. No, it's okay. You can. You can just type in English. So it's not no formula it's required.
+user avatar
+Unknown Speaker
+01:48:37
+Okay,
+user avatar
+Unknown Speaker
+01:48:39
+yeah,
+user avatar
+Dino Konstantopoulos
+01:48:48
+yeah, yeah, go ahead. And what's the question?
+Just uh your close are is somewhat
+the first question. And you see, these refers so long time to meet. So I just don't know whether there are any.
+Yeah, Yeah, You see, It's all the phone call costs a lot of come to complete.
+Is that okay? I see on your computer. It's often very, very, Jasper. It's over Sorry because I have. I have a Gpu shit. That's one. I also want it to. You know.
+My question is about Pm. Dot the war on the or Pm. Dot uh when I was completing your homework, and
+Oh, no, That's the Firstly, I have to program by one thing that you see um in this book. You imported this one, and it's not. Oh, yeah, I forgot to give it to you. Yeah, i'll put it up. I'm: sorry you got it. I forgot about the data. Yeah, let me let me do that now it's called batting averages, not Csv: Yeah. Yeah, let me put that up there. I forgot one file. Let me put that up there uh so
+your zip. So I think you have to double check.
+user avatar
+Unknown Speaker
+01:50:20
+So data
+user avatar
+Dino Konstantopoulos
+01:50:23
+Bayesian labs data banning averages uh, where are they? Yeah, this one is. It's called batting average on Csv: Right? Yeah, let me put that up on canvas,
+and then
+you see a
+No.
+You think about the use parameters. You never make a mark or something.
+So I have to. Uh yeah, it's a normal. So no the parameter for normal. It's always mean a standard. So what about the parameter for it's It's the it's the exponent. So if you look at the uh, the uh formula for the exponential, it only has for one primary.
+Okay. So when I was completing my homework,
+my my teammate, He haven't shown up for many days. If he doesn't show up, you get bonus points right, Do you know. But he said, he has the do you? So on? Just
+okay,
+Everyone's the first,
+because just previously you have a due. But next day we have A. We have a the term exams for other, do they also?
+But if if he doesn't, if he or she, if your teammate doesn't uh respond at all. Then then, you know you have to do something on your own. If you have to do something on your own, you should get a bonus because he didn't help you, because he didn't want to think uh, actually, he said, he has to do so
+Just if you have a homework due next week, then you have a whole week to arrange to meet and do the homework together. Actually, there. Uh your assignment is uh is released about two or three weeks ahead of time, but
+actually another of our teammate in one of the previous assignments. She,
+I don't think she also contributed a lot.
+So let's just talk about the rainfall. Yeah, When I was completing the rainfall and Bayesian, I personally,
+you see I
+these, so that if I have any arrows I can just copy paste and okay, Go Go back to the previous version that doesn't work. No, it doesn't make sense uh let's talk about the U Cpi. And when I was trying to
+find the parameter, eh? Actually, I did this with the help of your tone. And then I just don't know about the parameters of the
+Okay. So that's the uniform distribution. So the uniform distribution is a hat, right? And it's a hat between the lower value and an upper value. So if you think the the take the lower value to the upper value, and it's a hat in between. So this would lower and up
+right. So So if you have a uniform distribution for the die, right the die you have. You have sixty zero, one, two, three, four, five, six, or actually one, two, three, four, five, six, So that's between one and six.
+That's a that's your uh teammate,
+the
+his uh,
+just you, and I think I I should uh reply it
+So what i'm going to do is i'm going to send an announcement to Section one tomorrow to please come to class so we can, because I forgot to make an announcement today, and we had half of the team that didn't show up for their Oscars.
+Let me put an Oscar Oscar ceremony tomorrow.
+Yeah,
+yes,
+uh. And then Sam looks great. Looks beautiful. Uh, actually uh, When I was trying to run this, something happened.
+Yeah, it's not. I'll go back up.
+What things great these are on regular quotes you. There's a copy paste from somewhere with regular quotes. Put the quote again now to the regular quote.
+Oh,
+uh, I maybe don't restart, because this one is still running
+tomorrow.
+Okay,
+I think maybe we have to wait for some time to.
+So why this this works with double quote, but and this one with works with single.
+You have some strange character there.
+It told you that January is not present. So uh, now it should work.
+So
+why do you have a strange quote? What is it slanted?
+Because because, you see the previous one use it. You use this, so I just follow your step,
+but I didn't. I didn't use slant in quotes. I noticed that with her when I was fixing that time Ct. Her codes itself, Harry, that font as a little different if you notice It's that's just the style of the call. Sometimes it will cause a problem. I I saw the problem. That's why I told you to fix it So just fix it. When you get the same problem. Just put a single quote there that she speaks to. I see the homework to use the airport data,
+as the data says, So can we choose the May or August?
+I see the one in the It's a very similar in a but um more
+if you do all twelve months, not just one month. They're different. They're different models, but each one has a different parameter.
+But you should do it for every month, just like for mom and Mle.

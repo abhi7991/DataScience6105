@@ -1,0 +1,668 @@
+Okay, let's start
+Oops.
+It's not September.
+It's uh November.
+Okay.
+Um. How's your home? Take home? Going?
+Okay,
+Not okay.
+user avatar
+Unknown Speaker
+00:10:14
+There.
+user avatar
+Dino Konstantopoulos
+00:10:17
+All right. Um.
+So um, i'm going to be teaching a a new class in the spring semester,
+which is uh It's gonna it's called neural data modeling.
+So you know in in what we're going to be doing is we're going to be doing
+so. We're going to be doing the data modeling that we do today that we we did this semester with analytics. Um, we're going to do. We're going to explore the machine learning algorithms. So how how do we build models with machines.
+So there's some advanced classes in in in this respect. Um, i'm Jen and Corey and but um, I don't think there's a very good introduction class,
+and people tend to skip the
+basics and go immediately to the specialized stuff, and then they miss a lot of basic knowledge that is very useful. And so there's a lot of algorithms, including your random forests and support vector, machines. Um,
+um!
+Before we actually go boosting methods before we actually go to neural models. So we're going to be exploring those as well as neural models. How do you build your
+um, your layers uh your your neurons per layer? How is that different from the analytic approach? Right? The analytic approach is to look at the distribution of your data,
+and you do that by looking at the histogram. And then you say, Okay, what function do I know that looks like it in class we learned,
+you know, maybe maybe half a dozen functions that we can use single hunt function so far that we can use to approximate the data. And then you say, Okay, Um, these functions have a few parameters. Let me find out the parameters,
+and so it's a it's it's um!
+The job is to find the solution in parameter space. So you're looking for uh the parameters. And there's different methods for solving that we look at method moments. There's the really base Max, and likelihood estimation. And then there's basic simulation which is the more modern version of how find these parameters using simulation?
+And so we talked about
+the previous step not many steps before um, and we saw examples of that, and we even looked at one of the algorithms that does that we trouble is how great and part of your take home is also run a simulation right? We run a Monte Carlo simulation of the seven drivers and seven shows or one driver visiting
+mit
+um.
+So in a certain way. Machine learning algorithms are a lot of simulation, because what we're trying to do is we have um a certain profile for the data Um, Either the profile for the data or profile for the Instagram or the data. But we have some some kind of a a data set,
+and we want to learn that data set. So we can throw away the data set and just learn the function
+erez agmoni, in ten or twenty dimensional space. And so we're good at most of this class we work on univariate data, a data, one of their variable. So there's one random variable. So there's one axis of keys. If We have a discrete one hundred and fifty
+set of events, and we have a discrete set of events. We we, we, we look at their P. Function as a dictionary, and then we look at continuous functions to right, and then and then, instead of having a P function, we have Pdfs probability density functions.
+Um. But in in multivariate data it's much more complicated to use analytics. Um, we're not really very good at doing this with many, many variables. And so that's what we turn to um different algorithms to let us do that. And one of those is, for example, building a neural net,
+and many say that New Orleans is exactly also how the brain solves ourselves all these problems, because we we are essentially a geometry engine.
+We, we, we, we take in observations, and then we try to fit a function through these observations, which is the model, like the data model. And then we learn the data on. And so we know what it means to drive. We know what it means to take a walk. We know what it means to
+erez Agmoni have a friend. We know what it means to fall in love with all these things means, but mean because we have a model of them, and we don't need to rely on past experiences anymore, one hundred and fifty.
+And so Um: yeah. So this is a class I wanted to teach for quite some time. I I put in the proposal. Um, a few years ago, and then it was approved a year ago, and then it's finally on the on, the
+on the on the class list for for the spring semester.
+Okay, So what we've seen so far together is we went through the first part of the class
+which introduces probabilities and statistics, and you, you you you! You should now be able to think in terms of distributions. And what kind of distribution do I have here? Oh, Okay, it's a formula, one kind of distribution. So it's a binomial.
+How many times do I win If I have a certain percentage of winning in each race. How many races will I win? Or um? It's a sequence of independent events. Um! So I know It's a Gaussian, or it's a sequence of independent events with a lot of outliers,
+so I know i'll use a student team. So this was the first part of the class. Second part is we, You know we we, we're going to. We're going to learn um linear algebra and linear algebra is very important, because especially when we move to a multivariate data, we're going to do that, using
+matrices right, using linear algebra, using tensors. And we're going to be transforming these tensors, and we want to get very good in the beginning of the class. The first part we got very good at working with univariate data. So working with functions and
+and computing derivatives. But now we want to move to being able to work with many, many variant data, multi multi-dimensional area data and so we're going to do that with linear algebra. Um. And so we're going to instead of working with
+functions. We're going to be working with um um with matrices that represents the the effect of these functions, and we'll see how matrices, especially with linear functions, the functions that Don't have squares and exponentials, and all that can be uh their effect can be captured by a matrix.
+We're going to have to get good at this at this matrix kind of thing, and there's um.
+There's a very uh close relationship between matrices and graphs.
+Right? So a graph is um
+um um
+a set of points, together with a relationship that one point has a with another point. So we represent the points as vertices and their relationships as arrows. And so, by linking these arrows we form relationships,
+and by creating graphs we're able, then we're able to do some very interesting analysis. Google is entirely a graph based company, Right? Um, Google
+uh uh explored the web and found the rules for how to follow the web and and give you the best. The best urls for your search. Facebook is a graph company, right? It's the graph of friends. Twitter is even a graph company. So so there's a lot of graph companies. And so graphs are very important, and we analyze the graphs one
+um with with matrices. And so um in in a big way, Google um applied mathematics to the World Web. That's how they they They created Google and and the mathematics. We we're we're going to see with the mathematics underly, and and the most important mathematics in graph theory are eigenvectors and eigenvalues,
+and and and these are privileged directions in in in the vector space that where special things happen,
+where a transformation is nothing more than a dilation or a contraction,
+because typically a rigid transformation in space. And I I, I you, can think in space in three dimensional space. But you can also generalize in n dimensions in in three-dimensional space when I take something and not
+and then I move it from here to here. It's a solid transformation. Right it's. It's a rotation followed by translation follow, But there's movement.
+Um! But there's this special set of directions in space where this movement
+you find the special, the secret sauce of a transformation.
+How how do we reproduce the data set? What's the mechanism that give rise to the data set? This is why we look at any entrepreneurs. It's a very, very important uh subject matter. There's an entire in your in your in the textbook for this class, mathematics for machine learning. There's an entire chapter devoted to linear algebra.
+So, um reading material, Please take a look at this chapter. I think it's Chapter six. I don't have a book here with me, but
+so much of what is in Chapter six we're going to look at in this notebook. So we're going to study a couple of notebooks in linear algebra. And then we're going to see how that applies to creating graphs. And then we're going to see how graphs are very important to um all kinds of machine learning algorithms.
+So that's the plan for the remain of the semester.
+So let's go ahead and and load this notebook called some linear algebra math,
+and i'll go straight to
+the same one. The only difference is that I've already computed things here.
+Okay. So if you look at
+um optimization theory, we we did that we some of the algorithms you can think of Um, the metropolis algorithm and the business simulations as an optimization. Here
+we try to find the best parameters for the data. So optimizing, uh, we're optimizing uh a certain cost function. What's our optimal values for a parameter if we want to find the uh, if we have a data likelihood for the data, and then we set up Pdf for the parameters, what's the optimal value for these parameters?
+And then vector calculus and linear algebra, which is the the
+the two foundations on the left, is what we're going to be looking at now,
+together with matrix decomposition, which is the the bottom foundation to the right.
+And then all of these methods come together, and with different algorithms give rise to the science of machinery. What we call um uh algorithms that learn how to build data models. Um: with less human intervention.
+So Um:
+so um, this is kind of the basic math that you need to know. So if you want to get into machine learning, the math that we cover here is not kind of optional
+right? It's kind of necessary. You need to know this math
+um, And you know we've done a little bit of math so far in class. I told you not to be too scared of the man. But um! You need to understand this. So if there's anything in this matter you don't understand, please. You don't see the tas or ask questions. Don't Don't remain with
+Yeah. So, for example, integration we looked at uh, we look at base base formula, right? And we we saw a base formula in the continuous sense is an integration of the um of of all possible parameters in your model, and and the integration is nothing more than a generalization of a sum
+right? And we saw an example of a sum when we looked at our M. And M. Problem right. Remember, when we looked at our M. And M. Problem, we actually computed the denominator.
+If you have many, many other possibilities, you have to sum them all for the denominator. And then slowly, if you move to a continuous variable where there's an infinite number of keys, then you take the integral and the integral of a function is the area under the function one.
+So um! There's a little bit of math here, and we didn't spend a lot of time on the math. The book. Mathematics for machine learning actually does. So if you look at the what I recommend you do is you look at the chapters in the book that does the math that we talked about in class computing derivatives. Um, there's a chapter in the book for that,
+and if you have some uh, you know on uh things you don't understand. Really, the best thing to do is to talk to your Tas, because they they know all this thing, all this stuff, and they can tell you Okay, They'll explain what the complicated part of the map,
+and then you can also do a Youtube and look at examples or or get textbooks, but you see, probably with textbooks, as they put you to sleep, because they they cover a a material very heavy hand. It's like an entire other class. You can't afford to take another class to take another class right? So you have to find shortcuts.
+So um some of the math that that we did such as
+um, you know, computing uh derivatives or computing integrals. Um, if you want to get into machine learning, you you everything that we covered. You need to be comfortable with,
+and you don't need to be comfortable with it immediately, but you need to eventually get comfortable with it, so the more you can learn about it the better off you are. Because if you want to, you know, go and you know what's the dream job work at Google and do machine learning at Google. You need to know this stuff
+if you, If you go to a smaller company, maybe you don't. But the the top companies. This is thing, everything that we covered in class. You You need to know how to do that. You need to be knowledgeable about it, including the math that we're going to be doing
+today and and all throughout the semester. So yeah, my recommendation is, you know, you don't need to
+understand everything right now, but you need to be at the point where you have a road to understanding it. If you want to get into machine learning. If you don't, you know, if this is just you taking one class because you're curious about the subject. But eventually you want to get into web program, and you don't want to do any math, and you don't need to know that my
+depends on what you want to do right. And if you typically, if you want to maximize your chances of finding a high paying job A good job? Um! The more you know the better off. You are
+right, because you don't know who's going to be interviewing you. You have no idea.
+The the first job you get is is is kind of a luck right? You fall on a company that kind of likes you. You kind of like them. And you say, Yeah, let's work together. You don't know what exactly going to be doing now. Eventually you'll move on to different jobs, and then you'll end up doing what you like. But in the beginning you don't know. And so the more you know the beginning
+the better off you are you? You're going to be with your interviews.
+So yeah, the answer to your question is, um. You Don't need to know everything right now, but you need to.
+Okay,
+So let's cover some of this math uh linear algebra was really found in uh, like four hundred years ago. No, three hundred years ago. Um, three centuries ago to solve um
+equations of many variables,
+right? Because you have data sets that are not many variant. There are many variants but
+um, and so how do you solve it when when there are no squares or exponentials or square roots, when the when it's. Linear So everything is is a function of the variables.
+So um the mathematicians, three hundred years ago set up a system, a method
+foundation, the methodology for solving these things. So the equations you want to solve is the one that I have written right there, a one x, one plus a two x, two plus a three x, three equals something, and then B, one x one, and you want to solve the the the uh. What you want to find what the values of the X's are,
+and you can think of each row as a different observation. And then you can think of the column, six, one uh, and and um uh x, two and x three unix, four as as the columns of an excel spreadsheet. These are your different variables
+So um. If you study linear algebra, and this is this is a a class you can take, or you can go to the web, or you can go to Khan Academy and find a class on linear algebra. They teach you how to solve these equations, and it's usually done with matrices. So let's see how it's done. Um!
+There's a way to represent this equation
+as as as as small a number. You don't need to write as much. So when we use capital letters. We usually mean vectors or a matrix, so we represent a one, a, two, a, three, B, one b, two, b, three as the matrix, A,
+and then we represent the the vector, x, one, x, two, x, three, x, four, as the vector, big x,
+and it will represent the vector Y. One, y two way three all the way down.
+Yeah, up to twenty, six as the vector why,
+right? And then and then, if you write as a matrix, This is what the matrix looks like,
+and then and this is what X looks like, and this is what y looks like. So what you need to learn is how to do these operations to to to get back these equations. So you learn matrix multiplication. What you do is you take your X and you go. Okay, this is a a a column. This is a line. So i'm going to get my first. Why, by taking this
+times this and then i'm going to sum this
+i'm going to i'm going to summit to this times this, and i'm going to summ it to this
+times, this
+times, this sorry times this right? So you go. You go column. You go by row by column, and that will give you the Y. And so you just you just learn how to do that. And then you, you! You're able to write the equation this way.
+This what?
+Um
+The The vectors um are usually so so. Um, you. You can think of each vector here as a as a collection. Um, And so the question is, is the collection of set. So the reason why the collection is not a set is
+so. It's. If it If it were a set you would have unique numbers. You don't need to have you with numbers, right, the the this this vector right from point right there in the class, is directed as one, one, one, one in the diagonal right. It's not unique. It's not this one. So um! We can think of each one of these uh, uh, at least each each each column as as a list. It's It's a list rather than a set.
+Yeah. So can you think of them as lists? If you don't have a lot of back one in math. Just think of each one of these item as in the list list of lists, and a tensor is a list of lists right in three dimensions. So,
+and then you just learn how to do make for the multiplication. So when I say, when I say when I write a X equals, why, how do you actually go from this matrix to this system of equations, And this is you just learn It's just you start with three by three. Start with a two by two matrix, and then go to a three by three matrix,
+and then a four by four, and eventually you can think of in terms of an n by n matrix.
+Um. So I give you some links, so that gives you a little bit of information about how linear algebra was funded was was was was was invented,
+and then uh about linear transformation. So now we can talk about. So you know, one of your classmates talked about about sets. So we can talk about the the the elements that all of these vectors, all of these entities belong to, and these these elements belong to a new kind of
+unity called a vector space,
+and then a vector space is essentially a quad.
+You can see a vector space is a quad. It's a tuple of dimension four. So there's four things. So we have a space. V. That is, multi-dimensional like the classroom that we're in. How many dimensions has does the classroom we're in have.
+Huh?
+What's What's the dimension of the space we we share together three right? Because we have going up going out and going out this way. Three dimensions, right? A a unique point. You are at a unique point in this vector space described by three coordinates,
+right? And so this is the vector space,
+then we also use scalar fields. So this is this is Um. This is the the real line,
+right? This is all real numbers,
+because we we need to be able to take one vector and make it bigger or smaller by by saying, Okay, this is a vector of size one. This is a vector, size square root of two,
+but the vector is just points in a direction, right?
+And then we need an operation that sums the vectors, so we need to be able to say you plus u equals you in the middle, because you take the two vectors and you add them, and it gives you the vector in the middle, so we need vector operation, and then we also need operation of multiplying a vector by a scalar,
+and then this vector space has some additional operations, additional constraints. It says that the operation plus is commutative,
+which means a plus b need to be equal to B plus A.
+It's also associative,
+which means, if I do a plus b,
+so you you can think of me as a space in that in the space and pluses and operations that kind of a space and the scale of multiplication of the space. Then you have what's called a vector space.
+So linear algebra is a study of linear transformations on these vectors.
+The matrix vector product, Y. Equals x, Where y is a list is a vector X is a list as a vector and a is a matrix or a list of lists,
+a linear combination of the column of A. So we can write this entire equation here,
+either as a matrix form or using indices in this form.
+Y: I:
+Okay. So So here we're using indices to represent the fact that we have vectors,
+because each each entry is another dimension in the vector
+So if you do, if you do um general relativity, and you have a lot of mathematics, you even get rid of the sum.
+So you remove the sum, and you write y a equals Aij. Xj.
+Right? And this just says this is another way of writing this.
+Now you can also write this this way. You can say that a Y equals a times x, which is, which is this, which is exactly this right. Y equals y equals eight times x
+um, and you write a as as a combination of many columns, and the x as a vector And so this is also a a column vector times x zero, plus a column vector, t with x, one plus et cetera.
+And this is essentially python syntax right, because the python syntax, we say, ai comma j,
+or we can say a all columns J and A. I. Um sorry all rows or all columns.
+So because we've done things in python. Um, this should. This kind of notation should look familiar to you.
+But this is all the rewrite of the same thing,
+so writing it as a matrix, writing it as a set of equation, writing it with some, writing it with many different indices. Um! This is the math that you should be comfortable with.
+Then the way you get comfortable with this is is, Write this down for two two dimensions, and then three dimensions and eventually four dimensions. Right? You never solve the problem
+From the very general we solve a special use case, solve it for n equals one n equals two n equals three, and then generalize
+user avatar
+Unknown Speaker
+00:38:39
+of a set of vectors as the set of all possible linear combinations of these vectors.
+user avatar
+Dino Konstantopoulos
+00:38:46
+Right? So so the span of the three vectors, the unity vector here, or the unity vector there, and the unity vector going out there spans the entire vector space, because I can write each one of you
+where each one of us represented by a vector starting at the origin, and pointing to where you are as a as as a as a combination of three numbers. So it's a span of three numbers, and what we do is, we say that the the vectors that we use are the basis vectors. So we take the vector one zero, zero, zero, one zero, zero, one.
+So their vector So the lists as the span of the three-dimensional vector space.
+So in n dimensions this is the span that we usually take This is the canonical span. This is we have one, and then all zero. So zero and one and all zero zero zero all the way down to one.
+Okay, let's talk now about linear transformations and their matrix of presentation. So now we're going to be looking at functions
+functions that are functions of transformation. But we're going to be looking at functions that are, linear and what is what is linear mean?
+So this is a definition of linear a function, a transformation, a map. All these things are the same thing, right? So i'll talk. I'll talk about them in exchange the words, Here we have a function here. We have a transformation. Here we have a map.
+They're all the same thing right? Because the map tells you how one number gets transformed to another number by mapping from one number to another number, so it's a map.
+So a function, a map, a transformation is linear
+if it preserves addition and scalar multiplication. What does this mean? It means that if F. Of V plus w needs to be equal of F of V plus F. Of W. And if F. Of Cw. Equals c. Of Fw. Where C is a number is a scalar number,
+so I don't. Sometimes I say scalar for a number. Why do I say scalar? Because it scales a vector it makes it bigger or smaller,
+it sees bigger than one, and two times a vector makes for a bigger vector If C is one half it it, it, it scales it down, so it scales it down. So that's why the the set of of real numbers are called scalars, because they help scale out vectors.
+If you have these two equations. If you have these two equations here, then the function is linear the function. F is linear
+if you, If you had a square in the transformation. That would this would not be true anymore,
+but because the function is linear, then you have these two equations. So look at this thing. If you have these two equations, there's very funky things that happen. Look,
+Take X. Suppose X is a linear combination of n vectors.
+Then if you, if you want to find F of X, then X is you replace X by this? And because you have these three equations, this becomes this
+because all I do is, I say that f of a one v one plus a and V, and I decompose it as F of a one. V one. And then I use this equation to take the A and put it out.
+And so I have. That F. Of X is actually a of F. Of V. One A. Of F. Of N. Of the N. So what does this say? The function applied to any vector
+in order to compute it? All I need to know is the function applied to to the vectors V. One, V, two, v three vn. And the vectors v, one, v, two, v three Vn. Can be the linear span of the vector space. So all I need to do to to to determine the function f it's effect on any vector
+Is it's effect on any of the basis. Vectors one zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero, zero, zero, zero, one zero, zero, zero, zero zero,
+because I have a linear function.
+So let's do a little exercise here. Suppose I give you a function a transformation. But now we have multivariate function. So I tell you that the transformation takes x and and transforms it to y, takes y and transforms it to X.
+So it switches the variables right
+and then take Z and transforms it at two z plus y.
+Then um write down the lambda for this function,
+so go ahead and write down the lambda for the function. You should be here. So you don't have the lambda for this function. So please write it down.
+I I gave it to you, Oops. I forgot to erase it. Okay? Well, hopefully, you were able to write this. So so this this, this F I call This is the transformation. It takes X and transforms it to y. It takes y and transform it two times z plus y. Everybody agree
+that's that's the function f so I I use the lambda to determine it. And I call this F. This is the same thing as they had done this right. This is the same thing i'm defining a function with three parameters
+right? So Don't, like the fact that we have a function of X Y. And Z throw you off is just a function with three arguments. We play with functions, with three arguments and for arguments and five arguments in classes should not scare you right. So why should multivariate data scare you? You've done this.
+You've program functions with many inputs. So it's just It's just another example of this. So
+um,
+if we define
+that function F, then we can you we can see what F of three. One one is right. So if we run this F of three, one one is one, three, three.
+Yeah.
+Now, what I want you to do is write down the transformation through F of the standard basis, E, one, E, two, and three. So tell me what the transformation of each one of these vectors is. Write down the code
+just just the same way. I told you what F. Of three one one is. Tell me what f one one one zero, zero zero. One is
+because we know that if we have F on these basis, vectors,
+then we have f the effect of that on any, vector
+so go ahead and write it, write it, replace the ellipses with the with that with that function.
+What is
+so? If you write down.
+If you write down the transformation, and you see you see what the what the solution is.
+Then you will see that the solution is this.
+So if I repeat as a one, it twenty, three, and I want to write,
+I want to write the function
+um
+e one plus e three. Then I can take this plus this, and see whether it's equal to this
+right. And and if I run this, this will tell me whether that's true or false
+group, and P. Is not defined, so we need to
+imports
+and I as in P.
+Right. So you see the addition here. I took the
+um numpy r one zero zero and the new pi r one, and that became the new pi r one one, and I made sure that this is true, for each one of these. Uh, this is a this isn't true.
+So, in other words, what you see here is, Look, this is F. Of e, one F. Of V. One is e, two, Does everybody agree?
+E: one plus e, two,
+yeah,
+and f of v, three
+f of V, three is two times E: three.
+Does everybody agree?
+Yeah.
+F of e, Two. This is E: two right? F of V, two is zero, one zero, one and zero. One is e, one plus e, three. We verify this here,
+yeah,
+and then F of e, three, right? This is e, three f of e, three is two times e, three
+right? So we have F of V. One equals e, two f of v, two equals e, one plus c, three, and that will be three is two times e, three.
+So what we say is, we write this as the matrix of F. So we write. F will be one easy to. So we write e, two as a column
+F of e, two is e, one plus e three, so we write e one plus e three as a column. The middle column, and F of V. Three is two times e, three. So we write two times a three as a column, and this matrix defines F.
+Because it tells us the effect of F on the on the on the linear basis.
+So this says that the effect of F on the vector three one one.
+This is what we computed up here right three. One, one gives one, three, three,
+and so we write that the effect of F on three, one. One gives us a new vector one hundred and thirty, three, and you can verify by matrix multiplication
+three times one is three,
+plus one,
+and then one
+sorry three times zero plus one times. One is one plus two times one is three, three,
+right? So what we wrote here as a matrix,
+but it's a linear function, so you can see. Linear function in matrix
+is just two different representations of the same thing.
+If we have a function that is, linear we can represent it as a matrix. Does everybody understand this? This is fundamental.
+So, um, we we we first, said we I that I gave you. So so let me go through it again. I gave you a function. Yeah, I told you it's a transformation. This is a function,
+and then all I say is here you have a function. Now please compute three hundred and eleven.
+So what's it? What's the effect of this function on the vector three hundred and eleven. And then you say, Oh, look, It's one hundred and three. And you say, Oh, okay, we one through three. Okay, let me make a mental note of that. Now turn a page and do something new. Now the something new is, compute the effect of F on the basis, vectors.
+And then you find out that f of
+e, one, z, two f of v, two is one plus three, and f of v, three is two times e, three. So In other words, you can write the F as this matrix, and which means, Now let's redo this operation. Let's redo this operation, but using a matrix, let's compute what the mapping is of F three hundred and eleven. So we're going to write our matrix. This is the matrix that represents our function. We're going to write the vector three hundred and eleven, and we're going to do the computation. And look, we get one hundred and thirty-three, which is exactly the result. We got here.
+So what i'm trying to prove to you here is that what you do? As a by by programming a function you can also do with matrix multiplication.
+So everything that you write as a function. You can also write as a matrix
+and writing things as a matrix makes things a lot easier.
+Okay, So that's that's the that's the theory behind this. If you understand the math that we did here, you understand a lot about matrices already.
+Um. So now in here. Um,
+write down. Okay. I told you to write it down, but I already have it written already. So it's nothing to do. The matrix presentation of F. With respect to the standard basis, so this matrix here write it down as a new pi or a well. This is this: This is an empire, a right noon pi array of the uh of uh,
+Oh, I I actually I don't give it to you, so please go ahead and do that
+right? Right? This matrix down as a as a new pi array, So just replace the zeros with the right numbers.
+So, right, this matrix is a new py Right now we're graduating to you more complicated things.
+user avatar
+Unknown Speaker
+00:53:28
+So the solution is, if you double click on the cell, it's right here. This is the new pi array that represents this matrix.
+user avatar
+Dino Konstantopoulos
+00:53:35
+Right? So you copy it here. You put it here, and you say, Okay, it's this matrix.
+This is the matrix.
+Um,
+Um, sorry.
+See
+user avatar
+Unknown Speaker
+00:53:53
+Control The
+user avatar
+Dino Konstantopoulos
+00:53:57
+This is this matrix. Here is everybody agreed. One zero, one, one, one, zero, zero, two. So now we can also write this matrix as a new pi or a, and start computing with matrices.
+If we want the matrix multiplication, this right down. Now, Now please write down this is the matrix of application, the
+so to write this down as a matrix multiplication. This is the
+this array that we just computed. So we're going to cut, copy, copy, Paste this array down here, and we're going to put it here.
+And then this is the multiplication sign in python.
+This is the matrix multiplication, science, and at sign the
+right. And so we want to multiply with this with this, with this vector three, one, one. So we write that this is times the vector three, one, one,
+three,
+one,
+one. And if we compute the result of this, you will see that the result of this is the vector one hundred and thirty, three, which is exactly this, vector here one hundred and thirty, three. Okay,
+this is what we did up here.
+We wrote a function.
+You can do it with
+matrix multiplications by hand, or you can do it using new pi, new pi arrays you.
+Yes,
+you have three different ways of doing this
+agree or not, I disagree.
+I agree.
+user avatar
+Unknown Speaker
+00:55:33
+Matrix:
+user avatar
+Dino Konstantopoulos
+00:55:34
+this. Yeah. So it makes. You know the application by hand is easy. Once you get once you get the mechanics and I show you some examples um examples down here. So you will learn to do matrix of location when we look at the examples, but it's It's going by column and by row. So what you want to do
+when you do the matrix multiplication,
+which is uh, here
+is you take the rose,
+and then you take a call.
+So you take the first row, and you multiply that by the call you take the second row, multiply by the call. You take the third row you multiply by the call when you put each result in the different rows. And how do you do the multiplication. You take the first number here, and the first number here. You sum them sorry you multiply them, and then you you store,
+and you say this number and this number you multiply, and you store this in this number and this number you multiply, and you store the result, and you sum the three numbers, and the sound is one.
+So you take this number and this number. That's three Sort this number and this number that's zero. Forget this number, and this number is here. Forget it. So the only number we have is one uh is three, three times one, so we'll go to three there,
+and then you'll see the last column, and and that will become the last of the last row will become the last row here. So zero times three zero. Forget one and one times. One is one store, one, two times. One is three store store two, and then add two and one, and then using this three.
+Okay, So that's the rule.
+So now you have three different ways of doing the same operation. Yes,
+user avatar
+Unknown Speaker
+00:57:15
+the same set.
+user avatar
+Dino Konstantopoulos
+00:57:26
+How do we get that? We we get that from from the function. I define this transformation.
+So this is the definition of F. So now I see what F is only one. What is the effect of F. Twenty-two. What is the effect of F on E. Three, and I computed the effect here. This is the effect:
+This is E. Two f of v, two is e, one plus e, two
+f of v, three is two times e, three, so I rewrite this here,
+and then the results. I write them down as a matrix, and that's the matrix that represents a function of
+So uh, we can. Yeah. But but in order in order to write the matrix of if you always look at the effect of F on the basis. Vectors one zero, zero, one zero zero one. So once you have these vectors, and you have a function.
+Compute the function of these vectors and write it down as a matrix,
+and once you have the function as a matrix, you can compute the effect.
+Okay,
+all right.
+So let's do something even more complicated. Let me now give you a different map. Let me give you. The map that takes it's it's not three three-dimensional, but it's two dimensional so the map takes x and y
+and multi, and transforms x into threex minus twoy, and transforms y into fivex plus y
+more complicated right?
+So, in other words, what i'm doing is i'm taking
+three x minus two,
+and i'm saying, That's the vector V,
+and it's i'm taking five x plus y, and i'm saying that's the vector one d that the W. So not sorry, not the vector it's it's the it's the number of the the number V and the number of w and then together vw gives me a vector two-dimensional vector
+And now i'm going to ask you the opposite thing
+instead of instead of telling you given X and y what is V and W. I'm going to say, Hey,
+I don't want to look at this transformation
+that takes x to the that takes x and y to this vector I want to look at the reverse transformation.
+I want you to describe me. The transformation that takes any vector from here and goes up to here.
+So if I give you the
+In other words, if I give you V and and W, what is X and Y,
+that's the reverse transformation. That's also called F, minus one with the minus one as a not f minus one, but F with a minus one as a as that
+as a
+super index right f one's the inverse of F.
+So um!
+What you have to do to to to figure that out is to solve two two equations of two unknowns. You already did that with method of moments method of moment. You solve two equations with two unknowns. You know how to do this. You know how to solve this. We did that together in class. I give you V, and you give me X and Y.
+Right we have. We have a a model. We have the empirical value of the of the mean and the standard deviation. We want the theoretical one, and from the empirical we can figure out the the the theoretical one. So so we can do that.
+So now that's actually an even better way of doing this uh using linear algebra. So if we we can rewrite this this equation here as this equation here,
+right? Because we know that that to to multiply this matrix with this vector we do three times x plus two times y, which is exactly this three times X plus.
+Oh, sorry, there's a there's a minus yeah uh mistake here. So um, we we need a minus two. Here, please fix this is minus two,
+right?
+So this is a minus two. So three times six minus two times y
+and then five times x plus y. Yeah, everybody fix that
+mistake.
+Um. So look what we're going to do. We're going to take this equation, and we're going to take. Oh, also fix it here, please. So we want um.
+This is kind of a bad uh let me let me see if I can make it better. Um,
+yeah, change the function. No, I don't want to change the function. This is this: doesn't look nice because it's not like one under the other. I don't know how to make it look nice to hold on. Let me think um.
+How about if I do box?
+Oh, minus two.
+I don't know if this is gonna work,
+not box is not defined.
+Um,
+Um!
+Oh, let's do it this way.
+Um!
+user avatar
+Unknown Speaker
+01:02:53
+I'm going to add a little bit of space here,
+user avatar
+Dino Konstantopoulos
+01:02:57
+and then a little bit of that. It's too complicated. That's okay. Let's just live with that right. This is. This is not under the same column, but three goes under five, and the minus two belongs to one. Okay,
+Um. Okay. So now let's let's replace it here, too. It's it's minus two. So put minus two everywhere. Minus two
+and minus two and minus two. And uh, yeah,
+and minus two. And yeah,
+Okay.
+So what we're doing here is we're gonna take this matrix and we're going to compute the universe of this matrix. And then we're going to multiply by most sides.
+So i'm going to say the inverse times. This is the inverse ten, so that the inverse of the matrix will give us the identity matrix. So this goes away and only expire remains. So if you want X. Y. Xy is just the interest of this picture. It's actually w
+meet right?
+And and this is how we do it with noon pie, we say, uh
+Oh, look here. I took the matrix. Three, two.
+Okay. So you know what? Let's let's just replace the transformation. I think it's simpler. So let's remove the minus. Let's make it a plus,
+and then we have a plus here,
+and then and then we'll remove all the minuses. It's gonna make it look a lot prettier.
+So let's let's remove all the minuses.
+Okay. So I did what somebody suggested. I replace this transformation with three plus two, and this is much, much prettier looking. And so um! This is. This is what the answer is, and we've solved this with with linear algebra
+and that. And now we can write this as new pi, so let look how we do. Within pi we write A. As A. As a new pi r, three, two hundred and fifty one. So it's this array Here,
+then, we to find this inverse. We just say, noon pi the linear algebra to inverse away.
+That's the inverse matrix.
+And then we print
+A, we print V, and we also print a times B.
+And so if I, if I run this cell, you will see that A is indeed the matrix three, two hundred and fifty one. This is the inverse of this matrix. Wow, you'll pie computed that matrix for us, one
+one, zero zero one on any vector xy will give me back xy
+right? Because this is x zero, y, and this is zero x plus one. This is what
+right? So this is the identity matrix. So we have. We have a result here, and matrix times. It's inverse is equal to the identity matrix. The identity matrix is also called. I
+like your I, I. E. Y. E. I.
+We We often call the identity matrix as I.
+Okay.
+And now that we have all of these we can also compute for V equals three, and w equals one, What is x and Y. So if V. Equals, this, then x is the inverse of a, and so we have the result,
+and so I can solve it this way with linear algebra
+and so that's the result. That's what X and Y is,
+and so we can verify by printing a times X and verifying that we get the Y and the Y is indeed three. One.
+Okay. So what we're doing here is we get familiar with.
+So just like in programming, you write functions Def: F equals something as long as F is a linear map. You can do the same thing using matrix operations,
+And the great thing about matrix operations is in multiple dimensions. It makes it a lot easier to do operations. This is why this great machine learning framework called tensorflow, because it operates on tensors
+and eventually with machine learning. We're going to be operating on on on many different uh variables at this, at the same. At the same time, I told you what What's programming programming Is your calculator in parallel,
+right? When you you operate on many, many numbers, which what does it mean? Operating on many, many numbers, it means, instead of operating on scalars, you're operating on vectors or matrices or tensors.
+Right now you see how functions, if they're linear are equivalent to doing matrix operations or tensor operations.
+Okay, what are the things that you need to remember. From all this
+a matrix is a spreadsheet that describes the linear transformation semantic matrix. Multiplication is how you transform linearly
+right. Remember how to do the operations. Remember that to to define the effect, to define the matrix of the function, you look at the function of the basis Vectors
+right? So if I give you a four-dimensional function, a function that takes four parameters for arguments, then you will find the effect of that on the vectors one zero, zero, zero, one zero, zero, zero, one zero and zero zero one
+As long as you know the effect on these four vectors. You know exactly how the function works on all vectors. Is that amazing? It's essentially a data model, right? We're finding the effect of that on just a small number a small subset. Now we know
+the general effect of F on any, on any, on any on any vector
+that's also what data science is right.
+We find a model has some parameters. And now we know exactly how to reproduce every single piece of data that we ever observed from the data set.
+What's a good way to remember the effect of these vectors? What I like to think of when I think of vectors, I think of transformations on a mountain,
+so I think of, uh a A vector as a as a position on the mountain. And when we transform from one vector to another vector it's like the the the mountain climbers jumping from one position to another position,
+and the transformation that allows the climber to move from one position to another. Position is a matrix operation, because the matrix transforms
+one vector into another. Vector Is that clear?
+I like, I like this analogy because it makes very clear what we're doing. We're actually looking at at at a people moving on a mountain, and we're we're seeing how every time they move,
+we're we're taking their vector that describes their position on the mountain, and we're multiplying it by matrix. And we're getting a new position on the No.
+So let's go ahead and and and and and
+train train yourself to do matrix multiplication. So it's important to understand that the the the dimensions can change. The important thing is that the number of rows. Sorry. The number of columns of the first matrix need to match the number of rows in the second matrix,
+because otherwise we can't do this multiplication that I described.
+But the other dimensions can be different,
+and the first dimension, so that the the the number of um
+right so just train to to to do these operations, to understand how matrix of the application works,
+and then let's do some programming to do matrix multiplication with with python,
+right. So if you write the operation of matrix multiplication, the famous A at signed Y, and you want to do it with code. This is how you do it. So this is matrix. Multiplication takes a matrix, a
+and multiplies it with a vector X
+right? So um, I just just analyze this. So we have two loops. We range this as the matrix. We have to range over the rows, and then we have to range over the columns.
+Now, if we're, if we're programming, do a lipa style, so we do a Lipa style. We're just going to use one loop because we're going to use the enumerate on a to make it look much sexier, because because this code is a lot sexier than this code
+uh ugly two loops by.
+Look at this just one loop. Oh, yeah, And eventually you want to get rid of loops as much as possible. Right? That's That's your Your job in programming is is to get rid of these ugly things called Loop, where you micromanaging your computer. The computers looking at this is laughing at your face. What are you doing here? I can do this a lot better than you can. What are you telling me to do this one by one? I can do this
+in one operation, because I have very complicated circuitry in in my chip that can let me do this,
+so you can also enumerate over the columns instead of the rows,
+or or
+you can. So let's verify first of all that all these operations give give the same result. Right? So here we verify that. Yeah, indeed. Um. This works because we get the same results three times. So that's good. That means we verify our code is correct.
+But now let's just do it with one single operation eight times a at X
+boy. Isn't that a lot easier,
+and what we did before,
+because eight times six gives us the same result, five to two
+and eight times x. By the way, you can also do it with new pi dot dot new pi dot
+is. The same thing is is that is, that is, that also a matrix notification.
+So before in this was introduced with Python three, the four python, three point x, and Python. Two people used to do this,
+but this is a new operation That, I think is a little bit prettier.
+Okay,
+so um
+know how to do this. This is how we extract rows, how we extract columns with this comprehensions, how we copy a matrix, the trend, What's the transpose of a matrix? The transpose of the matrix is not the inverse. The transpose of the matrix is, we. We take the matrix, and we
+turn the rows into columns, and the calls are to rose. It's called the transpose
+right, and there's an operation to do that. It's dot T: When a is a matrix, when a is a new pi matrix,
+Okay, mountain workout for data science tomb raiders. So um, we we're doing the mountain transformation. We're defining a position of a mountain climber. This is this is Lara Croft. By the way, Lara Croft, one of my favorite video games who who played video game Lara cross on on playstation two
+uh you played it on. Psp: Yeah. Okay. Uh my first. My first game on Ps two was was Layer Croft. It's amazing, is it? I just jump from one cliff to another. I shot at all. The dogs kill open dogs. It was awesome,
+all right. So so define Lara Cross position on the mountain as position as position vector zero, one, two, Yeah,
+Then say, we're going to do a transformation. Lara Cross is going to jump to a new position and it's the transformation that the jump is defined by this matrix, and we're going to call this the twist matrix
+right? And then we're going to define another transformation. The other transformation is called the repel matrix, and it's also defined using a matrix. And then we're going to do. Let's twist the position of lara croft, and then at the end the lower crop gets to position. Y, and let's take y and do a repel to position Z
+right, and so we'll get after the repel. We'll get the position of layer across on the mountain
+and let's do something else now. But instead of doing first to twist and then a repel, let's compute the matrix product rappel times twist, and it's called this the Combo product. And let's see what happens if we take Combo,
+How many things that Z two is not going to be equal to Z.
+How many, How many are too shy to raise their hand?
+Let's see what happens, so let's do all these operations and see what happens. And, by the way, let's also, then compute the universe of the Combo matrix, and then go from Z to back to the initial position. And how many do you think? How many think that the initial that the final position X Two is actually going to be equal to the initial position.
+Well, since we're computing with an inverse, the numbers are not exact, so we may not get completely exact results. And so there's a very nice operation. New pi called is close. That tells us if the two vectors, x, two and X are close enough to each other,
+because if we get dot zero, zero, zero one
+that's essentially the same. Right? We just just a round off air.
+So when you run all these operations
+you will see that This is a definition to to trace matrix. This is this is how you write your appell matrix. This is the position of Lara Croft after she twists, and this is the position of Lara Cross after she twists and repels. And this is the combination of twist and rappel, and after the come
+applying the combination, you will see the Lara Cross actually adds this in the same position.
+Right? So, computing the multiplication of two matrices, which represent two operations, allows you to shortcut,
+get to the to lay across final position a lot faster. And then, if you look at the inverse of the combination matrix, it's given to you by noon, pi, and if you start
+at the ending position, and then you go back to the initial position, it's the same. It's zero, one, two,
+right. And so now you you're you're you're you're you're a data science tomb, right, because you know how to climb mountains. If you know how to it right functions as a as a function using lambda as you're using death function. If you know how to compute the effect of the function on the on the basis, vector since to write the the matrix that represents the function that you can do, major self applications using your pie That makes it even faster because you don't have to do it by hand.
+And you see, when we have linear transformations, transformations that take X and Y and Z and P. And q into a linear x plus y or x threey or not not not x, not x squared
+plus logarithm of y, that's not linear anymore. It has to be. Linear then you can do all your operations using matrices.
+So that's a great thing. That's a great thing to know
+special operations with array. So these are special operations. This is called the inner product. This is called the norm. This is the angle between two vectors. This is the Uh transpose. So So I want you to study these these operations because this is I'm going to skip these. But i'll let you look at this at home. These are These are special operations on matrices that can be very, very, very useful. So if I give you two vectors and ask you what's the angle between these two vectors.
+You're going to compute it as the cosine, and you're going to give me the angle as the Arc cosine. But if I get, if I have cosine of theta equals. This, then, what is theta theta is the inverse cosine of this.
+Yeah.
+So i'll let you. I'll let you look at this at home. I'll let you look at um. Oh, let's have fun with special matrices. This is actually fun.
+Um! This is a new pi dot Zeros is is all Zeros new pi dot wants is all ones new pi dot random from a normal distribution, gives you a random two by two by two matrix. This is the identity matrix in three dimensions. This is a banded diagonal matrix. So so these are special matrices. They're very, very useful. And now what I want you to do to do is use these special matrices to create the four by four matrix defined by this transformation,
+and then one in the
+write this matrix down as a sum of new pi, I or New pi, once or new Pi Zeros,
+write it down here, do it, do it.
+Yes, so
+here. It's a little bit kind of tricky. What I'm saying is
+has the same row and the same calling number.
+So I want all the
+numbers to be one, and I want all the diagonal numbers in the main diagonal to be two.
+Write this special matrix to accommodate a limited combination of the I matrix, the not once matrix or the zeros matrix, the
+and and somebody shout the solution to me.
+Will somebody have a solution
+like it?
+And the I of what for
+user avatar
+Unknown Speaker
+01:22:50
+uh
+user avatar
+Dino Konstantopoulos
+01:22:54
+before by four,
+let's see what? Excuse me.
+Yeah, that's exactly right.
+Look, that's exactly what I wanted.
+Two in the main diagonal and one everywhere else great.
+Now let's do this. Do something more complicated. Create the ten by ten, matrix, ten by ten by ten matrix that has two in the diagonals, one in the sub diagonals and zero, otherwise so subdiagonal, is just g plus one or g minus one
+right. So the main diagonal
+twos, the upper and lower main diagonal is ones, and everywhere else, zeros.
+So you're going to use the banded diagonal matrix to do that. So this is a banded diagonal.
+So what I want is two in the men, diagonal, one in the lower diagonal and the upward they have, and zero everywhere else.
+Somebody tell me what the what this formula is,
+Anybody shot the solution,
+Yeah.
+Minus
+J equals minus one is the lower one.
+Okay,
+with K. Equals one
+like that.
+Yes,
+beautiful.
+Okay, So we we we're getting. We're getting familiar with with linear algebra and how to how to write these transformations and how to how to create
+cubes and hyper cubes and matrices of data using using special special matrices.
+And that brings us to okay and inverting matrices is something that we talked about. We already know how to invert a matrix. Right?
+Um,
+um.
+But notice one thing: matrix multiplication is not associative.
+Eight times the product of two matrices is not the product of the first two matrices times the product of the third, we can verify that.
+So first, we do the inverse matrix here,
+and this is the matrix, and then um.
+So we solve for the universe. This is just the we. This is something. This is the position. Remember this: the position we ended up in, and this was the original array. So we now we end up with the largest initial position, and we verify that that's in the the case,
+and then we can do it different ways.
+Uh: okay,
+And then we can also do function inversion. So this is the map that we already looked at,
+and then we we saw that it's linear algebra uh home. Solve it as you solve it with the new pilot linear algebra dot so, or the actually we didn't see that. But it's a different way of of computing the same thing. And then, finally, I want to show you that the product of two of two arrays is not associative. So let's add another cell that's compute matrix a
+and that's a let's say, a is the matrix. Okay, this. And let's compute a different matrix. B,
+and then B will be, I don't know seven, and then um one to put any numbers there, and then zero, and then nine, and call this matrix B,
+and then define another matrix, and call it c.
+And then I will call this C,
+and then I don't know the number. I don't know minus three, and then and then
+five,
+and then
+four, and then uh seven, and then um,
+and then let's do uh add another cell and compute um
+a
+times
+B times, c,
+and then compute a times B
+eight times b
+times C.
+Right. So if you do this, you will see that Oops.
+You will see that a Times, B times, C is not the same thing as a Times, B Times, C. Right? So yeah,
+what
+that's strange.
+Let me change the numbers to verify. But that's very. That's very strange. I should not have gotten this result.
+I don't know where this is happening. That's not. That's yes,
+no, it should also not be the case where it's to cross where it's three. It is that should also No, you still it still shouldn't be like that. Let's do let's do three by three
+um for kicks.
+Uh: Okay, Sorry. Um,
+yeah, Because I have. I have only two operations. So in and just thirty, one and your third row. Okay, let me. I just add, I'll repeat that row.
+Okay, let's do this invalid syntax to commerce
+right? Right?
+It is the same who
+I don't know what it's going on, because it should not be the same. Okay, i'll. I'll fix this for next time. Um, Maybe I don't remember something correctly, but it shouldn't be the same.
+Something strange is happening.
+Yes,
+user avatar
+Unknown Speaker
+01:32:45
+okay.
+user avatar
+Dino Konstantopoulos
+01:32:57
+Um. Oh, is associative. Yes, yes, sorry he's associated. I thought I said Isn't and I was trying to prove that it is. It completely is associative, of course. Yeah, yes, eight times b time C is eight times B times. C: Yeah. Okay, we just proved it.
+Um.
+Oh, it's not commutative. That's what I meant to say eight times D is not the time, Say, but it's associated. Right? So let's do. Eight times B and B Times, C. That that's what I had in my in my mind. Okay, So let's do A Times B.
+And now let's do B Times: A:
+Okay. So you see how that's different.
+So
+of course, yeah, matrix on the application associative, but it's not commutative. Okay,
+yes,
+it's the result. Okay, that brings us to the most important part of this um of this book, which is Uh Eigenvalues and eigenvectors. So when we have a matrix
+equation
+that says that the Matrix Times A vector is equal to the scalar times, this vector it means that this vector is a very special matrix is a very special vector for the matrix. A. This is called an eigenvector of a.
+That also means that it's an eigenvector of day with the Eigenvalue Lambda
+it also There's also not a theorem that says, if if matrix is the matrix A's N by N. And there's n such eigenvectors.
+So there's n vectors
+where the transformation by the matrix a leaves the vector unchanged in direction, but only scales it up or down by a value lambda.
+That's a very important result, because it tells you that for any mountain transformation of Lara croft on the mountain, if i'm watching it at Lara,
+and i'm watching it lara from binoculars right that i'm watching her.
+That means that if if
+if she's at this position V that is a that is an eigenvector for the matrix. A.
+Then if she does that operation, a, I can still keep looking at her through the same position the binoculars, because the vector Isn't going to change direction, she's just going to either. Come a little bit closer to me, or go a little bit further from me,
+and that's a very important, very important knowledge to know that any such matrix, as long as it's not degenerate, There's some conditions on the matrix, which is essentially means it's determinant, is not equal to zero.
+Then these vectors form are called the eigenvectors, and they form a basis
+which is a change of vectors from this from the vector zero, one, one, one zero, zero, zero, one zero, zero two. And we move from these vectors to a new basis described by the eigenvectors. And very special things happen in this in this new basis, where the vectors are just essentially either contractions or deations in each direction. You know there's no rigid transformation,
+and that gives us a lot of information about these vectors. I can evaluate again. Vectors are so important that I can tell you that's exactly what Google did when they mind the World War Web. They found the eigenvectors of the World Web
+and the Eigenvectors of the World Web, and we'll look at that separate notebook are essentially the privileged directions of the world. What that gives you the most important results in your query
+eigenvalues and eigenvectors are very important. So when we start again uh on on Thursday we're going to go a little bit more closely about this eigenvector eigenvalue operation
+and what they represent? And why is it? Why is it that important? Why are we that interested in the eigenvectors in the eigenvalues for mountain climbers?
+We're going to look at Markov Chains
+using eigenvector and eigenvalue analysis, and we're going to talk about the fixed point. Theorem
+the fixed point. Theorem says that if you have a vector that's sorry. A matrix
+is actually composed of a matrix as composed of numbers less than one,
+so that the transformations of each matrix can be thought as probabilities. The
+so that what we're transforming is not a single probability, but a vector probability.
+So you can think of um as suppose you have a chess, a chess, a a a board game, and you have ten, ten ten possible spaces where your your, your pond can go.
+But we're working with, you know, in this amazing world of quantum physics, where we can have superposition of positions, and instead of knowing what we where the the the pond is at each position. We have probabilities of this position, one position to position, three position four,
+and then we compute the transformation from a probability of being somewhere to a probability of being somewhere else with by multiplying with what's called a stochastic matrix and stochastic matrix, is a matrix where the elements are numbers less than one.
+So we're going to see how we can define State machines using stochastic matrices, and how the fixed point theorem tells you that any kind of transformation
+has a fixed point.
+In other words, there is a point
+vector when I say a point, I mean a vector. Because a a point in n-dimensional space is described by a vector
+um, that is, that is, that is, unmoved by the transformation. What i'm saying is that if you take a coffee, a cup of coffee, and then you, you, you, you, you your spoon, and and you and you stir the cup of coffee. There's a point in your coffee where the coffee molecule isn't going to move.
+What I'm saying is, if you think of your hair of your hair as a transformation that takes your hair on your scalp to the end point of where your hair is. That's a transformation. I'm saying it. There's one hair on your head two hundred and fifty
+that actually goes from from one position to the same position. It doesn't move because you can think of hair as a linear transformation.
+What I'm saying is, if you take a map of Boston, take a map of Boston, and then crumble it, and then throw it on the floor, throw it towards somewhere on the floor, wherever in Boston you want,
+there's going to be a point on the map. It's going to lie on the same point that the map points to
+in Boston
+because there is a fixed point,
+and this fixed point Theorem says that for any linear transformation there was the transformation that we studied in class, not logarithm or square root or or x to the power at four right.
+Any linear map has one point that is that that that needs to exist
+where the function where that point doesn't move with a function. F.
+And and I can prove this to you in one dimension really, easily. Look, I'm going to open my trusted paint application. And i'm going to write a linear function in in in in two-dimensional space. So i'm going to write. This is the x-axis.
+This is the Y-axis,
+and i'm going to write. I'm going to draw a linear function.
+So i'm going to draw it with a pencil, and i'm going to use this, and i'm going to draw a linear function
+right? So see, this is a linear function. Because why? Because I take. I take a point uh I can take a point uh uh x, and this transforms it. It transforms X into Y.
+Yeah.
+So this is this is X, And this is why
+it takes a different F. A. Different X. Here I can take a different x, and it transforms it to a different Y:
+Yeah, this is a different X,
+and it gives me a different Why does everybody kind of agree that I have a linear? Function? Now, what? Why is this function learning? Okay, Um. This function is This is kind of not necessarily linear because it has curves, but it's it's continuous enough such that the fixed point. Theorem also works, and there's a point in there that is a fixed point, and I can tell you what that fixed point is, because all I need to do is, I need to point
+plot. The diagonal X equals y,
+and if I plot the diagonal x equals Y.
+This is the the the the, the, the curve given by the the Y equals x,
+because it takes any any x, and it transforms it into the same longer look. It crosses it crosses my function at this point. Here
+it means. This point is a fixed point of the transformation. It takes X and maps it into x. It does move,
+and you can see how any linear function, in fact, not only any linear function, but any function that's good enough needs to cross. If you want to start here and then end up there needs to cross the Y equals X line once at least once. So there's at least one fixed point, and that fixed point is called the steady State
+Point. In the linear transformation.
+It's the point where nothing changes and it always exists for linear transformations, and that fixed point is essentially the long term, the long term future of the transformation,
+because it tells us what is the tendency of the transformation. It tells us all points will tend to eventually move, and then they will eventually get here, and then they will move anymore, so that's the long-term behavior of our function, and the long-term behavior of function is the holy grail of data science, because it tells us what's going to happen in the future. It's it's a time machine.
+So, knowing where the fixed point is, is very important, And Eigenvalues and eigenvectors will help determine that fixed point for us, and we're going to see how that happens next class.
+Okay,
+So that's it for today. Um, please, don't don't don't forget that you have your take home. Do on Thursday.
+So um make sure you work on that um once again, maybe steps. Don't try to do to, you know, to start the general solution for everything. Just take small steps, and from small steps get bigger, bigger results. Okay.
+And if you have questions or not, sure about something, then please talk to the Tas, or or even ask me a question.
+Okay, Thank you very much. I'll see you Thursday.
+Oh, there's a question here.
+Yes, okay, yes, they uh so. And an Amika reminds us that I I said that it's associative, and then um somehow I had it
+brain annual. I had it through that it's not associated with. I wanted to prove It's not commuted, but it is associated.
+Okay. So please re review this before next class, because getting familiar with with matrix operations is very important, and it's going to be very important in the future.
+Yeah. So so uh, I mean, I don't know which doing here. But here this is, this: looks like a like the Monte Carlo simulation. I like that. Um. And in here you're trying to use the form. You let it go.
+Okay? Oh, so formulas are also good. Yeah, that was A and B: Yeah, no, no, this is It's It's It's: it's a it's a it's a
+yeah, through like a couple of us to generate the sentence. Yeah, you have to generate your cell. So you did that in class, right that we did M and Ms: and all that. Yeah,
+user avatar
+Unknown Speaker
+01:46:24
+Thank you.

@@ -1,0 +1,673 @@
+Okay,
+let's start
+user avatar
+Unknown Speaker
+00:29:17
+all right today. We'll talk about the final question.
+user avatar
+Dino Konstantopoulos
+00:29:22
+So we talked about the final project. Um, it's going to be. I took a number of subjects from my Nlp class. So Nlp. Is,
+and very advanced machine learning. So it's a class you take after you take an introduction to machine learning class, and I took some examples. We study a lot more in in that class, but it took the
+not so. Machine learning methodologies. Uh from from that class. So i'm going to show you some of the things you can do to understand text. So this is like non-supervised uh text understanding.
+So you're going to have to implement at least three of the methods in this notebook, and more
+understand it to convey the meaning and
+the ideas behind the text that you picked to to to analyze. So groups of three. Um, if we um if we don't have a number divisible by three in the class. Then it's okay to have one group of one group of two,
+and if you don't have a group, please uh, please talk to your tas, and they will uh they will be able to, for people that are that are left without a group.
+So there's um the The basic libraries in in um other than the machine learning methods. The basic libraries in natural language are an Ltk Spacey and uh, Jensen and Psyched learn. So those are the the the libraries that you use the most. So we already know that psychic learn is a basic library because it includes all the probabilistic methods.
+Um, a a probabilistic algorithms. So, for example, the Um Bayesian simulation that we ran that we use time, c. Three for that, because time, c. Three is more documented. But all the methods are actually included inside it. Learn, it's like it learns pretty powerful. Um! It's just a little bit more difficult to use a little bit more for
+um.
+But computational statistics is a very important part of how we do statistics today because we have the computational power to
+to identify data sets with no distributions, and then compute all the parameters. Computationally, we don't have to use uh mathematical methods to compute them, so it's it's a powerful methodology. So um. I gave you ten chapters ten possible things you could do for your project as an example to get you started,
+and then once you implement some of the basic ideas. Here, then, you'll have the material material enough to do research on your own, and find what other methods you can use to complement these methods,
+but the the basic ideas that we're going to cover are,
+How do we model? Um, How do we model words? Um, How do we model things in sentences that makes us understand the text a little bit better. Um, we're going to cover how we apply graph theory to text.
+Then we're also going to cover how we figure out the main topics in the document.
+So you know, if you ever, if you ever employed by the secret services of your government. Um, Then you know, to observe people either observe telephone conversations or observe emails or observe texts. You, you don't have enough people to read all the emails right?
+So you're gonna have to have some kind of computational assistance. And and the idea is you. You. You take all of that, and you drop that into different bins or topics, and then you pick the topics that you think are the most
+relevant for you as a government, and then you investigate just those emails that are in those bins. So this is one way that secret services surveill on on their population.
+Um, So let's go through all the chapters, so you you may have libraries that are not installed. Um! The libraries in in in Lp. Also are very picky.
+You try to install them, and i'll say, Oh, I can't, because i'm missing one version. And you're gonna have to especially spacey.
+Um. By the way, I I forgot to mention Spacey. That's also very popular library, but but much more picky than an Ldk and Jensen. It's like you learn spacey just once like to pick
+the specific versions of other libraries. And so, if you want to install spacey and you do quickly install space and you have issues and you have problems. My recommendation is to create a new environment
+and just to install everything that space he needs. Because you're going to start uninstalling all that packages and installing new versions. And It's going to be a little bit of a hellish experience.
+I actually installed space in my base environment, but I installed an old version of space it because the new version of space is just It's just like a high maintenance boyfriend, slash, Girlfriend. No, you won't. See that, friend. I'll tell you what friend, you're gonna go up with that kind of library. Right?
+So, um, let's let's. Let's start with one of the easiest um topics in in an Lp. W which is essentially how to take a sentence and to express it as either a a, a, a, a true or false one, or a zero.
+And and that's called sentiment analysis, right? Because you take a sense, and you say, is it a happy sentence? Or is it a sad sentence? That's essentially what comes down to
+Now there are. There are more than two sentiments, and people often
+overlook that.
+There's essentially people have done a lot of research like sociologists about the main sentiments that we that we, the the human beings, feel, and there's six of them,
+including fear, anger, surprise, happiness, sorrow. These are some of the main sentiments, and we can analyze a sentence for all of these.
+So there's a package that I like It's called text to emotion that we can use to decompose sentence in these six basic sentiments. And that's also very useful, because you can actually follow
+the the the style of a text. So if you see, for example, mystery novels we'll start with, you know, fear that's a big component, and at the end
+maybe there's happiness, because you know, we resolved
+the mystery or the fear. So if you follow the curve of sentiment that texts follow, they tell you a lot about the type
+of text that you're dealing with.
+So um! Let me show you some of the methods, and then you can study these with your group.
+So this is a sentence.
+So we're gonna use an Ldk to do sentiment analysis, right? So we're gonna we're gonna We're gonna run this sentence, And then we're gonna say, Okay, we're we're So vader stands for um. Beta is a package of an Ltk which stands for uh
+some some complicated valence added determined. I don't know it's something with Valence, and It's a very good sentiment analysis, package. So if you download it and you download the sentiment intensity, analyzer, it will let you
+uh track what's called the polarity of the sentence, whether it's more happy or more set. So if I run this on the sentence, it will tell you that. Um
+let's see what it will tell you.
+You will tell you that the sentence is mostly mostly neutral.
+Uh, but definitely more positive than negative.
+Yeah,
+so it it. It already tells you something about this, and how how does it do that? It's? It's not. It's not very difficult. What people have done is they've taken dictionaries. And I said, these are the happy words. These are the sad words, and then you count the happy words in the sentence. You count the sad words in the sentence, you come up with a score right? So it's a really simple
+um a model to learn, and then um! You run that, and you it's it's not very difficult,
+and you can do the same thing with other emotions.
+Um, then, we have text log
+that's also pretty good
+text. Blog is another good sentiment and analysis. Um, that says gives you a polarity of right in the middle. Just kind of neutral
+um, so I could learn how's also send it a method to do some an analysis. And uh, so a typical um
+uh text analysis we psyched learn starts with a lot of pre-processing. So you remove special characters. You move single characters, you remove um
+mit ctl, and things that shouldn't be there. You process everything to lower case. You do also some some things that are called to stem and to lemmatize. So you stem when you we take a verb such as running, and you turn it into run one hundred
+right? Because running ran uh, we would run uh all these verbs essentially have the same meaning to run. And so you don't want to work with grammar as much. So you limitize, and you you just reduce everything to just a simple word, because then you can actually count many instances of the same word and tell you um
+reveal some information about the sentence.
+So here's here's a poem um that I copied from Shakespeare's poems. Um, and and so Um! What I did is I I went in there, and I looked at every sentence. So this is a list. And I said, Okay, which sentences are happier than other sentences, and I just label them.
+This is zero. That doesn't sound like a very happy sentence. But maybe that's a little bit happier. So I labeled it as a one
+right? So I did this labeling,
+and then I process the sentences, so I I remove the upper case, and then these are the process sentences,
+and then um. So so in in in in natural language, processing, one of the first things that we do uh with text is, we turn it into into numbers, so we turn it into vectors. Essentially we we're working vector spaces, and we already talked about vector spaces right?
+We know there's a lot of methods that we can apply to vector spaces. And so there's there's There's the most popular methods for turning um um words into numbers are. The first one is what's called bag of words.
+What you do is you essentially count all the all in a corpus of text. You count the number of words that are similar,
+and you create three as many containers as there are words to create a dictionary of all the words used in the corpus. And you say, Okay, this is a dictionary. I have that many
+keys, and the value is going to be the number of times This word is repeated
+in the Corpus.
+A corpus is a number of texts, so a corpus of text is, for example, all the writings of Mahjong right? Um, that's a corpus.
+So um the The The first model that you use is what's called a bag of words Um. A second model is a second possible model is the term frequency inverse document frequency. And what this does is it? Um.
+A penalizes when you count the words It penalizes words that are very much in common to all the texts in the same corpus. So, for example, the word end in English, the
+you can find it everywhere. So we shouldn't give it a high frequency, because this word is doesn't convince you any information.
+But if you have a word that is very unique, like sunshine that doesn't um occur in a lot of the other texts, Then you up the frequency of that word. So this is what Tfidf does. Is it? Ups unique, unique words, and it lowers.
+Banal words are words that are very much in common to all the texts,
+and so that gives you a little bit of a better affinity for for the word, and it gives you a better account. And so um. The Tf idea factorizer is a very common way to turn a a sentence into a a dictionary
+that has the key, or the the number of words and the values, the frequency or the term inverse document frequency.
+Now, that's not the most popular today method for decomposing words into
+numbers or into vectors.
+The most popular uh is called Um. It's called um um.
+What's the simple one called because now i'm doing the more complicated one. I forget the simple technique, um,
+you know, like in the Simpsons
+invert stands, for a bi-directional encoder representation for transform transformers.
+So transformers is something that we study in in my advance in Lp. Class, because that's one of the more powerful machine learning methods. And what it does, Is it it it it creates embeddings, vector embeddings from the words that are very meaningful.
+So the vector that you create for a sentence is related to the meaning of the sentence.
+So it's really exciting
+Now, before that, the the the technique I was trying to remember it, it does the same thing, but instead of doing it with a sentence, it does it just for the words.
+So the words I turn into vectors, and the sentence becomes just the average of all the words. So the meaning of the sentence is the average of all the words, That's the
+the the the ten years ago. Kind of methodology. The current one. The thing that most at linguistics most computational linguists work with is is is sentence level embeddings, because a a sentence is more than just the meaning of the words. I mean. You can realize that if I get the vector for cat
+and in mouse in eight
+cat at the mouse and the mouse at the cat is completely different meetings, right? And so if I have a sentence um um embedding technique that won't give me the same result. If I say the cat it the mouse, or the mouse at the cap
+right um, but a word level embedding will give me the same um the same, vector because i'm just average on a a averaging all three words.
+So i'm using some of the embeddings in this not boxing. You don't need to actually know how we create that you need to know
+to Not you. Don't want transformers. Yet that's a very advanced machine learning technique. You have to study at introduction to machine learning and in advance machine learning before you get to understand transformers. But, um! You can read about it. You can certainly read about it. It's very interesting. Just Google Nlp: transformers. And you can read a lot of articles about about that technique.
+Um is essentially a way to create a neural network to study text That is not a a a recursive network,
+right? So the the two basic networks that you build to do um A. What's called Ai today are either convolutional networks or or recurrent networks, instead of recursive and and recurrent,
+and and the problem with both of these not as much with the Cnn, but especially with recurrent networks, is they don't parallelize very easily, so it's very difficult to make them parallel, which means it's difficult to have one hundred.
+Have these algorithms be run by the Gpu on your laptop,
+which means they take a lot more time.
+And so, in order to parallelize them. You, you you have to throw away recurrent networks and and the the technique, the the the main technique for how to do that today is called transformers.
+So um! We're going to use some of the Burt encodings in this notebook. But right now let's just. Let's just say we're going to use the one of the simplest one, which is a Ts idea vectorizer. And so, once you process all these sentences. Since you have fourteen sentences, right,
+then you'll get a vector you get a matrix right? Because you'll get one vector for each sentence. So you have fourteen vectors
+and each vector has fifty-eight dimensions.
+Why, fifty-eight dimensions Can somebody tell you why? Fifty-eight dimensions,
+fifty-eight words right there's fifty eight words in the entire corpus,
+since we're using we're counting words we have fifty, eight different keys, and so we have fifty, eight dimensions.
+And so this is how we represent this corpus,
+and then we can do a train test split from psyched learn. So we we split our corpus into training and text, and then we use a random forest, and then we classify the words
+right, and then we classify the words, and we can classify them according to whether they're happy or sad.
+Yeah. And so we can use these machine learning methods to figure out. If something is happy or said we, we do. This is called supervised learning, because we're supervising the learning of this. Algorithm
+So this is kind of how, how um
+sentiment, analysis, algorithms are created.
+So so now you know not only how to apply them, but also how to create them.
+user avatar
+Unknown Speaker
+00:47:20
+Hmm.
+user avatar
+Dino Konstantopoulos
+00:47:23
+And so, then we once we've learned uh what once we've learned,
+the this is these are the sentences in there um to frequency, inverse documents, frequency, representation, and this is the label. And so, once we've learned that, then we can use another uh another Shakespeare poem to find out whether uh the labels are happier set.
+Okay, not necessarily correct. The reason why it's not necessarily correct is because we train our algorithm with
+very little data.
+You know that one of the things that we learn in machine learning is, we need
+hundreds of thousands of observations, millions of observations before we can actually
+mit ctl and have a pretty efficient learning, algorithm and so I don't expect this to work. But I just wanted to give you a quick example of how the learning happens. One hundred and fifty.
+And then, if we want to um gauge
+how how good our our learning was, then we we can plot things like the confusion matrix which tells you how many uh sentences Do you think we're happy? But you you ended up classifying, classifying them as sad.
+Um! And and you can compute the F One score, if one score, and you can compute what the funds call the accuracy. So you can see how accurate your learning was, because you remember you use train tests split, and so you, you earmarked some of your sentences to just test to see if your learning was good,
+because supposedly, you know where these sentences are happier, said
+so. This is just a very simple um sentiment analysis for positive and negative, and how you could train one on your own if you wanted to.
+Um. But, like I said, it's not just happy or sad. People forget that there's more emotions. And so one of the packages that let you do that is, is text to a motion and text to a motion.
+Um actually gives you happy, angry surprise, sad and fear. One, two, three, four, five. So one of the other emotions I told you at six is actually reduced to um to to one of those here. So these are the five basic emotions that people think are the basic emotions. Um, that that we feel
+erez agmoni. How these emotions evolve throughout your text, and this will tell you about the text. So a very um if you, if you rule for Taggle articles on how people study steady text. Some of the more interesting articles are the ones that show you one hundred and fifty
+Um! Um the the um a curve like a uh it's a it's a it's an Xy plot, and it tracks the sentiment,
+for example, a fear, sentiment, or surprise, sentiment, or a happiness and sent sentiment, and it marks key points in the text. So Oh, this is where they get married, and you'll see happiness to go up, or this is the point where this guy's murdered, and you see fear go up right, and so you can track
+how novels evolve. Just by looking at a picture
+kind of gives you information about the entire about the entire text.
+Spacey allows you to load different models. So this is the English model, and it's the small version.
+So it's a it's a small model. You can also loan Ian Core. When large
+you can also load Chinese core web,
+larger, small. You can also in any core web, small or large, and it allows you to study text and to take a text and translate it into vectors in your own language. So if you don't have the English translation, that would be another possibility.
+Now I'm. Once again I I have the old version of spacey, so spacey text, Blob is um
+is the old version that with a new version. When you add a capability to to you, add this the text: block capability to do sentiment, analysis, you import it, or lowercase. In the older version. You you, you, you! You you import it, camel.
+So there's just a little detail.
+Okay. So this is. This is like the kind of the hello world of natural language processing right? It's just simple um sentiment, analysis, And And are there any questions about that? Or is it pretty clear how how how things are going. This is kind of one of the first things that you studied in Lp: so I know a lot of you have. I've done this before, either as a lab or something. So it should be.
+It should be familiar to you.
+But if it's not, it's okay. Now you now you know.
+Okay, Um,
+um.
+Another thing that I would like you to do in your text is to do some computational modeling. So to study something as a function of something else.
+Right? This is the the essence of statistics is to is to do predictions based on some columns. So you have an excel spreadsheet, and you you pick a column, and you say I want to be able to predict that column based on the other columns.
+Now, if you, if you're not to uh advance, you will say, Oh, maybe I can predict the same column uh uh predict the the column from itself,
+and we we looked at that, You know, in last week. Right, that if there's no autocorrelation you can't do that so.
+But if you have
+an excel spreadsheet that has a lot of columns. Then it's likely that you'll be able to predict one or two or three columns from the other ones,
+because most most data sets are related.
+And so, um! Since
+when you're working very often when you're working with words, the the things that you want to count are integer based. So
+and So the only distribution that we studied so far for to model integers is the switch distribution
+what
+user avatar
+Unknown Speaker
+00:53:27
+one?
+user avatar
+Dino Konstantopoulos
+00:53:28
+The poison right? Not the poison, the poison it's French. I know it's it's like It's still like poison, but it's actually two with two S. So it becomes poison. Um! So uh, but that's actually not a distribution that is, uh, very frequently used because it has one major drawback.
+The drawback is that only has one parameter
+right, and so the the average, the mean of the data needs to be equal to the variance of the data
+Right? All the moments need to be equal, because there's only one parameter. And, in fact, when you look at count models or numbers, very often, you have means that have nothing to do with the variance that means a certain value, and the variance is ten times the value of the mean.
+And so, when you try to use the question to model such data, you end up with models that don't fit very well.
+So in the case in the case of um of account models. What most people do in the in these cases is to use another another distribution that's called the negative binomial.
+So just like in class, we studied the student t distribution, which is used when we have a lot of outliers, because when we have a lot of outliers, the Gaussian doesn't fit very well to the data,
+there's also a account model that's called the negative binomial, which is used very frequently, because in a lot of cases, when you try to model counts, if your mean isn't the same, or about the same as your standard deviation.
+Um, Then then you can do a very good, very good job.
+So I wanted to introduce. Since we're going to study uh you're going to model an Lp: the negative binomial model. So you know that it exists what the formula is and how to use that It's also a little bit confusing, because the formula for the negative binomial which is which is given right there. Um is very different, depending on the parameters that you that you use. But you see you have two parameters. Now you have K. And P.
+In case called the Dispersion parameter. So it's how much the data is dispersed, so that it's actually not equal to um
+uh. The variance is not equal to the mean to the average. So so here let me show you an example. So so you we can make this more concrete. I'll I'll bring up paint. So suppose I have a model that Um.
+Suppose I have a model that we're going to model, and we're going to end up saying, Okay, it looks like that, right?
+It looks like this model.
+And what would be a count. Model. So this is x and Y.
+So this is the x-axis. This is the Y-axis,
+and this is the X-axis,
+user avatar
+Unknown Speaker
+00:56:19
+and
+user avatar
+Dino Konstantopoulos
+00:56:21
+and um the the points that we used are our data set. Um: Our data set looks like this.
+Okay, I can't. I won't. Draw a million points. But you get the idea, and once I create my model, the the Y equals F. Of X. That's my model. That's the function that we use uh that represents the the histogram of the data set. Now you see here that I drew the points on purpose because I drew them so that when the values are high,
+user avatar
+Unknown Speaker
+00:57:10
+this. The variance is also high,
+user avatar
+Dino Konstantopoulos
+00:57:13
+Right? So you can see in this case account model. A personal model would actually probably work out.
+But if I have a data set that isn't like this where it doesn't have this dispersions. And I have. I have the the points that are much closer like this here and like this here and like this here and like this, right right where where the standard deviation remains constant, even though the values increase,
+then it won't be the personal model. It will be a good model, because the the the the standard deviation um it won't be equal to the mean
+for for different parts of the for different parts of the data
+right, because the the the value of Y increases. But the standard deviation for the red dots remains constant,
+right, whereas I I did it on purpose. I drew the black dots on purpose to have wider standard deviation, because the values of Y also increase
+models to the data right? Because we're trying to throw away the data. And just remember the model,
+because that gives us a lot of information that allows us to do predictions
+right with the basic assumptions being continuity. Because if you have a point here and a point there, and you want to predict the point in between. Chances are the point in between somewhere in the middle.
+If you assume continuity, that's the whole idea behind behind statistics, right? Statistics is is essentially data. Science is essentially, you know, cut and paste.
+It's a bad word just to call it cut and pay signs, but that's what you're doing. You don't cut the pace. You're saying, Okay, this is about here. This is about there. These two points are very close, so the value in between is probably just in between.
+We're using the data around you to figure out
+to predict things in the middle.
+Yeah, without any any information about the science behind. What gives you the Y from the X.
+That's the That's the That's the idea of statistics. You have so much data that you don't actually need a formula. You can figure out the what the value is from cut and paste, from left and right
+or from around the data set.
+So the negative binomial is is what people use most frequently because you have the K parameter that allows you to moral dispersion.
+And so you're not tied to data whose mean has to be equal to the variance or the standard deviation.
+So um!
+There, there's different alternatives for how you how you evaluate the function, and so you can see there's different alternatives, but it's essentially a power function.
+Um, and so we're use. We're using sci-fi dot stats, and we're importing the negative binomial so end binomial uh from side pi and uh, the the The physical interpretation of a negative binomial is actually the number of failures until you get a certain number of successes.
+So that's that's how the the function is defined. So if I want to use formula one, it would mean, How many times
+will Max for stop and lose before he wins half of the races.
+Um in the formula one season, right? And so you can model this. How many times will somebody lose before he actually starts winning, or how, or the opposite, how many times he will he win before he actually starts losing
+right. So this is this is the the definition of the negative binomial.
+And so you you can plot it for different values of K. And P. And so you can actually predict
+Okay,
+So what we're gonna do is we're going to use uh the negative binomial. Why did I use number two?
+So this is this should be number two. So this is sorry. So this is two, and this is this is Section two. And this is computational statistics. Bayesian modeling is s sneezing with a negative binomial model.
+Right? Okay, So um, this is uh, this is kind of a a a definition data set.
+Um, that's used. Uh um.
+I think it was introduced by Ucla.
+Now, when you study the negative binomial, you see a later university.
+What they do is they say, Okay, i'm going to model sneezing. How many times do I sneeze,
+and I'm also going to try. That's one column numbers times you these per day Right and the other column is whether or not I also drink
+beer,
+and whether or not I think, anti-histamine, anti-histamine medication so anti-histamine medication supposedly reduces the amount of sneezing because it it it cues your allergies. Right. This is what anti-histamine stuff. So if you don't take your anti-histamine medication, you probably sees more,
+and if you drink you also probably see small. So um, what they did is they created some data using um using Poisson
+um, And they created this data set.
+Well, they created a data set, but I didn't show you the data set. So actually let me show you. Let me show you a data set. So let's copy this. Let's uh let's run this.
+Let's run the data creation process.
+So we're importing some of the basic libraries.
+Okay, And now we're creating the data set from Uh, essentially me, It's a made up data set with a pandas data frame.
+And then we we see what the data set looks like.
+Okay, So this is the data set.
+So it shows you different days. So it tracks either four thousand people or um, or over different number of days, and it says, How many times do you sneeze? And so if you see that many times, By the way, are you also taking? Are you also drinking alcohol? And are you also not taking your medication. No man but true. No, not taking the medications. Which means
+you'll see more.
+Yeah. And what you're trying to do is you're trying to model. The sneeze count based on these two colors.
+So this wouldn't be a account model. But we may. You may model happiness or anger based on how many
+words of a specific type are found in the same sentence. Right? You could do this kind of modeling, too, which would tell you. Uh, and in fact, I use this as an example, but I also want to You show you the paradigmatic example so essentially, when you do a group by,
+when you do a group. By. On this data set you find that the mean number of sneezes
+when you take your medications, and you don't drink is about one sneeze per day.
+That's the the base rate, and the variance, by the way, is also one.
+Um, if you um take drink alcohol, you see the the number time you sneeze is multiplied by three.
+Yeah, he needs a lot more.
+If you take your if you, if you don't, take your medication, it's multiplied by six,
+and if you um uh don't, take your medications and also drink It's multiplied by thirty-six
+right you sneeze a whole lot more. But you see how Here the variance and the mean is is about the same,
+which means this is perfect for modeling with a personal distribution.
+Okay. But now, let's create the different different data set. Let's create a different data set. Um,
+I'm not going to run this, but you can You'll run it. You can on this home. And now you see that in this different data set the me and the variance have nothing to do with each other.
+Yes,
+and so, when the meeting and variance have nothing to do with each other. Taking a person as your modeling distribution will lead to a bad fit,
+and so it's a very
+useful distribution. And so I think it's. It's It's it's good that you should know if you know this distribution as well, and put that in your tool set of known uh statistical distributions. And so you see here that the histogram of sneezing is completely different, depending on whether you take your medications or not. See when you when you
+so if you want to do a a negative binomial regression. Um, So this is the simplest way to do to do uh Bayesian simulations. This is a new way, and it's called generalized linear models. That's what the glm stands for. So generalize. Linear Mall is an advanced way.
+Generalized
+linear models are in advanced
+methodology
+or Bayesian simulation,
+because it makes
+it's very simple. To do.
+All you need to do is create a formula.
+So this formula way of doing things was actually introduced by our the language are. And now it's also using python. So what you say I want to model the sneeze, calling
+like, Maybe if you drink alcohol, it makes you forget to take your medications,
+but in which case there's a there's a relationship between these calls. You can't model them independently, and this long, as the dependent term
+also called it, to pull up it. Okay, that's that's my one.
+You want to model. You want to model with, and you got your data set, and it does everything for you. You don't have to. You don't have to add any parameters you don't have to um average uh model the parameters. You can do everything just with one call,
+right. This is why I didn't want to show it to you in the beginning of the semester. Because then you would. You wouldn't do the other stuff, you would say, Professor, I don't want you to do this simple stuff. Why should I learn how to drive the stick shift when I can just rent an automatic car?
+But I actually wanted you to learn the other technique, because that's That's how everything works right. You have to understand how things work if you use the data likelihood. Um, if you model the data likelihood as a distribution. The distribution has parameters, and you need to figure out what these parameters are as well. So you need to model them, too.
+And how you do model them. You assign them to a distribution which is the the crazy part, because to to model the distribution, you also have to model the parameters of the distribution as different distributions.
+And, in fact, if you use a hierarchical model, which is what we study when we, when I gave you the baseball example. Remember, then, you you model a a data likelihood with distributions, and these distribution of parameters. And you model these parameters as a distribution,
+right, but it's very useful because it allows you to create very complicated models, entire, like derivation, inheritance, change of models that allow you to
+model reality because things are dependent things that Don't vary independently.
+But look, generalize. Linear. Models are so cool because you could do the same thing with
+with what's all
+with the data function
+only once.
+You need to call it function only once, and then you can do immediately your simulation, and you'll get your results down here, and you'll say how many times you'll see how many times you sneeze.
+Um! So this is when alcohol is true, when Omega is true, the relationship between alcohol and nomads,
+and you you! You get your results
+and you there you go.
+So you study. This is the uh.
+When you take your medications is time six,
+and when you actually drink alcohol and don't, take your medications, is only it. It only adds a a factor of times to because these two are actually related, because it actually, if you study the statistics, which is what our simulation did, it found that very often
+there's a relationship between alcohol and all medic, because when you drink and you drunk you forget to take your medications.
+So these two, these two variables, these two columns are actually not independent,
+but that fits the data a lot better. And so um, if you if you try, if you want to model some count models in your final project, negative binomial is the data likelihood profile to pick.
+So I said, Good. Okay. So we have an example. So let's apply it to a corpus of text. Let's see how we can model stuff. And so I I picked an author, and I said, Let me let me just import uh the the the files,
+and uh, oh, by the way, I gave you these files, and I gave you two versions of these files, and if you examine these two versions, you'll see um
+that the processed version, which is, I think, it's under the resolved folder. Um, I did call reference resolution to that which means I took each sentence, and I replaced all the pronouns like it. He, she him that with the reference
+right? Because when you say when you have a set up a a sentence that says the dog at the cat and and it and it had a really good time, and it his belly was really full after he ate it
+right. How many times is the cat? The dog referenced in there many times, but it only once as a word.
+And so, if I want to really study the sentence with his words. I should say the dog at the cat, and the dog was very happy, and the Dog's belly was very full, and the dog had a great day, right?
+So that's called co-reference resolution. So actually ran a co reference resolution algorithm on the text. And And you, I give you both versions of of these texts, and so we we. We read these texts, and then um I um.
+I read them both as sentences and paragraphs. And now that I have all the sentences, I can actually put them in a data frame and try and begin to study. For example, what's the distribution of the number of words in each sentence,
+and you can see that you know male likes to uh write very long sentences
+right just by looking at the graph,
+and then, Um, What I tried to do is okay. I do a word cloud which is always interesting because it gives you kind of an idea of the most frequent words that are that are being used.
+And then um, I do some normalization. I took a I look at the top forty words that are used in the corpus. So you see peasants and the Red Army and the party the people, and you know gentry,
+user avatar
+Unknown Speaker
+01:14:11
+and you know,
+user avatar
+Dino Konstantopoulos
+01:14:13
+and the forces the commerce for
+user avatar
+Unknown Speaker
+01:14:18
+um
+user avatar
+Dino Konstantopoulos
+01:14:21
+uh the gentry. Um essentially uh for those of you that are not Chinese. What Mao did is he reverse this society. He took the poor people and make them rich, and the rich people made them for That's essentially what he did.
+A lot of people say. It was a great disaster, and you know it's up to you to decide or not. But, um people sociologists have studied in reversals, in societies, and it it really doesn't do big difference in society. Just create the lucky ones, and they are lucky ones, and you just flip the coin.
+So um um main characters. Uh, you can actually do what's called um
+uh, if you load uh a a spaces,
+then you take your process sentences, and then you, you you look at what's called
+uh uh p. The pause tags of each word right? So each sentence has uh each. Each word in a sentence is a different grammatical role to play. There's verbs there's nouns There's many different things, and one of these things is an entity that's called a person,
+and when you you you can go through the text and look at the grammar of each word and say if the person, if that word represents a person just put in list. So at the end I can have all the persons uh um, the important person in the text. You can see that um
+um is there? And um
+and um Chunkai Shek is there right? So you can see these are some of the main, the main people in his writings,
+because you had the you know the Nationalists that, you know, will eventually ended up in Taiwan and the the the Red Army that I mentioned to Co. With the country.
+Um, and okay. So so these are the main characters me that my red army was led by Mao, and so I can. What I can do is I can take. Now that I know what the important names is. I can create a a time series,
+and I can see you know how um
+uh the references of these names right? So you can see that when when my is referenced, when I was referenced along right, so you can see that the time you track each other, and so you can see that it's really a story of the the Nationalist Army versus the
+Um, the last one
+Um, the latest one
+Uh: okay, uh, And then I can also look at important words. I don't have to just look at important people. I can say, okay, the words that are important to me, because I kind of know what the text is about. So it's a revolution. It's really the peasants against the gentry or the land the landlords
+right. And so let me count the frequencies of peasants and landlords. And, by the way, look, when the the the peasants are referenced, a lot. The gentry is also referenced a lot
+which makes it clear that it's really a war between these two factions.
+And so what I do here is, um I also use. Oh, I forgot to mention. I forgot to give you the the moral paragraph. Oh, there's a very interesting. I forgot to get the reference of that. Um,
+Let me let me find the reference again. Now, where did I put that uh
+moral foundations?
+I'll i'll update. I'll update the um
+i'll put the new notebook up there because I'm. I'm. Adding some information here. Moral foundations. And
+okay, that's the most important one. So moral foundations Um is is Um,
+uh, and there's there's a there's a more. There's a more modern uh actually let's go to this website.
+So this is an organization that has compiled a moral dictionary,
+and so I thought it would be really cool when We' to model is figure out all the sentences that contain more words, and see if the same sentence There's also a lot of reference to peasants and gentry. Because those are the sentences where typically Ma with would would
+show us his morality about why peasants are really superior to gentry, because the the the people that are actually working, whereas the gentry is the people that just inherited the money, and and are lazy and and and and corrupt right? And so um what I try to model here.
+Um! I tried to model. I downloaded the the Moral, the Moral Dictionary
+from that website. So I have to give you the more dictionary. To what did I put the more addiction?
+There it is,
+so i'll update the canvas. So you have the more dictionary as well.
+And I said, Okay, let me plot the number of more words versus the occurrences of peasants and gentry.
+And so this is the number of more words versus the number of words of gentry and peasants. And then I said, Okay, actually what I wanted. So I tried. I tried this modeling,
+and then I said, No, Actually, I don't really want the number of references to gentry presence. I just want to see if gentry and peasants is referenced in the sentence. And so what I want is a new, variable, just as true or false,
+whether the reference or not. So then I started again, and I created a new data set.
+So I just use my my great zipper, and I account the moral occurrences. I count a Boolean, for whether gentry is referenced at least once, and a Boolean, whether peasants are referenced at least once.
+And then I create this new data set, and i'm going to model with a negative binomial the number of times I I I look at moral words versus a number times versus whether gentry and pe and or peasants are reference.
+And what I predict. What I predict is that. And you can see that from the distribution here is that the number of more words, when both gentry and peasants are reference is a lot higher. Well, not a lot higher, but it's different.
+And then when they're not
+based on political viewpoints.
+So so what i'm doing here is, i'm analyzing the book right? I'm trying to understand what the book is all about using some non-supervised techniques. This is entirely non-supervised. Right? I say, okay, let me try to model these things. Give me a model and and then That model is the model of the book.
+The model of the book tells me that there's a lot more references of moral words
+as long as other keywords are present in the sentence,
+and then and then I said, Okay, i'm all that. But i'll I'll do even better, because the model actually was not very successful. So instead of modeling this, what I'm going to try is to model, not just
+peasants versus gentry, but entire classes versus all the classes. So the enemies are the the tyrants and the evil people, and the landlords, and the gentry and the enemy. The enemy are the foreign countries right? Because um
+um. Actually, both both both your countries, both China and India has has horrible history of foreign interference in your country, right? And then actually happens to be the English, mostly evil countries.
+So okay, So these are the the the enemies, and these are the the friends right?
+So I count the number of friends and enemies, and I create. I create the same data set,
+and then I do a model.
+We do a negative binomial model.
+And the if if I look at the um, at the, at the statistics of the traces. It looks pretty good. It looks like I didn't diverge because there's very little auto correlation. The data that looks pretty random. And then I say, Okay,
+Um, let's see if my simulation worked. So the the number of times more words are referenced on average, is three times uh. But when friends are mentioned, when when when when enemies mentioned actually this is simulation. So so let me actually let me first look at the the statistics. So this is the important statistic look.
+This is straight from the data. So the data tells you that Um, on average, the number of more words about three percent. So there's a lot of moral content in in the writings.
+But when when there's mentions of enemies, it doubles to six.
+When
+friends I mentioned it, it multiplied by eight,
+and when both are mentioned, it's multiplied by twenty-three, it's not month ago by twenty three. Sorry it's time time since it's twenty-three over three, so it's um uh times seven, right
+so obviously to me. This means that yes, uh mentions of these key words make, they get them well, the more content of the text increase.
+And so i'm going to try to do this model. So when I did this model. I I do expect an intercept of three, but then I also expect a six, something around an eight, and something around twenty-three and my model didn't work,
+because if I look at the data set
+uh the the result, I I I don't have six and eight to twenty, three,
+so I I definitely don't expect this, because obviously these two are related. But I did expect to see a six here and eight here, and I didn't. So this is an example of a simulation that actually
+gives you a model that doesn't fit the data. Very well, right.
+But it's okay, it it fails. Um, That's why i'm giving you this final project, because I want you to do better than Professor
+Find something to model, that that actually works
+where the the statistics of the model
+allow you to recover the statistics of the data you should have about the same uh, the same statistics for your model to be successful,
+because, after all Here, Don't, forget this is actually
+he's actually supervised right? Because I know what the values well, Actually, you know, hold on. No, this is unsupervised because I'm: i'm not training the algorithm
+user avatar
+Unknown Speaker
+01:25:35
+that's interesting.
+user avatar
+Dino Konstantopoulos
+01:25:36
+You call this supervised on all right. Now, this is unsupervised because i'm not really training the algorithm to learn it's it's i'm i'm saying, i'm going to use a negative binomial. And this is the data, and then at the end i'm verifying whether my the the the model that I learned is actually consistent with the idea, with the data that I that I use to to to
+to derive the model from
+um. So obviously this is not correct, because this is the number of moral words. This is a forest, and when friends are mentioned it is less; and when enemies I mentioned is less, and when both are mentioned it's even less something fishy going on here, and I haven't figured out what the with the mistake was because I I I ran all of this last week. So um
+yeah,
+yes.
+So you can see whether the dependent or not by looking at the dependency graph here, and you can see that they're weakly dependent.
+It's it's It's it's zero point twenty, five. So they're dependent because it's not zero but weekly dependent.
+And this this is their you information on, because it tells you, uh, about the dependency of these two.
+user avatar
+Unknown Speaker
+01:27:01
+Okay.
+user avatar
+Dino Konstantopoulos
+01:27:02
+So this is how you would do this kind of modeling. Um, and uh, this is also another prerequisite or and then I try something else. I'm more for What's this data set? Uh:
+user avatar
+Unknown Speaker
+01:27:16
+I forget what this is.
+user avatar
+Dino Konstantopoulos
+01:27:24
+I think this is the one with all the words.
+So you can see that that the the the, the, the, the the the mean of more words when both are references around four, whereas the means for none of the references is, the is is much closer to zero.
+This is what gave me the idea that I could do this kind of modeling. But you don't have to model this. You can do any kind of modeling you want. It's just that you need to do some kind of modeling,
+you know. Model some characters model um account of words in a sentence, and and some kind of computational statistical algorithm that gives you a basic simulation that gives you these results.
+Okay, Um. So that's the modeling part,
+the the the the Bayesian modeling part. And now i'm going to show you how you can use graphs to actually extract the most important sentences in um in a, in a corpus, which is it's an application of our text-rank algorithm that we use when we, when we study the ecology graph at Google uses used when when they mind the will. What world web?
+And so what we do is we import sentence transformers. So send us transformers. Is this kind of embedding that transforms sentences into vectors that are not integer vectors. They're floating point vectors, and the the vector conveys the meeting of the sentence
+Right? So this is what you get with very advanced machine learning,
+But it's okay. If you don't understand the technique,
+because you know what the vector. Spaces. And so this is just the just understand it as a very complicated vector space that maps an entire sentence to a vector that has high dimensions. It's usually around either five hundred or one thousand, or or or or or five thousand dimensional vectors.
+So the bigger the bigger your corpus, the bigger the vector space um that you will need. But um send this transformers are great. This is the the latest version of of Uh. This is what what Google tells you. So we So Google wrote the Burt. Algorithm
+So it's a very famous um machine learning model in natural language processing. And so we download it, and we we're going to use it to translate sentences into vectors.
+Um! And so we do this here. This is how we I will create our embeddings. We take all those sentences in in in Mouse. I only picked six of Mall's writings on all of them, and then I I translate them into into these embeddings. So I have the all, all of my us text together. The ones that I used have about two thousand sentences
+and each. So each sentence is a three hundred and eighty four-dimensional, vector
+and then these are some of the embedding. So this is the sentence.
+This is the first sentence,
+and uh limitized and stemmed right. So this is um,
+no, actually it's not. This is not lemmatized, and this is this is the sentence without without to creating a roots. The reason why Don't create roots is because um the the way the word is used actually conveys information.
+And so I don't want to stem and lemmatize the sentence in this case, because I get more information. This way. So this sentence is is translated into this: vector
+is three hundred and eighty-four dimensional vector and you know When you take the n of the class. We we study a lot more about how this is done. But this is really interesting, because now you can manipulate numbers specifically, you can. You can compute what's called the cosine similarity.
+So we we compute a cosine similarity.
+user avatar
+Unknown Speaker
+01:30:55
+Now I have to give you a link to recompute
+user avatar
+Dino Konstantopoulos
+01:30:59
+uh
+cosine
+similarity
+between
+all vectors.
+See a man?
+Oh, see me,
+Larry T:
+Okay, let me give you the uh
+goes on singularity.
+Okay, And the cosine similarity tells you how similar to sentences are to each other.
+user avatar
+Unknown Speaker
+01:31:44
+Um,
+user avatar
+Dino Konstantopoulos
+01:31:47
+so it's very useful, because it tells you that way and and and and and um how similar, just based on the meeting.
+So so the the the dog ate the cat and the cat at the mouse A very similar sentences, even though the words are very different.
+And so the vectors, if they're very similar, they will be parallel to each other.
+Um! And so what I do is, I compute the cosine, which is essentially the angle between these two vectors, and that allows me to compute a similarity matrix
+which is very, very similar to the transfer matrix that we computed um in our ecology graph,
+and so I compute the similarity matrix as a as a normalized version of the cosine of the angle between the two vectors, and I create a graph
+from this array,
+and then uh, I stopped. I tried to draw it, but it took too long, so I stopped doing that.
+But this actually gives you a graph of
+of sentences that are very similar.
+And so I can use this to to compute the the page rank on the similarity graph. And this means that the the sentence with the highest page rank, which is this sentence here in the sentence that is the most similar to all of the sentences in the Corpus. So that's the most important sentence in in a way, from the Pagerank algorithm. Way. The most important sentence in in in the entire corpus.
+And so it's. Really, It's really interesting to read the sentence. And so, if you read it, the worst local tyrants and evil gentry is carried out by the peasants jointly with all the sections of the people. This really describes the entire um
+focus of the the author, which is revolution to turn to, to have the the peasants uh overrun the evil gentry
+right? And then you can see the top ten sentences,
+and and and you can find out a lot in your important things about about about the Corpus just by looking at the most important sentences
+it's. You can think of it as a Google query that says, Give me the most important sentences in the Corpus.
+It would be, I think, very nice to be able to modify this so you can. You could use text rank based on some keywords. And you can say, Okay, give me the most important sentence in the graph that also references.
+Um, you know revolutionary peasants and gentry right? Or give you the most important sense in the graph that also mentioned mentioned Chunk, Chunk. I shake and mop and mao, so we can see what what you know, what what he mostly talks about.
+So this is how you use. You use um a graph
+methodologies to actually mine a piece of text statistically right.
+Another technique that I want I want to mention is a technique called kmetoids, which is um a a a better, at least in an Lp. Than K-me. So everybody knows about Key needs right. That's the idea of clustering. We where you take a number of vectors, and you cluster them into it, so that so that the vectors that are very close to um to a um
+to a uh That's the word I'm. Looking for the
+the The center of gravity of each cluster is called What's the what's the center of gravity in each cluster called it's called the centroid Right? Yes, essentially at the centroid of each cluster. But the problem with k-means is that when you compute when you cluster vectors
+the centroid isn't, necessarily one of the points of a cluster.
+So it's one of the problems with K-means the other point is that K-means is also very sensitive to outliers,
+but also the cluster is necessarily one of the points
+you run the K Meadows, algorithm you actually force the cluster to be one of the points.
+And so if I cluster the text
+and I use K. Meets, I can actually get the sentence that is right in the middle of each cluster will give me the the centroid sentence of each cluster
+Right? So this is one way to um, which is kind of similar to graphs, because graphs give me the most important sentence K. Meets give me the most important sentences for each different cluster in the document.
+Um, And so what I do is I? I I run the K meets algorithm from psyched Learn
+um,
+and I This is This is just. I modeled it out of the digits data set by what I did is I I just looked at the data set, and then I looked at Butt embeddings, and I did a a principal component analysis, or I forgot to give you the link for principal component analysis.
+Yeah.
+Yeah. So principal component analysis is an important statistical procedure. It's a dimensionality reduction technique.
+user avatar
+Unknown Speaker
+01:37:02
+So It's very useful in nlp
+user avatar
+Unknown Speaker
+01:37:08
+simple
+user avatar
+Dino Konstantopoulos
+01:37:12
+component.
+Now, is this:
+So what principal component analysis does is it looks at um.
+It looks when you have a bunch of vectors.
+It it tries to do a change of basis,
+so that the basis that you're looking at has the highest variance
+in the vectors,
+with the idea that the vectors that vary a lot are the ones that can be the most information.
+That's the idea behind Pca. It's a little bit like um.
+Suppose you go to the Boston Aquarium,
+and you want to post a selfie of the Boston Aquarium on your, on your um, on your social uh, on your on your social, on your favorite social app. So what you want to do is you want to take a south of yourself, but you also want to capture the most,
+not the most different species, because that's when aquarium is all about. So you will point the the the camera in such a way that you capture most of the species.
+So that's the That's the perspective that gives you the highest variance in the data. Right? So Pca. Is the same idea. You want to do a change of basis, so that the first axis captures the biggest variance.
+The second access captures the next biggest variance. And so the most important axes are the ones that really capture the the richness of the data set. You can think of it as the most species in the aquarium.
+And so what I do here is I do. I take my three hundred and eighty, four-dimensional vector
+three hundred and eighty four-dimensional bunch of vectors, and I reduce them to just two components,
+and then I just try to um
+try to create a K meadow. Its cluster um using the Burton embeddings,
+and so, and then and then I I I I show you what it looks like. So this is what the metal it's look like. We different different different distances, so the the cosine similarity one that we use creates this, these, these clusters.
+user avatar
+Unknown Speaker
+01:39:29
+This is a two dimensional projection
+user avatar
+Dino Konstantopoulos
+01:39:32
+just two-dimensional projections. You can actually see the clusters. Um! But then, if I want to actually use uh use all the clusters, I don't do Pca.
+And if I don't do Pca. And I do the same thing, then that will give me all the clusters, and then I want to get all the centroids from all the clusters. So these are all the centroids. If if I plug in ten clusters
+the the the problem, one of the problems with K-means and and on zoom rooms is you have to give it the K. How many clusters you want to use to group all of these in in into clusters, and that's one of the problems, because you don't know what the optimal value of K. Is. So to get. The optimal value of K. Is a whole bunch of ways to do that with
+user avatar
+Unknown Speaker
+01:40:14
+with them.
+user avatar
+Dino Konstantopoulos
+01:40:15
+That's why I just say, okay, then, K. Equals ten, two, three, four, five, six, seven, eight, nine, ten, and then the clusters. So these are all the centuries of each cluster. So, in a certain sense, this is decomposition into ten different topics, and this is the most important section in each topic
+that gives you a lot of information about this topic.
+The typical way of doing of doing this kind of clustering is actually called topic methods.
+Um,
+But but it's also a very um. It's also very.
+It's also a very popular distribution.
+Um, and so um that's that's where the name comes from, and one of the libraries and does the best. Mba:
+Yeah, it's actually not. The best of the mallet is the library that does the best. Lba. But Jensen has its own method, and also allows you to use mallet. So Jensen is a very popular library uh in in Lp. And so I use it to create an lda,
+and each topic is described by the number of words that it uses.
+So that's technique of how Lba works. And so the the first topic um has uh
+one point, nineteen of Army Point eight. So this gives you the words that are used to create that topic. It's an iterative. Algorithm By the way it was. It was only invented about fifty years ago. So so it's actually not that old. No, maybe even
+fifty years ago. Yeah, maybe fifty years ago. And um! It shows you the words that that that relate to the topic. So you have an idea of what this topic is about,
+even though you know it's difficult sometimes, because
+so in this case we have farming
+difficult.
+And then here is enemy.
+So a talking decomposition is actually a clustering. It's very much like clustering right. It's just a different way to cluster your um your all your sentences into different topics,
+and instead of having centroids, what you have is topics. Each topic is described by a different
+percentage of each of these words.
+So this is known as Latin dairy, Clear location. It's a very popular method in um in um, in an Lp:
+Finally, Um, I want you to. A study to study the semantics of text Semantics is is the study of meaning. Right in in text. There's two important things: syntax and semantics. Syntax is how a sentence is formed, and semantics is the meaning of each sentence.
+So you, Spacey, allows you to actually study the the the semantic tree of a sentence. And so I show you some technique of how the how to do that.
+For example, how do you extract the main entities from a sentence? Right? So if I have, I have this method, and I say the sentence: Dina wants to marry. Do a lipa. What are the main people in this sentence? What's Dino and Dualiba? One hundred and fifty
+right? And I can also study the relations. So if I if I um want to study the relation of you know, Mary duel lip, I live happily ever after. The relationship is married
+right? And so you can extract from a sentence that the the main words and their relationship in in the sentence. So you can actually, if you. If you study. If you extract the main characters and the main relations from entire corpus, you can kind of figure out what it, what it what it's about. So you can also get a lot of information from that.
+These are the main, the main relations.
+Um,
+And I think I tried to do something. Oh, okay, And this is also some something. I should have mentioned that before in the sentiment analysis. So when you have a sentiment analysis done for a specific emotion. And then you you plot that sentiment, analysis over time. So this is the amount of positive sentiment in Ma over time. So over two thousand sentences, so you can see peaks, but it's very high frequency. So it's difficult for me to figure out what's going on, because there's all these high frequencies.
+So what I I what I do when when you have a plot that has a lot of high frequencies, Typically, you apply Fourier transform
+to remove the high frequencies from a plot, and so I wanted to show you how to do that. Because if I apply Fourier transform to this plot
+uh it's called the Low pass Fourier transform from uh with methods. From noon Pi F. Stands for fast Fourier transform, so computationally efficient. I transform this into a graph that's easy to understand, so you can see it's still. You see this. There's a lot of negative and positive motion.
+It's not consistent, so it's a very it's very harsh, right, and right as well, positive and negative and positive and negative. And you can see that the business peaks and values right. If this was, you know, like a a mystery or or sentimental story, would be much more regular.
+How many, how many frequencies you want to remove by changing that function. They make this even more uh, even more uh regular.
+Uh so what would I change here?
+user avatar
+Unknown Speaker
+01:46:40
+I would change the distance.
+user avatar
+Dino Konstantopoulos
+01:46:44
+Then I can have a graph that's much more regular.
+So this also can give me a lot of information from from us from a corpus. So essentially what I do here is they give you a bunch of methodologies that are not very advanced machine learning, but the things that you could understand that are part of an Lp. And So what i'm asking you is when you study your text,
+you can do anything you want, but you have to have at least one computational model.
+So at least one kind of simulation. We will you try to simulate the dependency of one column as a function of other columns, build, build a model,
+a data model of that column. Whatever you want to pick, you can pick moral words. You can pick number of words, you can pick it it. It It depends on the text that you picked right the text that you picked. Um. You probably already know what it's about, and so you probably know the important things about it.
+So how would you use statistics
+to present that text to somebody else? That's never read it
+That's that. This is the purpose of your of your final project. Right, you statistics to convey a maximum out of information about a text that you know you've read it that you have it. But somebody else hasn't read it. So how how would you present that?
+So I want to have at least one computational model, at least one network model, and at least one semantic model. So either some kind of clustering or lda, once you have these three, anything else you do is completely up to you.
+Google for things. Do some research uh what are the important things in your in your corpus that you want to study, But basically do a statistical analysis of your text and then present that in class.
+Okay.
+And so
+what I wanted to do is show you some of the methods that you can use to do that rather than tell you. Do this without showing you So you have. You can run the same methods exactly in your text, right? So everybody starts from the same point, and then everything else that you do is just purely based on your research and your understanding of
+what what what you need to show to other people, so they can understand what your text is about.
+Right. So so, for example, in the statistical model, what I tried to, but you know, didn't do a very good job. I tried to say, Okay, this is a very moral text, right? All of a bunch of six miles, right? It's It's a very moral text, because all the sentences that that that reference that there's there's a lot of enemies and a lot of friends,
+and it's all about having the friends be victorious over the enemies.
+And so when there's a lot of words of enemies and friends reference that that sentence has a lot of more words, and that's the basic aim of that book is to give you a perspective of how?
+Why, the revolution is necessary.
+user avatar
+Unknown Speaker
+01:49:42
+Okay,
+user avatar
+Dino Konstantopoulos
+01:49:43
+that was, that was the the basic, the basis behind behind miles, right?
+So I I picked my on purpose because, you know, very opinionated, very, very strong opinions. And so I wanted text that has very strong opinions, so I can model them
+right. But you don't have to pick a text for specific reason. You can pick it because you like it. You can pick pick it because you really you really think other people should know about it. You can pick because it's something you know very well right, but the point is, use statistics to convey a bunch of information
+because um, I have. Ai will essentially come from that right? The natural language. Processing is
+the frontier of artificial intelligence, because if we want to train
+about to be sent in and to have ideas, we need to train it from our writings, from the writings of humanity, because the entire wisdom of humanity is concentrated on the writings of its famous people. Right? I mean the world wide. Well is a bunch of garbage.
+We don't want to train a chat about from the World Wide Web,
+I mean, maybe from half of the world we web, but not from the garbage half, but
+right. The The most illustrious, illustrious, and intelligent things are the ones that we capture in in textbooks that we put in a library. Right? That's that's what we really want to train and ai to learn from.
+And so this is why I think any of the the final frontier of of Ai. Why, I think all these methods are important, because you're extracting in an unsupervised fashion a maximum amount of information
+that you could then train an algorithm, to be able to repeat, or uh, or act as, or distur, or or or um vulgarize, or you know, model or anything like that.
+So I think this is really the entrance to to to this thing called artificial intelligence, because most of what we do machine learning is just. We just cut and paste right. It's there's there's no there's no really intelligence. It's just kind of pay signs. When a chatbot talks to you. When siri talks to you, and all all she does is she takes the most
+frequent things she reads on the web, and she put things together, and of course, because of statistics, the most frequent things people say makes sense.
+But she doesn't really believe that
+she just
+the Lego pieces together, and it looks like she. She knows what she's talking about, but she she doesn't have a a real thought. The real thinking is, we want to train a ice from important ideas from the famous people that we admire because they we admire them for their wisdom.
+Wisdom is what we're after
+for for general artificial intelligence, for specialized artificial intelligence and specialized malls and all that. Maybe not right. We don't need general intelligence from the Tesla autopilot right? We don't want to test out of pilot to start
+giving us Shakespeare sonnets, and to to sing, po, sing poetry to us. We just wanted to drive. Really. Well, that's all we want. Just Don't get me killed. Just drive me home. And then i'm happy.
+So specialized
+Um: Machine learning models are okay. But our goal. Our goal is to
+create robots that are intelligent,
+and we'll do that from text.
+Okay, questions about your final project.
+Is it clear?
+Yeah,
+start with this, And then wherever it takes you,
+and then you have.
+Uh, let's see. Let's look at the dates you have this week in next week, and next week, and the final project presentations will be uh, I will be
+what this is. November or December. Sorry. December will be this week. No will be this week. Yeah, will be either twelve or the thirteen actually not this week it will be. It will actually be on twelve. Sorry,
+right?
+So do as much. You can start with these basic methods, and then do some research. Think about your text and try to add more stuff.
+Okay,
+Um, I won't. See you on Thursday.
+Happy Thanksgiving,
+and i'll see you all next week.
+Thank you. Bye. Bye,
+Any questions online.
+user avatar
+Unknown Speaker
+01:54:15
+Okay,
+user avatar
+Unknown Speaker
+01:54:18
+Yeah.

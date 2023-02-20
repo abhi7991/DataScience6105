@@ -1,0 +1,573 @@
+00:24:19
+Okay, Sorry online. That was muted. Um, thanks. Pr: me for reminding me. Okay. So today we're gonna cover. I'm gonna give you kind of an official introduction to statistics, because we've been talking about probability, probabilities and probabilities as a foundation of statistics, because you you see what's the probability of something. It's just the basic thing.
+But we also want to. We talked about mean and standard and um
+in the um uh stand
+and the variance um, but we didn't really give a definition. So I want to go back and make sure we have a definition, and it will cover the method of moments, which is the basic method that we use to model a data set. It's It's the you always start with this and then, if this doesn't work, if it's not good enough. Then you move on to more complicated things.
+So um! I was. I was watching Tv last night who who watches Nova.
+So have you heard heard of Nova Nova is is a series on American Tv. It's on public television. So you can. It's it's free. You can watch it. But It's It's the most amazing series, because they they present scientific
+Um no, not just science. We'll say they they present the planet Earth. So um um, you know, going to the moves and all the Novi episode. Um the the river, the rivers uh in the world is is a Nova episode,
+and last night or two nights ago. Was it last night or two nights ago? Maybe it was just last night they had an episode on beating the Hiv virus.
+How we meet the Hiv. It was just so interesting, because I mean, I learned so many things just by looking at the at the Nova episode. So you know what prep means
+prep means pre-exposure prophylaxis, which is what they give to high-risk, individuals when they have, they are at a risk of of of contacting Hiv and what it does it is it floods the body with um chemicals
+that impede the replication of Hiv virus
+and um,
+by the way, the the this. These medications were discovered about in the in the one thousand nine hundred and ninety, nine, one thousand nine hundred and ninetys,
+and it's a it's called a cocktail. It's it's a triple cocktail of medications uh um as T. And two portes inhibitors, and they impede the virus and replicating, and so what they see but but they but they still didn't have a vaccine for the disease, but they figured what they figured out is if they flood flood the body of of healthy people with these chemicals,
+then you can't even get infected with the Hiv virus, because as soon as the Hiv virus tries to enter your body. It just is just disabled. And so um through through this cocktail and through prep. Sometimes you see commercials for truvada for prep
+that means pre-ex for the prophylaxis they were able to reduce uh uh New Hiv cases by like ninety ninety nine something incredible.
+Um! And um!
+You know all all that stuff I mean the how you you analyze all that is is with statistics. And so um! When you see this uh, you, you just want to learn more about the science, so you can. You can. You can apply which which would you? You can. You can study what's going on There's there's another. So this was just about Hiv. But there's another really interesting article that I read, and I give you the reference down there, and that's about the ebb. The the Epstein virus.
+And so um it it's. It's the upstream bar. The virus um is, is is a basic virus. It it actually lives in all of us. There's a high chance we all have it, but it's kept in check through the bodies uh in your defenses.
+Um!
+So um
+the first person that that suspected, and and I I kind of give you a little bit of the article in in a short, in a synopsis of the article. So the first person that suspected the the virus was a British surgeon in Uganda.
+So why in Africa? Um, Because he
+he saw a lot of unusual jaw tumors in children in Uganda
+and um um The The the disease became known as Berk. It's lymphoma in Burke. It suspected that even though it's it's, it's cancer, he suspected there was a virus that was that was that was causing this disease.
+And so, um
+in one thousand nine hundred and sixty three. So this is an old episode like happened like half a century ago, a biopsy
+made its way to the lab of Anthony Epstein,
+who was working with a student called Yvonne Bar, and that's where the name Epstein Bar virus came from.
+And um when they analyzed the the the the biopsy of the sales from from the girl in Uganda they saw the the shape of a herpes virus, and so they suspected that it was the herpes virus that was causing this disease.
+Um, And so, you know there's there's There's a a whole lot of interesting information about this happens, and and and um, and the genius of the virus. How the virus helps uh how the virus is is very smart, because it helps evade the body's defenses,
+and then a whole bunch of theory about how viruses can actually also cause cancer.
+And so, um
+all of this interest, especially now that we lived through an epidemic for three years.
+Ha, ha! Ha! Has like re. We kind of rekindled the in an interest in in in the viruses. And there's a lot of people studying them, and and I just think that it's fascinating. And so um there, there's a There's a big need for for people that understand data, science that can actually,
+you know, Study all this and tell you about probabilities. What's the probability of that? What are the statistics? And so all of that is, is is data science. And so, if you, if You're interested in um, you know, studying um um
+society and and and anything that that is important to humans. And And you want to help, you know, either in government or working pharmaceuticals in the pharmaceutical industry, or or even in other industries. Um th, that that's all part of data science. So So if if you
+are interested in this kind of in this kind of field,
+and you think you found something that that you like. And did you know how what kind of jobs you're going to be. You're going to be looking for, right? This is. Some people prefer to program video games. Other people prefer to be more engaged with society and actually help resolve these these kinds of problems, and and all of that is is a statistic. So
+I I just wanted to to to tell you this to kind of introduce um, you know. Introduce a preamble to to the fact that what we're learning is actually very important, because that's what we use to analyze um to analyze um The effect of viruses, the effect of medicine on viruses and all that.
+So um
+to introduce like the basic measures and statistics, the measures of central tendency, the measures of dispersion and measures of correlation. This is this is what we're going to cover today. So we're going to cover three notebooks. We're going to cover this kind of introduction to statistics, because so far, we've only been talking about probabilities, And that's just one of the facets of statistics. And then we're going to cover uh the basic distributions. So this is not all of them, but this is some of them. I told you that
+when you look at random-looking data sets that are out there, and you look at the histogram You discover that in fact, this histogram, Isn't Random. It looks very regular,
+and we found that most most data sets that come from planet Earth, whether it's, you know, bees that pollinate flowers, or it's the rainfall, or it's how much time you wait for the T one.
+If you look at the histograms, they're they're very very well known functions. They they look shapes that we recognize. And so the way we build models from the data
+is we say, Okay, Um, we we we're going to match the histogram with this family of functions, and this family. A function has two or three or four or five parameters, and what we need to find out is the the value of these parameters that best match the histogram. And once we find the value of these parameters, then we have our model.
+That's how we proceed. Um, if you do that, that's that's kind of um I like to call it non machine assisted
+uh non machinists assisted learning because you're learning the model from the data
+when we use machine to do machine learning what we're. What we're doing is instead of a few parameters, We're working with many, many more parameters,
+but the best model. The best models are always low, dimensional parameters,
+because the lower the dimensions, the less cpu, is required by your brain or a computer to actually capture the model, which means the more models you can learn.
+And the more models you learn is the Iq of your brain right? Your Your intelligence is a direct consequence of how many models you've captured in your life,
+and it's also the Iq of computers or computers. They're going to be really good at doing machine learning. If it has a lot of model, it's not just one model. It's how many models you have.
+So um. This is the the lowest dimensional model you can build because you're matching a data set with a well-known function
+A function is a transformation. So you don't need to remember a collection you just need to remember a function, and that function has two or three or four or five parameters, and all you need to do is
+learn the values of these parameters, and if you have only two parameters, for example, with a Gaussian, those are the only parameters you need to learn
+from the data. And so two values can give you an entire shape. And then you can rec reconstitute the same data as the as the data you're trying to model. Um, just just using that function as a probability density function. So in this case we have the continuous analog of what we're looking so far with discrete with our discrete p. Function,
+that that we used to count probabilities that that that where we can, we can give it a a dictionary, if that's a collection of keys with the probabilities. And now what we'll do is we're shifting to functions which means an infinite number of keys. But that's really all it needs to function is is like a like a dictionary with an infinite number of keys.
+And then we're going to look at a data set.
+So if you look at whenever you have a data frame, you always look at the shape of your data frame because it tells you how many variables you have. So if you look at the shape, you will see you have uh four columns and five hundred rows,
+so it's an excel spreadsheet that has that shape, and the four columns are gender highway index.
+So if you're studying, you know viruses and and the columns would be you have more columns that'd be more complicated. You have, you know, viral load and whole bunch of other columns, and you're trying to to to do these kinds of statistics. So so we're going to do simple statistics today. So you learn the basic, the basic things about the statistics. So what we have is the heights, the weights
+um of of a population,
+user avatar
+Unknown Speaker
+00:36:12
+and you know what
+user avatar
+Dino Konstantopoulos
+00:36:14
+i'm running out of power.
+Uh, because I forgot to bring my adapter.
+That's that's what I was looking for in my bag, so i'm gonna have to go back to the office to bring my adapter.
+So what's the best way to do that. So you know what the best way to do that is, instead of starting with this introduction, Let's
+because this has a little bit of work so it can give you the work, and you can be doing work while I go fetch my adapter. Okay, so let's switch notebooks. Let's go to the method of moments,
+and they will go back to statistics when I bring my my power adapt, and I hope it's in the office, and they leave it at home, because then I have have no power Uh, the problem with this laptop is that it's a it's a it's a It has a Gpu uh, and it just power only lasts for half an hour.
+Okay, so um,
+the method of moments. So this is the method that we're going to use to, Uh: look at a data set Uh: look at the histogram of the data set and then build the model right? So um, you already have the Do you already have this file I think I gave. I gave this file last last uh Mo Monday,
+so if you have this file you can open it,
+So let's all open this file.
+Let's assign that to um a uh a pandas data frame, and instead of having heightened weight, what we have here is the amount of rainfall on the twelve months of the year for different years or one hundred years or so in in in in the city of Uh Nashville, Tennessee,
+user avatar
+Unknown Speaker
+00:37:57
+so we can look at the head. We can look at the tail.
+user avatar
+Dino Konstantopoulos
+00:38:01
+And then the first thing you do, I told you the first thing you do when you have a data set, is you look at the histogram, so we'll let's compute the histogram. So let's Let's let's import some plotting um libraries. Let's let's copy this code here, and let's Let's compute the histogram of our entire
+of our entire precipitation. So precip is the name of the data. Frame the
+Yes,
+i'm sorry.
+So I think I gave it to you in the previous
+in the previous zip file. I can. I can upload it again. Who? Who doesn't have it? Raise your hand.
+Okay, I'll i'll upload it again. I'll I'll i'll give it to you again. Um!
+I'll put it in. So I have it under
+uh data. I think
+So It's this this histogram. It's in data, and i'll upload the data A zip file again up Um on.
+Okay, so so it's in. It's in that file, just in case you can find it. It's in that file, so you can open it.
+Um, Then let's let the first thing we do is we look at the histogram, right? So we look at the histogram of our of our data frame, and we see we have a histogram for every single month of the year.
+So you see the the great thing with with pay. This is, you can immediately do plots, and immediately look at histograms. It's really It's really kind of simple. And you see that. Oh, this is a strange shape.
+So let's let's pick the month of January to just look at the shape more specifically.
+This is a strange shape,
+because um, it kind of looks like a Gaussian, except this tail is much wider than the pretty useful. So this is the telltale sign of um what's called the gamma distribution,
+and this is the the the formula for the gamma distribution. It looks very complicated. It's essentially the the combination of a power with an exponential,
+and it's this power that gives it the but but the exponential Isn't squared right. The Gaussian has an X square. This is. This is not a square.
+So the first thing we want to do is if if you look at the um um at some of the um
+at the, at the data set you will see it There's some values that are missing, so that's the first step, Even even before you compute the histogram is actually to to fix missing values, to fix empty values. And so what we do here is. See batteries running low. So let me just give you the work, and i'll just go fix if fetch the battery is to um uh fix the data. So what we do whenever a a value is missing, we just replace it with a mean for that month.
+So what we did here is, we we replace the entire data set.
+So the method of moment is this,
+and you say you want to match it to the gamma function. The gamma function has the well known formulas for the parameters for the newest standard deviation. So from this formula you extract the parameters off and Beta began a function
+that's simple.
+So what I want you to do is while I go fetch the adapter now is. I want you to compute the Alpha and the beta for the gamma function.
+So you compute the mean and the standard deviation for for you from your data you use these formulas to match it to the parameters of the gamma function, and then you compute the values of Alpha and Beta.
+Okay,
+So so. So. So. Um, please do this pragmia. Please help the class while i'm gone, and i'm going to go fetch my adapter. And when I come back you'll tell me what the solution is. Okay,
+all right. So online i'm going to um um absent myself. In fact, i'll. I'll stop the machine because it's going to run out of power, and i'll go fetch my power adapter.
+Okay, so stop sharing
+um. Leave the meeting.
+Assign uh pragmia.
+user avatar
+Dino Konstantopoulos
+00:52:30
+Um, We are going to
+uh upload the pictures because someone told me I can't see the picture. So
+okay, So I've uploaded the images. So let me know if you, If that fixes the problem. Now,
+did you find the formula? Can somebody tell me what the formula is
+right. So what we do. Once again, let me let me tell you what we're doing again, because it's super important. We have a cloud of points.
+We're gonna build a model for it. But we're going to use the histogram to build them on. So we're going to compute the histogram of the title points. We do compute the histogram. We go well. Oh, my God! Look at the histogram. It looks like a gamma function.
+You guys don't know you're not. You're not like. Well, how do you know that? Because I have experience and I know that this is a gamma function because we haven't played with a gamma function, but we're going to match it to a gamma function. The gamma function is two parameters. I'll find data. These are the two parameters. So to match it to a gamma function. We need to find the values of Align Beta right,
+everybody, everybody with me,
+and so to find the values of Alpha and Beta. We'll compute the histogram. Sorry we compute the the mean and the standard deviation.
+What's that?
+Oh, my screen is not shared. Thank you.
+Okay. So back to what I was saying. Um, we're going to compute the the in the standard deviation for the data set.
+And because there is a formula that links the out in the data with a new standard deviation for the Gamma function. We're going to make them equal, and we're going to get the outline data from from from that formula, Super super clever, right? And so what we're going to do is
+we? We? We're going to compute the mean from the data frame,
+right? And we're gonna we're gonna see? Okay, What's the mean? Of course, we have The data frame has twelve columns, so we'll have twelve means right
+then we'll compute the the variance. So the variance is the square of the standard deviation.
+Well, that's that. That those are the things that that we'll introduce later when we look at the introduction to statistics. So we'll copy that down here. And this is the variance for your data set, and of course, different variance for every month.
+And now we're going to use these formulas, these formulas up here to compute the Alpha and the beta.
+So can somebody tell me what the formulas are.
+user avatar
+Unknown Speaker
+00:55:59
+Okay,
+user avatar
+Dino Konstantopoulos
+00:56:00
+So out from mom equals what
+so precip
+mean?
+Squared?
+That's it,
+Do you? Bye bye,
+for six
+underscore
+far,
+right?
+Okay. And what's for? What? What's the value for Beta
+zar
+squared, divided by
+for sip.
+Hmm.
+user avatar
+Unknown Speaker
+00:56:44
+Okay.
+user avatar
+Dino Konstantopoulos
+00:56:46
+So let's check. If you double click on the cell on the cell above. It will tell you that. In fact, it's the This is the right solution. So it's not a variance. Squared. It's just variance.
+Okay.
+So this is just my This is just a formulas, right? That's what you what? What? You derive from the formulas. So now we have the value of Alpha and Beta for the gamma function. Isn't that awesome.
+This is called finding the model
+for you for your data
+going to the histogram.
+So now that we have the values of Alpha and Beta, of course, if we have, since we have different, we have to twelve values for the meeting and twelve values for the variance. We'll have twelve values for offering data, one different value for each month of the year, Right?
+Uh. So these are the values, By the way, just to make sure that everybody's following what we're doing here is, we have a data set for the amount of rainfall for different years,
+right? And the histogram tells you a lot of information. It doesn't just tell you the mean and the maximum and the minimum, and then standard it it you the entire shape of how your data is distributed. And this is the shape that you need. So you can rebuild this data artificially with a model,
+and that's what statistics is. Statistics is building a model for your data.
+user avatar
+Unknown Speaker
+00:58:11
+That's it.
+user avatar
+Dino Konstantopoulos
+00:58:13
+Yes,
+the significance. Yeah. So the gamma function. I told you that there's a lot of random looking data sets that actually have a histogram that looks very regular. The first one that we look at is the the Gaussian
+we took the random values of, and then we look at the histogram, and it's a bill curve. It's amazing right
+the bell curve.
+When you when you look at at at at data, and it has a histogram. It has a bell curve. It means that this data is, uh in independent uh uh independent actions that um have beautiful properties, that that that you get a gamma. That's the most beautiful data set you can get.
+Now, the gamma function. It looks like a bail curve, but has one of the wings. Uh on on the right side. That's that's that's that's not as steep as the one on the left side. And what this means, What people have found have found is that any data
+that comes from a process that is a regular process. So So, for example, rain is a regular process, because it's it's run by by cloud systems and winds.
+And so, if you have something, if you have data where where time is of essence, because it rain. Sometimes you know the the time that it rains, and the time between rainfall is very important, because it's the dynamics of of rain, when time is of the essence
+and your the value that you're measuring your random variable is is a floating point. Value is a decimal values amount of rain that falls, then most often the histogram of that data set of that cloud of points will be a gamma function.
+So this is the definition of a gamma function.
+Um! And of course you know you all. All you need to do is look at the histogram and say it looks like it has a tail. Now you have to be very careful, because it's another
+probability distribution that we didn't study, yet that also has a tail like this. It's called the Poisson distribution. But the Poisson distribution is for random variables that are integers,
+whereas the gamma function is for random variables that are floating points.
+That's the difference between the
+and the gamma function
+waiting times in the hospital. Anything that is time-related actually follows. If you look at the histogram a gamma function. I mean It's amazing, right. It's just a property of planet Earth That's what the that's That's the data that we deal with. And So, since we know is this precipitation
+we suspected we're going to map. We're going to build a model with a gamma function. But then we also look at the histogram, and we'll say that
+this is really gamma function. So let's go ahead and match it to a gamma function. How many parameters is the gamma function have two. Okay, So we need to find the value of these two parameters, which means we need two equations and two unknowns to find the device in these parameters. Our two equations is we're going to match the mean,
+the empirical mean that's the mean of the data within means of a gamma function, and we're going to match the the standard deviation or the variance of the of the empirical One of the data with the with the standard deviation for the gamma function that gives us two equations into unknowns that use the cell phone data.
+So if I give you another model a histogram, it looks very strange, because in it matches. Uh, for example, this is something that we're going to study next week. This the student T distribution, which is probably one of the most famous distributions after the Gaussian, the student t distribution is three parameters not to.
+And so, if you have a data set that looks likely to be modeled with a student. T: You're going to say, Okay, I need three equations of three unknowns to find three parameters of the uh of the student t distribution. So instead of just the mean and the standardization, we're also going to look at this queue, which is the third moment
+that will give us a third equation.
+So the method of moments is that is, is a kind of a global, statistically global method. It gives us values for the entire data set. So it gives the Alpha and Beta for the entire data set, for
+of course, we have twelve data sets here. So in each one of them has different parameters, but it's still the same family of functions. It's a gamma function.
+So now that we have alpha and beta.
+So what we're going to do is um.
+So um we already got. We already got Alpha and Beta here.
+So now we're going to um do the histogram for the data and match it with a histogram of the Beta function with the values of Alpha and Beta that we just computed. So we're going to take all of this, and we're going to put it down here, and we're going to plot
+the empirical histogram. And on top of that we'll put the the model histogram that we just evaluated the
+This is the histogram for the data set, and this is the theoretical histogram. And look at that.
+It matches
+right. So now we have a function that goes through the data. Of course it goes through the histogram of the data, but that's good enough, and we can not throw away the data because we we have the model,
+and our model only has two parameters. It's amazing. We only need two numbers
+to remember everything about the rainfall for a hundred years for the twelve. Okay. So each month has it has a different number. Um. But for every month it's only two numbers.
+It's amazing Isn't it amazing. I'm trying to. I'm trying to make you understand how amazing statistics is. We built a model for the entire data set. We don't need the data anymore.
+We can do predictions just from If you ask me what's the amount of rain I can predict what it's going to be for every month of January. It's probably going to be around me a a an average of four inches, whatever the uh, the the the magnitude uh that they use for the data, is it's going to be around four,
+because that's what the model tells me. That's also what the data tells me. But I don't need the data anymore.
+So so we have the histogram for our for the month of January. Let's do it for every month. Now.
+So this this will do. This is how you do. You do twelve graphs at the same time. So you do that in a for loop, using axes
+and for every loop you plot, you plot the you plot the the theoretical um um um for the month, for the month of of of of January, February, March, uh April, all the way to down to December.
+So let's do this. So this is Matt Plot Lib: right? You're like, Oh, that's complicated. Code. Yeah, it is. But once you use that it's the same thing. So if you have to do the same thing for twelve months for a different function, you you, you you know how it's done
+right. So when when we run this, when we run this, you will see that
+for every one of the months
+that that that we have data, for
+we'll see that our model is pretty awesome. It matches the data. Look at the difference between October and November Right? October has much more rainfall, and we have for these parameters of Alpha and Beta. We have the right meat peak in November. We have the right peak
+right? So we built. No,
+you have some errors. Okay,
+figure fifty. The errors.
+So it's It's possible. Um, I think. I tell you here that um
+the it depends on the gamma the Pdf: So instead of doing uh, instead of doing up here here. When you do this, instead of doing this, you may want to replace this. It depends on versions. So replace this with this line.
+Okay, so try that,
+so replace the Alpha along with a equals and scale equals It's just a different Api. It depends on the library that you have the version of the library that you have
+this. This should fix it so. Uh, So all you have to do then is go down here and replace this with, uh with um. This This piece of code here with a equals and scale equals to try this.
+A equals
+and scale equals.
+Does this fix here?
+So, who had an error before? Just raise your hand just out of curiosity?
+One, two, three, four. Okay, Many of you.
+Okay, You waited for you. My make sure is anybody else. I want to be singled up. Okay, Does this fix the air
+to change what?
+Oh, change that to density equals true
+like that?
+Oh, yeah, yeah, yeah, right?
+Okay. So what's the conclusion from all of this? You you you built a model. This is your first model, right? And this is a model based on statistics not based on any kind of you know new new avant-garde pro machine learning theory. This is really a statistical model.
+So so your homework for next week is I would like you to.
+So we're going to look at some some more uh uh basic uh probability density functions. But just go find a data set
+and model it,
+using the method of moments.
+user avatar
+Unknown Speaker
+01:09:04
+Okay,
+user avatar
+Dino Konstantopoulos
+01:09:07
+so it's. It's not complicated. Just the only thing you need to make sure is that the histogram is one hundred, and it has like one.
+But But this is the gamma function.
+Now there's there's a few other basic distributions. You should know. So that's that's what we're going to cover next. So let's go. Let's go and cover the basic distributions in our basic distributions notebook.
+So um, let's go ahead and run the first sale where we run some preliminary um
+imports on. We import some libraries.
+So um. Somebody asked me a question. Um, Professor, if I want to, if I have a you, you said that from the Pdf. We can generate random points. Right? How How does that happen? So
+what you do is you? Um. It depends on the library that you use, but you can use it. You
+Then you call new pi dot random Normal. You give it how many random points you want to generate, and this will generate ten thousand random points that follow the normal distribution.
+So so a Pdf is a generating engine. It allows you to generate points that look random, but whose histogram is actually very regular.
+Right? So so let's go ahead and generate a hundred points uh from the here let's, instead of instead of making it ten thousand. Let's make it a thousand. So there's a few less points, so you can see that it looks random, right?
+I mean the points. Look random.
+Now the ninety says that I want a uh, an average of ninety and a standard uh deviation of two.
+user avatar
+Unknown Speaker
+01:11:05
+That's what that's what the
+user avatar
+Dino Konstantopoulos
+01:11:09
+and and this looks, you agree that it looks random, right? Looks pretty random, and yet, when we compute the histogram of these points,
+look, it's a Gaussian,
+very regular,
+right, and of course he looks a little bit not very regular, because we have a thousand points. But look what happens when I increase it to ten thousand points.
+user avatar
+Unknown Speaker
+01:11:37
+Isn't that a beautiful
+user avatar
+Dino Konstantopoulos
+01:11:39
+Gaussian
+right? So you see, random points actually have very regular histograms,
+and that's probably you know something a little bit difficult to wrap your head over. But that's that's That's why statistics is such an important science. Because we find regularity and we say, okay, it looks random. But we can still build a model.
+Okay, So this is why the Pdf. Whatever whether you see you, you can see a new pile at random. You can say it's a new py dot, random or normal. You can say new pilot randomly, whistle and generate random points that we look like the data that you just modeled.
+That's what data science is
+building them on.
+Okay. So now let's look at the basic Pdfs. You need to know, because they're generating Pdfs. And when you study random data sets they they probably their histograms probably look like these basic Pdfs.
+So the uniform we already we already saw the uniform. Remember, give me an example of a process that yields data that looks random, but whose histogram
+uniform for every possible key.
+That's an example
+of a data set. What? What's the process that yields the data
+where this the histogram is a uniform uh is a uniform. Um,
+a uniform function.
+Will you study that last last last last lecture.
+What's an example?
+How about the die
+throwing a die?
+How many faces does it die? Have
+six?
+Is the probability of each face the same as the probability of the other ones. Right? So what's the histogram Doesn't It look like a hat function? The same one for every key.
+Yeah,
+So that's a uniform.
+The gamma is the one that we just cut
+amount of rainfall amount of time. You wait for the tea,
+the exponential. You can actually have a a histogram. It looks like an exponential,
+the Poisson
+discrete number of values.
+So the and again, our cousins X. Here is a floating point. K. Is an integer.
+Um example of a
+distribution amount of email you receive every day
+amounts of text messages you receive every day
+um amounts of people that say hello to you every day
+like, How is that possible? That's a random data set? Yeah, it's a random data set, And if you compute the histogram of this data set over an entire year.
+It looks like a personal distribution. Is that amazing?
+And the Poisson distribution has one parameter, not to one.
+So all you need to do to model this data is to find the value of one parameter. You just need one equation
+from the empirical data, one equation from the Poisson data. If you're right data to buy the value of K. And then you found the K. For the amount of emails you receive every day,
+and then you can throw away that the the the the numbers, the data set because you have a model for that,
+The binomial somebody. Give me an example
+of uh data,
+whose histogram looks like a binomial distribution.
+What is it
+You spent your entire weekend on this?
+What is it?
+Formula? One
+right.
+How many times does a driver win
+twenty-something races for the entire season?
+It's a binomial distribution?
+If you look at the histogram
+of the winnings for each one of the four year one drivers. They will look like a binomial distribution,
+and the Bernoulli Bernoulli is
+right. So if K. Zero, this goes away, and if if and and this remains the power one, so it's just It's just this, and if K is one, and this goes away, and it's just uh one is one. So that's just P: right?
+Hmm.
+Yeah, We give me the physical action
+something that we talked about in class tons of times.
+Huh? Yes, throwing a coin exactly heads or tails as an example with Bernoulli uh action,
+right? It yields a histogram that looks like a Bernoulli distribution right uh heads or tails uh up there the uniform, the dice. Um, gamma, the rainfall uh uh person. I told you number of email gamma. It'll bring you by normally a formula, one right
+random-looking data whose histograms are actually very regular.
+And just so, you model them through their histograms.
+That's why the histogram is such an important thing. It's the first thing you do when you look at a data set because it tells you the kind of data that you're working with.
+Okay,
+Um,
+Now that we know the the the what the basic ones we're going to plot them so we can. We can use code to see what they look like. So let's import map to live in se born. These are our two histogram computing libraries. Right? We compute histograms with map to live, and we compute histograms with seaborn. Both of them are just as good,
+so we just import both of them, and let's look at each one of these distributions. These are the six most fundamental, most important distributions. Then we'll add some some other ones uh later on, like the beta distribution, which is the distribution for athletics. Uh um. We'll study. We'll start that later. Okay. So the uniform distribution. Look at this.
+Let's import, and what i'm going to import that from from different libraries, so you can get used to importing these capabilities, either from Scipy, from noon pie, from stats,
+from Psyched, Learn
+from time, c. Three. That's another library. We're going to study.
+Okay, So I import the uniform distribution from Sci-pi.
+I Um.
+So if you if you use uniform from a Sci-pi, what you do to create
+random points you call you call uniform random variants.
+So the Api is a little bit different from that from New Pi. But you say, give me give me n random variance
+uh starting at ten.
+So this is the right most the leftmost value in finishing at twenty.
+So that's so sorry the the width. So that's the width of the of your data set. And then and then on top of that, give me a a distribution plot from C. Gram. So sns is C. Gram. So plot the plot, the histogram
+plot, the histogram of data uniform.
+Right? So if we run this,
+you will see that um, and and and also give me give me the uh. So for when uh
+one of the good things about C. Gram
+is that not only does it give us the histogram of the data, but it also gives us an analytic approximation. So Kbe stands for kernel density, estimation, and when I say, kernel density estimation equals true. It means, Give me the histogram of my data set, but give me your best analytic
+uh approximation of this data set.
+So we also get a curve which is essentially our model.
+Okay, So this is the uniform distribution, the flat, the flat function, the throwing a dye or a pair of dice.
+Let's do the normal distribution. Okay, So the normal distribution. We're going to also import from sci-fi So we're going to say normal random variants
+and we're going to generate a ten thousand random variance. The mean is zero, and the scale which the skate. The scale is this kind of the uh
+um location and scale. It's kind of the Api from Sci-pi. It gives you a location, and the scale will tell you how big it how it's essentially equivalent to a standard deviation. So then, do the same thing with the normal distribution. So the normal distribution will look like Gaussian.
+We should also, I what I want to do is that I actually I will also want to plot the data. So let's and let's add another cell, and I don't know why I forgot to plot the data. So we want data uniform. So let's also use Matlab to plot
+uh Plt: Also, let's do this Plt:
+Uh: and let's plot, a data uniform.
+So so you see, this is this is uniform distribution, because it has it's it's a right. So this is the data that gives a uniform distribution, and let's do the same thing with the with the Gaussian.
+So let's add another cell and let's plot. Let's plot the data for our Gaussian. Here we plotted the histogram, right? But let's also plot the data,
+user avatar
+Unknown Speaker
+01:23:00
+And we call the random variants. We call them data normal, right?
+user avatar
+Dino Konstantopoulos
+01:23:11
+You agree that This looks like random random data, right? Random data data with a uh mean of zero and a standard deviation of two
+user avatar
+Unknown Speaker
+01:23:21
+on both sides.
+user avatar
+Dino Konstantopoulos
+01:23:29
+It's very strange that the uh, the way to get a standard deviation of two. Uh, if you use the cyprus that you say scale equals one
+that's kind of strange.
+Oh, maybe no, actually it's not to. It's one it's one. Sorry it's one the um, the the the the way to eyeball. Your a standard deviation is two-thirds of the data.
+It's not all the data. It's around two-thirds of the data so two-thirds of the data is between minus one and one
+so it's correct. It's one. The standard deviation is one, not two. In the beginning I thought it was two, but it's not. It's not. The uh two is is is almost all in a at minus two to minus two.
+So this is the beautiful data, right because it has a a Gaussian histogram. Now let's look at the gamma distribution. So we're going to use Gamma
+from Scipy dot stats, and we're going to ask for random variants where the parameter a is equal to five, and I guess there's a There's a beta parameter, but it defaults to the default value. It has a default value. I don't know what it is, you have to go in in Google site, Pi Gamma. So the way the way to Google all this is you, You You go, You say site pi
+gamma function,
+and he will tell you what the default values of the parameters are.
+It's sci-fi dot org gamma,
+and so um
+well, that's interesting. It only has one parameter A.
+Why isn't there a meat for I there? Oh,
+oh! So this is! This is actually the gamma with a single parameter, not the gamma with two parameters.
+Uh.
+So when you import gamma from supply, not stats, it it has. It has no no beat, Has a single phone number.
+And what's the one with the two parameters?
+What! You agree that this looks like a gamma function right? Because it's like a a a bell curve, except we have a much longer tail on the right hand side
+the default value so uh a equals five. This is the long tail, just to make sure. Let's also plot the data. So let's all add another cell. And let's say Plt:
+and the name of our data set, which is data, gamma.
+And let's look at what data Gamma looks like.
+The The gam is not defined.
+Why is it not defined?
+Oh, I probably didn't run this
+right. But but this is random data, right? If you want to convince yourself this is random data, just uh, instead of picking ten thousand, pick one hundred
+and let's run it for one hundred, of course, for one hundred. It's going to look a little bit less uh regular, but you can totally see if you, if you do it for a hundred that that the data is really random.
+Go back to ten thousand.
+You can see that the more data you have, the closer the match between the theory and the empirical data.
+That's that's the beauty of having tons of data. The more data you have, the closer it will match to the theoretical result.
+Okay,
+the exponential distribution.
+We'll import it from Scipy dot stats. We ask for random variants, and we ask for a thousand of them, and we plot the histogram with kernel density, estimation equals true.
+So this will look like an exponential, and you see you have to be careful, because when you look at this. It's kind of easy to confuse the exponential with the gamma. Right
+you look. It looks a little bit like with not like a gamma, but the exponential has this a cliff here that drops off a lot faster than the gamma. The gamma here is a little more regular.
+I don't have an example of a physical process that yields an exponential distribution in mind.
+It's something that's pretty rare. Actually, it's pretty rare to see an exponential Pdf:
+The gamma is much more common.
+Let's plot the the data exponential to see what the what the random variables look like,
+a virtual tail
+on the other side
+Poisson distribution. This is also a beautiful distribution, because anything that is random but uh, represents a physical process for number of items of something number of cakes that I ate in a year. Number just numbers, right can be modeled with a personal distribution.
+And so let's generate random variants that generate. Let's start with ten thousand start with a with a hundred random variants. Let's plot
+Um.
+Okay, So it wasn't very successful. Applying the Oh, kernel density for false. I don't know why I say it false. It's always better to actually have um a an approximation. Okay. So one hundred. You see the approximation Isn't: Very good. But The advantage of a hundred is that I can really look at the the data and and and agree that it's very random looking data
+whose histogram actually has regularity.
+It's a plot
+for zero, right? It doesn't take any values in between, because that's That's the the the data that yields. Um A personal Pdf needs to be integer valued.
+So let's go ahead, and now replace it with ten thousand What we had before
+generate ten thousand points and um! You can see that the reason why you get you get these uh uh fingers is because you know, you only get values for integers right.
+But if you, if you could have specified smaller dens, and we will. Similar some behavior. Is this
+so? It's a little bit funky. But if this is the funkiness only comes from the fact that this is an integer valued.
+Um: Okay.
+And you can look at the data, and the data is also integer-valued. And let's look at the binomial distribution. So the binomial distribution is formula, one for every driver, right? So this generate ten thousand races where the probability of winning each race is zero point eight, right? So now we're talking about the Max for stopping
+right. This is the by, the data binomial for fantastic racer driver, because every race is a probability of eighty percent of winning the race right
+and and races for the season ten races for the whole season. But the binomial has these two parameters probability of winning each race, and how many races in the season,
+how many experiments in total, and what's the probability for each experiment?
+If I'm sampling, the the the serum, or the person infected with Hiv, that has the the the, the, the the the the the the the the the the the the the cocktails. What's the probability of detecting zero viral load? Right? Uh how many? How many experiments will I take? That's an all this? What's the probability of the technique, the virus that is, give you the binomial distribution. Right? So it's not just formula, one. It's anything
+that is a number of different uh a series of of experiments where each experiment has a probability of success or failure, which is one minus given by by the P parameter.
+So if we generate ten thousand data points.
+This is what your and of course it's. It's also integer valued right, because we're talking about number of wins.
+Right? So So that's an integer.
+And uh and let's say Kd. Equals two.
+So we can see those fingers again the
+and and let's look at the data. So we can verify that the data. Um: looks indeed, Random. Well, random, with with obviously high probability. So Plt: dot plot.
+Okay, So most of the data. So we have ten ten races. Oh, that's very strange looking nice. Uh: we have ten thousand random variables, and we have Um,
+user avatar
+Unknown Speaker
+01:34:02
+yeah, yeah, sometimes.
+user avatar
+Dino Konstantopoulos
+01:34:05
+So i'm trying to understand this data.
+Yeah. So that means that what we do is we generate ten thousand times the experiment of doing ten races with a probability of winning a trace of point eight.
+So every data point is going to be bunched up around ten actually bunched up around here. That says that, you know, Max, for seven, for every simulation probably wins eight or nine or ten races,
+because it's a high probability going to be trace and very low probability of. Only we need two races for. But sometimes, since we have random random values, sometimes Max will only win two races, but very rarely.
+Do you understand the data here,
+right? We're going from data to the model
+using a histogram.
+And these are the basic Pdfs that you need to start with, that you that you need to know in in statistics. Oh, and the Bernoulli
+so ten thousand times through a coin! And this is a bias coin, because one heads has a higher probability of following than tails. And so, if you, if you plot this, you will have a higher probability on one side and the other, and you can also plot the data, and this is going to be binary.
+It's got ten thousand points, and it's either zero or one so Obviously, when you plot it. It looks. But this is by now. Okay, So these are the basic distributions you should know. And now you can do your homework. Um, because you can. Um.
+And I just realized I also have other homework for you, because that's not enough. So Um,
+yeah, you love to hear that right? I am not enough, because I want you to move forward. Actually, what I plan for you for this, for this weekend is to I'll I'll I'll I'll I to add the notebook, but this is the homework. So I want you to do this homework right? So so we'll we'll finish. We'll do the introduction to statistics next week. But I want to talk about the this special homework that I have for you. So what we did here is we looked at basic distributions and the method of moments. So this homework is actually pretty easy. We just find a data set.
+You model it, using the rest of the moment. So you can do that in ten minutes. Not a problem. So this is a home that I want you to do uh for next week,
+because we also learned python.
+I can't sit here. I have to be here in front of the camera. Okay, So um, I want you to film a movie with python.
+user avatar
+Unknown Speaker
+01:36:50
+Yeah,
+user avatar
+Dino Konstantopoulos
+01:36:51
+what I want you to do. I'm going to put you in teams of three, and you're going to go to Hollywood and you're going to film a movie, only you're going to do it with python.
+So do you know how people fill movies when when they actually have an idea about the movie, what what they do is they come up with a story,
+and they um they. They draw a comic book of the entire story, and they take this story to a studio like like a fox fox um like fox studios. And and they read the comic. When I say, do you want to turn this into a movie. So that's what I want you to build. So what I want you to build is a book
+with your story with your film.
+And the way you're going to do that is, every single picture is going to be generated with Python.
+So you're going to take a picture of your entire story. I'm going to put you in teams of three. You can do that with your friends,
+and that's going to be a story,
+and then you're going to use code that i'm going to give you
+to take the pictures and put them on a notebook. And actually you'll put them in a Pdf file
+uh I want you to to d with the picture. So they look like a drawing.
+All right. So we're going to do some image processing for that, because I don't want them to look like like like like photographs. I want them to look like somebody drew it
+with their hands right like a real storybook that you're gonna take to a studio. You say, look, I have a great idea for a movie.
+Can you give me a million dollars so I can film the movie.
+And so this is going to be tons of code ten times more code than you ever coded homework for this class.
+But it's going to be a lot of fun because you're actually going to be coding a movie.
+Okay?
+And this is going to be due Thursday next week.
+Huh? Yeah, i'll show you an example. I'll send you a notebook with all of that.
+So i'll post on on canvas a code with an example of a of a drawing book that has a storyline for a movie,
+and then we're going to have uh Two weeks later we're going to have an Oscar ceremony where i'm going to award Oscars to the best movies. So we're going to have an Oscar for the best uh cinematography and Oscar for the best story, and ask for the best costumes. You're going to get a real Oscar statute, right?
+And you're gonna come to class. You're gonna be dressed really, really nicely. You're gonna You're gonna come, and you're gonna thank your parents for giving birth to you. And you know the most amazing student in the world, and a great, you know. Actor, too, because you can act in your movies because you're going to be the actors and the directors,
+because it's going to be pictures of you.
+So you're gonna, you know. Maybe you with a lightsaver um, you know, doing the jedi's doing doing Mandelorian
+or I don't know whatever you want
+but it has to be pictures that you take with your team.
+That will give you all the code. So there's a There's a lot of code, obviously because everything is coded you you can't cut and paste,
+cut and paste is illegal. The only thing you can do is download the pictures, and then everything needs to be computed in an like on a notebook with code, The way you put the the the pictures together, the way you put the dialog. It's all code
+storyboard and and and not one or two pages. It's going to be at least three, three to five.
+I want. I want an interesting movie, right,
+and and and with that with that we complete our python.
+Um
+um
+core requirement, right? We we did two weeks ago. We did. We did collections last week we did functions. And now we're doing
+thoughts of code.
+Yeah.
+Okay. So what i'm going to do is I'm: going to post an example code. I suggest you form your team tonight
+because you only have a week
+to do an entire movie.
+You know how long movies take in Hollywood years
+and you have to do it in one week,
+so get with your team um tonight.
+If you don't
+so start now, but it's going to be a lot of fun because you're going to be taking pictures, going to be acting. You're going to be like, you know, carrying a light saber, or just you know, and and and you can either have an original story or a story that you already saw a movie of right. It doesn't have to be an original story. After all, there's an award for best scenario,
+best original scenario, and best, you know best, repeated scenario scenario. That's that's not That's not
+that's not original. So. So it's up to you. If you love movies, you can say, Oh, I always wanted to be a Jedi, or I always wanted to be Darth Vader, or you know, whatever whatever whatever you want.
+Um, So i'll, i'll email you the categories that we're going to have Oscars in
+um, and um.
+So So that's going to be a lot of work. But, man, at the end of that week you you'll like You'll you'll forget even more. Java. What language is that that doesn't even exist in my mind anymore. I even dream dream in Python.
+What's that?
+Professor Jones teaches you? Java. Oh, Python is much better.
+I'll I'll bring my lights on how to Python versus Java. Uh: I like to.
+Okay, Okay,
+all right. So So that's it for next week. So Um, we'll uh the the the introduction to statistics that that we didn't, do we? We'll do that. We'll do that. Oh, and by the way, next next week Monday is is a holiday, right?
+So I I don't want you to miss a class that's that's crazy to miss a class. So what i'm gonna do is, i'm gonna i'm going to film a zoom class and and and i'll post it up and you can see it on Tuesday.
+Huh?
+Yeah, next week, Monday's, Columbus Day. So you you, you, you, you, you! You don't have Monday class, so that's that's horrible, so i'll feel my class for you, and i'll i'll put it up on zoom uh on the cloud, so you'll have. In fact, i'll probably do the introduction to statistics on Zoom, and then um, and then you can. You can watch it.
+In fact, what I can do is I can also.
+I can also do it, live on Tuesday, so you can even come to the class if you want. But you don't have to come to the class. You can just watch the zoom zoom, the zoom class. Yes,
+Yeah, i'll probably do it like Tuesday afternoon.
+Yeah.
+So Tuesday afternoon, maybe like around two or three Pm. Or something like that. So i'll fill it that i'll i'll! I'll record it then. If you want to come, i'll reserve a classroom so you can come to class, but you know don't. You don't have to come to class. You can also Um, just just watch the recording
+right because it's It's like, I think they do in China. You know what they do in China. In China they give you a holiday, but then, the week after they make you work it over the weekend. Right, don't they do that. It's like. What kind of holiday is that you're giving me a day, and you taking it away the next the next week,
+in any case so. But but but i'll do this. So i'll send you all that information, and i'll post a notebook about how all the code that you need to do The movie. Okay, have a great, We can have a lot of fun uh on Hollywood or Bollywood or I don't know in China. Where Where do they feel movie Shanghai. What's What's the the main movie city in in China?
+Now
+to a jail?
+Okay, It's: true. Yeah. Okay.
+Okay. Okay. So Truj: I would Bollywood to a child. Would or Hollywood
+have a great week and have fun with that, and i'll see you next week.
+Somebody is asking about the midterm exam. So the midterm exam is around week, seven or eight of the semester. So
+you you want exact date. Okay,
+user avatar
+Unknown Speaker
+01:46:07
+it?
+user avatar
+Dino Konstantopoulos
+01:46:08
+Okay. So i'll try to come off the exact date asap.

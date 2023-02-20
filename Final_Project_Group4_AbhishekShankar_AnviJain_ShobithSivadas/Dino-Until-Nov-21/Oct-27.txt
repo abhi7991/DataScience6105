@@ -1,0 +1,818 @@
+Amazing.
+user avatar
+Unknown Speaker
+00:06:41
+Okay,
+user avatar
+Unknown Speaker
+00:08:50
+it's a
+user avatar
+Unknown Speaker
+00:09:01
+it's a
+user avatar
+Dino Konstantopoulos
+00:09:08
+Okay. Let's start. So Whoa: where is everyone
+like this?
+user avatar
+Unknown Speaker
+00:09:20
+Hmm.
+user avatar
+Dino Konstantopoulos
+00:09:23
+So um. Let's Let's have that lab. So you can get a little bit more experience building Bayesian models. Uh. So we're going to work on two labs today, one with a Premier League and the other one with formula one. But before we start working on the labs, so make sure you sit with someone that you can work with, so you can be in pairs.
+So make sure you you work in Paris. But so the first thing we're going to do is we're going to look at the metropolis algorithm to understand how the simulation works, because the metropolis, algorithm once you give it
+the the shape of what you of what you think your parameter Pdfs are. It simulates different values, and it's a very clever
+search in in the state space of all possible solutions, and it converges very fast to the right values.
+And if this algorithm, lets you figure out the let's, let's time, c. Three return the most probable values for your parameters.
+So, um the The clever part of this algorithm is how it searches state space to find the right solutions
+and um it's It's an algorithm that that tries to not be too eager, because eager and eager, algorithm is kind of synonymous to not a very clever, algorithm because once it finds a solution that is optimal in a local neighborhood, and it doesn't search the remaining state space for a better solution.
+And that's a problem because you could have a better solution somewhere else with with the parameters. And so this algorithm um
+has this very intelligent feature that allows it to still search for other areas, even though the other areas give it locally non-optimal results in the hope,
+and it will find something better later on. It's a little bit like you know You don't like your girlfriend or your boyfriend too much, but you're afraid of leaving them because you're like. Oh, am I going to find somebody? Better
+let me leave them, anyway, in the hope that I find someone better right. It's kind of the same thing.
+If you're eager,
+then you say no, I i'll stick with what I have, but then you'll never know if it's anything better.
+It's not that i'm recommending you do that strategy. But you know, just for an analogy.
+So um
+I I i'm going to go a little bit faster on this slides, because I want to spend a little more time on the lab. But the idea is, if you use base formula to get a better estimation of your parameters theta in your model.
+So this is what the posterior probability is once you give it a prior. So this is what you start with. When you give it a profile, you're giving it priors,
+and then the simulation will return a posterior,
+but it also have it to give it a shape for the data likelihood.
+And And and this this time here is the biggest is the biggest problem, because you don't know how to compute that, because this is the integral of all possible values of your data. Sorry. This is the integral of the probability that you see the day that, given any possible value of your model to be some when you have discrete,
+so the with the let me tell you what the algorithm does, what the algorithm does. It searches through state space. It finds one value of the posterior, and it goes a little bit further away. It finds another value that posterior, and it compares the two, and we compare the two values as a ratio. It gets rid of the denominator.
+So you don't have to compute the denominator, because this denominator is the same for all possible by zoom parameter.
+And so all you have to to compute is compute the numerator for two possible values of your parameters.
+And what you do is if you find a value that explains the data better. In other words, maximizes the data likelihood. Then you say i'm going to go to that area.
+If you find a parameter that is not better, you still might go there with a certain probability,
+and the probability is exactly this ratio.
+So it's a little bit like uh once again, boyfriend girl, for an analogy. Um, Um! You know you being the girl, you being the boy that you're always right. Obviously right. Your partner is mostly wrong. Um, but but your partner happens to be a better cook.
+So sometimes you want to say, Okay, maybe you're right, so so that you know he or she can keep cooking for you, because otherwise they'll get mad. They will never cook for you, but they're a better cook.
+So you say, Okay, How when do I decide?
+When do I decide that? I say, Okay, you're right, even though I know I'm right Well, how about the ratio of how better of a cook the other person is,
+if the other cook is fifty percent better then fifty of the time, you say you're right. If the other cook is ninety-nine percent of better a better cook than you ninety-nine, You'll say Yes, your height, honey, because I want you to keep cooking. Your food is so much better than mine.
+Right? So this is kind of the analogy of how they of how the metropolis algorithm works.
+This algorithm was written in one thousand nine hundred and fiftys.
+Now, even though you can still use it. There's a better algorithm that's called Hamiltonian, Monte Carlo, Hamiltonian, Monte Carlo. You get into serious duty. Mathematics, Hamiltonian, Monte Carlo was invented by mathematicians and physicists and it was invented only about ten or fifteen or twenty years ago,
+much more complicated. And when you run the default output where it says nuts, remember, which is running nuts. No, you turn sampler. That's a Hamiltonian of the code.
+But thankfully, metropolis is actually easy to understand. And you kind of understand how, even though you don't necessarily know what the profile is. By following this search and state space, you will get closer and closer to the solution,
+so that you'll spend most of your time going around the local space of the solution. And so most of the simulations will return
+values of data that are very close to the solution. So you mean we'll be close to what the what the real means is, and the standard deviation will tell you what the what the shape of your of your Pdf is around the solution.
+So so let's go ahead and and run a simulation and see how it works. So this is something that I already talked about. So i'm going to skip over that.
+So let's go ahead and generate some data.
+Um,
+Okay, great. It works. So Um, here we're just importing some libraries and setting a seat. And here we're we're creating data.
+Now, will this data have a regular histogram or a or a non-regular histogram.
+Right?
+Yeah. So it will generate random not a hundred random numbers. But these randoms will be sampled from a normal distribution. So when you look at the frequency of these values. You will have a definite mean in the middle, and it will look like a like a Gaussian.
+user avatar
+Unknown Speaker
+00:17:30
+And
+user avatar
+Unknown Speaker
+00:17:32
+so how do we?
+user avatar
+Dino Konstantopoulos
+00:17:33
+You compute the histogram?
+So if you compute the histogram of this data, you will see that it actually follows a normal distribution. So this is what we do here. This is the histogram of the data. You see how it looks like a Gaussian.
+Now, it's not exactly a Gaussian, because we only have one hundred points. But if we so let me let me actually run this. So this is data that's random following a Gaussian. And now let's plot the histogram,
+and if you look at the histogram it looks doesn't look exactly like a Gaussian, but it's close. So look, if I increase the number of points to one thousand.
+user avatar
+Unknown Speaker
+00:18:14
+You can. Just
+user avatar
+Dino Konstantopoulos
+00:18:16
+you want me to do ten thousand. Okay, Okay, let me in ten thousand. If you increase the ten thousand. And Then we look at the histogram.
+user avatar
+Unknown Speaker
+00:18:34
+Exactly.
+user avatar
+Unknown Speaker
+00:18:35
+Yeah.
+user avatar
+Dino Konstantopoulos
+00:18:36
+Um.
+If um, what was it going to say? Um
+clear? So far, we generate some data, we see that it's random if instead of random. And I had just said Random
+right in this case it does. It's not generated from a Gaussian right? So if I run this, and then, uh, I still generate. Well, let me let me try. Okay, ten thousand. And then let me see what the histogram of the observed data is
+in this case you will see that
+this looks like the uniform distribution, because i'm generating
+numbers with the same probability for each, for each possible number. Right? So if you want to model this, you will model it with a uniform distribution
+completely different statistics.
+Yeah, Rand is the equivalent of throwing dice
+because you have the same probability for every key
+but Rand, and
+it's generated from a Gaussian distribution. Let's do a thousand since we don't do a thousand yet,
+and even though it looks random, you can see that the histogram
+is not random, right? And so the idea of Bayesian modeling is you're going to model that histogram in order to be able to create a model that will generate the same kind of data. This is what data sciences
+right? We're not understanding the process. We're not even trying to understand the process of generating the data.
+What we want to do is generate similar data, because if we generate similar data. We can simulate this process,
+and then we can predict
+what are the statistics that it's going to ring tomorrow? Well, which is going to generate rainfall on Nashville and see what the probability is that that next day is going to ring right? That's that's the That's the point of data science.
+Okay? So. Um, if you, it turns out that if you have a Gaussian um,
+you assume that your parameter Mu is
+here, that you're trying to simulate follows a Gaussian, then you can actually calculate. The Gaussian posterior is also a Gaussian. So, in other words, if the prior of a parameter is a Gaussian, you can prove with math
+that the posterior is also a Gaussian. Assuming that the um that the data likelihood is also a Gaussian, so we can prove that. And and this is why, if you start with a Gaussian that's pretty flat,
+then you end up with a Gaussian that is a little bit sharper around the expected value for the posterior.
+So today we're going to look at a new,
+A new Pdf. That is, that that is very um popular, and we didn't we didn't do so far? We looked at the gamma. Gamma was the point of your homework. By the way, I added some hints for your homework in this in this slide. So if people want to go to the end of this slide, there's some hints for the homework that was due today. But you can do in a couple of days.
+Um, the the the new, the new Pdf we're going to study is the beta distribution. Yes, there are two,
+and she,
+how do you know which color is which? Yeah, The blue is always the first, and the orange is always the second. So if you plot two things. The first one is going to be blue, and the second one will be orange, and the third one will be green.
+The fourth one will be read.
+Yeah, you can generate labels. I I just haven't do that. But you can do that the way the way this is done here by by by um plotting labels, and it's it's a pdf on It's an Api on that plot lib. So I I I have some of the graphs that I generate have some labels.
+But just the easiest thing to remember is that the always in in um with map plot, lib when you say plot, and then you plot something else on top. The first color is always blue, and the second is always orange.
+Okay, So let's go ahead and um, Oh, okay, that's that's what I was talking about. I was talking about conjugates, so if you start with a Gaussian
+prior, you will end up with a Gaussian posterior.
+However, if you start with a prior, that is the Beta distribution, which is very useful because the Beta distribution Malls probabilities. The beta is a function that models anything between zero and one
+she's amazing. So in in in the next slide we're going to look at the Beta distribution. If you start with a beta distribution. The conjugate of a beta distribution
+he's
+is a binomial,
+so so so conjugate, so so um in order to move from prior to posterior. There's some well known theoretical results food and with mathematics,
+and the bit. One of the reasons why the beta is so popular because it it it it it it's the conjugate of of a binomial, and by no one happens all the time. When you have sports right, the the wins over end, and games is a binomial distribution.
+It's many, many times the the Bernoulli distribution,
+they will say, hitting three hundred and fifty-six, right, or they will say, now batter something something is hitting two hundred and fifty. What is what is hitting? Two hundred and fifty? It's hitting two hundred and fifty over one thousand. It means it means his probability of hitting a ball is twenty-five,
+and the way you model that player's strength is with a beta distribution.
+So the way you model in Gaussian statistics. The way you model the probability of Max for step and to win a formula. One race is not a percentage anymore, which is what we have frequently statistics, but it's with a shape that has. That's the beta distribution,
+and the mean of the beta distribution is this should agree with your point value for for frequentist statistics, so we'll do a lab with that. So it'll be It'll be easy to remember once you do the lab, because in the lab, Professor doesn't do the work. You do the work. So when you do the work you learn because you do it.
+So I think it's better that way. So this is a good um good exercise. Okay. So this is what the what the algorithm does. It figures where to jump in State space in order to find a better solution for your parameters.
+And and um
+um!
+This is how it does it, does it? So it it looks at um. It looks at. This is the data likelihood right? Because what you do is you assume a certain Pdf generates the data,
+and then you take the product of all these. Um of all of these in order to compute the data likelihood. And then you also compute you also. You also multiply by the Okay. So that's the data likelihood, and then you multiply by the by, the prior,
+and then the the the numerator or base formula is the like in the times, the prior. So this is the the the the current proposal in in a certain point in State space. And then you propose to jump to a new point in state space that has different values
+right because it has different values of mute. And and then you compare this ratio. If this ratio is bigger than one, it means your p proposal is actually better than you'd be current. So you move there
+if your p proposal is worse. In other words, if the ratio is less than one. You move there sometimes
+with a certain probability that is equal to the ratio of these two,
+and just like that, you actually end up converging in state space.
+So
+this is the ratio that you look at,
+and then you tend to. You see, if this ratio is bigger than one, if it's bigger than one, you always accept the proposal if it's less than one. Sometimes you accept, sometimes you reject.
+So this is the boyfriend, girlfriend analogy. Um
+amazing amazing what you can do with math. And so if you, if you put everything together with with code, we're going to write an algorithm called the metropolis sampler
+and the metal trouble. The sampler is going to over a range of samples, which is the simulation right. When we simulate, we we we receive a trace, and the trace is many tries of doing this thing.
+So over a range of samples we're going to generate some random variants from the um
+from a normal distribution
+around the new current.
+So this will give us a a new proposal. Right? We're we're at a certain location,
+and we want to generate around a Gaussian some probability of moving far away.
+But I don't want to move very far away. I want to move a little bit far away. But maybe sometimes I want to move very far away.
+So what I do is I use a normal, a normal Pdf. To generate a new proposal. So most of the time i'm going to be close to where it was before, but sometimes i'm taking big steps.
+Then I compute.
+I compute the numerator for the proposal and the numerator for my current position,
+which is the data likelihood times, my prior.
+And then I say, Okay, if accept is um.
+So What I do is is this: I accept
+the p proposal, which is my P. Next,
+if
+I use a random number generator between zero and one, and P. Except is actually bigger than what this random value returns, which is sometimes an except, and sometimes i'll reject.
+And just by doing that i'm going to move in State space and find the optimal solution of our parameter mu mu, and
+that
+that is the solution. That's the best possible value of the parameter for the data that we observe
+it's it's really clever. So
+So run this.
+So run this. So you have this, this, algorithm this algorithm.
+And then we're going to have a plot proposal that is actually going to plot every single step that we take, so we can actually see
+the points moving in State space, and how it actually does this movement so run this.
+And now Don't don't run this sales. So we can actually talk about this, because since this is a probabilistic algorithm since you generate random numbers uh every single step.
+So here I I take eight samples. So I make eight steps in State space. So you can. You can copy this and put it in a sale down and run it yourself. But what I want to do right now is I want to. I want to see. Watch the simulation. Observe the simulation with you.
+So we start. This is your initial guess. So we generated some data.
+What's it the data that we generated the data that we generated. Let's go all the way back to where we generated the data. We generated some data
+from a normal distribution with a view of what can someone tell me?
+Okay, we didn't specify the value. So when we don't, specify the value, the the the the mu is is around zero,
+right? You can see that the the the value um
+the the use around zero, right? So we generate the data we around zero. So that's that's the value we're looking for. So let's suppose we don't know that value.
+So let's let's start with a guess around one, and let's see where it takes us.
+So we're going to.
+We're here.
+So my initials Mu is, i'm going to guess it's one,
+and I want the algorithm to converge to the value zero, because that's the best value for my data.
+I cheated here right? I generated data
+using a normal distribution with parameter u equals zero, so I know zero is the right value.
+And now let's assume I don't know that, and i'm asking metropolis to figure out the right value through simulation.
+So i'm going to say, let me start my search in states but safe space with the value of mute around minus y
+so my state space. Here is one-dimensional, but one parameter mute
+I'm. Assuming that the the standard deviation is given so I i'm not worrying about it. I just want to find the right value of you I'm looking for. I I hope it will return to zero. So my state space is the line, so it can move to the right of minus one or to the left of minus one right.
+So
+i'm using a random number generator and my my first sample will generate a guess of a mu of one point five, four,
+the mu, one point, five, four is here,
+which means it moves the data likelihood further away from the data. The data is in blue,
+and the red curve is the new value for the data likelihood which you can see that histogram doesn't match the system, it moves it further away from the data. Yeah. So we shouldn't. We should always accept that right. We should always accept this proposal because it gives us a ratio, the posterior. If you look at the posterior,
+of course you take the product. So so you overflow, so the posterior will be zero. But trust me, it will be further away from the right value of view, which is zero.
+And so you don't accept this, you you, you, you say. Okay? Should I accept it or not? You, You you throw random number generator, the random number generation. I don't accept it. So your mu doesn't change It's there. It stays a minus one for the next step.
+So here we have the trace of all our simulations, all the possible values of you.
+Okay. Next step times t equals two.
+We we, we, we, we, we put a pdf around the value minus one,
+and we take a step away from one minus one, and our new M is minus point five.
+So
+this is all the time Steps right. It's all the sampling that i'm doing
+so. I'm going to generate a new mu,
+but generating just one random variant from you, current
+from a normal distribution.
+My data likelihood, my data likelihood, is the product
+of the values of my of my data
+given by the model, which is the model, tells me up. I'm using a Gaussian distribution as my model centered around New current. With that with a standard deviation of one, I said, that's that's the default value, and i'm not worrying about finding that. Let's assume that I know that.
+So this is my data likelihood. My data likelihood is the product of the probabilities of every single key.
+So I have a certain number of data points.
+Um. Each one of these data points will be generated by a certain Pdf.
+And I'm. Going to take the product of all of these. That's the data likelihood.
+The next thing I need to multiply that with is the is the prior right? And we said that the prior is going to be a normal prior centered around new current
+You current.
+Okay. So So the the the prior is a Pdf: Right? I'm: I'm: i'm working with constant variables here. This is the difficult part. I'm. Not working with values. I'm: working with functions.
+Okay,
+So i'm going to uh center around new current and use the random number generator to generate the new value for my for my um
+to to sorry the new value is a prior proposal, and the value that I had before was prior current. But the values that i'm getting are always sampled from A. V. Yet
+they're not. They're not. They're not. They're probabilistic values. They're not the same every time it changes. All I know is that my my Pdf. Has a certain shape, and say, Hey pdf! Give me another value. Let me play with it,
+then I compute the ratio of the of the two numerators, the likelihood times prior likelihood times prior, I generate the ratio.
+If the ratio is bigger than one. It means that my posterior
+user avatar
+Unknown Speaker
+00:36:43
+is higher,
+user avatar
+Dino Konstantopoulos
+00:36:45
+then,
+to the proposals higher than a posterior current maximizing the probability of my posterior is always what i'm after. So i'm always going to accept this because it brings me closer to the true value of you. However, if P. Accept is less than one, I will still accept it, provided if I throw a random number.
+Yes, so if I tell you that I want you to accept the proposal
+with this probability,
+How would you do that?
+user avatar
+Unknown Speaker
+00:37:31
+Right?
+user avatar
+Dino Konstantopoulos
+00:37:32
+A random number,
+not just pure random number, something between zero and one.
+If this ratio is zero, point four and out ten zero point three.
+I'm going to accept if I obtain zero point seven to the same probability of a current i'm going to reject.
+So i'm accepting or rejecting, based on this ratio.
+So that that's the algorithm. That's it. It's just how do I move in state space for one new to another? Mute. So another you. I just compute
+the base factor every time. If it's bigger than one, then I should always move there if it's less than one. I'm not going to move there, but sometimes I will move there,
+accept
+best better values locally,
+and i'm here I will say, Oh, perfect! This is a better value. But then I can never move out of this gravity. Well, in order to find this value, which is even better,
+it's not even more optimal,
+so I can be too greedy.
+So sometimes I need to move out of of the location that has better. But that has. That gives me the base factor.
+That's the algorithm.
+And so what we're doing is here is what watching every single step of the algorithm So in this step I accepted
+this step. I rejected because it it moves me further away, and my random then generator says Don't, accept. So I stay at the same location.
+We can see This step gives me data likelihood That explains the data less because the Pdf is further removed from the data
+it shouldn't be it should be the right profile
+here. I'm going to move to zero point three, two, zero point three, two does explain the data better I should accept. Let me move to zero point
+thirty, two, and you can see the trace are moving closer and closer to the true value which is zero.
+So i'm i'm i'm
+it's like I'm going to the top of the mountain, and I'm spending most of the time here. I'm using the bottom of the mountain. But okay, top of the mountain bottom is the same thing. You're trying to optimize something.
+You're moving closer and closer to the true solution.
+And this is how you slowly move closer and closer to zero, and sometimes you will move away from from from from going to zero. But that's okay. We want that because we want to explore the entire state space from minus two to two in a very regular way. That brings us closer to the solution zero.
+And and this is the trace. So when you simulate with Bayesian, with with time, c. Three, and you say, return the trace. This is what the trace you get. You'll get random samples, and these random samples are, how you move in state Space two hundred and fifty,
+that specific parameter that you're looking for. And of course this is a simple state space, because it's just a line,
+so you move either left or right. But if you have a plane, you move in a plane. If you have three parameters you will move in a data queue. If you have four parameters, you're moving a complicated four dimensional manifold right? It gets more and more complicated.
+So So you can. You can actually take this and copy, paste it in in the line below. I don't know why I have a call here um, and actually run it, and actually see that you will converge to the value zero if you run it a hundred times
+or a thousand times.
+Now, um! There's there's a few. So here I I run the sampler, and you can say plot equals to a plot equals false. If you say political foss, it just won't plot, so so we will you you you can. You can run many more simulations instead of ten. You can run one thousand ten thousand,
+and so i'll let you play with this. This is actually fun to play with. So what we do here? I ran the sampler, and I asked you to do ten thousand samples.
+I I I won't run this because it does take a few minutes to run, because this is not optimized Right? It's a it's a slow algorithm and I start with a mute, My, my my initial guess for the data being two.
+And you can see that as I, as I sample the posterior. We'll start hovering around zero, which is the true value.
+Now, there's a few things that are important, and the some of the important things are.
+So. Eventually you will find your analytic posterior. That will absolutely match your your your real data. And then you said, Okay, I found my model. I'm able to generate my data
+so specifically the histogram of my data with the model with the parameters that the simulation gave me.
+Um,
+there is. Yes,
+how how do I. How do I? How do I guess this
+pure? Yes,
+sure. Yes,
+no, that's my that's my guess. I'm i'm guessing that the right parameter That's that? That that that's the better. The best value that explains the data better is a new of two. I'm wrong. It's zero. I generated the data with zero, but i'm starting with two.
+You could start with ten and do ten samples. See if you converge, probably not because you far, far away, but the closer to zero. You are, the faster you converge, the closer to the top of the mountain. You are, the faster you get to the top of the mountain.
+That's too much of a of a jump.
+If I say, I want to jump from here just this much that's too small of a jump,
+so how much you jump is important. That's the proposal with how much? In other words, What's the standard deviation of the normal which you use to actually decide how much you jump.
+That's important, because that will affect the convergence rate. If you jump too far,
+you you're not doing. You're not. You're going to miss the mountain
+right. The mountain top is here, and you jump and you jump over the mountaintop.
+Your your steps are too big. You're gonna miss the top. If you
+hold on. If if your steps are too small, it will take you forever.
+So you have to find the right side. What's the question?
+user avatar
+Unknown Speaker
+00:44:39
+Okay,
+user avatar
+Dino Konstantopoulos
+00:44:43
+Yeah, Yes, so the way you do that is by making sure that your trace has no autocorrelation,
+because
+you're in an island, and you you try to. You return back to to the step that you started with.
+So your data, your steps tend to be correlated.
+A perfect search means that when you go up to the mountain, you you. You never follow the same path, because the moment you follow the same path you you missed something.
+And the algorithm finds that actually
+because the algorithm can look at the other correlation of data. Yes,
+from two. And the step is zero point, five efficiency. It should be one point five and one and zero one. There are just four. So be careful. First of all, the step is probabilistic. Right? You never take the same amount, the same step. All you control is the Pdf. Of the step.
+So you're saying, I want a a a step size to be centered around around a normal Pdf.
+With with the Pdf. Having a certain standard deviation, That standard deviation will tell you how what your steps are probably going to be, but your step could be zero point zero zero one, and could also be twice the standard deviation it just is just has a much lower probability to be twice as standard deviation.
+So all the values will be around that standard deviation.
+user avatar
+Unknown Speaker
+00:46:39
+Okay,
+user avatar
+Unknown Speaker
+00:46:40
+I'm: Still not sure.
+user avatar
+Unknown Speaker
+00:46:42
+Okay.
+user avatar
+Dino Konstantopoulos
+00:46:44
+The proposal width is the standard deviation of the Pdf that generates your steps.
+user avatar
+Unknown Speaker
+00:46:53
+Okay,
+user avatar
+Dino Konstantopoulos
+00:46:59
+sure, sure. And actually we'll do. I'll give you another example of this with another lab, and and probably give it to you as a homework, and that will uh help solidify that knowledge. So
+here's an example where I vary the steps,
+and you see that the convergence is not that good. So here I get a proposal with of Point Five. Let's let's go back in our sampler and look a proposal with maybe this will make it a little bit clear. So the sampler
+has a proposal with here, right?
+The default is zero point five. But I can change that. The proposal width is the standard deviation of the normal that you use to sample a random variant. That will be your new proposal,
+right?
+So that will determine how far your new proposal is from your new current,
+because you're starting at new current
+right
+that you're working with quantum variables. So all all, all the results are always different. But what doesn't change is your Pdf. Your Pdf. Always remains
+constant, and that Pdf. Is determined by, so it's centered, or you you current, because then that will decide where your next me is going to be. But the most important thing in the in the convergence of the algorithm is this:
+which is a standard deviation that you say I'm going to move sometimes with small steps, sometimes with big steps, most of the time around, with steps that are around the proposal with
+the standard deviation tells you that sixty-three percent of the data is concentrated there. So sixty-three percent of the time you will guess a proposal width that's around equal to that standard deviation one
+actually within that standard deviation. It's going to be smaller than that. That's kind of the the larger step that you'll take sixty-three percent of the time Thirty seven of the time you will take a bigger step
+outside of that standard. Deviation.
+Yes,
+user avatar
+Unknown Speaker
+00:49:07
+uh
+user avatar
+Dino Konstantopoulos
+00:49:09
+you look at the trace, and you make sure that the autocorrelation of the trace is zero.
+user avatar
+Unknown Speaker
+00:49:15
+But any
+user avatar
+Dino Konstantopoulos
+00:49:16
+because, look, this is a proposal with that is too small. You see, you see what happens to the trace.
+Look at this trace. This is perfect. No other correlation right? Look at this trace for a very small proposal width.
+This is a trace where there's a lot of auto correlation in the data. It's not. It's not random.
+So this is this is a proposal with the two that's too small,
+and the proposal with it's too large, will also have things that that that are that are auto-related
+when people have heart attacks their heart beats with frequencies that are autocorrelated.
+A A heart that needs perfectly beats, so that the frequency of each beat has no correlation with the frequency before the beats are completely random, this very amazing thing. But the moment your heart enters in fibrillation
+there's correlation in the frequency of your heartbeats and the body doesn't like that. It's a heart attack.
+So this is a heart attack.
+This is not a good proposal like
+you're not sampling perfect randomness in order to find the right solution.
+So if you run these, i'm not running them because they take a little bit of time because i'm running. I'm running the samples very far, so you can actually see, uh, the effect of the sleep size. So so this is the effect of this step size. If you take.
+If you take something that's medium size, you will get closer to a good Gaussian, which is the Gaussian, is the We generate the data with a histogram. It's a Gaussian. So that's the the data we want. Also, if you take too large of a step you won't, you won't. Get to good agreement.
+So you definitely want to make sure you pick the right, the right step size.
+You also converge faster with the right step, size, small step, size, look. It takes forever to converge large step size, which is the blue uh. It's a little bit, not as fast. The medium step size the green is. Then you get to zero the fastest.
+Now, the step size,
+the step size is something that the algorithm is. It's not something you decide because you just give it the what you think The shapes of the parameters are. Um. So the step size is something that the algorithm figures out. So you don't have to worry about that. But if you were to write the algorithm then you have to figure out the step size.
+So hold on a second. So here I ran, I I I a sampler with metropolis, and I compared to my sampler, and the handwritten sampler is an orange, and you can see we find the same results. Yes, What's the question
+user avatar
+Unknown Speaker
+00:52:26
+you are heading to?
+user avatar
+Unknown Speaker
+00:52:29
+This goes up.
+user avatar
+Unknown Speaker
+00:52:38
+You see the first block. There is a small
+user avatar
+Unknown Speaker
+00:52:44
+and
+user avatar
+Dino Konstantopoulos
+00:53:02
+yeah, that's okay. Because once again. The reason I i'm getting that is a probabilistic algorithm. So when I run it when you run it, we'll get different results
+because we're sampling from a Pdf: Every time we sample from a Pdf. We'll get different proposals.
+user avatar
+Unknown Speaker
+00:53:27
+Okay, yes,
+user avatar
+Dino Konstantopoulos
+00:53:28
+that's the thing. With probabilistic algorithms.
+The step size is more correct or
+right. So. So that's That's the the the perfect step size, because that that takes you to the mu equals zero result.
+But since you don't know what the result is. What the programs usually do is they look at autocorrelation in the trace,
+and when they find traces that look very, very random, they're very high degree of confidence that they converge that they've converted to the right value.
+Yeah. So look at. So look at this data. Look at, look at, look at the This is a a a, a a step size that's that's too large, and this is a step size that's too small, and this is a step size that's just perfect. You can see the perfect step size. You can see that the trace looks very random,
+whereas this does not look very random.
+Nor this
+that's auto correlation. What a correlation is! The data is correlated with itself, which means it tends to repeat itself data that repeats itself is not random
+this data because it tends to repeat, I find this pattern. I find that this pattern looks at this the same as this pattern, where here there's no repetition. These things are really really random one.
+user avatar
+Unknown Speaker
+00:55:11
+So if the this is up and down, they are just nearby, so where it is, but
+user avatar
+Dino Konstantopoulos
+00:55:19
+still random. Yeah, as long as you find something that doesn't have any pattern. If you find something that looks like, Oh, look this beautiful pattern, it means a lot of correlation.
+No, the variation is not important. The the size, the magnitude of the steps that I take around zero not important. What I want to make sure is that these patterns are very, very
+regularly ran random. In other words, if you look at the if you look at the the histogram on this. It looks perfectly well. It's the center around zero. But um! It doesn't have these like steps that look like each other, and and and that's that's there's some math involved there, but that tells you that you're converging.
+Okay, so is not a beautiful, algorithm not very complicated. And yet it converges. Yes,
+it it stays the same forever. Okay,
+yeah, this uses this, and I didn't. So
+around this cell.
+Yeah, there's a bug there.
+Does everyone get it? The to not move. Does it stay flat for everyone?
+Let's um Let's run it.
+Let's run the sampler.
+It could be it could be in the beginning. Let's see if um let's see if I give it a different value, and I ran it for
+twenty cents
+it could be It could also be because of an overflow. Yeah, it's your right. It doesn't change.
+It has to be a bug somewhere.
+What happens if I run this simulation for five thousand samples.
+Let's see, this.
+This will tell us whether we're moving at all, or we're staying at the same location.
+The sample size the sample of the data.
+No, you could run it for five thousand, or the the the more samples you have as long as it's going to take to converge. But here we're just running for the samples, because I want to see what the plot looks like, whether I move to a different mute. It could be that the first ten state one, for some reason I don't know what, but they shouldn't they They should be more variability in the data.
+Yeah. So my mute doesn't change. So yeah, there's There's a bug in the algorithm all right. So so I I I need to go back and check Something's changed. Um, Does everybody get the same? The same when you run it for five thousand is just a line.
+Yeah. So there's some kind of i'll. I'll i'll fix that, and i'll send you the new notebook. But um um! Something strange happen. Maybe I also uh change something in the code without being careful. I I assume if I if I change something. It's probably around here.
+Oh,
+this.
+So i'm going to look at the code and send you the value. But in any case, trust me, the outgoing works because you're a pyramid, c. Three three uses, and that's metropolis. So what I want to do next is, I want to do a lab so so you can get used to running these kinds of simulation simulation. So please open the next lab, which is the Premier League
+Lab:
+Okay, So what we're going to do is we're going to simulate the strength of the teams
+based on the results that based on the results of each of each, the results of each game.
+So what we're going to do is
+we're going to open the the file, the Csv file that I gave you.
+So we're going to run the first cell, and then we're going to run uh the Csv file, and that's the the the the results for the season. Two thousand and twenty, One of the Premier League, and we we're only going to keep um
+six columns.
+So the date of the game, the home team and the Away team, the full time home goals and the full time away goals
+and um I I don't know what it is.
+So um once you have that we're going to try to simulate with the Bayesian uh analysis, the strength of each team, so we can see which team is stronger than the others.
+So the first step is, I want you to uh create two new columns in the data set. So uh
+one column should be home team wins, so they will be a one if the home team wins. So if the um home goals are bigger than the away goals, let's assume that a tie
+is a win for the away team, because when you're at home you shouldn't you shouldn't, tie the the the opposing team. You
+so add a new column that says home team wins. Add a new column with pandas. It says differential, which is the difference between the goals
+with a positive differential. If the home team has more goals than the awaiting
+um step. Two find all the unique fees in the table and assign it to A, to a list,
+step three,
+create
+two new columns in the data set with Pandas
+one that's home team index and then away team index. So, in other words, what we want to do is replace these names with an index
+into a list.
+So say, arsenal is index zero. Fulham is index ten.
+You should find there's about twenty or twenty two teams over overall in the Premier League.
+Then step four is the Bayesian model. So you're going to build a Bayesian model. You're going to model the strength of each team as a normal distribution.
+A really neat trick for for for modeling twenty teams is to just say shape equals the number of normal distribution that you want. So when you say shape equals twenty, this will create twenty strengths, for each strength is a Pdf.
+And so you can. You can assign each Pdf to different teams.
+So this is your um. Strength is going to be your parameter
+to go from minus five to five, which means I i'm. I'm saying that the differential in the goals should be around minus five or five. Right? I don't think any team is going to score ten goals more than the other team. That's what i'm saying.
+It's possible that there's more than that, but i'll just stick it to from minus five to five.
+Then I want my data likelihood to be Bernoulli right? Because what we're looking at each row, each row tells you who which team one. So the data likelihood is a Bernoulli distribution.
+It's just win or lose. Not how many wins or losses that would be a binomial it's just win or lose for every row. So that's a really distribution.
+But what you will do is you will do something a little bit fun here. This strength is not exactly going to be the parameter you're going to use a difference,
+and that's going to be assigned to a logistic profile.
+So logistic is a sigmoid curve that's going to make this difference. Um Look sigmoid, so the difference will be the strength
+um of
+a specific team minus the strength of another team that's going to be modeled with a signal adult. It's going to be the p for the probability of winning or probability of losing for each team.
+So um step five, so do the simulation step five. Do the trace. Step six plot all the posterior Pdfs. Compare the posterior using, using our viz. Do a summary of your simulation with with our viz.
+And use a zipper to list each team and their strength and plot to the teams and their strength.
+So the strength of each team is the mean
+and that Gaussian goes from minus five to five, and it tells it tells you the strength of the team.
+So um. The reason for this is to help help you help. They may help it. Make more concrete how basis simulation work works. So get with your teammate and start doing all the steps,
+and then Tas away from you, Tom, can you just move around so that the questions can the students can ask you question, How do I do this? How do I do that. How do I do the next step?
+Okay,
+This could be a review for your for your midterm exam. So if we had programming questions in the midterm exam, which we won't because I can't. I can't run a notebook within the cannabis, but if we did, we'd be doing this in the midterm,
+so it's good to do it. Now
+we won't. Do this in the midterm midterm will just be questions, but it's still good. Good good to do this.
+Okay, Get started. Do it, Do it,
+do it. I'll give you five minutes now. I'm kidding. I'll give you fifteen minutes.
+You, Tom,
+and I'll. I'll check. I'll check the code in the meantime to see if I can fix the bug.
+Oh, I found the bug
+uh That's because we start. P. Accept is not a number
+user avatar
+Unknown Speaker
+01:09:49
+uh
+user avatar
+Dino Konstantopoulos
+01:09:52
+P current is zero
+zero over zero. That's why
+under flow.
+Ah, that's probably Why,
+user avatar
+Unknown Speaker
+01:11:15
+Mhm
+user avatar
+Dino Konstantopoulos
+01:11:16
+Okay, I found what happened.
+Um, Can I just have you let me just verify something, and then we'll check.
+Okay. So this was what's happening. Um, remember how
+we change the number of data points up here.
+We had um. We. I started with a with one hundred data points, and then we changed to a thousand because because somebody wanted to see the data a little bit different
+now in in the sampler. I try to make it as simple as possible, the sampler, so I I didn't take the logarithm of the data likelihood.
+I should have taken the logarithm when the number of samples is very large. If you take the product of many, many points, and each point has a small value. You will underflow,
+which will make. In other words, you will go to zero,
+and when you take something over zero when you compute ratios that will be not a number, and you won't move.
+So the reason why there's this bug is because um I I to make the sample as simple as possible, and I think that I did not take the logarithm of the data likelihood
+metropolis usually takes the logarithm of the data likelihood, because then it doesn't underflow. So that's the reason why. Start with a hundred points, I said, Let me start with one hundred points, and then I don't have to take the logarithm, so just go back and change your data to only have a hundred points
+and then run it again,
+and if you run it again with all with a hundred day. Of course you should be okay without taking the logarithm of your data likelihood.
+So i'm going to comment out
+the Prince.
+I'm gonna run this.
+Now,
+if I go and I run the visualization again, you should be able to move from one point to another.
+Okay, Now now you move, you see.
+Oh,
+still I mean, I move a little bit. But then my trace. Yeah, that's because I converged Once you get to minus one. You don't move anymore because you found the right solution
+right. But before you get to one you will move until you find the right solution.
+Um,
+So no sorry. This is minus one. This is this is the This is what I ran. So I started at minus one, and then I moved to zero, and then I
+I stopped at zero.
+Okay,
+good does. Does your sampler also run? Okay,
+when you reduce the number of data points?
+Okay, If you want to increase a number of data points to a thousand or ten thousand, can you have to take the logarithm of the of the of the like of the data likelihood, because then you will turn a product to a sum, and then you will underflow.
+Okay, i'm going to add a reminder up here in Jason.
+user avatar
+Unknown Speaker
+01:14:48
+Hmm.
+user avatar
+Unknown Speaker
+01:15:07
+Note.
+user avatar
+Unknown Speaker
+01:15:12
+I only
+user avatar
+Unknown Speaker
+01:15:14
+run one hundred eight of points
+user avatar
+Unknown Speaker
+01:15:18
+because I am mocked,
+user avatar
+Unknown Speaker
+01:15:22
+going to evaluate
+user avatar
+Dino Konstantopoulos
+01:15:24
+the longer than
+user avatar
+Unknown Speaker
+01:15:32
+in my
+user avatar
+Dino Konstantopoulos
+01:15:33
+algorithm in my metropolis
+more data points, and
+i'm likely
+to under slow.
+And in that case
+I need
+to evaluate
+logarithm
+the data like that.
+Okay, Did everybody understand the the bug where where the bug came from.
+Right. I compute the product
+of all the points or the likelihood. If I have thousand points, I over. If I under flow, I go to zero. If I take the ratio of something that's a zero number I get again, and not a number, and the computations. Don't work anywhere.
+Okay, Back to the back to the lab. How you guys doing with the lab.
+Are you done?
+Let me let me show you a a quick, quick way to do Step one. I'll show it to you here on on the screen
+uh It's a fast way to add a new calling with pandas.
+Okay, here's two ways to quickly add a column um
+in um in in a data set. So what I do is I add a new column called Home to Home Team, where I apply
+uh a lambda that that one, that the determined function over these two columns and the determined winner has the logic for each condition,
+right? So that's a That's a a neat way to add new columns uh that will fill a certain filter.
+Yes,
+make it bigger. Okay,
+Is that good?
+user avatar
+Unknown Speaker
+01:20:24
+It's a.
+user avatar
+Dino Konstantopoulos
+01:22:16
+This is a fast way to do. Step two.
+Take the column
+and and call the unique Api,
+and then sort it.
+We don't.
+Did everyone figure out how to do Step three?
+This is step. Three
+teams are all the unique teams. Right.
+user avatar
+Unknown Speaker
+01:25:15
+It's a
+user avatar
+Unknown Speaker
+01:25:26
+it's a
+user avatar
+Unknown Speaker
+01:26:20
+Mhm
+user avatar
+Unknown Speaker
+01:26:35
+it's a
+user avatar
+Dino Konstantopoulos
+01:26:38
+This is how you run your Bayesian simulation. Right, you say, with a model. You model the team strength the difference.
+You run the uh, you set the data likelihood,
+and then you run your simulation.
+user avatar
+Unknown Speaker
+01:27:20
+Um!
+user avatar
+Unknown Speaker
+01:27:27
+It's a
+user avatar
+Unknown Speaker
+01:28:08
+it's a
+user avatar
+Unknown Speaker
+01:28:52
+so.
+user avatar
+Dino Konstantopoulos
+01:28:53
+The Bernoulli distribution can be parametrized either in terms of P. Or the legitimate. So what we're what we're modeling is the the the The difference between the strengths for modeling is that as this
+right? Because Don't forget Bernoulli is the probability of winning or losing.
+Now we're taking the logistic of the difference between the the team,
+because this renormalizes from zero to one right. If we take. If we take the difference in goals, it's not between zero and one, so it can be a probability right? So we need to turn the difference in goals into a probability. So we do that, using the logistic,
+clever right,
+And once you're done with your model, if you want to run it. You just say
+with
+model
+trace.
+user avatar
+Unknown Speaker
+01:30:26
+Okay,
+user avatar
+Dino Konstantopoulos
+01:30:28
+what?
+It's the same thing as this up here
+in Pm: Sample does exactly the algorithm that we did before it's a sampler. It samples from the posterior,
+doing the same kind of outgoing that we did,
+and after you done simulating,
+I want you to plot the trace for every one. Every there's the strength of every team plot the posteriors
+plot, the teams with respect to each other. Their strengths
+get the summaries for all the for all, for your entire simulation, and then use the zipper to lead list each team and their strength and plot a bar, a bar plot.
+This is how you could zip the teams up,
+and this is how you do the uh the Bar Plot?
+Um,
+yes,
+Step three is. You add two new columns,
+home team index and a way team index. Because the the reason why we want these columns is because Um, we we want these columns here a home team index. Once you look at your player stats because we're gonna work on these on these index right? So you want these columns home uh sorry
+home team, index and and away team index. You can't. You can't see it because it's
+because then what you're going to do is when your Bayesian model. You're going to take
+the play stats of this, and this becomes your strength parameter.
+user avatar
+Unknown Speaker
+01:35:17
+What exactly
+user avatar
+Dino Konstantopoulos
+01:35:18
+home team is the is, the is, the is the team that accepts the other team. So so in the Premier League teams come and play
+home team index. In my way, team index is the rank of the of the teams in your, in your in your list. So if I have, if I put all my teams in one array and arsenal will be team zero as and sorted Aston Villa will be Team One:
+Yeah.
+So we can refer to them as strength of zero strength of one strength of two. Yeah,
+And at the end
+I want you to obtain um a plot of the strength of each team. So what you should have at the end. So this is the forest plot that likes to compare the team so you can see which team is stronger because it's more to the right and which team is weaker.
+You can also look at the
+These are the profiles for each team.
+Right? So so this is the the the strength of your team
+and the the real strength is determined by the me. But this also tells you the standard deviation, so that if one team doesn't play a lot of other teams. Then you don't know how strong they are right, and so the standard deviation will be a lot larger if one team plays all the other teams, and they always win will always lose whatever the standard. Deviation will be a lot sharper because you have a model knowledge on that team.
+So knowledge is trust in the model is having a lot of data, not knowing if you don't have a like,
+because if you have a team that only plays one game
+and wins. It will have great strength, but a really huge standard deviation. You have no idea if your guess is correct,
+right
+so at the end i'll give away the the drum roll.
+Once you do your bar plot, you will find that
+man, United and Man City are the strongest teams,
+because, In fact, I think Manchester City won the twenty one season right. The championship
+and Sheffield united was relegated
+with brawn as well.
+Since the the the the team strengths are are are assigned by time, c. Three as negative numbers. That's why they appear in negative in the negative. But if you don't want negative numbers, you can turn them into positive numbers. It's not a problem.
+So this is just the the the the the strength of each team. You can also plot the standard deviation, which is how much you know about each team,
+user avatar
+Unknown Speaker
+01:38:30
+right? And that's the thing that you get with the Bayesian statistic that you don't get
+user avatar
+Dino Konstantopoulos
+01:38:34
+with classical statistics
+that knowledge of how how much do you know for each team?
+Okay. So finish this lab homework.
+Um and and second homework. I also want you to do the formula, One solution. So the formula one? No, no, no, no, no, no, no! It's here for you one uh Bayesian models in sport analytics. So here we repeat,
+um, we repeat what we did uh with uh formula one. But instead of classical statistics, we do it with Beijing statistics,
+and instead of uh, we we use a new distribution. That's the beta distribution, because it's an amazing distribution, because it can. It can go from this
+to this,
+to this,
+to something that looks like a parabola to something that is flat.
+So a beta distribution that is completely flat is a flat prior. This is like, What? What, what is this distribution look like that you know of?
+So this is just the this is just the the the beta distribution with parameters Alpha and Beta equals one equal to one.
+That's it,
+isn't that amazing!
+And then you can go even further down. If I If I keep going down. It turns into this shape.
+Amazing right? It goes from
+um. It's amazing function,
+and it's used to long probabilities. So I want you to essentially repeat what we do for the Premier League, but do it to formula one, and come up with the strengths
+uh the strength of of of of each of each one of these racers. So now, instead of giving me a percentage of winning you're going to give me the Pdf. For each one of these uh drivers,
+user avatar
+Unknown Speaker
+01:40:46
+right?
+user avatar
+Dino Konstantopoulos
+01:40:47
+So what i'm going to do is i'll post on canvas the solution to this lab,
+but i'm not going to post on campus. A solution to this lab. I'm going to give it to you as a homework for Monday.
+Yeah, Yeah, you can do that, sure. It's. It's similar to what you did with with the Premier League it's not very different,
+and you also have due Monday, the the the Bayesian Rainfall
+lab. Right?
+So, don't you have the Bayesian rainfall.
+user avatar
+Unknown Speaker
+01:41:20
+Um!
+user avatar
+Dino Konstantopoulos
+01:41:23
+Oh, this is new homework i'll give you on Thursday, but i'm telling you now.
+Yes, i'll. I'll. I'll upload and i'll upload the completed notebook.
+This is the the purpose of these labs in the homework is to make you get a a a, a experience doing the Bayesian models because you never work in probabilistic uh variables before. So you need to get used to that. Okay? See you Thursday?
+Oh, actually, it is Thursday. What am I talking about. I mean, see you Monday.
+Yeah, we'll do that on Monday.
+user avatar
+Unknown Speaker
+01:42:23
+Okay,
+user avatar
+Dino Konstantopoulos
+01:42:24
+yes.
+I was not able to understand the the the last set of shocks, which is like all the means and everything like this uh, and see one above anything
+after another. One number
+after you get the trace on this. So How do you read it? So this is the strength of each team. So this is the I. I I modeled twenty teams in their strength, and their strengths are a Pdf: So the mean we'll tell you how to how strong the team is. Okay, and the standard deviation will tell you how much information you have about. But if the standard deviation is very large, you have don't have a lot of information. You're pretty sure that the spent Is this: Okay? Okay. And but when we ordered it
+the initial data set, I will the drug and procedure.
+We've got about four different chocolate. That's a different variable. Okay, here we're just plotting one variable for each to, and that variables in team strength, and each two strength is represented by one of these curves on the right. So if it's left, the standard division is larger than if you have this information, we don't application. Maybe Don't:
+Yeah, I guess we're wearing. Yeah, I just wonder whether not because that's cable. It's fine. No, I I I can. I regard people as something really, and let's go to.
+So previously we were talking about.
+Yeah, I remember it.
+I uses the um um behind the scenes of the Pyramids. So when we're wrong, the it's the they're in behind Metropolis version of
+So i'm just not sure about
+when uh, when we generate the data
+right there
+right there
+when we generate that. So we just
+the they're uh one hundred days. That's right. Yes, and when we use bread it as it's a.

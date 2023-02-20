@@ -1,0 +1,620 @@
+Yeah,
+user avatar
+Unknown Speaker
+00:18:09
+it's a
+user avatar
+Dino Konstantopoulos
+00:18:30
+Okay, let's start.
+So uh over the weekend. I thought about what we're going to do for our final project.
+So we are going to
+study the statistics of of texts.
+So we're going to borrow a little bit from my natural language processing class and the data set that we're going to study are
+texts. You can pick your text so you can pick
+who you want to study.
+Famous political thinkers, sociologists to some interesting things, and we're going to study the statistics. So I'm: I'm going to show you how we can use a little bit of graph theory. Um, how we can analyze text, look for. Normally, it's going to be interesting. So i'm going to work that we're going to work it out during this week. So this week. Just
+form your team
+teams of three
+uh and think about what text you want to analyze like. Make it make it nice and big, not not like a few paragraphs. Right? The more data you have, the more interesting it is to analyze things. So this is what what you should be doing should be doing this week. So
+once again this week we're getting into linear algebra. We're going to um. Um. Use that to study graphs, and the graphs are going to get us ready to study machine learning algorithms, which is something that's going to be taught in the uh in the spring semester next year.
+Um, as as an introduction, right? Not as an advanced class. And uh, we're also going to look at Gaussian processes, which is, what do you do when you look at the histogram of a data set, and it actually doesn't look anything like a function, you know of.
+It has multiple homes. It doesn't look like a camel at all. What do you do then? And we're also going to look at graphs.
+Specifically. There's There's There's a lot of data signs that involve this sorry time series. We're going to look at Time Series. There's a lot of data signs that involve pure Univariate Time series. And so, um, we're going to look at that.
+So uh let's get back into it so hopefully. Everybody look at looked at the um.
+The correction of your take home midterm. I think it's It's an important lesson. Um, it. It wasn't that difficult from a problem? Perspective right there's two.
+There's the seven drivers and seven shows, and then you can reason with the one minus thinking right.
+Professor picks one. Show what what are all the ways to put all the drivers in. The other shows.
+Seven shows six drivers, six over seven to the power. Seven. One, right? That's the sixty, six percent answer,
+and then the
+the the the the one driver in seven shows seven times. That's the same thing as seven identical drivers and seven shows. If you think about that.
+And we already we already saw that that that that in class that's the stars and bars approach. Right? That's m plus our combination of n plus r minus one or O. Or M. M minus one right So in a in that result. Uh, we will give you the other number, which is fifty-three percent.
+So so um the the the most of you go got one of these two answers, but it's important to distinguish which answer was, which and
+because that's how we count probabilities. Right? We see what are all the possibilities
+which ones are favorable
+over the total? That's your probability. I mean, that's the definition of probability. So enumerating a sample space is important, and a lot of you used used ended up using the join
+the joint probabilities function that we used in class. But you missed the fact that you have to use a joint probabilities. That also includes all possible groupings of drivers,
+which is, if all the drivers is one set of possible groupings, is the power set of that set right. So you have a Bcd. You should be able to generate Abc. Nd, or Ab. And Cd. Or Abcd, or A, and B and C. D. Right. This is the power set of a set,
+and so a lot of you missed that part
+so in general.
+Um,
+if it's something that we saw in class. You can redo it, but if it's something new, I found that a lot of you couldn't do the new thing,
+So
+this should be a lesson to you when you you encounter a new problem.
+You've had problems dealing with something you've never seen.
+So once, you know you have problems dealing with something you never seen what what should be the first thing you do. Be careful. Take small steps when you encounter a problem, don't try to get all through. I'm going to get to the top of the mountain with one big step. No, take the baby steps, reduce the problem, make it simpler instead of seven drivers. Take one driver and one show
+one time.
+You understand that. Good. Then move to two drivers in one show, one time. Two drivers and two shows right. Make the problem simpler,
+because when you do that and you can solve the simple case that will be insight as to how to treat the general case.
+The biggest problem that people have. And this is oh, my God, it's such! I mean, these words are so so so so wise, and I I wish you would listen to them and and put them in your mind. The biggest problem that people have is not lack of knowledge
+or lack of experience. It's lack of patience.
+You're not patient enough to sit down and see. Let me look at the problem with one driver in one show. Then i'll go to one driver in two shows, and i'll go to two drivers in two shows, and i'll go to two drivers in two shows what we
+you don't have the patience to do that. If you want to be programmers. If you want to be data scientists, you need to learn patience.
+You can't do everything immediately.
+If you do, You're going to be mediocre in your life.
+Nobody. Nobody that I know of that is super smart
+goes at one hundred miles an hour. The people that I know that are super smart drive ten miles an hour. When I say drive ten miles an hour. That's how they think they think slowly because they're human, and they know they make mistakes. And so when you make mistakes, slow down,
+so I want to see how you're going to slow down for your for your for your final exam. Right? I want you to take it easy.
+If you run out of time. It's okay. You run out of time, but but proceed slowly, because that is the beginning of success,
+especially in a science career.
+If you're an artist. Maybe I don't know. Maybe things go fast. I don't know, but I can tell you in a science career. You have to go slowly, but
+you want to be successful. If you want to be
+average, then do like everybody else, go really fast.
+Do you want to be average, or do you want to be able to one day get your dream job and make like million dollar salaries working at a great company like Google.
+Well, that's what it takes
+slow down.
+Okay, So let's let's do a review of linear algebra and let's see how that helps us tackle graphs.
+So. Um,
+it's important to also slow down here and to understand how we solve these systems of equations, right? And how do we actually write this in matrix form?
+Because once we move to machine learning. And besides, I told you that programming is manipulating a lot of numbers at the same time with a lot of variables.
+So
+so this is My, I don't want to do that. I've never done it. No, this is programming.
+Writing down multiple numbers in one variable is exactly what program is all about.
+So don't look for an excuse. This is math. I don't want to learn this. This is programming. So if you picked you, if you picked an information and an it career, and it track for your career. You have to learn this
+user avatar
+Unknown Speaker
+00:27:25
+if you want to be successful.
+user avatar
+Dino Konstantopoulos
+00:27:28
+If you just want to drive an uber car for the rest of your life. Thunder, do you?
+You don't have to get a really good job at a really good company, survive
+but it, I can tell you it's a lot more fun.
+So
+this is how we put. We create our matrix. A. This is what create our vector X. This is how we create our vector Y, and then we can write this equation.
+It takes a lot less less space and variables to write this, and python gives you all the tools to be able to do. That new pie expresses containers. You can put things in containers, so you don't have to spell everything out.
+Then we define vector spaces, right? A space that has that is a quad. It's a tuple
+with four elements, like as a vector space. We have vectors. We have scalar, so you can multiply. The vectors make them bigger, making bigger or smaller. You can add the vectors. You can multiply by by um by the scalars. And then we saw different ways of um
+expressing what a linear transformation is. We define a linear transformation, We,
+the linear transformation, has these two properties, these two properties yield this. This yields the fact that if you have any, vector all you have to do is study the effect of the function F on your basis. Vectors
+and and the basis vectors that are the the easiest to to study are these.
+And so let's study the effect of that function. On this. Vector if we study the effect of that function on this, vector we can write the matrix of a function.
+And so, instead of writing functions. We can work with matrices
+want to do machine learning. That's what tensorflow is all about it's. It's the science of matrices and vectors and higher dimensions of tensors.
+So if if that's something that interests you, then you have to learn this. You have to learn how to write. This is the function. So this is a function. F. I've defined a function because I told you how it acts on the basis. Vectors, the moment I tell you how function acts on all the basis. Vectors. I've defined that functional vector space
+The moment I tell you how that function acts on the basis, vectors, you can write the matrix of this function
+Not very difficult. Right? F of one is e two. So right down you two as the column e two is zero, one zero F of V. Two is one plus e, three in one plus e, three is one zero, zero, zero plus zero zero one which gives you the vector one zero, one
+F of V three is two times E: three.
+Yes.
+So
+okay. So then we had some exercises where we we saw how how to do things, how to do matrix multiplications, how to do matrix inversion, We we, we find out what the mate what the inverse matrix is, and then we we. We had some exercises, so
+uh, and then I told you that a good way to think of vectors is to think of it. A vector describes the position of a climb or an amount,
+and the matrix transformation is also called the rigid transformation, because it changes a a, a, a, a, an object into an object in the other position, using some kind of translation, or rotation, or or or dilation, or any kind of transformation like that. And So
+if you think of transformation or matrices as a movement on the mountain,
+then they become easy to think about, and it's not. It's not that complicated anymore. A matrix is just a transformation. It's a movement, and I start with an initial position which is given by A vector and I end into another initial final position which is given by another vector
+and then we have to learn how matrices and multiply, because we saw that that if you start with an initial position, multiply by a matrix multiplied by another matrix. Get to the third position. It's the same thing as multiplying the two matrices, and just just doing one transformation
+which is really critical when we get to machine learning, because when we get to machine learning you'll tell me I I will tell you that the way to do that is to create many layers and to add many neurons in each layer
+kind of the way your brain works. It's, maybe layers of gray matter and neurons in each layer and connections between the neurons,
+and then and then it's it's matrix transformation from layer to layer. That's that's the only thing that's what neural neural networks do. That's what your brain does is matrix transformations from a layer to layer. It's it's a linear function.
+And then.
+So then you can say, Well, Professor, if it's a matrix information, and we saw that tomb raider uh goes from one layer to another layer and then to a third layer. Linearly,
+we saw that it was equivalent to creating combined matrix that essentially creates just one layer
+that acts like the two layers. And why are we using many layers?
+Why are we using many layers? If we can say that the mapping from one layer to another layer is just a matrix, and then we just want to pl all the matrices together rather than going from layer to layer.
+And that's just like having one layer right. Do you understand what i'm saying?
+Here we saw that when we looked at Tomb Raider we saw that where was was our tomb raider exercise
+Here we saw that this is this is to to two, to two transformations, the twist matrix and the repel matrix. And when we saw it the same thing as having one combination matrix, right?
+So if we create many layers in our brain, what we just don't, we just create one layer with a big combination matrix.
+Did you ever ask that yourself? Did you ever ask that?
+Ask yourself that? What? Why? Why is that that we can create a a single combination matrix? Well, i'll tell you, because after every combination our brain adds a nonlinear transformation,
+and that's called the activation function, because your neuron doesn't immediately fire, if it's given feedback from from upstream. It has to wait until it gets to a certain level, and it will fire so that provides a non-linearity, and that nonlinearity
+assures that you can't do this thing, because the non-linearity is what actually is the richness in your brain. Because if your brain was completely, linear you'd be very, very dumb.
+Intelligence comes from nonlinearity
+because it gives you many different ways of reaching state space that you couldn't do linearly. So you see, this stuff is really important. So it's important to learn this. Now, if you want to proceed further into data science and actually make potentially make that your career.
+Okay? And then we looked at some special operations, and then we went into eigenfunctions and lagin, or inverting matrices. We saw that matrices are associated by even like some. I forgot. They're associative, but they're not commutative, Right? You can't commute, but you can associate them so eight times meet times, c. The same thing as a times B
+time seat,
+and then we went into eigenvalues and eigenvectors,
+and
+then maybe you can believe Tony Stark, also known as Iron Man.
+Why is volume not working.
+user avatar
+Unknown Speaker
+00:35:49
+Okay,
+user avatar
+Dino Konstantopoulos
+00:36:16
+I don't.
+I think he looks a little bit like me doesn't He
+and and um here's a fact. Check. By the way, by scientists, you can check the science of of iron. Man. Um, this is this is the new um I gave you a new uh, an an updated um
+a notebook. So so it's important. And And why is it important? Why why do we, when we have a matrix?
+Do you want to know which vector V.
+Is such that the mapping of that matrix, but by by by the transformation of V. By that matrix is is is just a scale version of the
+what? Why, why are I eigen vectors uh that important
+And and the eigenvalue is just. Is just. Is not that important right? The eigenvalue is the
+Okay, So so we we have to. We have to see why it's important. And I hope everybody understands. If we use the mountain analogy, why eigenvectors are important,
+because it's a transformation which is a transformation such that if i'm looking at tomb raider
+at a mountain and tomb, raider is moving, and is is is jumping from from from, you know, one peak to another peak, shooting the evil dogs right, which is what Tom Raiders do um an and and and and looking for um um precious artifacts.
+Then I can keep on looking at Tomb raider because she's either getting further away from me or coming closer. But she's staying on the same line. She's not moving away from my line of sight,
+and and and I told you that if you have an n by n matrix that's not degenerate. There's such some special cases which not true. It has n eigenvectors.
+So these eigenvectors, you know you you know how you can do transformations of basis. Right? I can take this for this room. I can take this axis and this axis, and this is my base. But I can also take that axis. So a vector expressed as this base can be transform into another, vector expresses
+the base from that axis right. It is just a frame of reference. So so we can. We can always do a change of basis. If we have an n dimensional space. We have n vectors. We can change that. So when we have an n dimensional space, if we take the vectors formed by the eigenvectors,
+they they also form a basis,
+and this basis is super important for for the matrix. A. Because it's it's the base that leaves objects
+rotated. It just it just squishes them up. It just expands them or contracts them.
+So it's a very, very special base for the for the for the matrix a
+um, and and then I I tell you a little bit about eigenvectors in physics, which is also super important. So and I give you some links to look at that are that are important. And then we looked at how to obtain eigenvectors and eigenvalues using the Sci-fi library. Yes,
+so um
+We looked at eigenvalues and eigenvectors how to obtain them. So right now you. You still don't know why they're important. And say, Okay, Professor said that maybe we trust him. But uh, okay, let's see how we compute the eigenvectors. So if I give you a matrix like an array, we compute the eigenvectors, and we verify. So these are the eigenvectors
+user avatar
+Unknown Speaker
+00:40:13
+right,
+user avatar
+Dino Konstantopoulos
+00:40:15
+and these are the eigenvectors um and and and we can you. We can even create a matrix that has the eigenvalues in the diagonal
+in the diagonal. And we saw, by the way that when we compute the eigenvectors in the icon values we switch into in that complex numbers, right? These are complex numbers. When you see a number that's um
+real number plus real number times I or times J in in, in, in, in in you. J. As the number who squared is minus one right J is is is a very strange number. It has a square that is equal to minus one.
+So if you do math and you study imaginary numbers. They're actually a very useful tool, because sometimes in math things don't exist
+right There's no solution to some equations. Sometimes the matrix doesn't have an eigenvectors.
+If the matrix is degenerate, right, strange things happen in real world, but in in in, in, in a complex world, every there's no there's no weird things. Everything always has a solution. A matrix always has an eigenvectors. And so that's why we switch into the imaginary space because it's a useful technique to find things, and then we just look at the real part
+right? So we jump into an imaginary space, and then we just look at the real part
+to to find the real solution.
+It's a little bit like, you know, when we take when we take a a trip with our parents into a really really far away place that we don't want to go to. We take our Teddy bear with us, and he's our imaginary friend right because he he makes it less lonely to be sitting in the car for eight hours. I don't know if you ever took like big road trips with your parents, but I did. I was just stay there for, like the whole day. So you know, you take your Teddy bear. You go into imaginary space to be really happy, and Then eventually the road trip ends and you get out of the car. You back
+into the real world, Right
+kind of mathematicians and physicists do the same thing to find solutions. They go into imaginary space. That's why we have imaginary numbers. But you know, eventually, Don't Don't worry. You're not going to deal with this imaginary number. You're just going to deal with the real part.
+And then, if you see an imaginary number that doesn't start with a zero, you know that there's some kind of degenerate thing going on some solution that doesn't really exist in the real world.
+Okay. So now into we're into we're into thinking about. Why, why is it that I eigenvectors are important? And to introduce this, I I talk about a a stochastic transformation, so transformations that are described by a matrix by the probabilistic matrix
+probabilities. Don't don't worry us now, right? We we study probabilities for half of the semester. We're like oh, more than half of just. We're pretty uh comfortable there.
+And we said that this is a matrix that describes the transformation between two different States State the probability of moving from State double A to to remain to state Dela is ninety. The probability of moving from State triple. A to state double a is is is seven percent,
+and from State double a to triple A is one percent
+right? So So this describes a stake machine tells me what are the probabilities of moving from one state to another.
+And then, if you, if you into quantum physics, you know that everything is actually a superposition of states, even reality is just a superposition of different possible states. You don't know that because you're you're big. But if you were really really small, the size of an electron,
+then you'd be living in this strange world, where everything is possible and and things live in many different possible states.
+And so the real State is a combination of all these States,
+and and and so I told you. How do you compute the transformation from from one year to another year? You, just, you just multiply your your state, your state vector that tells you what combination of states you're in by this matrix, and that gives you the next state.
+This, the state you're going to be in next year, right? Just like the mountain climbing moves from one position to another position. But now, instead of positions, we're looking at systems. And we're looking at the state of a system because the system has many variables,
+and it can be many different states, and it's described by State variables the same way. A mountain climber is described by three coordinates on the mountain.
+Yes,
+and so the way States transform is. They get multiplied by a matrix. When you play the game of chess
+you have a state that is described by sixty four variables, and in the different ponds you
+and it tells you where where your ponds are on the board. When you play a game of go, you have a state that has the number of I don't know what the number of cases of the game will go are, and a number of of ponds that you have on on the board that completely describes the game
+and the game. The next step is just a transformation by a certain matrix.
+So if we want to find
+we move in a game or two or two moves or three moves or three moves, but after ten moves or one hundred moves. What we want to do is is compute the powers of that matrix right, the powers of the matrix that describe the transformation
+to the square, to the cube into the like like tomb raider, because it's a linear it's a Markov chain. It's a linear system. But
+to find the State after many transformations, we just want the matrix to that number of power to to that power
+power two is after two moves power, three after three moves power four after four moves. So computing the power of a matrix is something that is super important super important in this world,
+because it tells us about the future
+in the future is everything that we want to know about the future, because we want to be able to predict. You know, what investment should we make? What what what maximizes our ha, our happiness down the road? We want to compute powers of matrices.
+user avatar
+Unknown Speaker
+00:46:33
+Computing the power of a matrix is a very complex operation.
+user avatar
+Dino Konstantopoulos
+00:46:37
+It's it's in it's. If the matrix is a size and it's an M. Cube uh complexity operation. It is right because you have to go over the rows and over the columns. Remember how we computed M. Multiplied matrices. You look at the role, and you look at the column. So that's n, and that's n, and that gives you one element, and you have n other elements
+to compute. Right?
+So it's a it's It's a complex operation has high complexity.
+Um,
+and and then I told you about, You know sometimes when you take many, many powers. Eventually you will reach a point where you, when you compute another power won't change the matrix very much that actually happens for probabilistic systems for systems that has that are stochastic. Stochastic is another word for probability.
+Stochastic is the Greek force, for probability probability is a Latin word. So those two words are equivalent.
+So so this point, where you multiply by a matrix A. At a point P. That may describe either a mountain climber, or may describe the state of a system and and gives you another another pie. You know the pi. This is a matrix p. This is the vector pi pi pi is called a a fixed point,
+and there's a very famous theorem in math called the Fixed Point theorem
+right? If you saw the movie called the beautiful mind. She's a very good movie to watch. If you can't rent the movie, you haven't seen it. It's It's the the the story of the life of a mathematician, a statistician, right? A data scientist.
+That, uh proves the fixed point theorem that there's a fixed point for every transformation and some additional things. Um, and um it's it's a it's an important theorem. And so here now we're getting into the reason why um eigenvectors are important.
+So let's suppose let's suppose now that we've seen all this, and now that we've seen how important it is if you take the squares of, or the cubes, or the power end of a matrix.
+Let's take a matrix, A, and let's look for the I get. Let's look for the eigenvalues of the matrix. A. Say, oh, crap! We have this big matrix. It's N. By N. By n is huge. It's like thirty or one hundred or one thousand,
+maybe it's the it's the it's the number of nodes in the world web.
+How many, how many urls are there in the world does anybody have a guess
+how many websites are there in the world.
+What What do you think the number is? Is it? Is it hundred
+that would be more? Is it a thousand?
+user avatar
+Unknown Speaker
+00:49:12
+No,
+user avatar
+Dino Konstantopoulos
+00:49:13
+a million,
+I will. What's the number? What do you think it is?
+Huh?
+Yeah, What is it? Oh, it's a magic number two hundred, two hundred. Yeah, that's a good guess two hundred billion. No, it's actually more than that, it's more. It's in the trillion since actually hundreds of trillions.
+Um. And so you you could potentially have a matrix. That's That's the one hundred trillion by one hundred trillion that describes the what web and you want to compute the square of that you would never be able to do that. That would take forever.
+But let's let's say, Okay, let's approach the problem differently. What if we want to compute the eigenvectors of that matrix. A. So we want to find the vectors. Xj:
+The vectors x, the Vector: the vectors x such that ax
+equal to Lambda. X:
+Yeah,
+So these are. This is the definition of the eigenvector.
+So suppose
+suppose we find this vector. Uh, let's. I should let's move from the exercises, and let's move into the consideration. Suppose we find these eigenvectors
+right, and and we take them, and we put them in a new matrix, and we call P.
+We call this matrix P. And and these are the eigenvectors. So there's some vectors. It's a column right, and here I rewrite them as the call. So So this is the matrix. Yeah, not the original matrix. Say, this is a new matrix. This is the matrix form by the eigenvectors of the matrix a everybody with me.
+We called an X. X. I's right.
+Okay. So let's say it has Uh. X. X. K. It has. K. Again. But right, let's take these eigenvectors and let's put them in a new matrix.
+Now we call P.
+It is, if we put the vectors one column after another that will create a matrix. Right?
+Okay. So this is a new matrix speed. And by the way, we know that each eigenvector has an eigenvalue. Right?
+So let's take the eigenvalues, and let's put them as the diagonal elements of the new matrix. That is, there is a a a diagonal matrix, because it's zeros everywhere except for the main diagonal that has now again the eigenvalues of the of the of the eigenvectors of the matrix day,
+and and they just they just play with P. And D. Let's just play around with them.
+Yeah,
+actually, let's just say we didn't even find the the eigenvectors yet. But let's let's suppose we we we, we, we, we're able to find them. Let's write them down and let's play with the matrix. P. And D.
+We ready ready for playing
+It's just play.
+Okay, let's take the original matrix, A and the new matrix. P. And let's multiply them.
+Let's multiply these two matrices.
+So if we take
+these matrices, let me just rewrite this. This is matrix a Times. The column vectors formed by the eigenvectors right. This is a matrix two, but I re I I write this matrix as a as as a bunch of columns, and I need each column. Yeah, I like to call next one, except okay.
+I told you that. Um.
+But but we know that a x one is one, one, one one right? That's the definition
+of the fact that x one is an I about i'm like in vector
+So so let me rewrite everything now in terms of Lambda, one X x. These are the components of X, one. So the components of x, one are x, one, one all the way to X, One. K. Yeah.
+And this is just lambda one. The components of x, two are to one, x, two, two, all the way to x, two K. The components of Xk or x, K. One xp. Two all the way down to I. K. And and this is this is the I.
+Now, if you, if you multiply a lot of matrices to use your exercises, you will find that this is actually the multiplication of the original that the matrix formed by the eigenvectors times, the diagonal matrix, the that we talked about. So this is actually Tv.
+So a P equals. Pd:
+Yeah.
+Is everybody comfortable with that? Or do you want me to rerun the math?
+Okay.
+So Ap. Equals Pd:
+That's the same thing as multiplying on the on the right by t minus one. So then, this speaks cancel here. So we have Pdp minus one. So a equals pdp minus one.
+Yeah,
+this is a really really important result,
+Because
+and so all I have is Pd. D.
+P. Minus one,
+and Pdd. Is Pd. Square.
+So i'll get this results. A square is P. E. Minus one times V. Dp. Minus one right.
+Do a cute. What do you think it's? Hugo?
+A. Q. Will also be Pdq. T. Minus one do a to the N. What do you think A. To the N. Is going to be? It's going to be P. D. To the N. P. Minus one. Now tell me, tell me what the power of D to the N. Is. Is that very difficult to find the power of the to the power. N
+no, it's just the land. This to the power in It's Lambda, one to the power, and all the way down to Lambda, K. To the power, and in zeros everywhere else,
+is just Pd. N. To P. Minus one. So the most complicated parts. This is really simple. The most complicated part is just inverting the matrix of the eigenvectors.
+And so a matrix multiplication becomes a simple operation, and since the matrix of multiplication describes the future of a system.
+If we can find the eigenvectors in the eigenvalues and compute the P. P. One, then it's not that complicated.
+Moreover, there's there's a certain result. Um, that that says that. And actually we can. We can almost surmise that from from from from just just looking at a stochastic matrix like this one. If we have a stochastic matrix,
+and we know that the power of a large matrix, the power of a large matrix is just given by um. The The that that that is important is just is just a is just a d to the n
+right. What happens if the the the we have a stochastic matrix, a stochastic. So each entry is less than one. So we're dealing with entries that are less than one in the matrix. Right. What happens when we, when we have a uh A,
+so so immediately we can see that the lambda can be bigger than one. Now, what if What if all the land does? Are or less time one?
+What's the number? Less than one to the power? A million?
+It's it's very, very small, right? So, having all numbers be less than one, is also not really possible for a probabilistic for the passing system. What does this mean?
+Well, this means that there has to be at least one another that's equal to one.
+That's That's a very important result. That tells you that each system that is, that describes the the the transformation of a stochastic or a stochastic system has an eigenvector ecosystem
+an eigenvector is called the dominant eigenvector of the system, and the dominant eigenvector of the system describes the long term behavior of a system. So, in other words, if you have a stochastic system, the system will tend to devolve into some kind of
+long-term behavior, which is essentially
+that what happens when you reach the fixed point. So you can think of a linear transformation as a map. So you're moving in a dimensional space from state to state, and eventually you're going to move around. You're going to move around. The moment you reach you can get closer to your fixed point.
+Then you're gonna stay there. It's a little bit like a satellite or a comment that gets caught in the gravity. Well, of of of of a client
+right? The comment moves through the universe,
+but eventually it gets caught in the gravity. Well, the planet. And now it starts rotating on the planet. It remains fixed, in other words, with respect to the rest of the universe.
+So that is what the dominant eigenvector gives you. It gives you the fixed point of the system, and the fixed point of the system is the long term behavior of the com that goes through the universe and gets caught by the gravity. Well of the planet. So it's very, very interesting to to study. And, in fact, that's what Google did when Google mine, the World Wide Web.
+They found the fixed point
+of the transformation of a silver surfer
+that serves through the web, searches for all the websites that are relevant to your search query and finds
+the most relevant website
+for the search. Query that you're injured, and that that's the fixed point, because the the surfer will tend to get back back into to the same position, because all
+all other websites will point
+because the world wide web, what is it? It's just a bunch of It's a graph.
+It's a bunch of sites that point to each other right,
+and and the websites know what website to point to. So as long as you know what your your search results are, all the other Urls will point to that graph. And so, if you unleash this silver surfer that serves the world. What web? Eventually he's going to get to the results of your query. So what you're after. If you want to find the results of your query is you after the dominant eigenvector of the system formed by the World Wide Web, And that's what Google did.
+So Google just solved the bunch of linear algebra equations.
+So now you know why it's so important.
+So um!
+This is called the fixed point theorem. You can look at it a little bit more. You can read about the dominant eigenvector,
+and uh, this is, uh sci-fi has some really interesting utilities that allow you to express a matrix as a sparse
+as a sparse matrix source. So if you have a matrix, it has a lot of zeros, it doesn't make sense to write the matrix, as you know, fifteen zero zero, thirty-seven zero is us Us users use your zero twenty zero, zero, zero, zero minus one it's it doesn't make sense to repeat all the zeros right? And so you You're better off saying
+everywhere zero, except for this
+uh row and column that has this century everywhere is zero except for this other rolling call in this row column. So just just give me the number of positions and the number of values where it's not zero. And then Don't don't express all the other zeros it makes for a much sparse representation of that matrix, and it's easier to work with big matrices
+two sparse representation. So Scipy has has good libraries that allow you to represent a matrix as as sparse entries. So this is a sparse matrix, because everywhere is zero except for the red dots, one hundred and fifty,
+and that allows us to work with to work with much bigger matrices,
+um, and and and to actually work with matrices that describe real real systems out there.
+So So this was the introduction to linear algebra, and and I just finished off with some.
+I I told you that
+a matrix describes a rotation
+right? If you move from one position, amount to another position, amount, it's a transformation, but You can also think of it as a rotation, because the matrix, the vector goes from that position to that position. So if it changes from this angle right. This might my vector phones a certain angle to that angle. Uh, And so there's There's an angle involved. But I never talked about that angle, so I can show you how i'll show you how there's actually an angle involved, and you can express the transformation with data and cosines and science.
+So um! If I take if I if I assume this matrix, and and I take the multiplication of this matrix um by uh, it multiplies the vector r. And so so sorry, So R is the matrix right? And then I say, let's take the power of that matrix. So it's the
+the rotation done twice. It's r squared and let's see how it acts on the vector one zero zero. So if we see it, it transforms um the vector zero zero one,
+How does it transform the vector zero zero, one through R. And then how does it transform the vector one zero zero through through r squared. So through our squared, we see that this is zero. This is very close to zero, and this is one right. This is one. And so we transform the the vector one zero zero into the vector zero, one zero, which is the other basis. Vector
+right?
+So
+this is just an exercise to to to show you that it. It rotates um by an angle, because each transformation from one vector to another vector is essentially a rotation through a certain access,
+So so that's it for the the kind of the math that you need to know for linear algebra. And now what I want to do is look at an application of this math and application of the dominant and eigenvector um with a graph
+kind of show you what Google did with the World Web. Only we're going to study the same thing with a smaller graph,
+and let's see what happens when we look for the dominant eigenvector of a graph.
+So uh the the the notebook starts with an introduction about Uh eigenvectors and eigenvalues uh in Markov chains. So i'm going to skip over that, because we already know what this is
+mit ctl, and we've already described what a dominant eigenvector is right. What's the dominant eigenvector, If you go to an interview, and everybody asks you that the dominant eigenvector is one
+the eigenvector of a matrix that is associated with the eigenvalue one. The
+Why is it important Because it describes the long-term behavior. System?
+Why does it do that? Because when the power lambda equals one that that's the only component that doesn't that doesn't uh devolve to zero all of the components, since they're since they have a lambda, we know that they can be a lambda that can be an and I get it for stochastic system. There can't be an eigenvalue bigger than one,
+because then you'll have something bigger and one to the power a thousand to the power million. It won't work.
+So all of them need to be less than zero. But if you find the one that's equal to one, all the all the ones less than zero. Eventually, after repeated transformations are going to become zero. So you don't care about these modes. The only mode you care about is the dominant eigenvector.
+That's where the domain like in vector Is that important?
+Okay, So um, I told you about sympi. So everybody installed sympathy, because when you, when you simplify, you can actually write a matrix as a real matrix. Right kind of it Kind of looks nice. It. It looks like
+it looks like a real matrix. And by the way. Sympi. Also you can call. I get the vials and eigenvectors
+from Simple. So that's another neat library,
+and here we have a simpler. We have a two by two matrix, and we look at the eigenvalues. And so um here what it says it has. It says that the eigenvalue is three, and it has multiplicity two, which means that
+there's two. Again, there's two again, values that are equal to the same value three. So this this means that it's a degenerate matrix, because it's a two by two matrix. It should have two eigenvectors and two again values, but in fact, it only has one. I can, vector
+or we can say one eigenvector with multiplicity, two with a negative value of three.
+Okay, So please do these exercises.
+Um,
+uh, this is another. Another. Another exercise, we we have a matrix. It's a very simple matrix, because it's one, two, three, four, five, six, seven, nine, right.
+And so we print first the fees, so that these are the eigenvalues. So um so so um
+the the
+d is the diagonal matrix, and then our So we can pre be, and our actually be again. I think that is in our in the eigenvectors. So the I mean about this is the first one. This is the second one.
+So it's kind of neat, because this is a special matrix. It's a matrix, one, two, three, four hundred, seven, and nine, and you compute the I can uh the in the eigenvectors of that matrix. So you can keep the the power ten, the power million of this matrix, really simple, not not complicated.
+And, By the way,
+if you take the inverse of the Uh Eigenvector, which is our our, it's our P minus one matrix right, and it and you take our, which is our P matrix, and you compute by the matrix A. You will get the matrix uh uh the the matrix d,
+the matrix with the eigenvalues in the diagonal and zeros everywhere it zeros everywhere else, which is exactly the result that that that that we we talked about right, that we just fully proved.
+So. So this is um we we a a all all this section up there. This is something we've already already reviewed. We've already talked about, and then and then we have a sparse matrix and presentation. So so um,
+you know, sparse matrix, this is like taking a really big matrix and making it like really compressed right. This is compressing cars, but it's just a a symbol for compressing a matrix. So let's Let's use sparse matrix representation. Um, and let's take, and the identity matrix uh
+for the one hundred by hundred matrix that has a hundred rows and one hundred columns,
+and let's create a random matrix
+that using using using as ipy dot spars um that uh it has density, one, in other words, only one of the sales are non-zero
+right? And So if you, if you want to plot this matrix and then use map plot, lib, you will see that it looks like this.
+So it's a it's a very sparse matrix. There's no need to um put all the zeros. Just just put all the numbers that are non-zero. So every time you run it you'll get a different matrix. And the so you see, it has a hundred columns and one hundred rows
+and and users. And
+okay, so um,
+we know a lot already about linear algebra.
+We know about matrices. We know how to multiply them. We know about vector spaces, we know about special operations, special matrices. We know about eigenvalues and eigenvectors. Let's put all this knowledge to use.
+So let's look at Graphs right. Graphs are very important. They are essentially the essential. Uh, you know your your brain is a graph.
+Um the way the most successful machine learning.
+Um, i'll. I'll go in today is a neural network. It's A. It's a graph.
+Um. So graphs are very important in in in data science.
+Um
+free solo.
+That's a very scary movie, because this guy is actually climbing this mount with no climbing, climbing Yosemite with no attachment. He's not attached. He has no safety harness. If he if he uh slips he he dies
+so you can think of the the road that he took going up as a graph, Right? Because you have the edges or or the the the movement, and each new position is is the put new position. He's, he's the he's the tomb raider. He's climbing the mount right from one position vector to another position right? So he moves slowly, and you can think of that as as a graph,
+or you can think of something even more complicated as a graph. You know, this could be a graph of a world web, but it could be the graph of your neurons in your brain or this could be. You know each each each dot is is is a neuron, and each connection um from one neuron to another is is a,
+and to reach the certain level of of intelligence. You need. You need a huge graph, right? And the size of the graph kind of represents the complexity of the system.
+You even call it the intelligence of a system. If a system has reasoning abilities.
+Now
+a very important matrix that we can build immediately using a graph is what what what's called the adjacency matrix. The adjacency matrix is a matrix that describes the geometry of a graph,
+because what it does is, it takes all the number of nodes, and it puts the number of nodes as rows and columns, and it puts zeros where two nodes are not connected, and once where the node is connected, the nodes are connected.
+So if Node, one and Node, one hundred are connected in the in the Uh uh Zeros Row, and the one hundred column, there will be a one which will also be in the one hundredth column in the zero right,
+the the the one hundredth row in the Zeroth call
+it's a matrix such that its transpose is is the same as the matrix. The
+So that's that's the adjacency matrix. Another important matrix is is we we talked about the transition matrix right? We saw an example. This is a transition matrix, because it it multiplication of this matrix um with a vector uses the next step. It's. It's a transition to the next step.
+Every movement is described by a different transition matrix.
+We can take this matrix, and if it's, if it's really big and represented in sparse notation,
+it would be a lot more efficient if, instead of if this matrix is a thousand by thousand, instead of writing a thousand by thousand is what ten thousand?
+Um!
+No sorry. A thousand by thousand a hundred thousand instead of already a hundred thousand zeros right? We can just write. Where is it? Non-zero?
+And finally, we can also think about um. We can think about um. The world wide web this this graph here is is is is a is a drawing of the world web, because the world, what what is it? It's a bunch of pages with urls,
+Yeah.
+And and each Url points to another page.
+In other words, you can think of. You can think of each Url as a vote that one page votes for another page
+and say, Oh,
+if I put in the url that references another web page that what page must be important? Otherwise I wouldn't. I wouldn't mention that web page, so you can think of
+your entire Url as a voting system where pages vote for other pages.
+What are the most important pages? Well, it's the once I get the most votes right, because a lot of pages think they're important. So if that page
+has words that are relevant to your search. Query,
+and a lot of other pages points to that web page. Then Google, better return that web page because that's the most important result for your for for the query that you're after.
+So, in other words, the Google algorithm is just a search for the the page. I get the biggest, the biggest number of votes.
+So that's what we're after,
+and you can see how um there's um one page that can get many votes like There's a new page
+and one page that only gets a few votes
+right?
+So what's important is not just how many votes you get,
+but you want the important votes you want the pages that are themselves important
+to vote for you.
+So it's a little bit tricky to count the number of votes.
+So we're going. The first thing we're going to do is we're going to look at the Url, and we're going to catalog them. So we're going to create the adjacency. Matrix we're going to write them a matrix of one and zeros that will describe all the connections.
+But you know what? Let's not do it for the World wide web, because if we try to do it for the World Web, we will still be here uh past Christmas
+because it's gonna take forever. So let's do a smaller graph. Okay. So so let's let's um. Let's do a graph that represents the ecology
+of a marsh.
+A marshes is as an area in nature that has a lot of water. Uh no, it's not. It's not an aquarium, but it's a a a, an area that has a lot of water and and vegetation and and specific kind of animals live in that marsh, and these animals tend to like to eat each other.
+Right? So. Um um fox is like three rabbits,
+and I was like to be grasshoppers.
+So we're gonna say rabbits will be eaten by foxes. Grasshoppers will be eaten by Owl Thoroughs will also be eaten by foxes uh grasses will be eaten by rabbits,
+and so let's describe a new matrix. Um that describes the I call it the yummy matrix yummy young matrix. That's you can. With whom? Right?
+By the way, that's also the page rank, algorithm. Right? The page rank algorithm is um. Who votes. For whom could also be, uh, uh, interpreted as who eats? Whom right?
+Who likes to eat? Whom
+and and when we, when we, when we find out who likes to eat, whom we can find the most important species, because that's a species that's the most yummy yummy.
+That's the species that most everybody else likes to eat.
+So the species that most everybody else likes to eat is the most important species in ecology, because without that species everybody dies because nobody. Nobody has the food that they prefer
+right.
+So, in other words, what we're going to look for in this exercise is not what the most important P. Is but what the what? The most important species in an ecology?
+Because if that species dies, then the entire, the entire college, the entire world disappears because they don't have the food that that they like.
+Okay,
+So um,
+we already talked about that. You can imagine a world white web like a network of roads, and you can think of a uh. This is the silver surfer in the times of the Roman Empire. Why am I talking about the Roman Empire, because there's a very famous Latin sentence that says all roads lead to Rome
+right? Because the Romans are the first ones that build a huge network of roads in Europe.
+And so um! Of course, all the roads emanated from Rome. So eventually, you know wherever you go, if you just follow roads many, many times. You'll eventually end up in Rome, because everybody all the roads point to.
+So, instead of thinking of this chariot here that drives the roads in the Roman Empire. I prefer to think of a silver surfer that serves the world Wide web really really fast, because silver surfer serves at. Uh, uh,
+I don't know if you've seen the fantastic four movies. But but this guy uh serves faster than the speed of light.
+I don't know how he does it, but he does.
+And and if we talk about the dominant eigenvector, right, the dominant eigenvector, if if you, if you enlist the silver surfer to search a huge graph through through the galaxy.
+Um, the domin and eigenvector, which is the result that you're after is the spot that the silver surfer will tend to visit the most. So the spot where he he keeps going to that spot. So it's the fixed point of your of your search. Query. That's what you're after after the dominant eigenvector.
+You're after the fixed point of your system, the the one where all the roads lead to that system. All the pages points to that, to that node. That's the most important note for your search. Query:
+Um.
+We're going to use Network X as a library tunes to study graphs. So Network X is a great, it's a fantastic library. It's just as important to graphs as as zoom, pie and side pie inside it learn and can. This is important to data science, and in fact, you can think of it as a data science library, because it's that important. So we're going to use network X to uh, describe, read, and
+okay.
+After we we have network X installed, we're going to read a file That's It's it's a gmail file. So Gmail stands for graph markup language
+and graph markup language is actually not very complicated. It's a graph is described by nodes and edges. So a graph markup language based graph will describe a network as a bunch of bra nodes and a bunch of edges that connect the notes
+that is described. So if we go to. I I gave you. I think I gave you that data, St. Marks, our gmail. So if you open it
+um, and you try to see what the format, what what it looks like. You will see that it starts with a description of a graph. It tells you that the graph is directed
+right? Because here we're looking at who it's whom? So it's not who gets eaten. By whom? Right? Yeah, If if if if rabbits get eaten by foxes uh rabbits don't eat foxes right?
+So these are a bunch of nodes. So you see in the graph, we'll have a bunch of nodes. So each node has an Id, and has a label
+describes what kind of animal it is.
+So the first part of the graph is a bunch of nodes,
+user avatar
+Unknown Speaker
+01:24:23
+and then eventually you will get to a bunch of edges,
+user avatar
+Dino Konstantopoulos
+01:24:28
+and the edges is will tell you that it's a connection between Node zero and node three with a weight of one. So here, uh all, all, all the edges will have the same weight. We're we're not going to say who likes to eat which other species more than We're not going to quantify that. We'll just say it just eats it.
+So that's the graph markup language, a bunch of nodes and a bunch of edges
+inside um on a
+a, a, an array a vector So it's a vector made out by other vectors, but that are either nodes or graphs, and each note of graph has very simple description.
+Okay,
+So let's go ahead and and import our library and read the graph. Um. Our Our ecology, our ecology graph no module name network X. The disaster.
+So you see, it has a number of dependencies.
+It's always a little bit scary when it it on installs things that other libraries may need.
+So this is what we have environments in Python. You can. You can create a new environment, um, and and and and install the libraries in your environment, how it makes you independent of your um
+of other environments Here I'm: i'm installing some basic libraries in my in my basic environment, because it's that important that I really want that to be inside my basic environment.
+So it didn't create any environment. So if you if you're curious about how to create new environments, We didn't talk a lot about that in our um introduction to Python, but you can Google for that. How to create a new environment in Python, right? And so you can create your environments. And then you move into that environment and and nobody can bother you.
+That's just one. Environment has specific specifics for specific installations, and it's dedicated to a specific kind of data science.
+So let's just wait until network is completely installed.
+So I get some warnings,
+and at the end uh I do get a successfully installed decorator and Network X. So we saw that um. It looked like it uninstalled, and on a a a newer version of decorator, and it replaced that with an older version of decorator, because the last version, the latest version of the orcx actually depends on an older version of decorator.
+Okay.
+So now that we have network X, we can read this file
+and um, and then we can actually use Network X to give us an idea of what the network looks like. So let's go ahead and and run this, and so. So this will give you a graph
+of all your notes. So it's not a huge graph. It has about forty nodes, forty animals in the ecology, and so it has many more than forty edges connecting different different atoms, and every time every time you run this you will, you will get a different graph because you get a different drawing. So um, you know, don't be surprised that every time you run it you get a different graph, because it's just a different perspective of the graph. You can look at a graph from different positions. And so what network X does here
+is it draws the graph, and it tries to pretension uh between the edges like that, like a like a spring, so that the the graph doesn't spread out all over the space. But it's not a compact.
+And um, I can also look at the labels.
+So this tells me, uh uh that the fishing birds um are are are um in in this coordinate system of this graph.
+And this is how I can also look at the nodes. So this is not very useful when you have many, many notes. But if you only have, like, you know, half a dozen or a dozen nodes, it's actually pretty useful. It tells you where the where your nodes are
+okay. Let's go ahead and do linear algebra. Now, on this graph, let's compute the adjacency matrix. That's the matrix of ones and zeros and describes the geometry of the graph. So we're going to use the sparse representation to compute that matrix, because, you know, after all, forty uh nodes and potentially one hundred edges is still a pretty big matrix.
+So we're going to use the sparse the presentation. So we're going to use new pi to side by sparse matrix, and we're going to give it same marks. And we're going to say, let's let's work with sixty-four points floating point Numbers don't forget we're using new pi. So now we're definitely using fixed precision arithmetic, because we're using um
+a C compile library So i'm going to create the adjacency matrix using using the
+to Sci-fi, sparse matrix Api. And
+And now, if I want to show the adjacency matrix you will tell Okay, Okay, Buddy, it's a pretty big matrix. It has forty-eight by forty-eight notes, and i'm going to compress it for you. So you can work with it pretty efficiently. Um, and that's it.
+Now, um tell me what the species are. So don't forget the species. I created a variable for species where I just listed all the nodes
+right. These are all the animals in the ecology.
+So this this is much simpler. I have an array of different species,
+and I have forty-eight of them.
+So let's uh create a pandas data frame with the the last twenty species. Sorry
+the first twenty species.
+And just to get an idea of of what the species look like, and and to look at them a little bit better. I'm going to take the transpose um so that I don't have a bunch of rows.
+Okay,
+Okay. So you see, there's some pretty involved species here, epified grazing gastropods, and also some simple species gulls.
+These are these are big birds.
+Okay?
+So um! Why Is this a picture? Not uh, Oh, okay, is a picture of a shark. It's not that important. But I actually like my pictures. So i'm gonna go find my shark picture and put it in there.
+Where's my shark picture?
+Um! My short picture is
+Here's my shark.
+Oh,
+uh,
+there's my shark.
+Okay, So um,
+since we're describing um probability of being eaten right? W. What we have right now is who it's whom but um, each species has different predators right? Each species is being eaten by many different predators, so each species um won't necessarily get eaten by the same uh by the same species.
+Um. So let's describe the probability matrix. This work with with stochastic matrices now, and describe the probability of being let's assume. Let's assume that we have a system where um every state.
+Um, everybody kind of nibbles it somewhere, like, you know, uh the fox like loves um rabbits. I'm gonna i'm on a rabbit right every time uh every step i'm going to enable on this pieces that I like.
+So the probability of being nibbled at or eaten um if I have four predators, What's the probability for each predator? It's one over four
+right if I have four predators.
+And so what i'm going to describe. Now i'm going to describe the probabilistic transfer matrix called the eaten by matrix, the jummy matrix. That will tell me what's the probability of being eaten If I have four predators. Um! It's it's it's one over four for each predator.
+So let's go ahead and and look at our adjacency matrix first, and let's see how our adjacency matrix. Will help us build that that transfer matrix. So our Gcc. Matrix is pretty opaque here. Because if I say, okay, what's the Jc. Won't: Tell you what the matrix is so to reveal the matrix, I have to say, two dense. So take my sparse matrix and make a dense matrix where it has a bunch of zeros.
+So if I call that Api,
+then um, I will actually get this matrix which you see has once, where, unfortunately, it's, it's a flowing point, but that that one means that this node eats this node
+right rules and columns,
+and so to make it look a little bit nicer, i'm going to use a pen as data frame. I'm going to wrap it into a pen and data frame. So this makes it a little bit nicer, although it's still a a real matrix which doesn't make a lot of sense uh and it still doesn't give us all forty-eight columns
+so um! These are all the Api's for uh inside pi for sparse matrix. So you see, there's many different ways of representing a sparse matrix. It's not just um the role in the column and and and the the value. But you can go by rows. We will write columns. You can. Um
+uh! Many different presentations. One of the most popular one is the coup
+user avatar
+Unknown Speaker
+01:35:31
+quote
+user avatar
+Unknown Speaker
+01:35:32
+matrix.
+user avatar
+Dino Konstantopoulos
+01:35:36
+Okay, I'm going to do something really dangerous. Um, I'm going to ignore division by zero. Obviously, when you divide by zero. You get an infinity, but sometimes you know um, you can divide by small number, so it's a it's a risky thing to do. So i'm going to say, to ignore that degree that ignored by zero. And i'm going to compute something using um, using the ravel api. So the ravel api in pi
+um! What i'm going to do is i'm going to sum the adjacency matrix by the uh, by the access equals one, so i'm going to go by columns instead of by rose. And so that's going to give me the degrees, which is my the number of predators
+right? Because if I have, if I have a bunch of ones in the in the adjacency matrix. That tells me how many predators I have
+right. So when I say, but the degrees will give me the number of predators. And then what I'm going to do is i'm going to um, i'm going to use the Csr. The compressed, sparse role matrix representation, and i'm going to um compute
+uh this this matrix here, which is uh i'm going to get i'm going to get for every node i'm going to get the the one over the number of predators, because, by the way, that's the probability of being eaten, and i'm going to put this in the main diagonal of an identity matrix.
+user avatar
+Unknown Speaker
+01:36:57
+Yeah,
+user avatar
+Dino Konstantopoulos
+01:36:59
+right? And so I i'm going to use this basically What i'm doing here is I'm going to use this matrix to compute the transfer matrix from the adjacency matrix using matrix multiplication. So i'm getting ready to do this division by the number of total predators.
+So I'm. Taking the number total predators, and i'm putting it as an inverse element. But i'm putting it as an inverse element into the diagonal
+matrix formed by the forty, eight by forty, eight diagonal matrix. And I'm going to put that in in sparse matrix representation.
+user avatar
+Unknown Speaker
+01:37:35
+Okay?
+user avatar
+Dino Konstantopoulos
+01:37:36
+And now i'm going to uh write a routine. This is just for for, uh uh exploration purposes. I'm going to see how How can I plot a coup matrix? So I can actually see what the non-zero elements are
+right. So this is just a helper a helper uh a function that will help me figure out what the matrix looks like
+right? So i'm going to take my uh sparse matrix. Remember the the this matrix here, the matrix that I computed here.
+This is: I computed this in Csr representation. But this is for plotting crew matrices, so I do it again as a as a coup matrix
+compressed object compressed um
+compressed um chord sorry coordinate format,
+and then i'm going to uh plot the figure. I'm going to make sure that I only have numbers in the main diagonal. So your main diagonal should go this way. There's something strange about my notebook. Actually never figured out. Figure out what I did to it in my
+user avatar
+Unknown Speaker
+01:38:39
+here
+user avatar
+Unknown Speaker
+01:38:40
+in the mirror
+user avatar
+Dino Konstantopoulos
+01:38:42
+access. I don't know why, but
+one day i'll figure it out. Okay, So this is my this is my This is this matrix.
+Yeah, as far as the diagrams one over degrees. It's the it's the identity matrix with the degrees for each species. The number of predators for each species of the number predators for each species.
+But instead of saying the number predators, one over the number of predators.
+Okay,
+Um. Now i'm going to take the the adjacency matrix. That's the number of zeros and i'm going to uh uh represent it as a coup matrix, and i'm also going to plot it.
+The adjacency matrix number of ones and zeros that describes the geometry of my graph Right? So this is what my graph looks like.
+It's nice to be able to see a picture of my graph. It tells me it actually tells me a lot of information,
+because the roles will tell me. Um the the number of species uh a number of predators for each species.
+Um, it will tell me, for example, if I see a bunch of blotches, or it will tell me that there's only a bunch of predators, and but here it looks like It's pretty uniform, like a lot of predators. Seem to be the moderating species right? And you can You can tell this just by looking at the picture.
+So a picture is really worth a thousand is worth a thousand words, because it really describes
+what your what your graph looks like.
+This is why I I I gave you this routine so you can actually plot as far as matrices.
+So once you have a sparse matrix. It's a really huge matrix, and the number of zeros and the location of these zeros will give you an idea of what your graph looks like,
+like, How does it connect?
+And this is called a very non-local graph, which means it really has connections everywhere. It's, not just connections in this area, and in this area. In other words, it doesn't it doesn't form clicks. The clique is like, you know what a clique is in Facebook and Facebook is a bunch of friends that are all connected to each other,
+user avatar
+Unknown Speaker
+01:40:53
+right?
+user avatar
+Dino Konstantopoulos
+01:40:54
+And so you you may talk about the the Clique of Change students and the clique of Indian students, and they click of Greek students right because they're all connected to each other. But it's it's rare that you have a Greeks to be connected to a Chinese student, because they don't usually meet very much right. So this is what what's called a previous call. But this is not a cliqueish graph.
+Right? You can see that species pretty much like to meet everyone.
+Right? They're They're not very picky uh animals. They're like a little with this. We love everything
+as long as I can attack it and kill it. I'll eat it.
+Okay.
+So now what i'm gonna do. We'll we'll. We'll continue next time we won't have time to finish this, and I don't want to go too fast on this, because graph theory is very important, especially in in machine learning, so we we'll continue on on on Thursday. So what i'm going to do is i'm i'm going to finish um
+here. I'm going to finish with how we compute the transition matrix. So um! I was never really too happy with the with this uh in this representation, because that's a lot of waste to Zeros one point zero. Why, one point zero, and why spaces between the one and the one. How about we? We write a matrix that has one or zeros, with no space in between.
+And so I wrote another routine
+uh to do that, because I think it's really useful. So I wrote this this this function here. So this function will take an adjacency matrix, a bunch of ones and zeros and plot just the ones in the zeros. So he see here. I can plot all the entire matrix
+Right?
+I I don't need to put spaces between, because I know it's either zero or one. So i'm going to plot all forty-eight, all forty-eight connections with a bunch of ones and zeros and at the end of the matrix. I'll also point the number of ones
+number one one over. This is the degree of that row, the degree what I call the degree of a species, the number of predators that we need that species. Yeah,
+by the way, this is also called as the art
+You you. You can actually quit drawings with a bunch of zeros and ones right. You. You're aware of that you can take if there's there's a lot of very interesting Ascii art that you can draw with that with this Um,
+uh, with this technique. So let's look at. Ask Yard is
+right. This is these are arrays of numbers that create black and white pictures. Um, just with zeros, and once, in fact, you know it's even better when you, when you when you use different uh uh characters.
+Uh, because then uh it takes too long to load, but it's kind of interesting. So um,
+So what I what i'm doing is, i'm using this adjacency matrix, and i'm using the number of degrees to create the transfer matrix that gives me the probability of being eaten. Assuming, assuming, of course, that I get eaten at every step
+because it's possible I could have said, There's also a certain probability that I don't get either.
+So this transition matrix is really very simple. It's the
+degree one over degree matrix times the adjacency matrix that will create the transition matrix,
+and the only difference is, I take the transpose of that. So I I move the the rows and the calls. And so with this matrix multiplication. Um, I create the transition matrix. I call that transition and um,
+this is uh to to see what It looks like i'm gonna create that. I'm gonna i'm going to look at the dense representation, and i'm going to look at the first row of that matrix.
+So the first row of that matrix will be. It's it's a matrix of zeros and one that we had before remember. But instead of zeros, and once. I've just divided by three. So instead of one, I have point three, three, three, where there used to be a one. Okay,
+and this will tell me, What's the probability of being I? I'll either get even by the first, second, third, first, second, third, fourth, uh animal, or the I don't know the thirteenth animal or the forty fifth at right.
+Are we good? So far? So this is kind of how I go from an adjacency matrix to a probabilistic transition matrix,
+and we'll continue on Thursday.
+Thank you for coming to class any questions. So far. So far, we're good. We're good with graphs, and me and and and linear algebra. Yes.
+Okay. Good. Okay. See you Thursday.

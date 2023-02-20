@@ -1,0 +1,857 @@
+user avatar
+Unknown Speaker
+00:07:29
+It's a little bit
+user avatar
+Unknown Speaker
+00:07:33
+to you.
+user avatar
+Dino Konstantopoulos
+00:08:13
+It's
+user avatar
+Unknown Speaker
+00:08:27
+it's a
+user avatar
+Unknown Speaker
+00:08:39
+it's
+user avatar
+Unknown Speaker
+00:08:41
+he's
+user avatar
+Unknown Speaker
+00:08:46
+of the
+user avatar
+Dino Konstantopoulos
+00:08:52
+No one's exclusive, and it's a to me.
+user avatar
+Unknown Speaker
+00:09:14
+It's a
+user avatar
+Unknown Speaker
+00:09:21
+he's
+user avatar
+Unknown Speaker
+00:09:39
+That's the
+user avatar
+Unknown Speaker
+00:10:56
+It's all about it.
+user avatar
+Dino Konstantopoulos
+00:11:08
+Okay, let's get started. So I updated the probability one, and I simplified your homework a little bit, so make sure you load this notebook, replace the old one.
+So, um, we're going to try to cover two notebooks today, So we're going to go a little bit faster if we're a little bit too fast. We'll make sure to go to t our so we can cover the notebook with you.
+Okay.
+The details that we might have gone too fast over.
+So we introduced probabilities, and I told you that probability is a very good opportunity for learning how to work with python functions.
+So your homework. You were on a data last weekend this week, and you're going to work with a lot of functions. So you're going to practice your building functions capability.
+So you're going to be thinking very hard. And rather than manipulating data, you get a manipulating logic.
+So probability is simple. It's a ratio. It's the ratio of the
+favorable outcomes over the ratio of over the number of total outcomes, and that's a ratio. So if I flip a coin, I have two possibilities tails or heads. That's two outcomes. If I want heads, that's one outcome. So the probability of getting heads is one over two.
+If I if I throw one dye. That's the singular of dice, and I want the one
+There's six possible possibilities on the die, so it's over six, and what i'm looking for is a one, so it's one over six. Okay, So it's just counting.
+So Don't think that probability is as complicated as counting, but the county can get very complicated, and you only have ten fingers and ten toes, so you can only count up to twenty. But your computers there to help you count to many, many numbers.
+Okay, so please learn this vocabulary. This is important for Camilla. I'm going to talk about an experiment and outcome of sample space an event. And we talked about the birthday, did we? We did the birthday right?
+So we have two options. This is the probability that somebody has my birthday when i'm talking about me and the other one is the probability that any two students have the same birthday, and we saw that there's a big difference.
+In fact,
+if, instead instead of here, I assume forty students right, I assume forty students. Do you see that forty
+and I go from three hundred and sixty, five to three hundred and twenty, five.
+So So if you assume this, maybe there's thirty students, so let's modify it for thirty. Let's do thirty, because we have. We have thirty students in classroom today. So let's go from three hundred and sixty, five to three hundred and thirty, five. Do that. Do that on your notebooks,
+and if we, if we look at these probabilities, are you
+shares my birthday,
+and this is two students share same birthday
+right? So if you run this,
+where's the end? Oh, share my birthday? N: Okay. So let's say, let's say we will set a default for M equals thirty.
+Okay, So I don't have to specify that. So you share a birthday with another student, for this class is only eight, eight, but there's a seventy percent chance that somebody has two students have the same birthday. Is that amazing? A difference,
+right? Much higher probability, that any two people won the lottery rather than you win the lottery twice,
+that any two that that any ed sorry, much higher probability that any person out there wins the lottery twice compared to the probability that you in the lottery twice.
+So what we're going to do is we're going to try to build functions. So this entire week is dedicated to building functions. Your homework is going to be about building functions. So please copy this this this
+function here and paste it down here.
+Actually, I think it's already pasted. Did I give it to you already pasted?
+You have the already here, so you don't have to paste it right. So look at this. I have this function. This is my sample space. I'm throwing one die. This is all the possibilities that I have. The number. Even numbers is only two, six, eight. Remove, remove the other numbers, just keep it at two hundred and forty six
+delete the other numbers. And what's the fraction? What's the probability that I will bring an even face. Yes, the
+so the probability that we'll bring an even face is three over six or one over two.
+So what I had before. What we had before in in here. What I had before is, I had all these numbers, because, after all, even numbers, I could. I could keep going right. I can come here and say, Oh, wait! Twenty, two is also an even number. Oh, wait! Twenty, four is also an even number,
+and I just I can keep on going.
+But but you see if if I run my P. Function again, I still get one over two. Why? Because I said I said, it's the on top, I said. It's the intersection of an event in space, so I make sure the the end. Character is intersection. The set intersection, and i'm working with sets here right?
+So that means that I only care about even numbers that are part of my sample space, and I throw away the others. This is called a little bit defensive program.
+Do you have any questions about the P function?
+So we're going to be modifying the p-functioning class to be even more powerful.
+That's what we're going to be doing. So we started with a simple expression of A. P function, and it's going to get more complicated. We're going to make it polymorphic. We're going to turn this argument into two possible types, this argument, maybe two possible types. So let's look at this.
+Okay, So we already did this. So we don't have. So let's go. Let's go on to a more complicated function.
+Sorry. A more complicated problem. This is actually a famous problem written by this French guy who was part of this French school of of probability probability scientists that that wrote the mathematics of probability.
+So we have a nern, and known as it is a vase. It's a container, and it has twenty three balls.
+It has eight white balls, six blue balls and nine red balls,
+and we select six balls at random. And we have these three questions which are part of the book that was written three centuries ago.
+I want to know what's the probability that when I pick six balls, all these balls are red.
+If I pick six balls, three are being two are white, and one is red.
+Number three. If I pick six ball, six balls, exactly. Four balls are white now.
+So I want to study these probabilities.
+Now, whenever you have a problem, I told you it's a counting problem. So you have two options. You can either solve it with math. There's There's math theories about, you know, combinations and permutations and factorials. Right There's a lot of math here that you may have or may have not covered. But in programming we just count.
+That's how we solve problems. So in order to count, we have to name the
+sample space, all our samples. So the first thing we're going to do is we're going to name our balls. So since we have white and blue and red, we
+we're going to, and and we have eight, white and six blue and nine red. We're going to name them W. One through W. A. D. One through B, six right, and now we can have a sample space, and we can start doing experiments.
+So in order to build this space, we're going to use this function here, so
+so this function here will allow us to build a space. So this is Is this a tuple comprehension, or or is this a list comprehension of what is this.
+It's a
+set comprehension. It's not a dictionary, because there's no key value. Pairs. It's just It's just made out of keys. It's just keys right
+and What we're doing is we're selecting um
+for every key in a and every key and beat we're. We're summing the two keys We
+so, if my keys were numbers, I would sum the two numbers right. If my keys in in this set are strings. I'm going to just concatenate the strings, because that's what the
+concatenation operation does. It just says North plus Eastern. If you sum these two strings, it will give you Northeastern
+right?
+Okay? So what i'm going to do is i'm going to use this function.
+I'm going to cross W with with with this with this container. Now,
+Sorry I should have asked you the question, What? What's what? This is a string data type, right? But a string data type is also a container data type. So
+so I can iterate over the string, and each iteration will give me another stream, which is a single character.
+Right? So this will work,
+and what i'm going to do if if I select the number here. It won't work because it has to be a container right? If I replace this with the the number one, two, three, four, five, six, seven, eight, That's not a container. So when I run this I will get in there because it's gonna say it doesn't work right?
+Because I change. This is not a container type, so I can't run A in a A. A is the wrong thing. You can only run A in A is a container, and B and B is a container.
+But since we have strings here, we know that a string I told you is a list of strings. That's the definition of a string of string is a list of characters where each characters a single digit string. So this will work, and when I do that when I do this
+one, two, three, four, five, six, seven, and b with one, two, three, four, five, six, and r with one, two, three, four, five six, and since this returns a set, this operator is the Union. So you learn two new operators
+intersection
+further upright with our p-function and union.
+But intersection is what if I have a set, one composed of the numbers one, two, three, and the set compose of the numbers three, four, five. The intersection is the number three.
+The Union is one, two, three, four, five, six, not one, two, three, three, four, five, six. If the sets are unique, it will remove the other three.
+And now, if you look at the length of this space, we see we have twenty three balls, which is exactly what we had in our problem, and if we print our entire Urg, you will see It's made up of R. Six to the rate.
+So r six are four or nine. This is R. One through R. Nine and W. One through W, six, and B and B, one through b, six and W. One through W. Nine, it's not ordered. But that's okay, sets Aren't necessarily ordered.
+So you see how this did all possible ways. You can concatenate W with this.
+If I had,
+If I had
+two letters here,
+you would find all possible ways of concatenating the two letters right? So it would go if I had.
+Here I'll show you another example of this. Suppose I want to. I have just what I have. I have. I have eight red, white, and blue balls, a way to to build this urn
+a way to build this urn
+to do this right? Red and blue. Yes, and this is earned two. And now i'm going to print earn two,
+and you will see this does the same thing, but it's only r one through r, eight, b, one through b, eight, and W. One through W. Eight, because it also does all possible ways.
+Okay,
+Ok. Now, if you want to do it mathematically, there is an operator,
+it's an all possible way of combining
+items
+which is different than arrangements.
+You know what the the the difference between arrangement and combination is in in math.
+Combination is usually written with a C, and an arrangement is written with an A,
+What's the difference?
+Yes, since the order, If you pick a
+arrangements and the orders orders, order counts. If you make combinations, then the order does not count. The
+so I don't care if I pick d one first or v two later, or b two first and D one later, and since we don't care about order here, we'll just use combinations. So if we use the combinations
+um function here. So I already pasted it. I What I did is I wanted you to paste it, but but I forgot to erase the cell. So now you don't have to paste it. Okay. So what we do is we have combinations, And what we're going to take is we're going to build a space U six.
+We're going to use the combinations functions. Remember, we'll work more. He has.
+We're studying how to work with functions, and we're finding all possible ways of selecting six items from
+a container,
+because the the way this set works is a little bit tricky, it's a set right,
+iterating over the return value of this function, and we're saying, Take the return value, and just join every possible item with the empty string.
+And since i'm working with strings, i'm going to be joining strings to string. So it's going to work. So this will return all possible combinations as a single string that's separated by the space character.
+So we're working with comprehensions here. It's important that you get used to this, because this is how you're going to get very fluent
+in Python.
+And so what I do is I. I create my space U six, and then I look at the length of the six. How big is it? And when you run this you will see it's one hundred thousand consists of one hundred thousand, like one hundred and forty seven elements, many to to to to print. I mean you can print it, but it'll be huge.
+So instead of when you have tons of tons of a a container that contains a million or one hundred thousand elements, you won't. Print all the elements, but you will sample them. We'll say, Give me a random sample of some of these elements, because I want to see what they look like.
+You always approach a problem that way. Whenever you have a data science problem, you say, Okay, I want to study planet, Earth six billion. Q. And beyond two too many. Let me just take a sample and see and see what the sample looks like.
+So what i'm going to do is, I'm going to import random.
+I wanted you to do this, but since I already gave you everything you don't have to do this, I wonder? Can I actually do that.
+Oh, yeah, I can drag it. That's even better.
+Yes, I don't know what is the n equal to six, so that the number of object. Do you get
+what is? Yes, because you remember, in the problem or in the problem up there in the problem that we're studying, we want to
+select. Six balls are random,
+so what we're trying to do is find all possible random six law combinations that I could pick from the earth. Now.
+So what we do is we drag this here, and then we run this, and each one of you will get a different sample.
+So one possible experiment. Remember that's part of our vocabulary is to detect blue Ball Iv. Four, one, Google, six, red ball, three, one, Vol. Six, red multiplied
+user avatar
+Unknown Speaker
+00:29:03
+it.
+user avatar
+Unknown Speaker
+00:29:14
+The other one is
+user avatar
+Dino Konstantopoulos
+00:29:17
+so we can name it like this. Is it that?
+Yeah, Yeah, that's correct. That's correct. Yeah, what I'm: what i'm doing here is I'm using the the main space emitter tools, all the Api or combinations from this space. And i'm creating my own function combinations that actually returns all possible samples,
+possible ways of joining and Post and I and and items from the items container. So
+it's a little bit tricky here, because you see combinations and combinations, you're like what's going on. But this is not this combination. This is the iterative of our combinations.
+A little bit for two D notes in at Northeastern.
+That's okay. But this is Dino Constantopo. The other one is Dino Jones. It's a different, you know, right different Namespace.
+Okay.
+If you wanted to do the math,
+then you can do the same thing if you know the the the the N. Choose P. Function, which is n factorial or N. Minus e factorial c factorial. So this is how you pick N. N. Items from C possible items,
+and then we can write the choose function which is factorial, n. Over factorial N. Minus c factorial, c. So what we do is we try to do the drag and drop. I'm sorry I forgot to erase these things because it's kind of fun to the drag and drop
+stamp. This is the code, right? So we're going to run this code, and we're going to see that. Yeah, that's the same formula that we did so. This is the mathematical way.
+So this is the mathematical way of doing the same thing we did about.
+So this is a nice function to have. Choose twenty, three over six.
+So now I'm going to ask you. Try to not look at the solution how the solution is there, but try to not look at the solution. And just look at this and tell me
+what's the probability of selecting red balls, So i'm going to i'm going to create a new set comprehension. And i'm going to say Red Six, and what i'm going to do is i'm going to select the
+all possible balls, and you six, which is all the space that gives me all the possibilities for selecting six balls. But what I want to do is I want to make sure that I have six red balls. So look at the Sam. What you do is you go up and you look at your sample space, and you look at these strings.
+It's okay.
+How can I make sure what's special about this string and this string? How can I take this string in each element and filter it. So I know which one has all six red balls.
+What should I do?
+Take this string? Does this have six red balls.
+What operation? What function can you run on this string to tell you whether it has six red balls or not?
+Count the number of strings of R. And so what you do is you take this string and you run this dot count, because that tells you count of what in an account you specify the input. R.
+And so what we want to do to solve the problem with programming
+it is too
+Select all balls in U Six, which once again is our space of all possibilities and filter that to only if the count of the string r is equal to six now.
+So if you run this, and you run this space, you will see these are all possible samples
+that I could
+possible outcomes of my experiment, which will yield six red volts. So you see there's many of them.
+But now I can run my P. Function
+because my P. Function already counts the frequencies right? And so if I run my P function and I say, the
+Okay, I My total space you is you six. The outcomes that I want is Red Six. These are the favorable outcomes,
+counts the number of favorable outcomes over the number of all possible outcomes, and give me the probability of selecting six red balls.
+So if you run this, you will see that the probability is this,
+and run our P. Function that does the probability counting. So now, what I like you to do is the problem. Number two is already solved. I want you to solve earn problem number three.
+What's the probability of selecting exactly four white balls? So please solve this problem
+so you can. You can start with a code.
+So start by selecting this start by selecting the the the two first lines, put them down here
+and fill in the ellipses.
+Notice that I use a new line character here. The reason why i'm allowed to do that is because i'm starting with either a squiggle bracket or a Lorentz, or a straight grinded, and so I can go to the next line.
+So if someone has a solution, Please tell me what it is, and i'll write it down.
+What is it?
+user avatar
+Unknown Speaker
+00:36:18
+I think we're in?
+user avatar
+Dino Konstantopoulos
+00:36:19
+No. Tell me, Tony, tell me the code first
+user avatar
+Unknown Speaker
+00:36:21
+for us to use it to
+user avatar
+Dino Konstantopoulos
+00:36:23
+if that's the
+or the string of earlier.
+So currents rates.
+Yeah.
+So that's my set W. Four.
+And if you, if you want to pick a peak at W. Four. We can say print W. Four here to see what W. Four looks like, and then we can compute also the probability which, by the way, is lowercase, we define it as a lowercase. So when we run this, you will see that's your entire space of all.
+Look at how many they are. Wow! That's all possible samples. So you see, the probability now is three hundred and fifty, over four, eight, four thousand eight hundred and seven much higher. Right?
+What if I ask you the probability of picking four white balls where I have no blue balls?
+How would you modify the code,
+four white balls and no blue balls.
+So you see you, You're starting to solve problems using functions. You're writing functions here. You're writing the material of functions to solve to solve your problems. And when you run this, of course, this is called. This is not W. Four anymore. I will call this W. Four, not blue or so W. Four Blue zero.
+Right? That's that's That's a good name for this space W. For Blue Zero,
+and then I say, print me all W. Four blue zero, and give me the space the probability of W. Four nu zero over U. Six. And you see now you will get a different different setup. This is
+less one hundred and twenty, over four thousand eight hundred and seven, the
+good. So So you see you're starting to build logic. Now I ask you to to compute a probability, and you do that to program it.
+So now what we're going to do is? We're going to make the p-function a little bit more complicated because, instead of working with collections, I want to work with a transformation I want the first argument of that function to not be
+a subset of my sample space, but to be a predicate
+that tells me a property of that sample space.
+So look what we're going to do is this? And I'm going to skip over the generators because we've already worked over those. So i'm going to skip over this. We're going to ask you here. And in fact,
+I'm going to repeat, I'm going to repeat the function here. So what I have is my P. Function. So this is the same P function it has before. This is my space, and my even that I use before right. But now what I want to do is, instead of using even as a collection I want to use even as a predicate,
+because this predicate is a function that tells me whether N is an even number
+right? And it's more general than this collection, because this works for all numbers, whereas here I would have to wait an infinity of time to type, all even numbers that go up to infinity. Yes,
+user avatar
+Unknown Speaker
+00:40:09
+combination works veryside.
+user avatar
+Dino Konstantopoulos
+00:40:38
+Yeah.
+Yeah, exactly. Yeah, yeah, exactly. That's the reason why we don't really want to work with with, with um, with predefined containers, instead of predefining my containers. I want to define them in the way that they work in general. This is why I want to use transformations. Because so so what Your what your colleague's students said, is that right? Now we we're working with a lot of numbers eagerly computed numbers. First we have to compute,
+then we have to compute this space, and then we have to count. That's that's a little bit inefficient. Right. So so in in in our desire to make this more efficient, instead of working with containers, let's start with the first argument as a function rather than a contain, so we don't have to build
+specifically build all the elements.
+But the problem here is this: If I define this as a function,
+then, and then I try to. Where am I?
+I'm. Here, right? I define this as a function, and I try to run this.
+It won't work right, because our My P function specifically tries to look at the length of event,
+the length of a function isn't defined.
+But there's no such thing as the length of a function.
+user avatar
+Unknown Speaker
+00:42:01
+What's the length of a function? I have no idea.
+user avatar
+Dino Konstantopoulos
+00:42:04
+So what we want to do is we want to modify the P. Functions a little bit more efficient,
+so that instead of specifying a length, we actually we actually work with the function. Now
+it's still a little bit inefficient, but we're going to do it this way. What we're going to do Our solution is here. What we're going to do is we're going to work with a function P. That's called polymorphic.
+A polymorphic function is a function that has multiple morphs or more fee is Greek for shape.
+Right? That's where you get the word morphological in English. So it's a function that has multiple shapes, because each shape works with an argument that's of a different type.
+So we're going to assume that event has two possible types. It can either be a container or it can be a function.
+And so the way we're going to solve this is kind of the stupid way we're going to say everything else. Where is it? The
+The first argument is a function. We're going to do this. If the first argument is a container. We're going to do something else.
+That's usually how you solve most polymorphic functions.
+So so that how do we know that something is a function. We know that something is a function, if it's callable right? So we define even here as a function, right, if we say, is even callable
+by saying callable of of even
+you. You will get a true, because it's a function if I redefine even here as a container, and then I run is callable. Even you will get a false because it's a container. It's not colorable anymore.
+Caliber will tell you it's a function. What's the What's the Api. You call to see something as a container or not.
+No, because if you have, if you have,
+yeah, you could. You could do type. I think type is a good argument to run all the time all the time, but but even more simpler than type is length right, because the length of a container will return a number. The length of a single type.
+Yeah, type is another good answer. Okay. So so let me redefine, even as a function
+which once again. There's no computation here like your your colleague, your colleague said the problem with with defining numbers. You have to compute them here, I defining a function that gives me all, even numbers, and and I don't have to specify the even numbers. I'm working with
+a function that is, um that is abstract, and works for all possible numbers. Okay, it's not exactly abstract. I mean something else. Ah, but it's It's more abstract than building the container. Okay, good. So What we're going to do now is we're going to say if it's predicate,
+then we're going to take the event which is a function
+we're actually going to enumerate all possible elements from the space that verify the property event. The
+then event has been transformed from a function to a container. The
+then, once we transform into a container, then we can actually run our original function.
+Yes, I think it's very hard
+user avatar
+Unknown Speaker
+00:45:33
+it. Why, don't we need a
+user avatar
+Dino Konstantopoulos
+00:45:40
+I've all like colable in my mind. Colable is to be mean. That means a lot of things is predicate. It tells me whether that thing is a predicate. And so in my mind the word predicate is more useful. So i'm going to rename it to his prettiest.
+The reason i'm doing this is because my mind works in different ways and other minds, and I want to take all the variables and name them in a way that makes more sense for me.
+Uh, it means give a call, right, and so I That's that's all i'm doing.
+I'm i'm renaming it because this makes more sense to me. But you're right. I don't have to do that.
+user avatar
+Unknown Speaker
+00:46:39
+Okay.
+user avatar
+Dino Konstantopoulos
+00:46:41
+So what I'm doing here is i'm saying, If this is a function, turn it from a function to a collection and then run this: if it's not a function, just run the original, you see. Do you see how? And this is really tricky? Because what i'm doing is I'm. Transforming event from one type,
+from a function to a collection.
+Right? This is something you can do in Java.
+Right? I'm. I'm running something in very very short piece of code, and I can do that because it's in Python,
+in Java you'd have to change the name of your variable right.
+Okay. So Now I have to work with this such that function,
+the such, that function takes a predicate,
+and the collection that it can, that it can iterate over and returns all the elements from that collection that fulfill this predicate. So look, i'm using the filter function
+because the filter function does that the filters function takes a predicate and returns all the elements of a collection that define this predicate, and then I turn it into a set.
+Now, instead of using this, I want you to use a list. Comprehension, a set comprehension. So please replace this with a set comprehension.
+So what you will return is a set,
+and you will say s for s in.
+Then tell me what the answer is.
+You know when you have a you have a computation cell, so you can try many things and compute it and see if it works. Now
+see if you get in there. Does anybody have an answer?
+user avatar
+Unknown Speaker
+00:50:14
+It's, for
+user avatar
+Unknown Speaker
+00:50:17
+they're just not to
+user avatar
+Dino Konstantopoulos
+00:50:20
+if it's not to me.
+S. Mod. What's mod,
+what percentage? If s Percent:
+Yeah. But there's that does. They use? Predicate? I want you to use the predicate,
+he's predicate.
+Yeah,
+yeah, I like that
+right? This tells you that returns all the element for S image electron is predicate of S. Returns. True. So, of course, this free supposing that predicate is a function that evaluates to a Boolean value right if this evaluates to something that it's not bully, and This will be a mistake,
+but a predicate is a function that returns a Boolean value, which in this case it is because the value of this is a Boolean. Then it will work.
+Okay. So now that I define P. Polymorphically, so it works both with P. As a collection and with P as a function, and I make sure that i'm using the even a form. Then I can say P. Of even of space, and I get a right answer,
+and if I want to use a collection, I can also use a collection instead of instead of using this, I can say, even equals
+two, four, six,
+and This will also work.
+Isn't that it. You have a function that works with an argument of the event that could be either a function or a collection, or a, or a or a collection or a container.
+Okay, Okay, Good. Good, All right. So um.
+Let's let's do a little exercise here instead of doing it as a homework. We'll do it in class. Take take all of that,
+bring it down here,
+and use this code to. So here we have all possible outcomes for a dice right one through six. Here we have all possible triplets,
+so we throw three dies.
+Here We have a predicate that tells you whether the sum of the outcome. So the sum of the faces of the die is a prime number. And now i'm asking you to implement the prime function, so I can compute the probability that if I throw three dice, the sum of the three faces is a prime number.
+So so give me, give me this.
+Remember, I think we worked with prime up with prime functions. In fact, I think we even need a dual Lipa implementation of the prime code, the
+So if someone has a solution, please let me know, or or send it for those of you that are online. Send it in the Chat chat box, because I can see if you send something in the chat box. I can see a number, and so I can go ahead and and write the solution.
+But I want you to give me sexy code.
+One light.
+You see what i'm doing here is how i'm decomposing everything into a function. First, I have the prime sum that counts all three numbers in an outcome, because the outcome is a triplet, not a number. And so what this does it returns is prime of the sum of the three numbers.
+Then I have another function here that determines whether a number is prime.
+So you see how it decomposed the problem into two functions.
+And you see here, I select the triplet.
+user avatar
+Unknown Speaker
+00:56:57
+You
+user avatar
+Unknown Speaker
+00:57:08
+it's
+user avatar
+Unknown Speaker
+00:57:13
+you'll have to come up,
+user avatar
+Unknown Speaker
+00:57:18
+he said.
+user avatar
+Unknown Speaker
+00:57:50
+He's
+user avatar
+Dino Konstantopoulos
+00:58:03
+any answers.
+The the the condition. We want to look at. Sorry The condition we want to look at is
+you?
+user avatar
+Unknown Speaker
+00:58:34
+It's
+user avatar
+Dino Konstantopoulos
+00:58:36
+he's?
+If I then.
+But I
+bridge
+from one to end.
+That's what we want to look at, right. We want to make sure that this will tell me whether a number n is divisible by any number from going from I to N itself right? Because the the prime number tells me that
+the number is primates, they visible only by one and by itself.
+Yes,
+So what you garden
+for a grades of starting to
+user avatar
+Unknown Speaker
+00:59:24
+two we have start with two right,
+user avatar
+Dino Konstantopoulos
+00:59:26
+and and if you want to optimize, you can also modify this to be more optimal. What could you modify this to be?
+This could also be square root of n
+bit more optimal than having to go up to. And okay, let's just leave it like that to make it simple. And we we want this to be true,
+to be true, or we want this to be false, for is prime,
+and and it will be prime. What I wrote is true, or if what I wrote is false,
+so I want to return true if and is prime.
+So what we want you want to evaluate to false for all possible numbers in here Right? So what we want to say false, so it's not any
+right,
+which means that none of these is true.
+Then there's one more thing we want to make sure that n is bigger than one.
+Okay,
+let's try this right first of all, before you do anything you try this. So let's let's define this function. Let's create a cell up there.
+Let's see if his prime of ninety seven returns a prime number.
+It returns true.
+Sorry I don't know why I did. Two percent is one percent right
+uh a month. The month division is just a single person.
+True, Let's use a a non-prime number
+it's faults. Good. Okay, good. So now we we debugged our function, we fix this bug, and now we can compute the probability and look. Prime sum is it is it? It? It's callable right? It's it's a it's a it's a function.
+This will use the prime sum callable
+type of that function. The prime sum is going to be expanded into all possibilities. And then we're going to compute the probability. In looking four lines of code. We get our answer.
+It's.
+So you see you're starting to see Code. That is a little bit different. Right? Code for you was a way of writing things in the way you do an object or anything.
+Code now begins to look much more like how your brain thinks,
+and you express the conditions much closer. The code becomes much closer to the shape you of your thoughts.
+So the you know, Max, for staffing is amazing Right? He's Lewis Hamilton, who used to be amazing, and he's part of the Red Bull team.
+So what you're gonna do is you get? We're gonna run the logic with formula one, and we're going to assume that the season isn't over. The season is is over and ranks through seven. One, one, the formula one trophy. But let's assume that we're two weeks before
+the last race of the season. So let's assume that the Netherlands Grand Prix is coming up, and after that we have the Italian Grand Prix, and then the season's over right
+user avatar
+Unknown Speaker
+01:03:31
+it's.
+user avatar
+Dino Konstantopoulos
+01:03:32
+We're going to use a classification of the drivers. Ah! From from the season. So we're going to assume that there. But that's how the drivers are classified, and I give you the ah, the driver standings here so you can. You can go here and you can access the driver's standings
+so Max, for step, and has two hundred and thirty five points. Charlotte Layer has two hundred and nineteen points. Right? So this is how the drivers are are classified.
+So question one has some questions. Probability distributions for each formula, one driver, etc. Question two gives you
+um some predicates, and I and ask you some questions. So here it said, You're going to be working on a distribution. You're going to be writing functions that will through these predicates, and you're going to combine them with the answer.
+If great bullwinkle first race. Where is it going to move the next one? So
+questions like this
+question: Three throws you a current ball question. Three, says Red Bulls wins one of these races on a rainy day. What is the probability? The Red Bull wins. Both races assuming risks can be held on. One, one, two, three, four, one, two, three, four
+possible. They are different different weather conditions,
+and then finally question four. I'm telling you that there's one hundred fashion shows after the season that each formula one drivers, is bound by contract to go to exactly one fashion, show
+not less, no more.
+It used to be at least one, but I made it simple to exactly one fashion show, and i'm asking, What's the probability if you go to one of these one hundred fashion shows, you see your hero could be us, Hamilton. It could be Max or Stab, and whoever and then ask you what's the probability that you see any formula, one driver.
+So these are the four questions.
+So the way you will. Yes,
+yeah. So the last question is, you have a hundred fashion shows, you know, that there's one hundred and forty one drivers, because there there's some retired one. So if you go to this site, this that will give you all formula, one drivers. So there's about one hundred and eleven. I counted. But I said, let's make it simple. Let's make it a hundred.
+Okay, So this one hundred fashion shows is one hundred and one drivers Each formula one driver goes to one fashion, show what's the probability that you see your formula? One driver, and Then what's the probability that you see any one formula, one driver,
+and what you will work with here is you will work with what are called probability distributions, which is what we're going to study next, because you see this function. P:
+So you don't know about this because we didn't build this function. Now, That's what we're going to build next. What's the problem with this function? P. Here that we were working with this function? P.
+It only works
+when space is equally probable. Right? So it only works where space is a space of things that have the same probability of being picked right. But look at these driver Standings,
+You, If you were to bet money, would you say that any one of these drivers has the same probability of winning?
+What would you say
+who has the highest probability of winning
+to.
+Yeah. But the the good guy, the guy who won most races has the highest probability of winning, because that that's the points mean talent. And the guy that's more talented will probably win. So if you're working with formula one what formula one drivers, it's not like working with Burns in the ball.
+You're working with with items that don't have the same probability.
+This guy has a much higher probability of winning than this poor guy down here that has zero points.
+He he won no races, he didn't even place.
+So how are we going to work with a P function that that works on on elements that don't have the same probability here we used. We used space, and we said space was a was a was a container where a container was a collection of items. What kind of type can we work with,
+so that we can work with items that don't have the same probability.
+So we can make that function polymorphic in that type as well
+all the types that we learned in class
+which type which python type
+you would use. So we can. You can work with items that have a different probability, a different different frequency outcome that are different.
+Yeah, a dictionary, right? Because a dictionary is a collection of keys and values. So what you can do is you can associate the Max for stopping Key with a number of times, c. One and the Lewis Hamilton Key with a number of times, c. One. And that way you can. You can work with items that don't have the same probability.
+Okay. So now that we figure this out, let's go and open the next slide for today, which is probability two,
+don't you.
+user avatar
+Unknown Speaker
+01:09:02
+He's
+user avatar
+Unknown Speaker
+01:09:11
+So you figured that out,
+user avatar
+Dino Konstantopoulos
+01:09:15
+and then we go through a number of distributions. So we've already learned about the Gaussian distribution Here we learn about the binomial.
+So this is the definition. So every time I give you a link you go in a little bit of information on Wikipedia. But the binomial distribution tells you the probability that if you have um ah an experiment, what What are the what are the the the probabilities? If you say I want to select n balls that I'm. Selecting N. Balls that are blue, or white, or or or red. So this is the the binomial distributions, and the binomial distribution looks
+very much like a Gaussian, but it's not exactly the Gaussian, so it's the number of successes in a sequence of n independent experiments, each asking a yes, no question, and each with its own Boolean outcomes success or failure.
+It's exactly what you do in formula one the number of races you're going to win, where for each race you either win or lose
+right.
+So the binomial distribution is the distribution that you always see in the formula one results, or any kind of result that is based on a sequence of n races, or in trials, or in games, or anything like that, right? And so
+it's amazing. But these numbers I already told you that all the numbers that look random actually follow some laws. And so, when you
+look at, look at games and athletics, or sport, or games of chess, or anything like that.
+And the title is the the the the, the the cup that a guy that wins the the season. It's A. It's a number of games that he or she plays, or where each game is, whether he wins or loses. Okay, so the binomial distribution is what we want
+to study, and it has a complicated formula, and this first two numbers is N. Choose. K. Is our choose function that we define in the previous slide.
+So this is a power function. And yet, look when you when you run this, and I give you some, I import the binomial from sci-pi dot stats. So remember, Siphi is this third library, and this is a third library that has includes mathematical functions. So the binomial is included there, and then I plot it for different values of N. And P.
+So these are the N values is a number of experiments, and P. Is the probability of winning.
+So if you see this driver, Standings and I asked you,
+what's the probability I have? I have
+have. I don't know a hundred races in season. What's the probability for Max for stop, and to win the next race.
+user avatar
+Unknown Speaker
+01:12:07
+He's thirty, four.
+user avatar
+Dino Konstantopoulos
+01:12:09
+It's something to do with three, thirty, five, right. You would say that I have. I have one thousand races, so it's a three hundred and thirty, five over one thousand. What's the probability for Charlotte not to win? What's to nineteen or one thousand right? So you different probabilities of winning It's the frequency. In fact, I can.
+I can do something even more clever where
+i'll show you how we do it in the function. So come back to to this. So this is just plots, different values of N. And P. So you can see the shape of the binomial.
+So this is the the the binomial function, and this is using the binomial. So this is a binomial function for different values of N. And T. So it looks like a Gaussian belt, but it's not exactly a Gaussian. You see, this is the shape looks a little bit different.
+But here, what I do is I use the binomial as a probability density function, and I ask for random variance from the binomial.
+And I said, give me different values of the binomial, and then I plot the histogram. So the reason I have a little kink here is because I only have I'm only plotting twenty five points, but if I plot it more, it would look more and more like the binomial.
+The binomial can actually be approximated with a with a with a Gaussian distribution.
+But
+this is what this is. Why, I tell you that I go a little bit fast over this, because we have two notebooks that I want to cover, and so I'm. I'm. Purposely going well with fast. Normally I will go a little bit slower, but if you want to study this where you have questions about this. Um, please ask your tas,
+so let's go ahead and work on our P function. So before we can work in our P function. I need to show you something else.
+So look, this is what I mean by that. Suppose I have a function that returns a function.
+So this is called my doubler, and what it does is it defines A. My G function that doubles the value of that function, and it returns my G.
+So if I use this doubler,
+and then I say, let me define a new function called F plus one, which obviously returns plus one, and then call my doubler of F one. First of all, will this work?
+It will work because the argument of my doubler is a function,
+because it defines a new function that takes in an X and returns the F of that X right?
+So it's a little bit complicated because you haven't worked with functions a lot you've worked in. Obviously a programming. You work with data structures, and that's okay. But now I want you to start working with functions. That's the that's the purpose of your of your homework for next week. So he the same way you have container that contains a container, you you have a function.
+So if I say f plus one, and pass it to my doubler, and then I print h of three that will return eight, because three plus one times two. Is it
+okay? So this looks a little bit tricky. But the only the only reason, the only reason it looks tricky is because you Haven't played with functions a lot. You haven't done a lot of functional program, but this will be simple. You run it one hundred times. Then you understand why it works change the values. You'll understand how it works. Now let's try to use the same,
+my doubler. But instead of my sum being a function that works with one argument. My sum works with two arguments. So it returns x plus y,
+and let's try to apply my sum, too,
+to my doubler,
+and you know that sum of two works with two arguments. And so you'll pass each of two arguments, and you say, Ok, this should work too. But when you run this, you see a war,
+because my G. Actually here expects one positional argument.
+So we need a way to specify a function that takes an arbitrary number of arguments
+in order to make make this possible. And so what we do is we use our magic star Args and Star, T. W. Bargs data types.
+And so now, what we're going to do is we're going to define my G as taking any number of arguments and any number of keyword arguments,
+and they were going to take
+any number of arguments and apply that. So you see, when you do that, you don't have to say, okay, F. Of X, because F. Could take many arguments. So what you do? You say this? And you open up the possibility for F functions to take any number of arguments. So when you do that now this will work,
+you can specify any number of arguments.
+Right? So that's a cool trick that you can do with another language.
+Okay, now that we've seen this, we're ready to define our polymorphic function. And so we're going to define two things that you're going to use in your home. We're going to define a new class first. First time we use a python class and then we're also going to redefine our function. P. To make it more and more
+so. Look at this. My The probability distribution is going to be in your class, and I told you the reason. The reason I use classes is because I want to use the constructor.
+You can do some work,
+so i'm going to use the constructor here to do some work so that I can take a data set like this.
+Sorry a dataset like this, and automatically build the probabilities for Max, for Staff and for Charlie Claire for se your Paris for George Russell. So I want to do. What I want to do is, I want to turn number of wins into a probability.
+user avatar
+Unknown Speaker
+01:18:12
+So what I'm going to do is I'm going to define
+user avatar
+Dino Konstantopoulos
+01:18:16
+This is really tricky. So i'm going to define a class, and i'm going to use a constructor with a number of keyword arguments,
+and i'm going to say some all the values. So i'm going to go here. I'm going to say some of these points three, thirty, five, plus two, nineteen, plus two, ten plus two or three, plus one, eight and four, one, sixty, eight, plus a that give me the total sum,
+and then take
+any one of these probabilities and define a new probability. The dictionary i'm defining a dictionary right? Because self of something is a dictionary, and I'm. Saying, Take the value and divide by the total
+right. So the way i'm defining the probabilities is, i'm going to divide three hundred and thirty, five by the total number of points.
+And this is fair right? Because it's like having a cake.
+He's saying, Okay,
+you want three hundred and thirty five points. You're going to get three hundred and thirty five percent of the cake.
+You want two hundred and nineteen points. You're going to get two hundred and nineteen points of the cake.
+Poor
+Nico!
+You get no cake
+right? So that's a way of computing probabilities. And the reason what the definition of probability. They have to sum to one. Every single outcome needs to sum to one for you to have a probability distribution, and here we have one cake, and we divided the entire cake. So it sums up to the entire cake.
+Right? Ok? So what we're going to do here is we're going to use this constructor to divide the cake into equal parts, and i'm doing it with the constructor. Isn't that meat. So when I define a probability distribution. I can pass a dictionary of the key about your pairs,
+the keys, or whatever key they are, and their values are just numbers, and I want to get back in return is a probability distribution,
+because these are all numbers. It's some up to one. They're parts of the cake
+where each driver gets a bigger part of the cake if they have more points.
+Okay, so let's do you follow It's a little bit tricky, but i'm sure you'll get it with, with maybe a little bit of help from your tas. So the finite probability distribution, and then i'm going to actually let's do this. Please take this copy it.
+Then go back to your previous um uh notebook.
+Go all the way down to where I define this. Put a cell above the cell, insert cell above and define probability distribution
+then, and then go here and remove these ellipses and assume there's only one, two, three, four, five, six drivers in formula, one
+where I've specified each driver with their initials, Mvclspgr. Cslh: Because if you go to the drivers you will see that this is a driver. Mv. This is Driver Cl: This is Driver Sp: This is driver,
+and so if I use the probability distribution where I give. This is a dictionary, and remember, I defined it so I can. I can pass any number of arguments.
+That's the reason I did this, the the the start, keywords, and and and because now I can specify any number of arguments to the function. I don't care if it has three or four or five. I can pass a dictionary with any number of keys. You can't do this in Java don't even try it,
+and i'm defining a probability distribution, because I have the numbers, and this will give me an Rgp. That's a distribution of probabilities. Look if I run this and ask for Rgp:
+Sorry I didn't run this, let me run this and then run this, and now you have your probability distribution. This is the probability for Max for sale to win fourteen percent
+nine percent.
+Sorry
+right? So probability for Max, we're stopping to win twenty, five percent, sixteen percent, fifteen percent, fifteen percent, fourteen percent, twelve percent.
+And all these numbers sum to one
+right.
+Why don't, we just write the function. So why am I using probability distribution as a class?
+If I, If I created a container, then I would have to create the container and then color function that normalizes the values of the container. It will be three lines of code,
+You know. I do a liba thing that I have. I like one lines of code.
+That's why I use a class because it will automatically run this function.
+It's like it's like calling a function. This is like calling a function. Essentially.
+Okay. So now you have
+a a probable distribution, and I want to spend some time working with probability distribution with you. So let's go back into our other notebook, and let's make our function be polymorphic. So it works with events that are either function or containers, and they work with spaces that are either collections or
+user avatar
+Unknown Speaker
+01:24:12
+dictionaries,
+user avatar
+Dino Konstantopoulos
+01:24:15
+so that they're not equally probable.
+Look at how we're going to solve this.
+Um. Actually, you're going to solve it for me.
+If event is a predicate, then do what we did before. But now we want to also check check in space is an instance of a probability distribution class.
+Actually, that's the other answer to your problem. Why am I defining a function of a class? Because i'm going to use that to make my function people and mortar to my second argument,
+If space is actually an instance of probability, distribution,
+then do something else.
+My such that function now is going to define, predicate in space such that But now it's going to check,
+otherwise. Return the that that's the same thing that we did before,
+so please fill in the ellipses.
+Now it's even more complicated. Right before you were working you work to make the P. Function polymorphic in the first argument
+where the first argument could have been a function or a collection. And are you working to make it polymorphic in a second argument, where the second argument. Space can be what we had before, which was just a set
+a dictionary. Now a dictionary is also a set,
+but a dictionary is a set of key-value pairs.
+So let's spend a few minutes on that.
+You. Haven't seen this notebook before
+it's.
+Okay, let me let me check.
+user avatar
+Unknown Speaker
+01:29:33
+It's It's
+user avatar
+Dino Konstantopoulos
+01:29:39
+Yeah, I give it to you. It's here, right.
+It was part of last week's part of last Week's: Zip lib file.
+Does Does everybody have this notebook?
+Yeah. Okay. So this kind of explains the mathematics of um
+of you know how probabilities can be really complicated. Well, actually, i'll go over this a little bit more on Monday, if you have any questions
+but um and and then the other thing is um,
+we will probably won't have time to cover the work. The this, this, this problem of working with? Um ah! With probability distributions, because since your homework is going to be involved, it's going to involve working with probability distributions. I want to spend some time working with that. And so what we're going to do is we're going to study data science paper.
+I give you the link of the data science paper here. It's an interesting paper here.
+So what we're going to do is is we're going to work instead of working with formula one, we're going to be working with
+the dames.
+So in Denmark
+there's uh uh
+families of of, or they have two children where you have two girls
+where you have two boys. We have a girl that was born first, and a boy that was born later, or a boy that was born first and a girl that was one later, and they had that many to have one hundred and one thousand two world kind of
+at thirty five thousand, two or five, Me. Right? So they have different probability distributions.
+So this entire problem is works with this data, science, vapor. And so your tas your Tas,
+you're Tas,
+your Tas are going to prepare a special session for you where they're going to go over this paper over this code with you, and it's going to be tomorrow
+Friday, so your Tas will prepare a a session. Ah! In in class we'll all resume whichever way they want, where they're going to go over this this this paper, the rest of the notebook,
+because I want you to have some help. Right? I'll help the Ts if you will have a solution. They already know the solutions to this. But I want them to help you with this code, because
+this code here, when you when you run it. You will see that you have to run things. You have to you the solutions Aren't given right, and so I want you to. Tonight. I want you to go and try to
+don't don't do this. We'll do this together next week.
+user avatar
+Unknown Speaker
+01:32:36
+It's,
+user avatar
+Dino Konstantopoulos
+01:32:37
+and so that will give you some practice of working with probability distributions. So this weekend you can work on your homework, which, by the way, is going to be team homework with teams of two when the Tas are going to assign random teams.
+user avatar
+Unknown Speaker
+01:32:50
+This homework is going to be due, not Monday or Tuesday. It's going to be Thursday of next week.
+user avatar
+Dino Konstantopoulos
+01:32:55
+Okay, they're the formula, one homework.
+So you have a week to do it, and I'm giving you some practice with probability distributions. And your tas are going to give you the solutions to the problem. So there's a lot of love here. Okay, So appreciate the love. Go to the Ta session.
+user avatar
+Unknown Speaker
+01:33:16
+He's.
+user avatar
+Dino Konstantopoulos
+01:33:17
+Now let's come back here and solve the the problem here, so that it's polymorphic on both arguments.
+Because you can't be needing the P function.
+I'll give you two more minutes, and Then we'll go over it together.
+user avatar
+Unknown Speaker
+01:34:44
+He's
+user avatar
+Unknown Speaker
+01:35:13
+It's
+user avatar
+Dino Konstantopoulos
+01:36:07
+one minute.
+user avatar
+Unknown Speaker
+01:36:11
+It's
+user avatar
+Unknown Speaker
+01:36:19
+it's
+user avatar
+Unknown Speaker
+01:36:25
+in the
+user avatar
+Dino Konstantopoulos
+01:36:48
+Okay, Okay, let's look at this together.
+So if you don't have a probability, distribution. It's the number of favorable events over the total number of events. If you have a probability distribution. How does this change this picture?
+user avatar
+Unknown Speaker
+01:37:03
+Cocktails, as you know
+user avatar
+Dino Konstantopoulos
+01:37:09
+you can't look at the length anymore, because each element, each key has a different value. Right? So the number of favorable events is not just a number of keys you have to sum the values
+that are favorable, right? And since the values are already probable distributions, we don't have to divide them for anything, just add them.
+So So tell me somebody tell me how to sum values. So we're going to return a sum
+of a set comprehension
+right? We're going to sum every element, And what we want is we want to sum. The values
+are favorable. Okay. So i'm going to iterate.
+Ah, of
+for all in space.
+I'm. Going to iterate over every element of Oh, right,
+how do I? How do I get the values of all when I iterate over space? Always the key. How do I get the value of all the
+user avatar
+Unknown Speaker
+01:38:16
+don't go?
+user avatar
+Dino Konstantopoulos
+01:38:19
+Oh, is a key?
+Yes, yes, yes, good job. Space of all the
+okay.
+Is that enough?
+What will this do? Space of will for all in space? What does that do?
+What is F of all throw in space to?
+user avatar
+Unknown Speaker
+01:38:39
+He and I was around. But
+user avatar
+Dino Konstantopoulos
+01:38:47
+let's look at an example. Let's take this probable distribution and see and see what it does. Where did the probability go?
+I'm sorry it's here.
+What happens to probability? One. Oh, here it is. Let's let's do this probability distribution right. Rgp: Let's take it here.
+Let's let's put it down here. We experiment. So so so it's. Okay. So let's create a new cell here, and let's define this probability distribution and let's let's do this to see what this returns. Right. So now we have our Gp: Let's run this.
+user avatar
+Unknown Speaker
+01:39:22
+Let's create a new cell
+user avatar
+Dino Konstantopoulos
+01:39:25
+and let's see what this does.
+So instead of space. I'm going to say, Rgp: Right
+whoops
+user avatar
+Unknown Speaker
+01:39:41
+It's game for.
+user avatar
+Dino Konstantopoulos
+01:39:51
+Yeah, thank you. Our Gpio.
+So So if I sum all of these, what what will happen?
+That's one. Is that is that why I want to return here
+so So how? How? Why do I need to do?
+Yes, yes, Who said that?
+Yes, exactly. Yes, yes,
+yes, I love it if or in events,
+because that counts only the favorable events right,
+it's
+perfect. That gives me exactly the equivalent of this when i'm working with non-equivocal events. So we're done with this. Now let's do this What do I do here.
+So what do I need to do? What am I doing here? I'm essentially creating a new probability distribution. Aren't I. Where the new probability distribution is only those elements
+that um that um are are in space.
+So what I want to do is I'm. Going to create a new probability distribution.
+And what I want to create is here
+a collection of key value pairs. So it's going to be a key all, and the value That's how I create a collection of key value. Pairs, right? Only
+four,
+he finished the code for me.
+Four.
+What is the the default for space?
+What is the default value when I say in space? Do I mean spaced up items, space keys, or space values. Remember, I'm working with dictionaries.
+user avatar
+Unknown Speaker
+01:42:12
+No, thank you.
+user avatar
+Dino Konstantopoulos
+01:42:14
+So what's the default behavior? If I just say all V in space, What does that mean? Keys? So I don't have always. V. I just get out.
+So if I want to get both O and B, I have to Stay, Say, what
+is that enough?
+user avatar
+Unknown Speaker
+01:42:33
+There you go.
+user avatar
+Unknown Speaker
+01:42:41
+It's also pretty good.
+user avatar
+Dino Konstantopoulos
+01:42:43
+He's wet very little.
+Everybody see this.
+What I did here is is this: I have a probability distribution. But I want to restrict that probability distribution to just those items
+to just those items that fulfill this predicate right?
+And so what i'm going to do is I'm going to recreate the probability distribution. But say only those items that fulfill this predicate. Do I want to return the Zoo?
+Now I have a probability distribution with that works with where the first argument is either a
+a collection or a function or a callable, and where the second argument is either all the same probabilities. It's just the collection, the big sheet,
+or
+a set of elements with different probabilities, each so a dictionary.
+And now that you have your P function, you can actually solve the problem, because now you have a function where you can call it with many, many different kinds of arguments.
+Okay.
+So you see how the code that we're working with now is so much closer to the way you think
+and how you can begin to solve real problems.
+Okay, I think we have to leave the class, because otherwise they don't. But okay, So what's going to happen is i'm going to talk to your T. A's. Your teams. We'll have a solution to this. To this problem. It's important that you go to the T session because you're getting a practice with working with probability distributions, because your homework is all going to be worked with probability distributions. So in this case more complicated, because you have formula one and you have twenty drivers,
+and you're working with complicated questions.
+Okay,
+It's not going to be fun. You work with tons of data in data structures last weekend this week, and you're going to work with logic.
+That's fun.
+user avatar
+Unknown Speaker
+01:44:43
+He's
+user avatar
+Dino Konstantopoulos
+01:44:44
+you? No, it's not important. This one is more important.
+Yeah, you have homework. That's due on Saturday.
+user avatar
+Unknown Speaker
+01:44:52
+We don't have shared.
+user avatar
+Dino Konstantopoulos
+01:44:57
+Okay, now, good luck, Good luck. Good luck. Okay. So the Tas will assign the teams. Okay, and and then we'll see you tomorrow. I will work with the Ta, so you can make sure that this will solve this. This will give you a good practice with your probabil distributions. Have a good weekend. I'll see you again on Mo on Monday.
+Thank you.
+Thank you. Online.

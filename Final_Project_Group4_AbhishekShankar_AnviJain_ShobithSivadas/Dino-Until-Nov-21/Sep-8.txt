@@ -1,0 +1,631 @@
+user avatar
+Dino Konstantopoulos
+00:00:24
+Okay, So I don't guarantee. I'm not going to move off camera, but at least you have. You know you have the recording
+me this.
+So we have that up here.
+Now I can go to
+today's class.
+user avatar
+Unknown Speaker
+00:01:01
+Okay, So material is is up on
+user avatar
+Dino Konstantopoulos
+00:01:05
+a canvas, so it's going to be published a few hours before class. We can download it
+and come to class material will change. We're going to go from
+from Powerpoint slides to actually notebooks. So in class. When you come to class, always bring your computer, your laptop, because you're going to be looking at me,
+computing and
+texting your friends at the same time so multitasking.
+So you don't have to get good at this.
+We're going to start with just a general introduction today
+end. I'll tell you what you need to install, And next week you come with all your installations, and we start computing together.
+Okay,
+I mean.
+So your homework will be the installations. You have four teas in this class. They took a class, a students the best,
+So take advantage of them because they know a lot of things. You can also ask me questions. But if you're shy, or anything like that, or if you're not sure about something, ask your tas. They will also be in your homework with a little bit of help for me. So it's good to have a good relationship with them.
+Not a relationship in the sense of
+i'll take you to dinner if you give me an A. That's not going to work,
+because I look at the grades to the
+but it's good to have a relationship with your tas
+um,
+so we'll we'll Let's uh I'll tell you more about me and about the class as we go through the slides. So let's go through the slides together. So um! Does everybody ever really download the slides from um? I actually publish some new slides today. So if you download them. Yesterday I have some updates.
+I actually I sprained my ankle, taking pictures of the temple of Lewis to in Paris. Who knows? The temple of Levito in Paris.
+So it's, you know. You know the you know the brand right? You've heard of it right? So the headquarters are in Paris because it's a French brand.
+And so um! I was taking a picture because I was a huge line of people, hundreds of people waiting in line to go to the store, and so I was like, Well, I won't go in the store, but i'll take a picture, and the gods punished me because, as I was taking the picture. I went like this. My,
+so that will teach me. You have to be respectful to the gods,
+but but it's not. It's very bad sprain. So hopefully, i'll be okay. I'll be okay next week, because I usually bike the class because I bike a lot.
+Okay, so um. Let's Let's go through the slides, and then we'll talk about a lot of things we talk about. The data. Science is where it's not whether you should take the class, whether you should not take the class, what we're going to do in class. Um, how you're going to become a sexy data scientist at the end of the class. It's going to change your life. Google is going to hire you millions of dollars. You're going to meet fantastic people. So we'll talk about all that.
+But let's start with the install. So
+we're going to use two languages. We're going to start with the language R. Because it's a very popular language actually. But next week we're going to move to Python because most of the data science is in python. But you should know r two, because it
+often in interviews. They ask you. You know our. We need a little bit of experience in that, and it's also an easier language. So we'll start with that. And then when we move to, we'll move to Python.
+But don't install the engine, just don't, install
+the engine, don't, stall, stand standal, or install our studio instead, because that installs both the ide which is our studio and the engine.
+So ah! You can install our studio, but Don't do it now. Please do it at home. This is part of your homework because it's gonna take a little bit of time. You also install anaconda.
+I'll talk about that later. I'll talk about all the installs during the class.
+So
+in green you have classical Greece two thousand two thousand five hundred years ago,
+and um a Phoenicia which is facing Greece. And so there's a very famous school there called the Pythagoran School, Pythagoras, and so the Pythagoran school
+Uh was also into music.
+So they had what's called the mono chord. Today. We have many instruments that have two or three or four, six or eight chords, but back then they just had one chord,
+and they played the cord, and the cord has this thing right there in in the middle that separates the upper section. In the lower section they found that
+then, if you have a good distance between the upper section, lower section and a lower section, the sounds are great, and if you don't, have a good distance. The sounds are not great, and they found that the good distances are integer numbers, and so that the ratio,
+the upper section, and the lower section is a rational number, because it's an integer over an integer. And so they said, Wow!
+Rational numbers are the numbers of the gods, because they produce great sound.
+And so they founded a science from music, a science of numbers, and they started studying rational numbers,
+and they said, there's nothing more than national rational numbers in the world, because non-rational numbers produce horrible sounding sounds no good melody, so we love rational numbers it was almost a temple. The Pythagorean temple, and then they had one student called Hipposis,
+and that student was pretty clever.
+And so this is what he did. So hypothesis. So the Pentagon was the actually the symbol of the Pythagorean school.
+The five-angle star was their symbol, and so he started drawing that symbol. And then he drew the pentagon in a smaller pentagon next to it.
+If this is S,
+that, then this is the as well.
+And so he said, Well, the the two ratios are the same. And so if this side is D minus s, and we should have d over s, which is x, one and B minus s, because it's the ratio.
+It's it's the same image, only smaller.
+So you can look at. This is John, which is actually a lot of fun.
+And then he played with his equality. And then he said, Well, I can keep on drawing smaller and smaller pentagon. And so this priority must hold forever
+in. The integers have a minimum number, which is, which is zero.
+But you can see that D is less than twos right, because if you look at if you look at this,
+and so and so if if D is less than two S. That means that the B minus s is Sms. So these numbers be getting smaller. So how is that possible that these numbers keep getting smaller? And yet zero is the smallest number? It's not possible. So this is not a rational.
+So hypothesis went and told Pythagoras about that. And if I go I said, No, impossible. I'm gonna drown you.
+So the legend has it
+that that he, when when he figured that out he actually had Hippos is drowned because it was
+sacrilege. What he said
+then, and then other numbers started showing up like square root of two square root of two also has an interesting story,
+because you can start reasoning. Suppose that square root of two is a rational number
+square it
+that tells you that a squared is even, which actually only happens in days, even because if a squared is four, then it is two. But if a squared is nine, it is three, so it's an odd number, and so you can follow the reasoning and figure out that
+it is also not a rational number.
+And so another number showed up there Wasn't ration, he said. How is that possible that we have numbers that are rational, and so that changed everything. This was really when numbers or data started being analyzed and people wrote results, and they published books, and they taught other people, and the science of numbers was born.
+And then we have history because these people wrote a lot of books, and they say that. And so there's a famous history called The probabilities of war by Fassididis in the fifth century, five hundred years before the common era.
+They described how the Athenians used to attack other cities.
+They sent sold soldiers, and they counted the number of bricks.
+Of course many of these soldiers died that some came back, and they told a number of bricks, and they built ladders
+the number of bricks, but they actually counted the mean of what all the soldiers said, and so they invented the mean,
+which is the average of what a lot of other people say are that are the right numbers
+and data. Science was born the science of data. How do you work with data. You apply data to invasions and war. And all these things.
+That was a long time ago was two thousand five hundred years ago.
+And then there was a big, another big time of progress in data science, which was in France in the seventeen hundreds in the eighteenth century. They liked to gamble. They had a lot of money, so that they played gambling games,
+and they try to reason who's going to win? Based on based on probability, what we kind of started inventing probability theory
+who really laid the foundation of the modern theory of probability which is at the basis of statistics.
+And they did that for gambling games back in Athens, in classical Greece it was for a war. How was that possible? I plugged the computer. And I guess this is not working?
+Do we have another?
+Hello!
+Why is it not working?
+Oh, I didn't put this in That's why,
+where
+so? So they They invented these games, and Then they said, Well, what happens if we have the game going on? And oh! And then, of course, there were textbooks, and this is going for other names around French, and then back again in the twentieth century, Andre Bomb, or Russian, who made the foundations of the mathematical theory,
+our statistics and probability, the foundations of probability Field. But the game is really interesting that the game is, and they started thinking, Suppose we play a game, and we wager a lot of money, and we put the money in the middle, and our wives coming in discover us, and we have an escape,
+because wives usually don't like it when they waste their money playing games right because they want the money to buy food.
+And so, if we have to divide the pot based on who's winning. How do we divide the pot fairly?
+And so we started thinking what is fair? And so they said, Well, let's count all possible paths into the future,
+and let's see how many paths for one by one person, and how many paths are, one by the other person, and then we'll just divide it accordingly.
+So suppose if we simplify games, suppose we replace sample only flipping games. You have cards. You have more possibilities. Let's just make it fifty percent with either heads or tails. So let's say one point. It heads, goes to one person or from mine. The other point um tails goes to Pascal, and first to ten points, wins a certain amount of money. And so what you do is well. You
+suppose
+Pascal is winning eight games and improvised me seven games. What are all possible, passed into the future. And so you see, these are all there's big, finest seven is so you have nine and ten and five, So you have one, two, three.
+That's how we split the money.
+So that's going into the future.
+But there's another way. You can also solve. The problem is going from the future to the past,
+so you can say another approach is this where you say, well imagine the game is ninety nine,
+and then you. All you need to do is throw one more
+coin, and that becomes ten to nine. You decide who wins. So each person has fifty percent chance of winning when you're nine to nine.
+So then go back. One more step in time, and suppose the game is nine to eight,
+so ah! We know that Ah has fifty percent of of winning the round if he loses it's nine to nine, and he has fifteen percent. Your chance of winning. So the total probability of worth winning is fifty percent times one, because then you including wins or fifty percent times the times sixty percent.
+So you notice that I multiply probabilities when I look, at events that are occurring in succession.
+Because if I tell you what's the probability when you flip a coin that you get two heads,
+because I flip a coin, and then I flip a coin again. But if I tell you what's the probability that I get either a heads or tails. Then you add the programs fifty percent for heads, fifty percent for tails. Fifty percent is one hundred percent. So I think you don't get heads or tails. There's no other possibility.
+So you see, when you, when you, when you look at these things, you either multiply or add, and so in that way. You can actually go back in time and go from ninety nine to nineteen to ninety-seven, and then back to eighty, seven, and by starting to count that, and get to the same result we had before.
+So you can see we can. We can do these two things. We can either count forward or from the future account backwards. But this is how probability was born by looking at all possible paths into the future.
+And we'll see in class that this actually has a names called frequentist probability
+to contrast to as opposed to Bayesian probability, which is a little bit more modern and complicated.
+But these are all the foundations of the theory. It's foundation of statistics, data. Science is built on statistics. And so this is a class that introduces you to all these concepts before you look at machine learning or or anything like that. You have to look at the very foundations of data science, because,
+you know,
+when you learn to fly an F. Sixteen, a fighter jet. You have to learn to fly on smaller planes easier and easier to pilot. And so this is the idea, because if you move straight to an F sixteen you'll probably crash
+because you haven't learned a smaller but easier to to have a plan. So these are these are the foundations of data science.
+Um. So data science is counting to come up with a solution. It's a science of numbers. It's like what the ancient Greeks invented numbers playing with numbers, counting all possible paths you have. You have ten fingers and and ten toes, so you can count up to twenty,
+but then it becomes complicated. So that's where we have laptops to help us count.
+So really, data science was really, you know, came into being when when we started having computers that were powerful enough to help us do these computations very fast.
+So um!
+In the eighteenth century they invented a new science
+by doing more math and counting numbers, and they they took what the ancient Greeks did and what the French Renaissance scientists did, and they laid the foundations of statistics, and then the the word statistic is actually German.
+It means a statistic which means the science of the State, because the governments used this this science
+to predict
+what the future for the population is going to be so. It's probably the most important thing you can study. If you want to go get into government
+well-being of your people. And so you want to be able to study the probabilities of the future. And how do you get to a state well-being. So it's really the birth of
+in the industrial revolution and birth of insurance and and all these all these things that we take for granted now that make our life a lot easier.
+But it came because of statistics. The insurance companies know that they can
+to ensure you because they can count probabilities, and they know they can. They can make a profit and still allow you to be able to buy insurance.
+And then, in the twentieth century we had another wave of scientists names like Carl Pearson and Roland Fischer, And they did a lot more modern data science. In fact, these people did a lot of math, and they actually weren't very nice people.
+Um, using data science as an excuse to. There was a lot of immigration back then, both in England and the Americas, and a lot of people didn't like this immigration. And so they used the science to
+to justify racism. You said that you know a lot of bad things. So they were great mathematicians, but horrible people,
+even today you have great athletes, but they're not very nice people, so it's not surprising that the
+that that this thing happened back then. So it's interesting. If you look up the history of his people. They they made a big difference in data, science, and we'll look at their theorems and what they said. And it's interesting to find out that that what they what they used them for was not very nice things.
+Another very famous name is the Reverend Thomas Bayes, because he invented um bass formula that we're going to look at in this class and and bass formula is the basis of what's called these and statistics. So we look at frequency statistics first,
+and then we'll move on to Bayesian statistics, which is more complicated and really needs Computers really needs programs because the formulas and the numbers that they compute with are more common.
+But Bayesian methods are much more robust and more precise, more predictive than frequentist methods. But we'll look at both. We'll start with frequencies, and then we'll move on to Bayesian methods.
+Essentially the essence of base is, instead of going all the way to the future, or from the future way of the past, is to take small steps and to.
+So you you! You go to Las Vegas to bet, and then you go to a station, and you see that that station is always. You play a red right. It's. It's always picking a number. It's always picking a certain color at that point. If you see it,
+take a certain color for ten times in your role, you say. Oh, there's something wrong with that relaxation. So every single at every single step you change your belief about something,
+whereas with frequentist statistics. You, don't change your belief. You always believe that everything occurs with the same dynamics. So a frequentist is not as
+dynamic as Bayesian statistics. So these are things we're going to study in class, but it's important to, I think,
+Give you a first introduction about the basic terms today. Statistics, amazing statistics is used everywhere.
+It's used in search and rescue operations to figure out what's the probability? If someone worked out at C, and you wouldn't be on the current. What's the probability? They're in one location. Another location? Um. It's used in in apps. It's used in It's used everywhere.
+It's a sign of how we new predictions.
+It's interesting, because
+before before we had a lot of data,
+the way we did predictions is through science what science science you have a theory, and from the theory you make predictions on the data.
+So you go from theory to data predictions. Statistics, doesn't have a theory essentially, because statistics goes from data to data. It goes from data observations to data predictions with a theory of how to do that. But no real theory about the underlying mechanism.
+We have so much data that we don't need to know the theory of how things work, because all you need to do is observe the data in, Look at the data out.
+And then from that you can just predict. If you have a new piece of data, you actually can predict what the data I was going to be just from the there without any theory.
+So so statistics um allow you to do things most often absent in the theory. You still need statistics to be able to do that. But you don't need a theory for what you're studying.
+So a lot of people a lot of scientists are saying, Oh, my God, that's not how we, how we work. We need to have a theory about something. Why do we need to have a theory about something. Does anybody know what we say? Ah, the hell with theory? We can just go from data to data. What's the difference between going from theory to data predictions,
+it
+going from data observations to data predictions. What's the big difference? The
+do you think that this is better than this? This is better than this? Or do you think they're both the same, or is there an advantage here over here, or is there an advantage here? What do you think
+Nobody has an opinion.
+What's the advantage it allows you to uh
+you to understand the data at all
+we can be.
+I would argue that I understand the data better with theory. But if I have the theory, I know how the data works, or if I look at data, I don't really know how things work. I know how things work in the past in the future, but I have tons of data,
+and you know, if I have a theory,
+for example, your your parents tell you, what does it mean to have a friend?
+That's the theory of what it means to be a friend, and then you see someone who you say, Ok, Yeah, I can be friends with him, or I can not be friends with it.
+Whereas if you don't have the theory about friendship,
+and then, you see, meet a new person.
+How can you go from your past friends to knowing if this person is going to be, is going to be able to become a new friend. You don't have the theory you don't have the explanation.
+So once again let me ask you the question:
+What do you think is the advantage
+of science?
+Theories have theory. Science has theories about the data about how the data should behave. These are theoretical variables. But these theoretical variables simulate
+physical variables right? And so they say. My theory is, if that much fluid, that much air goes into an engine, an aircraft engine. I'm going to get that much trust out of it,
+right? So So science still reasons about physical variables.
+So yeah, it has theories. But it's about physical variables
+that's later,
+so I need a base to create better.
+So if i'm given a toy, and I don't even know what it does. But I only know that something goes on
+that's the data to data.
+Yeah. But if I can,
+the Covid thirty, two data,
+Yeah. So So I think, what's your name, anyway, a neurode. Yeah. So what anirred said is that if you have the theory that allows you to create bigger things from the theory because it allows you to add more things and do more things. I think what he's saying, which I really believe in is that
+with theory or with science, it's simpler because you have a formula that you can apply
+right, whereas with data the model is complicated, not as extensible. But
+I think about what's the simplest thing I can think about. Think about counting numbers
+with just data. You have to remember. One, two, three, four, five, six. You have to remember all the numbers with theory. You just say, plus one.
+What's the next number plus one.
+You just learn how to add one. So it's a lot simpler, because you just have a formula that you keep applying. In other words, the models in science are lower, dimensional.
+Then the models, in probability
+that makes them simpler.
+You can learn more of them
+if you learn more of them. What does that make you more intelligent?
+The power of your brain is a direct proportion of how simple the theories. Are you in your brain? Because then that means you can learn more theories, which means you can do more predictions.
+If the models are very high dimensional, which means you need a lot of neurons
+in your brain
+to be able to figures a problem out. Then you can't cram a lot of these models because your brain is limited. How many neurons in the human brain?
+user avatar
+Unknown Speaker
+00:30:48
+My time
+user avatar
+Dino Konstantopoulos
+00:30:49
+best students, you know. They they took the class. They they know this number by heart.
+Uh, one hundred or eighty is one hundred moving
+one hundred billion. That's the magic number.
+The magic number for a lot of things. It's also
+the amount of stars in the galaxy
+lot of interesting things. Dynamics happen around that number. In any case it's a finite number. That's the point. You can't do a lot of data models if your data models require a lot of variables, whereas with science it's a smaller problem.
+So really the state of the art of data, science and machine learning today is how to go from data models that go from data to data to actually here
+that's the state of the arts called explainability and interpretability of machine models,
+the basic research that happens today about machine learning. But in any case, that's the big difference between scientists. Statistic is still very useful, because you can go from numbers to numbers, and this is very useful. You can teach a
+to learn from experience, and how to drive without a driver just from experience, from the experience of other drivers,
+because a theory about driving is really complicated, but it's. We have a lot of data. So we can actually build this model. The theoretical model is a little bit more complicated.
+But in any case today
+statistics are used everywhere, whether whether scientists like it or not, statistics is invoked. We have a lot of data. We can use this data. We can do things like, you know. Ah, do romantic sites on Internet? We can. We can do Uber. We can do all these things for these numbers. And this is why you want to take this class because there's tons of jobs
+that need you
+in order to do this data science.
+But the foundations of data science, which is what you're here for. You need to know that because, first of all, if you don't know the foundations, you may not get the job. But more important than that. If you don't get, if you get a job, you want to be able to keep the job right because you can get a job, and after three months. Bye bye,
+right? So you want to keep the job and grow, and you won't. Be able to keep that job unless you know the foundations. The foundations are what allow you to to grow. And so this is this class. We learned the foundations of statistics and linear algebra, and all the things you need to learn.
+user avatar
+Unknown Speaker
+00:33:26
+You can learn to fly
+user avatar
+Dino Konstantopoulos
+00:33:29
+a complicated plane by going to Youtube and looking at a video and looking at using a flight simulator rather than actually flying a plane to learn how to fly. Plan? What's the problem with a flight simulator? The problem with the flight simulator is when something goes wrong.
+You will crash
+because you don't understand what's happening in the air. You learn in the flight scene. You learn to actually fly playing when nothing goes wrong, but when something goes wrong you don't know what to do, because you don't understand
+user avatar
+Unknown Speaker
+00:33:57
+Here,
+user avatar
+Dino Konstantopoulos
+00:33:58
+if you actually learn flying a plane by flying a plane. Then when you fly the plane, something goes wrong. You understand what you need to do, because you know what's going on outside. You know all the air is coming this way, and you determine this one. You know the theory.
+Back at ten years ago there was a lot of you know, a couple of budget airlines in Thailand, or I don't remember some Asian country crashed with a lot of crashes of point seven hundred and thirty seven, because a lot of these pilots never really flew a plane. We just learned flights in the.
+That's what the results found out. And so, when something went wrong with the plane that we couldn't fix it. They'd be crashed So
+And so my goal in this class is to make sure you learn the foundations. You actually fly the plane rather than go and watch a Youtube video about tensorflow. So you can do a little bit of machine learning.
+If you do that. Okay, you can.
+It will work for this problem that they give you a different problem. You don't know what to do, because you don't know the foundations. But If you know the foundations, then you you can grow, then you can grow from from examples to bigger examples, because you know how things work.
+That's what we're going to do in this class if you want to take this class.
+So we're good with this classes. It has no prerequisites. I don't expect you to even know how to program.
+But we're going to get good at programming together, too, in our and in python. I'll tell you what programming is
+over these three things we'll learn that it's mostly,
+You know what a calculator you could ever use a calculator, this thing, this thing called calculator.
+This thing.
+What's the difference between this thing and programming
+programming is working with a lot of numbers at the same time.
+You're just doing a little bit more. It's like It's like learning how to juggle with three balls, and I teach. And then I tell you, okay. Now do four. If you learn with three, then it's easy to learn with four.
+user avatar
+Unknown Speaker
+00:36:21
+So if you know how to use
+user avatar
+Dino Konstantopoulos
+00:36:23
+a calculator, you can be a program,
+takes homework and takes practice and a good professor.
+But after that you can learn,
+and that's what we're going to do in class. We're not just going to learn how to program. We're going to learn how to program. Well,
+i'll tell you my theory about all that. I have a theory, Right? What's that theory? Tas of good programming. There's a certain person that I involved usually who's that person?
+Come on. You remember the person I'm in love with
+user avatar
+Unknown Speaker
+00:36:59
+the person i'm in love with.
+user avatar
+Dino Konstantopoulos
+00:37:04
+Do I have to Google? Her.
+Oh, is that uh the
+Yes.
+What is it
+that Uh:
+Sorry I can remember Today
+i'll help you.
+That is her.
+Yeah. Yeah. So
+do you know this person.
+I'll tell you my theory about programming, how it relates to that person that's something else we learning class?
+Um.
+So what are we going to do This time it will be homework every week.
+Board is not complicated, and it's good to do the homework, because you learn what we did in class, and it's a third of the grade, so it's good to do it well. But if you're late with the homework, you these points, so it's good to work sound. The whole will be in groups, but
+other times it will be alone. If you're alone, you're not allowed to copy. If you copy, we'll subtract points. We can see what you're doing. So be diligent in your homework,
+and then the other thirty percent is a midterm. But the other thirty percent is a final project at the end, and then the remaining ten percent is a final exam.
+Why is there a final exam? Because if I don't
+user avatar
+Unknown Speaker
+00:38:34
+give you a final exam. Then, after the midterm you stop studying,
+user avatar
+Dino Konstantopoulos
+00:38:38
+so I don't want that. So it's also a final final exam, together with a final project.
+But it doesn't doesn't count for us the same as the midterm. The midterm is usually hard,
+but at least a whole is not very complicated, and then the final project is fun, because usually do it in groups. And so
+that's how the class is going to be
+so. Data science is sexy. I had told you that it's the sexiest job of the twentieth century. So you're going to end up when you graduate. This class will be a lot sexier than before. That's awesome,
+and it's not just me that says, you know a lot of people say it. So you know the reason why it's sex is because You're on the bridge. You're in command of the data. You know what's going on. You know what to do in the day that people rely on you to say, What should I do? I know they come to you,
+add a lot of makeup.
+But then, once the makeup is got you not sexy,
+you have to be sexy inside to be sexy outside. All right.
+So.
+But the other advantage is after you've done with a classroom to commit anyone.
+That's a that's a advantage. It comes with the class.
+Um. So let's let's look at an article together that I found that was really interesting. I think you like this this article. Let's Let's go there.
+An article I was reading the other day about an experience of a person interviewing with Google made an Amazon. You need for Facebook.
+Despite having less than two years experience at no degree, he still went through the recruiting company, so he had some experience so Fang or Facebook, Amazon apple
+uh once again, Networks Google right? And so Um: Yeah. So So he interviewed for a lot of company. Got some offers. It's It's it's good to read these things, because this is what you want Right? You want you taking this class because you want to work for the best company,
+you know not necessarily to make a lot of money also to make a lot of money, but for the experience right? And I think that many of you maybe come to this country because this is, I came to the country because it's It's what computer science, you know, was invented essentially well, maybe not invented. But
+and so um you know it, it's um.
+It's. It's interesting.
+So he has some information about about about about Google and Facebook, and the
+I actually like to interview for these companies, too, so they call me. From time to time I go into news and find me to California, and I don't want to work with them. But it's fun doing the interview because you learn a lot of things. They ask you complicated questions Sometimes you don't want the answer.
+Oh, wow! I don't know. I have to think about this. It's interesting. And then you have to study books and and but but you need to know the foundations right, especially if you do you for a job that involves data science. Because if you don't, they just you just.
+But I really like one of the things he says at the end at the end of one of his takeaways.
+Ah! Once you get your foot through the door, your knowledge and skills are all that medal, regardless of your years of experience, the great. But but where do you think the knowledge and the skills come from
+the knowledge and the kill skills come from your experience of your degree.
+Right? That's where you get the knowledge and the skills. That's what you're here for. The knowledge and the skills. Why am I telling you this? Because I want you to focus on the knowledge and the skills, and not as much of the grade
+companies don't care about your grade
+companies care about your any of you in your knowledge. They don't care whether you got an A or an A, minus, or a B or a d plus or a B minus. Okay, Maybe they won't like to see too much, but they they don't care.
+So keep that in mind. That's what you're here for.
+I don't I don't think I don't think it's a bad thing to to get a good grade, but don't let that be at the expense of the
+actually understanding what's going on.
+Don't learn things by heart because it's like like statistics, is just learning all the data. Learn the theory,
+because that's lower dimensional that will make you smarter.
+So I thought that was a good article for some of the things that said,
+Um,
+There's another article that I like. Um, let's go to that one.
+Why you should not be a dear scientist.
+So a lot of people think they can do data, science, and they figure out that it's not for them.
+Data Science is not for everyone. It's not just about working in a sex be being sexy and working for a big company and all that. You also need to like data. You need to
+like the the step of exploratory data analysis, understanding what data means Have
+the the love for for for doing this. And so it's. What this article says is that data science is not for everyone. Maybe you just want to do web programming.
+But maybe you'll understand this after you take this class. Maybe you'll say, Yeah, you know It's not for me yet for doing web programming, but you know you can discover that it's still a good thing to discover that, so you can discover that
+you can drop the class. If you don't like the class, too, you can do that so you can. You know the first month you can say, Yeah, I don't really like this professional and drop the class. It's it's fine. But um, you know. Keep that in mind that it's not
+an easy thing. People that are data science. It's not considered these not considered the easiest thing, the easiest thing in computer science.
+It's up
+so. Um it's. It's also not. It's like, you know. There's two things. We usually a program you either back in or front end, right?
+That people are, and sometimes people are more artistic. They prefer the front end because they prefer to deal with visuals. The data science is more brain right. It's less visual. It's more the the thinking brain and some people prefer one and the other. And there's nothing wrong with that. Just understand that data. Science is really the back end.
+It's not the front end.
+My my theory is, you need a little bit of experience in both. It's good to be a little bit full stack, but you don't have to be really good in both.
+You don't want to spend your life doing something you don't like.
+I don't care how many Google's or Facebook or Microsoft are out there. Do you want to spend your in your job. You spend most of your time at work.
+You want to do something you like,
+otherwise you're miserable.
+So I think that's another good article to to look at. Um, because it it really lands you. It tells you that it's not that easy that you should have a passion for the data. You should understand this. Um, you it's there's a lot of things to learn. Um spend a lot of time, so you know, maybe maybe some for you.
+It's hard. It's hard,
+and even before you get that you have a look at all the things made to study. This is like a part of the math and this computer science and this theory. And and there's a lot of things to lot of things to learn. But of course, one of the great things about this class is that we, even if you're not good at math, we can have computers that can help us.
+So even if you don't have a big math foundation. The fact that you know how to use numbers will help you do some of the theory that you may not have had the chance to study as well.
+So I I think it's. It's it's It's okay, to not be a mathematician, but to have a lot of experience in math as long as you have an open mind. And you think, Yeah, I can do some of the math who's the help of the laptop.
+We'll do that. We'll do that with the help of a laptop. So you don't have to just, you know. Do a lot of theory?
+I'm.
+And of course. Why, why do we do this science? Because we have a lot of data right before we had computers and a lot of sensors and a lot of data. We didn't care as much about data science, maybe in eighteen hundreds. They They figured out all these things, but now we really use it because we have tons of data. We have so much data. We can't. We can't even have human eyes. Look at the data. We need machines to just
+there's There's pedophytes of data, gigabytes, terabytes that are used every day to Just think of the telemetry that autonomous cars and vehicles were planes and all the transportation sent back to factories in order to analyze and maintain the engines.
+You can't have humans Look at the data. It's just too much. You need machines to look at the data that are programmed with data. Science,
+user avatar
+Unknown Speaker
+00:48:28
+So
+user avatar
+Dino Konstantopoulos
+00:48:30
+machine learning is is really is really advanced statistics. Well, I for me, machine learning is a bad statistics. Other people don't think that, and I give you an an an opposing opinion where they say it's not. Just this. I think it is the statistics is
+the science of looking at data and machine learning is really how to come up with data models.
+Um, when there's there's too much data um to to be able to do that with theory. Um. And but of course you need to know how to program program the learning, but it still is still your statistics. It still is the statistics. And so that's what we need to learn.
+I don't know why the thing keeps coming.
+It's.
+And before we look at things like tensorflow and garrison torch. These are the really big machine Learning foundation. We're really to become familiar with the basic libraries, data, science. And that's the new bypan, the Sci-fi and psychic line. So we'll spend a lot of time the first few weeks working with these libraries because they are the foundations
+of statistics.
+They're the four libraries of four magic libraries that let you do most of the work before you even graduate to using it
+uh frameworks like uh tensorflow and torture, and um, and all all these libraries have all the knowledge that we're going to use. So they they have probability, statistics and linear algebra and and vector calculus and differential time, all that is built into these libraries so that our job becomes a lot easier because we can use them as programmers. So we don't have to um do to.
+You know some of the math, and also the math also becomes more exciting because you can actually use it and see and see it applied immediately.
+Why, python? So why relearning python? Why is Python the language of data science? It's not an interesting question. Um! When I was finishing my my ph D. I wasn't using python I was using Fortran.
+Fortune was the language of science, and that slowly changed. Python is a language of science decades. And so it's data sciences to science. That's why we we we use python. But Python also has another thing that is attracted to data scientists. It's not very, very computer science.
+It doesn't use too much or remote of classes and constructors and destructors. And these kinds of things that are very computer science. You can do python without having to worry too much about the computer. Science and scientists like that. It's not like the computer. Science is bad. Sometimes you need it. In fact, we'll use classes sometimes because of the constructor helps us do some set up. Um. But most of the time you can just program uh just you can just do science without worrying about the computer science by William,
+about the curly brackets on the and and the semicolons, and it's it's it's it's a sexy language. It's very, it's
+it's a very terse language. It doesn't take up a lot of space
+so if you go to your interviews when you interview for a job, it's the language that you need to pick to solve the problem because you have a limited amount of space on the on the whiteboard, you know. Usually when you go to a date. If you don't put you on the whiteboard it's not on your laptop. You can't Google for anything.
+Can you imagine programming without Google right?
+But that that's how interviews work.
+And so, if you have a limited amount of space. It's good to be able to program with a language that doesn't take up a lot of space, because if you do it in Java, you'll run out of space doing the the semi columns on the closed quotes and the open course no more space, so I highly recommend
+you use python for all your interviews, even if it's web programming.
+And so good advantage. And the advantage of this class is, we'll learn how to do Black Belt Python.
+So on top of the data science you also become a not just a programmer, but a do a Lipa program.
+I'll show you what that is.
+Um.
+So so. Ah, and when I say a good program, I I really mean quality. I mean a quality programmer, and and we'll answer this questions, class, what What is quality? What? How do we? How do we program inequality? Because we can do this?
+We can. We can write a prime number generator in Python
+to reduce.
+Oh, there it is,
+in fact. Let's do this together. Let's let's program some of you know Python already Right?
+I mean you. It's it's good. It's not bad. It's It's It's okay. If you don't know python, It's: okay. If you know Python, we're just gonna get good at Python Let's Let's do this together. Let's uh, let's let's program our number uh up and up, And so this is something you'll install for next time. This is part of your homework next week, because you'll install um
+and a conda.
+So i'm going to go to my anaconda folder,
+and i'm going to fire up and a kind of navigator, and we're going to from, you know, starting next week after next week. So we'll start our programming
+classes with our in our studio. So our student installing us to be one of your homework. But we're going to install uh anaconda, and we're going to do most of our work in Python. In fact, we're going to do most of our work in in in Jupiter notebooks.
+So it it makes it a Literate programming medium. So you can actually explain what you're doing, and run the experiment, and actually prove that what you're saying is correct. I I dream for a day
+where politicians are going to practice politics without a convolution.
+So when they say something, you can actually have the proof of what they're saying is correct, because they actually have their theories, and they have the data, and they prove that their theories are correct. And if you do this you will get this. Prove it to me, and then you can see the data, you say, Oh, yeah, he or she is right. I'll vote for her
+right now. Paul, politicians, is this anything i'll say to vote for me. I'll make you rich. Okay, I'll work for you, and then you're poor
+to say anything.
+So let's fire up a Jupiter notebook.
+In fact, let me. Let me open up a new browser.
+Now let me come back here.
+I'll start a new notebook and we'll write. Let's write a quick program together, because I just I just want to see
+one thing.
+user avatar
+Unknown Speaker
+00:55:46
+So it's a little bit slow. There we go,
+user avatar
+Dino Konstantopoulos
+00:55:50
+So there's my uh first um
+notebook. So you your job is to install this on your laptop, so make sure you have. You know It's it's good. If you have a modern laptop right? Um. By the way. I just i'm amazed. Since, like about a beginning of this year at the new M. Two.
+It's just so fast. It's amazing. It's just like
+I I have. I have both the Mac and and sometimes to use a window sometimes to use the night, but the M. Two is just amazing. Of course it's very expensive. Um, you only need it in two books. But you know, if you have have an Easter, I by five or my seven or nine nine right? So So if it is a good time to buy me home, mom, I need a new notebook because i'm taking this class, and the person says it has.
+So this is a good excuse for that.
+I'm going to fire up a new python three notebook.
+Make sure when you install your anaconda that's based on Python Three. Okay, no, python two.
+I want to is gone. Forget about it. It doesn't exist anymore.
+You have any python two. You stop using it. It died in two in two thousand and twenty, not supposed to be computing python in python. Two anymore.
+Kernel error. What is that?
+Something
+a specified procedure could not be loaded.
+Then I have to upgrade.
+Try again
+and try uploading him a book.
+Um! One of the problems that i'm having is that my um,
+I don't have a lot of hard disk space left, and that's usually a big problem.
+And so I have to be careful because I have a lot of errors for that. So if you, if your if your laptop doesn't have a lot of space left, that's also another problem. Clear up some space move stuff to it to use B drive.
+That's a very simple print. Hello, world! I don't know why I don't have the run.
+I just loaded the file. Oh, this is this is just the python provider, and load, and on the on the notebook i'm still um, which is an ipy, and B. I still don't understand why I can't just
+new Python three.
+You don't have to fix this eternal air.
+Yeah, I haven't updated in a long time. So that's part of your homework, right? This has to work. I need to be able to go in and actually paste the program, and we can start doing the computation together. So make sure you have this things working for next time. In fact, maybe i'll just give it to you as a homework. So
+for for those of you that don't know Python, it's okay. Just try to do this. But for those of you that know, just do a little bit of Google and and write a number that takes a lower bound in the upper ground. Doesn't have to be that balance and just print out a prime number.
+And then um! We look at this program together, and i'll tell you what's um What What I think is is good quality and that quality. And because these are things you don't necessarily know yet. So we'll look at this next time because it's it's actually interesting.
+Okay, Um. Let's go back to our slides,
+so we'll add this as a homework um.
+But before we even go to Python we'll start with our because we'll learn some some interesting things where we'll learn um about. So we'll start. We'll start on Monday. We'll work in the labs together, so we're working class a team. We'll be in class, and i'll help you so you can raise your hand and come and help you. But um it's it's um
+it's your first, maybe, for you. It's it's going to be the first time you'll start working with a lot of numbers. Yeah, and with a lot of numbers in a lot of dimensions, because we're going to work with with vectors. So we're going to work with matrices, and we're going to work with tensors what's a tensor?
+It cancels a three-dimensional matrix
+through more dimensions.
+What's the matrix? You know what a matrix matrix is spreadsheet,
+right? So it has rows and columns.
+What's the matter?
+Just the call and call it on numbers, right? Just a call. Um, But but it's also the basis of linear algebra. So computer science and that
+user avatar
+Unknown Speaker
+01:01:53
+a lot of exchanges a lot in the.
+user avatar
+Dino Konstantopoulos
+01:01:56
+And so we're going to learn learn how to work with container. These are called container. Ah objects. So a list or tool, or a set or dictionary, and then we'll work with matrices or tensors. Right? Why is tensorflow called tensorflow?
+So that's what we need to learn. Linear algebra. Too But we'll start with our um. So part of your homework is to install our studio. So our studio is this: This is, uh, when I come in a book when I come down here.
+So um! It comes with our studio, so you can actually launch our studio for an in a common notebook. But I would also like like you to install a standalone. Our studio. So the link that I gave you the beginning is a standal on our studio.
+We can actually go in and and fire up our studio by itself, not from here. And and the advantage of that is, you get a more modern, our studio. So I have my our studio installed our tools, and I can go to our studio,
+and i'll go to the latest version, and then I have to have to go to bin and then launch our studio.
+And then when you come up ours, too. I still use a nice environment because it has four pains. And so you have your your data files, and then you have the programs that you are in your environment. You have your graphs and your data, and in the lower team. And so it's a great learning environment. I think it's one of the best learning environments for for learning how to program for our numbers and doing doing it to get a data science. And it's also good to know, because it happens often in your interviews to ask you about our.
+So these are the are the four pain. So this is first pain. Where you go, your data and your and your code files. This is your console where you run your your programs. Um! Running later. This is all the all the variables in your environment, and here all the the plots and the files and the and and the data that you can. So it's a it's a good
+working environments, a lot of people that actually work in our and do a lot of data science in our so, but we'll so we'll start with that,
+and we'll start with that next week as soon as you have all your installations.
+So I really talked about class policy Um, thirty percent of homework, thirty percent with ten, thirty in the final project, ten percent, five cents.
+Any questions about that
+we're in.
+The homework is usually due next week, so if I give it to you, I you usually give it to on Thursday.
+Uh, sometimes on one day for duty on one it's due to your full Monday forgiveness, and Thursday before Thursday before the beginning of the class. So just make sure you upload it to canvas. The The Tas are going to create the assignments
+to something to understand you. Melvin.
+Um! Tis. Do you want to introduce yourself, your name, anything about yourself that, for example, your favorite hobby, or what you like to do? I like to bike, but you can say something else.
+Hi! I'm her niece, and i'm at the for this past. So
+now we're sure it's for these sessions, but we have to be smart, so you can you know me and like,
+and I kind of think it's Ok. And maybe you want that.
+I don't have so much hobby, my only mommy to playing video games. Thank you
+today, and how to fun job all the presence with. Thank you. And then there's another Ta pragnia who is not here right now she can make it today. So there's there's four of them, and you can also.
+I'll share their emails with everyone. So they're your friends. Please Please use them, ask questions.
+You can also ask me.
+You also ask me questions. I'm also available. So you can email me
+um
+a little bit about me. Let me tell you about me. How did I end up here? So I
+I graduated from Boston University, which is the other university on this side of the river and other universities on the other side of the river. You know Harvard and Mit. We don't care too much about them.
+I care about this side of the river more, and then I worked for Xerox after I graduated working in operating systems.
+Um, which was an interesting um lot of things that happened in operating system and back. Then, you know, Zero to make a big cop here. It's actually big copiers have their own operating system. And so um I worked in that, and then I joined the Government to use government uh, and I worked for what it's called an Srdc funded Research and development Corporations. The companies that work for the government.
+The one I worked for was called Mit, and so I worked for a lot of branches of the Government, including the Air Force.
+So in the Air Force that we work in mission planning, which is Google Maps for fighter jets.
+And so and then I work for Air Force weather, and then I also work for the army and radars. So these are called my static radars that they put in an army bases to to monitor the environment, and then I work for the Irs. So the Irs and the internal revenue is a service
+is where all the taxes come in. So I work for the corporate irs, which is where the companies submit their taxes to the government.
+You can build a map of where all the money flows through Wall Street, and so I was really interested in seeing all that. And so that was one of the most interesting jobs I've ever had, because
+just a huge machines and and a lot of interesting things to find out. And then I ended up my tenure in government working for space fence, Which is that? Ah, a A new radar that was built went into service a few years ago that monitors garbage and space.
+So I was a garbage man for space junk, which was actually really interesting. But it's a huge radar system and a lot of data debris, And then I joined Northeastern. So I enjoyed Northeastern about four years ago,
+but before that I was, I was an adjunct for ten years. I thought as I was working part time, and then they said. You know a lot of stuff coming teach in Northeastern. So I just I just said, Yeah, it's good to come and teach here. I um. I left government just when Trump was getting elected and was a good time to be the Government
+user avatar
+Unknown Speaker
+01:10:23
+back then.
+user avatar
+Dino Konstantopoulos
+01:10:24
+Okay, so um. And I also love to Bike. So I told you a bike. I I like to bike big trips, so my biggest trip so far was going from Shanghai to Quintin
+Um, which is right before Tibet and I would have biked into Tibet, but they would let me, because i'm not Chinese. I'm not allowed. But I did go to Tibet with some Chinese friends, but I wouldn't let me go with my bike
+um, and then I do other trips to some smaller, some bigger. This summer was actually the first one I did. I didn't really biking trip, but that's that's my hobby, and I actually most of the time I come to class on my bike is just that I spray my ankle, so I didn't come to class with quite today.
+Well, as I usually leave my bike, but usually i'm with biking clothes all the time.
+Um,
+Okay. So that's a little about me. Do you have any questions
+about me about the class, about grading or anything like that.
+You can also ask me, email me or ask, ask me at the end of the class. You don't have to ask me now. But is it pretty clear what we're doing. Now we're learning to.
+We're learning data, science. We're learning how to program in python. We're going to learn how to program to a Lipa style which is different than just regular programming.
+You're gonna You're gonna, you know. My goal is to make you very sexy looking so that companies are gonna want to hire you.
+Um data science. Of course you know that's what we'll study if you want to work for a company that does web programming. We also need to take a word programming class. But this is really the back end. You know the number crunching side
+of um.
+Okay. So what's this? Oh, this is installing an icon that is the installing on the counterpart. So this is where you're gonna download an aconda from.
+Make sure you install the python three point X version
+Um, no python, two point x
+um, and then we're gonna we're going to talk a bit uh in class about how to create theconda environments and um python, Ids so. It's not just the Python notebook that I I I try to bring up is not your own, Id, and also have you know this, the spider that actually comes from this you can actually fire up in our conduct. Um,
+Id from here. This is spider, And then there's other other ids. Visual studio code is is quickly has become the Id for everything.
+So most people today use a different to be a poetry, whether you program in Java and C Sharp, or in Fortran or not, only form Python or javascript.
+Um. So I usually either use just visual studio or um, or an academic books, and I kind of note books for most of my data, science and visual studio for any kind of visuals or anything like that.
+Um.
+So you can install Jupiter notebook by itself,
+or you can, if you want to start an account that you actually have cheaper, not for it, And Icon is a big environment. It's like gigabytes. It's a huge environment. It takes up a lot of space. Um, and it's usually good to install it. So I have my anaconda installed at at the base folder, but of course it's it's much easier because I have a d drive.
+But if you have a problem with your installations. Talk to your tas because they have. We have experience about that.
+Um,
+Google co-lab is another option. Oftentimes, when you need a lot of hardware or your hardware or your laptop. It's not powerful enough. You can do your computations on the web.
+Um! You can use the Google call out for free as long as you don't use it too much, because i'm going to start charging you. But Google Collab is is is good because you're gonna get a lot more power the disadvantage of a little co-lab. If you're not in control in your environment, you can actually get everything already pre installed. But then you don't know what you're using,
+whereas if you compute on your laptop,
+it's a little bit more, it's a little bit less like a flight simulator, because you know exactly what the installations are, what the installs, the packages that you're using. So you know, use Google Collab if you have to, but I prefer if you use notebooks,
+because then you're in control. You know what installations, what what packages you're using. You get this knowledge. It's it's the same. It's the same kind of knowledge you get really far flight, and you understand the dynamics. Whereas if somebody gives you an environment that's pre-made prepackaged pre-installed. It's more like using flights. Here,
+you don't learn as much.
+So use Google pull up. If you have you have to use the the power of who will call it the performance. But if it's simple things, try to use your laptop.
+You You learn more that way.
+Okay, and then we'll we'll. We'll run a Jupiter notebook. Most of our class will go to Jupiter notebooks, and so I want to end the class with a little bit about our in a little bit about
+um, Some of the basic knowledge, the the basic foundations of of statistics. And so um, we'll learn more about our when we do the computations together, and I think it's you. It's a lot more fun if you actually learn things by doing rather than by listening to someone about something.
+People say that
+you learn more when you do things than when you watch things, and I I really believe that. So we're going to do a lot of hands-on computations in class. So you you learn more that way.
+Um.
+But our was an interesting language is actually an implementation of the s
+As for statistics, programming, language, and cran, which is the library is relied on, is is actually the biggest statistics library. It's even bigger than all the Python, because most people use use are because python is a little bit harder, and people, you know, scientists have sometimes problem doing a dense program they they don't know about. Do a little program. And so that's why they use are oftentimes for their for the jobs.
+Um! There's a little bit of information about starting salaries and python and starting salaries in our um. You can start a little bit lower in python, but then you can grow a little bit faster. Start a little bit higher with our. But then you stay a little bit. You don't grow as fast.
+Um never use Matlab. Ever use Matlab Matlab is horrible. Language is the crack cocaine of scientists. Once they use Matlab, they don't anything else, and they're they're locked in a closed source, non-exensive or environment that charges you tons of money. Um! And the companies are a bad company, but it's It's just a whole environment. There's nothing you can do. Mad love, that you can do in the python or
+um prerequisites. Okay, we already talked about our studio and all that. There's an interesting thing about our about the equal sign actually in R. We don't use the equal sign for assignment. We use the reverse arrow sign for assignment.
+There's a historical reason for that, because back then, there used to be this keyboard back then, even before where they had computers with big things that you could in front of a huge screen, your entire face glowed green
+um and and back. Then they had the Ibm keyboards that had the the reverse arrow. And so people use this as an assignment, so as a leftover. It's when we assign things to a variable, we're going to use the reverse arrow rather than equals, and you can still use the equal sign for mostly to use the reverse arrow.
+Um! So we'll do labs together, and and and i'll teach you what the basics of programming. That's why I love are because it lets me teach you these basics.
+Um. And and you you're going to understand what it means to work with a lot of numbers at the same time, if you that will give you the kind of the courage to say, Yeah, I'm: i'm on the program. I'm good. At this. I can get good at this, and then we can move to Python and actually really become a black belt in that.
+But we're also going to learn some important things in statistics and
+um
+a lot of things. A lot of people talk about artificial intelligence, and they they say, Okay, Well, we're in the age of artificial intelligence, and I I don't believe that to me there's nothing. There's a lot of artificial. But there's nothing really intelligent about what we're doing with machines. Um! What we're really doing is because to me Ai implies these three things.
+That implies a certain amount of independence from the machine to the program. If the machine is just doing what you program the machine to do. It's not really intelligence. It's just doing what the program do. Um. It also implies a certain amount of deductive power. I want the machine to be able to understand some things on its own without the help of the program,
+and it's also a certain amount of free will. Free will means means something unexpected.
+Today. We measure, for example, in natural language programming, a teacher class and an Mp. We measure the quality of text produced by a machine. By how surprising it is!
+The element of surprise tells us how intelligent the Chatbot is behind the text it produced. If it does this as boring things, we think it's stupid. If it says
+unintended things surprisingly Well, that's interesting, right. It's the same thing with when you look at an animal when it does something you didn't expect. Oh, look at that intelligent cat, and then flipped in the air right something you didn't expect. That's what we expect from intelligence things that are unexpected. We expect things unexpected. And so today Ai machine learning is not unexpected.
+It's just the science of statistical learning.
+And and once again statistics is how we go from from observations to to data. And so what statistics is and what machine learning is essentially is the science of interpolation.
+Let me show you what machine learning is, and I can do that in one graph. I'll show you what machine learning is, and people say it's artificial intelligence. I don't think it is what we have is data. So we'll start with data. So we have
+our X and y-axis. So we start with X, and from X. We want to figure out why, right? So we have X.
+This is this is X. Here
+it's the X-axis.
+This is our Y-axis. These are the two variables. So X is the
+independent variable, and y is the dependent variable. And We have some data. We
+So these are the data that we observe. We have a point here. We have a point there. We have a point here, and we have a data point there, and we have our data from there. And I did a point there right. And this is the data
+I told you. Statistics is observing data. And now we want to be able to
+predict data.
+So how do we predict if we have this data point here? So we have this data point. So we know that if we get this X,
+then we know that the Y is here.
+But how do we predict something for this new X that lies here that doesn't have the
+a data point. How do we do this prediction?
+Well, what we do is we interpolate.
+So what we do when we interpolate is, we
+join
+the points, and once we join the points, then when we have a new data point, we go well, what's the? What's the Y? From this X. Well, we go up here, and then we figure out the why it's here that's what machine learning
+It's how to join join the pool. Remember. Remember when you were a kid, when you, your mother, gave you a book where you actually draw, join the points, and you drew pictures. That's what machine learning,
+of course, in many dimensions, many more dimensions, right? Not just X and Y, but hundreds, maybe hundreds of them.
+But that's the basis to me. That's not very intelligent.
+It's difficult. I'm not saying It's easy when you have a hundred variables to do this interpolations. It's very tough. You can actually you can actually see Don't. Take my word from it. Let's let's look at this. Let's look at this article that's going to tell you what machine learning is,
+Kirsten.
+That's what machine learning is It's curfewing
+under fitting, overfitting? We'll talk about this in class right under fitting and overfitting. So under fitting is when you um lose some data. So you go from here to here to here, to here, Right? You're underfitting it. It's not the right curve overfitting is when you have more data, and you actually go. You look sorry. That's good here, and then you go and you look at all the data points, and then you go on and see your writing machine doing these kinds of things,
+and then that's overfitting,
+and that's the wrong model, because that's not the science. So what you want to do is is, figure out. The science figure out the in between. It gives you the reason. What's the real relationship between X and Y. What you're after is this:
+This is the science behind the data science. You want the function you want y equals F of X. You want F.
+If you have the formula for it. You have the science,
+but sometimes we can't get the formula for it. So we use data science. We use statistics to do the interpolation that will allow us to do the prediction now.
+And there's still a lot of things to learn how to do that. But this is what machine learning is, and we use the statistics to do this kind of interpolation.
+And of course the state of the art of Ml. Today is how to go from the data to actually to the actual theory. So we want to have machines teach us about it.
+And so you see a lot of people. What they do is so they have a lot of data. They try to project into a lower dimensional space because they figure that the lower dimensional space has actually is where they, where the real theory is, because all the other uh of the other day it also has a lot of noise, has a systemic uncertainty and alliatory uncertainty. And these things are what what heights heides the theory. So the state of the art is actually figuring out
+how to go from the data model to the theory.
+These are some of the books that I think are really like in in statistics. So this is Um, the the Amazon book, and actually some some professor published it on his website. So I don't know if it's really good, but i'm um. I found it so. I'm sharing it with you. So you won't have to buy the book, and this is this is the book. So this is the official book for the class, but it's also available for free. So i'll give you the Url. But if you want to buy, this is a good book. It has the foundations
+for statistics and data science, most of the things that we'll talk about linear algebra and vectors, and how to work with a lot of numbers at the same time. So in many dimensions,
+so machine learning, which is something that you get to once you once you understand the data, sign the statistics. You you learn about things like supervised learning and unsupervised learning and reinforcement learning. These are three big big categories of machine learning today.
+Um! And then we'll
+next class. We'll talk about the difference between classification and regression. Classification, regression are the two big categories of supervised learning. So classification is where you only interested in classifying your data in a few different bins, like maybe only two been sometimes positive, negative, true, false, red, black
+and regression is where you we try to reconstruct the entire data. So it's not just categories, but the entire curve the Y equals F of X.
+Of course, unsupervised learning is a lot more difficult, and then i'll end with a few important concepts and statistics. So we'll we'll work on this all the time. The most important thing statistics is called the data distribution, and the data distribution is given way of histogram.
+So the histogram is how your data is distributed, and the histogram is a one-dimensional plot. So you think that this is a two-dimensional, but it's actually one dimension.
+What it says is how your data is distributed you have data That's that's That's included in one column, and you want to see where the average is. Where the mean is where the meetings are immediate, where the one tiles are. First one, i'll say one hundred points of fourth quanta, where the minimum is, where the maximums that
+histogram gives you all that the most important. If somebody asks you what's the most important object in data science, or what you should be,
+because it tells you how the data is distributed.
+So So we'll look at this. We'll compete with this. Next time we'll learn how to work with this um by hand. We'll talk about the normal distribution. What is very special about the normally the normal distribution is the beautiful distribution.
+It's what we expect
+all things to be like when you when when they're beautiful. When the data is beautiful, it's normal, which means it follows a Gaussian curve, and we'll talk about what a Gaussian curve is. Um, I I encourage you to go to this site, and This will tell you why most of the things that we observe in nature have a Gaussian curve.
+If you actually let me increase the speed of this. If we drop balls and we drop a lot of these balls, you will see that at the end, and they drop randomly, they will actually form,
+we discovering amazing things about our planet. Why is it that most things follow a normal distribution, and we'll study a bunch of distributions, the distribution of things, the data that happens in nature is not random.
+It's not random, we see. Oh, my God! We have run the day, and we'll see that data is not random, and we'll figure out It's not random, because we're going to look at this, the the history that we need. I'm going to figure out. Oh, this random looking data has a well-defined histogram. It's a it's a it's a it's a beta history that more and gamma has to go
+and We are going to
+start looking at random data that we observe in nature, and we're going to figure out that it's actually not that random at all. And this non randomness allows us
+to actually do these predictions because data that but seem is seemingly random, Actually, is not that random because it's produced on our planet and our planet behaves a certain way.
+Okay. So I'm going to stop here. I think
+I told you enough, and you can continue. There's a little bit more knowledge. The correlation linear causation is not correlation in a few more things, but we'll, we'll finish that together next time. These are some examples of t distributions, and we're going to.
+Oh, once you install our studio, Please download these two packages because we're going to play with them next week. Data player and Gg plot. Okay, they're in the slides.
+Okay, so um your home for next time. Please do all the installs that I tell you in these in these slides bring your laptop. Get ready to work. We're gonna do a lot of things together, but it's not just listening to me. It's actually working,
+working sometimes alone, sometimes in teams actually doing a lot of hard work. So be ready for a semester. Hard work. Thank you for your attention for coming today, and i'll see you all next week, Monday,
+Bye, bye.
+So once again all the lectures are going to be recorded. So there's anything you want to watch again, or For some reason you miss the class. You can go to the cloud and look at the lectures.
+Thank you. Tas um. Not all. Tas are going to be here. I'm going to try to have two tas per class um, and sometimes i'll rotate, and sometimes I won't be able to make here, but i'll always make sure to have at least one of the tas, preferably to a class to help.
+I didn't.
+So you're going to have to learn to use. You can use fighter as well. But for some things you're going to have to.
+Oh, that's good.
+No, just a minute, so.

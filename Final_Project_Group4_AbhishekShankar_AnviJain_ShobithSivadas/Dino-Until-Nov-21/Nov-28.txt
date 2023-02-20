@@ -1,0 +1,627 @@
+Let's start
+Um!
+Somebody asks you an interview. What's the most important thing in data science. What's the most important operation? If you have a data set, and you're like a data scientist. What's the most important thing you can do?
+You have to build a skyscraper. The most important thing is to build the foundation. So you start digging right. Now, if you want to do data science on a data set, What's the first thing you want to do to the data set
+Histogram right? Exactly. Compute the histogram. So why do you compute the Instagram? What's the What's your purpose of computing the histogram?
+You you what?
+Yeah. So did this. So you mean data exploration. Okay. So so yes, that's That's a a a very good purpose, because the histogram is to look at the data, See how how the data shape. What's the mean of all all that stuff absolutely compute the main statistics. But even more than that, What is the histogram shape? Tell you
+user avatar
+Unknown Speaker
+00:15:03
+your man.
+user avatar
+Dino Konstantopoulos
+00:15:04
+Yeah. So these are the moments right? This is what your your friend told you. You want to look at the shape of your data. You want to look at the mean, the standard deviation, this queue, the cortis. How's it shape? But after you have these moments. Then then, what's the main operation? What? What? What do we do in data science? What's What's the thing that we do?
+We build?
+Yes, we build a data model, right? That's what data science is. So we build the data model. So how do we build a data model? What's the most important operation in building a data model. We're almost there.
+Huh?
+Yeah, right? So that's the histogram. The histogram is the distribution of the data. So it's the empirical distribution of the data. So when we want to build a data model,
+how do we do that? What's What's the first thing that we do
+user avatar
+Unknown Speaker
+00:15:52
+on them
+user avatar
+Dino Konstantopoulos
+00:15:53
+before the model parameters even before that.
+Huh?
+Yeah. So that's part of the data exploration. So your friend already told you, explore the data clean the data set. Make sure I can analyze it. Yeah,
+what comes after that?
+So we we got the the the the histogram of the day, and then what?
+Yes,
+What's the most important thing. You feature selection.
+Yes. So get rid of outliers. Yeah, okay, all all that makes sense. Um. But I think I I think of that as part of data exploration and explore the data set.
+Um, and and your data set may be multivariate right. Now, i'm just thinking of. Just think of two columns to make it simpler, just one independent, variable, and one dependent variable to make things very simple, right?
+But you could have many columns. The columns could be correlated. There's lots of that. They exploration they are cleaning to do. But let's. Let's assume we've already done that, and now we only have two columns, the Y and the X.
+We've computed the histogram. We know how the Y's are distributed. We
+what's the next step? Now the next step is to build a data model. Right?
+How do we do that?
+The most important step in building a data model?
+Yeah, online online people? You can participate, too.
+I'm not muted that way.
+user avatar
+Unknown Speaker
+00:17:36
+No, okay, good.
+user avatar
+Dino Konstantopoulos
+00:17:39
+We're almost there. We computed the histogram. Now we we use the histogram to to get a feel of the data. We know what the mean is the standard, deviation and all that. But these are point moments right? These are these are points.
+What do we do with the shape of the histogram.
+What's what's the first step when you want to build a Bayesian model? Right? A computational model? Um! The most important step before we even figure out the parameters. What's what's the first thing we need to do?
+The most important step in all of the steps that we take when we set up a Bayesian simulation.
+I can't. I can't think of a more important interview question on this.
+If I if I work with, I work of trying to hire you for position, data, science, you
+That's the first thing I would ask. That's the first thing that would you don't make me feel that you, your data scientist,
+what is
+once you've done your data cleaning You've computed your histogram. You figured out some of the point moments. You have a feel for the data. You look at a few rows. Um! You've cleaned up the data. You have your histogram. Now, what
+whether you want to do classical, mathematical statistics, or Bayesian statistics or computational statistics, is still the same. What is the next step?
+You have your histogram.
+What's the first step in building a model.
+Yes, the parameters. But but before you know what parameters you're going to take, or how many there are what you need to determine.
+user avatar
+Unknown Speaker
+00:19:49
+Okay,
+user avatar
+Dino Konstantopoulos
+00:19:51
+yes, exactly What you want to do is, what does the histogram look like? That's the question you want to ask yourselves,
+What does the histogram look like? Because that is what's what's going to tell you what the data likelihood is. Remember the data likelihood that's the most important thing in base formula. The data likelihood is what you're saying. Okay. My data likely looks like
+a Gaussian,
+a uniform, a person,
+a binomial,
+a beta, a gamma, a student T.
+There's more the kushi. There's a dairy clay we haven't studied,
+but that's what That's the first step you say. Okay, my data looks like this.
+And in this function the data likelihood function has parameters.
+And now i'm going to model these parameters with all the Pdfs. That's the that's the the parametric Find the parameters part that you mentioned right.
+But before you find the parameters, you need to see to say, Okay, what does this function look like? Yeah. So so what you do is you. The first thing you do is you compute the histogram? So let's let's get a histogram going here,
+and suppose your histogram looks like this
+right? And I tell you, you know it's integer data.
+You're gonna say what the data likelihood is
+a poisson.
+Or
+now we we know that if the data has very has high dispersion, so that the variance and the mean are very different
+negative binomial, which is a little bit more involved because this is two parameters. But this is the first thing you do. You look at the shape of the histogram, and you say, Ah, this is a known analytic function. I can. I can work with this
+if if your function looks strange, and it doesn't look like anything like like. If your histogram looks strange, right, it's a it's a very, It's a very weird histogram. It looks a little bit like this, and you have. You have no idea what this is.
+Um! What do you do.
+Yes, you apply transformations, The logarithm, the Cox box, the square root. These are normalizing transformations. And then you hope this transforms it into something like this, so that you know, then you can compute the data. Likely. But this is the data likelihood step. The most important step is compute the data likelihood
+that is the shape of your histogram.
+That is the basic difference between the data science that we did in this class and classical machine learning.
+When do you do classical machine learning like a random forest or a support vector machine, or an artificial neural network. You do that when you compute the histogram, and you go. Oh, look at this crazy histogram.
+I don't know what this is. I can't work with an analytic function.
+Yes, and then you turn to classical machine learning, which is what we'll study next list.
+But if your histogram is nice and regular,
+then you say, Okay, I can work with this. I have functions that look like this. I already know what my data model is going to look like.
+And so i'm going to say, Okay, this looks like a question or a negative binomial. You try different things. Let me now model the parameters negative By no, it has two parameters. Okay, let me assign a normal to one of the parameters and another normal and another Gaussian to the other parameter. And then let's try simulations if it works,
+run the simulation simulation crashes with bad initial energy uh crap. My model didn't work. Let me try something else. That's how it works.
+But the first step, the first step in everything is this the data likelihood
+Is that clear?
+And suppose that you know we compute the histogram for the the reasons you told me. You want to look at the me, the standard, The The most important thing is, what does this shape look like? Because then i'll match it to a well known shape? You already know a dozen of these, and then i'll i'll do my simulation. You can actually don't even have to do simulation. Do classical mathematics with method of moments
+or maximum likelihood estimation. Those will also give you the parameters using math formulas.
+But if you want to do the computational way with a Bayesian library like time, c. Three, and there's other ones, not just time, c. Three. I use time, c. Three, because I think it's the simplest one, and also it's the most documented one because it was developed by students working at Google. So you know they're They're closer to your thing. But psychic learn has all the same methods. And there's other libraries like Edward and Bambi, and tons of interesting libraries. But I really like time, c. Three.
+So clear with everyone what data science is because data science is is cheating Essentially, data. Science is cut and paste signs.
+We're saying, Okay, we don't know what the we want to do. Prediction for certain, for we want. Okay, this is our data set. This is not histogram. Um, not histogram space anymore. This is data set space right? So we we build the model now and and assume that this is the function that we build. This is the Y equals F. Of X. So this is not. Now we want to know. We want. We want a new data point here, and we want to know what the Y is here right?
+And so if we built our model. We have a function
+before. When we only have a data set, we only have points. We only have a point here, point there point there. Point there, point there, point there, but we and we don't have a point here.
+So, in order to figure out what this value is, we have to build the data model, which is that function.
+And you need That's a very simple, univariate right? They typically and you have an excel spreadsheet. You have many variables, as many dimensions. It's a lot tougher, but you know we you can think of it conceptually as just one dimension.
+So if you go to an interview, and somebody asks you what is data? Science is all about you. Oh, let me tell you. I know what that is.
+It's about building a model from the data, so that we don't have to have scientific knowledge
+of a data point in order to predict what the value is going to be because we can build a model just by looking at data on the on the entire data set and and finding a curve that fits the data. And then we We can use this curve, because this curve now has a solution for all points, and we can now do a prediction. Is that clear with everyone.
+It's it's It's a little bit cut and paste science right? It's not real science, because we don't know what produced the data. It could be some complicated equations, some, you know, fluid dynamics over a car rocket combustion in space. It could be very complicated physics, but if we have tons of data,
+then maybe we don't need the equations because we can just do cut and paste.
+Now, what's the hypothesis? The main hypothesis,
+data science. Before we can do this there's an assumption, right? And the assumption is the continuum assumption,
+which is that if I have a if they have this data set, and I have another point that I want to predict, which is very close to this point. Then we're saying that the value, the prediction at this point is very close to the prediction at this point. Right? Because they're very close.
+That's not necessarily true.
+You may be studying a very complicated quantum physics system where there's no continuum hypothesis. This this Adam Adam, this this this um boson
+does something, and the bulls are right. Next to it, does something completely different. You can't. You can't assume that the data Mall is continuous. In that case you cannot do data science,
+but because in our world, in in the microscopic world most phenomena are continuous, right? If we have a data point here, and a data point here, and their wise is right there. Then the Y in between is probably also right there. So building a model makes sense
+that that's very important. That's that's that like, you know you you can. You can
+research things on your own. But if you have the foundations, if you know what data science is all about, then you know how to begin researching things. And so so now that we know we've come to towards the end of the class, and we we have all these techniques for figuring out the parameters. You also have to say, Okay, why am I using these techniques? I'm using these techniques? Because I want to build a data model? Because I don't want to do real science, because it's too complicated, and I don't know what the solution is.
+But as long as my data points are continues, then I can. I can plot a Y equals F of X function through the data points and all the techniques that we studied, whether it's method of moments or maximum likelihood or basic simulation. It's also called computation statistics. I know how to do this.
+Okay,
+questions. Anyone is that is that absolutely clear? Because that is, you know, if you want to get into data science. And then machine learning is so important
+because people will say, Okay, Why? Why? Using this technique and why, aren't you using a random force. Well, I don't have to use a random force, because I already looked at the data likelihood. Sorry I already looked at the histogram, and I know this looks very much like the the data likelihood that is a person. And so I can have simpler ways to analyze, to build the data model. I don't have to go
+the way of machine learning uh, with more complex methods that are that have more parameters,
+the more parameters you you work with the weaker.
+Your model is because you need a lot of memory, a lot of memory to remember a model.
+But all the techniques that we learned are the simple approaches right. The the analytic, I call them analytic, approaches. What do we call them? Analytic? Because we use known analytic functions like the Poisson, the Gaussian, the Beta, the gamma. There's like we learned about a dozen. But there's hundreds.
+Okay, everyone is that clear? So the first thing you do in data science is, you compute the histogram that gives you a lot of information. You clean up the data, but then you, with the histogram, you can try matching it with the data like it. Could you see, this is this is: I found a match. I can begin my analysis.
+Hmm.
+Yes,
+If if so, if if you so,
+the the the data is not continuous, because you have data points, right? So So your data points are are discontinuous. You just have a a dictionary of points, and what you're trying to do is is through with that dictionary points. Find a continued solution. So you you want. You want to continue solution here. Sometimes it could be like that, or you know it's. It depends on what model you find.
+Now the question is, Um,
+what if the data is not continues. So that's not. That's not a good question. The The data is never continuous, because it's just a bunch of data points, something that's continuous as a function. Data is never continues. A function is continuous, right? But here's an example of a of a of a function. By the way, a function.
+Yeah, a function could be discontinued so you could have a function like this. Suppose you have a function like that?
+That's a function that this discontinuous here because of discontinuity here. Right?
+So um
+The The models that you build don't have to be continuous. I mean you could build a model. And actually this model matches the data very well, and if this model matches the data very well, then, that's a good model. The model that need not be continues. There's nothing, I tell you, that the model needs to be continuous. But what what? The The assumption is that
+the the continuous, some, the continuous assumption for data is that if you have a point like the red point that is very close to the Blue Point, and we know the value of the Blue point, and the value of the red point needs to also be very close to the value of the Blue point. That's the continuous assumption.
+If that is not true, then it's very difficult to build a model, because you don't know what happens in this space. You have no idea what happens in this space. If the model is not continuous, it could be wild.
+You see, this is this is the example of something that's discontinuous. Suppose that the blue matches here, and then the red. You think it's next next to the blue, but it's not. The red is all the way up here,
+so you can't build a model. When you're you're working with a physical process
+that is in itself of a discontinuous nature.
+But most of the data that we work with
+comes from a process that is continues right. If you, if you start an engine and the engine pushes you at a hundred miles per hour. If you give it this much gas. Then, if you give it a little bit more gas, you will go one hundred and one miles per hour. You will not go two hundred miles per hour with this much more gas right?
+That's the continuous assumption.
+And most of the data that we work with is like that. So So The answer to your question is, What is the process that gave rise to this data? If it's a process, I understand,
+that is, you think is continuous. Then you can go ahead and do data signs if the process is very wild, and you have no idea, you know, adding a little bit more gas could take you to infinity. Then then all bets are off.
+And, in fact,
+something that's very important in data. Science is is called explainability,
+because a lot of people say, Well, the machine learning is like a black box. I have no idea why this prediction happened, and so the way we we work with explainability is to say, okay, The reason why I did this prediction is because this point is right. Next to this other point that has this value.
+And right next on the right with this data point that has this value. And so it makes sense that my prediction is in this interval. That's how we explain why the machine came up with this prediction.
+Okay,
+Okay, everyone Okay, online, Any any questions. This is this is important. And so
+user avatar
+Unknown Speaker
+00:34:37
+I want to make sure that everybody understands this part.
+user avatar
+Dino Konstantopoulos
+00:34:43
+Okay, let's let's open the uh,
+the the notebook for today. So I I gave you last week. I gave you an example of a generalized linear method
+where we used something. It's called a Patsy formula that looks so much simpler than the Bayesian computations we've done before, and you know this is this is it's it's it's It's more dual. Lipa less. Code is more dual, Lipa. Right? So the less code you have to write the the various. In fact, the entire progress of computer science can be summarized as writing less code.
+If you, if you graduated with your degree before I even graduated with my degree, you would find people writing an assembly language where we can do it in two or three lines of of of code. They did We hundred lines of code had to write really complex code. And now we have to write less and less, and with with generalized later methods.
+The method that I showed you last last week. It's called the Patsy Method. Um, you. You write even less code, because time, c. Three does most of the work for you.
+Are there no parameters, Professor? Sure, they're parameters. But but Patsy works with its own parameters. Can I change as far as Yeah, We'll see how we can change them. But it's nice that you know about general as a linear methods. And so I I I to myself, let's study generalize linear methods today. So you'll see the general case for what we uh
+what what I showed you like last week.
+Okay. So make sure to run the sales in your notebook
+and raise your hand, and Junior Newton can help you if there's something that doesn't work, the more advanced we get the more libraries you require. And sometimes when you install a library, there's conflicts with other libraries that you installed, and you have to resolve these conflicts. I already had emails people trying to install spacey, and it's not working because they they this conflicts with other libraries. And so, when you have too many conflicts, the solution is to create a new environment.
+So you Google, create new python environment, and then your environment becomes a priority for the tasks that you have, that you install that library. You see what dependencies it has, and it doesn't conflict with any other of these large libraries you have. But it's true that some libraries are very picky. They're very high maintenance,
+and space is one example.
+Okay, some of the model Bond building road blocks. So when you want to build a model, some of the roadblocks are outliers out by your suck, because you know, outliers skew your data model right? If you have many, many points, and then you're trying to build a data model like we did here, and it one of the points turns out to be up here,
+and that's an outlier. Sorry one of the points is up here, and it's really very far away from all the other points. That's an outlier. And now, if you build the model, and you're trying to match the curve. You will try to do something like this to to match that that point. In this point we'll we'll create a very, very. You will skew your model
+mit ctl. And so outliers outliers are suck, and so that's why some of you said, Okay, I have a histogram. What's the first thing I might want to do is remove the outliers one hundred and fifty
+find, which points are two or three standard deviations away from the mean and just remove them.
+So that makes building a model easier.
+And now the problem is, what What if my model is nonlinear
+right? And it's not a function. Why, I have a have a number of excel columns excel spreadsheet columns. And I say, okay, I think that this function, this this column Y, is is, it has a relationship with all the with all these other columns. But what if this relationship is nonlinear?
+It's? It's a function out of X X is a distribution of one call, but of x squared, or it's cubed or logarithm of x, or square root of x, or some complicated function that's nonlinear. It becomes, it becomes more complex to do an analysis.
+You can still use generalized linear methods, though. But then you have to figure out, do a transformation of variable. So you have to take your column if you assume that that the real variable that you have to work with is X squared, How do you know that Well, you plotted you, plotted the columns, and you see that there's a square transformation.
+You you plot it. You did a pair plot. You did X as a function of y, and you see it's like a parabola the when you see a parabola, you know that it's a There's a square in there somewhere.
+So what you do is you take your column, and you copy it to another column, and you take the square of a column, and you have a new variable, which is the X squared, and you play with that variable. Then your model building becomes simpler because it's linear You always want to come down to linear
+as much as you can, because the moment you have linear computations you you use, you use, you use um. Use matrix algebra, which is what we studied uh last week a few weeks ago. Right? And and things become a lot simpler the moment you have nonlinear functions. Things are much more difficult to work with.
+So figuring out what the right variable is is a little bit tricky.
+It's a little bit tricky, but that's part of the data exploration part
+plot, a pair plot of the columns with respect to each other and find which columns are correlated. What does the relationship look like? Is it, linear, is it not? Linear If it's not, linear, then see what? What, what, what the nonlinearity is. Can you approximate that with a squaring function with this with a logarithm.
+Okay, let's look at generalize linear models now. So generalize linear models.
+How we do data science when we think there's a linear relationship between
+maybe not
+some columns directly, but one of the statistical moments of a dependent variable.
+That's a much more realistic assumption. We say that one column is not exactly dependent on the other column, but it's dependent on the moment of the other call.
+So it's dependent on the mean of a column, or it's depend on the standard deviation of a column where it's depending on the queue of the column where it's dependent on the quotosis different moments that becomes much more realistic, because it's a very strong assumption to say that there's a linear relationship between one column and another call. It's a much weaker and easier to model assumption
+that one column is a function of the mean of the other column.
+That's what how we get into into Lms or or general generalize linear methods.
+And what we say is, we say that we have additive relationships, which means that we have one column,
+that that the con that we want to try to find. That is a function of uh, all the other columns, but not a direct function. So what we say is not that
+we have this really so? So there's a number of equations here. So let me go back a few steps. Assume there's a power
+uh assume that the columns are are tied in by a power equation. So it's not just a simple linear equation. I told you that through a transformation you can make them linear right if you have a power equation, the best transformation is a logarithm, because the logarithm takes the powers and turns them into into just uh multiplicative factors.
+And so instead of having the column X one, what you can study is the logarithm of a column X one. And then, if you have this power relationship, then the and you can say, instead of studying, why, i'm going to model log of Y as a function of log of x, one and log of Xn. And this is a linear relationship. There's no powers anymore.
+This is what's called applying a kernel method to your data.
+Now, this assumption, whether it's a logarithm or not is still a strong assumption, because that says that we have a direct relationship between one column and all the other colors,
+and that's usually too strong for realistic data like you can't say that this is this. This is the case. So what you say instead is, i'm not going to Ha! I'm not going to look for an equation between why and all the other columns. X. But i'm going to look for an equation between the expectation of Y and the other column sex.
+The expectation of why is this is depending on the distribution you pick Most of the time is the mean of the data set.
+And so the relationship that you look for is a relationship between the expectation and the other columns, and that becomes a much easier mall to find it's much more difficult to find a direct relationship. It's much easier to find a statistical relationship between the columns.
+Um, so um the the The function that you apply to to linearize your relationships is called the link function,
+and if you already have a linear model, then your link function can be just the identity. You don't need a function, in other words, because because you already have a linear model.
+If you have a logistic model, then this is the link function if you have, which means that this is this is the reverse. If you have this uh function, and Pi is given by this relationship.
+Um, this is just inverting this relationship in a poisson you apply the logarithm. So in the logarithm sometimes I use a land, and sometimes I use log. But Does everybody know The difference between Ln and Log
+logarithm is base ten, and Ln. Is base. E.
+And he's two point seven to transcendental number. But but it's not really important, because they're they're they're a factor of each other. So sometimes they'll use a lens. Sometimes I use this, but I use log. So don't don't let the confuse you. I I mean logarithm, whether it's base ten or base. It's not important.
+Okay. So um
+a couple of things to think about here. First
+try to always work with the linear model. It's a lot easier, and then also Don't try to look for a direct relationship between one column and the other columns. But look for a relationship between the expectation of a column and the other columns is a lot easier to find that more.
+Another problem. Another problem is what's called a head header or scheduledasticity. So this is a complicated word, heterosexualisticity. Let's look up the the definition of this. So so. Um. So of course everything is Greek. But I had it. Does Does anybody know what hetero means in in Greek?
+Different right? That's where you get heterosexual from the attraction between different sexes or homosexual. The attraction is the opposite it's it's a traction between the same sex. Um. So let's let's see what schedulasticity is
+user avatar
+Unknown Speaker
+00:45:56
+Oops.
+user avatar
+Dino Konstantopoulos
+00:46:01
+It's Google this.
+Um
+I I want the etymology. I don't want the
+etymology of heterosexuality.
+So at this means other
+and sch this is you mean scattered,
+which means all over the place.
+So heterosexualisticity means that the variance varies differently, depending on where you are
+right. So that's what heterosexualisticity homosexualisticity means the variance remains constant.
+So,
+um! When your data has variance, which is not constant,
+then that's a problem for modeling
+um, And most of the time we work with data. There's homeless catastrophic. Um. And so that's another roadblock in in doing data models. Now,
+you you already know that there's some um. There's some distributions that that assume that your data has to be head or scedastic right? The Poisson um says that the mean and the variance are the same, because there's only one parameter in the question. So if your mean increases,
+then your variance needs to increase, which means that the poisson for Poisson by definition, is not Hetero-skidas is not homosexual. It's header is heterosexual.
+Um but um. These are some problems, because um
+uh in a linear regression model, you usually assume that the variance as a function of the mean is constant.
+So something to keep in mind that that that if the data looks like this,
+that's a little bit of a problem
+for more than if the data looks like this. It's easy to model,
+but not with a whistle,
+because the puzzle is by definition head of schedule.
+Okay. So let's see. Let's see. Let's see how these, how these, how how these, how how these methods works, how these methods work. So let's do a very simple linear regression.
+So a linear regression. So there's two kinds of things you can do uh in data science. You can either do regression or you can do classification right? These are the two categories. Classification is, you say this belongs to this category, and I belong to that category. So you you put your data into bins and regression. Is you try to reconstruct your data.
+So you have a certain function. You try to completely reconstruct it you're trying to regress Regress means. Go back. So you go. You want to go back to the to the phenomena that give rise to the data.
+That's that's the the idea behind regression.
+So what we're going to do is we're going to first start with regression. So we're going to build a model. Where? Why
+is uh? So So the the the the model here for regression is why is is a line of X is a function of X. This is a line. This is a linear model. But in the reformulation that I gave you we're going to say that it's not Y. That is a function of of X. But we're going to say that. Why
+is actually a normal distribution.
+But the mean, the expectation of the Gaussian, the mean is actually a linear function of X.
+But this is a generalized linear model. We say we don't have a direct linear relationship
+of of of the of our data Set Y. And so we're going to say that one follows, for example, a normal distribution. So that's our data. Likelihood is a normal distribution, And we're going to say that the meet the parameter mu is now a linear function of X.
+Okay. So let's import some libraries. Let's. Let's uh work this.
+Let's uh generate some data. So we have some data to play with to see what this linear model looks like. So i'm going to generate some data with noise to make it more realistic,
+and i'm going to plot all the points.
+I'm going to plot all the points with the regression line.
+You look at that. It's taking a long time to import. Um,
+Okay. So i'm cheating i'm cheating because i'm actually um.
+I already have the equation. But i'm gonna i'm going to use this equation to actually generate some points and to plot the data and then to do regression. So
+um! This is the the two regression line that I use to generate the data. And this is the data. So this is data. That's that's generated by just adding noise um around the um around the the through regression like.
+So we're going to do a Bayesian simulation to try to find, to try to find what what the what the solution is, what the regression is for all these points.
+So i'm going to build a model.
+So we're going. I'm going to introduce two new likelihood. Well, one one new data like it. It's called the cushy distribution, and the cushy distribution is often used to to model to model noise
+uh another solution. If you don't want to use the cushy to use the exponential.
+So so far we've used the explanation. But if you want to do a little bit more advanced stuff uh, and you have some noise. You usually model it with a cushy distribution.
+This is making a lot of noise.
+user avatar
+Unknown Speaker
+00:52:05
+Okay,
+user avatar
+Dino Konstantopoulos
+00:52:07
+uh, okay. So we're going to model the Sigma as a as a half Kuchi y half ku shei is positive and negative, and and Sigma is always positive. So that's why we use a half kushi. So if you want to look at what these distributions look like, you can look look for them here,
+the coefficient as two normal distributions.
+So this is our linear model,
+and we're going to say that. Why or the the data likelihood is a normal distribution.
+So this is our model.
+You see, it's different from a true linear model. We're not saying that. Why
+intercept plus x five times x.
+We're saying that the mean of why
+can be more or less intercept plus x. Quite right. So we're saying that the
+we're going to follow the basic path of of data science we're going to take it. The the why, why is there dependent, variable what we want to try to model? And we're going to say, Okay, What is the histogram look like? Ah, look, it looks like a normal or a Gaussian distribution great. So the Gaussian distribution is two parameters. I want to use a generalized linear model. So i'm going to assume that the mean one of the parameters is a function of the of the dependent variable X,
+a linear function
+and the Sigma is just noise that i'm going to model with a with a classic um noise like um um uh pdf,
+and i'm going to run my simulation, and i'm going to find what the most probable values are for intercept and the slope this is called meter set. This is the value for the line. When it crosses the the the X equals zero.
+We we, we're, we're modeling the mean of the dependent, variable as a linear model of the dependent cop of the independent call. Yes.
+Is that clear? With everyone?
+The tricky part here, the the the new thing that i'm doing is, i'm not saying that the y is intercept plus slow times. X. I'm. Saying that the mean of why is intercept the slope concept,
+which is a much weaker model.
+It's much more. It's much easier to model data that looks like this, because this data is very dispersed, has a lot of noise.
+It's very. I'm not modeling the line anymore, but I want to model all this data.
+So i'm going to use a weaker model.
+So let's run this
+Um, I didn't say how many steps to take out? I didn't say what the target uh value is. You can actually run a uh, no. You turn sampler simulation without any values, and the no you turn sampler time, c. Three will pick what you think are the best values.
+So it uses a new users sample which is not metropolis. This is more advanced. This is actually Hamiltonian. Monte Carlo is much more complicated than that,
+but it's a little better than uh than than the chocolate, but it's using. I didn't even specify how many chains or how many course it's used. So it's figures out it's gonna use uh for chains and phone jobs. Um, I'm: not too sure we're in Javas
+um, and then it goes ahead and it's It's right. The simulation and it comes up with the most likely values for need to set the next step such that Um, this relationship is there, in fact, to try to find the relationship between Why next? Now, the reason why I know this is going to work.
+I know this is going to work because that's how I build my data.
+In fact, I built my data from exactly this equation. So I know that this model is going to work. But this is cheating.
+Now. I'm a professor and I can cheat. You are students. You cannot cheat
+right? So I can create data and then show you how to build the model. But once you have a data set, you don't know the model is going to work so you could run a simulation, and when you run the simulation here it may, the simulation will work, and when the simulation doesn't work. It means the the data likelihood that you picked was the wrong choice.
+But there isn't
+uh a relationship between the mean of one column
+and a linear relationship between the mean of a one column and the other.
+So in this case I knew it was going to work.
+So so this is how This is what we did in this semester. So you would. You would use this simulation to try to find the relationship. Uh, And this is this is what you know. Right? First step,
+compute the data likelihood. What is it? What it so compute the histogram. What is this gonna look like? It looks like a normal. Okay, let me assign a data likelihood of a normal. The normal has two parameters. Let me model one parameter as this Pdf: Let me model the other parameter Mu as a combination of these two parameters, so that there's a linear relationship between the mean of of the dependent variable and the other in the kind of variable. Okay,
+this is, you already know how to do this.
+The only new thing is the generalized linear method approach of linking the two columns using a statistical relationship and a direct relationship.
+In fact, most of the time when you use uh set computational statistics. This is what you do. You never assume a direct relationship between the columns, you'd be extremely lucky, extremely lucky. Given that there's so much noise and data sets to find a direct relationship
+between two two columns.
+Now,
+since last week I introduced you to the dual Lipa style of generalized linear months,
+the dual Lipa side. Look how much easier. It is two lines of code, only two lines, and, in fact, the whole setup is just one line,
+you say. Uh, let me let me use. Glm. Comes from five, c. Three.
+I I imported everything from time to three, including generalized linear methods. So generalize linear methods is a packaging time, c. Three, and i'm saying, use a formula. Use a Patsy formula. I know I don't want to do to write all the extra code. Assume that to. Why
+is a function of X is a statistical function of X, and that's the same thing as saying that the mean of y. The expectation of y is a direct linear relationship of X and X has, because it's a linear relationship. It has two two parameters, the intercept and the slope.
+So one line of code and then run your simulation. And here I specify. Okay,
+uh, throw away the first one thousand uh simulated points, because the first one thousand points, if you assume Simulation is five thousand points. The first one thousand points are always bad, and then do it with four course,
+and if you run this you will get the same result.
+And this syntax here is called Patsy Syntax, Patsy Patsy, uh It's it's called the Patsy,
+and it's a little bit simpler to run because, as you'll see, Okay, let me try linear relationship. All you have to do is write the formula: Y equals X.
+user avatar
+Unknown Speaker
+00:59:53
+It's kind of nice
+user avatar
+Dino Konstantopoulos
+01:00:01
+you would write in the passive formula X one plus x two.
+We'll leave you three columns. You would write x, one plus x, two to six, three.
+What if you think there's a nonlinear relationship, is there in there, and you have to add an X squared. Well create a new column from X two square. It call it X four, and say, plus x four,
+and then you're working with a nonlinear model of your of your of your choice. You,
+if you assume that this interaction, that the two columns are in fact not
+are are correlated. X. One and x two is correlated, so that there's there's effects between one column, and the other you will write plus x, one column x, two, and and in the generalizing your model library will automatically look for interactions between X, one and x two. So it does all of that for you, and you don't have to do that.
+So I I like it. It's just dual it. But do a loop, do a loop. It's nice.
+Okay, Now that we ran this code, let's do some analysis. So let's let's uh, let's plot the trace
+of a simulation, and if you plot the trace of the simulation, it will tell you what all your parameters are.
+So what parameters do we have? We have uh the noise
+which we model with a half go sheet. We have the um Um. X A. Okay. It's. Maybe that's uh uh x is the slope. It's, it's, it's, it's not, it's not the X itself. So when we say x x is the variable, but we mean the slope associated with X, and the intercept.
+So these are the most likely values. If you look at the simulation here, it's not ideal.
+It's not uh it's. It's not bad. I don't see a lot of auto correlation in the in the trace. So it's. It's not that bad
+could be a little bit better, though,
+and then I want to plot what my guesses are. So if I plot the true regression line with the
+what's this called plot posterior predictive generalized linear model. So the plop is here predicted is your model.
+It's what he thinks is the more a lot. But the model now is is is not a direct line, because it's it's it's a whole possibilities of different different lines. And so it builds all the possible lines on top of the real, the true line, and you can see that your model, actually
+the posterior predictive regression lines are. It is not a line, but it's an interval
+because there's there's uncertainty that's the advantage of Bayesian simulations. It doesn't just give you the mean. It also gives you the standard deviation it gives you the uh, the uncertainty, and when you plot the procedure predicted it. Block the entire band
+two weeks.
+But now, with Bayesian with Bayesian simulation, I don't just get the solution. I also get how uncertain I am about the solution, and this looks like I'm pretty sure what the solution is, because this, that education is pretty small around in around the me
+questions
+you you, you would totally be able to write this. If I ask this to to write this in a test you. You would know how to write this because it's something we've already studied. But now we see that there is a to a lip, a way of writing the same code with less code.
+It's called the Patty Syntax.
+Okay,
+the real world. So this was the imaginary world. All this section is pretty imaginary world. No outliers. All our points are pretty close together. They're they're all separated by noise, but it's still a nice imaginary world, but in the real world.
+Unfortunately, we have outliers,
+So let's add some outliers to a data set.
+So once again,
+and then I plot these points so you can see this is what I had before. But now look paying, paying paying. Ouch!
+That is going to hurt my model,
+because if I want to build a model now, all this is going to skew my model really really bad.
+So let's see what happens when we build the same model.
+So we're going to run the same simulation. We have different data set. Now let's run the the Patsy syntax, and it's plot. Let's plot with the um. This this: the results.
+By the way, the the the typical way to do linear regression is using what's called ordinary, least squares or or or less. So uh, if you look at psyched, learn and and Google, Sec, you learn ordinary least squares. There's a very nice phones, a neat function called fits in the Os packages. I could learn that essentially minimize the distance between the points and the and the regression line, and find the solution.
+But ordinary least squares is also really really
+really really sensitive to outliers.
+So if I obtain an ordinary least square solution to this, to this data with outliers it will also be a bad solution.
+Now let's see what the what, what time, c. Three gave us. Let me plot the posterior predictive regression line.
+So you see here that it's not as good as my other. Guess. You can see that that that my guess is here. You can see that the true solution which is in yellow is is is not the need
+of of of all possible solutions computed by by by by plotting the pistols predictive. I guess so. You can see It's not as good, and the reason why it's not as good. The reason why this is attracted to the to the top is because of these three outliers.
+So now that you've seen this, how, how how would you proceed with this. Now, you're an experience data scientist. You see this. You see these outliers. What's the first thing you would try to do?
+You did data exploration. You plotted your data. You see how? Look at that, This three huge outliers. What would you do?
+Uh,
+Yeah. First solution, i'm Sure, we've got here. It's a mistake.
+Okay, that's that's possible. But what if your boss comes back and tell you now we can't remove them because it's really part of the data you need to study it. It's It's possible that it somehow somehow is. Is Part is is a real part of the day. It's not a mistake. You can't clean it. What would you do next?
+Yeah. Right? Uh, but not the linear one. Okay. So that's that's a possible solution. You say, Okay, Now, it's not a linear model anymore. Let me try to find some power methods and let me let me take a power. Okay, that's that's something to say. But even before you go there before you go there. What's What's the other thing? You would try
+um,
+but
+but
+is much better at supporting outlers, and so I'm going to change my data likelihood from a Gaussian to a student team.
+So let me import the student tea, is it? Let me first compare both. So you. You can see that if you run both you can see that the student T, which is the the yellow one, has has bigger wings, so if it has bigger wings, it has more modeling power to take into account outliers and to still give you a better model.
+So whenever you have a data set that has a lot of um Outliers always use the prefer the student T. Rather than the the Gaussian.
+Oh, I I plotted with two different ways here. So you probably don't have piano. If you's kind of an old library, you don't really need it anymore. But since I you know, I've been doing this for a few years, so I still have piano.
+Yeah, it's a graph building library that now is um included in time, c. Three as well as tensorflow, but in in a few years ago it was also used as a library to um that included math operations on tensors. So you can also use. Pm: Not math. Uh: Okay.
+Okay,
+Um.
+So we're going to rerun our model. But now we're going to make one change and what we're going to say is, we're going to use the geometric formula. But we're going to change the family, because if you don't specify a family, it automatically defaults to normal distribution. So you see, our our run here was automatically defaulted to a normal distribution.
+We we didn't, we didn't specify anything. So um! When we run this, we say automatically, just a normal distribution, the the the default uh parameters, the default data likelihood and parameters for the data likelihood are always normal Uh: normal Pdfs.
+But now i'm going to say not. I want to use a student T: So if I use a student T,
+i'm going to say glen from a formula. I'm going to give it the data. But now i'm going to specify the family, and the family is going to be the student t family.
+But here you can specify. If you family, you can specify a pistol. You can specify your beta. You can specify a negative binomial. Any of the of the functions that you know you can specify if it's not normal. And um let me run the same simulation and let's see what we get now.
+So You see, you didn't even have to specify the parameters. You just gave you the formula, and then the package already figured out what the parameters have to be.
+By the way, sometimes, if your laptop is not as powerful as as as as mine, you can reduce the computational um um
+that makes it. That makes it simpler to run right. So you you could add something like, like course, equal one.
+The standard deviation is larger, right? Because it automatically knows that it uses a a a modeling function. It uses data likelihood that is more robust with respect to noise. But the advantage now is that the real solution is now smack in a little.
+So so this one is much more correct
+what my real model is, and to make sure that the real solution is like right in the middle. So if you take the mean of um of your procedure predictive uh functions, then you would actually recover the real true solution.
+Okay,
+So what do we? What do we just do? Uh, It's It's important to think. Okay, what do we just do, we, we, we, we, we, we we, we we we we, we we we we we we we we we we we we we we we we we we we we we we we we it do a lip, a way of doing the same thing we did in class or computational statistics where we have to write less code.
+Um, we know, we we see, we saw that this dual lip away makes a lot of assumptions, because it automatically assumes normal models for all parameters. That's not necessarily the case. So if it's not the case, you can change the parameter. Just specify the the that you want as the data likelihood.
+But you know what you can also change the priors if you don't agree with parameters that are prior, and there's three parameters you can say prior's equals, and you specify what the prior to be
+Kafka, she for the noise
+uh another student, t for for one of the for the for one another parameter. You can specify that you. You can change the defaults, but the defaults are always normal uh normal, because I told you the the normal distribution. The Gaussian distribution is the most beautiful data set. It's. It's
+what statisticians consider perfection
+or data set to look like.
+Okay, And so um clear what we did.
+We did two things. We introduced a new dual Lipa way of doing the same thing, and we also weakened the
+the relationship between the columns, so it's much easier to find a model
+by saying that it's not one column that's a direct relationship with another column direct linear relationship with another column, but it's the mean of one column
+that isn't directly in your relationship with the other columns.
+Okay,
+this is actually how most models are built,
+like if you, if you go up there and you look at papers, building models of data to to analyze things. This is what they usually do. They usually use a generalized linear model, and they usually assume that it's the meaning of one column. That is a function of your call. It's not the column itself. And the reason is because there's a lot of noise in the data. You can't assume that you did you So perfect
+noise and outliers, too. By the way,
+Okay,
+the other thing I wanted to talk about is Um! How do you do this when you have hierarchical regression? So we already talked about hierarchical regressions when we looked at Remember, when we look at Major League baseball, and we studied um how much um uh pictures suck when they go to bat.
+But we try to do that realistically. So we found a model that is actually a function that is actually in that inherits from another model. Remember, these are called hierarchical simulations, or or hierarchical regressions, and these are very important because they allow you to um.
+They allow you to do things that you wouldn't be able to. If you didn't have these models. They exploit the phenomenon of shrinkage which makes,
+and to be more towards towards the mean of the other data set.
+So I wanted to give you an example of a hierarchical linear regression. And so the example that I picked is a typical example in data science. The the Radon data sets from Galman. So Gelman is a very famous textbook in a statistic and computational statistics, which is what we did in the second part of the semester. And there's a data set. That's very famous,
+and I hope I gave it to you in the zip file.
+Then you'd use it with some data.
+Okay. So then you have it. So then put it in the right folder, and it's. Look at the data set.
+Okay,
+So what we have is these columns we have. We have. Um what what they explore is the amount of Radon in houses in different counties of the State of Minnesota. So, Radon, if you ever buy house,
+at least the house in America. The first thing you do is you inspect the house by by putting a a a radioactive gas detector in the basement of the house because some houses actually turn out to be radioactive. You don't want to live in the radioactive house, because then in ten or twenty years you'll die cancer. So they add these detectors, and they measure the amount of rain on
+and and and and the amount of rate, and also changes depending on the floor. You're on the house. So if your apartment is on the ground floor, more Radon from the first or less, because the the gas diffuses as it seeks from the floor.
+So this is a county. This is the amount of Radon, and this is the floor that the that the apartment is at, and this is the count of the apartment. Is that so? We're doing A. We want to find a relationship between between these columns
+and we're going to do a generalized linear model.
+So first thing we do histogram, right? So let's draw a histogram of the data for the for the Radon. And let's see what data like we're going to pay to. So we do histogram,
+and we see that this is what the column looks like. It looks like a nice bell curve. And so the first thing is, you say it's perfect great. I know what my histogram looks like like a Gaussian, so i'm going to pick to to build a data model for that column. I'm: going to pick a normal distribution
+and the normal experience two parameters mute, and the standard deviation or the variance.
+And since I picked uh this data likelihood, I know that I have two parameters. I need to model. I need to model you, and I need to model Sigma Square, so you could model me as a normal distribution
+uh, typically with a meet of zero and a wide standard deviation. So you can capture all possibilities, and you will also picture them all the noise, and you could also model the noise as a as a uniform. Sorry we Here we mall the nose as a uniform distribution as a tad function, because we don't know what the noise is, so we'll assume it can be anything between zero and ten.
+So any any value between zero and ten is possible.
+So we're going to run a new model that I call Radon model, and i'm going to assume that Mu follows from a normal, and Sigma follows from a uniform.
+So So this is the model building process,
+the most important part in the model building process is this line, though? Because this is the data likelihood. Yeah, I I should have started with this line.
+So sometimes you see, people, you know you start with the parameters. So this is putting putting that the end in the top. This is a little bit confusing. This is the most important thing. This is the data likelihood. This is where you say My histogram looks like a Gaussian. I'm going to assume a Gaussian data likelihood.
+This is what my wife is. It comes from a Gaussian distribution.
+The Gaussian distribution is, has two parameters,
+being a standard deviation. I'm going to model these two parameters using these Pdfs:
+Okay, So this is just classical computational statistics.
+Let's go ahead now and run the simulation.
+That's that's by the way, that's a different way of of of saying, Run a trace.
+This is the most common way, but but in the book they they use this way, which I guess is one one possibility. Um is part of the Glm Library, and it's to say fit.
+So. The reason we we say fit is because all all machine learning or or or in computational statistics like we have this fit method because we we're trying to fit a model to the data right? We we're building a model. We're building the parameters of the model, the data likelihood, and what all the parameter shapes are. And then we're trying to fit that parameter to the data.
+Hopefully, it works many times. It doesn't work. In fact, in this notebook I give you an example where it doesn't work. So you can actually see it not working?
+Okay, So let's run the simulation,
+and then we plot the posterior. They'll give us the most the most possible, the most probable values of them of of Mu and Sigma.
+Well, this is running. I had an idea. Um! I It just came to me again. I I I forgot to tell you the beginning of the class
+who would prefer, instead of having our final exam and the final project presentations on the same same same day, same same week, who would prefer to have the midterm next week, and the final project presentations the week after.
+Is that better or worse for you?
+Because then, when you're done with your final exam. You don't have to think about the exam anymore. You can just concentrate on work on your project.
+You can also take the exam here, and then be able to leave and not have to think about. Oh, if I miss the exam, and then I have, i'm in deep doo.
+So let's do this. Tas. Can you take a poll? Ask students what they would prefer? Would they prefer to take the exam one week before uh the final project presentations, and how the final project stage presentations the week after, or have the exam and the product presentations do the same day.
+And then you can think about it. See what you prefer. Okay,
+The The the final exam is going to be essentially the same thing. We you studied for the for the midterm, except it's going to have additional information additional books to to study. But it's also not going to be coding. You're not going to have a take home, and it's only, but it's only going to be questions
+and and to solve the in during the exam exactly what you did during the midterm, Okay,
+and only counts for ten. But it's actually pretty good, because it helps you, you know, if you're if you're right in the middle between two grades, and you get a good grading, final exam. It will. It will take you to this, to the best, to the better grade.
+So we've written between the the boundaries of an A and a minus, or a plus in a in a and a minus. They'll help you. It usually helps you go. Of course, if you don't study for it, it might also help you go down. But but if you usually study for it, then it usually improves your grade.
+Okay, so um, we finished the simulation,
+and then we can plot posterior. That'll give you. Give us the most likely values for Mu and Sigma.
+So this is the plug of steer from you,
+and this is a plug-post here for Sigma.
+And now we've we've um we've come to uh. We. We've built them up.
+So Now, what we can do is use the small to do predictions
+right? Because what you have is, you have your Muse and your Sigma,
+and you have your distribution.
+And then um say, okay, what part of these random values are superior or equal to for? Because sorry, the the you taking the log of the logarithm of the Radon as the as the as the variable. So it's a log of four. Because you say, okay, superior, four means I'm going to dive radioactive or radioactive exposure. I don't want to live there,
+so
+tell me what the mean is
+of all the data points that are superior,
+such as the superior uh on just those data of of those sorry of those observations where the Radon is superior to four.
+Um, what's the What's the What's the mean?
+Sorry it's the modeling of four. So So what's the logarithm of four? The longer in the four is not four? Is is zero point four something. Let's compute it.
+Um
+math. So import math
+math
+dot logarithm of four.
+It's one point thirty-eight. Okay.
+So what is the mean
+of the Radon samples. So Radon sample is a normal distribution,
+and of those that are superior to the logarithm of four
+user avatar
+Unknown Speaker
+01:27:18
+before
+user avatar
+Unknown Speaker
+01:27:20
+must be one hundred and thirty-eight. Okay, Good.
+user avatar
+Dino Konstantopoulos
+01:27:23
+Those that are bigger than four. What's the average
+uh sorry?
+user avatar
+Unknown Speaker
+01:27:34
+Oh, sorry.
+user avatar
+Dino Konstantopoulos
+01:27:41
+Zero Point Forty nine
+um.
+So Radon samples is um
+what's the value of random samples,
+user avatar
+Unknown Speaker
+01:28:06
+so random samples is a distribution.
+user avatar
+Dino Konstantopoulos
+01:28:11
+Um, it's a random sampling from this normal distribution. Just one of them. It's just one random sampling where the mu is the the the results that I gave that I gave here?
+Hold on.
+What is muse?
+So Muse is also uh samples from the value. Mu:
+Okay, how many are there
+so length of use?
+So we have a thousand. Okay, Okay. So this is how the the posterior predictive work. So we have a thousand guesses of Muse and Sigma given to us by the um by the posterior predictive.
+Okay? And then we pick one value for the normal distribution.
+user avatar
+Unknown Speaker
+01:29:14
+Um.
+user avatar
+Dino Konstantopoulos
+01:29:18
+So. So we have a thousand possible normal distributions
+right? If if I if I just do, this is this is a thousand possible, because each one of these parameters has a thousand possible values, and then I take one random value
+from all of these. So right Dot Random gives me one value.
+So if I look at the length of the random sample. That's also
+a thousand.
+And then of those random samples the ones that are superior.
+How can the mean be zero point. Forty nine
+are in random samples
+if our
+superior an Empire log for,
+and then let's see the mean of that.
+Oh,
+sorry! This won't work. I have to take noon pie of me, and of that.
+Why is that not working? I should work
+you. Pi dot me of this.
+This is kind of what I expected, because it has to be bigger than four. But why am I getting?
+Oh, okay, okay, Okay, this is different.
+Okay. So So this is okay. So so do you see the difference here? This is the um. This is the app. This is above all
+the um. So the question that you pose yourself is this: I want to make sure. I live in a county where the amount of Radon is superior than four, which means that the amount of log rate on a superior than log of four
+and um of all those counties where the the the the log of rate on superior to four. The average is actually pretty high. It's two point sixteen, whereas the it's higher. It's much higher than log of four, which is one point thirty, eight.
+But this is actually a probability distribution. It's not the the of the data. This gives you the posterior probability that a randomly selected household contains a Radon levels in excess of four. So that tells you
+that tells you what's the um probability that I will actually live in Minnesota in um a county that has um rate on levels bigger than four, and that probability is pretty high forty-four. And so that's not good.
+That's not good. So you say I don't want to live in Minnesota.
+That's that's an example of a use of a model in order to do a prediction
+right? Because we built a model. And now we don't have to work on the data. We can actually do some interrogations directly on the model to find what the what, the what the answer is, So that's the reason we do data science, because now that we have a model within reason on the model,
+we don't have to reason on the data points, and we can do much more precise computations.
+Okay, if we want to be a little bit more Um careful. Now, we'll do a rate of regression. So I actually want to regress so that I actually have an equation. I want the amount of Radon as a function as a statistical function of the floor. I'm at with
+that. This is the the coefficient, the slope, and this is the intercept, and this is some noise.
+So now I don't want to just be able to have a point function to tell me what the probability is. I want an entire regression,
+so I can model Radon as a function of the Flora mat.
+But um, I actually don't want to do it with Radon. I'm going to do it with not the distribution of Radon. But i'm going to do. I'm not going to do a direct relationship between Radon and the Flora Matt, but i'm going to do the expectation of of rate on the mean of Rad on the floor. I'm going to use a a generalized linear model.
+So um I I do it two different ways. I do it one where I have separate statistics per county, and I do it. Um, and I do it once where I pull all measurements. So this is the same equation for all counties
+mit ctl. And and then I also do a hierarchical, which is a little bit better, and the hierarchical regression is where you assume that the counties are different, but they all the parameters, for all the counties, come from the same distribution. So all the parameters come from the same distribution. But the distributions are different two.
+This is what the hierarchical regression is.
+So. Um,
+because we only have five minutes left left, and I want to tell you a little bit about the entire notebook we can continue. We can continue this on Thursday, but I want to kind of show you what the entire notebook does. I'm going to skip this. I'll come back to this next week because I want to show you the next section.
+So just so you know what i'm talking about.
+So Section Six um is a section. That, and then Section seven is just conclusion. But Section six is um. How do we actually do predictions once we have along.
+Um, because I gave you an example of a prediction I want, I want to show you the the general methodology for doing predictions, because, after all, that's what you use them out A model for you. Build a model, and then what you build them all. So you can do predictions.
+So
+how do we? How do we do predictions? Once we have a data model? So this is the the the point of Chapter six. So what I do is I do it with two different data sets. So one, which is a little bit simpler, and another one which is a little bit more complicated,
+more complicated is down here where we use.
+We use a more complicated data set, we?
+And then, with this more complicated data set, I show you an example that works,
+and then i'll show you an example that doesn't work that that that I took from my um, and we talk about receiver operating characteristics and the area under the curve, which is important things. And they assign you won't. Have time to do it today. So uh, we'll finish this on on Thursday. But um! I want to give you a quick overview of what? The um
+that's a decision. Boundary um, and then and then I do this. This is an example where the model
+a simulation that did not work.
+So you can actually see what happens when you actually try to build them all in doesn't work,
+and so I I use. I I use the same methodology that I use in this data set, except I use the I use the mail examples that that we work with before. So you know what we did. Okay, so um, maybe I have enough time to cover just the first data set five minutes.
+So real fast we we'll go through it again. But
+once again, the important thing, the difference between linear regression and basically when you do a linear regression you get a single point right you. It's ordinary least squares. It gives you. It gives you Okay, I have. I have this one
+curve, one line on the curve aligned with this linear regression. It has an intercept and a slope, and that's the only thing I have.
+I I don't have an idea of of the error that I'm making. But you can. You can have an idea of the area that you're making using methodical bootstrapping, but i'll talk about that next time. But the advantage of basic linear regression is, you don't have a single intercept and a single point. You get an entire bunch of different possible lines,
+and from all these lines you can figure out what the standard deviation is, which is the amount of the the how much uncertain you are about the line, and the mean, which is what your your best guess is for what the the true line actually looks like.
+And so in this example. Um, I also use some points that I got from the book from a textbook, and we we we generate the data set. So we we, We plot these points and these points look like this, and I want to plot a line between these points.
+So i'm going to do classical statistics from psychic learn linear model. I'm. Going to import linear regression, and i'm going to try to find the best line that fits to these points.
+So, in order to call this Api, I actually have to turn x, which is uh, this little X, which is A.
+It's a single it's a single array right? So it's It's a single right. I need to make it two-dimensional uh so I can call it any regression. The new regression expects X to be two dimensional. So once I once I call this function, it becomes two dimensional with a dummy dimension, so it's it's. It's still twenty points, but it has an extra dimension. And so this is just so. I can call this this Api and this Api. The linear regression
+uh Api from psyched learn linear model will give me the slope in the intercept,
+and then I just plot the slope of the intercept. Since I have the numbers, this is the the the the, the the regression line, and then um, I I create a bunch of points, and I plot them. And then this is this is the best line right? This is the best ordinary, least squares fit between these points,
+but not want to do with these Bayesian statistics. I want to show you the difference between Bayesian statistics and between classical and business statistics. We don't say that y is a direct function of x.
+We say that y is a normal distribution,
+and the mean of that normal distribution is a function, is a linear function of X. Does everybody understand the difference?
+This is a much more powerful model, because by by using this model you don't just get the the the the line that's that's the perfect fit. But you will also get an idea of the error that you're making when you're assuming that that line is the best possible model.
+And so the way you you do Bayesian statistics is this is the classical. I also show you down there with a with a Patsy formula. But you assume the first thing you do is you say, Okay,
+my data
+is shaped like a normal distribution that the data was arbitrarily created. So it actually looks like a normal distribution. So and the mean that i'm going to pick for the normal distribution is going to be a linear model.
+That's the that's what's generalized in your model. It's all right, and then the general is a explicitly, and i'm not on the model A and B as normal distributions.
+And this is the data that I observed, and i'm going to run the simulation,
+and when I run the simulation
+i'm going to get the best guesses for A and B
+and i'm going to see if they match with my ordinary least squares. Um,
+uh uh solution.
+Okay,
+Okay. So you see that the uh solutions that I get for the slope and the intercept three point two and two point two
+are very close to what I got with the
+with my linear with my ordinary least squares model right?
+Um. But now the advantages. I also have an idea of the error that I'm making.
+And now I can also generate predictions. And there's there's there's a different way to generate predictions where you actually have to set up a container, so that you can change it later down and actually do a prediction. And when you do the predictions, and you plot them. You have an idea of what the mean is, but you also have an idea of what the areas that you're making
+when you're doing these predictions, and i'll talk about that next time. Um to go into more detail uh as to how this works. Okay, So next time we'll do something else, but also finish this notebook. We'll look at the hierarchical model a little bit closer, because when I skip that part, and we'll also look at these two simulations that compare a classical uh regression with the base and regression.
+Okay, thank you. Um. So that's it for today. Um,
+don't forget the poll uh, so that you can pick with when when you want to do your final exam. If you want to do it on a second week, so you can think about one thing at a time.
+And um, that's it. Thanks for coming to class any any questions about this so far about generalizing your model. We we'll, we'll do this again on Thursday. So we have another opportunity to ask questions. But, um! This is kind of
+when people use new computational statistics. This is how they they proceed. They usually proceed with a with a Patsy formula, and by and the most difficult part the the the the job, like you, you really the the part that is art less more than science, is to figure out the day likelihood that we'll build the best model,
+and and when you use pure machine learning methods, it's also the same thing, because you'll have to pick the number of layers, the number of neurons per layer. There's no scientific procedure for doing that. It all comes from experience and intuition, and feel,
+and if it doesn't work, you just bang your your head on the on the table and you start again.
+Okay, Thanks for coming to class. I'll see everyone on Thursday.

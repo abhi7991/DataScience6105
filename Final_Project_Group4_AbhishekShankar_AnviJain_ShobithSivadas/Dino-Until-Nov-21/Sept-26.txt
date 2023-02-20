@@ -1,0 +1,868 @@
+00:06:16
+A mute start. Video, she's! Screamed.
+She's
+in minimize.
+Reduce down.
+Go back here. Okay.
+So week, one program
+week, two. We saw this New Language
+Week three. We started really learning the language, and we also looked at Lumpine. Pandas plus,
+and so what we're going to do this week is, and then last week you work a lot on your on your data. So how to package the data, how to create this dictionaries and all that.
+So this week we're going to focus on functions.
+So you're going to learn how to write the functions.
+And then, after we, we we learned how to write the functions, and we can get um
+into some some more more complicated data science. But we're we're We're also going to learn data science while we're learning the functions, because it's something that we can do
+two things at the same time, and it's a little bit more entertaining. So what I want to do is, I want to finish our Pandas notebook because we didn't have time to finish it, and I will also learn probabilities and learn to program functions with with probabilities,
+and then i'll also give you your homework for next week, which is how to write functions with probabilities.
+It's very
+after next week is what I'm going to give you tons of homework to just work on Python. And so at the end of the week five you you already reach, like the brown veil to programming, and then we'll get even more into data science.
+Okay, So that's the plan.
+So so um. This is kind of the same slide that I started with last week, but I added some more material.
+I remember there's also I got one question which is, How do we represent Pandas data frames in more than two dimensions, because data frames are usually only used in two dimensions, but you can actually use it.
+Ah,
+so from what we saw from noon pie and pandas. Are there any questions?
+A lot of things to work on, you know, sorting with keys and doing stuff the right way, and then writing it to a lipa. So i'm not saying that you know. Correct this.
+Um. In fact, we should probably have problems that have done that today. But maybe we'll do that on Thursday because we have a lot of material to code today. But yeah, maybe we'll correct this together, so you'll see how to do it simply, or how to do it in a more beautiful and functional anti-style.
+But do you have any questions specifically about you and Pandas
+new pie is in order to get the performance.
+Pandas is in order to have a lot of tools to to to look at data, filter data, visualize data and has a lot of built in capabilities, building capabilities to plot, building capabilities, to do statistics with building capabilities, to even do machine learning like what we'll see today
+she is built into Pandas.
+So it's a really good selecting the Swiss army knife of data sites.
+Remember, we saw that the two things the most important things about Pam is the the series in that data frame, and then how to access different parts of the excel spreadsheet when we create a matrix.
+Okay.
+So
+this is a quick review of material we already talked about. This is the series that we looked at any questions on series.
+And this is the data frame
+so accessing the data frame is something kind of you have to remember. It's essentially like a dictionary, right? Because you access the the column that you're interested in,
+and then you can also index on the on the other. Uh, on the other dimension.
+So we looked at some examples. These are examples, but you can always go back to these examples to find ways how to access data. And then, finally,
+a little bit more work on data frames that are in higher dimensions.
+Here's an example of how to do it in a kind of a hags way, because if if one of plot, no pi matrices that are tensors and all matrices. How how do we actually plot them? Well, the way the way our notebook gives it to us is in terms of slices. The first slice, the second slice, the third slice, and it uses one slice after the other.
+So what I did is, I created three arrays here,
+and I created duplicate indices, so we can have two dimensions for each one, so I c. One, one, and two, two, and three, three, and Then here is a b array that has to start and start and start n six, three times, and then a bunch of random integers six times,
+and then what I do is I zip them. And since this is an eager structure, sorry and a lazy structure, I make it bigger by turning into a list, and then this is our This is our list. So we have. This is one-dimensional. But since i'm hacking it here i'm actually introducing another axis here,
+one. One consists of two axes, because there's two instances of one.
+And so now, if you want to kind of call this fake threed, because now, if I want to turn it into a my data frame. I can do that. And and here I have the different columns. But here I still have one, one, two, two, three, three. But if I set my index,
+if I set my index
+to be A and B, then you can see how now you can actually see that this is actually has two dimensions, the start and the end dimension for every one. So one is called a panel that has two views
+user avatar
+Unknown Speaker
+00:12:50
+two or three,
+user avatar
+Dino Konstantopoulos
+00:12:51
+and if you prefer to put them on the columns rather than as rows, which is a little bit more typical for the distributions, then you can
+take the transpose.
+When you take the transpose, you clearly see that it takes a little bit of time. But you clearly see this this is essentially
+different. Three different slices, the one slice, the two slice, and the three slice the
+the same way. When we look at matrices tensors in New pi. There's the first slice of second slice in the set, and a third slice.
+So you see, you can do data frames in more dimensions, and it involves actually creating aggregate columns. So you can create more dimensions as well
+You, On top we you add more, more, a hierarchy of columns,
+and this is how you do it with X-ray.
+So to build a data set to to look at how X-ray works. What we're going to do is we're going to build data.
+So very often we build a data in order to do an analysis, we don't have to actually look at real data. It's very easy to build fake data, and so we do that it's a little simpler than opening the file.
+So we create a times index, an index of dates,
+and then we cycle with a sine wave.
+What we do is we take a base of that annual cycle, and we add some random noise,
+and we do that in three dimensions.
+So it's easier to see what what's going on here. If we look at the dates, So these are our times. If we run this, you'll see times. It's just a one-dimensional series of different dates.
+Now, if you look at annual cycle, which is what the the Y that we create from this X. By the way, there's seven hundred and thirty. One dates right? So this is X, and then we create a Y and the Y is called annual cycle. That's a sine wave. So it's a cycle over these dates,
+not too complicated. We have these dates, and we have cyclical cyclical behavior around these dates so seasonal seasonal behavior. And if you want to plot, it looks like that.
+So so that's that's what it looks like. In other words, you have dates, and you know one behavior for the for the fall and one behavior for the spring,
+I two two cycles.
+But now what we also did is we created Min and Max values. You see this minimum, Max. So if we look at the shape, so whenever you have a piece of data,
+you always want to look at its shape first, because you want to see how many dimensions it has. So we have mid and maximum values. But now we increased it to to a three-dimensional animal. And so, if you look at the shapes, you'll see it has seven hundred and thirty one x's, but it has three wives,
+so we turn it into a from a scalar value to a vector value.
+We went from scalars single number to vectors, which is higher, dimensional, and, in fact, three-dimensional vectors we
+so we have team in and team acts.
+So if you want to see times and you want to see just the first value of team in. You will see that we added some noise on top of the cyclical data.
+Noise is very important to play with, because real data always has noise and adding noise helps
+machine learning algorithms, because the point of the machine learning algorithms here, what is it?
+What you want to learn is the general behavior of the data, which is this cyclical pattern.
+So we want to add some noise to force the machine to tailor the machine. So it's not going to learn the data by heart. A machine can always learn data by heart, but what we want to do is take the data and reduce it distill it to its essence, which is the sine wave.
+We don't want to know the data points,
+so if we add a lot of random noise, then we can play with the algorithm So when it reproduces and predicts the data, the resonant producer predict the noise. It just reproduces this behavior.
+Does everybody understand this,
+and it's important when you do that. It's probably one of the most important things in machine learning is to not learn the noise, the noisy behavior. Get rid of the noise from the data. Just learn the dynamics of the data. What What is the mechanism that gave you the data? This is what you're after.
+You're not really after the data you have to. What's the mechanism that gave me the data?
+The redness was the sign wage.
+Okay, And This is just the first dimension. Remember, there's three teams and t maxes. So if I want to plot all three, if I want to plot all three,
+so I don't plot just the first one I plot all three. You will see There's many colors, because each color plots a different
+the axis,
+and that's built into that's built into um.
+Well, my clothing that gives us this rate.
+Okay, you can do the same thing with T. Max T. Max is another slice you.
+And now let's create our three-dimensional data set, which in the latest version of painless is called an X-ray The
+So, instead of saying, Pen that's got data frame. Now we say X are the data set. That's the correct way of doing this
+with all the values and it interacts its time and location location is actually the location of time and time, and at times. And now we specify the indices for the three axes since Massachusetts,
+Bt. And and New Hampshire.
+And now, when we look at the shape of this animal, we can see that it's actually a tensor, because it has the two slices that are Min and Max. It has the seven hundred and thirty one data points, but it has a three dimensions for each. Data point
+these these three dimensions.
+It's in that it's not that it's three dimensions.
+So now we have a real three-dimensional data, set, which is actually really understood as a dictionary that has multiple columns. Each one of these is actually another dictionary.
+So that's a dictionary. This dictionary has
+one and two and his dictionary has time that are the three-dimensional.
+Now, if we want to turn it now that we have this X-ray. If we want to turn it into a data frame,
+that's our dear train
+once again we have the same thing. So we have our location. That's one slice, and that's our Massachusetts location.
+The other one is my with my my my, my, my other location, which is a change. This. So this is my New Hampshire location.
+So that's the tail, which is the end part, and that's the head. So we start with Massachusetts. Then we have Vermont, and we have New Hampshire.
+So head gives us the beginning of our data set. The tail gives us the end, and you can also specify how many elements you want of the tail. The default is five, but maybe you want ten of them.
+Maybe you want to see more,
+but we start with Massachusetts.
+Then we go for Vermont, and then we go to New Hampshire. So yeah, So tail you and also head. You can change the
+and then you can do the same transformation we did. We did up here, we
+which is to take lemme coffee's, copy paste.
+Let's try that.
+So we'll turn it into a Pandas data frame. I want to see if we'll automatically do that. I haven't tried that yet. So we'll see It's called Df: so we'll take the transpose of Df:
+That's a little bit more complicated. How am I going to do that? Uh:
+So it's team in anti Max,
+we actually don't specify the cars.
+See that.
+And then, if you have a four-dimensional data frame, you'd have to a whole lot more slices right? You'd have all the slices for the first and all the slices for the second. Whatever extra index you have,
+so you can definitely go higher dimensional on data frames. It's just a little bit
+more complex to look at.
+It's a
+This was because I got a question that said, Oh, Professor, I it's not that easy to do it in in threed. And it's true. You have to use x-rays.
+You can't do it.
+Okay, And I think you know It's better to learn from examples, because it's kind of interesting how you create the data and how you do things. But you can always refer to these examples which are which are paroding back, or how to do things, and that and then we we also did some finance. We start. We started, we said, like last time, you know. So we reinstall data, reader, we a little bit stocks,
+stock values. And then we saw some of the Milton capabilities for for for Pandas. You can plot directly you have a distribution which is a column, and you can plot the series immediately. You don't have to call Matthew lip. That's when you're very, very efficient when you use pandas.
+Okay? And then we we also looked at the difference day to day, and I told you that, taking the difference, they today is essential, because when you have a series, if you want to do statistics, you want your moments, which are the averages or the standard deviation, or the schedule or high order models, they have to be constant.
+And then we also talked about. We also talked about
+Um, the the famous test that the the the Dickie fool would test.
+user avatar
+Unknown Speaker
+00:25:21
+We open a new data set right
+user avatar
+Dino Konstantopoulos
+00:25:23
+any data set
+which is this data. So I gave you this data set in your in your data examples. Yes,
+everybody had that data. Say how the data set.
+Does anybody not have that data set?
+Huh?
+user avatar
+Unknown Speaker
+00:25:48
+Well,
+user avatar
+Dino Konstantopoulos
+00:25:49
+yeah, So in data
+it's uh
+It's called
+stock prices, sample stock prices, sample.
+Yeah. So you you must have it right
+in the zip file, so you can put it in a data folder, you can open it,
+and then you can plot
+um a um.
+You specify my index column, which is the date, and then we plot
+um
+some, some we filter right. You see. Here we use pandas. Do some filtering. We don't want any rows that are
+we want to make sure that no rows are gef, and we also want to drop some columns.
+Okay, and then we can plot. We plot the closing price, and then we do some time series modeling.
+And this is that this is a python function that plots the moving average. So this is the moving average.
+So we plot the moving average over a specific time window,
+so we can plot over five days.
+We plot over a month, and we plot over three months.
+So we do we. This is This is just. This is just since I commented these out. This is just every five days, and every five days you see it doesn't get rid of a lot of noise. So you see, this data also has noise.
+Now why do we build a model? Because we want to remove some of the noise to make it easier to to learn. Sometimes we don't remove the noise, but sometimes we want to remove the noise. So over five days it doesn't remove much noise.
+Filter it. Sometimes I forget to run these. So okay, so let's open this. The
+let's filter. It.
+Let's plant.
+This is the the plot with the real data, and then let's do a moving average.
+Okay, So we write the function, and then we plot the function for a time window of five days, and you see the green reduces a little bit of noise. It's definitely smoother,
+but it still has just a lot of jumps. If you plot, however, over thirty days over a month, you will see that it's a lot smoother.
+See, misbehav you,
+and if you plot over three months.
+Then you also plot the intervals, the min and the Max intervals. Then you will see that here you actually get a
+And so, when you specify a learning, algorithm you can say, okay, what are the things that you want to learn? Don't. Try to learn the noise, because you know it doesn't make any sense. But you want to learn behavior over a month behavior over three months. Obviously, behavior over three months is a little bit easier to learn because it's moving.
+So the smoother your your data the easier it is to to learn because it's just one, a simpler function.
+Okay, So these are called moving averages.
+Then you can also do something that's a little bit more geometric which is called smoothing, but it's called This is called exponential smoothing. This is actually trying to match the Time series with a function
+and more specifically exponential by functions of exponential behavior. And so, when you when you do this, there's either exponential or double exponential, triple, exponential smoothing. And so this is the exponential smoothing when we actually plot the formula.
+So you see, when you do the exponential smoothing is actually also pretty nice. You also capture general behavior. You
+and then you can specify, specify parameters.
+I don't know my laptop is so slow
+analytic functions. If you want to capture a lot of data, actually oscillate a lot,
+a lot of gold that you have under under South Africa somewhere,
+and you want to
+be able to predict. But every point where, where, how much gold is under the earth, this function would actually predict this. Here I have a model, and that's that's That's not sure, because this is where the data is. And this is why.
+So these are two different ways of modeling data. Either you can do it point by point by averaging, or you can do it by actually trying to match the data to a function to a well-known function.
+These are all called models.
+So the Dickie. Now, this is the Dicky-foola test, which is very important when you do modeling, Because I told you that when you build a model you want to make sure you start with a Time series
+is a stationary process, and to see if the process is stationary you. You look for the correlations in the data.
+So the dinky fuller test will tell you that.
+Um.
+So when we run this test, this is something that we already talked about last week. So but i'm going to look at it again.
+Ah,
+we we have to in order to use something that has no other correlation. So this is the probability of autocorrelation. You want to make sure that you do the
+take the difference from one data from one day to the next day. So, in order to be able to do statistics, you want to look at the Deltas rather than this is a mistake that everybody makes. They forget to remove the autocorrelation in the data, and they end up doing predictions that.
+But there's no real challenge in doing the prediction, because you're essentially saying, Okay, let me just assume that it's the value the day before, and that's your best guess for the value of the day after.
+If I want to guess what the value of this apple stock is. Tomorrow I'm going to say. Well, it's close to the value today, and that's true, for most pieces of data because they're continuous.
+Okay. So this is the this shows that your autocorrelation is within the Cona there. So it's included in the new band. So
+so this is the kind of stuff that you need to learn. If you want to work on Wall Street and and and your your your life is all about Time series, and you want to model this tense time series. Make sure that it's stationary first.
+Okay. So this was the finance part. We're going to go back to Time series because predicting Time series is an important
+part of data science. But this is just a quick introduction. In a couple of weeks. We also look at the Time series and some of the algorithms that continue to model Time series. The more famous ones, like
+like recurrent neural networks or Facebook profits, or we look at that.
+And then we looked at um Some other examples. I don't. I don't remember where we left off, So I told you about the ability to include video in your notebooks. So whenever you have something complicated to explain it's good sometimes to put the text. But you can also film yourself saying something, and actually include it in a notebook.
+And then we looked at some examples. I don't remember if we did this or not, but we read new data. So that's the pokemon data part. And then we look at the excel spreadsheet, and we do some filtering on the spreadsheet,
+and this is advanced filtering because we actually look at columns, we aggregate columns, we combine indices, we create new columns. We move that column to the beginning. So we do a lot of transformations. Now I wanted you to have. I just spend some time exercising this. I don't. I don't expect you to learn how to do these things by heart, like I'm not going to go to your midterm and say,
+Create them and call them into that. You won't necessarily. Remember the commands. It's not important to remember the commence by heart. You can always google them, you know Pan, that's Pre, and you call them. We'll see how to do that.
+I don't think you'll ever go to a job interview, and somebody will ask you how you create a new column with Pandas. That's not really important.
+They'll ask you more qualitative questions.
+But these are some examples that I want you to go through. So if you didn't do this because we didn't get to this point. Please go home tonight and run these and understand what is going on like here. We're taking only columns from four to ten, and all the roads from all the other columns. And then we're summing.
+We created it
+just by saying index of total, even though the total Isn't. In a data frame we created a new column is equivalent to the mutate command in our
+user avatar
+Unknown Speaker
+00:36:45
+it's.
+user avatar
+Dino Konstantopoulos
+00:36:46
+So here I create a new transformation of columns. I take the last one I put it there. I I concatenate columns like this is what i'm doing here.
+I'm concatenating the columns,
+and then i'm saving it to excel, so I can have a new excel spreadsheet. We can filter things
+we can group by. We can either group by by count or by average.
+These are the same transformations that we saw in R:
+Okay. And then we can directly
+we can directly um
+plot directly from a data frame,
+and we can specify what kind of plot
+you can go to. Pandas, say plots, different kinds, and find what kind of plots you would want to look at, because colors and bars
+you can create a lambda function to create new scores.
+So these are examples of transformations on Pandas data frames.
+So, um, please look at this. If there's something you don't understand what your kids. I don't understand how this this works or that works. But be proactive about your learning. Don't say, Okay, give you some examples, so you can exercise what you already What? What? The theory that we learned.
+And then we looked at how you can do some statistics with pandas. So the histogram How you how you plot histogram? No. Actually, we didn't see this. We loaded data set at the data set that's built into a library called Stats model. So stack models are models and statistics,
+so it's. It's.
+It's a very used library. It includes a lot of important data sets important in a sense of They're paradigmatic or some of the theory.
+And then we look at that, we of the pixel spreadsheet.
+And then we plot.
+So first we have some fractional fractional months.
+Don't we look at,
+and then we look at some statistics for the sun activity
+just by the the describe on that pain. This column will give you some statistics. It's not as informative as a histogram, but it tells you the minimum, the maximum of standard deviation,
+and then plot
+where you specify X and the Y that you want to plot, you can see the some activity, and if you look at the sun activity you.
+It's very reminiscent to to be the three-dimensional example that I gave you because it looks like it has the
+two periodicities right the long scale
+and in the short scale, and, in fact, the sun usually goes through cycles When the dynamics of the sun changes. It has two two main cycles, like every ten or eleven years in every every month.
+So you can do. The autocorrelation plot will show that you have the
+two sine functions. Look.
+You can also also get the frequencies. It's a complicated to get the frequencies it's called a lumps cargo.
+It's the scale
+very a very rich library.
+Then we look at the pokemon data as well, and we look at plotting one one column with respect to the other,
+even though there's also a lot of there's there's a lot of,
+and very often, when you create mouth you may want to remove these outriders, because outliers are very often errors in the experiment in the noise
+of how you conduct your experiment or in your data set. And so sometimes you want to remove the outliers.
+So let's look at this data set the same data set as this, but only for good players. So where the speed and the horse horsepower this can be, horsepower has to be something else. Hp. Or I don't know what Hp. Stands for. Hard
+user avatar
+Unknown Speaker
+00:42:32
+of phones.
+user avatar
+Dino Konstantopoulos
+00:42:33
+I don't know Hp: but these are combinations of players. I have higher statistics. So I I create a new data frame, and I called it the Data Frame for good Players, Df: under Score G.
+And we look at the F underscore G. And then I plot, attack versus defense,
+and then I plot um.
+This is attack versus defense for all players, and this is a tact versus defense for the good players. So the good players are in blue. So you see, the good players have a little bit more,
+have a lower standard deviation. They look more like each other because they're all they're all good players. They're strong players, whereas all the other players have a wider standard deviation and many more outliers,
+right? All these points are called outlers,
+and so I would. I may want to. Outliers, can skew my data and make it more difficult to build the model, and so I may. I only want to remove the outliers. So look here, I say, I use the capabilities of Panis to remove the outliers, i'm saying,
+Just look at the ones who are attacked minus attack of mean is bigger than
+than two times the standard deviation. The
+one point nine, six times the standardization. This is your standard definition for outliers
+standard deviation is where the real mass of your data is. Two standard deviations is where you think most of the important data is anything above to standard deviation is usually considered. Now,
+these are the wings of your distribution, the ones on the right and on the left.
+You're in two dimensions. If you're in three dimensions that it's all around if you have a three-dimensional plot, the
+these are the people the borderline, the borderline cases.
+So I say it's true or false, depending on whether this point is not an outlier or not. And now I can filter by outliers.
+Now that I have this, I can filter by outliers,
+so these are the outliers. This is the attack for outliers, and this is the defense for outliers,
+and I can plot it, and these are the points that I have to remove the
+and then the known outliers, which is the opposite, where the C outlier is equal to false, will give me the the center, the center behavior. So you see, I removed this from here. These are my outliers, and this is my general behavior.
+Now for my general behavior. I can try to fit. I can try to fit a polynomial
+so because it didn't look very.
+I'm using new pi to do this interpolation. So this is a machine learning
+a machine, learning the data.
+I'm trying to learn the general behavior of the data. So I can do a prediction, because this this data point exists. So I can actually look at what the next Why is. But what if I want to predict what happens here when there's no data.
+So i'm using interpolation that the interpolation built into a new pi to actually do this,
+and when you do that you will actually build. This is your quadratic two-degree polynomial that captures the essential behavior of your data cloud.
+So it looks like it was a two-degree.
+Ah! Behavior between the X and the between attacking defense looks very linear so the linear correlation the Pearson correlation calculation I should get a high value, and so I verify whether that's the case.
+I can do two things. I can either import Pearson correlation from some Pi dot stats, or I can use the built-in correlation. So if I compute the person correlation, look at zero point five, which is kind of in between no correlation to zero and correlation, which is one.
+So I call this medium medium linear correlation. So if somebody looks at this data set and asks you is attacking defense correlated, you say, Yeah, it's kind of medium linear correlated.
+Okay. So so this is. This is, I
+fan statistics, because this is both statistics and machine learning. Right? We we study the statistical behavior of the data set, and we made the power of,
+because what new Pi did to actually fit the data is something very classical, It tried many different two-dimensional functions curves, and it tried to find the one where the distance between the data point on the for every x is minimum, so it can. They can interpolate. They can join the points with A with a function in order to do prediction. So you see,
+machine learning, And this is why I have This opinion is really kind of advanced statistics.
+It's not any other science. So if you learn statistics,
+Okay. So so that's my Pearson correlation. Or if you don't want to use the one from side pilots, that's a to you, cypies another one of these libraries that includes a lot of math formula. So very often, if you want to find some kind of coefficient, you say, okay, you look at this column correlated with this other call,
+and you plot that function. Y. Equals X squared It's definitely quadratic, right? And you try to say, Okay, what's the linear correlation between Y and X squared. The new correlation will be very low, because there is no linear correlation for the quadratic.
+And yet there's a perfect relationship between Y and X perfect relationship,
+Y equals X squared,
+So
+not everything is going to be linearly correlated. But we love linearly, correlated stuff, because that's the simplest kind of stuff.
+And This is true. If you look at this cloud of points, it's kind of kind of linearly correlated.
+But I, Dr. My dairy and a single hump.
+It's not a Gaussian, but it kind of looks Gaussian right?
+The drama dairy has two humps, the
+and they they they actually we need water to live, and It's just It's just an amazing, You know about It's where a number show on Pbs that showed um um how hipaa part time. I really dictate the dynamics, the ecology of um um of of African, of the African landscape. Everybody depends on the headquarters to to build river ways, of course, now, with global warming They they are
+not very happy.
+But in any case I just remember about hippos because I talked about camels.
+Um! You can talk about the standard deviation on this camel.
+So there's nothing here. We do this here and here.
+So you have to be very careful when you use statistical.
+So if you have distributions that are too hunt like the amount of gifts you get. You get every year, which is on your birthday, and on Christmas, or whatever you know, whatever your culture maybe has three big holidays. I don't know. Um. Those are not standard distributions. They're very strange distributions.
+They have many modes. They have many different, many
+places where they have a lot of maxima. So be very careful when you use concepts like the outlier to compute outliers. You have to depend on standard deviation to find the ones that are,
+because the standard deviation here makes no sense.
+You're going to have to do something different.
+So it's important to look at definitions, but but make make sure you understand what the definition applies to the definition that we used here for our buyers really depends on the single hum data set a data set where most people, the average of most people have one behavior in the middle. There's one average.
+The camel has has two different modes of working. It has essentially two averages, not one,
+not the way he did it.
+Okay. So you see, we're learning capabilities and Pandas, but also statistics at the same time.
+Then, of course, we can build, we can. The histogram is built into is built into
+Okay. So this is histograms. This is a new section. Shorthand for histograms is, and here are you, seaborn?
+And so you can see the general histogram of the attack and the defense distribution. Does it look single, hunt? Yep. It looks in gloves, which means you can do the kind of analysis we did so even before you look at the analysis. You have to look at the histogram to make sure it has a single hum behavior, because if you look like a camel,
+they didn't look at the histogram. This is where the histogram is the most essential thing to look at in data science. The first thing you compute when you have distributions. When you have an excel spreadsheet that has many columns,
+look at the histograms.
+So, um
+oops,
+I um I included this, but the the problem with this is that it doesn't it doesn't really work. So I think I removed. Did I include this in your or did I remove this part
+in your notebook
+it's included.
+Yeah, remove it, you know why? Because the cluster grown it doesn't work anymore.
+It's used to work with an old version of pain. This, but it doesn't work with an inversion. So I made it a mental note to remove it, but I forgot, so just remove it. They just skip it. So
+the Ix got removed. I. X. Used to be a Pandas capability to compute an index, and they removed it. So it stopped working. So cluster. Brown was kind of nice because it gave you different colors. But
+forget just to just remove this section. This shows shows you the section. What I wanted to show you. Is it important to you? Explore your data before you apply formulas? And this the clust of grammar allowed you to replace data with colors?
+So you can see kind of colors, and there's probably a new tool. But I just don't know what it is. So just to skip this section
+um, and Then let's go into a tiny bit of machine learning,
+because there's there's we already did some machine learning with with, with with new pi right. We found the interpolating function that the crosses the the cloud of data points that's machine learning.
+You found a formula for your data. That's exactly what machine learning is finding a formula for the data
+when we use more advanced machine learnings, machine learning algorithms like Maybe you know, the tensor flows out there. Then what you do is you typically use, or you use a tree to create
+more complicated surfaces in many dimensions, which is kind of function. But it's the way you define. The function is using a tree,
+and the tree are the neurons, the artificial neurons in the When you build your artificial neural network, you
+that it's also how your brain works. So your brain,
+whose main goal is to predict the future so you can live a long, happy life. You,
+The main function of your brain is to look at what happens to you,
+your observations, and to model these observations as functions.
+So you can use these functions to do predictions.
+Of course, these functions are nothing more than high-dimensional y equals F. Of X's, where the x instead of being a scalar is a vector that has many dimensions.
+What happens if Um, I have a friend who needs to go to the hospital, but I also have a class. So I have a class. I need to go to class, but my friend needs me. Do I go to class, or do I Do I go see my friend? You make these decisions about what's best to do for you in the future, and you make it back path based on past experience.
+So you build y equals F of X functions in many dimensions. And the way you do that is you use
+user avatar
+Unknown Speaker
+00:58:28
+you use a network
+user avatar
+Dino Konstantopoulos
+00:58:30
+of neurons to build a high-dimensional surface, but it's not very different from what we did before we built a Y equals F of X. It's just a different way of building it, and in many dimensions.
+So I want to show you a little bit of machine learning with trees
+um, which which also showcases the but in abilities of Pandas to do things so once again. This is predicting predicting things, and we'll get back to predicting Time Series. But it's just so easy to do, and so immediate that it's it's worth looking at immediately. So let's let's
+open this excel spreadsheet,
+and let's see what it looks like. Let's call it New York City,
+and let's look at the the first few rows.
+What a certain variable is today can we find another variable tomorrow that may be correlated with that variable.
+So we're trying to find correlations between the different columns
+data. So I have. I just accepted a new student that wants to do a master's thesis that wants to look at, be able to predict
+lake effects known in Chicago. So in Chicago they they get some snowy days, and sometimes they get tons of snow that's called Lake effect snow, but because dynamics of snow on, on, on the on, the on the Great Lakes, like like Michigan, and like Lake Michigan, is what it was like to Chicago.
+So what they do is they use for a hem of the student? He's going to use a look at a satellite data that looks at the
+color maps above above the lakes, to predict whether it's snowing, snowing above a lake, and also a meteorological observations around around the lake shore,
+and try to find a correlation to see if he can predict whether there's going to be lake Effect snow the next day, based on the pattern of snow on Tom on the Lakes, who's trying to do this kind of machine.
+And so we're going to do the same thing here with with a simpler data set with just meteorological data on the Central Park. So we have different variables. I want to do prediction the next day, based on what we saw today.
+So I want to show you the entire process of how you set up an excel spreadsheet to do,
+to do um to to do a prediction. This is more complicated than our cloud of points that we saw before right before we had a simple y, one dimension x, one dimension, y equals F of X. We have a cloud of points. Find the Y equals F. Of X.
+Assume quadratic behavior, and then find that it's actually similar to a line. So that's kind of simple here. It's more complicated, but we don't have two dimensions. We have twenty dimensions.
+How do you do? How do you? How you build statistical models in twenty dimensions more complicated.
+Right?
+So okay. So this is what this is what it the head of our data set looks like. So everybody is able to run these right
+strip and white space. Um
+any any events that are not applicable, but it has, it does in a development of space. So all of this is part of what we call mediate transformation that makes our data set easier to to read. If you open the excel spreadsheet, then you look in, excel spreadsheet. You will find some strange values, for example, not numbers, right?
+user avatar
+Unknown Speaker
+01:02:55
+We always have to work with numbers.
+user avatar
+Dino Konstantopoulos
+01:02:57
+We don't. We don't work with anything other than numbers, even in my Nlp class, where we study words and we translate words, and we do that. We have to translate every word to a number before we can work with it.
+So that's a little surprising. Maybe you think of that. We're processing language. What do you mean, Professor? We replace awards with with vectors. Yeah.
+Okay. So now let's see how we can. We can build a model in order to do prediction.
+So what we want is, if we have this cloud of data points
+user avatar
+Unknown Speaker
+01:03:35
+at this point of the at once, they're the ones, and then
+user avatar
+Unknown Speaker
+01:04:04
+it's.
+user avatar
+Dino Konstantopoulos
+01:04:06
+But but we're interpolating right. It's the same thing we did in one dimension, except now we're doing in many dimensions, we
+and what we're going to use, We're going to use a random forest. Algorithm So the random forest algorithm is your friend Whenever you want to do machinery, prediction, or we're start with a random forest because the random forest is not parametric, because no parameters to tune either work. So it doesn't work, and if it works you're done no more work required to do you build a good model,
+so you always start with Iranian force is an ensemble over a tree. So this is called a decision tree, and then you put a thousand decision trees together, and that gives you random forest.
+So yeah, I know It's It's a little bit fast. We're not there yet, but it's so simple, and it's good to see it. Now, it's an example of how to work with Pandas. So that's why I like to give this example.
+Okay, So let's do some really advanced machine learning juju And let's import a random force regressor from psychic learned our ensemble.
+Okay, what we're doing like very complicated stuff, right? We're using. We we talked about So far we've only talked about you and and Pandas. And now i'm doing stuff from Psyche. Learn?
+Okay, So it's It's a little bit advanced, but I think you can handle it. So let's import the random force. This is a machine learning computational model, and we'll important that. And we're also importing the train test split. If you have, why am I pointing to a split? Because whenever I build a model,
+have a data, I want to build a model right? I want to separate my data set by.
+Take, maybe only eighty percent of my data. Eighty percent of my rows and build a model based on these eighty percent.
+They say I have a hundred rows based on eighty rows of my data.
+Why am I saving twenty rows for later, because these twenty rows are going to help me
+evaluate. How good my model is,
+user avatar
+Unknown Speaker
+01:06:06
+because what i'm going to do is i'm going to build a model based on eighty rows,
+user avatar
+Dino Konstantopoulos
+01:06:10
+and that's going to give me a function. Y was f of x,
+and then i'm going to try to predict the value of y for every x in my twenty in my twenty rows that that I set aside, and if I get predictions that match, what my rows say the y should be, I'll say, yeah, my mom's pretty good.
+But if I get predictions that don't match these twenty rows that I set aside, i'll say my model didn't work. Let me let me go back and start from scratch and build a more complicated algorithm to build my model.
+So I can actually evaluate for doing my models again. Okay, all right. So i'm importing a model. And i'm importing a capability to split my data into a test dataset and a training data set
+the test data set I will set aside for for after I've created my model and the training data set, i'm going to use to learn to learn my function.
+Okay, Are we ready?
+Okay. So so these are all my distributions.
+These are all the columns. These are all the variables I have.
+So I want to use one of these
+or many of these to predict another one
+more specifically. I want to do something trickier. I want to use one of these or many of these
+to predict a column, not for today, but for tomorrow, because I really don't care about today. I want to see if I can predict the weather for tomorrow,
+his for today. I can just reduce the to measure it.
+Okay. So how are we going to do all this.
+I'm going to do something that's computationally tricky, but it involves pandas that will make things very, very easy. I will create a new call
+by shifting it down by minus one
+by minus one row. So this is.
+I just created the same column with the same name. Okay, So it has the same name mean do Point F. We do point F. But you can see here, this is thirty, four the day after.
+Right. You see, this
+This is the transformation that i'm doing. Suppose this is my excel spreadsheet.
+Right? So I have this spreadsheet. I'm going to draw a spreadsheet. So this is one one column,
+and then this is another column, and
+and then this is another column,
+so I have many columns here. Right
+then I have my I have my rows as well. So let me build well. Let me build one row
+and oops,
+and let me create many different roles.
+So this is uh one row,
+and this is another row,
+and this is another row,
+and this is another row,
+and this is my final row.
+Okay, and and let's say, Let's say that I want to predict this column here. I want to predict this last column here. So i'm going to color it.
+Whoops.
+Okay, I want to predict this column from these other columns. Here, let's say, I want to predict this column from every other column, from from all of these columns. So each one of these columns is going to be a different independent, variable, and I want it to help you predict the value here.
+So what I want to do is, I want to take these distributions to predict this number here,
+but I want to do it for the day, later
+for this day for tomorrow.
+So what i'm going to do is i'm going to take this column from Pandas.
+I'm going to copy, and i'm going to shift it down short, shift it, shift it up so
+like that.
+So now,
+instead of predicting this column here, I want to predict, instead of predicting this value here from these values. I want to predict this value here, which is the value for tomorrow,
+because I want to do real meteorology right?
+So that's what That's what i'm doing. I am using
+these value.
+I'm using these values here in order to predict not this value,
+but this value.
+And in order to do that, I just shifted it up in order to predict this value. This is the same thing as this value here. Right? I want to predict. I want to predict this value
+right?
+So what I did
+it is
+so. What I did is I took. I took these columns,
+and I shifted them up,
+and I brought it back at the same level,
+so that I can erase this
+and bring this in groups,
+and instead of putting it here, i'm going to put it there
+user avatar
+Unknown Speaker
+01:12:12
+things are right.
+user avatar
+Dino Konstantopoulos
+01:12:13
+Yes,
+okay. So this is something that we do all the time, and this is represents the shift by one which is built into built into pandas,
+He:
+Okay. So now that you saw this,
+I'm going to. If you look at some of my columns, some of the columns here are,
+come on.
+There are
+some of the columns here have to have text, you see. Let's say rain. They say fog, they say snow. We have to convert these into numbers.
+You tell me that I have rain or fog or snow,
+right? So if I have weather conditions and have six different weather conditions, i'm going to turn this categorical column into six columns of numbers with a one. If there is for the column rain, if there is rain
+that's called creating dummy columns.
+It's
+great dummies. In fact, the the the Api for doing this is called it's called pain, as create dummies. So this is what I do here get dummies,
+and that get dummies is going to replace these columns with. You. See events, fog, events, fog and rain. The events fall, rain and snow, and then's fog and snow events, rain, events, rain, snow, because these are different categories.
+Four green snow is with one category. Yes,
+the what they do is on an item,
+this
+Yes, so you said uh
+user avatar
+Unknown Speaker
+01:14:52
+that you may now store or involves more credit with your works.
+user avatar
+Unknown Speaker
+01:14:58
+This is the rescue button
+user avatar
+Unknown Speaker
+01:15:00
+it's.
+user avatar
+Dino Konstantopoulos
+01:15:00
+This is the training part?
+No, no, what? Why is it the wrong answer? What I'm trying to do is, i'm trying to predict the value for tomorrow,
+not for today. So i'm going to take. I'm going to just take my column. I'm going to shift it up, so it becomes the value today because it's easier to manipulate
+user avatar
+Unknown Speaker
+01:15:31
+the data function rate.
+user avatar
+Unknown Speaker
+01:15:33
+So Jim,
+user avatar
+Dino Konstantopoulos
+01:15:39
+uh like today is a correct whether uh answer is correct or not using the new boxes.
+So I I didn't get this like
+I think you are
+like the uh, the shipping of the data upward.
+No, the shifting of the day upward is the first step because I want to. I'm telling myself that I want to predict something based on these four columns, but not for today, but for tomorrow.
+So i'm shifting all the data. I'm creating a new data set. Now, the new data has a new column where I've removed the all the other, the other the other column that I have before, and I and then re it this way. I did one one one one day shifted upwards.
+user avatar
+Unknown Speaker
+01:16:23
+Are all these independent?
+user avatar
+Dino Konstantopoulos
+01:16:25
+Well, the there I I don't know they may be correlated
+right along. What i'm saying is, i'm going to want to predict. This is going to become a dependence, variable and
+based on all of these independent variants.
+That's what my task is.
+And i'm gonna say, I have no idea how to do that, hey? Random force. Algorithm help me do that.
+So I just created a new data set.
+You can If if this sounds complicated to you. Just okay, what I want to do is based on these columns I want to create. I want. I want to be able to figure out the column. The blue column that's right next to forget about the shift.
+The shift makes it a little bit more intuitive. What i'm trying to do. But if this makes it complicated in your mind. Forget about the ship. I have ten columns. I want to predict the eleventh column that's it for the same day.
+It's not not very different.
+Okay, So what we're gonna do is we're going to create our dummy columns. So now our dummy columns have ah event, snow, events, rain, snow. It used to be just an events column with multiple values. And now I have a new column called Events Rain with the one when it reads.
+user avatar
+Unknown Speaker
+01:17:45
+Okay,
+user avatar
+Unknown Speaker
+01:17:46
+Okay.
+user avatar
+Dino Konstantopoulos
+01:17:48
+So This is what this is the entire transformation. First of all, I'm going to.
+I'll create. Make sure that
+I want all my valid columns, so i'm going to drop. I'm going to create a dummy. Two variable that drops any column that just has data that I don't like.
+And then what i'm going to do is i'm going to remove the last observation here, the minus one, because when it's one column and i'm bringing it up it's going to create a missing location, so i'll remove the entire last row.
+Then i'm going to shift that column by one one up. So this is my new data set that I call y.
+So this is a new data set. If you don't, if you
+you, if you, if you, if you don't like the how, why create this new. Why just stay with the same listening data set.
+So this is this is my data set. I call. I call this X and the column that I want to predict. I call it Y. The.
+So I removed from my data. Set the Y column. I did this. I did this here with valid
+right. And I did this here with a list comprehension, because I don't want to add the column. I want to predict into my independent variables, because then there's no job to do the prediction that comes already there now.
+So I have my X and Y. Notice that I use capital x and lowercase. Y. Why do I do it? Because I have many columns. So when I have many columns I immediately add capitalization, large, variable for my data, and I only use a lowercase if it has a single value.
+So So so that's my data,
+and I look at my X's: so. You will see the X's Don't include events right? Because that's a column that I want to
+don't include. Oh, sorry. The The column that I've decided that I want to. That I want to determine is
+a mean do point F.
+That's a column that means becoming my dependent, variable and mean. Do point F Doesn't. Appear here
+right? You see there is no mean dew point, because I've removed it from X.
+But it's in. Why, that's the column that I want to predict.
+Okay. So now, let's do the the splits into trained trend data and test data.
+I'm going to use a train test data and i'm going to call my ah training data. X-ray,
+Because if I do that and it works, then I actually have a successful learning. Algorithm
+Okay, So this is just I name my variables. So that it's intuitive. What I'm trying to do. Train test split. I forgot to import it.
+Okay,
+Okay. So now we're ready to learn
+user avatar
+Unknown Speaker
+01:21:47
+two lines of coat.
+user avatar
+Dino Konstantopoulos
+01:21:50
+I create my learning, algorithm and I fit it.
+Risk their training there.
+See how simple it is.
+The psychic, learned random force regressor expects
+your independent data to be multi-dimensional
+and your dependent data.
+But but you in this case it's one dimensional
+But this definitely needs to be multi-dimensional right? So it expects. It So if you have a single column here,
+and you wanted to predict one column, one other column,
+you have to turn this column into two-dimensional column.
+user avatar
+Unknown Speaker
+01:22:46
+Are you doing this
+user avatar
+Dino Konstantopoulos
+01:22:50
+when you reshape Api right, remember the reshape where you add another variable, and you create it into a two-dimensional. That's why the reshape of the acronym pi that I taught you so important because you have to conform to the Api of the fit function
+two or more columns,
+but no such restriction on the second argument.
+So let's go ahead and learn. Look one, call just one call,
+and then and then we're done,
+and then to see if our model is good. We just call the score Api on my test data, and if I get something above seventy, five percent,
+if I predict three over four of the remaining test aid. I'll say I have a good model.
+So let's run the score on the test data, eighty, six percent. That's good.
+Okay. Now, do I want to do predict predictions on the test data? Just say, predict on the test data,
+and then look at the values. And that's the devices. You predict that you look at these values. They're very close to the values that we created when we, when we remove the data set and we put it one because we want to predict for tomorrow.
+So this is my prediction. My prediction is always a new pi array. Notice that it's not a Pandas data frame. It's a it's a new pi array. If you look at the type, it's a um.
+So what are my predictions from zero to ten? This:
+let's plot. Let's plot my predictions.
+Let's. Um.
+This is a series.
+Let me convert my test series into a new pi array by taking the values and let me plot the predictions on top of the on top of the real data.
+You'll see It's a pretty good match
+and let me do the opposite the real data on top of the predictions, because if i'm using two colors, and I want to see if they match, I have to predict one on top or the other both ways.
+And I the kind of match
+which is corresponds to my eighty-five percent prediction.
+Right?
+So so um look, I did. I did the machine learning. I did it with two libraries. I did it with new pi with one, one one x and one y with one dimension, and I did it with with Pandas, where I had many, many columns and and just one Y.
+If you look at your predictions you will see that they're very close, but
+not perfect. But look, I predict the seven hundred and eighty, six predicted fifty, three, it's a forty, two, it's pretty good,
+and not only that not only that I can also use features, importance, so the random forest will tell me of all the columns that they use to do the prediction which one was the most important
+in order to predict the mean dew point for the next day. Well, it's this one with a percent importance, so the minimum temperature is the most important variable
+in the data set to predict the dew point for tomorrow.
+Wow! Isn't That amazing.
+That's what a random forest algorithm which is an ensemble of the decision trees,
+and that's just built into. Okay. We imported it from psych it learn. But you you had all the tools. You needed to do all the transformation, And you can do this for time series, too. In fact, we'll We'll try to apply this in Time series when we study Time series. If you see how simple it is.
+The entire learning operation was just two lines of code,
+create the algorithm train it?
+And so I could learn all algorithms like you might have the same Api pick the algorithms you want to learn with because of different types.
+We just feed it to the data to the training data
+and then score it for the test data.
+But you know this is you people look at this and they go. Wow! And then people look at interpolation. They go. Okay, that's not why I do this. I do this as a kid,
+but it's the same thing.
+You're doing interpolation in both cases. And just in this case the interpolation is kind of more complex in your brain, because you're not used to interpolating ten with ten variables,
+right? But it's an interpolation. It's they're doing the same thing with different techniques. They're trying to build a function
+that yields the data the best
+user avatar
+Unknown Speaker
+01:27:47
+in the way the way decision trees
+user avatar
+Dino Konstantopoulos
+01:27:50
+and so random forest work work is by saying, Okay, what happens when I get this? It's like you going. Okay, I want to predict the weather tomorrow. Oh,
+if it rains today, it's probably gonna be sunny tomorrow. It's It's a little bit true, for Boston. Boston is very like if it rains one day, probably not going to rain the next day. It's the opposite of like London or Paris. You go along in the pairs if you raise one day it's probably going to win the next day, too,
+in Boston. It's the it's the opposite. If it rains one days for i'm not going to worry the other day. So you build these trees for you. Oh, the rain yesterday. No, it's probably going to be.
+It's probably going to rain tomorrow, or something like that. But that's the kind of decision trees you build, and that's what the algorithm does it builds these trees. It's a bunch of If, then else clauses
+just the difference between the rental forces and does many trees together and averages their behavior. Now,
+wow, pretty cool. Right? Two libraries, and we're already doing machine learning,
+and we did it for each one. We did it for noon pie, and we did it for pandas.
+Once you learn basic statistics. You can do very advanced stuff
+as long as you know what you're doing, and you're careful.
+Okay. So we're done with Pandas and numpy,
+so I hope to have at least half an hour, but only have twenty minutes.
+What I want to do now is shift to statistics. Now that I've convinced you that statistics is the basis of everything. Let's study writing, python functions and statistics at the same time. So please open your
+um probability. One notebook.
+Open your probability. One notebook you,
+he said.
+Let's learn how to compute probabilities
+and counting
+It's a
+So remember when I did the introduction to this class. I told you that there was a French school with Laplace and three,
+and all these people that that that played games of chance, and they wanted to help computing probabilities. So these are the people that kind of introduce the basic mathematics of of counting. So what we're doing is we're counting, and we're going to try to do the same math. But instead of actually doing math, we're going to do it by programming.
+So we're going to be good at writing python functions.
+So we're going to learn how to do probabilities. So we're going to learn things like, What's an experiment? What's the outcome? What's the sample space. What's an event? Ask you? What's the probability? If I flip a coin that I get a heads? You're going to tell me It's
+user avatar
+Unknown Speaker
+01:30:56
+I. Then
+user avatar
+Dino Konstantopoulos
+01:30:58
+what is it?
+Point five? If I tell you that I flip two coins and ask you the probability of flipping of getting two, two, two, two tails
+zero point two, five right, because it's zero point five times zero. Point five, because I have one event followed by another event. If I tell you that I roll two dice.
+Ask you What's the probability that I get snake eyes, or a one and a one the
+user avatar
+Unknown Speaker
+01:31:26
+a betterism,
+user avatar
+Dino Konstantopoulos
+01:31:27
+one over thirty, six, right? Because There's thirty, six different outcomes, six for the first die and six for the other die. So a total of six by six or thirty, six, so it's one over thirty, six. If I ask you what's the probability that I throw it through two, two dice,
+and I get something that is, and I sum the sum of the faces, and I get something that has a sum of three.
+user avatar
+Unknown Speaker
+01:31:55
+What are the different configurations of the dice that give me a sum of three
+user avatar
+Unknown Speaker
+01:32:00
+augmented
+user avatar
+Dino Konstantopoulos
+01:32:02
+one and two. Is that the only one,
+two, and one right? So the probability that I get a one and two is not one over thirty, six. It's
+it's two over thirty, six, right? Because you have to sum them so. So the probabilities you multiply, or you sum you multiply when one is a is, is, is is is the next event after another. So they follow in in a series, and you add, when it's: When you want to count all possible totals.
+So So now you know the basics
+of probability, theory, and and the math, you can do it by counting by writing functions. So this entire notebook is is working with probabilities. So let me ask you this: since we already played with with with heads and tails,
+What's the probability that someone in this class shares your birthday.
+user avatar
+Unknown Speaker
+01:33:02
+It's a
+user avatar
+Dino Konstantopoulos
+01:33:04
+So think about yourself, me. What's the probability that somebody in this class has the same birthday
+as I do.
+What do you think it is right? Right? The function down that computes it.
+So each each person has
+a birthday probability that it's a specific day of what? There's three hundred and sixty, five days in in a year, right? So each each person has the probability of having one birthday. That's one over three, sixty, five,
+So if there's you in class, and only one other person there's only two. There's only two students in class, you and somebody else, and ask you what's the probability that this other guy in class? This other student in class has the same birthday as you. You'll say
+one over three hundred and sixty, five right if there's two. If there's three students in class, you and two other students, and as you what's the probability that somebody else in class has the same birth as you.
+It's like the dice right, two, two, two possibilities, two over three, sixty, five, right and so on, three over sixty, five, et cetera. So write down the function that actually says probability of sharing, so say death.
+We're writing function. Now, this week is entirely your training. Your python function writing abilities, so shares
+my birthday,
+my birthday, and it's a function of the number of N students in class Give me what the result is
+return.
+What is it
+user avatar
+Unknown Speaker
+01:35:04
+that was happening in the Midlands?
+user avatar
+Dino Konstantopoulos
+01:35:06
+N. Divided by three hundred and sixty, five right
+done
+minus one. Yeah, if you, if you want to include. If it's a told people in class and minus one is better, correct and one in this form.
+Okay, Now let me ask you a related question:
+What if I tell you, I ask you another problem. What's the probability that two of you in this class have the same birthday?
+Is it the same, or is it a different probability?
+This is related to the fact? If I ask you, what's the probability that you win the lottery twice? Versus What's the probability that somebody out in the world wins the lottery twice? Is it the same
+right? So now, right right down the function here
+that we call this um um.
+Two students share same
+birthday of n, and tell me what the function is.
+Let's take the next three minutes, so you can actually write the function. Think about this, and tell me what the code is.
+We agreed. It's probably probably not this right, because you told me that the probability of anyone winning the lottery twice is not the same thing as a probability of me winning the lottery twice.
+So let me introduce you to the most important trick in in probabilities. Probability theory is sometimes a lot easier to compute the opposite.
+What's the probability that some that that no two students share the same birthday
+right? So if one student has one birthday on one day, and there's two students in class, What's the probability that that the other student does not have the same birthday.
+user avatar
+Unknown Speaker
+01:38:29
+It's
+user avatar
+Dino Konstantopoulos
+01:38:29
+yeah, three hundred and sixty, four, or three hundred and sixty, five right and now two days. These two days are taken. Let's bring another student in class.
+What's the probability that the third step that third student does not have the same birthday as the first, two,
+three, sixty, three, because now two days are taken. So we bring in the the third student, and now and and now two days, and now three days are taken. We bring him the fourth student. What's it? Probably that the four student does not have the same, but probability as the first three students,
+three hundred and sixty, three, right? Okay? And then suppose we bring n students, and that's a total number.
+Now we have the formula. And now we want to compute the probability that two students share the same birthday, which is one what you just computed right now.
+Okay. So now you know the code. Write it for me. Write it from you. Write the code, right, the code where they go. Come on, come on, right. You have two minutes.
+You already told me the formula, so it's just a matter of writing it.
+So we said it's something like one minus three, sixty, five times three hundred and sixty, four times
+three hundred and sixty, three times all the way down to times
+times three hundred and sixty, five minus n to the number or minus n plus
+one right. If we want to remove the person like. Sorry. What's your name like? What Ani Root said. So we want to remove that person, and we went to the divide this whole thing by three hundred and sixty, five to the power,
+three hundred and sixty, five minus N.
+No sorry n minus sorry. Uh
+yeah. Three hundred and sixty-five minus seven.
+Right? So how do we? How do we write that in a good python right this week we're learning how to write functions? So the way we write this in the python just go here and double click the cell, and this will give you the solution.
+So this is how we write the fraction,
+so take it and paste it out here,
+and that's your code.
+So we also have to import reduce from fong tools. Remember, we had we actually trained with Reduce um a little bit before. So we're going to have to import these two imports. We then put them here
+and now we'll say this is: the two students share the same birthday.
+So now we have the two functions, and let's say there are twenty three students in class.
+So let's run this with twenty-three students.
+So here it assumes that we have ten people in class, Right?
+Okay. So this is for ten people. Okay. So because we are ready to work ten. So this is this is actually just doesn't. Take and doesn't Take the argument, and this takes no arguments. Right? So for ten people in class. These are the probabilities. So homework for Thursday computed for twenty three. So take this and and make sure that has an argument modify this function. It tells what the probabilities of the string
+share birthday.
+You share a birthday with another student.
+That's better is a point.
+See you Thursday?
+No, no, the
+October Yes,
+no, we have. We have a class on Thursday. The one that's canceled is
+so. We have to go one more week, and it's this one, and we're here. So we
+Yes,
+user avatar
+Unknown Speaker
+01:43:44
+Well, we place our classroom,
+user avatar
+Unknown Speaker
+01:43:53
+so I don't know if it's done,
+user avatar
+Dino Konstantopoulos
+01:44:02
+which class is that?
+user avatar
+Unknown Speaker
+01:44:03
+No, I mean they, you know they touched on the class. Um, What for? The
+user avatar
+Dino Konstantopoulos
+01:44:09
+thirteen?
+Yeah,
+Because it's a holiday. Yeah,
+if it's a holiday, there's no makeup.
+user avatar
+Unknown Speaker
+01:44:27
+Oh,
+user avatar
+Dino Konstantopoulos
+01:44:29
+okay,
+so classes that I cancel because of a holiday, are not made up.
+So come back with this function written where it takes a variable N. The number of students in class, and I want the value for n equals twenty three, and we'll talk about this on Thursday.
+Okay. See you Thursday?
+No. The question when the right time doesn't matter
+only only for the for the second, second,
+with magic and badlands of humans,
+it's Magic and African African coach.
+Okay. So I have also built this as your it's from what's so
+understand me to note. So you mean that?
+user avatar
+Unknown Speaker
+01:46:58
+Oh,
+user avatar
+Unknown Speaker
+01:47:01
+yes,
+user avatar
+Unknown Speaker
+01:47:02
+I yes, that's a good question.
+user avatar
+Dino Konstantopoulos
+01:47:06
+And then about the aws.
+Yes, uh! What should I choose right.

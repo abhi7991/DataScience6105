@@ -1,0 +1,745 @@
+user avatar
+Unknown Speaker
+00:07:53
+It's
+user avatar
+Unknown Speaker
+00:07:55
+He was raised in the
+user avatar
+Unknown Speaker
+00:07:57
+the
+user avatar
+Dino Konstantopoulos
+00:08:27
+Let's start.
+Okay, So let's do a recap of what we've done so far. So we spent the first week learning how to program. We did it with a different language.
+user avatar
+Unknown Speaker
+00:08:40
+And then we also introduced two libraries in that language, remember data player and Gg. Plot.
+user avatar
+Dino Konstantopoulos
+00:08:47
+And so today we're going to. Since we shifted to Python. We're going to introduce a a new library called a Pandas. That's the equivalent data plier, which is a library that you use
+to manipulate data
+once they reach out any more.
+So um, and also new pie. A new pie is how we get speed out of Python, because since Python is a dynamically tight language, it's a little bit slower
+because it does a lot of things under the hood. And so we're going to see how we're going to manipulate lots of data in python instead of a sorry in in of Python the difference will be, you will lose some advantages.
+So one of the advantages you had is you could mix the types, and you could do all these things. You can't do that anymore if you're using the pie, Since Loopy is a library that compiles down to C, it needs to be statically typed. So all the types they do in the pirates.
+But at the end of this week you learn how to not only program, but program fast, and you learn how to manipulate data a little bit faster also with bandas.
+So at the end of this week you're kind of ready to really begin to work on ah, on data, science, and on, and and and also on time. And so what we're going to do is since we're learning how to use that library that I that I mentioned, called called Panda, which stands for panel data for statistics.
+So it's. It was a language that was invented that was written for econometrics or statistical manipulation of data.
+And so it's really great. In fact, it was written by one person
+before we move to noon Pine the new line, the Pandas notebooks of the new pie notebook I gave you last week, but I also put it in this week as well. I want to finish with the introduction to python part three, which is the object-oriented part,
+so you can. You can Also, I told you that you don't really need to build objects, and it's true. Most of most of the data you're going to do really use lists and sets and dictionaries right, for now, on and and complex derivations is just dictionaries of dictionaries Right?
+Come,
+or sometimes you need to create objects from classes, and the basic reason is to use a constructor because the constructor does some things before the object is substantiated, which, if you wanted to use dictionaries, you have to call other functions. So sometimes it's convenient to just have an object called
+very complex construction, something set. And so you put all the code for building it in the constructor, which is called underscore underscore. In it underscore underscore. It is a little bit buttonly.
+Another one of the rare ugliness is of the of the language.
+But there's a few things that you should probably know when you build objects. So here i'm building a human
+which is called the class. So a class is a blueprint for how to build the object and the object is an instantiation of the class. These are the words that we use.
+So this is the constructive.
+So the constructor always takes self as a first argument, and then you pass any parameters that are given when you call the object, and you put some parentheses, and you say, create this object,
+so the name will be assigned
+the the argument and the variable name will be assigned to to a property of the class. And so, when we assign properties of the class. We say self dot name equals You don't need to declare self dot name before or anything like that.
+You say self dot something that means that that becomes a property of this class.
+So you see here, Einstein, the constructor, and if you want, you can also assign methods. So when you call human dot. Say it will run this code.
+Now you have two kinds of methods that you can define. You can either define a class method or a static method, you
+ah actually or a dynamic method. But the I think both the the static method. And so I i'm confused. I I use objects so little that I don't really remember. But one of these is you can call even before the object is instantiated.
+So you say, class dot something, and it will run this object, even though you don't have that object. The other one. You need to have an instance of an object in order to call this method
+right? So these are the the two differences. But we really literally put the methods in classes in Python, because
+unless you have a specific reason and it's it's better that way.
+I never do that.
+So these are instances of of creating classes
+right? You can call it like that. You can call it as a name parameter. Um, you can create a new species, and you can play with the properties. Okay, So this is kind of a cooking introduction to kind of the same things you would do when you learn Java, where everything is based on creating objects,
+or, as you see, most of the time we spent learning. Python was more dealing with functions, you know, a dynamic function, a recursive function, a iterative function, a generator function, an eager or a lazy function, right, because we're It's a function oriented languages. So we don't really deal with with classes and objects that much.
+But you can, if you want to
+any questions about that.
+Yes,
+user avatar
+Unknown Speaker
+00:14:46
+yes,
+user avatar
+Dino Konstantopoulos
+00:15:03
+it's not very important. No,
+no,
+no. The only advantage of creating class is the constructor
+and a destructive symptoms.
+That's it.
+Okay. So. Um, remember you have homework, this this weekend working with very complicated dictionaries that contain dictionaries, because I want you to learn how to work with these new constructions that are not objects.
+I I want you to learn how to how to begin to use them to spend a lot of time. Okay, what's the best way to do this. Oh, okay, this code, Yeah, It kind of works, but it kind of looks like, How do I make it pretty? I don't make it pretty, so it goes fast. So when I say five percent time, I can see the milliseconds. And really all this is much less milliseconds than before.
+So these are the basic manipulations that allow you to go fast And do I use generators, or do I not use generators? This is what I want you to spend time on right. It's okay to you, Google, as much as you want for examples and start simple if it's complicated and don't create a dictionary of addiction and just create a simple dictionary
+and and some methods. But if anything is complicated, the best way to attack a complicated
+problem is, make it simpler
+If someone needs to climb. You know a very complicated mountain. They first climb a simple mountain where they first go to the first stage of the mountain right? They never do the whole thing. So don't expect to go. Okay, i'm going to do the whole thing going to be done in an hour. If something's complicated and make it simpler,
+and then get you make it more and more complicated until you reach the complexity required to solve the problem and ask the tas they have. They have sessions for you. So go there and say, i'm trying to do this, but it isn't working. What am I doing wrong? That's how you learn. Not by trying to do your homework like Sunday night, right?
+And once again this is not work, So I want everybody to work on this because it's important.
+user avatar
+Unknown Speaker
+00:17:03
+He's
+user avatar
+Dino Konstantopoulos
+00:17:07
+I haven't
+so uh like even dating class
+equal to creating the raffle of your
+when you create class. Then you create classes of like. There are the properties in it,
+Sure, but nobody does that.
+Yeah. So what's your question?
+It's more efficient in the sense of you know, if you create an object, and your object makes sense, you know your object is it's called human, and from human you derive, you know um lazy human, and ah workaholic, human. And then the workaholic human has do extra work right, and and these methods the names make sense. So when you think about it? Well, that's the property you need to use. Yeah, it's more efficient
+because it works well in your mind, and if you build your objects nicely, then people can understand them and use them more efficiently, Sure, but nobody does that.
+So you can do that if you want to. But you'll be this like island in the middle of the ocean, doing things on your own, because everybody uses dictionary list the sense, because that's enough.
+The same thing as well. You know I can't. I use a function instead of a lambda, and define my function and give it a name, even if I use it only once
+you,
+but nobody does that
+because they just use a lambda.
+Yeah, the memory in terms of you know what? What, what, what occupies more more ram. The class will occupy more and right because it has to do some additional work to create the class. So when you create a dictionaries and all that, then it takes less memory because it's just the they are right there.
+Pardon me,
+sure. Yeah,
+yeah, if if you if you have, if you put a function in there, and you want to reuse it. Then it may be you think it's more accessible. But if you put a function you can also reuse it right? It's not. It's not like it goes away. If you define a function somewhere in your notebook where you define the function in the class, it's reachable the same way.
+The function is defined in a global namespace, whereas your, your, your, your, your your function in your class, is defined in the namespace. Of either. It's a class object, so it's class-wide, or it's in the scope of the object that you create. So you're kind of hiding the visibility of that function, and only allowing it to be seen when
+you are allowed to be safe.
+These are rules that people use in order to promote good object-minded code like these things, don't do that? Oh, take this code. Put it in a separate file. You know Java has this thing by putting code in separate files. These are rules that are okay for kindergarten.
+You're a scientist. You're much more advanced than that. You already know these rules right? You don't. You Don't need these rules?
+Not only that, but you have a You have frameworks that are that are dynamically created that are lazily evaluated, the types that change dynamically,
+you know, every time when you have a language whose types change dynamically, it doesn't really make a lot of sense to create an object because the the of the object is static. You can't change it. It's the object
+mistakes. Sure. Is it more complex? Sure? Is it easier sometimes, and more efficient to create a class, sure, but nobody does it
+because they're advanced, and they know how to use the machine gun in the knife, and they're not going to shoot themselves. But if you're not at that level, and you you want to protect yourself. Who's an object? Sure.
+But I wanted to liberate you from this like baggage that came with all your education. I say we have to use objects, and we have to hide the function, and we have to put the code in a separate file. No, put everything in one file.
+Forget what they talk about putting code in separate files. If there's code that does something, it has to go in one file, because that's the most efficient way to write it
+either way, If you put things in multiple files, the compiler puts him back together in the same file. It just you know it hides it from you Because, you little baby, you can do that. Let me do that for you.
+No, you can do that for you,
+and if if that file is too long and you want to collapse it, they use collapsible text sections where you, you know, Pound, define things, and then they collapse, and then you just collapse all this section. It's just like having classes and objects
+all good questions right, because you were taught to do things a certain way. And now i'm teaching you to do things a different way. So you should say. Well, I don't know. Do I trust this guy? But i'm telling you that's how That's what people do.
+So join the clan, do what they're doing and start liberating yourself, and do things
+in a more advanced kind of way, with dictionaries and lists and sets, and all that,
+and sometimes I mean, we'll use class that there. There's reasons for using classes. Some of the reasons you pointed up. Another reason, I pointed out, is to use a constructor. So in that case build the class. Yeah. And then people say, okay, you build a class. He probably has a reason for that, and then just reuse the object. But most of the time.
+Okay, So let's let's Let's open our pine, our new pie, our new pie slides,
+and see how numpy make things go fast,
+so that everybody has that slide? Yes,
+that notebook.
+Yes, okay. Ah,
+you don't.
+So I I I gave it last class, but I think I put it in this class as well. So if you look at the Zip five for this class, which is week, three lecture two, I have the introduction to no pi.
+Then I have some the images that goes in the images folder and the data that go to the data folder which we're going to play with some data
+That's the snail going fast. So you add an engine to the snail. The snail used to go really slow, but now it goes really fast.
+Um. Okay. So a very quick review. Um show you. Ah, you know, Sometimes I I see. Yeah, yeah, We review things from last. Ah, from last notebook. It's it's useful. So here we create a set. We we add elements to the set. We add one twice. It makes no difference.
+The set is still one, too.
+So make sure you know what fold that you're in, and then take the Http log. Txt: So this is a log of a server.
+Um! That records all the all, the the the the pools that were submitted to the server. So it was the Ip address of of all the servers that that asked for some data from that from that web server,
+then. So we open that file. So there's lots of repetitions, lots of ips that are repeated, and then we read all the lines.
+Then we do something. We do a lip. I start in one line of code, so we take the lines and we run a map function we.
+So that upfront function applies a function to every element of the container called lines that is, by default the list. So when you see a read lines that creates a list. So mind as a list.
+So we're going to apply a function. So what we're going to do with this function. So it's a lambda function. So it's an anonymous function. And so i'm going to take every argument,
+every element of that container, and i'm going to split it by the the
+yeah. I'm not sorry for you.
+But when everybody says hyphen doesn't sound something different. Okay. So we split it by the hyphen, and so that turns it into an array.
+And then we take the first element of the array, because that is the
+the line begins with the Ip address of the person that called the server.
+And so and then, once I've I've I've taken. I've extracted that Ip address. I turn it into a set. Why do I turn it to a set in order to get just get the unique Ip addresses,
+and that's That's the the advantages that you get from from using all this functional baggage that comes with you, You You can do all something really, really fast, and then I print them. So that's those are all the unique Ip addresses in that
+kind of neat right? It's a long file. Has a lot of stuff, one line. I get everything that you know. Somebody asks me what are all the Ip addresses that hit the web server today. There you go.
+That uses the uses, the map that the map Api:
+Okay. Then we have another review on this comprehension. So here we actually create a generator object. So it's a tuple comprehension.
+Then we get the This is also A. This is the same thing as above, and then we create. They will create a list comprehension here,
+and then what we do is we ah zip up the numbers. And then, since we have, you know, a lazyly computer structures, we have to turn it into a list in order to see them. But You see, this is how create?
+Okay? And then and then um, I don't know why I do it again.
+Okay, I I I don't know what I had in mind. Here. I'm just playing around, I guess,
+and then I use. I use list.
+Sorry I use filter. This is an example
+that takes every element of values, and runs a lambda on every element. That is a predicate, which means that the values are true or false, so it takes every element, and if it's even then it returns true, so it only returns even elements,
+not the odd ones. And the reduce is the function that takes every single element and applies an aggregation operation. So it takes all the elements together and does something. So what does it Do you always take two elements in, you know, reduce, because you have to specify how you One element has
+operates on another. So you start with the first and the second element, and then you sum them, and then the second and a third element. You sum them, and so you sum everything, and that becomes It's the equivalent of the sum function. You can also run,
+that's values.
+Oh, I didn't run this,
+user avatar
+Unknown Speaker
+00:29:11
+it's it's, it's it's it's, it's, it's it's it's it's it's it's, it's, it's, it's, it's, it's, it's, it's, it's, it's it's it's it's, it's it's, it's, it's, it's, it's it's, it's, it's, it's, it's, it's, it's, it's, a
+user avatar
+Dino Konstantopoulos
+00:29:22
+of course, you can do a completely different. You can say, multiply, divided. You can do a much more complicated things, some just more sums. But the But the reduce has this capability to uh to do many things, and you import that from functional tools. It's a library that contains functional tools.
+Okay?
+And then i'm going to skip over this because I think we already talked a lot about about the yields and all that last last time. So let's go to noon.
+Okay. So the four, the four big libraries of data, science, numpy Pandas psychic sciences. I could learn right. New pi is performance pande is data manipulation. Sci-pi is math until the nineteen fifty s psychic learn is math
+is more probabilistic and kind of machine learning. So one thousand nine hundred and fiftys and above
+you have everything in there. Really there's It's very rare that you'll tell. Oh, there's this math thing that doesn't exist in all those four libraries, and you tend to go and look for a dance libraries when the basic ones are good enough. So learning these basic ones is already give you a lot of a lot of superpowers.
+So it's good to know them,
+so let's import numpy.
+Um. Remember how I told you in your homework to add a seed, and I told you that if you had a seat. It creates random numbers that are going to be the same for all of you. So your question, a natural question that comes up is. Well, Professor, how are they? Numbers Random? If we all get the same numbers?
+That's a good question, right? How can I say that the numbers are random, if you call it, and you get the same numbers, you get this, then the numbers are in random,
+but the thing is when you set a seed. Every number is random with respect to the previous one,
+so every time you run it you will get a random number when you set a seat, though every time you rerun all these numbers you'll get the the same numbers repeated, which is incredibly useful, because when you get a result and you applying something, and you're trying to verify something you want to be able to rerun with the same numbers.
+So that's why seeds are very useful. It still gives you random numbers, but the same as before, essentially
+the same every time. Every time you set the same seat. If you don't set the seed, or you set a different seed, you will get different random numbers.
+So this is why I set a seed here. It's called for reproducibility. So my numbers reproduce.
+So Um, we're. We're learning by example, because I think that you know your adult and not your graduate students. Now you know exactly how to do things, so I don't have to give you all the theory, but what i'm doing is i'm i'm calling the random package, and i'm saying, Give me random integers.
+So So if I run this,
+we look at what X one is, you will see that this is a one-dimensional array, because this is a one-dimensional number.
+But the vector that will return is six-dimensional.
+So it's a little bit complicated with dimensions Right? Because this is a one-dimensional array That's a six-dimensional vector it's different than a six-dimensional array
+that I could turn this into a six-dimensional array of one number each right a six-dimensional array of one number It would be the rows five, zero, three, three, seven, nine,
+or the columns. So whichever way it's not really important,
+and we'll talk about the new parts where we are doing these kinds of data transformations.
+But this is just one array. So think of it. The one arrays one dimension. If we look at X two that contains two arrays, and we add, we add, the yeah that contains three arrays. Sorry.
+Ah, what it means. Sorry it contains it's an array of an array. So what you have is if if you you, to to see the dimensions of the object, you have a look at the leading brackets. The leading brackets will tell you. Okay, this is a two-dimensional container.
+So it's a list of lists. So it's a matrix.
+And You can see how it's a list of lists. This is
+a list of this list and this list on this list.
+user avatar
+Unknown Speaker
+00:33:58
+Two-dimensional thing.
+user avatar
+Dino Konstantopoulos
+00:34:00
+If you look at X three since for x three I specified. Oh, and
+look at three four here. This means it has three rows and four columns,
+right, but it's two-dimensional and if you look at if you look at the last one x three, it's three, four, five. So this thing is three dimensional, so it's really not not not a list. It's not a vector it's a tensor. It's a multi-dimensional thing. It's an excel spreadsheet that has this extra dimension that comes out of your of your screen,
+So since we can't
+really plot a three-dimensional one on a flat screen. What we do is we plot slices, so we plot the the the three slices, the three slices of our matrices, this the first one, the second one, and the third one, and you can see that it's a three dimensional element, because it has three brackets,
+so always look at the brackets. And, by the way, when it says array something that's a new pie array
+and a new pi array, if it's a new pi array. I can't. I can't change that to a different type, so I can say X. One of zero equals four instead of five, x, one of zero equals four. I can do that.
+Change the element of x one. So if I ask for x one, it'll be four instead of five.
+But I can't do. X. One of zero equals Foo,
+which I which I could do before. But now, if I do that, you'll say you can't do that, because It's not. It's not the same type anymore.
+I've changed types, and you can do that in your pie because new pi is a statically compiled. You don't have this dynamic type changing capability anymore.
+But of course, the thing you gain is lots of performance game. It's a lot faster to compute with new pi rays than it's to compute with python arrays. So we always compute it with new pi rates. So in data science everything is a new pie object,
+just a lot faster.
+Um! We can look at all the dimensions by looking end in shape and size. So this tells us all the information that we want about the object. It has sixty numbers in total. It has three.
+I don't know what these rows and columns are pretty clear. These are the rows and the columns. But I don't know what to call this this index. It's it's the axis that comes out of the screen, whatever you want to call it.
+It's
+how do you access the first element of the first row? It just bracket bracket, right you, you dereference the rows and the ud reference the element.
+user avatar
+Unknown Speaker
+00:36:59
+But in New Pi you can also do this,
+user avatar
+Dino Konstantopoulos
+00:37:02
+which is kind of nicer right, because then you don't have too many brackets. You just add a comma between the indices,
+and you can also modify and use it. Using this notation,
+you in noon, pi you can also get the are our beloved range objects, so you can create a I need a range of numbers.
+Um, you don't have to specify the zero before numbers. It's kind of a a shorthand.
+You can also create the slices. So this is the first five elements, because the column starts of the four, the five, and this is the elements after index. Five.
+Think of. Whenever you see this, think of something before being open, and whenever you see this, think of something. But since you specified the before the number is open, so if you add a space, it's pretty clear that it's the first five elements,
+and for the second case that it's the elements after index five. So see, adding spaces is useful to the eye, so I usually add, I like to add spaces like, say, space, equal space, or put spaces before your operators. It makes things more understandable. What's going on
+you can do. You can do the the every two steps as well. You can do every other element. All these things are inherited from Python.
+You can do the subsetting. You remember the same thing that you did in your our homework, where you just take multiple subsets. So you do that. You do that this way in in python.
+Okay. And now this is super useful. So the reshape is used a ton in when you have high dimensional structures, because you can take many things and reshape them into multiple dimensions. Right? This is this is
+this is really neat because you create one dimension, and then you reshape it like clay into multiple dimensions. So here I take an element that goes up to twenty eight, so it has twenty years excluded. So it's one to twenty seven, really. So it's divisible by nine,
+by three, many times, and so I reshape it into a tensor with three rows, three columns, and three. I have to figure out a name for the and then. Now you have a three dimensional array. That was a transformation from a one dimensional array.
+So the reshape Api, and the converse, which is the squeeze api that reduces the dimensions are very very useful.
+This is the reshape. This is the reshape, so you can. You can do. You can also do things
+that are a little bit more complicated where you create what are called these are fake dimensions,
+right? So obviously, if if I have elements from one to nine
+um, and I want to reshape it into a matrix, because I have two numbers here, Then it's pretty obvious how that happens. But how can that reshape them into a four-dimensional
+element?
+So that is actually something that you need to learn how to do, because when you call an Api on something where, for example, very often in tensorflow and machine learning. The Api's
+expect you to pass objects of a specific dimension,
+because the Api says, Okay, I only accept matrices, or I only accept tensors that are three dimensional, or I only accept tensors that are four dimensional. And so if you're if you're passing an object that has different dimensions, the way to make it equal the same dimensions as the Api that requires. It is to add dimensions that have a single element
+right? And so this is a trick to to take this and reshape it into a four-dimensional array, and you can see that it's four dimensional now, because it starts with four brackets.
+You can see how this is. This is three-dimensional,
+and this is three-dimensional, because it has three brackets.
+So what we did Is we actually transformed this into a different dimension in order to be able to call an Api,
+and that's by adding once in the other dimensions,
+and then the way you remove it is by calling squid squeeze. So if I call this object grid, and I want to squeeze out all the
+superfluous dimensions to just get the data back, then I call squeeze, which is kind of the opposite of the reshape. It It brings it back to a minimal number of dimensions.
+And so here's another example. This is a one-dimensional array, and I reshape it into a two-dimensional matrix
+and then i'll reshape it into a three-dimensional tensor
+and be careful because three one one is different than one, one, three,
+because the dimensions appear different.
+But squeeze will always get back Uh, get your numbers back
+here. I take a range from one to six to five, which is, of course, divisible by many powers of five; and then I add an extra dimension
+all right. So these are exercises for Api's that just are very useful. And so I want you to spend some time looking at these when you review these notebooks to be familiar with these api calls
+concatenation of arrays. Take two arrays. Put them together.
+Same thing with a two-dimensional grids, right, so one, two, three, four, five, six, and then you add it again. That adds it that adds it, row wise. So this is the first instance, and this is the second instance.
+If you want to do something along a different axis. In new pi you specify comma axis equals one. Why one? Because the axis starts at zero
+right? So by default. This is axis equals zero. When you don't say axis, it means go by by the default axis, which is, which is the
+if you don't specify anything that's the default value. But when you specify axis equals one, it means go to the second axis. If you have a three-dimensional tensor, you can also say axis equals two, because that's the other axis.
+So all the operations you can always pass, not all, but most most operations. If you want to do some complicated surgery, you can specify which access you want to add things or cut things, or do all that
+you can split an array.
+So one, two, three, ninety, nine, three, two, one, x, one, x, two, x, three is noon pi split. So split this and split this,
+so that you have,
+so that's three and five. That means split along the index three, which is here, and then along the index five, which is here there's a zero, one, zero, one, two, So that's the third, one, four, five,
+so it'll split at index, three, ending with index five. It will create.
+You will create new elements that are
+okay. Finding The maximum element is very important in machine learning. That's a very famous Api known Python Arg. Max.
+Given the an array, I want you to tell me which position has the highest value,
+and and and the reason why that's very useful for machine learning. Because, you know, in machine learning, especially with artificial neural networks, the way we determine what the what the prediction of something is. Is. We pass
+um a multi-dimensional decomposition of the object we want to predict on and and then we say, okay. If my object is, Ah has is a vector that has dimension one hundred. Then i'm going to pass it back where my my output from my machine learning is going to be a vector of dimension, one hundred. So it has one hundred hundred numbers, and the real value is, we're just looking at at the the element that has the high value,
+and the element that has the highest value is is given by new pi that part back. So if we have, for example, you know zero point, one zero point, one zero, one one zero point nine, maybe index five, and then zero point one zero, one, one zero one, then Arc Max, will It will give me five, because that's the point where I have the highest number.
+Okay, So that's that's an important, a very important Api. And so that's why I give it to you here.
+If you want to work more and more time, you can go on, Youtube, and look at You know, new pie exercises. But this is this is enough to say that you know you. You know the basics of the library.
+Ah, noon pie is very often paired with math plot limb. Matlab is a plotting library, and so when you use it, you have to also import noon pie, and so you import Matlab, dot pipeline as plot
+what you don't have to important pie. But most of the time you're plotting the pie stuff, and so and then you add this magic command, which is in the beginning, is very difficult to remember every time. So you always end up Googling for it every time. But what this does is it makes your plots eager.
+Yes,
+user avatar
+Unknown Speaker
+00:47:57
+it has a maximum. That is, name is position five.
+user avatar
+Unknown Speaker
+00:48:03
+So the nine bits.
+user avatar
+Dino Konstantopoulos
+00:48:20
+Yeah it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it it
+of that of that index that is as as one number.
+user avatar
+Unknown Speaker
+00:48:37
+So now,
+user avatar
+Dino Konstantopoulos
+00:48:47
+yeah, let's Let's work on that. Let's see. Let's see how that works. So let's create a new pi array that's multi-dimensional. So let's add another example. So let's do a ray equals let's take one of these examples here that was multi-dimensional where we reshaped it. So let's take.
+Oh, well, let's redo it again. I don't remember where it is, but let's let's do noon, Pi. Let's start with noon pi range
+and let's go from one to twenty, eight, so that's twenty, seven, one to twenty, seven, and let's reshape that into a tensor. So three point three point three, and and let's call that array. Let's call that tensor tensor one, and let's see what tensor one looks like,
+Okay, so tensor, one is a three-dimensional tensor, and then let's look for the arguments. Of tensor one now
+numpy dot org max of the tensor, one
+so twenty six means that if you start at zero, then this is the biggest element. So it's the twenty sixth element. So you
+you you even though it's a three-dimensional structure. You you go one dimension at a time, and it gives you the element because new pipe always has to be one one number. It can be. I can't tell you. Okay, The entire art. Max is is three, three and three. That's what you'd like, right? Because you want to say that it's
+third tensive slice of the third row of the matrix, the last of the third entry into that vector but actually, we just use a single number. So you have to count all the elements.
+That's just the Api.
+Okay. So you have a different argument that you can specify. So let's try this with different arguments. So let's go with axis equals zero.
+That's interesting. Axis equals Zero gives you two, two, two, two, so that tells you that
+user avatar
+Unknown Speaker
+00:51:22
+that's interesting.
+user avatar
+Dino Konstantopoulos
+00:51:23
+Um,
+it gives you an array that's two, two, two, two, so that, you know two is if you start at one, zero, one, two, two is the last element, right? So. But I don't see what it gives you two to two.
+user avatar
+Unknown Speaker
+00:51:41
+Um,
+user avatar
+Dino Konstantopoulos
+00:51:42
+that's kind of strange. Let's see what happens when we say axis equals one.
+Yeah, it's the same thing, and axis equals two, probably the same thing, and axis equals three won't work, because that's more dimensions about what we have right now.
+So yeah, that's another argument. And maybe that brings you closer to what you had in mind, or it tells you where, exactly along each axis where it is. But
+um! It's kind of strange that it gives you a matrix isn't it
+what I would have expected
+The second dimension. No sorry. The third dimension zero, one, two, right, the third dimension of the other axis, and the third dimension of the other axis. Yeah. So I don't understand what's a matrix for me would have been just two to two as a as a single row,
+user avatar
+Unknown Speaker
+00:52:46
+because it's twenty four direction
+user avatar
+Unknown Speaker
+00:52:48
+like uh over the second. I mean the last one
+user avatar
+Dino Konstantopoulos
+00:52:52
+of the last element of the last one,
+right? But it's enough to just specify twenty two. You can say that
+user avatar
+Unknown Speaker
+00:52:59
+yeah
+user avatar
+Dino Konstantopoulos
+00:53:13
+axis, one or X zero, right? They all give the same result.
+That makes not much of a difference.
+So I would have expected just to give me one. Ah one. Ah, but yeah, So So the Axis argument allows you to maybe get the number. But it's a little bit strange. I've never. I've never used it that way so. But it must be a reason why it gives you a matrix.
+That's the position of the largest element.
+The
+user avatar
+Unknown Speaker
+00:53:47
+two let's. Let's there in a
+user avatar
+Dino Konstantopoulos
+00:53:51
+thank you to the law.
+user avatar
+Unknown Speaker
+00:54:23
+They are an engine.
+user avatar
+Dino Konstantopoulos
+00:54:24
+It has three dimensions. So I need three numbers to identify where the location is.
+user avatar
+Unknown Speaker
+00:54:33
+Okay.
+user avatar
+Dino Konstantopoulos
+00:54:33
+We are doing it Similar to this, we get three parameters.
+Okay, Okay. So you're saying this is one coordinate. This is another coordinate, and this is another cord deal.
+Yeah,
+So
+user avatar
+Unknown Speaker
+00:55:06
+it's all over the
+user avatar
+Dino Konstantopoulos
+00:55:10
+Okay. Let's let's forget about it. We'll we? Nobody ever uses an art, Max with with an axis equals zero.
+Okay, let's do that. So let's. Let's change one of the elements, and let's see how that changes. So let's take tensor one and change the the zero, one, two, three, four, Oh, let's! We can actually it by. So let's do a tensor, one
+of the of the of the second, the middle, the middle. So that's one, and then and then the middle row. So that's one and the middle row that's one. Let's turn that into a big number fifty,
+right, and let's see what tensor one is.
+Okay. So we have fifty in the middle, right? And then, if we, if we look for this
+user avatar
+Unknown Speaker
+00:56:04
+and you saw a
+user avatar
+Dino Konstantopoulos
+00:56:22
+I think what this is doing is it's telling you?
+No, it's not clear to me. We have to think about this. Let's just move on, because this is you. This is a homework. Find out why it's given. It's why it's this way. Okay,
+Okay, In machine learning, we never use our Max in any case.
+Okay, um plotting with my toot limb. So what we do here is we add this magic command. I would say it's magic, and then go ahead and plot it
+right, so I usually always use this command, because when I say part, I want to see my plug. So there's two ways to specify an X-axis. You either go with Lynn space, which says, go from zero to ten and give me three hundred points between zero and ten
+linear so linearly same separation, or you can say new pi dot.
+So these are two ways to specify the X, and then for every X we plot a different value.
+There is the new height of Cosine of X. So the new pi also contains all the math operations, so you can either say math, coast or new pi go
+right. So you have two options for math operators. You can either call upon the math library or you can call up on a new Pie Library, since new pie is all about efficiency and speed. I usually prefer new pie, because, you know, if there's different ways of computing something pretty sure new Py will give you the fast way.
+Okay. So this is the cosine, the
+plus the cosine. You can plot in two dimensions.
+This is a mesh. So I create a range, and I create that That range is called points, and I create a mesh that has the points in both dimensions. So I have. This is the same thing as this, but in two dimensions this is kind of a way.
+The values are given to you by gray scale, so the one has the biggest value, and minus one has the lowest value. So you can see this is kind of like. If you drop a stone in a in a lake. It will create waves. And this is what what represents
+so very easy to plot. Very easy. Just plots right there. And so you
+two big plotting libraries you should know about is Matlab and and and the seaborn.
+These are the two ones, the the the two libraries that are using data signs.
+user avatar
+Unknown Speaker
+00:59:18
+A
+user avatar
+Dino Konstantopoulos
+00:59:19
+um. I told you about the percent operators. So there's percent and percent. So I forget which one is which which one, the the percent time or the percent percent runs the same operation ten times, and then gives you the average,
+whereas the other one runs the same of the operation once and gives you that the time it took for that operation to happen.
+So. Um, I want to show you how fast. Ah, Ah! New pie makes things compared to python. Look at this. Let's create a new pie range up to a million and let's create the same range in pure python.
+So here we are using new I. This is a range of a million, and then i'm going to time. This operation. I'm going to go
+Multiply the the the the new pi erase by two, ten times the
+and here i'm going to create a list comprehension. That's the same thing multiplied by two, ten times. So this for loop is going to do this ten times, and this ten times right now
+and then. I'm going to compare the time, the the time for for for both operations, and if you run this you will see that noon Pi takes thirty five milliseconds, and python takes two seconds.
+Wow! I mean, that's a huge difference.
+That's
+two orders of magnitude.
+That's the advantage you get from having a language is dynamically typed, and a disadvantage, And so to recoup the advantage. That's the reason why we use new pi for all our numbers all the time,
+because we get much much faster operations.
+Random arrays are super useful, The ability to say new pi Random ran, which is a little bit better when we want to specify examples than than what we did here before.
+user avatar
+Unknown Speaker
+01:01:25
+Ah,
+user avatar
+Unknown Speaker
+01:01:28
+where did I do this.
+user avatar
+Dino Konstantopoulos
+01:01:32
+Actually, actually, I think I didn't do this. I just said, uh, I reshape right.
+Random Random just gives you integers. But if I say if I say, instead of ran into, I say,
+I say, Rand, that gives me numbers that look a lot more like real numbers,
+right because we often want to. When we want examples, we want to. When we run functions, we want to have an example to run our functions with, and so we we use new py random, not rent all the time, because it uses fake numbers,
+and then we give the fake numbers and as many dimensions as we want. So with one call. We can create any kind of data, set any kind of data set with one line. It's pretty neat Now
+and then we can run our our our code, and see if it works. It doesn't work. And then we use real data
+user avatar
+Unknown Speaker
+01:02:32
+to do the same operation.
+user avatar
+Dino Konstantopoulos
+01:02:34
+So they're they're useful for for flight, testing your code
+um Boolean indexing. So these are examples of arrays. And then I say, okay, just give me names equals something. So this returns me a Boolean array.
+So these are operations that i'm introducing you to operations that you're going to start seeing a lot in a lot of data science code. And so bullying indexing is something that is useful to have seen before.
+So, data here I turn it into a random array, and then I say, give me this data, but in the index here. So this will take this index,
+and it will only give me the data where this is true, and remove the data where everything else is false. So this is a way. This is called masking.
+So this is a very fast way of of taking
+sub-subviews of your of your data.
+Because if you see this for the first time, you will see what the heck is this: What is the data have to do with prediction in there. I don't see any protection in there, but that's because you have another rate called names, and this
+has protection in there, and this will evaluate to a Boolean array which will give you the mask that you need to extract the data that you're interested in.
+You see, Is it clear. The example is clear. You you understand the operation. Yes,
+yeah. So this is kind of a complex way of extracting
+a subset of your data,
+and I want to extract the first row of the first row and the second row, or the first row in the third row, and it changes dynamically. That which one I want to extract. What I can do is I can create like what's called a mask.
+So when I specify,
+so this is kind of a good way of doing what's called the mask. I could have just done this. I could have done it this way, too, so I could have added a cell and said this instead of maybe that makes it a little bit more obvious. What's going on?
+Right?
+user avatar
+Unknown Speaker
+01:05:38
+Sorry
+user avatar
+Dino Konstantopoulos
+01:05:42
+Comma comma
+come right. So this is,
+or is this not working?
+One, two, three? Oh, I already see. I already modified my data. So I have to go back here, reset the data, and then just give you part. Just give you that part.
+So, since we're functional, we prefer to use expressions that are booby, and rather than actually using the entire, but it's the same thing, but this is a way to get It's called Boolean Index.
+Very new. Pi is also very useful for doing linear algebra, because it includes linear algebra operations, so I can say Ah! From new pi lin ouch import the inverse. So if I have a ah an array, I can compute the inverse of that array. So the inverse of that array is the array such that when it's multiplied, we'll we'll look at linear algebra.
+Machine learning is, is linear algebra essentially with with some additional graph operations. So the linear algebra is very important. Multiplying two arrays is done very easily with the as long as the two arrays are specified, as when I
+as matrix of the vacation.
+So if I multiply X and Y, this is the identity array, because it has one in the in the first row, first column, and one second row, second column, one third row of third column, and everything else is very, very close to zero.
+Um!
+Why did I remove this?
+I think I I must have deleted. Sorry. I think I deleted some some slides here, some some cells so new pie that histogram allows you to take a histogram of the A. A distribution
+Um, And I I think I read the a distribution by reading a file, but that file is missing, so I think I may have moved it to the ah to the Pandas slide. That's why it's not there. But that's one way of computing Instagram, either using the power using C. Gram. So we'll look at that in a second slide. So let's just um skip that new pie object. Um:
+Okay, you can create a raise of objects that shouldn't be very surprising as long as the two objects are the same.
+So I can create an array of two humans like I can't create an array that has a human and a dog in it. If I want it to be a new pirate.
+Okay, noon, pi dot lin space. I'll let you run these things at home so you can actually see some very useful functions. So i'm not going to cover these. I want you to look at this at home.
+I'm
+um the The The binomial is a distribution that we're we. I think we briefly mentioned it in one of the past classes, but it's a different distribution than than the Gaussian or it was. We'll study about a dozen distributions in class. So just wait until we look at the the distribution that's called the Binomial. But you see how it's included in the quite a random. So new. Pie already includes a lot of statistics capabilities,
+because people in statistics usually pilot.
+Oh, look, this is the the height weight thing. So okay, this is Pandas, and of course I I don't want to use pan as no, because I have a whole slide for Pandas, so let's let's skip over this
+skip over this. So this is how we do polyfit to actually fit the Polynomial through the data. Remember, I told you that machine learning is about looking at the data and seeing it as a relationship between the two variables. And it is a relationship between the two variables. We want to find the function that captures that relationship, because a function of how this is a prediction.
+Once once we put a line through there, or or a parabola, or whatever whatever curve you closely matches the other points. Then we can forget about all the data, and just remember the formula as a function and the function, the making about the function. Is, it's true, for every possible value here? And so, if we have any value that can read it and get the prediction,
+or see if I have data points. Maybe I have a point here that has no data here, or in this case I have tons of points.
+But in the case where you don't have a lot of thoughts. I think I could find a point here that doesn't have a point that there, and so I can't do the prediction.
+So that's the usefulness of calling um polynomial fit to get to get the to get the interpolation on the cloud of points.
+So This is kind of what this does. So this this plots, this, this, this, this line, and here what we do is we do the same examples when we did with our our data set. So here we have board college. I look for the relationship between student to faculty, ratio and graduation rate,
+and then I do a poly fit, and then I do um
+uh a poly fit. That is uh
+that's the specifies that I want a two-dimensional polynomial. This is the last argument. So I want to pass a two-dimensional polynomial through the data. And so you see here, I get something That is nonlinear, but it matches the data a little more closely.
+So this is the formula that allows you to replace this cloud of points with one function, and I can use that function to the predictions for any value of your hyper weight, or whatever heading one axis so height and weight,
+I think it's student faculty, ratio and graduation rate right. So student to faculty ratio. Given this will predict the graduation rate based on all this data.
+So if you understand this, you understand machine learning, that's exactly what machine learning is. Machine learning is fitting a function through a cloud of data. Of course, that cloud of data doesn't have to be two-dimensional. It can be many dimension.
+And so doing this in in one hundred dimensions, a little bit more complicated. So it looks simple in two dimensions. But we do we do predictions on many more dimensions than that
+right? And so these are. These are the arguments. This is the an exam. I think this is a good example to showing you it's included in on pi
+so you you can specify only only so poly one d is one-dimensional. But you can say polyfit on any dimension. You can specify a cubic with a three or a quartic with a four.
+The disadvantage of fitting polynomials of many degrees have more flexibility. But the problem with polynomials is they oscillate a lot.
+So if you have a polynomial of high, a number of degrees that you want to fit across many points you will fit, but it will oscillate a lot up and down to pass through these points. And of course these oscillations are unrealistic because they don't give you the real value right? If you have a cloud of points, let me show you an example.
+If you have a cloud of points, and I want to fit them.
+How do I plot a cloud of points? Okay, let's just do like this. This is a cloud of points, right? I can actually pick
+plot a polynomial through all of these points. But if I actually want to plot the polynomial, that's high degrees, I will have to oscillate a lot to pass through all these points
+right? And these oscillations introduce values that aren't realistic here here and there and there, right because the real polynomial that I want to fit through these points; that through these points that really represents the best fit through these points is a polynomial like this,
+not a polynomial. Sorry it's it's It's a it's a nonlinear function like this much more realistic than the function that oscillates a lot. Right? So polynomial fits are usually never really used in machine learning, because we get unrealistic values of main points,
+but but still it's It's useful to be able to do so. This is why we never do a fit on the Polynomial, with many high dimensions here, but it's still good to do to do a polynomial fit on on lower dimensions. It doesn't give a bad result.
+Ah,
+um! Um! And here I give you a little bit of theory of of why noon pie makes Python run so fast, and it all comes down to taking Python code and translating it into C Code,
+because that's exactly what, what, what, what what Npie does. And So here I give you, I give you some um background on on the bindings, and how that how that happens. And so this is a little bit of of of computer science. That explains some of the things I already told you. The fact that you know Python is a compiled bless you, is compiled. But it's also going to be thought of being interpreted because it has a virtual machine that translates its byte code to machine code
+And the way you um the way you take code from one language and translate it to another language. There's a name for that's called Marshalling, because you marshall the data, The data needs to be marshalled from one language to another language that can be you
+to to to another, to another, yet to another language that can be used. So it's called marshalling, and that's actually a complicated operation. So there's a lot of computer science beneath the use of pyth of loop pi that we're not looking at. And so if you're interested in that, then I give you some background. You can also ask me questions. If it's something you don't understand, but they should give you a little bit of a primer. What those um
+what goes what goes in the ah under the hood of the use of um. But just remember, just like we what we did before, where we took an operation, and we make it happen really really fast. That's what noon pi does for our our data, so we'll We'll use new pi all the time. Whenever you have a data problem you always turn it into a new pi array
+very rarely. Do you not use new pipe for some reason,
+And now that we've seen this, we can spend the last half hour looking at Pandas, So
+this pandas is if we get performance from numpy pandas, is what allows us to do a lot of different manipulations. You saw some useful transformations. We multiply the squeeze and the
+what was the opposite of squeeze
+reshape. Thank you. Yeah. The reshape Api: right. It's incredibly useful. But Pandas allows you to do even more complicated things. And so, of course, Pandas has nothing to do with the animal Panda,
+but I just thought it was funny. So whenever I can use a Panda's library. Just think of the Panda. But yeah, of course, it stands for panel data for statistics. So it's just funny that it
+it looks like an animal, but it's used. I mean, everybody uses Panda. So whenever you want to read data in or output data or do any data transformation you always use.
+So there's two basic Api's in Pandas, a one-dimensional series and multi-dimensional data frames, which is kind of equivalent to a series is kind of a
+A vector and a data frame is a matrix or a tensor.
+And so it's important to look at these two Api's to understand how they work. So We're going to spend some time with this with this notebook. We probably won't have time to finish it, but i'll ask you to read it to the end when we review it next week. So next week. So now that you know the basic basics of the
+the basic data types of python and the basic two libraries are beginning next week. You like. I consider you to be like, you know, maybe like blue belts in python, not black belts, but you kind of in the middle, right? And then we're going to spend next week where i'm going to give you tons of work to work on tons of code,
+so that by the end of next week you're pretty familiar with Python. In fact, you'll probably think why the heck was it programming in Java before I should have been that for doing this in python.
+So But right now we're just you look at these two libraries. So let's let's look at series and data frames.
+So the first one is the series. So first let's import pandas. So Pandas is usually, you know you can change this. You can call it. You know my beautiful red and white panda, or something. You can pull it anything. But pen is usually people that would always say Pd. For panelists panel. Data.
+So that's import. Pd. And let's create a one-dimensional series. Right So we'll take
+a python array ten to fifty, and we'll turn it into a Panda series. So when you do that, you will see that your object actually contains an index. Now,
+right so that's the big difference that we didn't have before there's a built-in index
+which allows us to actually use this as a python array and say, the first element is zero element, right? So this is nothing new, but it's automatically built in
+um. And not only that, you can also change the index, so if you don't like the if you don't like the the numbers. You can turn them into letters. You can turn them into essentially dictionaries, because that's what a dictionary is.
+Um! And so there's a lot of building capabilities.
+So we can do two things. Once we have a Panda series, we can look at the values, and we can look at the index.
+This should immediately remind you of what? Of keys and the values of a dictionary right? Because this is essentially the same thing.
+Here's where we pick an index. That's different. And so here we're We're essentially creating a dictionary.
+But of course, remember, this is a dictionary in
+in Pandas and Pandas kind of depends on you pie,
+which means that
+Haven't tested it. But I think all your series need to have the same types, so you can't change one of them to like a string
+user avatar
+Unknown Speaker
+01:21:44
+see?
+user avatar
+Dino Konstantopoulos
+01:21:47
+So object of a is ten. An object of zero is ten. Let's see if we can change that now,
+so let's see if we can do all Bj. Of a
+equals food.
+No, actually it works. Yeah. So so it's It's not an underlying it doesn't default to a to A to a new Pi series, so you can actually do that.
+So if you look at the entire object now, you have an object
+that has Foo. In the first place, and that's a string. So yeah, so it doesn't have to be a no pi object.
+But very often, when we use we we use pandas. We work with new pi objects. So if I had created the series, I'm. Using an array rather than a new
+right. So if I if, instead of doing this, I do this
+so I can do this in this case. But if I do this, then I probably can't.
+Where I do
+two pi dot array of this,
+and then I use another cell to to do this, and I probably won't. Be able to do this. Now
+let's try this. Let's call this object two, so we don't remove you. Replace our first object.
+Let's see what the object looks like. And now let's try that. But this is an experiment
+to this
+invalid index. So this actually I close this I shouldn't have closed this right?
+No, it's correct. Okay? Well, this is better.
+And I as in t,
+and then I run this, and I call object two, and if we give me ten, twenty, and i'll try and try to change it to Fu, and this won't work.
+Okay. So interesting. The The reason why this works is when we convert it into a series, Panda is actually changed.
+Changed the the underlying type to a type that is, that is changeable. So you can actually do this. That's very interesting.
+Okay, So let's you do that, even though the construction object was actually a numpy array. So it didn't keep it as a new Pi Ray Pandas took it in and turn it into something else,
+user avatar
+Unknown Speaker
+01:24:32
+did you see?
+user avatar
+Dino Konstantopoulos
+01:24:35
+But this is the basic big advantage of of Pandas. Look now, you can specify entire predicates as accessors to your object.
+So any kind of expression will work,
+not just boolean indexing anything you specify, any kind of query can be now the accessor of your essentially your dictionary object. So here give me all objects bigger than twenty.
+So you see you specify object in the array. You specify object again,
+whereas this is not twenty is not the object. The object is an array, so an array can be bigger than twenty.
+But I can use object as
+index as a as a variable that represents every element in the object,
+the object right. So this looks very funky, because this is not an array, and the rate can be bigger than twenty at any.
+user avatar
+Unknown Speaker
+01:25:30
+The element of the already can be bigger than screen.
+user avatar
+Dino Konstantopoulos
+01:25:32
+And so Pandas uses the object as an accessor for every element of it.
+Right?
+So that's pretty advanced juju here,
+and the reason why that is is just faster that way. Because if you had to specify
+a comprehension where you say I, for I in object superior to twenty. That just makes it more complicated. So the idea here is to do something very fast. So if I do this you will see it will return me.
+Oh, and it's because I I can't compare with string right? Because, remember, I, I changed object to have room in here. So let me go back and change the object again to this.
+Okay. So now I have an object that Doesn't Foo. And now I can actually compare all the objects because they're integers.
+Obviously, if you have an object that has different types, and you do a comparison with an integer, it's not going to work for some of the elements,
+right entire lambdas that specify that we turn parts of the view. So here I show you something that's different. Here we really create a dictionary, and we create a series from the dictionary.
+So here I create a series, and this is a series that has the the keys as strings and the values as numbers.
+Okay, So this is
+this is our one-dimensional series.
+Incredibly useful Most data sets in the Ss. Are actually one-dimensional series a distribution is a one-dimensional series. A Gaussian function is a one-dimensional series right
+for X. Give me the value often it's two-dimensional three dimensions but Very often it's just one dimension. So you find series all the time. And, in fact, predicting Time Series is one of the biggest, most popular things to do in machine learning,
+predicting how a stock evolves over time, predicting how the temperature evolves over time, predicting how wind evolves over time. Everything can be thought of as a series so expressing things in a series with Pandas makes you incredibly productive. Any questions about series.
+Let's move on to data frames. Okay, data frames is more dimensions.
+So how how to use data frames? Well, just like we, we we use Pd Series. We use Pd. That data frame. But now The difference is that we'll have dictionaries, but your values will be multi-dimensional
+right because every key must have many different values. So you can have rows and columns, because the keys of the rows and the values are the columns. Now,
+sorry the keys are the columns and the values of the rows. Here
+it's kind of the opposite with pandas.
+So what we have here we specify East, and we specify all the teams with the Nba teams in the East Conference and the West and some of the teams in the West Conference, and when we turn it into a data frame, look, not only do we get an excel spreadsheet, but it's pretty
+right and pretty. Makes us look at things a little bit differently. It's, not just numbers, it's, you know it's formatted. It has. It has.
+It has a line here, so it's useful. It can see results a little bit better. But
+ah! Two elements here will this work, and, in fact, you'll see that when you run this it it will work because it pandas doesn't like it. When you it doesn't do the same thing that Zipper does, for example, where it ignores the other dimensions. Your pain that is much, much more stricter
+by Pandas is a
+library. You have to do things the right way, because when you manipulate data it's very possible to make mistakes. And so Pandas wants to. Ensure you don't make these kinds of mistakes. So that's why it doesn't let you do these things
+user avatar
+Unknown Speaker
+01:30:00
+for them.
+user avatar
+Dino Konstantopoulos
+01:30:01
+Is there? What?
+Um:
+So Okay. So this doesn't work.
+What you can do is you can. You? Can. You can change the orientation and and turn it into?
+Turn it into? Do a data frame from dictionary, Because if you do a data frame from dictionary, and you specify an orientation instead of just data frame, and you will get a nun where you didn't have a value.
+But this is a different Api call right? This is this is: say, okay, take a take a different from the dictionary, and this will kind of solve the problem. It's a little bit different than a constructor. It's It's essentially a special.
+So yeah, So that's the solution to the problem. Yeah, what we call the solution. I think everybody is cheating a little bit. But there's a solution. Yeah, you could call this solution that makes sense.
+And and if you specify the orientation, you can also say, if I want to change that Orient. If I don't say index,
+it's i'm curious. If you don't, say, orient index, and you remove this, you
+user avatar
+Unknown Speaker
+01:31:43
+it's it's, it's, it's, it's, it's, it's, it's, it's it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's, it's it's it's it's it's it's,
+user avatar
+Dino Konstantopoulos
+01:31:45
+it will work.
+It will work. So you have to, orient the other way.
+Yeah, you have to specify the opposite orientation. Otherwise you more. That's why it's not exactly like a cheating thing.
+Um, You just essentially have to be careful when you, when you instantiate a data frame that the dimensions need to match, and if the dimensions don't match, then then just add an on. I guess this is the right way to do things right if you want to say, Okay, what's the solution to this? It's doing this
+right? Then, then this works. But then you have to. You have you have to be a little bit more involved in your creation.
+user avatar
+Unknown Speaker
+01:32:34
+Any filter that aroused her values.
+user avatar
+Dino Konstantopoulos
+01:32:42
+Yeah, but I don't know of any way to say, allow non-values. If I go here, and I replace one of these with none, it will work. So if I specify this and I say
+and I say nba
+an accessor. We'll look later how you access things, so I don't want to to show you now equals none. This will work. It's not like it's not allowed.
+I can specify none any time I want, so none is always allowed.
+So it's It's not really the same thing as saying, Okay, allow none, and then build it. You really can do this in Pandas wants you to be very careful with your with your dimension of your data. So if you want to specify nothing. Here you have to say none.
+Okay. So let's let's talk about the accessors to.
+So how do you access the rows, the columns and elements, so you access them as dictionaries. Right? So the East is. So you can say dot lock and I lock,
+so that's the location. Think of lock as location. Right? So that's the location of the East column, so that will give you all the values of the of the East color.
+Um! You can also. Ah specify indices. So, instead of saying to get the first column, you can specify this entire thing as a typical array, so this will will give me the the so with pen as it's reversed. Right? So this is the the the column,
+and no, actually it's not reverse. It's the right order. This is the column, and these are all the rows. So to get the first column we have to, you can also do this.
+So the other thing that you can do is instead of specifying. And this actually makes more sense, because then you you give both your column and your row indices at the same time. Instead of specifying your list here, you can specify dictionary.
+So that's a dictionary of a dictionary, right? Because your your data frame is also a dictionary. So. The way to do that is that I do it here. So here I have my main dictionary, which are the columns, and then I have the Rose Dictionary. So this is the
+the the value for Massachusetts. This is the value, for in in Indiana this is California. Now notice here. I specify different rows right. I I specify I don't have Massachusetts here. I don't have Indiana here, so I can't make the match, and so,
+which is different than none
+right and a N. A. N, and none are two different representations. And what an an says is, I don't have a number to put there.
+It could have been none. But what pain this does is it turns into a not a number.
+What's the type of Let's see what the type of an in is, that's a good question. I don't know.
+So let's take a type.
+Wonder how i'm going to specify an A. So let's do this. Let's take Nba two in B a two
+so like N. B. A. Two of zero. One
+Um.
+Well, because it's it not a data frame No, Us. Nbdf: sorry, and Vadf:
+Oh, Don't, specify the parents location automatically on the index.
+Oh, it doesn't like zero
+user avatar
+Unknown Speaker
+01:37:08
+neighbourhood,
+user avatar
+Dino Konstantopoulos
+01:37:09
+because it has a difference in a so let's do Ma,
+and then let's do
+West.
+Okay. So that's not a number. So that's the type of this, and see what python is going to say,
+hello,
+Yeah, it's a floating point number. Yeah, it's a floating point number. In fact, when you overflow or underflow it it becomes an in so it makes sense. It would be a floating point number.
+Okay, you can take the transpose of your data frame with Dot t
+um. You can get the columns or just the index, which is the same thing, and it's getting the keys or just the values you can specify East.
+You can also do I location? So I, Location allows you to go by numbers, because that's the Index location rather than the
+so. The the index of the location index from the sense of numbers rather than keys and the values right? So these this is basic manipulation. You can also re index
+Re-indix is also found very often so here I changed. I changed the index, I added the Ca and cas I think I did. I didn't have caes.
+Oh, I re-ending so I changed the order of the rows right. So this three index changed the order of the rows. Now
+you can also work with matrices. So if I specify a new pi matrix here now,
+and I take um create a data frame, I i'll say, take this new pi matrix, and actually make it look pretty by giving it an index and giving it a columns. So what I do here is, I take a a new pi ah array and turn it into something that's an excel spreadsheet
+so so I could do things, but I do very complicated things. I can say where it's random floating point numbers of any dimension, and then I can turn that into nice looking,
+so you can be incredibly effective and efficient with with pandas.
+So this is what I do here. See, I take new pi random three by three, and I add some columns, and there you go. I have an example data set with one line of code, and I can run. I can run operations on that data, set all.
+And so you can see that with noon pie and with Pandas i'll let you run the other examples,
+and then we'll, we'll, we'll resume by looking at some examples. So this part introduces statistics with Pandas. Since we we have a library that allows to manipulate numbers. It's a great opportunity for learning basic statistics. So I want to show you some basic. So this is what the rest of the slide does. We don't have time to finish the slide, so we will continue next week.
+But um! When you look at this, I want you to see this, and become a little bit familiar with how you access a new Ah, Pandas ah series and panel's data frames because even though we can express things as as lists and and and dictionaries.
+Um, we We use new pie and pen as most of the time, because new pie, because it makes things go really fast, and Pan is because it makes things look pretty. It's a lot prettier to look at this than to look at a python data a python matrix.
+And there's also some built-in additional manipulations that Pandas allows you to specify some other things
+that we're going to cover later. On But um.
+Please look at new pie and and pandas and just exercise these columns and learn a little bit about how to use them. Because in data science we use these two libraries all the time.
+I'm going to.
+Okay. So you have your homework for next week. So you know you're going to be working the dictionaries. So I have you where I want you, because I want you to emphasize that a lot. And then when we come back to next week, we'll finish this.
+We'll do some introduction machine learning to show you that now you know enough to be able to do machine learning, and then we'll also. I'll give you tons of work, for so you have tons of work. If you think you have a lot of work for your homework, as we wait till next week, but
+ten times more work, because you're going to do a lot of python programming,
+user avatar
+Unknown Speaker
+01:41:53
+because after that we move it to serious statistics, and I want you to already know your python.
+user avatar
+Dino Konstantopoulos
+01:41:59
+So have a great weekend. Thank you for coming to class and see you on to you on Monday next week.
+Thank you online. See you next week.

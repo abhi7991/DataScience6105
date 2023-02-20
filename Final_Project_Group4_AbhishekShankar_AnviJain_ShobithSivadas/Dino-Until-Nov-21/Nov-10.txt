@@ -1,0 +1,756 @@
+The only question.
+user avatar
+Yutong Gao
+00:09:28
+Um,
+I
+user avatar
+Dino Konstantopoulos
+00:12:47
+Okay.
+Wait another requirements. Three minutes.
+user avatar
+Unknown Speaker
+00:13:38
+It's
+user avatar
+Dino Konstantopoulos
+00:14:21
+okay. So um, i'm thinking we postpone the correction of the take home and the midterm in class to Monday,
+because there's nobody here
+and um, and we just do a review of what we did last class. What do you guys think?
+What do people online think? Send me what you think on the chat window?
+You think what?
+So we have two options.
+Either. The the people that are here or online um have the the the the midterm very fresh on their mind. So they want to see what you know. They want to see the correction, so they can put things in order in their minds. But the people that are not here will be missing the correction, and we'll have to view it in the recording.
+So let's take a vote.
+Um! Raise your hand.
+Oh, actually, we can take a vote online, too. Isn't there like a hand option.
+Where is the option for voting
+chat? No. Polls, polls? Yeah,
+I have to create a freaking quiz.
+Just raise your hand, isn't it like a raise hand option like in the window.
+Stop sharing. Where do I open?
+Oops?
+Yeah, there we go.
+Okay, So uh, so raise your hand like shoe. Did. If you think we should correct the midterm today rather than correcting it on Monday and doing a review, so raise your hand online and raise your hand in class. So in classes the vote for the midterm
+we have one,
+two,
+three,
+four, five, six, seven in class. Okay, how about online?
+So the majority of people in class. They're saying, Screw everybody else. We want the correction. Now,
+what what do you guys online think?
+So We want three. We have four raised hands for correcting the midterm.
+Five,
+six,
+seven,
+eight,
+nine, ten. Okay, I think we have a majority. So okay, that's correct. The midterm.
+So people that that that are missing. It will have to. Uh, we'll have to look at the uh.
+We'll have to look at the recording.
+Okay,
+let's just pull thing I can see.
+Okay,
+Um. So um actually let me start with the um
+with the in-class quizzes
+uh so let's go to cannabis and see what the quizzes were, Where's my cameras window?
+Stop, share,
+share screen,
+share the quizzes.
+Okay,
+And now let's go to the quizzes
+and let's look at the midterm.
+Okay, So let's uh for you.
+Okay. So the first question are the most fundamental data structures in Pandas. So that that's the the the series in the data frame right series for one dimension and data frame for two dimensions.
+Box Cox transformation is a transformation that makes ugly,
+ugly looking uh histograms look pretty and look much more regular. So you can then start building a data model based on that histogram. Right? It's one of the best possible transformations you can do um, And you should always, whenever you have a data that you get histogram, It looks like I'm, You know weird
+to do the Box Cox transformation and work in that space.
+So um, this is the dual Lipa problem.
+So uh the dual Lipa problem is um. So you have four possible combinations, right? You have Bb,
+or or Bg. Or Gg: right? And and the premise of the problem already told you. There's no Bb. Because I already have one girl.
+So there's only three remaining possibilities. So each one of these counts for one over three. So that's that's the answer.
+How can you generate a random number between one and seven, with only one guy who, I think that causes a lot of prop people to think. Well, one D. I can only give you six numbers, not seven numbers right. But how about taking one die and throwing it again
+the second time? Right, Then how many possible combinations do you have with the first number in the second number
+thirty, six, right? The thirty, six is not exactly seven. So how do you get seven out of thirty, six,
+seven times five is thirty, five, right? So if you take a range of every every five possibilities in those thirty, six, you can get seven ranges of seven. Yeah, and each range will correspond to a seven. But then we have one remaining element, which is the thirty sixth, right? So just throw that away.
+If you get a six and a six, just throw the second die again,
+so that you never get a six and a six. So now you only have thirty five possibilities, and all those thirty five possibilities. Divide them by seven, and then you get ranges, and each one of them corresponds to a number for one to seven. Is that clear?
+Yeah. So we want to generate a random number to one and seven. But we only have one D, and the problem with one die? Is it only has six faces.
+But how about we throw the die? Twice
+we throw it once, and then we throw it again. That's the that's like throwing two dice. We have thirty, six possible combinations. How do we get Seven numbers out of thirty six possible combinations?
+Thirty-six divided is not divisible by seven, but thirty, five is divisible by seven,
+thirty-seven, thirty, thirty-five, divided by seven. Is five.
+Yeah,
+so we can divide our pairs
+of numbers that represent what we get with a die into groups of five, into groups of five, and then we have seven groups of five.
+So each group of five represents one possible number. So we'll say one, one, one, two, one, three, one, four, one five represents a number one,
+one, six, two, one, two, two, two, three, two, four
+represents the number two,
+two, five, two, six, three, one, three, two, three, three represents a number three, right,
+and then we have an equal range
+except for the last number Six Six. We'll just throw it away. If you get a six, six, throw the dye second time, so you never get a six.
+user avatar
+Unknown Speaker
+00:22:30
+So you
+user avatar
+Dino Konstantopoulos
+00:22:35
+Yeah,
+of course. Yeah, that's that's the whole idea. The whole idea is to generate a random number between one and seven, so that you have a uniform distribution
+clear.
+Yes, online. Oh, okay. So online, If you have any questions, just just send a send a remark so we can see it. Okay, So that was this problem.
+Okay. So the jar with a hundred coins,
+of which ninety-nine are fair, and one is double head is a little bit more complicated. So let's examine that
+the jar, the jar, the jar, the jar.
+Okay.
+So we know that there are two types of coins,
+um fair and double headed. Hence there are two possible ways of choosing a a coin. The first is to choose a fair coin, and a second is to choose a coin that has two heads Right
+now. We know from the premise of the problem these two statements. These two statements are given in the in the problem.
+Yeah, we have the probability of selecting a fair coin, which is ninety, nine point, nine percent.
+The probability of selecting a double headed coin is is one over thousand.
+Yeah,
+that's given in the premise of the problem.
+Now, selecting ten heads in a row is a marginal likelihood, because you have two two possible ways of selecting ten heads in a row.
+So the the the selecting ten heads in a row is is is is is a marginal likelihood, so it's part two possibilities. So you add the probabilities. Right? A. Is the case of ten heads given a fair coin,
+so that's ten heads given that you have a coin that returns, has entails,
+and B is the case when you have ten heads given that you have a double headed call, so ten heads Given that you will turn ahead and ahead.
+Yeah, that's called the margin likelihood that's usually what goes in the denominator of base formula.
+Stop me if there's any questions.
+So what's the probability of selecting ten head? Sorry.
+What's the probability of selecting ten heads in a row?
+The probability of selecting ten heads in a row. I I can also call that P. Of Hh:
+No, that's not. That's not a good name for that. Selecting ten heads in a row. Is I I I I should call that P. Of ten H. Right. Ten heads in a row
+is the probability of eight, as the probability of B. So that's a probability of selecting a fair coin times getting ten heads,
+or the probability selecting a double headed point times getting ten heads, but that's one, because if it's double headed, we will always get a one. But you will always get ahead right,
+everybody, everybody with me.
+So let's let's. Let's compute both probabilities. So let's compute the first one,
+which is the probability of
+selecting ten heads. If I have a calling that returns has entails,
+Each one has a ninety-nine point nine percent probability. And so the probability. Um um of this case is times. This is the probability of selecting a fair coin and this is the probability of of of of.
+So this is the probability given that I have heads, tails, and I have this, and the privilege of selecting ten heads is this to the power? Ten,
+right? So I select the fair coin, and then ten times what's the probability of getting ten heads?
+This? So this is the probability of of the case. A
+probability of the case B is in in a very similar argumentation. The probability of selecting D. The
+is the probability of.
+Then I get ten heads given that I have the the the, the the loaded, that that only returns to heads. So the probability of of that that I selected the loaded die is is that we already agreed is one a thousand. The probably are getting ten heads. One I have. That problem is one. I always get Ted. So that's this number.
+So now we're going to use base formula,
+and we're gonna we're going to compute two things. First, we're going to compute the probability that I get heads and entails. Given that I have ten heads, and we're going to write that as this formula, the probability of ten heads given that I get Have a fair fair, the fair coin divided by the marginal likelihood.
+So um! We already computed these probabilities, and we just plug in. If you didn't have a calculator. It was okay to leave the numbers like that.
+This is this is just based formula. Everybody agree.
+The probability of getting heads, and the probability of having a fair coin given that I get we have ten heads is the probability of getting ten heads given that I have a fair coin divided by the marginal likelihood,
+and let's do the same thing for the other case. Probability uh that I have a loaded the a coin.
+Given that I see ten heads. So the probably that I have a loaded call given that I see ten heads is the probably that I get ten heads given that I have sucked.
+Given that I have a loaded coin
+divided by the margin likelihood, so plug in the numbers, and you get that.
+And so the probability of selecting heads on the next toss
+is the probability
+given that I see ten heads because it's the next event. Evidence that I have is that I have ten heads. Right? So it's either that the call is fair.
+Okay,
+So it's just an application based formula.
+So the the the the most difficult part, the most difficult part is writing the num that the cases saying, Okay, ten heads,
+fair coin, fake coin, loaded coin. Apply the formula. You had your notes. You can just write down the formula and then doing the computations.
+Okay,
+not okay.
+user avatar
+Unknown Speaker
+00:30:20
+A little bit.
+user avatar
+Dino Konstantopoulos
+00:30:23
+Can I? Please wait for a look. Yes, so my problem is given that we see tennis head,
+so I mean, and no matter, you have chosen the one or you chosen the don't have going
+you have so there in
+they are there. So I didn't take, seeing that have into consideration
+you didn't take seeing him, so seeing ten head is part of it on the um of the problem by jar, has that many points. Pick a coin around on top ten times, and you see ten heads. That's the evidence. Yeah, right evidence is, you see, ten heads. So now, in order to work with base formula, you have to plug in event given.
+You have to plug in these events. Right base formula tells you what the probably of something given that you have the evidence of something,
+the only evidence I have here is that I get ten heads in the row
+right? So I I need to plug that into the formula. And I call this P. Ten H:
+Right: Yeah. So So now I have to apply this formula. So the first thing that I do here is I, I compute. I compute the the the marginal likelihood
+right? Because I can compute the marginal likelihood
+because it's this,
+it's it's two possibilities. Now I'm going to compute the the the the the posterior, the probability that I see ten heads given, that I have a fair coin, and i'm also going to compute the probability that I see ten heads given that I have a fake coin,
+and then i'm going to say um the probability that um that I that I have
+that I am going to apply base formula here, and I'm going to say the probability that I I have a fair coin given that I have. The evidence is this, and the probability that I have a fake or given that I see the evidence is this.
+Now i'm given
+another piece of information I want to. I want. I want to tell me what's the probability of selecting heads on the next toss. So there's two possibilities.
+So that's the result.
+Yeah,
+I I see a lot of puzzle looks. It's just base formula, right? You write down base formula, and you just you write down all the events, and you enumerate the values. It's it's not very complicated.
+Yeah.
+Yeah. So So what you need to do is is when you have a problem like that, you say, Okay, What are the events that I have? Let me describe an event? So ten H. Is ten heads. Let me describe the event. Fair Coin
+Ht: because I can get an issue it. Let me describe the event: Fake Coin H. Because they only get heads, and then just write down something, given something. You write down your formulas, and then you plug in the numbers Right? It's a it's a kind of a formulaic approach.
+If somebody gives you the problem, it means there is a solution, and so you have to apply all the numbers in order to to find the formula that will give you the solution.
+Now I have to compute these two probabilities. How do I take this to what I apply base formula? This is base formula. How do? How do I compute this number. All this numbers give and not have to compute the margin like the two possibilities. Right? So that's how you proceed.
+This is a problem that could be given to you in an interview.
+Right? This is not a very complicated problem. You can actually solve it. The The most difficult part is plugging in the numbers. But you don't really have to plug in the numbers. You can explain how how to work out how to work out this problem.
+Okay,
+last question is you have? Uh, this is uh a a matrix, but it's actually a three-dimensional matrix. And you want to count um
+friendships like how many numbers of ones are are paired with a number of one in in in the in the same neighborhood. But you don't want to count friendships twice, because a one and a one is one friendship. It's not two. So that's that was the only tricky part.
+So you saw. The tricky part is when you add a friendship create a tuple. Remember that tuple. And when you run across the same friendship, if the tuple already exists, don't count that.
+Yeah.
+So the way The way I would solve this problem is this way.
+I would solve it this way.
+Um
+kind of the reason I would solve it this way. It's. It's maybe not optimal, but I It's kind of like a neat little structure. And so I me show you what I would do.
+Okay, So look at this.
+So what I have I have. I I know I have a three dimensional matrix, right? So I know I'm going to have to have three ranges because I have to range over all the all, the all, the the the rows, and the and the columns, and the and the slices. And then for every cell I know I have to range over all the neighbors,
+and and there's two neighbors in each direction, right? So if you want to do a lip acute you you you range based on I
+plus one minus one. You don't want to count the cell
+right? So that's why I go with steps of two,
+and then and then the the next three, the next three lines. I make sure i'm not outside the ranges of the array, because if you count neighbors,
+you have to make sure you're not like if You' in the beginning of the of the row, and you can't count count to the column before, because it doesn't exist. So i'm going to have three. I three loops to make sure i'm not outside the ranges of the array from outside. Don't do anything,
+and then finally I have another. If it says, am I on a one? If I if i'm on the one, I can start counting friendships
+if i'm not on a one. There's there's a zero there. I'm not going to account friendships because there's nothing There's nothing there's no friend being being able to become a friend with somebody else with another one. And then i'm gonna say, if
+the this the sex stupid
+I Jk: I ijk, is not, have been has not already been counted. Then, if I see another one on a neighbor,
+implement the total number of friendships,
+and then add that six duplicate to that array, so I can remember if I counted that friendship. Okay,
+so it it's not ideal. It would be better to add this above. So I don't go through.
+Make sure if I count it, I don't count it again, so add it to a list,
+user avatar
+Unknown Speaker
+00:38:09
+and then don't count it. If that element element is already in the list.
+user avatar
+Dino Konstantopoulos
+00:38:12
+Yeah,
+Okay?
+Ah, actually, I just saw a mistake. I Um,
+I have to make sure. I order this right
+because I can get the I before and the Ijk later.
+Yeah. So actually, I think Um, I think uh what you have to do is actually, yeah, this is a bug. You probably have to do this. You have to add the six duplicate as I,
+and then I I Jj. K.
+Um, and then and then also sort it
+so that it really is unique, because a friendship of of of cell a with a plus one is the same same thing as the friendship with a plus one and a Yeah.
+Okay. So that's That's the solution.
+Yeah,
+i'm going row-wise. And column wise, and slice wise,
+right? Because I have.
+So i'm going row wise column my slice wise, and then for every element in that sale i'm looking at all the neighbors.
+And then, after I look at all the neighbors. First of all I make sure that i'm not inside the bounds of the matrix,
+and then and then I look if I have a one, and if I have a one, and I then I I see if I also have a one
+in one of the neighboring cells.
+And, by the way I make sure that I don't count friendships to us.
+Yeah,
+that that's a general idea. If you added the pseudo code with that idea, then you're correct.
+Okay? Uh, there's a question in the chat window.
+Yeah, yeah, you You don't have to write the same loops. You can write loops with your own logic. As long as you make sure that you visit every cell,
+you visit, every neighboring cell for every cell, and that you don't count the sell, the friends, the friendships twice the
+you can do anything anything else. Count backwards. Come forwards.
+Yeah, that A. All the solutions also work.
+Okay, just one.
+Okay, good. So this was the the the the the problem Um, the the take home problem. So Now let's go. Sorry this was the in-class. Problem. So now let's go to the take home.
+So let me share the notebook.
+Okay,
+Um.
+So um.
+First of all, we did something very similar in class.
+When we define probabilities. Remember, we define probabilities, and we said that the experiment that's an outcome. That's a sample space. That's an event. We talked about it. What's an experiment? We had two experiments in this problem, one with seven distinct drivers and one with the same driver and me going to to the shows. The outcome is one possible result.
+Driver one it for show driver to a second show driver, three driver, seven and seven. Show in me and seven show. That is one outcome.
+The sample space is all possibilities
+right? So you have to make sure that all possibilities are equally likely that you generate the the the drivers go to the shows without any collusion. They go in the panel. They'll say how you go that show so that we don't. We're not going on the same show with, you know, because I don't want to meet Dino, or I hate fans.
+Right
+sorry. It's a subset of the Sam of of the sample space which is a grouping of different possible outcomes.
+Okay? And then what we did. Remember what we did. We play with the ball experiment? And I told you balls are red, three are blue, and and we did this we define and learn, and then we said what all possible combinations, and then we took a sample.
+So look at this. This is how you would do that. R. Is our colors red. What r could be a driver
+and eight is the show. They go in.
+So this is driver are going to show eight. This is driver are okay.
+Supposing they're going to show nine, so all you need to do is combine a letter with a number,
+and that will give you all possible combinations.
+Right?
+So all you have to do is generate the sample space. This is just combinatorics. This is just using code to generate it. So let me show you. Let me show you how I did that.
+All right. So This is the question, you know. I want to go. I'm. I'm crazy about formula One drivers and do a lip. I'm a formula, one fan. So let's start with,
+divide and conquer. Whenever you have problems like that, you always want to start small and get bigger, decompose the problem into smaller steps.
+So first evaluate all possible groupings of sets. This is called the power set of a set. So how do you? How do you generate the power I should have called this should of call this power set, but but I called it Combo. Okay. So so the power set
+i'm going to start by
+um
+user avatar
+Unknown Speaker
+00:43:43
+oops.
+user avatar
+Dino Konstantopoulos
+00:43:45
+That was bad.
+I I want to. I want. I want to show you the the coding pieces so you under Come on, stupid piece of crap.
+Why, Aren't, you letting me take pieces of code.
+Okay, I'm going to have to use control, C:
+Okay. So first
+we start with,
+we make sure that if the if the set has length one, we would just return to a just the element, because there, there's no other possibilities of grouping that.
+So that's the first part.
+Okay, So we just create a set, and we we also sort it. So we have things sorted out a bit alphabetically. Then we proceed with with um a kind of a merge sort kind of um. So um,
+this is actually something that you should study in your uh algorithms class, because the merge sort is a very interesting um kind of sort. No, that's not it. Um merge sort
+um is is a is actually a phonomenon way of of of sorting an array, and it's it's recursive. You added into you, divided into when you switch the numbers right. So this is something that you starting your algorithms class. And so what i'm going to do is i'm going to proceed along these lines. So so what i'm going to do is this:
+user avatar
+Unknown Speaker
+00:45:23
+Yeah, it's difficult to do that this way.
+user avatar
+Unknown Speaker
+00:45:25
+Um:
+user avatar
+Dino Konstantopoulos
+00:45:32
+So i'm going to do that with arrows.
+Okay. So so so um,
+here
+uh, And actually, this is one in. Okay. So if I do this, and then I return red,
+and at the end I say, return red and okay. So this is the end. So this is here. Yeah. So if I do this, and I define this as the power set. And then I say, combos of A, B Cd. Um,
+i'm actually missing a few.
+user avatar
+Unknown Speaker
+00:46:09
+Am I missing a few or not?
+user avatar
+Dino Konstantopoulos
+00:46:14
+Yeah, I'm actually missing a few, Because, you see, for example, I get Dcd.
+Abd. Is missing. Yeah,
+So this is not entirely complete. But this was. This is essentially the the Von Neumann, algorithm because what I do is, I take uh for for the range of. I go for every element in this. I I look at the slice after I and the slice before I
+Yeah. And then I I I run the same algorithm again for every slice until I get back to a single element. So this is about why this Neumann style uh algorithm
+but i'm missing a missing something. And so the missing something is, we have to iterate over when we iterate over slices
+when we iterated over slices. Sometimes we did groupings of one
+right? So we can't use this structure here, because the structure that I use here is what is this? This is all groups right? I unroll all possible groups.
+So I go through. What I do is once again this algorithm I look at every grouping of A of of a string, A, B Cd. And I try to group all possible in all possible ways. And so I'm. Going to go over every possible index in the length, and then look at the groupings before and the groupings after, and i'm going to rerun the same. Algorithm
+it's a divide and conquer. Algorithm But I have one problem here. I assume that i'm getting a list of things
+where the that's why you star J. But sometimes we get a single element. If i'm the beginning, the first element is a single element. So, Sarj, what we turn will work there. And so I have to look at all possible combinations, where sometimes I have a tuple of letters, and sometimes I have a single letter. So it's a little bit more complicated than that,
+but it's not very difficult. You just add an if statement to to see if you have a tuple.
+So that's what you do,
+and also you sort alphabetically. So you, because you don't care about the order right? So i'm going to replace this with something just a little bit more complicated.
+Um! And it is a little bit more complicated.
+But uh, but it's more correct. So now I I do the same thing. But I test if it's a tuple, and it'll do two different things. If it's a tuple. Then I unroll the tuple. If it's not a tuple, then just give me the single letter.
+Do that both for the beginning of the list of the slice and then the end of the slice.
+So now, if I run this cell when I do combos of a Bcd:
+Oh, okay,
+right. Acd is missing.
+Yeah. So so so I still have something to do. So I still have work to do. So what i'm going to do is i'm going to
+permute first all possible abcs,
+so that I can actually use the same kind of algorithm to get all possible permutations. So now, if I use permutations and I use iter tools to get all my possible permutations of a letter. Now, when I run this,
+now I get all possible permutations right. This is how I get all possible permutations. And now i'm going to combine the two. So for all possible permutations, i'm going to get the uh the combos.
+And when I do this. When I do this, I actually verify that. Now I do get all possible permutations. Now, you see, but what I did is instead of doing A, B C. D. I did a Vcm. Why did I do A. Vcm. Because M. Is going to be me,
+and I want to see all possible groupings of drivers with me.
+Yeah. So i'm going to do a Vcm: So now I get everything I get. Vcn I get. Avm
+I didn't say which show.
+But now I have a way to do groupings
+which is, which is called the power set of a set. By the way, the power set of a set is code that you can find online. This is just my code, but the power set of a set just Google it. What's the power set of a set python. It will give you the answer Right? So the power set is something that's easy to find. Okay, good.
+Um. So now that we have all possible groupings. In other words, a power set
+and shows are enumerated. Let's, let's agree that shows will be enumerated as number, digits, and drivers will be characters A. Through. G, Because I have sales, seven drivers. Yeah.
+So what i'm going to do Now, what i'm going to do now is i'm going to do this.
+I'm going to create
+my hypothesis. So look at what I do. Here is, I say, I have seven shows.
+This is all possible permutations from all shows, and I have drivers A, B, C, E. Of Gm. And I have all possible groupings of drivers.
+Yeah,
+and all I have to do is pair the two things.
+So the two, the two things i'm gonna appear is i'm gonna create a set that contains all possible drivers into all possible shows. I already have the code that does the grouping. All I need to do now is group,
+add, add, concatenate the grouping of numbers with the letters.
+So, in order to concatenate the numbers with the letters, this is just a little bit of codes,
+and this was my first try.
+Um, and so what I do here is I iterate over uh all possible permutations of of shows, and I use to carry the library so I can have a a a listing. It will tell me it from all, or how long it takes. I'm gonna iterate over all possible drivers.
+So this is it sees my my my iter end, and i'm gonna say, create all possible zips create all possible zips of both. Right? I'm gonna zip both
+have a little problem, though, because when i'm doing this
+when i'm doing the zip, and then I discovered the bug. Um, sometimes. Um,
+we have this problem
+in that in the four Dc. In the four Dc. Part of the iteration. Sometimes we get a tuple, and sometimes you get a string, because if you see at my grouping, see my grouping. Sometimes I have a a string and some some. Sometimes I have a tuple
+right. So when I enumerate all possible values of the show of all possible values. I need to be very careful, because sometimes i'll get a listing, and sometimes i'll get I'll get a string, and so I have to. It's a little bit more complicated,
+because now I I actually have to
+do do this.
+Just Just the loop changes a little bit.
+It's a little bit longer, so I have to see if it's a string. Make sure you treat it as a list
+rather than just treating it as a list.
+And this is how I zip all my shows with all the drivers. This is enumerating the sample space. We did this
+in in in our balls, notebook in class. It just was a little bit simpler, because we had just one earn. But we added ball colors,
+and in the index of the ball you just have to do the same thing with the drivers in the shows. It's just a little bit more complicated. So now that you have this, now that you have this,
+we can take a peak at our sample space, so i'm not. I'm not going to enumerate it because it could be really big. So i'm just being careful. And i'm saying, Okay, What's the length?
+What's the length of that sample space? I call this seven and I in seven seven drivers, and I in seven shows.
+Yeah. So what's the length of that space? If I if I run this, the length of that space is Oh, okay, I forgot that this is going to take some time. All correct.
+Okay, Oops, I forgot about that. Yeah, this is gonna take five, five or ten minutes to generate. You see the percentage. That's why I added, the percentage party takes a long time. Yes,
+if it's what? Yeah, yeah, there, there's no there's no performance thing. So this will take time, but you will see that there's five million different possibilities of a numer. About five million of enumerating seven drivers into seven shows seven drivers in me to seven shows.
+Okay, this is, by the way, this is why I picked seven, because I tried it for ten, and then he was gonna take. You know how how much is going to take for ten, because in my initial goal was to do ten ten is gonna take um. Ten would have taken a hundred years
+to do this enumeration. That's how exponential things grow,
+and and eight would have taken uh like twenty days
+like something crazy like that
+um and um. And so uh, now that's I. I forgot about This is gonna take a little bit of time. So um let's just wait.
+We're already at twenty. What the heck? We'll just wait. Yes,
+one driver will go to one of seven different shows. Yes,
+yeah. So in other words, the letter the letter A should should be unique across. I I can't find the letter A in one show, and the letter A and another show right,
+but I could find the letter A with the letter B with a letter C, because that means that drivers A, B and C go to one show together.
+So we're at thirty percent,
+and it's linear So so we know we know how long we have to wait right. So if I had ten show ten drivers and ten shows I I can wait, and it'll tell me. Oh, but by the way, this tells me about how long it will take right. Expect it to four minutes.
+If you run it with ten. You also expected crazy number of minutes.
+Um, but exponentially, You know, things grow really, really fast. You You can actually have problems where you trying to enumerate a sample space that's bigger than the number of atoms in the universe.
+It's kind of crazy that your mind can actually wrap over such enough over such a big number.
+So let's wait until this finishes,
+so it it it'll take about four and a half. We already at three minutes, and we did about half.
+But I mean you. You agree that this part is shouldn't be too complicated. It's just coding right. It's just ways of pairing seven drivers into seven shows, and you have to enumerate the sample space.
+So it's. Just how can I build this combination?
+So It takes a little bit of coding. But you can Google for that, right you can. What's the power set of a set? This will return all the groupings. What are all possible ways of zipping numbers, one through seven with drivers, A. G.
+You just go through the zipping code, and then you just generate it, which is what i'm doing here
+and there's There's probably a better way to to do this, because i'm not using it a lot of libraries, because I I wrote my own code, but you could go to iter tools and find Apis that actually do this kind of thing for you. It probably do it a lot faster.
+user avatar
+Unknown Speaker
+00:59:05
+So we're at sixty.
+user avatar
+Dino Konstantopoulos
+00:59:46
+No. So we have a question in the chat window.
+Why include yourself in combination? We could have seven drivers and seven shows and seven drivers in six shows as event.
+Okay, So what an West is saying is, why should we? Um
+add me, which is another possibility, and make this the sample space a little bit longer. What we could do is just consider seven drivers in seven shows, and then consider me
+me going into that sample space and then say, Okay, if I'm in in show one, then it's seven drivers and six shows right, if me and show two, then it's the seven drivers and six shows, except not in show, too. So the reason i'm doing that on west is because I want to be crystal clear that I've enumerated all possible combinations.
+What you're using. There is mathematical thinking. You're saying
+user avatar
+Unknown Speaker
+01:00:45
+the probability that I go to the one shoe is one minus
+user avatar
+Dino Konstantopoulos
+01:00:49
+you're using the one minus thinking here. So you saying, Okay, I only looked. I only need to look at these six shows because I went to the other show, and i'm going to do one minus me, not meeting any drivers right? So you're already adding theory there. I don't want to use any theory on which I want to enumerate all possible combinations. And I want to see how many are those combinations where i'm in a show with another driver.
+Okay, I wish.
+Yeah. So So that's that's clever thinking. That's saying, Okay, I don't have to do seven shows. I can do six, because if I go to one show. Then I can see the one minus thinking. So that's that's completely correct. But I actually want to enumerate everything. I want to actually completely spell out all possibilities because I'm I'm going to be called into looking at different experiments, and I don't want to be.
+I want to count. If I If This was only two shows and two drivers. I want to use my toes and my fingers to count things
+because that's how we test things right.
+So one hundred percent will. Oh, no.
+Why? Oh, I forgot. I forgot that. There's two loops
+user avatar
+Unknown Speaker
+01:02:18
+uh seven drivers.
+user avatar
+Unknown Speaker
+01:02:20
+So to show
+user avatar
+Dino Konstantopoulos
+01:02:23
+yeah, the join function. Yeah, that would be another way of doing it. Absolutely. Absolutely. Yeah, Yeah, that's another great idea.
+So did everybody hear this idea? We actually define a join? Come a joint combination in class, so we could use a joint combination to do that. This is the thing that I talked about up here right this This joint combination here.
+Uh no, this is not the join. I it's not. I didn't. I didn't add it here. But yeah, that that's an excellent other idea. Yeah, absolutely I love. I load that idea.
+I just. I just did it from scratch Right? I just decided. Let me just not depend on any other code, and let me just rewrite the entire code.
+So we're almost done.
+I will never have a chance to use it. I always I always grab it.
+Okay. So you see that the sample space for seven drivers in me in seven shows is five million seven hundred and sixty-four thousand eight hundred. And one. Yeah. So it's still. Five million is something we can work with, right? It's something computers can actually work with. Took a little bit, took like five minutes for us to do that,
+but we can work this. So
+now, what we're gonna do is is when we see that it's too big, we sample right. That's the That's the first thing we do when we have something that is too big. Okay, let me
+let me let me take a look at it.
+So If we sample this space you will see that's one possible combination. So this is one possible combination. Let's look at one combination show. Two is empty. Show four is empty
+uh show five drivers A, B. Go to show five drivers cf go to show one driver D. Goes to show three drivers, eg. Goes to seven, and I go to show six.
+This is an example of a of an outcome where I don't see any drivers. Yes,
+this is an example of another outcome where I actually do see drivers
+right, Driver A goes to show three, and I go to show one where driver C is also in show one.
+Yeah, this is not complicated. It's just enumerating my entire sample space. This is the first, the first thing we started class. By doing that it's a little more complicated than a single container, because we have seven containers,
+and instead of three colors we have. We have seven drivers in me.
+But, uh, like like your classmate said. We also could use the the the joints, the joint code that you work with in formula one and then you wouldn't have to use Mike as the zipper code. So now we can use our P function because we've been enumerated. My sample space. Yeah. So what we do is we import my P function,
+and the class, and all we have to do is define the not alone predicate. What does it mean for me? In each one of these outcomes to not be alone.
+user avatar
+Unknown Speaker
+01:07:09
+Yeah,
+user avatar
+Dino Konstantopoulos
+01:07:10
+Not super complicated. We can define it this way,
+right? So this means that any and in K. For K. Not possible. Now, outcome is a dictionary. So i'm going to get the key, and i'm going to make sure that M. In K. For either. Just A, B, C, d, or F, or G also be Uk:
+Yeah.
+And then when we run that, then we can compute this, which is our my probability that i'm not alone,
+and that will give me the result of uh um of the computation that i'm after.
+Now this goes and applies it to the entire sample space that takes a little bit of time. But you shouldn't take too long.
+It's this number.
+Yeah. And now, if you compute this number, you will see that this is sixty, six percent
+clear.
+I did. I didn't use any mathematical thinking right? All I did was I enumerated my sample space. That's exactly exactly the definition of probability. Probability simply a fraction whose new numerator is a number of all cases possible.
+Yes,
+so all I have to do is enumerate all cases, and then write a predicate. That tells me which case is the one that i'm interested in,
+and that's the case. For seven drivers seven show and look, look, look, look, look! I have seven drivers and seven shows. I'm. Already ready for experiment. Two, because experiment two. What? What is the only thing I need to change.
+Huh?
+Yeah. So what what am I changing in this code in this code down here? What's What's the thing that's going to change in the code that enumerates.
+Yeah, exactly a A, a, a, a, a, a, a, A. M.
+One driver
+right? And so and so we're going to do that. Let's do that.
+We're gonna wait a little bit of time. But that's okay. Oh, Oh, and by the way, before we go there, let's do some critical thinking. Let's do some critical thinking,
+and and this is where mathematical comes in. Mathematics come in right. Mathematics can be, not works. Pick the first driver probability from one driver to go to the other. Show to the other. Six shows to the other. Six shows is six over seven,
+because the seven shows, and I picked the second driver six by seven. So so if you have seven drivers, that the probability is one minus six over seven to the Power seven, which is exactly this number.
+Exactly.
+Right.
+Okay. So that's that's part, hey? Critical thinking. But if you don't want to do the critical thinking and also do simulations. This is a simulation that I gave you right. We simulate. And what we do is we go a million times where we say, Okay, what are possible shows. Let me extend that with,
+uh, with seven times a random number going from show zero to show seven,
+and then let me pick a random number for me to go to a show, and let's see if i'm in the i'm. I'm in in the same show, in in the same shows that other drivers go to. That's the simulation. That's the Monte Carlo part. Yeah,
+Does everybody agree with that?
+Yeah. Okay. So let me let me just run the simulation. So i'm going to run the simulation. Where's the simulation?
+That's the simulation right? So, Sim, if
+the heck am I doing here? I want to simulate
+ten thousand times, let's say ten thousand times um of number drivers and number shows. So seven drivers, seven shows
+sixty-six percent.
+Exactly the result that I got by numerous sample space. Are we Good.
+Yeah.
+Yeah. A hundred thousand
+sixty-six percent.
+Yeah.
+Okay. Now let's go. To the other experiment. One driver in seven shows seven times same thing. The only difference is a single driver.
+Let's run. This shows okay. This is one and I in seven, seven times. Okay. So it's going to take a little bit of time. But that's okay. Boy
+expected. Eta is five minutes.
+By the way, what do you think? Do you think this is going to be the same? Or do you think it's going to be different?
+Yeah, different. It's It's a different sample space, right? It's just that simple, you know. We did this in class to remember the formula, one homework where we also looked at weather events,
+did I specify that the it's the weather where the races. It could have been the weather in Tanzania.
+But the sample space is different when you add a weather event, and you add a different letter. In the sample space you get a different sample space. If you have a different space, your probability will change.
+Now. I could have told you something crazy. I could have told you instead of um, You know I I could have said when I give you the formula. One weather hang for homework. This is the weather on the moon.
+You like what the heck does. The weather on the moon have to do with the results in formula. One I don't care. The sample space is different. The probabilities will be different.
+Don't don't try to think logically. Just enumerate the sample space and count the number of favorable outcomes over the number of total outcomes. And that's the definition of probability. If you want to use critical thinking, then do simulations and and use math, and you can also do that. But but as a programmer, the first thing you want to get to is okay,
+that's my sample space. I have A. P function. Let's use it. Yes,
+I think.
+user avatar
+Unknown Speaker
+01:13:55
+Sure.
+user avatar
+Dino Konstantopoulos
+01:14:25
+Now let me ask you something else. If I gave you this problem, maybe there's some some things that you didn't get to right. But the combinatorics problem Um! Was everybody able to do that?
+It is just a matter of the enumerating the sample space right. Maybe you have some bugs. That's okay. That happens, right? But how do you? How do you detect these bugs? How do you know you have bugs? What? What's the technique to use to verify that your code works? Because, after all, you have five million possibilities. So how do you verify
+small sample? Exactly. You test with one driver in one show. One driver in two shows two drivers in two shows, and look at all possibilities and count them using your toes and your fingers.
+And you That's how you verify that your code works, because that's how you That's what I did. I I I showed you I wanted. I didn't just show you the code. I showed you how I thought about the code and how I fixed it, because I found bugs this way, and I said, Oh, i'm missing something. What's the Oh, I see this is This was a tuple, but sometimes the tuple is just one string, and so I have to use two different types. So I have two different, and that's how you fix the bugs
+by working with smaller subsets to see where your mistakes are
+when you go to an interview. If somebody gives you a tough problem,
+the first thing you say, Okay, this is kind of tough. Let me simplify. Let me look at four voters in two countries rather than all the voters in all countries in the world. Let me solve this. Let me solve it with one more country, two more countries, and then i'll get the idea of what the answer is. Yeah,
+Don't, If somebody tells you go to Mount Everest, you're not gonna jump to the top of Mount Everest. You're gonna train on a smaller mountain train on a bigger mountain, Right? You're gonna take it easy. So why do you expect to solve things immediately? You don't It's the same thing. Just start slowly, take small steps
+even in the solution to my code. You saw how I
+I went. Okay, let me first find all possible groupings.
+Then let me let me. Um. Once I know that I have the power set. Then let me group the the drivers with the with the shows. I could have used the joint code, but I I wanted to use my Zipper and I verified with a small number of drivers, small number shows, and then I went to seven drivers, and second shows. That's not the first thing. I did.
+Okay, So we're at seventy-seven percent.
+But you see how strings are really useful, right? Whenever you want to enumerate things, just finding finding a way to
+describe something with this with a string. It's actually also the solution to our to our in-class problems. Remember the in-class problems. How How do I did I solve it? Why, I define the event. Ten H. Which is ten heads in a row,
+and I define the event uh the event. Um, you know. B. That means something. You even see. That means something else. And I start working with variables. And these variables represent things. I told you the beginning of the class. What's programming?
+Programming is juggling with many, many numbers and using variables.
+So every problem is solved that way. Just assign variables to events and start thinking. Logically,
+it's very formulaic,
+and also never try to solve a big problem in one step. Decompose it into smaller steps. Even my my power set. You saw how my power set code was recursive.
+What I did is I went through all possible strings, and I I looked at. Okay, this is, and i'm going to look at the first set. I'm going to look at the second set. Oh, look at the first. It's the same problem. Let me do a recursive solution.
+Okay, look at the look at this sample space. It's a a lot different than seven drivers and semicol. There's a lot less combinations, a lot less possibility. Only twelve thousand.
+Of course the probabilities are going to be different.
+So let's sample it.
+Same thing we did with the
+so. This is one possible one possible sample.
+This is
+which means this is the case that's going to be favorable. I meet the driver.
+Yeah.
+You notice how I use the underscore for saying no driver going to show three. This is important. This is not a case you need to miss. This is possible. And no, that's that's one possible outcome. No driver goes to that show.
+Okay. And now I'm going to define the same predicate. Now, it's a little bit simpler because it's me in K. And A. In K. Because I only have one drive
+probability seven over thirteen,
+seven hundred and thirteen is not the same thing as sixty, six percent.
+It's closer to fifty percent.
+Yeah.
+So now let's do the simulation. Let's do the simulation right? So what did I change in the simulation instead of shows that extend, I said. Okay, let me a little bit more more careful. Let me range over the shows and let me just append.
+This shows one by one with with a single with a single with a single size. So um! This is placing one driver in the in new shows,
+in new shows, shows new shows times. That's why I have the new shows times right, but it's It's It's essentially very similar, by the way to this. So that's a little bit worrying, because this code looks very similar to this. Okay. But in any case this is my first tried for the simulation. I call the Sim to Let's just try the simulation.
+You notice that that I I I forgot to remove the new drivers, but there's no new drivers in here at all. Right.
+There's no new drivers, so I can. I can just reduce. Remove this because there's only one driver
+and i'm looking for um seven shows.
+So i'm running the same simulation one hundred thousand times, and I want to see what the result is for for one driver in seven shows.
+Oh, no, I don't get fifty. I get the same result. The seven drivers in seven shows what's wrong.
+Why am I getting the same result? What?
+Okay,
+Let's do some investigation. Let's do some investigation.
+Let's let's simplify when things go wrong. I'm going to simplify. I'm going to do one driver visiting two shows four times.
+Okay, whenever something's wrong with it. Oh, I don't understand what's wrong. Correct. Let me simplify.
+Let's look at this probability. I'm going to look at the probability of that driver going to both shows, and I'm going to look at the probability of that driver going going to just one show two times
+right. So this is the same thing as the code above,
+except now it's
+zero through one and size is visiting four times, and i'm gonna say if zero in shows and one. It shows this means going to both shows. Yeah, Okay, let me let me run this simulation.
+But
+the probability of going to just one four times is,
+of course it's one minus one hundred. Yeah, one minus that is only twelve percent.
+What's the problem here, Professor said that I should have the same probability of going to either one show four times or both shows twice each Right? What's What's the problem? What's the problem,
+Professor said that all outcomes are equally likely and hit clearly here. The outcomes are not equally likely, because much less chance. If I use this code. By the way, if I use this code. There's much less chance that um that I visit, that I visit just one show and a much higher chance that I visit both shows
+Why,
+in other words, if I if I use numbers the outcome zero zero, which means I visit, show zero four times, or the outcome one one, one one, which means I visit show one four times is much
+which is what I obtain with With this, With this code up, there is much a rarer event than all the other outcomes where I have Abc D. With a mix of zeros, and once in A B Cd, right
+and zero zero means for shows visit four times one. One one means second shows with the four times right. And here's an example where I visit both shows zero, one zero And look
+if I use random numbers. There's a much higher chance of me to artificially just visit both shows than there is to visit only one show.
+This is, do a lip by going. Oh, no,
+it's this for the same reason that if you throw a coin, the outcome heads, heads, heads, or tails tails is much wearer than the outcome where I have a mixed number, heads and tails. Right?
+Why is that? Because N. And N. Where any zero is once the result of a binomial trial. What's the binomial trial? It's N. Times a Bernoulli trial, where it's zero, or one and a binomial trial?
+He's not
+a uniform probability distribution right.
+If we, if we look at our binomial profile,
+let's look at our binomial profile for seven seven trials where each trial is a coin, so it has fifty percent chance of landing heads or tails,
+and if I plot
+the histogram of the binomial, you will see that if this is my random number generator binomial. And this is the histogram of the binomial. You will see that some values are more likely than others
+user avatar
+Unknown Speaker
+01:26:16
+on seaborn. You can do it.
+user avatar
+Unknown Speaker
+01:26:20
+I need to take this long.
+user avatar
+Unknown Speaker
+01:26:21
+Does it use a thousand points
+user avatar
+Dino Konstantopoulos
+01:26:26
+right?
+If I have seven events
+with each event has a probability of zero one, it's much more likely that I have that I have about three point five, about either three or four
+tails and heads. That's the that's the profile of the binomial. So, in other words, if I use my random number generator as I use it up here, if I if I use it, if I use it like that. I'm not generating uniform probabilities. I'm. J. Generating a binomial profile for the single driver.
+But i'm not generating it by another profile for seven drivers because for seven drivers this makes sense, because there's a much higher chance for three drivers
+to visit different shows, because it's three of them. So I can combine A, B and C, or Bcna, or Cb. And Oc. A and B right? And so in the case of seven drivers, it's okay to use this random number generator. But in the case of a single driver it's not okay to use this
+because you you're not getting You're not getting an a uniform probability for me going to any possible combination of shows, because me going to just show one
+seven times is a lot rarer of an event than me going to half of the shows and not the other half.
+If I use rem the numbers.
+Do you see this?
+If I, if I throw a a coin four times getting heads. Heads, heads is much rarer than getting two heads and two tails.
+Yes or no.
+It's the same thing, same thing, because you're taking drivers, and you're putting them into bins. So, instead of having a coin that has either two or faults, you have a driver going to show one or two, or show three or four or four or four, six.
+And so the event zero, zero, zero, zero, zero, and or one one one one one, which means I go to show zero six times, or I go to show show one, seven, six times. It's a very rare event if I use random numbers if these random numbers will give me a binomial profile.
+So, using the simulator the way I wrote it is wrong.
+So how do I fix that?
+How do I fix my simulator?
+How do I manage? How do I have a simulator that makes sure that every possible combination of visiting the shows has the same probability.
+How about if I enumerate all possible combinations? And then I add them to a set, and I pick randomly from that set.
+Will that work.
+Let's do that. So that's what I'm going to do.
+So i'm going to change my representation. Now
+i'm going to enumerate all possible ways for one driver to set to visit seven shows, using binary numbers I'm. Going to use by because of binary number. Ha! Can have size seven, and can be made of Zeros, and once. So this is what I'm going to do. I'm going to actually add all the code. And once
+let me run this code, you can do that. This is like all possible combinations of binary numbers. Uh, in a list of size.
+Seven.
+Yeah,
+this means i'm going to visit the last show seven times.
+This means I'm going to visit the next to last show seven times. This means i'm visiting all shows except the first one, so i'm visiting one of them One more time. I don't care which one.
+Yeah, the first one is impossible. It means I visit no shows. Remove that. Yeah. And so to remove. To remove this, I'm going to just just use a slice. Just just remove the first case, and this is all possible. Use cases. And Now, all I need to do, All I need to do is to use the random choice on this list to return me just every time I call this I get a random,
+and all of them have the uniform, as they have a uniform probability the
+right. So now I don't have this problem that i'm not generating a uniform probability, and I'm generating instead a binomial.
+This is something you should know. We study the binomial. We study the had function. You know what this means,
+and the only thing that you needed to do when things were going wrong is to say, Let me examine things. Why are these things fishy. Let me just look. Let me just look at these possible combination. What's the probability of visiting? Just one show What's the probability of visiting both shows. Oh, look at that! They're different. If they're different. That's not what i'm trying to simulate. Because, Professor said, I have to simulate equally likely events. And these are these aren't? Equally likely. Why are they equally likely? Oh, this is why? Because i'm really using it. But
+in here not a uniform probability distribution.
+And so I need to find a way to change that into a uniform probability distribution. And I just did that down here now,
+and so now that I have this. I'm going to rewrite my probability with the random choice on this list.
+Yeah,
+And i'm going to do the same thing. Just going to seven shows. This is just me and i'm going to run the same code, and i'm going to run it ten thousand times and hopefully, maybe maybe. Maybe now get fifty. Yeah fifty.
+That's the result that my, that my enumeration also gave me.
+So what's the conclusion? The conclusion? The probabilities are different. Why, the probability is different. The sample spaces are different
+right The moment your sample spaces are different, the results are going to be different. Don't Overthink this, Don't. Think. Oh, why you can send in show seven drivers the same thing as one driver. Look, the sample space is different.
+I don't care what you think or anybody thinks I don't care if the weather in Australia or the weather on the moon is affecting the races in Australia maybe makes no sense. But who cares. The sample space is different. The moment your sample space is different. The results are different
+now.
+You know, whenever you have strange results, you always want to always run with smaller cases. How about we run the same result with two shows and three drivers in me? Right?
+We can do this a lot faster. This is the sample space for two shows and three drivers. Uh in in me. Do you agree that all possible combinations are there? They're all there. Just count them. It's just two shows. I can either be in the second show, or all drivers can be in the first show and then all possible combinations. It's all Sixteen of them
+do the same thing. Do the same thing with um
+with um
+with uh one driver.
+It's only eight.
+Do you agree? That's all the possibilities. Do you see one more possibility that in list Are Are they all there or not?
+They're all there it's, it's It's either all the drivers are the one show or or the the the one driver goes to the first show, and I go to the show, or I I all the the driver do the second show, or the that driver just divides himself between the two shows
+eight in the first case, sixteen in the second. I can't have the same results. So what's what's the um?
+What's the number of favorable cases? Um in in in in in the case of a, in in this case? Well, is this favorable?
+Yes or no?
+This is. Does this mean that i'm in the same show as another driver?
+Yeah. Table table? Two,
+three, four
+bye,
+user avatar
+Unknown Speaker
+01:35:17
+six,
+user avatar
+Unknown Speaker
+01:35:18
+no,
+user avatar
+Unknown Speaker
+01:35:21
+no,
+user avatar
+Dino Konstantopoulos
+01:35:24
+yes, Simon,
+eight,
+nine, ten.
+What's the number of favorable cases for for a single driver?
+user avatar
+Unknown Speaker
+01:35:41
+Yes,
+user avatar
+Dino Konstantopoulos
+01:35:42
+one,
+two,
+great,
+four, five, six, six or eight,
+six over eight is not the same thing as fourteen or sixteen.
+Yes,
+and this is the same thing with simulations. You can also run the simulations. Um, one and two you pick and random. So in in case I'm i'm gonna But But but you know sometimes this is something that could be confusing. And and here's a sim for two dies showing. Okay, So i'll skip over that two, two dice showing two threes,
+two dice showing two, three. So. Some people are still confused with dice. I told them. I tell you, if I roll a dice, what's it? Probably you get a one over two. Oh, but there's two possible combinations. Okay, What's the probability that I get two threes? Oh, also two combination, because it's two guys. But no, it's only one combination.
+I know this two dice, but one over three is one over thirty-six, not two over thirty, six.
+You can even simulate. That
+Probably you getting two threes is a lot closer to one over thirty, six,
+not two over thirty, six.
+Look, this is one ball and one one blue ball and one red ball in two containers. I I I do the same. Simulation with this is all the possibilities. And and I say, okay,
+I have three possibilities. Either. All balls are in one on one container, or there's a ball, one in the first container of all, two in the second container or ball two in the first container of all, one second container or ball, one in the first container. This is important because I have all one in both two, because one is red, and one is blue.
+So here it it. It matters so if I do the simulation i'm gonna get oh, right
+user avatar
+Unknown Speaker
+01:37:28
+um
+user avatar
+Dino Konstantopoulos
+01:37:36
+two balls, two yellow balls instead of two red balls in two containers is different. I only have three options. Why? Because I can either have both balls in the second container, both balls in the first container or ball, one the first container of all to the second. I don't have the same number of options, because I have, I have less colors. My sample space is different,
+so the probabilities will be different.
+Thirty-three percent. Look,
+this is this is the all possible outcomes. I'm enumerating my sample space. If I have two balls of the same color of different colors, it's not the same from my sample space is different than two ball. Two balls of of of of different sorry, two balls of a different color. My sample space is different than two balls of the same color.
+Moment of the sample space is different. The probabilities are different. Now the confusion. Why does the confusion arise in your mind? Because you're saying Okay, I have two balls. Let them just see,
+and I didn't see how I can put them it contains. I can put the ball on the X in the it's two possible choices. No, I don't care how you put them in the container. There's only one possibility for putting a yellow ball into containers. It's this
+only one
+probabilities care about the final result. They don't care about the way you produce
+your sample space.
+So when you do combinatorics, just look at your sample space and be very careful when you use random numbers, because you may generate skewed distributions.
+If the random numbers don't, follow the logic of the problem set right. The reason why random numbers work in the case of seven drivers is because, yeah, seven drivers there. There's many more possibilities for the drivers visiting half of the shows,
+because there's many more drivers combining to visit half of the shows. It's much rarer
+that you have all drivers going to the first show.
+But for one driver. I told you you have to be careful, because every single combination is possible, so you could have one driver Visiting seven shows
+Visiting one show seven times should be equally as likely as him visiting half of the shows any number of times
+online, any questions.
+So if there's still confusion about this, please look at the recording and write the code. You have the code in front of you. Write it down and work it out,
+and
+you know. Let that be there' be a lesson. You can solve all problems. You have the tools to solve all problems you just yet. Your eyes are bigger. My mom used to say something. Whenever I was I was eating something. You say your eyes are bigger than your mouth like you want to. You want to eat more food than you can actually eat food. So just put a small small amount of food in your plate first, because otherwise you're going to waste some food, and we're going to have to throw it away.
+So just start with a small subset. Solve the problem. With a small subset they go to a bigger subset, and whenever you do simulations, make sure that you're simulating the right probabilities,
+right? So if you have, if you have the code that's not giving you the same results. The reason is probably because of that. So I I can, you know, if you, if you're still not too sure where your your simulation is giving you the wrong result. I'll take a look at the at your call for you. But this is um.
+This is what what? What? The correct result. So there's if you're if you're interested in logic, there's three branches of logic. There's propositional logic.
+Um, that. Uh, that's only the only concerns themselves about propositions. You training, then it's cloudy, it's raining. Thus it's cloudy right? That's proposition logic. It's. It's simple proof. Theory. Right? Then you have first order logic.
+First order. Logic is actually complete. There's there's um. You can take an entire class in logic here. First order. Logic is um is ranging over individuals not ranging over properties. So we're saying, for every driver the driver can go to one of seven shows right.
+The driver goes to one of seven shows as a property.
+But you're saying for every driver
+or for every shop you're enumerating over individuals that's first order, logic, second order. Logic is where you are enumerating over properties of individuals.
+So you're saying for every property of every driver second order. Logic is incomplete
+in second order, logic. There are things I can say that you that I can't prove
+right. It's very funky. Second order, logic. There's a famous person called Good. Let prove that second order. Logic is incomplete. There are results. You cannot prove
+so. Uh. The reason why I bring up first order, logic, and second order. Logic is that this problem is completely first order launch. I'm enumerating overall possible drivers and all possible shows. There's nothing that is fuzzy about this problem.
+It's just a matter of finding the right solution. If I had given you something that had combinatorics that involves second order logic.
+Then we're in dangerous ground, because there's some things you can't prove in second order. Logic. In fact, somebody proved that there are things that are improvable.
+But this is not the case like this is a simple problem. It's just a matter of thinking, thinking correctly. And really the the end of the line is just enumerate the sample space.
+Okay,
+clear everybody.
+You need to watch the recording.
+I want you to write the code.
+Yeah, of course.
+Okay, Thank you. Everyone. Thank you. Online. I'll see you. Uh I'll see you all uh next week we'll continue with, Uh, we'll continue with um with linear algebra.
+user avatar
+Unknown Speaker
+01:43:48
+Actually, I emailed you, and we have some descriptions, but
+user avatar
+Dino Konstantopoulos
+01:43:54
+it's like I still been attached.
+user avatar
+Unknown Speaker
+01:43:58
+Yeah,

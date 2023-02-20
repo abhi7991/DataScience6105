@@ -1,0 +1,735 @@
+Oh, come on,
+user avatar
+Dino Konstantopoulos
+00:19:24
+Okay, I I was telling uh, uh, we're talking about devouti happy everyone. So we're gonna have a review session on Monday, because the midterm is going to be on Thursday by popular demand. So we'll review some of the things um material that could be on the midterm
+um, and today we're going to look at the multi car At the
+first i'm going to start with um um an error. There was an error in the correction of the midterm, and i'll tell you in, and it shows you I always tell you how to be very precise with your English.
+This is a case where Professor was not very pre precise with his English. Because this is what happened. I I I I I wanted to play with
+a combination of drivers that are anonymous, because I wanted. I wanted to show you what it means to think out of the box.
+Thinking out of the box needs to be creative with your thinking and not just think, Okay, I have an algorithm about possibilities. Let me code everything and let me know. Think a little bit of the box. So I knew I wanted to play with that, because I know that there's a difference
+in terms of how many combinations, how many permutations
+of distinct drivers in distinct fashion shows which is number of fashion shows to the power the number of drivers
+versus anonymous drivers, like a driver, is a star in distinct fashion show which is
+the number of times you can pick
+drivers and our shows, and and put bars around them so that they're so that they they go to different shows.
+But this is the mistake that I did. Instead of telling you. Okay, you go to one show, and then the formula one drivers come, and how many ways are there to arrange them? What I said is
+the drivers the formula? One drivers go to the show right, and then
+you go to to the shows. And so that's that's different, Because now we don't care how many combinations there are,
+because it's fixed.
+We picked the combination. And now you go to the show, and that's a completely different problem. This is the problem.
+Once I have a permutation of of of drivers, and it's given the probability that I go to a show. There is no no driver,
+one minus the probability that drivers go to the other. Ninety nine shows right the
+user avatar
+Unknown Speaker
+00:21:54
+if I if I pick a show,
+user avatar
+Dino Konstantopoulos
+00:21:57
+and and I want to compute the the the the converse. In other words, instead of computing the probability that I see a driver. What's the opposite? The probability that I see no drivers.
+The probability that I see no drivers means that all the other drivers go to the other shows otherwise going to the other ninety nine shows. So it's exactly like a birthday Right?
+What's the probability for one driver to go to the other ninety-nine shows it's just ninety-nine out of one hundred,
+because it's a hundred shows now pick the second driver. That's ninety-nine by one hundred times ninety-nine by one hundred right pick. The nth driver is just ninety-nine die one hundred to the power in
+and so the solution is just one minus ninety-nine of one hundred to the power in which is not the number that that I wanted to play with right because I didn't I didn't set the problem right? And and we can simulate. And in fact,
+the Tas picked up the error because they ran what's called a Monte Carlo simulation, which is what we're going to, what we're going to work with today to see how we simulate things with computers. And this is what they did, one hundred and fifty.
+Let's let's all add that's all that is Sell and let's do the simulation together, because it's It's it's a good simulation. In fact, I'm going to take. I'm going to take this, and I'm going to put it in a different cell.
+So everybody do this. Every we don't. Look at me. Just compute at a cell. I want you to to have fun computing at the same time as as as as as me. And so we're going to run the simulation to confirm this results. And this is this is important, because this is how we confirm things as as programmers. So let's import you numpy, and everybody do a pip install of Tqdm.
+The Qdm. Is a very useful
+right? So everybody import this
+right? So everybody needs to do a A. A, a a pip install.
+They have installed the Qdm. Which is very useful. Everybody uses this library, even time, time, c. Three uses this library to to show the results of their simulations.
+Install.
+Tq. Dm:
+Okay. So now, what we're going to do is we're going to write a a function to do a simulation. Right? So we're going to do. Def. What do you want to call this function? Give me a name?
+See me later. Okay,
+and let's have a simulator where we we the number of drivers and and the number of shows
+Um! And we say, we say, um, let's see how many times I go to a show where there's a driver. So i'm going to say yes equals the In other words, there is a driver to show it for zero and no equals zero. I'm initializing two variables to simulate with,
+and then and then, instead of doing this, let's let's in the simulator. Let's just just put one number, which is a number of times we're going to simulate and let's call here noon drivers.
+New drivers equals one hundred and new shows equals one hundred
+a hundred.
+Okay. And now we're going to run this simulator and times,
+and and also what i'm gonna do is i'm gonna say for I in range
+of N
+uh, but instead of doing range of end, i'm gonna say um, i'm going to say Tqdm of range because Tqdm. Of range will also give me a visual feedback of where I'm. At, which is useful when you're running long simulations?
+Should I make this bigger, or can you actually see the code? Do you want me to make it bigger.
+Okay,
+Okay, So let's do this.
+Let's um. Let's Let's go ahead and and copy this. This is a way to um. This is a way to automatically get a a thousand uh uh
+to to get a hundred random numbers. So we're gonna go from a low of zero to a high of ninety-nine. Actually, I have to go to a high of a hundred, because the high is automatically excluded I think
+I don't know is Wendy's is Randy the uh pragmat? When I say, run into the high excluded, or is the high included
+the high number? Yeah, when I say numpy dot random random. And I say, low number high number is the high included or excluded.
+Huh?
+Okay, Google Google, Listen. You tell me i'm gonna i'm gonna stick with ninety, nine. But i'm not sure.
+Okay. So so so we have to. Uh, we have to say, Okay, So that's shows what kind of what kind of type. It shows
+shows this in
+It's an array right? Because I'm extending it. So we need to initialize. It so shows equals empty P. Equals,
+shows, equals Mt. Array, and then we're extending it with a hundred random numbers. That's the placement of a hundred drivers
+exclusive. Yeah. So let's go up to one hundred.
+Okay, and then let's go ahead and um, and also select one. Show that I go to
+one show that I go to um, which is which is this, so I I go to that show, and and since it's excluded, i'm going to say one hundred as well.
+So here you see, I I just I just get one random number, whereas here I get one hundred random numbers,
+and then and then I say,
+uh, then I look at if i'm at a show with uh,
+uh, with other people. Right? So what I what I say is, if
+how, how, how would I do that?
+So me i'm in show number two. And now I want to see if
+other people went to show number two. So how how would I do that?
+Yeah, I can say um if me in shows, or I can also, so I can see if me and shows I can also say if shows
+of me
+is positive right, which means there's a driver there. Yeah,
+this is a list. Yes.
+user avatar
+Unknown Speaker
+00:28:46
+Oh, okay,
+user avatar
+Dino Konstantopoulos
+00:28:47
+yeah. And so if if I am in the same show as a driver, i'll just say yes. Takes takes a hits. Yes, plus equals one.
+Otherwise
+i'm going to say no plus equals one
+right,
+and so i'm going to run this loop a million times, and I see how many. Yes, as I get, because that will tell me the probability of me being in the same uh show as another driver. Yeah, that's called the Monte Carlo Simulation. We're actually simulating the results using computers.
+So instead of saying print, I and getting I'm gonna get a nice visual thermometer that will tell me where I am in the simulation.
+It's kind of in like a numerate. Instead of using enumerate, Use the Qdm. And I give you a visual feedback,
+So that's very useful when you run simulations,
+and then at the end, like the end of the simulation out of out of this loop. I'm going to return. What do I? What do I? What do I need to return to get the probability
+of me being a show where there's other formula. One drivers
+is Yes, over.
+We're in.
+Yeah. So and then let's run the simulation. So let's add a new cell. I usually like to put this in a different cell, and then let's say simulator,
+and it's around this uh ten thousand times,
+and let's see where it returns.
+Oops
+only integer scalar arrays
+can be converted to a scalar index.
+user avatar
+Unknown Speaker
+00:30:42
+Integer scalar arrays
+user avatar
+Dino Konstantopoulos
+00:30:46
+shows isn't shows
+I put an integer.
+Uh
+Does anybody see the bug?
+What is it?
+No, I mean I I know you. You found the bug, too. But
+um! Why is that a bug?
+Let's Debug let's print shows,
+and then print
+me, see what we get.
+So that's uh. That's how we we bug.
+Okay, So this is.
+Oh, me, me is look, meet me is an arrays that are being an index, right? So how do we? How do we fix this?
+Yeah.
+So now that we know how it works, we can comment out the debugging, and we can run this and this.
+user avatar
+Unknown Speaker
+00:31:56
+Why do we get ninety-nine?
+user avatar
+Dino Konstantopoulos
+00:32:08
+Huh!
+What's the What
+uh we want to run this and time? Oh,
+What's the mistake? I'm making a mistake here.
+user avatar
+Unknown Speaker
+00:32:32
+This this group also
+user avatar
+Unknown Speaker
+00:32:40
+a lot of drivers.
+user avatar
+Dino Konstantopoulos
+00:32:42
+Yeah. So the the drivers, i'm, I'm assuming there's a hundred drivers. That's why, I say, size equals one hundred,
+and then they will go to different shows.
+What was your question.
+Will you practice each of like ninety-nine drivers can go to one in fashion for that. Yeah, ninety-nine drivers can go I can when I, when I get one hundred random numbers, I can get
+ninety, nine of them being zero, and then another one being a different show, the
+right, because those are those are random numbers. There's i'm making a mistake. Here, Hold on, let me let me go find the mistake.
+I think I think the only thing that I that I think is
+for some reason this is not working,
+if me in shows, was the other option.
+Let's run that.
+Okay. It's very strange,
+because to me was the same thing. But anyway, you see how this returns about sixty-three, which is um, which is uh ninety-nine over one hundred to the power one hundred which is uh the right the right,
+and every time you run it you'll get that you'll get a number close to that. So even if I run it a hundred times or a thousand times, you?
+Um! You will get. Come on, Stop moving.
+You'll get a different number. But you see, every time it's close to sixty, three percent,
+and this is called the Monte Carlo Simulation, where I don't know the
+for the theory what the result will give me. I can simulate it.
+Okay.
+So you see, you have to be very, very careful with, uh, with the way uh you. You say things uh, because, you know, once we create the the number shows, I don't care how many possibilities there are, Because then I see. Okay, we sure do. I go to and then account yes or no no. It has nothing to do with the number of combinations of
+whether the drivers are distinct or not. Right? It makes no difference. So you have to be very careful. So in in any case people that gave the sixty-three percent answer will get full points for
+user avatar
+Unknown Speaker
+00:35:10
+type of here. So um
+user avatar
+Dino Konstantopoulos
+00:35:16
+sorry. I forgot that a star star is, uh, we have to write this this way. We have to use uh math notation
+to the power one hundred.
+Okay. So fix the the the markup. This is what the markup should be, because the answer is
+one minus ninety, nine, over one hundred to the power of one hundred. Okay,
+everybody get this right.
+Yes,
+these are These are
+interview, kind of questions, right? The The people companies like to give these questions and interviews to see if you understand the basics of of of data science. So it's important that you get it. And And that's why I wanted to talk about this uh from the in the beginning. Okay, let's go ahead and do a quick review about frequentist versus uh Bayesian what it really means.
+Then we're going to look at uh some two two libraries that are really good. Um! That make your life easier is one that's called best, and another for for the Bayesian test. And then there's another one called Penguin for the classical test, and so i'll show you how to use these libraries,
+and then we're going to look at. We're going to do a lab with Bayesian simulation. Once again. The more labs we do based on simulation, the more comfortable you are, and then we're going to explain metropolis. I don't know if we'll have time to do all four, but we'll continue next time if we don't have time,
+and then we'll do maybe another simulation um on on Thursday. Then we'll do a review session next Monday, and then I will have the midterm we'll. We'll give out the Oscars, and then we'll uh shift to doing linear algebra and looking at graphs.
+And then we'll use the knowledge of uh probabilities and the knowledge of any algebra to get into um more machine learning algorithms and see how how those work and just the the fundamentals, not not not not anything advanced.
+Okay, So um,
+being a frequentist is essentially repeating a lot of time, some experiments,
+and so a frequency says Doesn't, say I have
+twenty races in the formula one season. Let me look at the average of twenty races. Let's say they, they need to say I have a formula. One season it has twenty races. Let me repeat these twenty races one thousand times one hundred.
+That's how how frequent these things. And so it's very different between between being a frequent and doing a Bayesian simulation. So consider a data set of end measurements.
+And
+since we have in measurements, we can, we can talk about the sample mean. So this is the mean of of the sample,
+and the mean of the sample is usually noted by an X bar, and it's one over n times the sum of over sample.
+So, for example, What's the sum of with the average of all the I queues in an experiment? We we, we count the queues we divide by the number of of people, and that's the average Iq.
+So in hypothesis testing we have many tests, the most famous of which is the the the the T test uh, because it's a very robust test, because it assumes a student T distribution for the histogram of the data set, which is essentially like a normal distribution, except you allow for more outliers.
+That's why you have three parameters
+and um. We still say that the data is normally distributed when you assume it's a student t distribution. We don't say that the data is student t distributed because it's almost like a normal, except it has more outliers.
+You didn't assume a student t distribution, and you assumed a normal distribution. Then, instead of a t-test, you run what's called a z-test
+because the tests are more robust,
+but you have other kind of tests. You have what's called a one sample t test where you don't compare to populations. You compare a population with some kind of average that you have. That's called the one sample t test, because you only have one population,
+and you want to say, what are the chances that this population has an average of a certain number, and you just compare it to a number.
+Then you have Anova tests analysis of variance.
+Um, That's when you want to compare, not two groups, but three or four or five groups. So when you have more groups to compare, you want to see whether they their means are the same or not, you'd run a different test, which is essentially you call a different library. And you say you want an Nova test.
+Then there's another test that's famous as the Chi-square test and the Chi-square test is when you compare categorical. Variables. In other words, not numbers. The category a category b category, c.
+Or however many categories are in the data set,
+Then you run what's called a chi-square test But all of these tests give you the same results. They give you a p-value. You assume a a significance level, and you see if the p value superior to the significance, level, you cannot throw away the null hypothesis. In other words, it's possible that you get results statistically apart,
+even though the statistics are the same.
+That's what the p-value tells you.
+So This is classical hypothesis, testing.
+And of course there's other tests that also measure correlation and regression. In other words, what's the correlation of this variable with another? Variable. Um! What's the um kind of express? One independent variable that I express one dependent variable as a as a function of an independent variable
+uh. So There's all these tests that come in libraries that you can run.
+So the frequentist view is,
+you have to not only compute a sample average, but you have to compute what's called an ensemble average.
+And the ensemble averages is this definition that assumes that your data is sourced
+from a probability density function that's called F.
+And so this is a little bit like this, only it's a little bit different.
+It's not the same. It's not the same thing. This is the up here. This is the the sample mean, whereas this is the ensemble name.
+So, in other words, assume there's a thousand different universes, you know parallel universes. There's a Lewis Hamilton, and a Max for stop, and in each universe, and in two thousand and twenty-two, they each run their race in their own universe, and you visit every single universe, and you take the average of the wins that's called an ensemble mean
+in each universe. If you take the average points of loose. Hamilton that's called the sample mean
+means,
+e. I. E. I. E. Is as if you were in a quantum a thousand a parallel universes right. You've heard of this theory where there's a thousand or many, many universes, and we there's a copy of us in each universe, and different things happen to us.
+So frequentists like to say, there's many different universes I can. I can look at every single universe using using simulation, and I can. I can see what what the average of each season is, and then i'll take the ensemble mean rather than the sample,
+whereas Bayesians don't don't do these thinking they Just look at the sample. Mean you say those are. I have twenty-two races. That's those are the races that i'm going to work with.
+But instead of looking at a frequency or probability per season, i'm going to recompute the probability after every race.
+So um Some Some formulas here to relate, to relate the ensemble mean with respect to the sample mean.
+And so this is a famous. This is kind of some math, but this is a famous formula,
+and this says that the standard deviation
+of the mean of a distribution
+is the Uh.
+Since this is the standard deviation squared, it's the standard deviation of any point. X, divided by the square root of N.
+It's a statistical result. It tells you that if you have, if you're computing a mean and you have points, and each point has a certain
+standard deviation. But each point is race right. You have a race uh the Netherlands, Grand Prix, and in all the universes uh, sometimes Max wins, and sometimes he loses. And this is the the standard deviation of that measure. So the standard deviation at that point
+that's called the one over screw and law.
+It's a it's a new law. It's the first time we see it. But it's, it's It is a long
+so um! Here he's a little bit of of numbers to to make this a little bit more concrete, so you can see the sample mean, and the assemble means. So What we do is we? We use two libraries, we we're going to use uh Gaussian distributed values, distributed
+distributed values.
+And then this is the formula for the Gaussian.
+So what we're going to do is we're going to take
+an ensemble of ten measures over twenty universes different universes. So we have a different end, and a different M.
+And so for every universe I'm going to create uniformly distributed values in the zero one range and i'm going to compute the sample.
+So if you run, this
+is the um. The X bar standard. Deviation is a standard deviation over all the universes. It's over over all. M.
+So if you if you run the cell, you will see that the
+Okay. So here you see how the Gaussians are the same. But if you run this many times it won't necessarily be the same. See how here they're a little bit different.
+Right? So So the the the the histogram of the ensemble is not necessarily the histogram of the of the of the um of the
+the history on the of the sample. But in both cases they're Gaussian. Why the Gaussian because of the because of the central limit theorem, which says that a large sample of independently distributed experiments will yield a Gaussian distribution,
+so each race can be Gaussian, but also the ensemble turns out to be Gaussian and the um. The two Gaussians are not necessarily the same. Sometimes they they they can even be very different.
+user avatar
+Unknown Speaker
+00:46:57
+So in this case the mean here here you see how it's a little bit skewed.
+user avatar
+Dino Konstantopoulos
+00:47:02
+Here you can see that even the mean is different,
+because those are different experiments.
+So so this is kind of how how frequently stink, and I think, in terms of
+I have to run this experiment many times. I'm going to run the two thousand and twenty two season, many, many times, and i'm going to count results, and i'm going to compute ensemble means um, and and all the tests depend on that.
+The Bayesian view
+say, look, I only have one data set which is the the formula one races for the current season.
+I I don't really care about parallel universes. That's what I have. And that's That's what i'm going to. Uh.
+Sorry that's what i'm going to play with.
+And so what you use as an estimator is your base formula. And so what you say in your base formula is, you say the B is going to be my parameter, the one that the parameters i'm going to. I'm trying to model, which is the mean,
+the the the mean of my of my Gaussian and A is going to be my data.
+So if I rewrite Bayesian formula
+as as a model, i'm going to say the probability
+that my model Mu, that my model parameter view, given the data that I observe,
+and in fact, this is the average of the data is the prior. So this is called the posterior is the prior of what I thought my mu was going to be times the probability
+um of of x
+being given by the model with a parameter of me. But mu times the probability of of X.
+Of the data
+which leads to the probability of the data for every possible value of Mu, which is different, difficult to compute,
+whereas this is the likelihood function. So this is the likelihood function. That's why I call it lamb. Lamb. L. Capital L. Of Mu. This is the prior,
+and this is a posterior, and I think it's going to become a little bit clearer when we run a simulation. How we compute these things.
+Um.
+So if you assume that, my, if you assume that my data likelihood, my my my F function is a Gaussian,
+And then, since you have a Gaussian, the data likelihood is the product of all the Gaussians right. If you if you take, if you have endpoints, what's it? And you observe, you know head, tails, head, tails, What's the probability that you observe? These endpoints is a product of the probability of of of each of each experiment.
+If you take the product of the Gaussians, you will also get. You will get this formula,
+and if you do some math.
+Um. If you do some math, I will give you the posterior and the posterior. Because you're you're plugging in this value for the likelihood
+the posterior is going to be proportional. So this this symbol means proportional, which means, I I don't look at this because this is a complicated So I just. I just look at the, at, the, at, the, at the numerator, not the denominator. So the numerator is a function is also a Gaussian.
+So so um.
+If, in other words, if I, if my prior is a Gaussian, my posterior is also going to be a Gaussian, is what it is, what this says essentially, Um, but the the the standard deviation of the Gaussian, and and is going to be sharper for for the posterior, because we have more information.
+Okay. So if you run this,
+this is the number of points that I'm playing with, and this is the uh, the the average.
+And if I plot
+the results, then you will get the
+This is the average. Uh, for from a simulation, and this is a true me. So they're not exactly the same, but that's the posterior Pdf is the is a Gaussian,
+and
+so um if you want to run some ex. So if you want to run some experiments with this. Just change the values of of N in in in Mu, and see what happens when you have different values. So if I have a mu of one point five. Let's say, two point five,
+and I rerun this.
+You will see here that uh, this is what your procedure Pdf. Is, is is is sharper,
+and what you had before.
+So this is kind of. I wanted to have a notebook where I show you the the the philosophy behind Um, either being a frequentist or being a Bayesian. If you're a frequentist, you assume all these parallel universes, you run a lot of hypothesis testing, and if you're a Bayesian. You just simulate
+um, and you assume a certain, a certain like data likelihood function. And then, if you want to find the parameters, and you use the simulation just like what we did with our with our with our
+formula, one midterm homework question, and you simulate so we'll do this today. So you get more practice, so that that's the difference between being frequentist or a Bayesian.
+So let's look at these libraries that allow you to do both Bayesian and frequencies analysis um without actually carrying out the analysis. So
+um let's run some libraries. This is the other slide. So that's best in penguin. I should have started with penguin, but I think I'm starting with best. But that's okay. Let's Let's use the same data that we used in our experiment. That's the That's all right. Iq. Experiment.
+Remember in the Iq experiment we'll run a basin simulation to see if the Iq. Of the place of the drug group is higher than the Iq. The Placebo group, and we found that it was higher by one Iq. Point.
+So we did a lot of simulation to find that we said, Okay, uh what's the like data likelihood of my data? Let's assume It's a student team.
+Okay, student, T. History parameters. I have to model every single parameter. What's the Pdf for my new parameter? Okay, It's a Gaussian. What's the Pdf: for my standard deviation? Okay, I don't know. So i'm going to assume it's A. It's a uniform distribution between a certain value and another value.
+What's the uh profile for my new parameter, the third parameter in the student team. Let me try an exponential.
+Then we run some simulations, and we found the right values for these these parameters, and then we measure the difference between the two muse, the mean of the Placebo group and the mean of the uh of the drug group, and we we found there was a substantial difference between the two, and that ninety four percent
+of our high posterior density interval is positive. So there's no chance that it could be zero
+if the null hypothesis is in effect,
+So all of this simulation we can actually run with one library, because this library that allows you to do that so
+might as well show you that library because it's very useful. So if you run this,
+and then we assume the the this is the trial data. So this concatenation of the drug and the placebo, and then we compute the histogram. So let's look at the histogram. We already looked at the histogram so kind of difficult to conclude from the histogram that one is different than the other.
+So what we do is,
+Um,
+Okay. So this is the same here. I compute the histogram with Uh, I can also compute the histogram with seaborn Seaborn has the advantage that it also gives you analytic functions.
+So you get a better idea of the histogram. So if you compute the histogram with see born, you will uh you will get something more analytic, so you can see that the drug group. Um is kind of a little bit higher, but it's difficult to conclude just by looking at the Instagram uh, that one is one group is better than the other.
+And so what we're going to do
+we're going to do statistical testing first that's we already did that so we run the t-test from sci-fi stats,
+and when you run the t-test
+it will tell you that the p-value is eleven, which is higher than your five percent significance level, and so you can't throw away the all hypothesis.
+Just just that simple.
+And so what you do is you you you you, you, you you say, Okay, I don't believe in these, in in frequencies, as much as Bayesian. So you do equip, install best.
+That's the library that we're going to run, and so we're going to import it. And we're going to analyze to the
+we're going to call the Analyze two Api to analyze two different distributions and then to look at the posterior probability of the equal or not. Just that simple. It's just a simple if you have. So if we run this
+um, and it will actually give you the results that we also got with. Uh, when we did the simulation ourselves. So this is kind of an automated package. As everything for you,
+it's like she. You! You don't have to do the work because it does all the work. Now it's. Results are not as good as your results, because you you. You can eyeball all the variables better, but it still gives you some results that are that are in that. So let's see what the difference of the means is difference of means.
+So this is when you analyze two groups where they uh, where you want to see if there's there's a difference between the means of the group. So this is what you can call this. And when you call this, it will say, Okay, there's a eighty-four percent.
+No, sorry not. The The difference between the two means is around uh eighty-four point eight, four, instead of being one. We found the value of one best finds a value of eighty four,
+and you can look at
+the model, and you can look at the trace of the simulation that it ran.
+Uh,
+okay, it doesn't show you the choice.
+Um. Why doesn't show the trace. I don't know. Okay, but we can plot everything. Okay, So this is the difference of the means uh it's the ninety-five percent certainty interval is that the difference between the two means is included between zero point zero, six, and one point eight nine.
+So. The difference between the two means has been something between these two numbers, and this should plot all the graphs. If it works correctly, it should give you the entire simulation.
+Um.
+Okay. So this is the simulation of group one.
+This is simulation of no sorry. This is a group, one. This is a group two, and this is what it it thinks. The simulation is the the sorry, what it thinks the uh posterior probability Uh for each group is
+this is the effect, Size?
+Um,
+And this is the difference between the two means. So it finds a difference of zero point nine nine,
+which is close to what we found one. So the difference of the means is zero point Nine nine. Why did it say it? Zero point? Eight, four.
+Okay. Um.
+Oh, sorry. Sorry this is a different Api.
+This is different. This is not the difference between the two means. This is called posterior probability. So you say, this is this is an Api, that you call to find the probability that the first group mean is larger by at least point five than the others. So there's an eighty-four percent probability that the group two has. The The drug group has a higher um group mean by at least
+zero point. Five.
+So if I say, if I want to say by one, it will be a lower probability, right? Because i'm not as sure. So this should return a lower results. Yeah, it's fifty percent
+here. You can say, Okay, All I need is, I want the Iq to be higher by. Let's say point three. If the Iq is higher than zero point three. I'm happy that my drug works. And so what's the probability that the Iq is higher than zero point? Three It's pretty good. Ninety-two percent,
+which means, I I think, my medicine works, and when I do the entire simulation I can see that the difference between the means the
+the difference in the standard deviation. This is a difference of means is around uh ninety nine
+Iq. Points,
+which is very close to what we found in our simulation right only here it does everything for you now, not as good as what we run, but you can always start with this, because this will give you all the results,
+and if it works um, I think you know I think it's a it's a good library. So at least that's what That's what I read on the web that people think is a good library,
+the other package that that is good for all the classical, the the the hypothesis, testing tests is penguin. So if you install a penguin, I think this install takes a little bit more time,
+and you import it as Pg. You can run all the different tests, like the the the student t test the identical. So I ran. I ran all the tests for you, so you can actually see it in action.
+So the this is our um. The The only difference here is, instead of using a data frame. I use a new pi or a because that's the Api that penguin expects.
+So I turn it into a data frame to show you the results. But then, when I run the t-test, I use the the numpy rays.
+So this is penguin.
+So this tells you. The p-value
+You see the p-value is higher than the usual significance level.
+You can run two group independent samples. So this is two groups with an equal variance, which is essentially what we have, because what we have is two groups with an equal variance. So
+if you want to be completely correct,
+a t-test when you run a t test with two groups of by an equal variance, that's called the Welsh test. So you say, uh a pair. It equals false when you say parity school false. This is a periodic
+correction. It goes false.
+Oh, correction. Sorry it's correction.
+The correction tells you that you have to correct the statistics a bit, because the variances aren't the same, but you will get the same results. You also get a P value that's around ten percent.
+This is a paired sample. So parents paired samples. T test is when you compare to.
+So period sample is when you have two populations that are the same.
+You're running two tests on the same population.
+We didn't assume that before, but when you know that the populations are the same. You can run what's called the paired test. And um, here we we simulate a pair test. So we say that test two is the same thing as test one, plus some noise,
+and so you can also run. Uh, uh, if you run this, you can also run Um!
+Here the p-value is is is much lower.
+So here there's significant evidence that the statistics are different.
+Of course That depends on how much noise you add, and there there's one sample t test with penguin where you just have. Uh you compare that the drug sample with an average of one hundred, and you want to say um, you want to test that the average it is, or is your hypotheses, your hypotheses? Is that um
+uh
+that? Your um?
+You are comparing a population with
+with a theoretical population where the mean of that population is one hundred, and you want to see, when it conclude whether that's the case, whether whether that's true or not. And when you run this you want to have a low P. Value, but it But if you value in fact, is uh
+is pretty low. That's three which is lower than uh which is this lower than uh, your five percent threshold. So here, what you say is
+so. You compare the score in the drug group against the null hypothesis of a mean of a hundred.
+So the uh, the the library says, did not reach significance
+did not reach. Significance means that
+I don't know. I I I think it reaches significance, because that's a low P value.
+Um:
+Oh, Okay, It's. Okay.
+So sorry. Sorry I made a mistake. The one sample t-test doesn't doesn't tell you whether it's the The statistics are the same statistics as a group of with a mean of one hundred is the mean of the group significantly different than one hundred
+not equal
+different. That's the one sample t test with the library. And so, um he. This is the reason that you say I can't uh the again. No hypothesis, I mean a hundred which is not rich significance.
+So you you can't say that it's significantly different than one hundred.
+Then you have a different text test call when you This is when you have data that doesn't follow a normal distribution. This is the name of that test,
+and this is called the man Whitney, Mw. Test. I don't know what the you stand for stands for,
+and once again you look at the p-values. The p-value is pretty low.
+So this was significant.
+So this is this is. These are two libraries that are used very often to do the to do your your um either classical hypothesis, testing or Bayesian tests, which
+you know when I done. When when we do Bayesian tests, I prefer to carry out the entire the entire test. But I seen this library. A lot of people use it. So I I I thought I would show you how it works. It's good to know that this two libraries exist best in ping with.
+Okay, Now let's run. Let's run another test. Um where we actually do the entire Bayesian analysis ourselves. We actually build a model.
+Uh, we look at the data likelihood, we say, Okay, this follows this kind of profile. Here we're going to use integer data. So we're going to use it for some profile Um,
+And then, if and then we're going to say, Okay, what are the parameters? Let's model the parameters. This run the simulation. Let's look at what the values are.
+So. In fact,
+even though we have integer data uh, the correct way is is to do a personal profile. But we're also going to do a uh a student team, and then we're going to do two simulations. We're going to do student t simulation and a personal simulation, and we're going to look at the the difference.
+We didn't see if there's any difference. So um! This is the story. So Mercedes, and this is actually true. Two years ago they introduced the new steering system, where you know the the wheel of the of the car. You can turn left or right, but you can also go up or down with the wheel,
+and when you go up or down with the wheel it changes the the camber of the wheels. So the wheels camber in, or the wheels camera out
+like the wheels aren't entirely straight. They don't camera that much, but a little bit, and that just changes the dynamics of the car,
+and it actually was pretty successful. Um! And so um! This is this is the stories what we're trying to do. So we're assume we're spying over Mercedes track
+Germany, and we measuring some data, we
+and we know that Mercedes started using the steering system at a certain date and want to see if the the statistics of their races are different after certain date.
+So, in other words, you want to compare it before and after, like two different populations, and see if the results tell me that there's a difference
+in the Count
+before or after
+you could, you could think of it this way. Assume that. Um, i'm Um, here's another example. There's exactly the same thing. Suppose i'm spying on on, on, on my girlfriend's cell phone
+to see if she receives more text messages than usual, because I suspect if she receives more text messages, that something fishy is happening right? And so I I don't have to read the text messages. All I have to do is count the number, text messages, and see if there's a difference before date, and then after date.
+So governments do these kinds of games all the time. They don't. They don't have
+the power to read. Everyone's emails or text messages, but what they can do is look at their statistics, the
+they can say, Okay, these two people met at that date. Let's see if they start communicating more by counting the number of emails.
+And then you want to do a statistical comparison to see if a number of emails before is equal to the average number of emails after the
+here, It's a little bit more fun, because when we're looking at formula one um measurements.
+So I gave you some. So this is the the the the the
+user avatar
+Unknown Speaker
+01:09:58
+let's see called again. It's called the
+user avatar
+Dino Konstantopoulos
+01:10:01
+It's called Dual axis, tearing Yeah, dual axis steering. So this is how it works. So if you if you put the wheel, the steering will in or out. You control this angle that the wheels make with respect to uh, the the straight.
+And, by the way, that's the number sages as a porsche.
+Okay, so um,
+this is called to win or to out, and and this is kind of the behavior of what to win and to out does on front wheel drive, and our rear will drive, which is kind of interesting. So um! This is the telemetry. So we we're. We're recording telemetry from the steering wheel. So if you look at formula one cars, the the wheel comes off
+right. So the the pilots when they get on the car. They take the steering wheel with them, and they they go back, and then they analyze the telemetry.
+It's kind of a their laptop. The we, the steering wheel is their laptop,
+and so we're going to um.
+Uh, I think I did. I gave you this file.
+Yeah, Okay, Good. Okay. So if I gave you this file, put it in the right folder, Um! And and let's let's look at the data
+Right? So so we're looking at the data. So This is the count uh of the telemetry from the steering wheel, and we're measuring some kind of performance measure. And i'm asking you if you look at these numbers.
+Can you say that you think that after a certain date the numbers, the statistics look different than before. What do you think
+it's? It's difficult to see right
+there a certain date after which the numbers follow different statistics.
+So if we assume, since this is count data,
+we assume that the data likelihood is a person is, it follows a personal Uh histogram, right? The personal histogram has a single parameter, the expectation
+right? Next, the the number of emails you receive every day is a personal distribution,
+which means that you expect a certain to receive a certain number of emails every day,
+let's say ten.
+So i'm asking you here, looking at this data, if you assume it, it follows the personal distribution. Does the expectation? Is there a certain date after which the expectation on on these numbers, on the count of all ways changes.
+What do you think?
+Yes or no?
+So who thinks? No? Raise your hand?
+Okay. So we have three or four who thinks yes,
+nobody.
+How will you simulate this? You will say, Okay, I'm going to simulate two different distributions, one before certain date another one after a certain date.
+That date is also something I'm going to simulate,
+and then let's run the library and let the library simulate all these things and tell you what the most likely outcome is. So let's let's play with that.
+So
+since I have count data, you know, the count data always follows the Poisson distribution, personal distribution as a single parameter. Lambda Lambda is called the expectation of the data.
+So let's go ahead and build our model.
+So we're going to assume that there's a certain time, Tau, after which the two, the parameter, the expectation changes to a lambda two.
+If we find the lambda, one equals lambda two. Then there's no change. If we find the Lambda two is bigger than Lambda, one and there's a change.
+So we're going to have to model them, the parameter
+to do the simulation. Whenever we have a parameter we have to give it, assign it a probability density function to simulate with it, so we have to assign it a Pdf. So let's we can. We can try signing an exponential
+Pdf.
+How do we simulate the to the the the tau parameter.
+Well, we don't know if the tail parameter exists,
+and we have about seventy seventy days worth of data. Right? We have. If you look at the data.
+It's about seventy days, right each uh each day we have a different count. We have about seventy days, so we can say what we can say is that this tile parameter I don't know what it is. I have no idea what it is. Let's assume there's an equal probability
+for that time, after which I have different statistics to be any day
+between day, one or day seventy
+a modeling that's what i'm doing. I'm modeling.
+So let's go ahead and model this. So let's import time, c. Three. We're going to use time, c. Three as A, as a simulation simulation library. So we're going to create a new model.
+We're going to create two different pdfs for our lambda parameters. This is an expectation for the before and after.
+What's the profile that I take for these two parameters the exponential. Now, once again, when do I pick an exponential profile when I assume that my simulation is going to converge pretty fast,
+but I also have to give it a certain guess that the first guess of what the value should be for the expectation.
+So um
+a good guess is the inverse of the number of data points that you have.
+That's something that comes with experience. What's the expectation? Um. A good guess is the inverse of the uh of the mean. You start with that as your expectation.
+Um that time t where I switch from Lambda, one to Lambda two. I have no idea what it is, So i'm going to simulate that with a uniform distribution, specifically a discrete uniform distribution, because Um Tau is discrete is is number of days.
+It's not seconds or minutes. It's day, one day, two day, three. So instead of uniform, it's discrete uniform. So i'm gonna go from day zero to day seventy, seventy, one, seventy-two. I don't know how many days I have.
+Okay, so here in this cell I simulate the parameters
+right? This is the parameters of my data.
+I know I'm going to do a simulation, and I need the parameters.
+Now. Um,
+I also have to. This is kind of a trick. I'm going to use the switch Api
+from time c. Three, and that's going to be a lambda
+that that that is either Lambda, one or lambda two, but for any index above Tau i'm. Switching from Lambda one to Lambda, two so lambda underscore is is lambda one when t is inferior to Tau within days inferior to Tau and Lambda two when it disappears the top
+and then and then i'm going to say my data likelihood, the observations
+it which is counts data. Right? I called. I called my data account data
+Mhm
+count data,
+right? So this is my data.
+So my the data likelihood for my parameter, for my for the observations is a poisson
+uh is a personal Pdf. Because I have count data,
+and the Poisson Pdf has one parameter, which is Lambda, but that parameter will switch because it's Lambda underscore. That parameter will switch
+when the index is superior to Tau and I'm going to model Tau as any kind of possibility, because I don't know when i'm going to switch
+so it's a little bit complicated. But but you see, you see how it starts. I I From the beginning. I was going to model my count data as a pistol.
+user avatar
+Unknown Speaker
+01:18:33
+Pdf:
+user avatar
+Dino Konstantopoulos
+01:18:35
+I know, for example, Pd. Has a single parameter.
+But now I want to see whether there is a before and after that is different.
+So i'm going to assume that the that I have two different results. I have a Poisson, for before a certain time and Poisson that has different statistics to a different lambda, for after a certain time T.
+So I'm going to do that with one parameter that is dynamically changing. It's called Lambda underscore, and it switches from Lambda, one to lambda two.
+Yeah. And then i'm going to simulate Lambda, one and Lambda two with two different exponentials. This is called Lambda, one. This is called Lambda Two.
+Now i'm going to start with the same guess. But these are two different exponentials, and i'm going to simulate Tau as any kind of the uniform probability from zero from day to day seventy,
+and that's how we set up my simulation.
+So question is, is not a a choice, because I have have have count data. Whenever you have integer data you you You can do essentially only two things: either question or either a student team,
+because the student T also works uh in general in the general case. So these are only the only two options you You can't take a gamma or a, or a Gaussian, or it's It's It's either a poisson or student.
+Okay. So this is kind of set.
+Now, Poisson has one parameter called lambda. So I need to simulate lambda.
+So
+i'm assuming that my Lambda can change. So it's actually a combination of lambda, one hundred and eleven to. So now i'm going to have to simulate Lambda, one in number two,
+so that that the the day after which it changes I have no idea what it is. So i'm going to say equal probability for any days.
+And Then the next question that i'm being asked here is, why do I pick an exponential for Lambda One and number two?
+No reason experience. I usually start with an exponential because of fast convergence,
+you you could have picked a Gaussian.
+Yeah, Yeah,
+It's usually whenever you pick an exponential distribution, it it converges faster. If it works
+so it's kind of like the the just a just a reflex to pick the exponential. Because if you converge when you run the simulation, it will tell you it no divergences, and it will give you a result.
+If you have a lot of divergences, it will tell you. Okay. I had fifty percent divergence. That's not a very good simulation. Let me try a different profile. Yeah. You should have few divergences when you run the simulation. Tell you how many divergences in your trace,
+and sometimes it diverges entirely, and and it just bombs. And you know that you have to restart your simulation.
+So the essence of what you did, and I usually goes to the end. So you start from the from the end. Is
+you simulate your data. So you assume a profile that has a parameter, then you have to simulate the parameter. If you assume that that parameter changes, then you use this switch, and then you use two parameters, and you have to simulate these two parameters. And here is where
+there's no formula for what you do. This comes from experience just picking the right Pdf: But you know It's okay, Because how many Pdfs are there that you know not that many You have the the uniform. Pdf: You have the Gaussian Pdf: You have.
+Okay, So let's go ahead and run this. So. Um,
+that's the only cell that I ran so far. So let's run these sales together.
+So this is the uh, the parameter modeling. Yes, so we're going to model the parameters. So let's run this. So we created a model. We called it model. We could have been
+model. Das would have been better, but I called it model,
+and then I simulate here the Lambda
+and the Index,
+because the index can go from zero to uh the the number of days that I have in my in my data set.
+Okay?
+And then for the final step is the data likelihood. That's the the data likelihood.
+Okay? So what am I saying here?
+What's the prior?
+What's What's my prior here?
+I I want to compute posteriors. But you i'm remember i'm using base formula to compute my posterior. What are my priors? I'm saying that my prior is I'm assuming a lambda one to be the value alpha,
+and I want
+uh time, c. Three to give me the new, the the posterior, while it follows this profile,
+and I also wanted to tell me what the Tau is,
+and i'm i'm. Assuming the Tao is is a discrete uniform from day zero to day, seventy. I don't know which date is where where it changed behavior.
+And now I can run the simulation. So i'm going to use the metropolis. Algorithm. I'm going to simulate with four thousand time steps.
+I'm going to tune out the first a thousand time steps,
+and then i'm going to run it with a single core rather than many course. So if we run this
+that is going to um create, set up the simulation
+and what we're the the the step out going that we're using is metropolis. So you see zero divergences, which means it. It's not Hasn't diverged, and it's It's
+so. Here Here it said. It actually is telling me that the sampler did not converge.
+The reason why I did not converge is because you have a small number of samples, right? Because we only have seventy days and
+um usually business simulations. You need like thousands of samples, so you can't really trust it. Very well so, but we'll still still trust it, because, even though it said it did not converge, I don't see I don't see many divergences,
+so let's look at the trace of all our parameters.
+So if I look at the trace of Lambda, one and Lambda two, and Tau, I can actually look at the trace. And and
+so here I give it a name, and now I can plot
+the histogram
+of so lambda. One samples is lambda, one lambda, two samples is lambda. Two.
+Okay. So this is the histogram of each one of the of the of the of the simulation parameters. So this is the posterior um for for variables another one on the two Intel. So this is Lambda, one
+this is Lambda two. What can you conclude immediately? From here you can see a lambda, One element, two are different
+right. The The two parameters uh have a different distribution, and there's a high probability for Tau to be around forty-five.
+And So if I want to plot
+the um
+uh, the the the formula for lambda, one and lambda, two on top of the data
+on top of the data. Then you can see that this is what it's telling me that the expectation before day forty-five is around seventeen. The expectation after day. Forty-five is there all twenty,
+and so the simulation is telling me that there is a difference between lambda, one and lambda two, and it started around a forty-five so it's pro. There's a high probability that day. Forty-five
+Um! Mercedes started using some different different technology in your car that that resulted in different performance,
+and this is all done through simulation. So This is a Monte Carlo simulation. This is exactly like the simulation that we ran in the beginning of the class where we wanted to see the difference between um. What's the probability that there's a driver that comes to to my show that that I meet the driver? I just simulate.
+But this is a much more advanced simulation.
+How many parameters simulate the parameters? Make your assumptions, and then look at the results
+now.
+Um, you can also do a t test
+user avatar
+Unknown Speaker
+01:27:48
+because you can do a T test with before and after day forty-five.
+user avatar
+Dino Konstantopoulos
+01:27:52
+You stay forty. Five it found, was when it was a difference between the two between the two behaviors. Yes,
+yeah, if you, if you, if you, when you run your simulation and and I've friends in relations before and when I run the simulation. I see that there is a lot of divergences. For example, I know I have five thousand data points. So if I have more than two thousand five hundred divergences, I would say,
+i'm not happy with my simulation,
+and the warning that I get here That the sample did not converge is because it only had a very small number of data points. It doesn't trust it doesn't trust that it actually converge to a result,
+but it's a very structured way of doing statistical simulations on results, and all you have to do is the the the thing that you have to learn is to make a good guess as to what you should model your parameters to be.
+But the data likelihood is just given by the statistics of the data. So this is just by looking at the histogram.
+Okay, I think. Oh, so what we can do is we can also. We can also run a t-test run a classical hypothesis, testing uh test with before and after data. So pre as and post as
+so, i'm going to do that.
+This is, be pre dazz and post as,
+and then i'm going to run the T test, and I want to see whether it's superior to a point five,
+and if it's a pure than zero Point five. It tells me that I can't really conclude. So you see the a classical classical estimation theory, classical hypothesis testing will look at this data, and we'll say, you know I don't really see a big difference between these two points.
+But with bay and simulation you will see that there's a different expectation before before and after.
+And you actually, I think, able to conclude more scientifically that yes, there is. There is a difference,
+and that that that probabilities that this happened in day forty-five.
+Now
+one one could argue. There is a little bit of a confirmation bias going on right You know what a confirmation bias is when you
+look at results, and you find reasons to confirm a certain idea that you had that there is a difference, because when I look at my data. I simulated the fact that there is a difference in the simulation found a difference.
+So there's a little bit of a confirmation bias. But people still do this analysis
+because it's a very rigorous analysis. You look at the statistics of the data before a certain date, and the statistics of the data after a certain date, and you find a difference,
+whereas that with classical hypothesis testing you, you it doesn't let you it doesn't let you conclude.
+So. Um! You can also do that with a student T. So what I do here
+I I you know I I I suspected that you would say, Well, how How
+how do you know this works? I mean, how how did you pick all these things? So I said, Okay, let me pick something entirely different. Let me assume that I have a student t distribution, for before and after
+student T distribution has two parameters, new and new and new
+sorry student Ts. Three parameters, mute Lambda and new. Let me model each one of these parameters with different values.
+And let me run this, this, this simulation with completely different values, where the data likelihood now follows a student T distribution.
+So I call this: that's model two,
+because this is just a different model.
+And i'm going to call the fit. Api:
+Yeah.
+Um,
+yeah, I just said um. I have no idea what it is, but since I already have an idea that there's a there's a difference here between seventeen and twenty-two. I'm just going to confirm this with a different simulation
+twenty-two.
+Yeah, that's what the simulation gave me. So What i'm doing is i'm since I want to be sure i'm going to confirm it with another simulation,
+and i'm going to let me pick a mu of around seventeen, for before a mule around twenty, two, for after
+as soon as there is a difference between zero and twenty,
+and then run another simulation,
+and Then I ran the simulation. Let me plot the posterior for all these different variables,
+and let me see the difference between you, Zero and you one,
+and this is the difference between. So I have a new zero
+and the effect size. So you have about the the five five expectation points that are different between the two I mean. So this confirms my simulation that I that I I did. I have five point
+difference in expectation between before and after
+right. So this is simulation number two
+with different parameters and different Pdfs.
+This one. This is the effect size, so the effect. Size is the the the formula for the effect. Size
+is uh this formula,
+and it tells you that if it how much of the data is explained? Um, by the difference between the means so it tells you. It tells you if only ten percent of the data is explained by that, there's not a big difference. But if it's eighty-five percent of the data
+affected by this difference of the means. That's a big effect.
+So, in other words, yes, the difference between the means is that, and has a big effect on the data.
+In other words, the the difference is significant, statistically significant. This is how you would. Um
+uh! This is how you would do that
+now
+once again Different simulation again, just to get you used to different simulations. What I do here is, I do a
+I do a Poisson likelihood, but I do it in a different way. Instead of using one parameter for before and after, I use observations for mute for pre desk observations from you for post desk, where I assumed a certain cut off,
+and here I have no idea what the lambda wants, and Lambda two is. So let me just assume a uniform between ten and third. See how i'm. I'm running different simulations every time with different profiles.
+But even if I run this, I want to see the difference between the Lambdas and I want a deterministic result to tell me what what is the in my expectation is there a difference after day forty-five.
+And so when you run that that I call this the personal model. So this is really should be called personal model, too, because I have personal model. One, right, I I. The My first model, was a personal model one. So let me call this personal model to
+press one model to let me create a new model.
+So let's run this.
+So this calls the simulation in here in the same cell, and then I want to plot the trace.
+So if I run the simulation,
+and you can see that Lambda, one and Lambda, two
+have different peaks, and the difference between the land that they are all five,
+and you can see. Here is the simulation,
+and a simulation looks pretty nice There I can. I can see from the simulation graph that there's no divergences, because whenever there's a divergence there's a high degree of autocorrelation in the data, and it just doesn't look very random. But when your data the trace looks very random. It means it tried all different values of land that is found the most likely.
+So I did three simulations here
+three different ways to show you that each way is violating it returns good results.
+And so the next thing I want I want us to look at together is, How does this simulation work?
+Specifically? How does it use base formula as an estimator to compute the posterior? Because the okay, the the the the numerator is easy to compute, because the numerator has the prior, which I give you the formula, the data likelihood which I gave you the formula. But how does it compute the denominator,
+which is the integral of the data given generated by all possible values of my parameters.
+It's very complicated.
+So the algorithm has to be doing something special. So let's open our fourth notebook and see how this algorithm works.
+So the fourth notebook is the explanation of the metropolis, algorithm which is the first algorithm
+that uh that looked at Markov chain Markov chain Monte Carlo methods. This is the first algorithm that a lot allowed these simulations, and it's It's a very, It's a very beautiful algorithm. That's why I want us to study it.
+So, of course, metropolis has nothing to do with the movie metropolis.
+Metropolis is just the name of a scientist.
+In fact, he was called metropolis, but they made a metropolis. But in any case metropolis is a great movie. It's a science fiction. It's like one of the first science fiction movies ever.
+So it's an interesting movie to to watch, but it's the application of base formula
+and its application of base formula is an estimator. So we estimate parameters. Theta given that we saw the data D.
+But we don't know how to compute this,
+This denominator is very difficult to compute.
+So how does it work?
+Okay. So the algorithm we we don't have time to finish this, but we'll continue next time. But the algorithm is called the official name of the outgoing is is is a Markov chain Monte Carlo method.
+The reason why it's called Monte Carlo is because it uses random numbers just like we did in the beginning. In in our first experiment, where we simulated the the um,
+the probability that. Uh, there's another um formula, one driver that we go to their fashion shop
+weather at
+the Markov chain
+part
+comes from the fact that we we search in state space
+and our search and state spaces it doesn't have any memory. In other words, every time we we search for the values of some parameters.
+If we, if we have two parameters, then our State space is two-dimensional. If we have three parameters, or state space and three dimensional, so the the solution is is a point somewhere in that state space the right values of our parameters.
+In fact, each parameter is not given by a point, but it's given by probability density function around a certain point.
+The mean of that probability density function is around a certain point.
+But the reason it's called a Markov chain is because a Markov chain is a sequence of of steps
+where the next step
+is only dependent on the previous step, not on any steps before that,
+for example, the game of chess is a Markov chain is a Markov chain, right? Because the next step in a game of chess only depends on the previous step.
+Yeah, I don't care what I did two steps before. This is my board right now, and it will determine how i'm going to move next.
+The sequence of Fibonacci numbers is not a Markov chain,
+because to get the next single notch number I need the two previous ones. So I need memory of two time steps beforehand. Now,
+right? So that's what Markov Chain means. I only care about the previous step to determine the next step.
+Okay, So Markov chain. Monte Carlo is the modern uh way we do um. We do simulations to compute uh models to compute the parameters of the model.
+So let's go ahead and generate some data.
+So get the histogram
+and try to compute. If I, If I know the prior, compute the posterior, and it's right. A simulation program that searches through state space in order to find a solution. In fact, let me, since we don't have a lot of time. Let me skip on this. He, this is what I do here
+is, I tell you that if I, if my prior is a normal distribution, and my data likelihood is a normal distribution, then my posterior is also a normal distribution.
+That's you can prove that with math.
+So we say that a normal distribution is a self conjugate distribution, because it means that if you start with a normal year prior, you will also end up with a normal as your posterior. That's not true, for all profiles.
+In fact, if you here's an example. If you start with a binomial as your prior distribution,
+which is binomials, what we what we use for sports right? The probability for Max, for step into win,
+then the posterior is actually a beta. Distribution is not a binomial. It
+so the more you refine your estimate with simulation. You can actually change
+the formula for your
+for the Pdf of your parameter.
+So So this is I'll. I'll skip that, though we can talk. We'll talk about that next time, because I want to show you the simulation,
+because we're going to write a program
+that does this kind of guessing on what the what the next parameter value should be. So how do we actually do this simulation Because we, the user give it a profile for what the parameters should look like the the Pdf. Of the parameter. And then we ask the program to just simulate a lot of data
+and to tell us what the most probable values are. So how does that? How does it actually work?
+It works by making guesses
+in State space, about where? What? What the next parameter issue try
+in the simulation,
+and it does that with with random numbers.
+So it's kind of a it's kind of like a game.
+So we're going to um.
+We're going to.
+So um i'm going to compute the this is the nominator. This is the base formula, the top part. This is the uh data likelihood times, the probability of my current parameters correct.
+And then i'm going to generate a a different proposal. And then i'm going to decide on whether I picked a different proposal or not.
+And so
+the the trick is is, is, how do you pick whether you, your Your new proposal is a good proposal. So what you do is the the the the the genius of this or this algorithm, is It takes the ratio of p proposal
+versus overp current,
+and then it sees if this um, it says, If
+If this is bigger than one,
+then definitely accept the move from from the current to prep proposal. However, if P. Current is is larger, then
+that say that this ratio is fifty percent, then only accept this this change. Fifty percent of the time.
+So, in other words, if our guess is worse than the current value that we have,
+then don't always move there, but move there sometimes, and this sometimes is what allows you to not get caught into gravity. Wells. Because this is an optimization problem where I think I have a graph here. I want to show something. Where's the graph?
+Uh, yes,
+you You're looking for optimal values of the parameter, and you're searching in state space. But if you find a minimum here.
+This is not the right solution, because this is a better value
+to your call.
+And so we'll we'll examine how this algorithm works next time in class, because it's a very clever algorithm and then we'll we'll look at some use cases. So here we'll see how how we move
+from uh
+from the current parameter to a certain proposal. And i'll explain all of this, and how then you'll understand how metropolis works, and when you understand how much of this works. Then you'll understand and have an idea of why this simulation really works,
+and it lets you actually model the data successfully.
+Okay. So we'll We'll continue this next time, because this is an entire algorithm of of uh explaining the algorithm And then when you understand this, we'll we'll maybe we'll. We'll. We'll have a lab on metropolis where you actually write your own, algorithm maybe.
+Okay. Okay. So that's it. So what do we see today? First, we we corrected the the mistake in the in the my, my correction of the homework, and we looked at the difference between um
+frequent is you in a Bayesian view. Then we saw two libraries that do both free penguin that does frequent this testing invest that does Bayesian testing. Then we did an entire new problem,
+using using three different profiles. And then we said, Wow! This metropolis are going works really well. And then we, we trying to explain to we trying to explore how this metropolis algorithm works, and that's what we'll look at next time. Okay,
+All right. Thank you.
+Question for any questions. No. So you know, when the when the mid-term is, Have a review session next week on on Monday.
+Possibly some some lecture material and also review. Session.
+Okay, Thank you. See, you Thursday.
+Uh, I think one question regarding all of the libraries in that Api in our class, so are we supposed to use for right right or so so over. You just need to Google. And you find, look at the every time your homework. I just use the call that you provide. And I think, Oh, I can't write to by myself. You can. I say It's too much? No, no, you can you It's just a matter of getting used to it. But
+it's not very complicated, and so we'll we'll run the lab. I have no idea which one to you. Just pick one
+quick one, and let's see if it works the more I know so many. Yeah, because you you haven't done this before. But when you don't know, see, this is why I This is why I did this many times, so you could just you could just see different examples. So so just assume. So you know. Probably the simplest one is this? Um, I assume that this is pretty easy. It has to be, is count data. So it has to be a poisson distribution, and then for some distribution is just one parameter. So assume a lambda one and then lambda, two
+advantage five. Yeah. Just try. Okay, try different values. And with experience, you you you Then you know what to do for every single for every single case. Um. So in the email we will not asking to write. Nope. The library. No, there's going to be no coding in the all. The coding is going to take hold. Okay, So this is about mass.
+It's gonna be the questions, yeah questions and and and like interview style problems, We'll we'll do a review on this. We also have any. The questions will be like,
+user avatar
+Unknown Speaker
+01:49:52
+okay,
